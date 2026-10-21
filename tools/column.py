@@ -43,7 +43,11 @@ import shutil
 import socket
 import subprocess
 import sys
+
 import time
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 HARNESS = os.path.join(ROOT, "harness")
@@ -193,7 +197,8 @@ def sub_site(path, pattern, value, moves, label=None):
 
 
 def home(p):
-    return os.path.expanduser(p)
+    """A pins path: `$NAME` is a maintainers' host value (#177, tools/host_vars.py); unresolved, one line and exit 2."""
+    return host_vars.need(p, "column")
 
 
 def git(clone, *args):
@@ -268,12 +273,16 @@ def move_sites(impl, pin, args, rec, pins):
         commit = tag_commit(pins["reference.clone"], pin)
         if not commit:
             stop(rec, 2, f"bitcoin-sv {pin}: the reference clone {pins['reference.clone']} lacks the tag (fetch the public tag there)")
-        binary = f"~/bsv/targets/sv-{pin}/bin/bitcoind"
-        if not os.path.exists(home(binary)):
-            stop(rec, 2, f"bitcoin-sv {pin}: no built node at {binary}; the node is the owner's build (docs/PROVENANCE.md §1, the reference row; "
+        # reference.binary is `$BSV_SPEC_REFERENCE_BINARY` (#177): the move reads the build that name points at,
+        # which must be the new tag's; the pins value itself never moves
+        binary = home(pins["reference.binary"])
+        if not os.path.exists(binary):
+            stop(rec, 2, f"bitcoin-sv {pin}: no built node at {pins['reference.binary']} ({binary}); the node is the maintainers' build (docs/PROVENANCE.md §1, the reference row; "
                          "harness/README.md, Prerequisites, sv-node); this command never builds or starts one")
-        line0 = subprocess.run([home(binary), "-version"], capture_output=True, text=True).stdout.splitlines()[0]
+        line0 = subprocess.run([binary, "-version"], capture_output=True, text=True).stdout.splitlines()[0]
         vs = re.match(r"Bitcoin SV version (\S+)", line0).group(1)
+        if not vs.startswith(pin + "."):
+            stop(rec, 2, f"bitcoin-sv {pin}: the node at {pins['reference.binary']} reports {vs}; point that name at the build of {pin}")
         old = pins["reference.tag"]
         for path, pat in [("harness/src/bin/run_svnode.rs", r'pub const SV_NODE_KEY: &str = "sv-node@([^"]+)"'),
                           ("harness/src/bin/run_svnode.rs", r'pub const SV_NODE_MEMPOOL_KEY: &str = "sv-node-mempool@([^"]+)"'),
@@ -285,7 +294,6 @@ def move_sites(impl, pin, args, rec, pins):
         sub_site("harness/src/bin/run_svnode.rs", r'pub const SV_NODE_VERSION_STRING: &str = "([^"]+)"', vs, moves)
         sub_site("harness/src/scenarios/core.rs", r'const VERSION: &str = "([^"]+)"', vs, moves)
         sub_site("harness/src/scenarios/core.rs", r'const PIN: &str = "([^"]+)"', commit, moves)
-        sub_site("harness/oracle/spec-node.sh", r'SV_BIN:=\$HOME/bsv/targets/sv-([^/]+)/bin/bitcoind', pin, moves)
         # the vendored reference vectors (check_pins compares them with `git show <tag>:src/test/data/<f>`)
         for f, d in [("script_tests.json", "reference"), ("tx_valid.json", "reference"), ("tx_invalid.json", "reference"), ("sighash.json", "sighash")]:
             r = subprocess.run(["git", "-C", home(pins["reference.clone"]), "show", f"{pin}:src/test/data/{f}"], capture_output=True)
@@ -303,7 +311,7 @@ def move_sites(impl, pin, args, rec, pins):
             if f"bitcoin-sv-{old}-" in t:
                 write(f, t.replace(f"bitcoin-sv-{old}-", f"bitcoin-sv-{pin}-"))
                 moves.append((f + ": the vendored vector names", old, pin))
-        for k, v in [("reference.tag", pin), ("reference.commit", commit), ("reference.version_string", vs), ("reference.binary", binary)]:
+        for k, v in [("reference.tag", pin), ("reference.commit", commit), ("reference.version_string", vs)]:
             set_pin(k, v, moves)
     elif impl == "teranode":
         commit = tag_commit(pins["teranode.clone"], pin)
@@ -377,7 +385,7 @@ def plan_sites(impl, pins):
             "go-sdk": ["go-sdk.version", "go-sdk.commit", "go-sdk.sum", "go-sdk.gomod_sum"],
             "ts-sdk": ["ts-sdk.version", "ts-sdk.integrity", "ts-sdk.commit"],
             "gobdk": ["gobdk.pseudo_version", "gobdk.commit"],
-            "sv-node": ["reference.tag", "reference.commit", "reference.version_string", "reference.binary"],
+            "sv-node": ["reference.tag", "reference.commit", "reference.version_string"],
             "teranode": ["teranode.tag", "teranode.commit", "gobdk.commit", "gobdk.pseudo_version", "gobdk.sum", "gobdk.gomod_sum",
                          "go-chaincfg.version", "go-chaincfg.commit", "go-chaincfg.sum", "go-chaincfg.gomod_sum"]}[impl]
     for k in keys:
@@ -414,7 +422,6 @@ def plan_sites(impl, pins):
         site("harness/src/lib.rs", r'pub const SV_NODE_TAG: &str = "([^"]+)"')
         site("harness/src/scenarios/core.rs", r'const VERSION: &str = "([^"]+)"')
         site("harness/src/scenarios/core.rs", r'const PIN: &str = "([^"]+)"')
-        site("harness/oracle/spec-node.sh", r'SV_BIN:=\$HOME/bsv/targets/sv-([^/]+)/bin/bitcoind')
         for f, d in [("script_tests.json", "reference"), ("tx_valid.json", "reference"), ("tx_invalid.json", "reference"), ("sighash.json", "sighash")]:
             rewritten(f"corpus/{d}/bitcoin-sv-{pins['reference.tag']}-{f}")
         names(f"bitcoin-sv-{pins['reference.tag']}-")

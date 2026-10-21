@@ -5,13 +5,22 @@ These subprocess tests send no P2P messages and start no node.
 import json
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 DRIVER = ROOT / 'harness/peer/peer.py'
+sys.path.insert(0, str(ROOT / 'tools'))
+import host_vars  # noqa: E402
+
+# the reference clone (docs/PROVENANCE.md 1a `$BSV_SPEC_REFERENCE_CLONE`, #177): a test that reaches peer.py's default
+# framework or names the clone is skipped by name when it is unresolved
+REFERENCE_CLONE = host_vars.value('BSV_SPEC_REFERENCE_CLONE')
+needs_clone = unittest.skipIf(REFERENCE_CLONE is None, host_vars.refusal('test_peer', 'BSV_SPEC_REFERENCE_CLONE'))
 
 class PeerBoundaryTests(unittest.TestCase):
+    @needs_clone
     def test_non_loopback_and_unreserved_ports_are_refused_before_transport(self):
         for request in ({'op': 'connect', 'host': '192.0.2.1', 'port': 18572},
                         {'op': 'connect', 'host': '127.0.0.1', 'port': 18563}):
@@ -27,6 +36,7 @@ class PeerBoundaryTests(unittest.TestCase):
                 events = [json.loads(line) for line in path.read_text().splitlines()]
                 self.assertFalse(any(event['direction'] in ('send', 'receive') for event in events))
 
+    @needs_clone
     def test_connect_without_scenario_clock_is_refused_before_transport(self):
         # [X] 2026-10-13 (#72): the advertised time is the scenario's, never the host's.
         for request in ({'op': 'connect', 'host': '127.0.0.1', 'port': 18572},
@@ -54,8 +64,9 @@ class PeerBoundaryTests(unittest.TestCase):
             self.assertIn('reference HEAD differs from pin', result.stderr)
             self.assertFalse(path.exists())
 
+    @needs_clone
     def test_noncanonical_framework_is_refused_before_receipt(self):
-        clone = Path.home() / 'bsv/bitcoin-sv'
+        clone = Path(REFERENCE_CLONE)
         for framework in (clone / 'test/alternative', clone / 'src/test/functional'):
             with self.subTest(framework=framework), tempfile.TemporaryDirectory() as directory:
                 path = Path(directory) / 'receipt.jsonl'
@@ -84,6 +95,7 @@ class PeerBoundaryTests(unittest.TestCase):
             self.assertIn('framework source is dirty or untracked', result.stderr)
             self.assertFalse(path.exists())
 
+    @needs_clone
     def test_imported_origin_is_refused_before_receipt(self):
         import os
         with tempfile.TemporaryDirectory() as directory:

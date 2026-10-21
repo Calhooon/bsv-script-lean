@@ -5,6 +5,7 @@ pub(super) use bsv_rs::primitives::hash::hash160;
 pub(super) use bsv_script_harness::{
     block as block_codec,
     fail::OrErr,
+    host,
     rpc::Rpc,
     txraw::{txid_display_hex, txid_from_display_hex, RawInput, RawOutput, RawTx},
 };
@@ -68,20 +69,22 @@ impl Build {
             )),
         }
     }
-    pub(super) fn relative(self) -> String {
+    // [D] 2026-10-21 (#177 b): the pins block writes each build as `$NAME`, a
+    // maintainers' host value (harness/src/host.rs); unresolved, one line and exit 2.
+    pub(super) fn var(self) -> &'static str {
         match self {
-            Self::Record => format!(
-                "bsv/targets/sv-{}/bin/bitcoind",
-                bsv_script_harness::SV_NODE_TAG
-            ),
-            Self::Wallet => format!(
-                "bsv/targets/sv-{}-wallet/bin/bitcoind",
-                bsv_script_harness::SV_NODE_TAG
-            ),
-            Self::Zmq => format!(
-                "bsv/targets/sv-{}-zmq/bin/bitcoind",
-                bsv_script_harness::SV_NODE_TAG
-            ),
+            Self::Record => host::REFERENCE_BINARY,
+            Self::Wallet => host::REFERENCE_BINARY_WALLET,
+            Self::Zmq => host::REFERENCE_BINARY_ZMQ,
+        }
+    }
+    // The build's path on this host. The zmq build may sit elsewhere (a lane
+    // builds inside its own worktree): SV_ZMQ_BITCOIND names it, and its version
+    // is checked at launch.
+    pub(super) fn located(self) -> PathBuf {
+        match (self, std::env::var("SV_ZMQ_BITCOIND")) {
+            (Self::Zmq, Ok(named)) => PathBuf::from(named),
+            _ => host::need(self.var()),
         }
     }
     pub(super) fn name(self) -> &'static str {
@@ -106,9 +109,7 @@ impl Build {
         }))
     }
     pub(super) fn absent_row(self, row: &Value) -> Result<Option<Value>> {
-        let path =
-            PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?).join(self.relative());
-        Ok(self.absent_row_at(row, &path))
+        Ok(self.absent_row_at(row, &self.located()))
     }
     pub(super) fn version_at(self, path: &Path) -> Result<Option<String>> {
         if !path.is_file() {
@@ -129,19 +130,13 @@ impl Build {
         Ok(Some(line))
     }
     // An absent binary stops the row; it never falls back to the other build.
-    // The zmq build may sit outside ~/bsv/targets (a lane builds inside its own
-    // worktree): SV_ZMQ_BITCOIND names it, and its version is checked at launch.
     pub(super) fn path(self) -> Result<PathBuf> {
-        let path = match (self, std::env::var("SV_ZMQ_BITCOIND")) {
-            (Self::Zmq, Ok(named)) => PathBuf::from(named),
-            _ => PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?)
-                .join(self.relative()),
-        };
+        let path = self.located();
         if !path.is_file() {
             return Err(format!(
-                "the {} is absent on this host: ~/{}",
+                "the {} is absent on this host: {}",
                 self.name(),
-                self.relative()
+                path.display()
             ));
         }
         Ok(path)
@@ -1674,7 +1669,7 @@ mod tests {
             let line = pins.lines().find(|l| l.starts_with(key)).unwrap();
             assert_eq!(
                 line.split_once('=').unwrap().1.trim(),
-                format!("~/{}", build.relative())
+                format!("${}", build.var())
             );
         }
     }

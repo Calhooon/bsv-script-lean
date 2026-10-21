@@ -13,7 +13,7 @@ instance's configuration is `bitcoin.conf` here, every line cited; `spec-node.sh
 
 | | `local` (the CONSENSUS instance, the harness's CONSENSUS INSTRUMENT, D123; with the policy instance below, the instance the recorded runs used: `verifyscript` never runs the standardness gate, so its consensus-level verdict comes from the zeroed caps and the explicit flag word, and `acceptnonstdtxn=1` plays no part in it) | `mini` (the always-on host; the consensus instance only, no policy instance) |
 |---|---|---|
-| binary | `~/bsv/targets/sv-v1.2.3/bin/bitcoind`, the pinned build (`-version` = `v1.2.3.0-g6504a3aff-dev`, checked by `make check-pins`) | historical v1.2.2 bundle at `~/bsv/oracle/bin`; not moved or used by #57, whose recordings use the box at an explicit v1.2.3 path |
+| binary | `$BSV_SPEC_REFERENCE_BINARY`, the maintainers' build of the pin (`-version` = `v1.2.3.0-g6504a3aff-dev`, checked by `make check-pins`) | historical v1.2.2 bundle at `~/bsv/oracle/bin`; not moved or used by #57, whose recordings use the box at an explicit v1.2.3 path |
 | datadir | `~/bsv/targets/spec-oracle-data` | `~/bsv/spec-oracle/data` on the host |
 | RPC / P2P | `127.0.0.1:18563` / 18564 (`listen=0`) | `127.0.0.1:18563` / 18564 on the host; the Studio reaches it through `spec-node.sh mini tunnel` on `127.0.0.1:18663` and fetches the cookie with `spec-node.sh mini cookie` |
 | lifetime | `spec-node.sh local start|stop|status|cli|reset` | the spec's own LaunchAgent `com.bsvspec.oracle` (`spec-node.sh mini install|start|stop|status|uninstall`) |

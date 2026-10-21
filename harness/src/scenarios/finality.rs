@@ -1245,13 +1245,10 @@ mod tests {
             return Err("unsafe run id".into());
         }
         let home = PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?);
-        let version = Command::new(home.join(format!(
-            "bsv/targets/sv-{}/bin/bitcoind",
-            bsv_script_harness::SV_NODE_TAG
-        )))
-        .arg("-version")
-        .output()
-        .map_err(|e| e.to_string())?;
+        let version = Command::new(Build::Record.located())
+            .arg("-version")
+            .output()
+            .map_err(|e| e.to_string())?;
         let version = String::from_utf8_lossy(&version.stdout)
             .lines()
             .next()

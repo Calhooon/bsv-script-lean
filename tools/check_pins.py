@@ -27,6 +27,9 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PROVENANCE = os.path.join(ROOT, "docs", "PROVENANCE.md")
 
@@ -89,20 +92,16 @@ def sha256_file(path):
 
 
 def host_path(p):
-    """A pins value `$NAME` names a path: the environment's NAME (#177), else the maintainers' host file
-    tools/host_private.sh (withheld from the public edition, #46); unresolved, the name stays and the clone reads as
-    absent, skipped by name (this leg is a gate, never a refusal). Any other value is a path."""
-    m = re.fullmatch(r"\$([A-Z][A-Z0-9_]*)", p.strip())
-    if not m:
-        return os.path.expanduser(p)
-    if os.environ.get(m.group(1)):
-        return os.environ[m.group(1)]
-    try:
-        src = open(os.path.join(ROOT, "tools", "host_private.sh"), encoding="utf-8").read()
-    except OSError:
-        return p
-    v = re.search(r'^' + m.group(1) + r'="([^"]*)"$', src, re.M)
-    return v.group(1).replace("$HOME", os.path.expanduser("~")) if v else p
+    """A pins value as a path (#177): `$NAME` from the environment, else tools/host_private.sh (tools/host_vars.py);
+    unresolved, the name stays and the clone reads as absent, skipped by name (this leg is a gate, never a refusal)."""
+    v = host_vars.path(p)
+    return p if v is None else v
+
+
+def absent_why(p):
+    """The skip's reason when a `$NAME` value is unresolved on this host."""
+    n = host_vars.name_of(p)
+    return f" ({n} is unset and tools/host_private.sh does not name it)" if n and host_vars.path(p) is None else ""
 
 
 def clone_path(p):
@@ -264,7 +263,7 @@ def main():
     def clone_check(site, clone, fn):
         c = clone_path(clone)
         if not os.path.isdir(os.path.join(c, ".git")) and not os.path.isfile(os.path.join(c, ".git")):
-            skip(site, f"clone absent: {clone}")
+            skip(site, f"clone absent: {clone}" + absent_why(clone))
             return
         fn(c)
 
@@ -381,8 +380,8 @@ def main():
         m = re.search(r'const ' + constant + r': &str = "([^\"]+)"', scenario)
         expect_eq("run_scenarios " + constant, pins[key], m.group(1) if m else "<absent>")
     oracle = read("harness/oracle/spec-node.sh")
-    m = re.search(r'SV_BIN:=\$HOME([^}]+)', oracle)
-    expect_eq("spec-node.sh default binary", pins["reference.binary"], "~" + m.group(1) if m else "<absent>")
+    m = re.search(r'SV_BIN:=\$(BSV_SPEC_[A-Z_]+)\}', oracle)
+    expect_eq("spec-node.sh default binary", pins["reference.binary"], "$" + m.group(1) if m else "<absent>")
 
     # --- the built SV-node on this machine
     node_bin = clone_path(pins["reference.binary"])
@@ -394,7 +393,7 @@ def main():
         m = re.match(r"Bitcoin SV version (\S+)", first)
         expect_eq("the built SV-node's version string", pins["reference.version_string"], m.group(1) if m else f"<unparsed: {first}>")
     else:
-        skip("the built SV-node", f"binary absent: {node_bin}")
+        skip("the built SV-node", f"binary absent: {node_bin}" + absent_why(pins["reference.binary"]))
 
     # --- the zmq build (#84): read as the node of record is, its sha256 against the one its row's comment names; absent
     # (the box, the Modal container) it is skipped by name, never RED
@@ -409,7 +408,7 @@ def main():
         m = re.match(r"Bitcoin SV version (\S+)", top)
         expect_eq("the zmq build's version string", pins["reference.version_string"], m.group(1) if m else f"<unparsed: {top}>")
     else:
-        skip("the zmq build", f"binary absent: {zmq_bin}")
+        skip("the zmq build", f"binary absent: {zmq_bin}" + absent_why(pins.get("reference.binary_zmq", "")))
 
     # --- the report
     width = max(len(r[1]) for r in rows)

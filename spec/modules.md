@@ -1377,8 +1377,8 @@ the observed state, except on `orphan`, the recorded no-function cell) and `Chai
 the two candidate sets that #93's bridge theorems take as hypotheses, `Chain.Validated`, the current-chain read
 agreeing with the rows' ancestry, and the FSM in RUNNING, the precondition of every observation: #93's
 `floater_invalidated_only_running`, #96 row `rl.fsm`, #97 §6 `fsm()`). `cover`, `back` and `validated` are
-assumed by the relation; #93's hand-off ("#88 constructs it") stays owed, S1. The base case holds:
-`refines_empty` relates the empty states (no block on either side); the genesis row's form is owed (S1), since
+assumed by the relation; #93's hand-off ("#88 constructs it") stays owed on the Lean side. The base case holds:
+`refines_empty` relates the empty states (no block on either side); the genesis row's form is owed (the Lean semantics), since
 the spec defines no genesis `StatusState`. The frozen lists relate through `FrozenRefinesAt` (#94's projection),
 outside `Refines`.
 
@@ -1392,10 +1392,10 @@ writes, bans and Kafka publications keeps the relation (`stutter_run_simulates`)
 survives it (`stutter_run_best_work`); an alert fund that freezes keeps `Refines` and leaves the frozen
 projection agreeing (`alert_freeze_keeps_relation`, from #94's `freeze_agrees`). An FSM event out of RUNNING
 suspends observation (`fsm_exit_suspends`: no reference state is related after it); the relation's return at the
-re-entry to RUNNING is owed (S1). No transition that moves the status is proven to simulate a reference
+re-entry to RUNNING is owed (the Lean semantics). No transition that moves the status is proven to simulate a reference
 transition at this commit: the connection (`connectSimulates`), the reorg's moveBack, moveForward and reset
 (`reorgSimulates`), the assembler's drop of a conflicting transaction (`conflictDropSimulates`) and the
-alert-driven invalidate (`Alert.InvalidationRefines`) are owed with S1, each naming the reference's step
+alert-driven invalidate (`Alert.InvalidationRefines`) are owed to the Lean semantics, each naming the reference's step
 (`refActivate`, `BsvChain.activateBestChain` with its context, lists, oracle and fuel) and taking Teranode's
 step as a parameter: named, NOT stated. Five families leave the relation by a divergence
 (`departs_carry_divergence`): the reconsider of a descendant (`Divergence.reconsiderDescendant`), the block
@@ -1442,7 +1442,7 @@ unaided, `docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md`).
 Kinds (rule 1): every relation here is a view onto the reference's status, never a rule of validity; the
 settings the components read (retentions, optimistic mining, the alert's authority) are policy, at their
 defaults in the components' docstrings: #93's in `docs/PARAMETERS.md` §8.9, #94's in §8.10. #92's retention and
-pruner switches are in `Lifetimes.lean`'s docstring, with no PARAMETERS section yet (S3's). The two witnesses
+pruner switches are in `Lifetimes.lean`'s docstring, with no PARAMETERS section yet (the harness's). The two witnesses
 this module adds read the reference's `excessiveBlockSize` (consensus, node-configurable) and `assumeValid`
 (policy) as parameters, both in `docs/PARAMETERS.md` §8.2 with their defaults; Teranode's `excessiveblocksize`
 is a parameter at its default 4294967296 (`settings/settings.go:104`), and its checkpoint skip reads no setting.
@@ -2748,7 +2748,7 @@ concatenation, over the spec's own loop (`Machine.loop`, `interpreter.cpp:388–
 
 Written on 2026-09-29 as the companion of
 `docs/records/20260929-014620-gadget-api-35-s2.md`, compiled against `main` there; applied to the
-tree by S1 under its own tag (the file is S1's glob by `docs/OWNERS`; RULES-TREE (32)), unchanged but
+tree on the Lean semantics' side (the file is in that area by `docs/OWNERS`; RULES-TREE (32)), unchanged but
 for this paragraph and the `#print axioms` lines, which stand on `lean/AxiomCheck.lean`.
 
 ## `BsvScript.Gadget.HashLock` (`lean/BsvScript/Gadget/HashLock.lean`)
@@ -3396,7 +3396,7 @@ machine do with them, each theorem at its site of the reference:
   `360–375`), `OP_VER` and `OP_VERIF`/`OP_VERNOTIF` (`598–608`, `773–781`), CLTV/CSV
   (`520`, `563`), the second `OP_ELSE` (`829–831`), the expansion opcodes
   (`611–618` … `730–736`);
-* **the signature's hash type under the era flags** (#25, S2, 2026-09-26): the four
+* **the signature's hash type under the era flags** (archived #25, the Lean families, 2026-09-26): the four
   refusals of `CheckSignatureEncoding` under STRICTENC (`291–306`) as theorems, each a
   rule on the signature's last byte under the word's bits; and **the checkers' reads of `nLockTime` and
   `nSequence`** (`2166–2250`, #22) as one predicate each, the verdicts CLTV and CSV
@@ -3450,7 +3450,7 @@ the two checks before the type's pass, as Bool equations in the code's own terms
 
 ## `BsvScript.Properties.Eras` (`lean/BsvScript/Properties/Eras.lean`)
 
-## `OP_CODESEPARATOR`'s slice, and the block word at the upgradable NOPs (#25, S2, 2026-09-27)
+## `OP_CODESEPARATOR`'s slice, and the block word at the upgradable NOPs (archived #25, the Lean families, 2026-09-27)
 
 ## `BsvScript.Properties.Hooks` (`lean/BsvScript/Properties/Hooks.lean`)
 
@@ -3619,7 +3619,7 @@ number is a line of `src/script/interpreter.cpp`.
 
 # BsvScript.Properties.Resources
 
-The resource bounds (#25, S1's half; `docs/DESIGN.md` §9): what the machine enforces, at the site
+The resource bounds (archived #25, the Lean semantics' half; `docs/DESIGN.md` §9): what the machine enforces, at the site
 the reference enforces it, as theorems on the machine. `Machine.loop` is parametrized by the
 family hook `OpExec`; a bound the loop enforces after every step (the pre-Genesis stack depth,
 `1800–1803`) is a theorem for every hook; a bound a family may touch (the op count through
@@ -3847,7 +3847,7 @@ Bare line numbers are `src/script/interpreter.cpp` at the pin (`docs/PROVENANCE.
 # BsvScript.SigOps
 
 The node's count of signature operations, `CScript::GetSigOpCount` (`src/script/script.cpp:30–166`
-at the pin, `docs/PROVENANCE.md`), on every path (2026-09-27, S1: the spec gap
+at the pin, `docs/PROVENANCE.md`), on every path (2026-09-27, the Lean semantics: the spec gap
 `tx.gate.policy-caps.unmodelled`'s remainder, CLAUDE.md rule 1; the transaction-level counts and the
 mempool's test over them are `BsvScript.TxPolicy`'s).
 
@@ -3905,7 +3905,7 @@ non-FORKID path is historical replay; the CHRONICLE bit (`0x20`, accepted only
 with `SCRIPT_CHRONICLE`, `302–303`) selects the original digest for a live
 signature. Both paths are executable here.
 
-**The truncated-push corner, MEASURED 2026-09-24** (S3; `corpus/gen`,
+**The truncated-push corner, MEASURED 2026-09-24** (the harness; `corpus/gen`,
 `sighash/original/truncated-push/*`: six shapes of a truncated push after a
 post-Genesis top-level `OP_RETURN`, each signed over the spec's serialization of
 the unparseable scriptCode; the spec's own SV-node instance agrees with the spec
@@ -3954,11 +3954,11 @@ checked by the kernel.
 
 ## `BsvScript.Sighash` (`lean/BsvScript/Sighash.lean`)
 
-## The dispatch, the type, the scriptCode and the shapes as theorems (#25, S2, 2026-09-26)
+## The dispatch, the type, the scriptCode and the shapes as theorems (archived #25, the Lean families, 2026-09-26)
 
 ## `BsvScript.Sighash` (`lean/BsvScript/Sighash.lean`)
 
-## `FindAndDelete`'s single pass (#25, S2, 2026-09-27)
+## `FindAndDelete`'s single pass (archived #25, the Lean families, 2026-09-27)
 
 `CScript::FindAndDelete` (`script.h:202–224`) walks the script once: at every instruction start it strips every copy
 of the pattern that begins there (`script.h:210–214`), then copies the next instruction whole (`script.h:209`, `script.h:215–216`: `GetOp`),
@@ -4185,7 +4185,7 @@ the file last named.
 
 ## `BsvScript.TxRules` (`lean/BsvScript/TxRules.lean`)
 
-## The loops of `CheckTransactionCommon` and `CheckRegularTransaction` (#25, S2, 2026-09-27)
+## The loops of `CheckTransactionCommon` and `CheckRegularTransaction` (archived #25, the Lean families, 2026-09-27)
 
 The definitions above write the reference's two `for` loops as do-blocks. A theorem about a do-block's `forIn` is
 stated over a recursion that decides as the loop's body does (`forIn_eq_checkOutputs`, `forIn_eq_checkInputs`, each
@@ -4195,9 +4195,9 @@ sigop count (T-TX9) and the outpoint checks (T-TX10) read off those.
 
 ## `BsvScript.TxRules` (`lean/BsvScript/TxRules.lean`)
 
-## The pre-Genesis count is the node's on every script (2026-09-27; S1's ask 5)
+## The pre-Genesis count is the node's on every script (2026-09-27; the Lean semantics' ask 5)
 
-`SigOps.sigOpCount` (S1's) models `CScript::GetSigOpCount` on every path; `TxPolicy.sigOpCount_legacy_eq`
+`SigOps.sigOpCount` (the Lean semantics') models `CScript::GetSigOpCount` on every path; `TxPolicy.sigOpCount_legacy_eq`
 tied it to `sigOpCountPreGenesis` on the scripts without a literal `0xff`, where the two parted until the walk
 above stopped at that byte. T-TX11 drops the hypothesis.
 

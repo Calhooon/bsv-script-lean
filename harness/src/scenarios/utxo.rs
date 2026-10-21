@@ -712,13 +712,10 @@ mod lane_tests {
             .join("bsv/targets/spec-oracle-scenarios")
             .join(&run_id);
         fs::create_dir(&root).unwrap();
-        let version = Command::new(PathBuf::from(std::env::var("HOME").unwrap()).join(format!(
-            "bsv/targets/sv-{}/bin/bitcoind",
-            bsv_script_harness::SV_NODE_TAG
-        )))
-        .arg("-version")
-        .output()
-        .unwrap();
+        let version = Command::new(Build::Record.located())
+            .arg("-version")
+            .output()
+            .unwrap();
         let version = String::from_utf8(version.stdout)
             .unwrap()
             .lines()

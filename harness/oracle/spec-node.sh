@@ -4,7 +4,7 @@
 # Two homes, one pinned binary (bitcoin-sv v1.2.3 at 6504a3aff, docs/PROVENANCE.md §1a; the build the sibling
 # program's oracle runbook produced from the pinned tag, `bitcoind -version` = v1.2.3.0-g6504a3aff-dev, checked
 # by `make check-pins` on the Studio):
-#   local  the Studio: $SV_BIN (default ~/bsv/targets/sv-v1.2.3/bin/bitcoind), datadir ~/bsv/targets/spec-oracle-data,
+#   local  the Studio: $SV_BIN (default $BSV_SPEC_REFERENCE_BINARY, the maintainers' build), datadir ~/bsv/targets/spec-oracle-data,
 #          RPC 127.0.0.1:18563, P2P 18564 (listen=0: nothing binds). For development and the smoke runs. The CONSENSUS
 #          instance (bitcoin.conf: every policy cap zeroed): the spec's `spec` column.
 #   policy the Studio's SECOND instance (2026-09-24): the same binary on bitcoin-policy.conf (the policy caps at the
@@ -29,8 +29,12 @@
 # `block adopt-into-policy` copies that chain into the `policy` instance's datadir.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-: "${SV_BIN:=$HOME/bsv/targets/sv-v1.2.3/bin/bitcoind}"
-: "${SV_CLI:=$HOME/bsv/targets/sv-v1.2.3/bin/bitcoin-cli}"
+# the node of record, docs/PROVENANCE.md 1a's reference.binary (#177): BSV_SPEC_REFERENCE_BINARY from the environment,
+# else from tools/host_private.sh (a maintainers' route, tools/README.md); unresolved, need_node stops with exit 2
+[ -n "${BSV_SPEC_REFERENCE_BINARY:-}" ] || BSV_SPEC_REFERENCE_BINARY="$(f="$HERE/../../tools/host_private.sh"
+  [ -f "$f" ] && . "$f" && printf %s "${BSV_SPEC_REFERENCE_BINARY:-}")" || true
+: "${SV_BIN:=$BSV_SPEC_REFERENCE_BINARY}"
+: "${SV_CLI:=${SV_BIN:+${SV_BIN%/*}/bitcoin-cli}}"
 : "${SPEC_ORACLE_DATADIR:=$HOME/bsv/targets/spec-oracle-data}"
 : "${SPEC_ORACLE_RPC_PORT:=18563}"
 : "${SPEC_ORACLE_P2P_PORT:=18564}"
@@ -80,6 +84,7 @@ inst="$mode"
 # the pinned build is a prerequisite, not part of this repo: say what is needed and stop (exit 2)
 need_node() {
   [ -x "$SV_BIN" ] && [ -x "$SV_CLI" ] && return 0
+  [ -n "$SV_BIN" ] || { say "a maintainers' route; BSV_SPEC_REFERENCE_BINARY is unset and tools/host_private.sh is absent (tools/README.md)"; exit 2; }
   say "SETUP STOP: this needs the pinned bitcoin-sv build (tag v1.2.3, commit 6504a3aff, docs/PROVENANCE.md §1a), which is not in this repository:"
   say "  bitcoind    \$SV_BIN = $SV_BIN ($([ -x "$SV_BIN" ] && echo present || echo absent))"
   say "  bitcoin-cli \$SV_CLI = $SV_CLI ($([ -x "$SV_CLI" ] && echo present || echo absent))"

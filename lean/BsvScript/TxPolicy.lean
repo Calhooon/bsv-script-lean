@@ -481,7 +481,7 @@ theorem sigOpWalk_legacy_eq : ∀ (fuel : Nat) (s : Bytes) (lo : Nat) (ld : Byte
 the count of a script without a literal `0xff` is `TxRules.sigOpCountPreGenesis`, the consensus gate's
 count. *What it assumes:* no instruction of the script is `0xff`. *Why it matters:* the mempool's count and
 the consensus gate's agree on the pre-Genesis path wherever the spec's `TxRules` walk agrees with the
-reference. Since S2's `616008e` both stop at a literal `0xff` (`script.cpp:44–45`; `SigOps.sigOpCount_ff`,
+reference. Since the Lean families' `616008e` both stop at a literal `0xff` (`script.cpp:44–45`; `SigOps.sigOpCount_ff`,
 `TxRules.sigOpCountPreGenesis_invalidop`), and `TxRules.sigOpCountPreGenesis_eq_sigOpCount` (T-TX11) states the
 equality on every script: this theorem's hypothesis is stronger than it needs to be. -/
 theorem sigOpCount_legacy_eq (s : Bytes) (h : SigOps.noInvalidOp s = true) :

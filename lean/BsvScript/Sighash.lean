@@ -28,7 +28,7 @@ non-FORKID path is historical replay; the CHRONICLE bit (`0x20`, accepted only
 with `SCRIPT_CHRONICLE`, `302–303`) selects the original digest for a live
 signature. Both paths are executable here.
 
-**The truncated-push corner, MEASURED 2026-09-24** (S3; `corpus/gen`,
+**The truncated-push corner, MEASURED 2026-09-24** (the harness; `corpus/gen`,
 `sighash/original/truncated-push/*`: six shapes of a truncated push after a
 post-Genesis top-level `OP_RETURN`, each signed over the spec's serialization of
 the unparseable scriptCode; the spec's own SV-node instance agrees with the spec
@@ -430,7 +430,7 @@ theorem sighashOriginal_single_no_output (scriptCode : Bytes) (tx : Tx) (nIn : N
 theorem findAndDelete_nil (script : Bytes) : findAndDelete script [] = script := by
   simp [findAndDelete]
 
-/-! ## The dispatch, the type, the scriptCode and the shapes as theorems (#25, S2, 2026-09-26) -/
+/-! ## The dispatch, the type, the scriptCode and the shapes as theorems (archived #25, the Lean families, 2026-09-26) -/
 
 /-- T-SH6: `SignatureHash`'s dispatch as the reference writes it (`2118–2123`): the BIP143 digest
 iff `SCRIPT_ENABLE_SIGHASH_FORKID` is on, the type carries the FORKID bit and not the CHRONICLE
@@ -705,7 +705,7 @@ theorem sighashOriginal_hashed (scriptCode : Bytes) (tx : Tx) (nIn : Nat) (t : S
     exact absurd (h2 hs.1) (Nat.not_lt.2 hs.2)
   · rfl
 
-/-! ## `FindAndDelete`'s single pass (#25, S2, 2026-09-27)
+/-! ## `FindAndDelete`'s single pass (archived #25, the Lean families, 2026-09-27)
 
 `CScript::FindAndDelete` (`script.h:202–224`) walks the script once: at every instruction start it strips every copy
 of the pattern that begins there (`script.h:210–214`), then copies the next instruction whole (`script.h:209`, `script.h:215–216`: `GetOp`),

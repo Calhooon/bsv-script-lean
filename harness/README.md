@@ -25,6 +25,8 @@ carry. A missing prerequisite stops the run with exit 2 and a line naming it and
 crates at `Cargo.lock`'s checksums from crates.io. `--spec live` also needs the Lean toolchain and Mathlib of
 `lean/README.md`; the default, `--spec recorded`, needs no Lean. The pins are `docs/PROVENANCE.md` §1a.
 
+**The host values.** The pins block of `docs/PROVENANCE.md` §1a names eleven clones and built binaries by `$NAME` (`BSV_SPEC_REFERENCE_CLONE`, `BSV_SPEC_REFERENCE_BINARY`, `BSV_SPEC_REFERENCE_BINARY_WALLET`, `BSV_SPEC_REFERENCE_BINARY_ZMQ`, `BSV_SPEC_TERANODE_CLONE`, `BSV_SPEC_GOBDK_CLONE`, `BSV_SPEC_GO_CHAINCFG_CLONE`, `BSV_SPEC_GO_SAFE_CONVERSION_CLONE`, `BSV_SPEC_BSV_RS_CLONE`, `BSV_SPEC_GO_SDK_CLONE`, `BSV_SPEC_TS_SDK_CLONE`); each is a path on the maintainers' hosts, set in the environment (`export BSV_SPEC_REFERENCE_CLONE=/path/to/bitcoin-sv`) or as a `NAME="/path"` line of `tools/host_private.sh` (a file absent from the public edition). Without them the pins and citation legs skip those pins by name, never a pass, and the maintainers' routes stop with one line and exit 2.
+
 | `--impl` | what must be present | how a newcomer gets it (public reads) |
 |---|---|---|
 | `bsv-rs` | nothing more | `cargo` fetches the crate `bsv-rs` at the pin |
@@ -56,8 +58,9 @@ without choosing fees, change, an era override or a scriptCode; acceptance belon
 [development check and source reading](../docs/records/20261016-192436-s4b-145-signer-adapter-ts-s4b.md) describe the paths and limits.
 
 **gobdk: the clone.** `engines/gobdk/build.sh` (run by `harness/run` through `make gobdk-build`) builds the shim from a
-local clone, never from the network. The clone's path is `GOBDK_CLONE` when set, else the pin `gobdk.clone` (the maintainers' layout,
-`docs/PROVENANCE.md` section 1a). Get it:
+local clone, never from the network. The clone's path is `GOBDK_CLONE` when set, else `$BSV_SPEC_GOBDK_CLONE`, the pin
+`gobdk.clone` (`docs/PROVENANCE.md` section 1a) resolved by `tools/host_vars.py`; with neither set, `build.sh` stops with one
+line and exit 2. Get it:
 
 ```sh
 export GOBDK_CLONE=/path/to/bdk
@@ -397,7 +400,7 @@ for each peer row, after launching a fresh node with `listen=1` and
 `whitelist` stays unset; discovery, DNS seeds and UPnP stay disabled.
 
 The driver imports the reference test framework from `BSV_PEER_FRAMEWORK`
-or `--framework`, default the reference clone's `test/functional` in the maintainers' layout. It checks clone
+or `--framework`, default `$BSV_SPEC_REFERENCE_CLONE`'s `test/functional` (unset, one line and exit 2). It checks clone
 HEAD against `6504a3aff65ba97c0f6c80962b033e35ecbfed4b`, requires the canonical
 `test/functional` root, and requires clean `git status --porcelain` for the
 framework tree with untracked files included. Since 2026-10-13, every imported

@@ -199,8 +199,9 @@ pub(super) fn identity() -> Result<(Value, Value)> {
     let banner = Build::Record
         .version_at(&bin)?
         .ok_or("node of record absent")?;
+    // the pinned framework: the reference clone's (`$BSV_SPEC_REFERENCE_CLONE`, #177) unless named
     let framework = std::env::var("BSV_PEER_FRAMEWORK").map_or_else(
-        |_| home.join("bsv/bitcoin-sv/test/functional"),
+        |_| host::need(host::REFERENCE_CLONE).join("test/functional"),
         PathBuf::from,
     );
     let mininode = framework.join("test_framework/mininode.py");

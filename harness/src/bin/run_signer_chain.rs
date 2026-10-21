@@ -48,6 +48,7 @@ use bsv_rs::primitives::hash::{hash160, sha256};
 use bsv_script_harness::block::try_p2pkh_spend;
 use bsv_script_harness::corpus::{Entry, RefJson};
 use bsv_script_harness::flags_oracle::FlagsOracle;
+use bsv_script_harness::host;
 use bsv_script_harness::rpc::Rpc;
 use bsv_script_harness::signer::{
     ops, render, scriptcodes, sign_input, Piece, Row, SignInput, Signing,
@@ -661,8 +662,8 @@ fn run_reference(only_v1: bool, emit: Option<PathBuf>) -> Result<()> {
     }
 
     let (conf, conf_lines) = instance_conf(root)?;
-    let binary = PathBuf::from(std::env::var("HOME").map_err(|_| "HOME absent")?)
-        .join("bsv/targets/sv-v1.2.3-wallet/bin/bitcoind");
+    // reference.binary_wallet, `$BSV_SPEC_REFERENCE_BINARY_WALLET` (#177)
+    let binary = host::need(host::REFERENCE_BINARY_WALLET);
     let mut node = Node::start_with(&run.0, NodeSpec { binary, conf })?;
     let addr = node.call("getnewaddress", json!([]))?;
     node.call("generatetoaddress", json!([MINE_TO, addr]))?;
@@ -956,7 +957,7 @@ fn run_reference(only_v1: bool, emit: Option<PathBuf>) -> Result<()> {
         "source_sha256": source_sha256,
         "runner_sha256": file_hash(&std::env::current_exe().map_err(|e| e.to_string())?)?,
         "evaluator_sha256": file_hash(&evaluator)?,
-        "instance": {"binary": "~/bsv/targets/sv-v1.2.3-wallet/bin/bitcoind", "binary_sha256": node_sha256,
+        "instance": {"binary": "$BSV_SPEC_REFERENCE_BINARY_WALLET", "binary_sha256": node_sha256,
             "rpc_port": port, "conf_lines_changed": conf_lines, "genesis_height": GENESIS_HEIGHT,
             "chronicle_height": CHRONICLE_HEIGHT, "mined_to_before_funding": MINE_TO,
             "tip_before_spends": tip, "spend_height_asked": spend_height, "spend_blocks_mined": spend_blocks, "median_time_past": median_time,

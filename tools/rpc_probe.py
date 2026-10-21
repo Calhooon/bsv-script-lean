@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """[D] 2026-10-15, lane rpc-85 (#85): the RPC contract's probe on fresh regtest instances.
 
-Drives the reference node of record (`~/bsv/targets/sv-v1.2.3/bin/bitcoind`) and its wallet build
-(`~/bsv/targets/sv-v1.2.3-wallet/bin/bitcoind`) on owned instances whose RPC/P2P pair is the lowest free
+Drives the reference node of record (`$BSV_SPEC_REFERENCE_BINARY`, the maintainers' build) and its wallet build
+(`$BSV_SPEC_REFERENCE_BINARY_WALLET`) on owned instances whose RPC/P2P pair is the lowest free
 pair in 18571..18590 (the runner's band, harness/src/scenarios/core.rs), every instance stopped by `stop`
 and waited for. The base configuration is harness/oracle/scenarios.conf (regtest, txindex, loopback, no
 peers); each phase adds its own lines. Nothing reaches a peer and nothing is broadcast (CLAUDE.md rule 10).
@@ -30,10 +30,13 @@ import subprocess
 import sys
 import time
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = Path(__file__).resolve().parent.parent
 HOME = Path(os.environ["HOME"])
-RECORD = HOME / "bsv/targets/sv-v1.2.3/bin/bitcoind"
-WALLET = HOME / "bsv/targets/sv-v1.2.3-wallet/bin/bitcoind"
+RECORD = Path(host_vars.need("$BSV_SPEC_REFERENCE_BINARY", "rpc_probe"))
+WALLET = Path(host_vars.need("$BSV_SPEC_REFERENCE_BINARY_WALLET", "rpc_probe"))
 T0 = 1_700_000_000
 ZERO = "00" * 32
 

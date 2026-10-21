@@ -37,21 +37,25 @@ and manifest, `harness/rust-toolchain.toml`, `Cargo.toml`/`Cargo.lock`/`lib.rs` 
 manifests' recorded engine version and the vector files' names, `harness/engines/go/go.{mod,sum}`,
 `harness/engines/ts/package{,-lock}.json`, the `--locked` discipline, the toolchains in use, and (on the
 machine that holds them) the clones at their tags, the vendored reference vectors and the built node.
+A clone or a built binary is written `$NAME` (#177): a path on a maintainers' host, read from the environment, else
+from the maintainers' host file (withheld from the public edition; `tools/host_vars.py` and `harness/src/host.rs`
+read it). Where neither names it, the pins leg and the citation leg skip that site by name (never a pass) and
+every other tool stops with one line and exit 2.
 
 ```pins
 # reference: bitcoin-sv (SV-node), the newest release at the pin date (§1, #2)
 reference.tag             = v1.2.3
 reference.commit          = 6504a3aff65ba97c0f6c80962b033e35ecbfed4b
-reference.clone           = ~/bsv/bitcoin-sv
+reference.clone           = $BSV_SPEC_REFERENCE_CLONE
 reference.version_string  = v1.2.3.0-g6504a3aff-dev   # `bitcoind -version`'s first line, exact; `-dev` is the build's own suffix (an export without a repository)
-reference.binary          = ~/bsv/targets/sv-v1.2.3/bin/bitcoind
+reference.binary          = $BSV_SPEC_REFERENCE_BINARY
 # [M] 2026-10-13 (H6 road (b), a build of the wallet configuration): a second binary of the same pin configured with the wallet (BUILD_BITCOIN_WALLET=ON,
 # Berkeley DB 5.3.28 from brew's berkeley-db@5; every other option the node of record's); not the node of record, not checked by this leg;
 # version string equal to reference.version_string; bitcoind sha256 3c088faeaa87e29164280fcf7e5f5b33b52b560a88e47876b612df8f93c0ceae;
 # record docs/records/20261013-234938-wallet-build-s3.md
 # [M] 2026-10-14T05:07Z (#121, a build of the wallet rows): on the box too (sha256 equal; berkeley-db@5 5.3.28_1); measured rows: 4
 # (4 agree); a corpus row selects it by "binary":"wallet" (harness/src/scenarios/core.rs Build); record docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md
-reference.binary_wallet   = ~/bsv/targets/sv-v1.2.3-wallet/bin/bitcoind
+reference.binary_wallet   = $BSV_SPEC_REFERENCE_BINARY_WALLET
 # [M] 2026-10-15 (#84, a build of the events configuration): another binary of the same pin configured with BUILD_BITCOIN_ZMQ=ON (libzmq from brew's
 # zeromq 4.3.5_1; every other option the node of record's); not the node of record; read by this leg (tools/check_pins.py: its sha256
 # against the one this comment names and its version string, skipped by name where absent); version string equal to
@@ -59,19 +63,19 @@ reference.binary_wallet   = ~/bsv/targets/sv-v1.2.3-wallet/bin/bitcoind
 # recipe (harness/src/scenarios/core.rs Build::Zmq; SV_ZMQ_BITCOIND overrides the path); record docs/records/20261015-035435-s7-84-events-s1.md
 # source: git archive of reference.commit from reference.clone; configured 03:34:44Z to 03:35:02Z, built 03:37:52Z to 03:47:07Z on the Studio;
 # copied to the path below by a build of 2026-10-15 at 11:13Z (sha256 equal, banner equal); on the Studio only, not on the box
-reference.binary_zmq      = ~/bsv/targets/sv-v1.2.3-zmq/bin/bitcoind
+reference.binary_zmq      = $BSV_SPEC_REFERENCE_BINARY_ZMQ
 # the crate facts the runners rely on are asserted by harness/tests/crate_pins.rs (the leg runs it): ProtocolEra::at_height
 # is None below Genesis; ScriptFlags::block(era)/standard(era) carry both UTXO markers from the block's era; the script-number
 # length limit under a word is the coin's era's consensus width on the block path and the policy default on the mempool path (flags.rs at 0.4.5: the same code as at v0.3.30 and v0.3.28, moved by 0.3.30's stack memory constants and budget and 0.3.31's doc comments)
 # Teranode, whose script engine is GoBDK (§1)
 teranode.tag              = v0.16.0
 teranode.commit           = 4edb60a40c6628ff0ef60231c2628efd7103fde5
-teranode.clone            = ~/bsv/teranode
+teranode.clone            = $BSV_SPEC_TERANODE_CLONE
 # go-alert-system, the alert library Teranode's alert service imports (#94): v0.1.17, the version Teranode v0.16.0's go.mod:197
 # requires, module sum h1:qWh/nnN3DiP2OahWbb0hdLBNKkKHXDToSDDnxEzjJ08= (go.sum); the tag's commit df18148deb98a3eef2f2d4741049ef1d258d2b53
 # (the proxy's .info); read in <the maintainers' build host>:upstream/bsv-blockchain/go-alert-system at v0.1.17 (§6, the read of 2026-10-15); not a key this leg checks
 gobdk.commit              = 4eab3acdbbb971724f37e886e836daa1ed444a7f
-gobdk.clone               = ~/bsv/bdk
+gobdk.clone               = $BSV_SPEC_GOBDK_CLONE
 # the linked GoBDK archive remains a build of v1.2.2 when the node of record moves (#57)
 gobdk.reference_tag       = v1.2.2
 gobdk.reference_commit    = 879fc8b42168dd0e608dafd51b39c6dabad37d4d
@@ -89,18 +93,18 @@ go-chaincfg.version       = v1.6.2
 go-chaincfg.commit        = 198ccf650e914b1ece818553ade71512760e0eaf
 go-chaincfg.sum           = h1:BoBm2eLvXioMyf39B5A6LxhddmTV/9VYArbzIr1KEJM=
 go-chaincfg.gomod_sum     = h1:tmKOKZkvIZNhh5GwpcrKTYTXLac1+IGpSFRMSZt/8Gc=
-go-chaincfg.clone         = ~/bsv/go-chaincfg
+go-chaincfg.clone         = $BSV_SPEC_GO_CHAINCFG_CLONE
 # go-safe-conversion, the integer conversions of Teranode's GoBDK call (Uint32ToInt32, the int32 bound of every height,
 # safe_conversion.go:234–240): the version Teranode v0.16.0's go.mod:203 requires (pinned 2026-10-14 for #91, lens item 4)
 go-safe-conversion.tag    = v1.2.0
 go-safe-conversion.commit = ebbf2d452e66904f70ac6ee772721b026322f3b9
-go-safe-conversion.clone  = ~/bsv/upstream/bsv-blockchain/go-safe-conversion
+go-safe-conversion.clone  = $BSV_SPEC_GO_SAFE_CONVERSION_CLONE
 # bsv-rs (crates.io; the checksum is Cargo.lock's; the tag and commit are the crate's repository)
 bsv-rs.crate              = 0.7.0
 bsv-rs.checksum           = a4bd3df9f2d8d2277dc3965692de93e4dc5f669e736c7c89937b4a805601b71d
 bsv-rs.tag                = v0.7.0
 bsv-rs.commit             = 5841f98c839859658c0661dd034722f63d545e2f
-bsv-rs.clone              = ~/bsv/bsv-rs
+bsv-rs.clone              = $BSV_SPEC_BSV_RS_CLONE
 # go-sdk (the Go module proxy; re-pinned 2026-10-12 at #99 from v1.7.1)
 # read 2026-10-12T00:06:00Z https://api.github.com/repos/bsv-blockchain/go-sdk/git/tags/7ab43c0ff9f302386d92cc7766bb90799b73e557
 go-sdk.module             = github.com/bsv-blockchain/go-sdk
@@ -108,14 +112,14 @@ go-sdk.version            = v1.7.2
 go-sdk.commit             = 2ca481c5931b987a0c8f48bb341c70b7477b6b07
 go-sdk.sum                = h1:AKJaeDOzcIqcLgEG/i5ksi6/StQsFEsGSZrIgHBRMzc=
 go-sdk.gomod_sum          = h1:NtCYkU9NX/D8wzdN+9zGUtl2Rpdp+Zk5Uhyd0Aww+/c=
-go-sdk.clone              = ~/bsv/go-sdk
+go-sdk.clone              = $BSV_SPEC_GO_SDK_CLONE
 # ts-sdk (the npm registry; the source is the ts-stack monorepo at the commit; re-pinned 2026-10-05 at #52, from 2.8.0, and at #55, from 2.8.10)
 ts-sdk.package            = @bsv/sdk
 ts-sdk.version            = 3.0.0
 ts-sdk.integrity          = sha512-smQn/gxUy10/RrudCch/aPozqTngXIAATv7atuGjOI7G1XxWO+5Kug6g8mCIFozBITNJJQK7ivkMUG5UwOGv+w==
 ts-sdk.source_repo        = bsv-blockchain/ts-stack
 ts-sdk.commit             = 4d0ea63c85a836e3509291babb0d8e0c784b70a0
-ts-sdk.clone              = ~/bsv/ts-stack
+ts-sdk.clone              = $BSV_SPEC_TS_SDK_CLONE
 # the Association's protocol documentation (#139; a documentation upstream, no site of the leg reads these keys; the recon
 # re-reads the site at every entry, rule 18): the index, the release its specification pages name, the read
 association-docs.index    = https://protocol.bsvblockchain.org/llms.txt

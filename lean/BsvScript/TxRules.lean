@@ -250,7 +250,7 @@ theorem checkCoinbase_length (tx : Tx) (maxSigOps maxSize : Nat) (preGenesis : B
   · rfl
   · exfalso; omega
 
-/-! ## The loops of `CheckTransactionCommon` and `CheckRegularTransaction` (#25, S2, 2026-09-27)
+/-! ## The loops of `CheckTransactionCommon` and `CheckRegularTransaction` (archived #25, the Lean families, 2026-09-27)
 
 The definitions above write the reference's two `for` loops as do-blocks. A theorem about a do-block's `forIn` is
 stated over a recursion that decides as the loop's body does (`forIn_eq_checkOutputs`, `forIn_eq_checkInputs`, each
@@ -633,9 +633,9 @@ theorem checkRegularTransaction_ok_iff (tx : Tx) (maxSigOps maxSize : Nat) (preG
     simp
 
 
-/-! ## The pre-Genesis count is the node's on every script (2026-09-27; S1's ask 5)
+/-! ## The pre-Genesis count is the node's on every script (2026-09-27; the Lean semantics' ask 5)
 
-`SigOps.sigOpCount` (S1's) models `CScript::GetSigOpCount` on every path; `TxPolicy.sigOpCount_legacy_eq`
+`SigOps.sigOpCount` (the Lean semantics') models `CScript::GetSigOpCount` on every path; `TxPolicy.sigOpCount_legacy_eq`
 tied it to `sigOpCountPreGenesis` on the scripts without a literal `0xff`, where the two parted until the walk
 above stopped at that byte. T-TX11 drops the hypothesis. -/
 

@@ -37,6 +37,9 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TABLE = os.path.join(ROOT, "corpus", "teranode", "absences.json")
 PAGE = os.path.join(ROOT, "spec", "teranode-absences.md")
@@ -395,7 +398,7 @@ def clones():
     for line in block.splitlines():
         m = re.match(r"\s*([\w.]+)\s*=\s*(\S+)", line)
         if m:
-            kv[m.group(1)] = os.path.expanduser(m.group(2))
+            kv[m.group(1)] = m.group(2)
     return kv
 
 
@@ -410,11 +413,12 @@ def verify(data):
     n_cite = n_search = n_list = 0
     repos = {}
     for repo, pin in data["pins"].items():
-        clone = kv.get(pin["clone_key"])
+        named = kv.get(pin["clone_key"])
+        clone = host_vars.path(named) if named else None  # `$NAME`: the maintainers' host value (#177)
         if kv.get(pin["clone_key"].replace(".clone", ".commit")) != pin["commit"]:
             fails.append(f"{repo}: the table's commit is not section 1a's")
         if not clone or not os.path.isdir(clone):
-            print(f"  {repo}: clone {clone} absent: SKIPPED BY NAME, never a pass")
+            print(f"  {repo}: clone {clone or named} absent: SKIPPED BY NAME, never a pass")
             skipped.append(repo)
             continue
         repos[repo] = (clone, pin["commit"])

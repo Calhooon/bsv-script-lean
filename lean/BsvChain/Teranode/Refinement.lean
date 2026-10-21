@@ -41,8 +41,8 @@ the observed state, except on `orphan`, the recorded no-function cell) and `Chai
 the two candidate sets that #93's bridge theorems take as hypotheses, `Chain.Validated`, the current-chain read
 agreeing with the rows' ancestry, and the FSM in RUNNING, the precondition of every observation: #93's
 `floater_invalidated_only_running`, #96 row `rl.fsm`, #97 §6 `fsm()`). `cover`, `back` and `validated` are
-assumed by the relation; #93's hand-off ("#88 constructs it") stays owed, S1. The base case holds:
-`refines_empty` relates the empty states (no block on either side); the genesis row's form is owed (S1), since
+assumed by the relation; #93's hand-off ("#88 constructs it") stays owed on the Lean side. The base case holds:
+`refines_empty` relates the empty states (no block on either side); the genesis row's form is owed (the Lean semantics), since
 the spec defines no genesis `StatusState`. The frozen lists relate through `FrozenRefinesAt` (#94's projection),
 outside `Refines`.
 
@@ -56,10 +56,10 @@ writes, bans and Kafka publications keeps the relation (`stutter_run_simulates`)
 survives it (`stutter_run_best_work`); an alert fund that freezes keeps `Refines` and leaves the frozen
 projection agreeing (`alert_freeze_keeps_relation`, from #94's `freeze_agrees`). An FSM event out of RUNNING
 suspends observation (`fsm_exit_suspends`: no reference state is related after it); the relation's return at the
-re-entry to RUNNING is owed (S1). No transition that moves the status is proven to simulate a reference
+re-entry to RUNNING is owed (the Lean semantics). No transition that moves the status is proven to simulate a reference
 transition at this commit: the connection (`connectSimulates`), the reorg's moveBack, moveForward and reset
 (`reorgSimulates`), the assembler's drop of a conflicting transaction (`conflictDropSimulates`) and the
-alert-driven invalidate (`Alert.InvalidationRefines`) are owed with S1, each naming the reference's step
+alert-driven invalidate (`Alert.InvalidationRefines`) are owed to the Lean semantics, each naming the reference's step
 (`refActivate`, `BsvChain.activateBestChain` with its context, lists, oracle and fuel) and taking Teranode's
 step as a parameter: named, NOT stated. Five families leave the relation by a divergence
 (`departs_carry_divergence`): the reconsider of a descendant (`Divergence.reconsiderDescendant`), the block
@@ -106,7 +106,7 @@ unaided, `docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md`).
 Kinds (rule 1): every relation here is a view onto the reference's status, never a rule of validity; the
 settings the components read (retentions, optimistic mining, the alert's authority) are policy, at their
 defaults in the components' docstrings: #93's in `docs/PARAMETERS.md` §8.9, #94's in §8.10. #92's retention and
-pruner switches are in `Lifetimes.lean`'s docstring, with no PARAMETERS section yet (S3's). The two witnesses
+pruner switches are in `Lifetimes.lean`'s docstring, with no PARAMETERS section yet (the harness's). The two witnesses
 this module adds read the reference's `excessiveBlockSize` (consensus, node-configurable) and `assumeValid`
 (policy) as parameters, both in `docs/PARAMETERS.md` §8.2 with their defaults; Teranode's `excessiveblocksize`
 is a parameter at its default 4294967296 (`settings/settings.go:104`), and its checkpoint skip reads no setting.
@@ -293,7 +293,7 @@ def emptyStatus : StatusState := { chain := {} }
 /-- [M] 2026-10-15, the base case: a Teranode state with no row, nothing in assembly and no refusal, in
 RUNNING, refines the empty reference state (no block, an empty pool and journal), where every transaction is
 `unknown` on one side and has no record on the other. The genesis row's form (one row, `current` its id,
-against the reference's genesis) is owed, S1: the spec defines no genesis `StatusState`. -/
+against the reference's genesis) is owed on the Lean side: the spec defines no genesis `StatusState`. -/
 theorem refines_empty (o : Obs ι) (hrows : o.rows = []) (ha : o.assembly = []) (hr : o.refused = [])
     (hf : o.fsm = .RUNNING) : Refines o emptyStatus := by
   refine ⟨fun id _ => ?_, ⟨?_, ?_, ?_, ?_, ?_, hf⟩⟩
@@ -358,7 +358,7 @@ theorem fsm_stutters (p : Bool) (e : Chain.FSMEvent) (hkeep : (Chain.fire p .RUN
 
 /-- [M] 2026-10-15, row `node-fsm`: an FSM event out of RUNNING suspends observation: no reference state is
 related to the state after it (#97 §6, the RUNNING precondition). The relation's return at the re-entry to
-RUNNING is owed, S1. -/
+RUNNING is owed on the Lean side. -/
 theorem fsm_exit_suspends (p : Bool) (e : Chain.FSMEvent) (o : Obs ι) (m : StatusState)
     (hrun : o.fsm = .RUNNING) (hexit : (Chain.fire p .RUNNING e).1 ≠ .RUNNING) :
     ¬ Refines { o with fsm := (Chain.fire p o.fsm e).1 } m := by
@@ -864,7 +864,7 @@ def Divergence.reason : Divergence → String
   | .poolEviction =>
     "Teranode has no traditional mempool by design (docs/topics/architecture/teranode-overall-system-design.md:174) [LIT], so there is no pool to bound or trim; the reference trims its pool by size and fee under -maxmempool (policy; `TrimToSize`, `src/txmempool.cpp:2704-2799` at `6504a3af`) [SRC]"
   | .prematureBlockParked =>
-    "Teranode validates a block's spends where the outputs live, at its UTXO store's spend gate (stores/utxo/sql/sql.go:2477-2478 at `4edb60a4`) (the Aerospike store's twin: stores/utxo/aerospike/teranode.lua:325-326 at `4edb60a4`) [SRC], and has no block-context maturity check of its own at the pin, so a block spending a coinbase below maturity can stand as its best block, parked with nothing built on it, while the store's gate governs the spend; the hold is policy. The reference refuses the same block at its block-context check: a coinbase output matures at COINBASE_MATURITY = 100 blocks (src/consensus/consensus.h:75 at `6504a3af`, consensus), each input checked in the block's context (`bad-txns-premature-spend-of-coinbase`, src/validation.cpp:2617-2625 at `6504a3af`) [SRC]. The chain-level consequence a client sees: for a window Teranode's best-tip answer names a block the reference refuses, until a valid branch overtakes it (measured: 4 s, 0 blocks built on the parked block, then the reference's branch followed); the maturity rule itself agrees in the mempool at depths 98 to 101 and across the reorg (Lifetimes.coinbase_maturity_agrees). The owner's word of 2026-10-17 23:5xZ on card Z10: a design row"
+    "Teranode validates a block's spends where the outputs live, at its UTXO store's spend gate (stores/utxo/sql/sql.go:2477-2478 at `4edb60a4`) (the Aerospike store's twin: stores/utxo/aerospike/teranode.lua:325-326 at `4edb60a4`) [SRC], and has no block-context maturity check of its own at the pin, so a block spending a coinbase below maturity can stand as its best block, parked with nothing built on it, while the store's gate governs the spend; the hold is policy. The reference refuses the same block at its block-context check: a coinbase output matures at COINBASE_MATURITY = 100 blocks (src/consensus/consensus.h:75 at `6504a3af`, consensus), each input checked in the block's context (`bad-txns-premature-spend-of-coinbase`, src/validation.cpp:2617-2625 at `6504a3af`) [SRC]. The chain-level consequence a client sees: for a window Teranode's best-tip answer names a block the reference refuses, until a valid branch overtakes it (measured: 4 s, 0 blocks built on the parked block, then the reference's branch followed); the maturity rule itself agrees in the mempool at depths 98 to 101 and across the reorg (Lifetimes.coinbase_maturity_agrees). The reading of record (docs/CONFORMANCE-TERANODE-MACHINE.md section 1): a design row"
 
 /-- [M] 2026-10-17: a divergence is a chain split exactly when its label is consensus. -/
 theorem Divergence.chainSplit_iff_consensus (d : Divergence) :
@@ -1087,8 +1087,8 @@ def obligations : List Obligation :=
    ⟨"finality", "#95", "consensus", .report, []⟩,
    ⟨"non-final-hold", "#96", "policy", .design [] none [] [], [("tl.nonfinal-pool", "gap")]⟩,
    ⟨"sequence-locks", "#95", "consensus", .report, []⟩,
-   ⟨"orphans", "#98", "policy", .design [] none [``Bridge.bridge_orphan_relayed, ``Bridge.bridge_orphan_reaches_peers, ``Bridge.bridge_orphan_invalid_kept] [⟨[``Bridge.orphanStep], "the legacy bridge's orphan map driven: a child before its parent, a locked parent and a conflicting orphan on the mixed two-node scenario (#98's measured half, lane hz-98)", "S4b"⟩], [("tl.orphan-pool", "dropped")]⟩,
-   ⟨"reject-filter", "#98", "policy", .proved [``Bridge.bridge_rejected_ignored] "the id in the bridge's rejected map and the machine's recent rejects; the sender not whitelisted under forced relay" [] [``Bridge.bridge_reject_flattened, ``Bridge.bridge_reject_flattened_witness] [⟨[``Bridge.handleTx], "the legacy bridge's reject map driven: its 10,000 bound and its clear at each block against the reference's reset at a tip change, and the 0x10 reject on the reference's log (#98's measured half, lane hz-98)", "S4b"⟩], []⟩,
+   ⟨"orphans", "#98", "policy", .design [] none [``Bridge.bridge_orphan_relayed, ``Bridge.bridge_orphan_reaches_peers, ``Bridge.bridge_orphan_invalid_kept] [⟨[``Bridge.orphanStep], "the legacy bridge's orphan map driven: a child before its parent, a locked parent and a conflicting orphan on the mixed two-node scenario (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)", "S4b"⟩], [("tl.orphan-pool", "dropped")]⟩,
+   ⟨"reject-filter", "#98", "policy", .proved [``Bridge.bridge_rejected_ignored] "the id in the bridge's rejected map and the machine's recent rejects; the sender not whitelisted under forced relay" [] [``Bridge.bridge_reject_flattened, ``Bridge.bridge_reject_flattened_witness] [⟨[``Bridge.handleTx], "the legacy bridge's reject map driven: its 10,000 bound and its clear at each block against the reference's reset at a tip change, and the 0x10 reject on the reference's log (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)", "S4b"⟩], []⟩,
    ⟨"fee-floor", "#88", "policy", .owed ⟨[``rollingMinimum], "the rolling minimum without eviction equals the configured floor (policy); not cheap: the rolling rate is a Float, opaque to the kernel", "S1"⟩ [], []⟩,
    ⟨"unmined-lifetime", "#92", "policy", .design [.unminedExpiry] none [``Lifetimes.expiry_rules_differ] [], []⟩,
    ⟨"pool-size", "#96", "policy", .design [.poolEviction] none [] [], [("tl.pool-size", "gap")]⟩,
@@ -1117,7 +1117,7 @@ def obligations : List Obligation :=
    ⟨"freeze-confiscation", "#94", "consensus", .proved [``Alert.freeze_agrees, ``Alert.unfreeze_agrees, ``alert_freeze_refines, ``alert_unfreeze_refines, ``alert_freeze_keeps_relation] "" [(legAlert, "the freeze and unfreeze rows (agree)"), (legStore, "the freeze, unfreeze and second-freeze rows and the reassign's strand row (agree)")] [``Alert.unfreeze_keeps_policy_freeze, ``Alert.future_start_frozen_early, ``Alert.stop_passed_still_frozen, ``Alert.freeze_spent_refused, ``Alert.whitelist_ignores_enforce, ``Alert.reassign_gate, ``Alert.reassign_strands, ``Alert.whitelist_not_confiscation] [], []⟩,
    ⟨"alert-system", "#96", "policy", .design [.alertInvalidate, .alertBan, .alertReassign] none [``Alert.trust_root_changes_who_not_what] [], [("rl.alert-service", "new")]⟩,
    ⟨"mining-candidate", "#88", "policy", .owed ⟨[], "a model of the template on either side", "S1"⟩ [], []⟩,
-   ⟨"tx-relay", "#98", "policy", .proved [``Bridge.bridge_accept_relayed, ``Bridge.bridge_accept_reaches_peers, ``Bridge.bridge_tx_refines, ``Bridge.bridge_inv_requests] "under VerdictAgrees (the validator's answer is the mempool machine's verdict), the transaction new to the machine, the sender present, not under blocks-only and not whitelisted under forced relay, not a miner-info data transaction; the inventory road under RUNNING as the download latch off and the store's have-it as the inventory test" [] [``Bridge.bridge_known_accept_diverges, ``Bridge.bridge_announce_passes_fee_filter, ``Bridge.fee_filter_withholds_witness] [⟨[``Bridge.VerdictAgrees], "the legacy bridge's relay driven: the verdict, inventory and RUNNING correspondences measured on the mixed two-node scenario, a transaction each way, the resubmit and the fee filter (#98's measured half, lane hz-98)", "S4b"⟩], [("rl.rejected-tx-gossip", "new")]⟩,
+   ⟨"tx-relay", "#98", "policy", .proved [``Bridge.bridge_accept_relayed, ``Bridge.bridge_accept_reaches_peers, ``Bridge.bridge_tx_refines, ``Bridge.bridge_inv_requests] "under VerdictAgrees (the validator's answer is the mempool machine's verdict), the transaction new to the machine, the sender present, not under blocks-only and not whitelisted under forced relay, not a miner-info data transaction; the inventory road under RUNNING as the download latch off and the store's have-it as the inventory test" [] [``Bridge.bridge_known_accept_diverges, ``Bridge.bridge_announce_passes_fee_filter, ``Bridge.fee_filter_withholds_witness] [⟨[``Bridge.VerdictAgrees], "the legacy bridge's relay driven: the verdict, inventory and RUNNING correspondences measured on the mixed two-node scenario, a transaction each way, the resubmit and the fee filter (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)", "S4b"⟩], [("rl.rejected-tx-gossip", "new")]⟩,
    ⟨"compact-blocks", "#96", "policy", .design [] none [] [], [("tl.compact-blocks", "dropped")]⟩,
    ⟨"double-spend-notify", "#96", "policy", .design [] none [] [], [("tl.dsdetected", "gap"), ("tl.ds-attempt-callback", "gap")]⟩,
    ⟨"event-surface", "#97", "policy", .design [] (some "docs/CONFORMANCE-TERANODE-OBSERVATION.md") [``event_stutters] [], [("tl.invalidtx-sinks", "dropped"), ("rl.websocket", "new")]⟩,
@@ -1130,7 +1130,7 @@ def obligations : List Obligation :=
    ⟨"pruning", "#92", "policy", .owed ⟨[``Lifetimes.prune_only_mined_or_conflicting, ``prune_stutters], "the block-file half: Teranode's block persister retention against -prune (#82's Store.addBlock, docs/PARAMETERS.md section 8.8); the record's deletion holds by prune_only_mined_or_conflicting, prune_stutters", "S1"⟩ [], []⟩,
    ⟨"miner-id", "#96", "policy", .design [] none [] [], [("tl.miner-id", "dropped")]⟩,
    ⟨"wire-tx", "#98", "consensus", .proved [``Views.Wire.ef_ofTx_tx_spent, ``Views.Wire.ef_decode_encode] "" [] [] [], []⟩,
-   ⟨"wire-block", "#98", "consensus", .design [] none [``Bridge.bridgeBlockAccepts, ``Bridge.BlockVerdictAgrees, ``Bridge.bridge_block_accepted] [⟨[``Bridge.bridge_block_accepted], "the bridge's streaming wire reader skips the payload checksum ([SRC] bitcoin-sv `6504a3af` `src/net/net_processing.cpp:5053-5059`, the checksum check and its drop), the design reason (Teranode `wire_streaming.go:11-25` at the pin, the `checksumSkipped` divergence constructor of `bridge_block_accepted`): it takes the block the reference drops at the same bytes; and the split it makes heals itself unaided on a live wire, measured (the reference drops, the bridge takes and announces, the reference's open fetch gate re-agrees the tips inside one announce round; 8 blocks mined on the healed tip and a 180 s quiet watch, both tips one; lane hz-98h2, docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md)", "S4b"⟩], []⟩]
+   ⟨"wire-block", "#98", "consensus", .design [] none [``Bridge.bridgeBlockAccepts, ``Bridge.BlockVerdictAgrees, ``Bridge.bridge_block_accepted] [⟨[``Bridge.bridge_block_accepted], "the bridge's streaming wire reader skips the payload checksum ([SRC] bitcoin-sv `6504a3af` `src/net/net_processing.cpp:5053-5059`, the checksum check and its drop), the design reason (Teranode `wire_streaming.go:11-25` at the pin, the `checksumSkipped` divergence constructor of `bridge_block_accepted`): it takes the block the reference drops at the same bytes; and the split it makes heals itself unaided on a live wire, measured (the reference drops, the bridge takes and announces, the reference's open fetch gate re-agrees the tips inside one announce round; 8 blocks mined on the healed tip and a 180 s quiet watch, both tips one; docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md)", "S4b"⟩], []⟩]
 
 /-- [M] 2026-10-15: every row of #87's map has exactly one obligation, in the map's order: the list's rows
 are `mapRows` (and `chaincheck --refinement` checks `mapRows` against `corpus/teranode/map.json`). -/

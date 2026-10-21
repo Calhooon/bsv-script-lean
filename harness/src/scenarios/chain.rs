@@ -262,11 +262,7 @@ mod lane {
             .map_err(|e| e.to_string())?;
         let stamp = String::from_utf8_lossy(&clock.stdout).trim().to_owned();
         let run_id = format!("s6-66-chn3-{stamp}-{kind}");
-        let binary =
-            PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?).join(format!(
-                "bsv/targets/sv-{}/bin/bitcoind",
-                bsv_script_harness::SV_NODE_TAG
-            ));
+        let binary = Build::Record.located();
         let output = Command::new(binary)
             .arg("-version")
             .output()

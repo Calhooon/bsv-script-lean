@@ -16,7 +16,7 @@ concatenation, over the spec's own loop (`Machine.loop`, `interpreter.cpp:388–
 
 Written on 2026-09-29 as the companion of
 `docs/records/20260929-014620-gadget-api-35-s2.md`, compiled against `main` there; applied to the
-tree by S1 under its own tag (the file is S1's glob by `docs/OWNERS`; RULES-TREE (32)), unchanged but
+tree on the Lean semantics' side (the file is in that area by `docs/OWNERS`; RULES-TREE (32)), unchanged but
 for this paragraph and the `#print axioms` lines, which stand on `lean/AxiomCheck.lean`.
 -/
 

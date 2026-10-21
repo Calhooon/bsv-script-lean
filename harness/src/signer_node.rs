@@ -77,10 +77,10 @@ pub struct Node {
 }
 
 impl Node {
-    /// The column's instance: `reference.binary` with `harness/oracle/bitcoin.conf` as it stands.
+    /// The column's instance: `reference.binary` (`$BSV_SPEC_REFERENCE_BINARY`, #177) with
+    /// `harness/oracle/bitcoin.conf` as it stands.
     pub fn start(root: &Path, run: &Path) -> Result<Self> {
-        let binary = PathBuf::from(std::env::var("HOME").map_err(|_| "HOME absent")?)
-            .join("bsv/targets/sv-v1.2.3/bin/bitcoind");
+        let binary = crate::host::need(crate::host::REFERENCE_BINARY);
         let conf = read(&root.join("harness/oracle/bitcoin.conf"))?;
         Self::start_with(run, NodeSpec { binary, conf })
     }

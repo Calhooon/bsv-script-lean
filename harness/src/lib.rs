@@ -36,6 +36,8 @@ pub mod fail;
 pub mod flags_oracle;
 pub mod gen;
 pub mod gosdk_codes;
+/// the maintainers' host values the pins block names `$NAME` (#177)
+pub mod host;
 pub mod rpc;
 pub mod rules;
 pub mod signer;

@@ -124,7 +124,7 @@ the suspension score.
 
 Teranode lacks both halves; spec/teranode-absences.md rows `tl.dsdetected` and
 `tl.ds-attempt-callback` (#96) carry the absences with their searches, re-run for this page
-(2026-10-15, the clone at the pin): `git -C ~/bsv/teranode grep -il -E '<word>' 4edb60a4` finds
+(2026-10-15, the clone at the pin, `$BSV_SPEC_TERANODE_CLONE`, the maintainers' clone): `git -C $BSV_SPEC_TERANODE_CLONE grep -il -E '<word>' 4edb60a4` finds
 no file for `dsdetected`, `dsattempt`, `dscallback`, `dsendpoint`, `dsnt` or `x-bsv-dsnt`. What it
 has instead [SRC]: the second spend is refused at validation, `ErrTxConflicting` and
 `ErrTxInvalidDoubleSpend` (`errors/Error_types.go:60,64`), answered on the propagation surface with

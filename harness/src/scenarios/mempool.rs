@@ -886,10 +886,7 @@ mod lane_tests {
                     .bytes()
                     .all(|c| c.is_ascii_alphanumeric() || c == b'-')
         );
-        let binary = PathBuf::from(std::env::var("HOME").unwrap()).join(format!(
-            "bsv/targets/sv-{}/bin/bitcoind",
-            bsv_script_harness::SV_NODE_TAG
-        ));
+        let binary = Build::Record.located();
         let version = Command::new(binary).arg("-version").output().unwrap();
         let version = String::from_utf8_lossy(&version.stdout)
             .lines()

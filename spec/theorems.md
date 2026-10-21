@@ -6987,7 +6987,7 @@ the reference's status `minedActive n` (from #74's `teranode_mined_implies_activ
 [M] 2026-10-15, the base case: a Teranode state with no row, nothing in assembly and no refusal, in
 RUNNING, refines the empty reference state (no block, an empty pool and journal), where every transaction is
 `unknown` on one side and has no record on the other. The genesis row's form (one row, `current` its id,
-against the reference's genesis) is owed, S1: the spec defines no genesis `StatusState`.
+against the reference's genesis) is owed on the Lean side: the spec defines no genesis `StatusState`.
 
 ### `refines_best_work` (`lean/BsvChain/Teranode/Refinement.lean:308`)
 
@@ -7033,7 +7033,7 @@ the services and is no transaction's state (`docs/CONFORMANCE-TERANODE-MACHINE.m
 
 [M] 2026-10-15, row `node-fsm`: an FSM event out of RUNNING suspends observation: no reference state is
 related to the state after it (#97 §6, the RUNNING precondition). The relation's return at the re-entry to
-RUNNING is owed, S1.
+RUNNING is owed on the Lean side.
 
 ### `alert_stutters` (`lean/BsvChain/Teranode/Refinement.lean:370`)
 
@@ -14072,17 +14072,17 @@ rests on: with `acc = []` the loop is `hexDecodeChars` itself.
 
 ### `hexDecodeChars_eq_viaLoop` (`lean/BsvScript/Tx.lean:156`)
 
-`@[csimp]` (lean #48; S1's ask 7): every call of `hexDecodeChars` compiled after this lemma runs the loop, so
+`@[csimp]` (archived #48; the Lean semantics' ask 7): every call of `hexDecodeChars` compiled after this lemma runs the loop, so
 `hexDecode` below and every caller of either (the reader, the CLI, the Test harnesses' direct calls) does; by
 `hexDecodeCharsLoop_eq`. Nothing in the semantics moves: every theorem about the decoder is about the definition.
 
 ### `readLE_eq_fast` (`lean/BsvScript/Tx.lean:187`)
 
-`@[csimp]` (S1's ask 4 (a)): the compiler reads a fixed-width field with `readLEFast`, which walks the field's own `n` bytes (`Machine.takeExact`) instead of measuring the rest of the transaction (the decoder's wall of `docs/records/20260927-031436-diff-s1.md`, quadratic in fields × size); by `Machine.takeExact_eq`; nothing in the semantics moves, every theorem about the decoder is about `readLE`.
+`@[csimp]` (the Lean semantics' ask 4 (a)): the compiler reads a fixed-width field with `readLEFast`, which walks the field's own `n` bytes (`Machine.takeExact`) instead of measuring the rest of the transaction (the decoder's wall of `docs/records/20260927-031436-diff-s1.md`, quadratic in fields × size); by `Machine.takeExact_eq`; nothing in the semantics moves, every theorem about the decoder is about `readLE`.
 
 ### `readBytes_eq_fast` (`lean/BsvScript/Tx.lean:199`)
 
-`@[csimp]` (S1's ask 4 (a)): the compiler reads a script or an outpoint's hash with `readBytesFast`, the field's own `n` bytes walked (`Machine.takeExact`, then `drop n`: linear in the field, never in the rest of the transaction); by `Machine.takeExact_eq`; nothing in the semantics moves.
+`@[csimp]` (the Lean semantics' ask 4 (a)): the compiler reads a script or an outpoint's hash with `readBytesFast`, the field's own `n` bytes walked (`Machine.takeExact`, then `drop n`: linear in the field, never in the rest of the transaction); by `Machine.takeExact_eq`; nothing in the semantics moves.
 
 ### `readVarInt_eq_fast` (`lean/BsvScript/Tx.lean:215`)
 
@@ -14239,7 +14239,7 @@ the state (the induction behind T-SO10).
 the count of a script without a literal `0xff` is `TxRules.sigOpCountPreGenesis`, the consensus gate's
 count. *What it assumes:* no instruction of the script is `0xff`. *Why it matters:* the mempool's count and
 the consensus gate's agree on the pre-Genesis path wherever the spec's `TxRules` walk agrees with the
-reference. Since S2's `616008e` both stop at a literal `0xff` (`script.cpp:44–45`; `SigOps.sigOpCount_ff`,
+reference. Since the Lean families' `616008e` both stop at a literal `0xff` (`script.cpp:44–45`; `SigOps.sigOpCount_ff`,
 `TxRules.sigOpCountPreGenesis_invalidop`), and `TxRules.sigOpCountPreGenesis_eq_sigOpCount` (T-TX11) states the
 equality on every script: this theorem's hypothesis is stronger than it needs to be.
 

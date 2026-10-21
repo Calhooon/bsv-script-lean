@@ -100,7 +100,10 @@ case "$impl" in
     if [ ! -x "${GOBDK_RUNNER:-$ROOT/harness/target/engines/gobdk-runner}" ] && [ "$build" = yes ]; then
       command -v go >/dev/null || prereq "go is not on PATH; the GoBDK shim builds with Go $(pin go.major) and cgo" "gobdk"
       command -v cc >/dev/null || prereq "no C compiler (cc) on PATH; the GoBDK shim links its prebuilt library through cgo" "gobdk"
-      gclone="$(pin gobdk.clone)"; gclone="${GOBDK_CLONE:-${gclone/#\~/$HOME}}"
+      # gobdk.clone is a `$NAME` (#177): GOBDK_CLONE, else NAME through tools/host_vars.py; unresolved, one line and exit 2
+      gclone="${GOBDK_CLONE:-$(pin gobdk.clone)}"
+      if [[ "$gclone" == \$* ]]; then gclone="$(python3 "$ROOT/tools/host_vars.py" "${gclone#\$}" "harness/run")" || exit 2; fi
+      gclone="${gclone/#\~/$HOME}"
       git -C "$gclone" rev-parse HEAD >/dev/null 2>&1 || prereq "no GoBDK clone at $gclone (github.com/bitcoin-sv/bdk at $(pin gobdk.commit); GOBDK_CLONE names another path)" "gobdk"
     fi ;;
   sv-node)

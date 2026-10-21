@@ -3,7 +3,7 @@ import BsvScript.Machine
 # BsvScript.SigOps
 
 The node's count of signature operations, `CScript::GetSigOpCount` (`src/script/script.cpp:30–166`
-at the pin, `docs/PROVENANCE.md`), on every path (2026-09-27, S1: the spec gap
+at the pin, `docs/PROVENANCE.md`), on every path (2026-09-27, the Lean semantics: the spec gap
 `tx.gate.policy-caps.unmodelled`'s remainder, CLAUDE.md rule 1; the transaction-level counts and the
 mempool's test over them are `BsvScript.TxPolicy`'s).
 

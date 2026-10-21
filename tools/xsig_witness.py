@@ -62,8 +62,11 @@ import subprocess
 import sys
 import time
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = Path(__file__).resolve().parent.parent
-BITCOIND = Path.home() / "bsv/targets/sv-v1.2.3/bin/bitcoind"
+BITCOIND = None  # docs/PROVENANCE.md 1a reference.binary, `$BSV_SPEC_REFERENCE_BINARY` (#177): set in main
 GOSIGN = ROOT / "harness/target/engines/xsig-gosign"
 TSSIGN = ROOT / "tools/xsig/tssign.mjs"
 GENESIS_HEIGHT = 115
@@ -347,6 +350,8 @@ def main():
         return
     if not args.out:
         sys.exit("--out <witness.json> or --corpus <witness.json>")
+    global BITCOIND
+    BITCOIND = Path(host_vars.need("$BSV_SPEC_REFERENCE_BINARY", "xsig_witness"))
     for p in (BITCOIND, GOSIGN, TSSIGN) if args.shape == "AB" else (BITCOIND,):
         if not p.exists():
             sys.exit(f"missing {p} (the go helper: cd tools/xsig/gosign && go build -o {GOSIGN} .)")

@@ -705,7 +705,7 @@ def render_opcode(name, val, decls, rule_rows, counts, witnesses, ops):
 
 def render_rules(rule_rows, counts, fams, witnesses):
     lines = ["# The rules and their corpus entries", "",
-             "The rule vocabulary of `corpus/INDEX.md` §2 with the number of entries of the generated corpora (`corpus/seed`, `flow`, `arith`, `stack`, `crypto`, `bytes`, the hand-built `eras`, #26's generator families `gen` and the transaction-level `tx` (D97, 2026-09-26), and the constructed `witnesses/policy-defaults`) that carry each id. **A rule without a generated entry is flagged**: #26's input (the reference's own vectors and the S3 witness families are named in the last column, never counted here).", ""]
+             "The rule vocabulary of `corpus/INDEX.md` §2 with the number of entries of the generated corpora (`corpus/seed`, `flow`, `arith`, `stack`, `crypto`, `bytes`, the hand-built `eras`, #26's generator families `gen` and the transaction-level `tx` (D97, 2026-09-26), and the constructed `witnesses/policy-defaults`) that carry each id. **A rule without a generated entry is flagged**: #26's input (the reference's own vectors and the harness's witness families are named in the last column, never counted here).", ""]
     lines.append("| rule | what it exercises | `[SRC]` | generated entries | corpora | flagged |")
     lines.append("|---|---|---|---|---|---|")
     flagged = []

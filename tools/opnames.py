@@ -2,9 +2,11 @@
 """Regenerate lean/Test/OpNames.lean from the pinned reference: the names
 `init_op_names` (src/core_read.cpp:20–35) accepts, from `GetOpName`
 (src/script/opcodes.cpp) and the values of src/script/opcodes.h. Run from the
-repo root with the pin cloned at ~/bsv/bitcoin-sv (docs/PROVENANCE.md §1)."""
-import re, os
-ref=os.path.expanduser('~/bsv/bitcoin-sv')
+repo root with the pin cloned at $BSV_SPEC_REFERENCE_CLONE, the maintainers' clone (docs/PROVENANCE.md §1, #177)."""
+import re, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+ref=host_vars.need('$BSV_SPEC_REFERENCE_CLONE','opnames')
 h=open(f'{ref}/src/script/opcodes.h').read()
 vals=dict((m.group(1),int(m.group(2),16)) for m in re.finditer(r'(OP_[A-Z0-9_]+)\s*=\s*(0x[0-9a-fA-F]+)',h))
 for m in re.finditer(r'(OP_[A-Z0-9_]+)\s*=\s*(OP_[A-Z0-9_]+)',h):   # aliases (OP_NOP2 = OP_CHECKLOCKTIMEVERIFY, OP_NOP7 = OP_LSHIFTNUM, …)

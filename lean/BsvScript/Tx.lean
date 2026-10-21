@@ -153,7 +153,7 @@ theorem hexDecodeCharsLoop_eq : ∀ (l : List Char) (acc : List Nat),
 /-- The decoder as it is compiled: the loop from the empty accumulator. -/
 def hexDecodeCharsViaLoop (l : List Char) : Option Bytes := hexDecodeCharsLoop l []
 
-/-- `@[csimp]` (lean #48; S1's ask 7): every call of `hexDecodeChars` compiled after this lemma runs the loop, so
+/-- `@[csimp]` (archived #48; the Lean semantics' ask 7): every call of `hexDecodeChars` compiled after this lemma runs the loop, so
 `hexDecode` below and every caller of either (the reader, the CLI, the Test harnesses' direct calls) does; by
 `hexDecodeCharsLoop_eq`. Nothing in the semantics moves: every theorem about the decoder is about the definition. -/
 @[csimp] theorem hexDecodeChars_eq_viaLoop : @hexDecodeChars = @hexDecodeCharsViaLoop := by
@@ -184,7 +184,7 @@ def readLEFast (n : Nat) (bs : Bytes) : Option (Nat × Bytes) :=
   | none => none
   | some f => some (leNat f, bs.drop n)
 
-/-- `@[csimp]` (S1's ask 4 (a)): the compiler reads a fixed-width field with `readLEFast`, which walks the field's own `n` bytes (`Machine.takeExact`) instead of measuring the rest of the transaction (the decoder's wall of `docs/records/20260927-031436-diff-s1.md`, quadratic in fields × size); by `Machine.takeExact_eq`; nothing in the semantics moves, every theorem about the decoder is about `readLE`. -/
+/-- `@[csimp]` (the Lean semantics' ask 4 (a)): the compiler reads a fixed-width field with `readLEFast`, which walks the field's own `n` bytes (`Machine.takeExact`) instead of measuring the rest of the transaction (the decoder's wall of `docs/records/20260927-031436-diff-s1.md`, quadratic in fields × size); by `Machine.takeExact_eq`; nothing in the semantics moves, every theorem about the decoder is about `readLE`. -/
 @[csimp] theorem readLE_eq_fast : @readLE = @readLEFast := by
   funext n bs
   simp only [readLE, readLEFast, Machine.takeExact_eq]
@@ -196,7 +196,7 @@ def readBytesFast (n : Nat) (bs : Bytes) : Option (Bytes × Bytes) :=
   | none => none
   | some f => some (f, bs.drop n)
 
-/-- `@[csimp]` (S1's ask 4 (a)): the compiler reads a script or an outpoint's hash with `readBytesFast`, the field's own `n` bytes walked (`Machine.takeExact`, then `drop n`: linear in the field, never in the rest of the transaction); by `Machine.takeExact_eq`; nothing in the semantics moves. -/
+/-- `@[csimp]` (the Lean semantics' ask 4 (a)): the compiler reads a script or an outpoint's hash with `readBytesFast`, the field's own `n` bytes walked (`Machine.takeExact`, then `drop n`: linear in the field, never in the rest of the transaction); by `Machine.takeExact_eq`; nothing in the semantics moves. -/
 @[csimp] theorem readBytes_eq_fast : @readBytes = @readBytesFast := by
   funext n bs
   simp only [readBytes, readBytesFast, Machine.takeExact_eq]

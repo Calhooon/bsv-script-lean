@@ -3,7 +3,7 @@ import BsvScript.Ops.Crypto
 /-!
 # BsvScript.Properties.Resources
 
-The resource bounds (#25, S1's half; `docs/DESIGN.md` §9): what the machine enforces, at the site
+The resource bounds (archived #25, the Lean semantics' half; `docs/DESIGN.md` §9): what the machine enforces, at the site
 the reference enforces it, as theorems on the machine. `Machine.loop` is parametrized by the
 family hook `OpExec`; a bound the loop enforces after every step (the pre-Genesis stack depth,
 `1800–1803`) is a theorem for every hook; a bound a family may touch (the op count through

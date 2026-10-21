@@ -209,7 +209,7 @@ clock at 1700000000 (2023-11-14), it answered the wall clock (2026-10-15), while
 
 **The binary of record's build.** [X] `getnetworkinfo`'s `warnings` on the node of record is the development-build text
 (`src/warnings.cpp:41-44`): its build tree was configured with `ENABLE_PROD_BUILD=OFF`
-(`~/bsv/targets/sv-v1.2.3-build/CMakeCache.txt:408`), which sets `CLIENT_VERSION_IS_RELEASE` false
+(`CMakeCache.txt:408` in the build tree of `$BSV_SPEC_REFERENCE_BINARY`, docs/PROVENANCE.md §1a), which sets `CLIENT_VERSION_IS_RELEASE` false
 (`src/config/CMakeLists.txt` lines 20 to 24 at the pin) and adds `IS_PRODUCTION_BUILD` nowhere else than the version
 string (`src/CMakeLists.txt` lines 259 and 260, `src/clientversion.cpp:22`). No handler of the contract changes with it;
 the RPC warning, which safe mode reads, stays empty.
@@ -613,7 +613,7 @@ the RPC warning, which safe mode reads, stays empty.
 |---|---|---|---|---|
 | 0 | `account` | string | no | deprecated |
 
-- result: string. the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]
+- result: string. the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]
 - safe mode: answers (okSafeMode true at the registration)
 - pruning: no block data read: unchanged by pruning
 - mock time: no clock read in the handler
@@ -698,7 +698,7 @@ the RPC warning, which safe mode reads, stays empty.
 | 0 | `address` | string | yes |  |
 | 1 | `minconf` | i64 | no | default 1 |
 
-- result: f64. the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]
+- result: f64. the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]
 - safe mode: refused with -2 `Safe mode: <warning>` before the handler runs (okSafeMode false; the gate `src/init.cpp:325-332`)
 - pruning: no block data read: unchanged by pruning
 - mock time: no clock read in the handler
@@ -727,7 +727,7 @@ the RPC warning, which safe mode reads, stays empty.
 | 0 | `txid` | string | yes |  |
 | 1 | `include_watchonly` | bool | no | default false |
 
-- result: WalletTransaction. the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]
+- result: WalletTransaction. the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]
 - safe mode: refused with -2 `Safe mode: <warning>` before the handler runs (okSafeMode false; the gate `src/init.cpp:325-332`)
 - pruning: no block data read: unchanged by pruning
 - mock time: no clock read in the handler
@@ -775,7 +775,7 @@ the RPC warning, which safe mode reads, stays empty.
 
 [SRC] `src/wallet/rpcwallet.cpp:2798-2878`, registered `src/wallet/rpcwallet.cpp:3530` with okSafeMode false and the names none; the wallet build.
 
-- result: WalletInfo. the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]
+- result: WalletInfo. the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]
 - safe mode: refused with -2 `Safe mode: <warning>` before the handler runs (okSafeMode false; the gate `src/init.cpp:325-332`)
 - pruning: no block data read: unchanged by pruning
 - mock time: no clock read in the handler
@@ -1655,54 +1655,54 @@ differs is not a wrong rule; it is a span drawn otherwise, and the wiring change
 <!-- rpc_contract: runner begin -->
 | handler | runner table | the runner's citation | the contract's | same |
 |---|---|---|---|---|
-| `preciousblock` | `harness/src/scenarios/chain.rs` line 1274 | `src/rpc/blockchain.cpp:2695-2731` | `src/rpc/blockchain.cpp:2695-2730` | no |
-| `getblockheader` | `harness/src/scenarios/chain.rs` line 1275 | `src/rpc/blockchain.cpp:884-1063` | `src/rpc/blockchain.cpp:884-1061` | no |
-| `getmempoolinfo` | `harness/src/scenarios/chain.rs` line 1276 | `src/rpc/blockchain.cpp:2617-2673` | `src/rpc/blockchain.cpp:2644-2673` | no |
-| `softrejectblock` | `harness/src/scenarios/chain.rs` line 1277 | `src/rpc/blockchain.cpp:2820-2892` | `src/rpc/blockchain.cpp:2820-2892` | yes |
-| `acceptblock` | `harness/src/scenarios/chain.rs` line 1278 | `src/rpc/blockchain.cpp:2894-2991` | `src/rpc/blockchain.cpp:2894-2991` | yes |
-| `pruneblockchain` | `harness/src/scenarios/chain.rs` line 1279 | `src/rpc/blockchain.cpp:1810-1875` | `src/rpc/blockchain.cpp:1810-1875` | yes |
-| `addToConsensusBlacklist` | `harness/src/scenarios/chain.rs` line 1280 | `src/rpc/frozentxo_rpc.cpp:346-378` | `src/rpc/frozentxo_rpc.cpp:346-378` | yes |
-| `verifychain` | `harness/src/scenarios/chain.rs` line 1281 | `src/rpc/blockchain.cpp:2321-2354` | `src/rpc/blockchain.cpp:2321-2354` | yes |
-| `gettxoutsetinfo` | `harness/src/scenarios/chain.rs` line 1282 | `src/rpc/blockchain.cpp:1877-1921` | `src/rpc/blockchain.cpp:1877-1921` | yes |
-| `generatetoaddress` | `harness/src/scenarios/core.rs` line 153 | `src/rpc/mining.cpp:227-268` | `src/rpc/mining.cpp:227-268` | yes |
-| `submitblock` | `harness/src/scenarios/core.rs` line 154 | `src/rpc/mining.cpp:916-952` | `src/rpc/mining.cpp:916-953` | no |
-| `sendrawtransactions` | `harness/src/scenarios/core.rs` line 155 | `src/rpc/rawtransaction.cpp:1798-2239` | `src/rpc/rawtransaction.cpp:1798-2240` | no |
-| `sendrawtransaction` | `harness/src/scenarios/core.rs` line 156 | `src/rpc/rawtransaction.cpp:1530-1672` | `src/rpc/rawtransaction.cpp:1530-1700` | no |
-| `getrawtransaction` | `harness/src/scenarios/core.rs` line 157 | `src/rpc/rawtransaction.cpp:53-194` | `src/rpc/rawtransaction.cpp:53-256` | no |
-| `verifyscript` | `harness/src/scenarios/core.rs` line 158 | `src/rpc/misc.cpp:506-914` | `src/rpc/misc.cpp:506-915` | no |
-| `getmerkleproof` | `harness/src/scenarios/core.rs` line 159 | `src/rpc/rawtransaction.cpp:2242-2340` | `src/rpc/rawtransaction.cpp:2242-2339` | no |
-| `getmerkleproof2` | `harness/src/scenarios/core.rs` line 161 | `src/rpc/rawtransaction.cpp:2342-2525` | `src/rpc/rawtransaction.cpp:2342-2525` | yes |
-| `verifymerkleproof` | `harness/src/scenarios/core.rs` line 162 | `src/rpc/rawtransaction.cpp:2527-2612` | `src/rpc/rawtransaction.cpp:2527-2612` | yes |
-| `setmocktime` | `harness/src/scenarios/core.rs` line 163 | `src/rpc/misc.cpp:980-1007` | `src/rpc/misc.cpp:980-1008` | no |
-| `getchaintxstats` | `harness/src/scenarios/core.rs` line 165 | `src/rpc/blockchain.cpp:3054-3155` | `src/rpc/blockchain.cpp:3054-3155` | yes |
-| `getnetworkinfo` | `harness/src/scenarios/core.rs` line 166 | `src/rpc/net.cpp:543-667` | `src/rpc/net.cpp:543-667` | yes |
-| `getpeerinfo` | `harness/src/scenarios/core.rs` line 167 | `src/rpc/net.cpp:69-280` | `src/rpc/net.cpp:69-280` | yes |
-| `addnode` | `harness/src/scenarios/core.rs` line 169 | `src/rpc/net.cpp:282-327` | `(not in the contract)` | no |
-| `listbanned` | `harness/src/scenarios/core.rs` line 170 | `src/rpc/net.cpp:759-789` | `(not in the contract)` | no |
-| `getblockcount` | `harness/src/scenarios/core.rs` line 171 | `src/rpc/blockchain.cpp:205-218` | `src/rpc/blockchain.cpp:205-218` | yes |
-| `getblockhash` | `harness/src/scenarios/core.rs` line 173 | `src/rpc/blockchain.cpp:801-828` | `src/rpc/blockchain.cpp:801-825` | no |
-| `getbestblockhash` | `harness/src/scenarios/core.rs` line 174 | `src/rpc/blockchain.cpp:220-236` | `src/rpc/blockchain.cpp:220-235` | no |
-| `getrawmempool` | `harness/src/scenarios/core.rs` line 175 | `src/rpc/blockchain.cpp:440-500` | `src/rpc/blockchain.cpp:440-500` | yes |
-| `getrawnonfinalmempool` | `harness/src/scenarios/core.rs` line 176 | `src/rpc/blockchain.cpp:502-550` | `src/rpc/blockchain.cpp:502-557` | no |
-| `getblock` | `harness/src/scenarios/core.rs` line 177 | `src/rpc/blockchain.cpp:1108-1242` | `src/rpc/blockchain.cpp:1108-1272` | no |
-| `gettxout` | `harness/src/scenarios/core.rs` line 178 | `src/rpc/blockchain.cpp:1923-2029` | `src/rpc/blockchain.cpp:1923-2028` | no |
-| `getchaintips` | `harness/src/scenarios/core.rs` line 179 | `src/rpc/blockchain.cpp:2497-2632` | `src/rpc/blockchain.cpp:2497-2615` | no |
-| `getorphaninfo` | `harness/src/scenarios/core.rs` line 180 | `src/rpc/blockchain.cpp:2675-2693` | `src/rpc/blockchain.cpp:2675-2693` | yes |
-| `invalidateblock` | `harness/src/scenarios/core.rs` line 181 | `src/rpc/blockchain.cpp:2732-2768` | `src/rpc/blockchain.cpp:2732-2768` | yes |
-| `reconsiderblock` | `harness/src/scenarios/core.rs` line 182 | `src/rpc/blockchain.cpp:2770-2818` | `src/rpc/blockchain.cpp:2770-2818` | yes |
-| `waitforptvcompletion` | `harness/src/scenarios/core.rs` line 184 | `src/rpc/blockchain.cpp:3769-3786` | `src/rpc/blockchain.cpp:3769-3786` | yes |
-| `getmempoolinfo` | `harness/src/scenarios/core.rs` line 185 | `src/rpc/blockchain.cpp:2634-2673` | `src/rpc/blockchain.cpp:2644-2673` | no |
-| `getblockheader` | `harness/src/scenarios/core.rs` line 186 | `src/rpc/blockchain.cpp:884-1038` | `src/rpc/blockchain.cpp:884-1061` | no |
-| `pruneblockchain` | `harness/src/scenarios/core.rs` line 188 | `src/rpc/blockchain.cpp:1810-1875` | `src/rpc/blockchain.cpp:1810-1875` | yes |
-| `getblockchaininfo` | `harness/src/scenarios/core.rs` line 189 | `src/rpc/blockchain.cpp:2394-2482` | `(not in the contract)` | no |
-| `getblockchainactivity` | `harness/src/scenarios/core.rs` line 190 | `src/rpc/blockchain.cpp:3649-3688` | `src/rpc/blockchain.cpp:3649-3683` | no |
-| `prioritisetransaction` | `harness/src/scenarios/core.rs` line 191 | `src/rpc/mining.cpp:312-351` | `src/rpc/mining.cpp:312-344` | no |
-| `stop` | `harness/src/scenarios/core.rs` line 192 | `src/rpc/server.cpp:265-287` | `src/rpc/server.cpp:265-278` | no |
-| `getwalletinfo` | `harness/src/scenarios/core.rs` line 194 | `src/wallet/rpcwallet.cpp:2798-2878` | `src/wallet/rpcwallet.cpp:2798-2878` | yes |
-| `getnewaddress` | `harness/src/scenarios/core.rs` line 195 | `src/wallet/rpcwallet.cpp:119-172` | `src/wallet/rpcwallet.cpp:119-172` | yes |
-| `getreceivedbyaddress` | `harness/src/scenarios/core.rs` line 196 | `src/wallet/rpcwallet.cpp:680-764` | `src/wallet/rpcwallet.cpp:680-764` | yes |
-| `gettransaction` | `harness/src/scenarios/core.rs` line 197 | `src/wallet/rpcwallet.cpp:2061-2187` | `src/wallet/rpcwallet.cpp:2061-2187` | yes |
-| `validateaddress` | `harness/src/scenarios/core.rs` line 198 | `src/rpc/misc.cpp:206-300` | `src/rpc/misc.cpp:206-300` | yes |
+| `preciousblock` | `harness/src/scenarios/chain.rs` line 1270 | `src/rpc/blockchain.cpp:2695-2731` | `src/rpc/blockchain.cpp:2695-2730` | no |
+| `getblockheader` | `harness/src/scenarios/chain.rs` line 1271 | `src/rpc/blockchain.cpp:884-1063` | `src/rpc/blockchain.cpp:884-1061` | no |
+| `getmempoolinfo` | `harness/src/scenarios/chain.rs` line 1272 | `src/rpc/blockchain.cpp:2617-2673` | `src/rpc/blockchain.cpp:2644-2673` | no |
+| `softrejectblock` | `harness/src/scenarios/chain.rs` line 1273 | `src/rpc/blockchain.cpp:2820-2892` | `src/rpc/blockchain.cpp:2820-2892` | yes |
+| `acceptblock` | `harness/src/scenarios/chain.rs` line 1274 | `src/rpc/blockchain.cpp:2894-2991` | `src/rpc/blockchain.cpp:2894-2991` | yes |
+| `pruneblockchain` | `harness/src/scenarios/chain.rs` line 1275 | `src/rpc/blockchain.cpp:1810-1875` | `src/rpc/blockchain.cpp:1810-1875` | yes |
+| `addToConsensusBlacklist` | `harness/src/scenarios/chain.rs` line 1276 | `src/rpc/frozentxo_rpc.cpp:346-378` | `src/rpc/frozentxo_rpc.cpp:346-378` | yes |
+| `verifychain` | `harness/src/scenarios/chain.rs` line 1277 | `src/rpc/blockchain.cpp:2321-2354` | `src/rpc/blockchain.cpp:2321-2354` | yes |
+| `gettxoutsetinfo` | `harness/src/scenarios/chain.rs` line 1278 | `src/rpc/blockchain.cpp:1877-1921` | `src/rpc/blockchain.cpp:1877-1921` | yes |
+| `generatetoaddress` | `harness/src/scenarios/core.rs` line 148 | `src/rpc/mining.cpp:227-268` | `src/rpc/mining.cpp:227-268` | yes |
+| `submitblock` | `harness/src/scenarios/core.rs` line 149 | `src/rpc/mining.cpp:916-952` | `src/rpc/mining.cpp:916-953` | no |
+| `sendrawtransactions` | `harness/src/scenarios/core.rs` line 150 | `src/rpc/rawtransaction.cpp:1798-2239` | `src/rpc/rawtransaction.cpp:1798-2240` | no |
+| `sendrawtransaction` | `harness/src/scenarios/core.rs` line 151 | `src/rpc/rawtransaction.cpp:1530-1672` | `src/rpc/rawtransaction.cpp:1530-1700` | no |
+| `getrawtransaction` | `harness/src/scenarios/core.rs` line 152 | `src/rpc/rawtransaction.cpp:53-194` | `src/rpc/rawtransaction.cpp:53-256` | no |
+| `verifyscript` | `harness/src/scenarios/core.rs` line 153 | `src/rpc/misc.cpp:506-914` | `src/rpc/misc.cpp:506-915` | no |
+| `getmerkleproof` | `harness/src/scenarios/core.rs` line 154 | `src/rpc/rawtransaction.cpp:2242-2340` | `src/rpc/rawtransaction.cpp:2242-2339` | no |
+| `getmerkleproof2` | `harness/src/scenarios/core.rs` line 156 | `src/rpc/rawtransaction.cpp:2342-2525` | `src/rpc/rawtransaction.cpp:2342-2525` | yes |
+| `verifymerkleproof` | `harness/src/scenarios/core.rs` line 157 | `src/rpc/rawtransaction.cpp:2527-2612` | `src/rpc/rawtransaction.cpp:2527-2612` | yes |
+| `setmocktime` | `harness/src/scenarios/core.rs` line 158 | `src/rpc/misc.cpp:980-1007` | `src/rpc/misc.cpp:980-1008` | no |
+| `getchaintxstats` | `harness/src/scenarios/core.rs` line 160 | `src/rpc/blockchain.cpp:3054-3155` | `src/rpc/blockchain.cpp:3054-3155` | yes |
+| `getnetworkinfo` | `harness/src/scenarios/core.rs` line 161 | `src/rpc/net.cpp:543-667` | `src/rpc/net.cpp:543-667` | yes |
+| `getpeerinfo` | `harness/src/scenarios/core.rs` line 162 | `src/rpc/net.cpp:69-280` | `src/rpc/net.cpp:69-280` | yes |
+| `addnode` | `harness/src/scenarios/core.rs` line 164 | `src/rpc/net.cpp:282-327` | `(not in the contract)` | no |
+| `listbanned` | `harness/src/scenarios/core.rs` line 165 | `src/rpc/net.cpp:759-789` | `(not in the contract)` | no |
+| `getblockcount` | `harness/src/scenarios/core.rs` line 166 | `src/rpc/blockchain.cpp:205-218` | `src/rpc/blockchain.cpp:205-218` | yes |
+| `getblockhash` | `harness/src/scenarios/core.rs` line 168 | `src/rpc/blockchain.cpp:801-828` | `src/rpc/blockchain.cpp:801-825` | no |
+| `getbestblockhash` | `harness/src/scenarios/core.rs` line 169 | `src/rpc/blockchain.cpp:220-236` | `src/rpc/blockchain.cpp:220-235` | no |
+| `getrawmempool` | `harness/src/scenarios/core.rs` line 170 | `src/rpc/blockchain.cpp:440-500` | `src/rpc/blockchain.cpp:440-500` | yes |
+| `getrawnonfinalmempool` | `harness/src/scenarios/core.rs` line 171 | `src/rpc/blockchain.cpp:502-550` | `src/rpc/blockchain.cpp:502-557` | no |
+| `getblock` | `harness/src/scenarios/core.rs` line 172 | `src/rpc/blockchain.cpp:1108-1242` | `src/rpc/blockchain.cpp:1108-1272` | no |
+| `gettxout` | `harness/src/scenarios/core.rs` line 173 | `src/rpc/blockchain.cpp:1923-2029` | `src/rpc/blockchain.cpp:1923-2028` | no |
+| `getchaintips` | `harness/src/scenarios/core.rs` line 174 | `src/rpc/blockchain.cpp:2497-2632` | `src/rpc/blockchain.cpp:2497-2615` | no |
+| `getorphaninfo` | `harness/src/scenarios/core.rs` line 175 | `src/rpc/blockchain.cpp:2675-2693` | `src/rpc/blockchain.cpp:2675-2693` | yes |
+| `invalidateblock` | `harness/src/scenarios/core.rs` line 176 | `src/rpc/blockchain.cpp:2732-2768` | `src/rpc/blockchain.cpp:2732-2768` | yes |
+| `reconsiderblock` | `harness/src/scenarios/core.rs` line 177 | `src/rpc/blockchain.cpp:2770-2818` | `src/rpc/blockchain.cpp:2770-2818` | yes |
+| `waitforptvcompletion` | `harness/src/scenarios/core.rs` line 179 | `src/rpc/blockchain.cpp:3769-3786` | `src/rpc/blockchain.cpp:3769-3786` | yes |
+| `getmempoolinfo` | `harness/src/scenarios/core.rs` line 180 | `src/rpc/blockchain.cpp:2634-2673` | `src/rpc/blockchain.cpp:2644-2673` | no |
+| `getblockheader` | `harness/src/scenarios/core.rs` line 181 | `src/rpc/blockchain.cpp:884-1038` | `src/rpc/blockchain.cpp:884-1061` | no |
+| `pruneblockchain` | `harness/src/scenarios/core.rs` line 183 | `src/rpc/blockchain.cpp:1810-1875` | `src/rpc/blockchain.cpp:1810-1875` | yes |
+| `getblockchaininfo` | `harness/src/scenarios/core.rs` line 184 | `src/rpc/blockchain.cpp:2394-2482` | `(not in the contract)` | no |
+| `getblockchainactivity` | `harness/src/scenarios/core.rs` line 185 | `src/rpc/blockchain.cpp:3649-3688` | `src/rpc/blockchain.cpp:3649-3683` | no |
+| `prioritisetransaction` | `harness/src/scenarios/core.rs` line 186 | `src/rpc/mining.cpp:312-351` | `src/rpc/mining.cpp:312-344` | no |
+| `stop` | `harness/src/scenarios/core.rs` line 187 | `src/rpc/server.cpp:265-287` | `src/rpc/server.cpp:265-278` | no |
+| `getwalletinfo` | `harness/src/scenarios/core.rs` line 189 | `src/wallet/rpcwallet.cpp:2798-2878` | `src/wallet/rpcwallet.cpp:2798-2878` | yes |
+| `getnewaddress` | `harness/src/scenarios/core.rs` line 190 | `src/wallet/rpcwallet.cpp:119-172` | `src/wallet/rpcwallet.cpp:119-172` | yes |
+| `getreceivedbyaddress` | `harness/src/scenarios/core.rs` line 191 | `src/wallet/rpcwallet.cpp:680-764` | `src/wallet/rpcwallet.cpp:680-764` | yes |
+| `gettransaction` | `harness/src/scenarios/core.rs` line 192 | `src/wallet/rpcwallet.cpp:2061-2187` | `src/wallet/rpcwallet.cpp:2061-2187` | yes |
+| `validateaddress` | `harness/src/scenarios/core.rs` line 193 | `src/rpc/misc.cpp:206-300` | `src/rpc/misc.cpp:206-300` | yes |
 | `submitblock` | `harness/src/scenarios/depth.rs` line 36 | `src/rpc/mining.cpp:916-952` | `src/rpc/mining.cpp:916-953` | no |
 | `setmocktime` | `harness/src/scenarios/depth.rs` line 37 | `src/rpc/misc.cpp:980-1007` | `src/rpc/misc.cpp:980-1008` | no |
 | `getbestblockhash` | `harness/src/scenarios/depth.rs` line 38 | `src/rpc/blockchain.cpp:220-236` | `src/rpc/blockchain.cpp:220-235` | no |

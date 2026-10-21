@@ -2958,7 +2958,7 @@
     "answer": "-1 This implementation does not implement wallet commands",
     "registered": "services/rpc/bsvjson/walletsvrcmds.go:660"
    },
-   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+   "note": "the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]"
   },
   {
    "method": "getorphaninfo",
@@ -3164,7 +3164,7 @@
     "answer": "-1 This implementation does not implement wallet commands",
     "registered": "services/rpc/bsvjson/walletsvrcmds.go:663"
    },
-   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+   "note": "the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]"
   },
   {
    "method": "getsafemodeinfo",
@@ -3234,7 +3234,7 @@
     "answer": "-1 This implementation does not implement wallet commands",
     "registered": "services/rpc/bsvjson/walletsvrcmds.go:664"
    },
-   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+   "note": "the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]"
   },
   {
    "method": "gettxout",
@@ -3339,7 +3339,7 @@
     "answer": "-1 This implementation does not implement wallet commands",
     "registered": "services/rpc/bsvjson/walletsvrcmds.go:665"
    },
-   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+   "note": "the wallet build only ($BSV_SPEC_REFERENCE_BINARY_WALLET, the maintainers' build); -32601 Method not found on the node of record [X]"
   },
   {
    "method": "ignoresafemodeforblock",

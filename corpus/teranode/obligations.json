@@ -181,7 +181,7 @@
    "owner": null,
    "owed_halves":
    [{"statement":
-     "the legacy bridge's orphan map driven: a child before its parent, a locked parent and a conflicting orphan on the mixed two-node scenario (#98's measured half, lane hz-98)",
+     "the legacy bridge's orphan map driven: a child before its parent, a locked parent and a conflicting orphan on the mixed two-node scenario (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)",
      "owner": "S4b",
      "names": ["BsvChain.Teranode.Bridge.orphanStep"]}],
    "names":
@@ -204,7 +204,7 @@
    "owner": null,
    "owed_halves":
    [{"statement":
-     "the legacy bridge's reject map driven: its 10,000 bound and its clear at each block against the reference's reset at a tip change, and the 0x10 reject on the reference's log (#98's measured half, lane hz-98)",
+     "the legacy bridge's reject map driven: its 10,000 bound and its clear at each block against the reference's reset at a tip change, and the 0x10 reject on the reference's log (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)",
      "owner": "S4b",
      "names": ["BsvChain.Teranode.Bridge.handleTx"]}],
    "names": ["BsvChain.Teranode.Bridge.bridge_rejected_ignored"],
@@ -804,7 +804,7 @@
    "owner": null,
    "owed_halves":
    [{"statement":
-     "the legacy bridge's relay driven: the verdict, inventory and RUNNING correspondences measured on the mixed two-node scenario, a transaction each way, the resubmit and the fee filter (#98's measured half, lane hz-98)",
+     "the legacy bridge's relay driven: the verdict, inventory and RUNNING correspondences measured on the mixed two-node scenario, a transaction each way, the resubmit and the fee filter (#98's measured half, docs/CONFORMANCE-TERANODE-BRIDGE.md section 6)",
      "owner": "S4b",
      "names": ["BsvChain.Teranode.Bridge.VerdictAgrees"]}],
    "names":
@@ -1027,7 +1027,7 @@
    "owner": null,
    "owed_halves":
    [{"statement":
-     "the bridge's streaming wire reader skips the payload checksum ([SRC] bitcoin-sv `6504a3af` `src/net/net_processing.cpp:5053-5059`, the checksum check and its drop), the design reason (Teranode `wire_streaming.go:11-25` at the pin, the `checksumSkipped` divergence constructor of `bridge_block_accepted`): it takes the block the reference drops at the same bytes; and the split it makes heals itself unaided on a live wire, measured (the reference drops, the bridge takes and announces, the reference's open fetch gate re-agrees the tips inside one announce round; 8 blocks mined on the healed tip and a 180 s quiet watch, both tips one; lane hz-98h2, docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md)",
+     "the bridge's streaming wire reader skips the payload checksum ([SRC] bitcoin-sv `6504a3af` `src/net/net_processing.cpp:5053-5059`, the checksum check and its drop), the design reason (Teranode `wire_streaming.go:11-25` at the pin, the `checksumSkipped` divergence constructor of `bridge_block_accepted`): it takes the block the reference drops at the same bytes; and the split it makes heals itself unaided on a live wire, measured (the reference drops, the bridge takes and announces, the reference's open fetch gate re-agrees the tips inside one announce round; 8 blocks mined on the healed tip and a 180 s quiet watch, both tips one; docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md)",
      "owner": "S4b",
      "names": ["BsvChain.Teranode.Bridge.bridge_block_accepted"]}],
    "names":
@@ -1292,7 +1292,7 @@
      "counts": "26 rows: 23 agree, 3 differ, 0 not run"}],
    "rule_label": "consensus",
    "reason":
-   "Teranode validates a block's spends where the outputs live, at its UTXO store's spend gate (stores/utxo/sql/sql.go:2477-2478 at `4edb60a4`) (the Aerospike store's twin: stores/utxo/aerospike/teranode.lua:325-326 at `4edb60a4`) [SRC], and has no block-context maturity check of its own at the pin, so a block spending a coinbase below maturity can stand as its best block, parked with nothing built on it, while the store's gate governs the spend; the hold is policy. The reference refuses the same block at its block-context check: a coinbase output matures at COINBASE_MATURITY = 100 blocks (src/consensus/consensus.h:75 at `6504a3af`, consensus), each input checked in the block's context (`bad-txns-premature-spend-of-coinbase`, src/validation.cpp:2617-2625 at `6504a3af`) [SRC]. The chain-level consequence a client sees: for a window Teranode's best-tip answer names a block the reference refuses, until a valid branch overtakes it (measured: 4 s, 0 blocks built on the parked block, then the reference's branch followed); the maturity rule itself agrees in the mempool at depths 98 to 101 and across the reorg (Lifetimes.coinbase_maturity_agrees). The owner's word of 2026-10-17 23:5xZ on card Z10: a design row",
+   "Teranode validates a block's spends where the outputs live, at its UTXO store's spend gate (stores/utxo/sql/sql.go:2477-2478 at `4edb60a4`) (the Aerospike store's twin: stores/utxo/aerospike/teranode.lua:325-326 at `4edb60a4`) [SRC], and has no block-context maturity check of its own at the pin, so a block spending a coinbase below maturity can stand as its best block, parked with nothing built on it, while the store's gate governs the spend; the hold is policy. The reference refuses the same block at its block-context check: a coinbase output matures at COINBASE_MATURITY = 100 blocks (src/consensus/consensus.h:75 at `6504a3af`, consensus), each input checked in the block's context (`bad-txns-premature-spend-of-coinbase`, src/validation.cpp:2617-2625 at `6504a3af`) [SRC]. The chain-level consequence a client sees: for a window Teranode's best-tip answer names a block the reference refuses, until a valid branch overtakes it (measured: 4 s, 0 blocks built on the parked block, then the reference's branch followed); the maturity rule itself agrees in the mempool at depths 98 to 101 and across the reorg (Lifetimes.coinbase_maturity_agrees). The reading of record (docs/CONFORMANCE-TERANODE-MACHINE.md section 1): a design row",
    "model":
    ["BsvChain.Teranode.Lifetimes.coinbase_maturity_agrees",
     "BsvChain.Teranode.Lifetimes.defaults_maturity_agree"],

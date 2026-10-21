@@ -224,6 +224,15 @@ def evidence(data, kind, check5):
     raise SystemExit(f"node_contract: evidence kind {kind!r}")
 
 
+# The page names each obligation's owner by its area, never by the owner value the list carries (#177).
+AREA = {"S1": "the Lean semantics", "S2": "the Lean families", "S3": "the harness", "S4b": "the engines",
+        "T3": "the engine upstream", "W0": "the plan"}
+
+
+def area(o):
+    return AREA.get(o, o)
+
+
 def section_rows(data, sec):
     return [r for r in data["rows"] if r.get("section") == sec]
 
@@ -539,7 +548,7 @@ def refinement(data, theorems_text):
         "observation, keeps the frozen projection agreeing, simulates a named reference step (owed, with its owner), or leaves "
         "the relation by a divergence: " + ", ".join(
             f"`{f['family']}` " + {"stutter": "a stutter", "suspends": "suspends", "agrees outside the relation": "agrees outside the relation",
-                                   "owed": f"owed ({f.get('owner')})", "departs": "departs"}[f["rel"]]
+                                   "owed": f"owed ({area(f.get('owner'))})", "departs": "departs"}[f["rel"]]
             + (f" with `{f['divergence']}`" if f["divergence"] else "")
             for f in obl["families"]) + ".",
         "",
@@ -599,11 +608,11 @@ def refinement(data, theorems_text):
         elif k == "report":
             ob = "the per-release divergence gate (#95)"
         else:
-            ob = f"{r['statement']} (" + ("waits on the maintainers' ruling" if r["owner"] == "the owner" else f"owed by {r['owner']}") + ")"
+            ob = f"{r['statement']} (" + ("waits on the maintainers' ruling" if r["owner"] == "the owner" else f"owed: {area(r['owner'])}") + ")"
             if r["legs"]:
                 ob += "; measured: " + "; ".join(f"{lg['issue']} {lg['rows']}" for lg in r["legs"])
         if r["owed_halves"]:
-            ob += "; owed: " + "; ".join(f"{h['statement']} ({h['owner']})" for h in r["owed_halves"])
+            ob += "; owed: " + "; ".join(f"{h['statement']} ({area(h['owner'])})" for h in r["owed_halves"])
         out.append(f"| `{r['row']}` | {r['issue']} | {r['label']} | {k} | {esc(ob)} | {'yes' if r['rerun'] else 'no'} |")
     opened = [r for r in obl["rows"] if r["kind"] == "open"]
     owners = sorted({r["owner"] for r in opened})
@@ -612,9 +621,9 @@ def refinement(data, theorems_text):
         "**For #95's gate.** A re-run on a new release re-measures the rows marked yes: the report rows on the column, and every "
         "row a leg measured, on that leg's scenario; a row whose answer moves is a new witness for its kind.",
         "",
-        "**Open.** " + "; ".join(f"{o}: " + ", ".join(f"`{r['row']}`" for r in opened if r["owner"] == o) for o in owners)
+        "**Open.** " + "; ".join(f"{area(o)}: " + ", ".join(f"`{r['row']}`" for r in opened if r["owner"] == o) for o in owners)
         + ". The owed halves on theorem and design rows: "
-        + "; ".join(f"`{r['row']}` ({h['owner']})" for r in obl["rows"] for h in r["owed_halves"]) + ".",
+        + "; ".join(f"`{r['row']}` ({area(h['owner'])})" for r in obl["rows"] for h in r["owed_halves"]) + ".",
         "",
     ]
     return out

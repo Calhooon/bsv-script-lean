@@ -12,7 +12,8 @@
 #     #151) as far as the linked library's version block carries it: CGO_BSV_GIT_COMMIT_HASH
 #     (bdkcgo/version_cgo.h:22) holds the 9-hex prefix `879fc8b42`, not the 40-hex commit (read by linking,
 #     2026-09-26, and again at 4eab3acd by #54); `--selftest` checks the cited code table against the linked library.
-#     The clone is GOBDK_CLONE when set (the box keeps it under ~/bsv/targets/spec-54/bdk), else `gobdk.clone`. The shim is built and run
+#     The clone is GOBDK_CLONE when set (the box keeps it under ~/bsv/targets/spec-54/bdk), else `gobdk.clone`'s
+#     `$BSV_SPEC_GOBDK_CLONE` resolved by tools/host_vars.py. The shim is built and run
 #     on the Studio and the box; no leg of the tripwire builds or runs it, and it never enters the tripwire's
 #     container (tools/modal_check.py); modal_teranode.py builds it inside the official Teranode x86-64 image on
 #     Modal for a row (#32's F1).
@@ -25,7 +26,11 @@ pin() { awk -v k="$1" '/^```pins/{on=1;next} /^```/{on=0} on && $1==k {print $3;
 
 COMMIT="$(pin gobdk.commit)"; REF="$(pin gobdk.reference_commit)"; CLONE_PIN="$(pin gobdk.clone)"
 [ -n "$COMMIT" ] && [ -n "$REF" ] && [ -n "$CLONE_PIN" ] || die "docs/PROVENANCE.md §1a lacks gobdk.commit, gobdk.clone or gobdk.reference_commit"
-CLONE="${GOBDK_CLONE:-${CLONE_PIN/#\~/$HOME}}"
+# the pin is a `$NAME` (#177): GOBDK_CLONE when set, else NAME through tools/host_vars.py (the environment, else
+# tools/host_private.sh); unresolved, its one line and exit 2
+if [ -n "${GOBDK_CLONE:-}" ]; then CLONE="$GOBDK_CLONE"
+elif [[ "$CLONE_PIN" == \$* ]]; then CLONE="$(python3 "$ROOT/tools/host_vars.py" "${CLONE_PIN#\$}" "gobdk build")" || exit 2
+else CLONE="${CLONE_PIN/#\~/$HOME}"; fi
 MOD="$CLONE/module/gobdk"
 OUT="${GOBDK_OUT:-$ROOT/harness/target/engines/gobdk-runner}"
 

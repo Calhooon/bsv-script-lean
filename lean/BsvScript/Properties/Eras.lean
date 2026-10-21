@@ -30,7 +30,7 @@ machine do with them, each theorem at its site of the reference:
   `360–375`), `OP_VER` and `OP_VERIF`/`OP_VERNOTIF` (`598–608`, `773–781`), CLTV/CSV
   (`520`, `563`), the second `OP_ELSE` (`829–831`), the expansion opcodes
   (`611–618` … `730–736`);
-* **the signature's hash type under the era flags** (#25, S2, 2026-09-26): the four
+* **the signature's hash type under the era flags** (archived #25, the Lean families, 2026-09-26): the four
   refusals of `CheckSignatureEncoding` under STRICTENC (`291–306`) as theorems, each a
   rule on the signature's last byte under the word's bits; and **the checkers' reads of `nLockTime` and
   `nSequence`** (`2166–2250`, #22) as one predicate each, the verdicts CLTV and CSV
@@ -804,7 +804,7 @@ theorem checkSequence_iff (tx : Tx) (nIn : Nat) (n : Int) :
   split_ifs with h1 h2 h3 h4 <;> simp_all
   all_goals omega
 
-/-! ## `OP_CODESEPARATOR`'s slice, and the block word at the upgradable NOPs (#25, S2, 2026-09-27) -/
+/-! ## `OP_CODESEPARATOR`'s slice, and the block word at the upgradable NOPs (archived #25, the Lean families, 2026-09-27) -/
 
 /-- **`OP_CODESEPARATOR` moves the scriptCode's start** (`1445–1448`: `pbegincodehash = pc`, the byte after the
 separator; `execStep`, the loop's own case): executed, it changes nothing but `codeSep`, which becomes the bytes after

@@ -635,10 +635,10 @@ pub(super) fn main(record: &str, run_id: Option<String>, write: bool) -> Result<
         .output()
         .map_err(|e| e.to_string())?;
     // [D] the node of record's binary, measured at the run (docs/PROVENANCE.md 1a).
-    let binary = home.join(Build::Record.relative());
+    let binary = Build::Record.located();
     let binary_bytes = fs::read(&binary).map_err(|e| format!("{}: {e}", binary.display()))?;
     let binary_row = json!({"label":"[M]","build":Build::Record.name(),
-        "path":format!("~/{}", Build::Record.relative()),
+        "path":binary.strip_prefix(&home).map_or_else(|_| binary.display().to_string(), |p| format!("~/{}", p.display())),
         "source":format!("docs/PROVENANCE.md 1a {}", Build::Record.pin_key()),
         "sha256":hex::encode(bsv_rs::primitives::hash::sha256(&binary_bytes))});
     let start = Instant::now();

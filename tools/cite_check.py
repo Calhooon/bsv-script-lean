@@ -50,6 +50,9 @@ import subprocess
 import sys
 from collections import Counter, OrderedDict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SELF = os.path.abspath(__file__)
 
@@ -444,17 +447,10 @@ HELD_DISCRETION = set()
 
 
 def host_path(p):
-    """A pins value `$NAME` names a path the owner's host file tools/host_private.sh holds (withheld from the
-    public edition, #46); unresolved, the name stays and the clone reads as absent. Any other value is a path."""
-    m = re.fullmatch(r"\$([A-Z][A-Z0-9_]*)", p.strip())
-    if not m:
-        return os.path.expanduser(p)
-    try:
-        src = open(os.path.join(ROOT, "tools", "host_private.sh"), encoding="utf-8").read()
-    except OSError:
-        return p
-    v = re.search(r'^' + m.group(1) + r'="([^"]*)"$', src, re.M)
-    return v.group(1).replace("$HOME", os.path.expanduser("~")) if v else p
+    """A pins value as a path (#177): `$NAME` from the environment, else tools/host_private.sh (tools/host_vars.py);
+    unresolved, the name stays and the clone reads as absent, skipped by name."""
+    v = host_vars.path(p)
+    return p if v is None else v
 
 
 def pins():

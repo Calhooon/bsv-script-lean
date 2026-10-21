@@ -4,6 +4,8 @@ This directory holds the scripts that check the tree (the gates of `make check`)
 
 Classes: gate (a check that can fail a run), generator (writes a committed file), measurement (runs an implementation and records what it answered), test (tests a tool), maintainers' route (runs a check on a particular machine; a stranger runs `make verify` instead).
 
+**The host values.** The pins block of `docs/PROVENANCE.md` §1a names eleven clones and built binaries by `$NAME` (`BSV_SPEC_REFERENCE_CLONE`, `BSV_SPEC_REFERENCE_BINARY`, `BSV_SPEC_REFERENCE_BINARY_WALLET`, `BSV_SPEC_REFERENCE_BINARY_ZMQ`, `BSV_SPEC_TERANODE_CLONE`, `BSV_SPEC_GOBDK_CLONE`, `BSV_SPEC_GO_CHAINCFG_CLONE`, `BSV_SPEC_GO_SAFE_CONVERSION_CLONE`, `BSV_SPEC_BSV_RS_CLONE`, `BSV_SPEC_GO_SDK_CLONE`, `BSV_SPEC_TS_SDK_CLONE`); each is a path on the maintainers' hosts, set in the environment (`export BSV_SPEC_REFERENCE_CLONE=/path/to/bitcoin-sv`) or as a `NAME="/path"` line of `tools/host_private.sh` (a file absent from the public edition). Without them the pins and citation legs skip those pins by name, never a pass, and the maintainers' routes stop with one line and exit 2.
+
 | path | what it does | who calls it | class |
 |---|---|---|---|
 | `tools/README.md` | Lists every public file of tools/ (this page; written by tools/tools_index.py) | by hand | generator |
@@ -51,6 +53,7 @@ Classes: gate (a check that can fail a run), generator (writes a committed file)
 | `tools/fuzz_compose.py` | Composes one fuzz batch's corpus | tools/fuzz_campaign.sh | measurement |
 | `tools/fuzz_daily.sh` | Prints the fuzz campaign's one line per day | harness/README.md | maintainers' route |
 | `tools/gate_leg.sh` | Runs one job of the hosted gate through the same steps of tools/check.sh (#116) | .github/workflows/gate.yml | gate |
+| `tools/host_vars.py` | Resolves the pins block's `$NAME` host values from the environment or the maintainers' host file; unresolved, a gate skips by name and a tool stops; `python3 tools/host_vars.py NAME` prints one for a shell script (#177) | tools/check_pins.py; tools/cite_check.py; tools/column.py; ... | gate |
 | `tools/jscpd/.jscpd.json` | Sets the copy-paste leg's threshold, paths and ignore list (#138) | check.sh: jscpd | gate |
 | `tools/jscpd/package-lock.json` | Pins the copy-paste detector's install (#138) | check.sh: jscpd | gate |
 | `tools/jscpd/package.json` | Pins the copy-paste detector's version (#138) | check.sh: jscpd | gate |

@@ -8,6 +8,15 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 
 | stamp (UTC) | record | kind | commit | verdict | cited by |
 |---|---|---|---|---|---|
+| 2026-10-21 22:41:01 | [20261021-224101-make-check-box.txt](20261021-224101-make-check-box.txt) | make-check-box | 93692d97 | GREEN |  |
+| 2026-10-21 22:39:33 | [20261021-223933-s1-177a3-owner-values-fix-177a3.md](20261021-223933-s1-177a3-owner-values-fix-177a3.md) | other | 9cf22dd0 |  |  |
+| 2026-10-21 22:20:41 | [20261021-222041-s3-177b2-missed-readers-fix-177b2.md](20261021-222041-s3-177b2-missed-readers-fix-177b2.md) | other | 89e76e2f |  |  |
+| 2026-10-21 22:12:26 | [20261021-221226-s1-177c-docstring-seat-tags-fix-177c.md](20261021-221226-s1-177c-docstring-seat-tags-fix-177c.md) | other | 5f2cad2e |  |  |
+| 2026-10-21 22:07:35 | [20261021-220735-s1-177a2-seat-tags-fix-177a2.md](20261021-220735-s1-177a2-seat-tags-fix-177a2.md) | other | 527335bf |  |  |
+| 2026-10-21 21:49:29 | [20261021-214929-s1-177a-contract-strings-fix-177a.md](20261021-214929-s1-177a-contract-strings-fix-177a.md) | other | 338173a3 |  |  |
+| 2026-10-21 21:46:00 | [20261021-214600-s3-177b-pins-variables-fix-177b.md](20261021-214600-s3-177b-pins-variables-fix-177b.md) | other | 122b0955 |  |  |
+| 2026-10-21 21:29:16 | [20261021-212916-make-check-box.txt](20261021-212916-make-check-box.txt) | make-check-box | 514c0ea9 | GREEN |  |
+| 2026-10-21 21:18:21 | [20261021-211821-export-flip-birth-cap.md](20261021-211821-export-flip-birth-cap.md) | other | d7a8ea52 |  |  |
 | 2026-10-21 21:00:35 | [20261021-210035-make-check-box.txt](20261021-210035-make-check-box.txt) | make-check-box | 08e64b5d | GREEN |  |
 | 2026-10-21 20:53:29 | [20261021-205329-make-check-box.txt](20261021-205329-make-check-box.txt) | make-check-box | 8cdefcdf | GREEN |  |
 | 2026-10-21 20:50:40 | [20261021-205040-export-flip-gate-hex-leg-cap.md](20261021-205040-export-flip-gate-hex-leg-cap.md) | other |  |  |  |

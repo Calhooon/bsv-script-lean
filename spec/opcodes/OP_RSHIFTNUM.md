@@ -76,6 +76,6 @@ when negative (`SCRIPT_ERR_INVALID_NUMBER_RANGE`, `748–749`) and above `INT_MA
 
 | rule | corpus entries | `[SRC]` |
 |---|---|---|
-| `expansion.substr`, `expansion.left`, `expansion.right`, `expansion.lshiftnum`, `expansion.rshiftnum` | 83 | `interpreter.cpp:609–641`, `642–666`, `667–691`, `692–727`, `728–764`; `script_num.cpp:250–374` (`operator<<=`/`>>=`), `big_int.cpp:347–394`; each opcode's own pre-Chronicle branch, `611–616`, `644–649`, `669–674`, `694–699`, `730–735` (a NOP, or `SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS` under the flag; `765–771` is `OP_NOP1`/`OP_NOP9`/`OP_NOP10`'s case, the same rule at another site: corrected 2026-09-27 on the parent's lens of S1's section) |
+| `expansion.substr`, `expansion.left`, `expansion.right`, `expansion.lshiftnum`, `expansion.rshiftnum` | 83 | `interpreter.cpp:609–641`, `642–666`, `667–691`, `692–727`, `728–764`; `script_num.cpp:250–374` (`operator<<=`/`>>=`), `big_int.cpp:347–394`; each opcode's own pre-Chronicle branch, `611–616`, `644–649`, `669–674`, `694–699`, `730–735` (a NOP, or `SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS` under the flag; `765–771` is `OP_NOP1`/`OP_NOP9`/`OP_NOP10`'s case, the same rule at another site: corrected 2026-09-27 on the harness's lens of the Lean semantics' section) |
 | `eras.utxo.pre-genesis`, `eras.utxo.post-genesis`, `eras.utxo.post-chronicle` | 42 | `interpreter.cpp:411–427`, `2269–2280`; `configscriptpolicy.cpp:65–154`; the sites named |
 

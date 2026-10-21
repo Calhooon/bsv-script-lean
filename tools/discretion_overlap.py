@@ -27,6 +27,9 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import host_vars  # noqa: E402  tools/host_vars.py, the maintainers' host values (#177)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CITE_CHECK = "tools/cite_check.py"
 OLD_TAG, NEW_TAG = "v1.2.2", "v1.2.3"
@@ -90,8 +93,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-points", action="store_true", help="leave pure insertion and deletion points out")
     ap.add_argument("--ids", action="store_true", help="print the held pairs' row ids that do not overlap")
-    ap.add_argument("--clone", default=os.path.expanduser("~/bsv/bitcoin-sv"))
+    ap.add_argument("--clone", default=None, help="the reference clone (default $BSV_SPEC_REFERENCE_CLONE, #177)")
     a = ap.parse_args()
+    a.clone = a.clone or host_vars.need("$BSV_SPEC_REFERENCE_CLONE", "discretion_overlap")
     points = not a.no_points
     for tag, sha in ((OLD_TAG, OLD_SHA), (NEW_TAG, NEW_SHA)):
         got = git("rev-parse", f"{tag}^{{commit}}", cwd=a.clone)

@@ -6,7 +6,7 @@ blacklist is held from selection for `-softconsensusfreezeduration` blocks (a se
 and unfreezes when enough child blocks are mined after it ([SRC] bitcoin-sv 6504a3aff65ba97c0f6c80962b033e35ecbfed4b:
 src/validation.cpp:3402-3406 the trigger, :3720 the freeze, src/block_index.h:283-285 the hold, src/validation.h:219 the
 default, src/init.cpp:1214-1221 the setting; src/rpc/frozentxo_rpc.cpp:346-378 addToConsensusBlacklist). This probe drives
-it: the node of record (`~/bsv/targets/sv-v1.2.3/bin/bitcoind`, version checked) on an owned instance whose RPC/P2P pair
+it: the node of record (`$BSV_SPEC_REFERENCE_BINARY`, the maintainers' build, version checked) on an owned instance whose RPC/P2P pair
 is the lowest free pair in 18571..18590 (tools/rpc_probe.py's `Node`, the base configuration
 harness/oracle/scenarios.conf), nothing reaching a peer and nothing broadcast (CLAUDE.md rule 10).
 
@@ -44,7 +44,7 @@ import rpc_probe  # noqa: E402
 
 PIN = "6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
 VERSION = "v1.2.3.0-g6504a3aff-dev"
-CLONE = Path(os.environ["HOME"]) / "bsv/bitcoin-sv"
+CLONE = Path(rpc_probe.host_vars.need("$BSV_SPEC_REFERENCE_CLONE", "soft_freeze_probe"))
 FRAMEWORK = CLONE / "test/functional"
 
 

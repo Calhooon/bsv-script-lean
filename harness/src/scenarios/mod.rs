@@ -247,10 +247,7 @@ fn main_run() -> Result<()> {
         return Err("unsafe run id".into());
     }
     let home = PathBuf::from(std::env::var("HOME").map_err(|e| e.to_string())?);
-    let binary = home.join(format!(
-        "bsv/targets/sv-{}/bin/bitcoind",
-        bsv_script_harness::SV_NODE_TAG
-    ));
+    let binary = Build::Record.located();
     let version = Command::new(&binary)
         .arg("-version")
         .output()
@@ -320,7 +317,7 @@ fn main_run() -> Result<()> {
         || wallet_only;
     let wallet_version = if wallet_only {
         // [D] 2026-10-14, lane fix-121: absent builds are reported by each row.
-        let path = home.join(Build::Wallet.relative());
+        let path = Build::Wallet.located();
         json!(Build::Wallet.version_at(&path)?)
     } else {
         Value::Null

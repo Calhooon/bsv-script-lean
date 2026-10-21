@@ -13,11 +13,21 @@ import sys
 import threading
 import time
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'tools'))
+import host_vars  # noqa: E402
+
 PIN = '6504a3aff65ba97c0f6c80962b033e35ecbfed4b'
 parser = argparse.ArgumentParser()
-parser.add_argument('--framework', default=os.environ.get('BSV_PEER_FRAMEWORK', '~/bsv/bitcoin-sv/test/functional'))
+parser.add_argument('--framework', default=os.environ.get('BSV_PEER_FRAMEWORK'))
 parser.add_argument('--receipt', required=True)
 args = parser.parse_args()
+if args.framework is None:
+    # the reference clone's (docs/PROVENANCE.md 1a `$BSV_SPEC_REFERENCE_CLONE`, #177); unresolved, one line and exit 2
+    ref = host_vars.value('BSV_SPEC_REFERENCE_CLONE')
+    if ref is None:
+        print(host_vars.refusal('peer', 'BSV_SPEC_REFERENCE_CLONE'), file=sys.stderr)
+        sys.exit(2)
+    args.framework = os.path.join(ref, 'test/functional')
 framework = Path(args.framework).expanduser().resolve()
 clone = Path(subprocess.check_output(
     ['git', '-C', str(framework.parent.parent), 'rev-parse', '--show-toplevel'],

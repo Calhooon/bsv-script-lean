@@ -416,8 +416,8 @@ docs/records/20261015-034125-s8-97-trait-witness-s4b.md).
 
 ## 8. The record of the reads
 
-[M] 2026-10-14, from 21:22 UTC to 21:42 UTC (`date -u` at the read's start and at the index row), the Studio: `git -C ~/bsv/teranode show 4edb60a4:<path>` for every
-Teranode citation; `git -C ~/bsv/bitcoin-sv show 6504a3af:<path>` for `src/zmq/` and the two reference sites; the
+[M] 2026-10-14, from 21:22 UTC to 21:42 UTC (`date -u` at the read's start and at the index row), the Studio: `git -C $BSV_SPEC_TERANODE_CLONE show 4edb60a4:<path>` (the maintainers' clone) for every
+Teranode citation; `git -C $BSV_SPEC_REFERENCE_CLONE show 6504a3af:<path>` (the maintainers' clone) for `src/zmq/` and the two reference sites; the
 gRPC tables of §1.1 and §1.3 generated from the proto at the pin (rpc name, proto line, the message fields, the server
 method's line), the observation column written by hand. No instance was started, no topic read, nothing broadcast.
 
