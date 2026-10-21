@@ -1,0 +1,69 @@
+[export: 6 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+2026-09-29 05:2x UTC), with the incident of its tripwire's run (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE CHANGE, 7feb82f (origin/s3-traps33; landed as 73e656c):
+  - RULES-TREE (33) and its addendum: `trap 'exit 130' INT; trap 'exit 143' TERM` at the script's level, set again after
+[withheld at export: a sibling tree's line]
+    continue 36 confirmed the placement), with the one EXIT trap naming both releases.
+[withheld at export: a sibling tree's line]
+    held no ticket and lost its place to every ticketed waiter (the runs of 2026-09-29 waited 22 to 47 minutes), and its
+    re-taken slot stood idle 871 s in box_leg_take (continue 35's owed fix). The loop is retired: the Lean slot is given back
+    after the packages, box_leg_take waits in its order holding nothing, and a Lean slot is taken under the leg lock. The order
+    (leg lock, then Lean slot) is this route's; a lane holding a Lean slot while it queues for the leg lock can deadlock
+[withheld at export: a sibling tree's line]
+AND, fd4243d (landed as 2c7b299): `export BOX_LEG_POLL=5` before sourcing the helper (continue 36's stopgap until the helper's
+  wake-on-release); read on the box: "BOX_LEG_POLL after sourcing: 5" (the helper's `: ${BOX_LEG_POLL:=30}` keeps a set value,
+  and its two waits sleep $BOX_LEG_POLL).
+
+THE TRAP TEST, on the box, the real helper on a scratch lock path (~/bsv/box-leg.lock.test-s3t), the script's own three traps:
+   the box leg lock (.../box-leg.lock.test-s3t) TAKEN 05:12:17Z by check-box:test-s3t pid 72939 after 0 s of waiting
+   TERM to 72939 at 05:12:20Z, the shell in a foreground `sleep 2`:
+   the box leg lock RELEASED by pid 72939 (05:12:21Z); the script exited 143; the scratch path free; the script gone
+
+THE TRIPWIRE AT 7feb82f, on the box (make check-box): docs/records/20260929-052458-make-check-box.txt, twenty-one legs GREEN in 225 s, every leg's own line
+present, the axiom check 564, a 1-minute load of 14.43 there at its start. In the queue 420 s, then a Lean slot 75 s later under
+the leg lock. Its route's own lines:
+  check: BOX (the caller's HEAD 7feb82f, for harness-land, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 05:15:12Z load1 21.70] the toolchains: go1.27.0, node v22.18.0
+  [box 05:15:12Z load1 21.70] the box shell's pid is 85204: to stop this run, kill it on the box (its TERM trap exits and the EXIT trap releases both locks once the current foreground command ends, a minute or two)
+  lean_lock: every slot held (slot1: T5b pid 53712 pgid 53699 at 2026-09-29T05:13:14Z on box;slot2: T6 pid 76431 pgid 76431 at 2026-09-29T05:13:32Z on box;); check-box:harness-land waits (05:15:13Z)
+  lean_lock: check-box:harness-land took slot1 (05:16:43Z)
+  lean_lock: released slot1 (05:16:43Z)
+  [box 05:23:43Z load1 19.64] the box leg lock's queue: this take's ticket 001790659003448190000.0085204.23659 withdrawn at its take (it yielded to an older waiter at 0 read(s))
+[withheld at export: a sibling tree's line]
+  lean_lock: every slot held (slot1: T4 pid 5876 pgid 5817 at 2026-09-29T05:21:37Z on box;slot2: T5c pid 39094 pgid 39080 at 2026-09-29T05:20:20Z on box;); check-box:harness-land waits (05:23:43Z)
+  lean_lock: check-box:harness-land took slot1 (05:24:58Z)
+  [box 05:24:58Z load1 14.43] the box leg lock and a Lean slot taken; the worktree at 7feb82f, clean
+  [box 05:24:58Z load1 14.43] make check-local
+  [box 05:28:43Z load1 11.71] the box leg lock RELEASED by pid 85204 (05:28:43Z)
+  [box 05:28:43Z load1 11.71] make check-local rc 0
+  lean_lock: released slot1 (05:28:43Z)
+
+THE INCIDENT (S3's slip, 2026-09-29 05:2x to 05:37 UTC): a stray local tripwire on the Studio.
+  - While the route's Studio half ran from ~/bsv/worktrees/spec-harness-land (bash reads a script from its open file as it
+    goes), S3 edited tools/check_box.sh there IN PLACE for BOX_LEG_POLL (Python's open("w"): the same inode, 272 bytes
+    inserted before the heredoc's end).
+  - S3 saw it and restored the path by `git checkout -- tools/check_box.sh` at 05:27:04. Checkout writes a NEW inode, so the
+    running bash kept the edited one.
+  - When the ssh returned (05:28:43), bash resumed at its old offset, 272 bytes early, inside the heredoc's text, and ran
+    `CARGO_BUILD_JOBS=4 make check-local` ON THE STUDIO (process group 83118) without the Studio's Lean slot (D149). Its legs
+    reached `lake build flagscheck`.
+  - S3 found it at 05:36 (the route's pid alive with a `make check-local` child) and killed the process group at 05:37:00
+    (`kill -TERM -- -83118`). It wrote nothing: the worktree clean, no record (check.sh writes its record at the end), no
+    ~/bsv/targets/spec-box on the Studio.
+  - The route's Studio half (the record's copy home, the commit and GREEN checks) never ran. The record was brought home by hand
+    (scp, then the box copy removed, as the route does); its commit line is 7feb82f (the caller's HEAD), its status GREEN, and
+    the run's log carries "make check: GREEN".
+  - The Studio's 1-minute load stood at 4.87 at 05:37 (within the gate); the Lean cap of one slot on the Studio was not held
+    by the stray run for its eight minutes.
+  - The lesson: never write a script that a running route reads, by any tool; a revert by checkout never reaches a running
+    bash. The BOX_LEG_POLL change landed as its own commit once nothing ran from the worktree.
+
+THE LANDING: 7feb82f and fd4243d (origin/s3-traps33) cherry-picked with their committer dates onto main at 5a34fc1 (W0's
+docs/OWNERS: spec on S1's line) as 73e656c and 2c7b299; git diff --quiet 7feb82f HEAD outside tools/check_box.sh and the 1 paths main moved since ad0bb58: exit 0; the legs that read the moved pages, live under the gate:
+  pins (05:39:07Z, started at a 1-minute load of 7.53): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite (05:39:11Z, started at a 1-minute load of 7.53): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (05:39:12Z, started at a 1-minute load of 7.16): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+  at 2c7b299 (the two picks; the box record beside them, uncommitted)

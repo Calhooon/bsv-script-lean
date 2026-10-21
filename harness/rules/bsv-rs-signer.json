@@ -1,0 +1,114 @@
+{
+  "engine": "bsv-rs-signer",
+  "pin": "0.7.0",
+  "source": "[D] #147 signer column. The node judges the signed output and control. Source-derived candidates below apply only to measured predicates and node-confirmed refusals. api-default calls SigningContext::compute_sighash with the real source output; api-scriptcode calls the dispatched API. Overlapping mechanisms use lock-only, then constant-one, then Chronicle dispatch precedence.",
+  "classes": {
+    "sighash.scriptcode.in-unlock.lock-only": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:1471-1481. [SRC] bsv-rs 0.5.0 src/script/template.rs:85-99 selects locking_script and calls compute_sighash_for_signing; src/primitives/bsv/sighash.rs:941-944 hashes BIP143 unconditionally, while :962-983 dispatches and preserves original SINGLE constant one. src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), through compute_sighash_dispatched_for_signing (:144-153; src/primitives/bsv/sighash.rs:970-976); the public override with_script_code is :114-117.",
+      "ruling": "caller-scriptcode-required",
+      "note": "SigningContext exposes a locking_script, not an execution-site scriptCode. api-default passes the source output unchanged. At a CHECKSIG in the unlock, api-scriptcode with the execution-site scriptCode agrees with the control; api-default does not. Chronicle rows can also have a BIP143 dispatch mismatch; this class has precedence at in-unlock sites. No public in-unlock template exists. [D] 2026-10-17 (#148): 0.7.0 adds the public override SigningContext::with_script_code; its default stays the locking script, so api-default keeps this class and the fourth method api-context-scriptcode passes the execution-site scriptCode through the override."
+    },
+    "corpus.control.sigpushonly": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:2321-2334. [SRC] bsv-rs 0.5.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.7.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged.",
+      "ruling": "control-refusal",
+      "note": "The corpus deliberately places a non-push unlock under a word/version requiring push-only. Both the bsv-rs and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    },
+    "corpus.control.illegal-chronicle": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:296-303. [SRC] bsv-rs 0.5.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.7.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged.",
+      "ruling": "control-refusal",
+      "note": "The corpus deliberately sets the Chronicle hash-type bit before Chronicle. Both the bsv-rs and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    },
+    "corpus.control.must-use-forkid": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:296-306. [SRC] bsv-rs 0.5.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.7.0 src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged.",
+      "ruling": "control-refusal",
+      "note": "The corpus's 0x03 sentinel omits FORKID under a word requiring it; the encoding gate prevents a digest verdict. Both the bsv-rs and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    },
+    "sighash.single.out-of-range.one": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:2086-2100 returns constant one for original SINGLE beyond outputs; :2112-2124 dispatches Chronicle types to it. [SRC] bsv-rs 0.5.0 src/script/template.rs:85-99 selects locking_script and calls compute_sighash_for_signing; src/primitives/bsv/sighash.rs:941-944 hashes BIP143 unconditionally, while :962-983 dispatches and preserves original SINGLE constant one. src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.5.0 `src/primitives/bsv/sighash.rs:941-944` builds the BIP143 preimage (`:384`, `SighashCache::preimage` `:546-570`) whose hashOutputs is 32 zero bytes for SINGLE beyond outputs (`SighashCache::hash_outputs` `:534-536`), whatever the CHRONICLE bit; the node returns constant one for the same scope (`interpreter.cpp:2086-2100`, `:2112-2124`). [SRC] bsv-rs 0.7.0 src/script/template.rs:133-154 computes through compute_sighash_dispatched_for_signing (src/primitives/bsv/sighash.rs:970-976), whose original digest returns constant one for SINGLE beyond outputs (:983-992): the class's mechanism is absent at 0.7.0.",
+      "ruling": "impl-wrong",
+      "note": "The default context hashes BIP143 for the requested Chronicle scope where the node verifies constant one. Requires a valid control, a refused signature, equal scriptCode and exact BIP143 preimage/digest. The dispatched API preserves one; encoding refusals alone cannot establish this disagreement. [M] 2026-10-17 (#148, lane repin-148): at 0.7.0 the default context dispatches by hash type (CHANGELOG 0.7.0, \"The default signing digest is the node's\") and the pinned node confirms zero rows of this class; the class stays as history, a future pin may bring it back."
+    },
+    "sighash.chronicle.bip143": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:2112-2124 selects the original digest when the Chronicle scope bit is present; :1471-1481 supplies the execution-site scriptCode. [SRC] bsv-rs 0.5.0 src/script/template.rs:85-99 selects locking_script and calls compute_sighash_for_signing; src/primitives/bsv/sighash.rs:941-944 hashes BIP143 unconditionally, while :962-983 dispatches and preserves original SINGLE constant one. src/primitives/bsv/tx_signature.rs:174-177 appends the supplied scope byte unchanged. [SRC] bsv-rs 0.7.0 src/script/template.rs:133-154 dispatches by hash type through compute_sighash_dispatched_for_signing (src/primitives/bsv/sighash.rs:970-976): the class's mechanism is absent at 0.7.0.",
+      "ruling": "impl-wrong",
+      "note": "With the scriptCode equal to the control, SigningContext hashes BIP143 even for a Chronicle scope. Requires the exact library BIP143 preimage and digest, a different control digest and a node-confirmed refusal beside a valid control. Constant-one disagreements take precedence. [M] 2026-10-17 (#148, lane repin-148): at 0.7.0 SigningContext::compute_sighash calls compute_sighash_dispatched_for_signing (CHANGELOG 0.7.0, \"The default signing digest is the node's\") and the pinned node confirms zero rows of this class; the class stays as history, a future pin may bring it back."
+    }
+  },
+  "rows": [
+    {
+      "why": "A valid control and a refused default signature at an in-unlock site, with a measured lock-only scriptCode and unequal digest.",
+      "when": {
+        "column": "api-default",
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_CHECKSIGVERIFY",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_EVAL_FALSE"
+        ],
+        "native_contains": "lock-only"
+      },
+      "class": "sighash.scriptcode.in-unlock.lock-only"
+    },
+    {
+      "why": "Original SINGLE requires constant one; the source-lock context instead returns measured BIP143.",
+      "when": {
+        "column": "api-default",
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_CHECKSIGVERIFY",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_EVAL_FALSE"
+        ],
+        "native_contains": "single-one-mismatch chronicle-bip143"
+      },
+      "class": "sighash.single.out-of-range.one"
+    },
+    {
+      "why": "Correct scriptCode, but the default context returns measured BIP143 for a Chronicle scope requiring the original digest.",
+      "when": {
+        "column": "api-default",
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_CHECKSIGVERIFY",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_EVAL_FALSE"
+        ],
+        "native_contains": "chronicle-bip143"
+      },
+      "class": "sighash.chronicle.bip143"
+    },
+    {
+      "why": "The corpus deliberately places a non-push unlock under a word/version requiring push-only. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_SIG_PUSHONLY",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      "class": "corpus.control.sigpushonly"
+    },
+    {
+      "why": "The corpus deliberately sets the Chronicle hash-type bit before Chronicle. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_ILLEGAL_CHRONICLE",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      "class": "corpus.control.illegal-chronicle"
+    },
+    {
+      "why": "The corpus's 0x03 sentinel omits FORKID under a word requiring it; the encoding gate prevents a digest verdict. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      "class": "corpus.control.must-use-forkid"
+    }
+  ]
+}

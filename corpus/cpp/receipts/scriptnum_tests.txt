@@ -1,0 +1,18 @@
+suite: scriptnum_tests
+source: src/test/scriptnum_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/scriptnum_tests.jsonl
+status: passed
+test_cases_passed: 27
+assertions_passed: 48306
+cases_with_entries: 20
+entries: 11017
+sha256: b42c202ab68494832d74f77d19e32a9236425365297221c6b95984398fbd93bc
+sha256_keys_masked: b42c202ab68494832d74f77d19e32a9236425365297221c6b95984398fbd93bc
+entries_masked: 0
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=scriptnum_tests

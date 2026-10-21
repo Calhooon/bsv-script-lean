@@ -1,0 +1,11 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 7b00972 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260928-190551 UTC; wall: 18s (0 min 18 s)
+host: box; load at start: 15.04 13.99 12.13; load at end: 12.77 13.54 12.01
+status: RED (exit 1)
+legs (the verdict lines, in order):
+  check-pins: RED (1 drift, 10 skipped)
+[withheld at export: a sibling tree's line]
+  sample 19:05:51 UTC: load1 15.04; over 5% cpu: other programs: 1 processes, 63% cpu; 
+  sample 19:06:02 UTC: load1 13.64; over 5% cpu: rustc 54% 0.2GB; rustc 27% 0.2GB; rustc 30% 0.2GB; rustc 53% 0.2GB; other programs: 1 processes, 64% cpu; 

@@ -1,0 +1,22 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 585e43e (113 uncommitted paths at the start of the run, 113 at its end)
+started: 20260929-180403 UTC; wall: 25s (0 min 25 s)
+[withheld at export: a sibling tree's line]
+status: RED (exit 1)
+legs (the verdict lines, in order):
+  check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite_check: 7414 citations found in lean/ and docs/ (7346 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1816, MOVED 0; not anchored (reported, never RED): unanchored 79, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 69, self 173, history 5273, absent 0, orphan rows 41; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  lean: build OK, sorry-free; lake: Build completed successfully (1045 jobs).
+  axiom check --self-test: the parser and the walk's line OK (entries ['A.one', 'A.two', 'A.three', 'A.four', "A.five'", 'A.six', 'A.seven']; flagged ['A.three', 'A.six'])
+  axiom check --self-test: the declaration scan OK (declared ['A.t1', 'A.t2', 'A.t3', 'A.t4', 'A.t5', 'A.t6', 'A.t7', 'A.t8', 'A.t9', 'A.B.C.t10', 'A.D.E.t11', "A.t12'", 'A.t13', 'A.t14', 'A.t15', 'A.t16', 'A.t17', 'A.t18', 'A.«t19 x»', 't20']; unparsed [(45, '#check (theorem)')])
+  axiom check --self-test: the refusals of the scan OK ({'an unterminated raw string': ([], [(0, 'the scan ends inside an unterminated raw string')]), 'a «…» name holding a quote': (['hidden'], []), 'a char literal after a symbol': (['shown'], []), 'a scope line with a second command': (['x'], [(1, 'namespace B open Nat')]), 'a theorem after garbage': ([], [(1, 'foo theorem x : True := trivial')])})
+  axiom check --self-test: the list comparison and the pin OK
+  axiom check --self-test: the refusals OK (17 of 17 planted caught; comments, strings and an `axioms` name quiet)
+  axiom check --self-test: OK
+  axiom check: FAILED, the walk: 0 walk lines (one expected)
+[withheld at export: a sibling tree's line]
+  sample 18:04:03 UTC: load1 6.20; over 5% cpu: other programs: 3 processes, 54% cpu; 
+  sample 18:04:13 UTC: load1 5.69; over 5% cpu: lake 24% 0.7GB; other programs: 4 processes, 32% cpu; 
+  sample 18:04:23 UTC: load1 5.05; over 5% cpu: lean 132% 1.5GB; other programs: 12 processes, 194% cpu; 

@@ -1,0 +1,13 @@
+{
+  "stamp [M]": "2026-09-30T01:24:51.372338+00:00",
+  "signer_pin [SRC]": "bsv-rs@0.3.30",
+  "fixture_scalar [LIT]": "one, public test constant",
+  "legacy_hash_recipe [LIT]": "single input; scriptSig replaced by the supplied P2PK locking script; append ALL as little-endian unsigned word; SHA256 twice",
+  "legacy_hash_type [LIT]": 1,
+  "sig_hash_byte [LIT]": 1,
+  "preimage_sha256 [D]": "0af4029654416a6896b24ceacd718a67bdddce491f01695f7d678db7f6b9237b",
+  "digest_sha256 [D]": "920fa45a543254bd751e30469a1ac5e6b7c556368e5c62f3507febc73921d590",
+  "not_original_digest_only_vector [D]": true,
+  "baseline_gates_mutation_calls [D]": true,
+  "signed_case_count [D]": 4
+}

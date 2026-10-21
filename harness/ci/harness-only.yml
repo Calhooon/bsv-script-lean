@@ -1,0 +1,50 @@
+# harness/ci/harness-only.yml: AN EXAMPLE CI JOB for the conformance harness (bsv-script-lean #31; S3, 2026-09-29).
+# It is NOT enabled in this repository: copy it to .github/workflows/ in your fork to run it.
+#
+# What it checks: the SDK engines at the pins of docs/PROVENANCE.md §1a against the specification's verdicts AS RECORDED in
+# the corpus (`harness/run --spec recorded`, harness/README.md "Run it"). It needs no Lean build: the spec's verdicts are the
+# corpus entries' `spec@<commit>` keys and the flag words are the ones recorded in corpus/witnesses/<engine>/manifest.json.
+# What it does not check: the specification itself. The repository's own gate, .github/workflows/gate.yml (#116; [D]
+# until a pull request on the public repository runs it), runs the twenty-nine legs of `make check` (the Lean build, the
+# axiom check, the reference's own tests among them) on hosted runners; the reads that need the pinned clones or the
+# built reference run on the maintainers' box and arrive as the commit status box/withheld-legs; the regtest node and
+# the Teranode instance run on demand there, under no status (tools/withheld_legs.txt).
+#
+# The corpus is `seed` (its manifest records the entry count). Larger corpora can include slow interpreter cases;
+# the harness's adapter wall and retry are documented in src/engines.rs (D15a).
+# Nothing here writes the committed corpus: the report goes to harness/target/run/ and is uploaded as an artifact.
+name: harness (the recorded spec)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["harness/**", "corpus/**", "tools/check_pins.py", "docs/PROVENANCE.md"]
+jobs:
+  sdk-engines:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      # the toolchains of docs/PROVENANCE.md §1a: go.major 1.27, node.major 22, rust.toolchain 1.95.0
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.27"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: the crate's Rust toolchain (harness/rust-toolchain.toml)
+        working-directory: harness
+        run: rustup show active-toolchain || rustup toolchain install
+      - name: the crate's tests
+        working-directory: harness
+        run: cargo test --release --locked
+      - name: go-sdk against the recorded spec (the seed corpus)
+        run: harness/run --impl go-sdk --corpus seed --out harness/target/run/go-sdk
+      - name: ts-sdk against the recorded spec (the seed corpus)
+        env:
+          NODE_BIN: node
+        run: harness/run --impl ts-sdk --corpus seed --out harness/target/run/ts-sdk
+      - name: the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: harness-report
+          path: harness/target/run/

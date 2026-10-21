@@ -1,0 +1,10 @@
+S2 (Lean B), set 4 sitting 6, 2026-09-29: the console-only leg of the landing that brings home the leg of record (docs only; D156, D142)
+host: the Studio, ~/bsv/worktrees/spec-lean-b (branch lean-b); the run from `env -u BASH_ENV /bin/bash --noprofile --norc tools/check.sh cite`
+what lands: docs/records/20260929-032755-make-check-box.txt (the box record whose `commit:` line is b3406bf, status GREEN, 206 s) with its README row; the re-cuts of the "pending" sentences it answers: S2's END BLOCK of 2026-09-29T02:14:54Z (its leg paragraph, its owed item (0) struck, its lens paragraph), docs/DESIGN.md §12.6, and two rows of docs/records/README.md
+
+the byte-identity line (the fourteen paths: lean harness corpus spec eval Makefile tools/check.sh tools/check_route.sh tools/check_pins.py tools/axiom_check.py tools/specgen.py tools/cite_check.py tools/modal_check.py docs/PROVENANCE.md):
+  git diff --quiet b3406bf <HEAD> -- <the fourteen>: exit 0 before the push
+
+the cite leg, 03:32:28 to 03:32:32 UTC, the 1-minute load 4.09 at the start and at the end, on the tree of the commit that carries this record, this record and its row aside:
+  cite_check: 3263 citations found in lean/ and docs/ (3203 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 160, history 1221, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)

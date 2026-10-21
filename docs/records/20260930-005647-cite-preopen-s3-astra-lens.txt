@@ -1,0 +1,39 @@
+**Overall: PARTIAL.** Model: [SRC] Codex GPT-6-Astra.
+
+The permitted fixture execution stopped while creating its temporary directory because the sandbox is read-only. It reached no scanner checks and produced no PASS receipt. The conclusions below distinguish source verification from unverified execution.
+
+| Claim | Verdict | Evidence |
+|---|---|---|
+| History excluded before opening | **HELD, by source** | The history predicate, name collection, and `continue` precede `open()`. Scope is matching, scan-eligible paths. [Exclusion hunk](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:32) |
+| Every excluded file named with the required phrase and counted separately from citations | **HELD, by source** | `main()` prints every collected name as “closed to model turns, not opened”. Excluded sites never enter `cites`; their file count is separate. [Reporting hunk](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:49) |
+| History anchor rows retained unchecked, without orphan/drop/spent claims | **HELD, by source** | `history_keys` participates in both `seen` and `kept`; history HELD entries bypass the spent diagnostic. Original row objects are retained. [Orphan handling](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:65), [retention](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:74) |
+| Active anchored citations can still fail | **HELD, by source** | In ordinary checking mode, a nonempty `check_row()` result reaches RED and returns [D] 1. The fixture injects that result. Proposal mode returns earlier, so this finding does not establish failure in every mode. [Embedded candidate](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:24), [failure assertion](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:145) |
+| Old control genuinely reads synthetic closed files | **HELD as test design; UNVERIFIABLE as executed evidence here** | `track()` delegates to real `open()`. The control also requires returned citation sites from every closed fixture file, then separately requires the guarded old scanner to fail. [Control](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:90) |
+| Candidate avoids every tested closed-path open | **HELD as test design; UNVERIFIABLE as executed evidence here** | Candidate scans and main invocations run under a guard that raises before opening any listed closed path. Successful completion would substantiate avoidance for those fixtures. [Candidate checks](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:122) |
+| Patch functions agree with embedded candidate functions | **HELD** | Applying [M] 6 executable hunks in memory reproduced `CANDIDATE_FUNCTIONS` exactly, including textual and AST equality. The [M] 1 documentation hunk lies outside the embedded functions. |
+
+The figures re-derived from the [fixture setup and assertions](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:73) are expectations, not completed filesystem measurements:
+
+| Figure | Independent derivation |
+|---|---|
+| Closed names | [M] 5 explicit entries in `HISTORY_NAMES`, all matching `HISTORY_PREFIX` |
+| Old closed files opened | Expected [D] 5: each closed fixture is eligible and the old scanner opens before parsing |
+| Old citation shapes | [D] 6 = [M] 5 history files plus [M] 1 live file, each containing a matching citation |
+| Candidate closed files opened | Expected [D] 0 from the pre-open branch |
+| Candidate live sites, shapes, ranges | [D] 1 each |
+| Input anchor rows | [D] 7 = [M] 1 live + [M] 5 history + [M] 1 vanished-live row |
+| Retained history rows | [D] 5 from membership in `history_keys` |
+| Proposed rows | [D] 0: the surviving live citation already has an anchor |
+| Live orphan rows dropped | [D] 1: only the vanished-live row is outside `seen` |
+| Output rows | [D] 6 = [D] 7 input minus [D] 1 orphan |
+| Successful modes | [M] 3 configured: default, `--list`, and `--propose --write`; expected exit [D] 0 each |
+| Active-anchor negative | Expected exit [D] 1 and RED; old guarded control expected to raise |
+
+**LOAD-BEARING corrections:**
+
+- Scope the GREEN message to **checked active anchors**. Its current “every anchored citation holds at the pin” claim is **NOT HELD** when history anchors remain unchecked. [Candidate footer](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:24)
+- Correct the “excluded anchor rows” accounting or establish uniqueness. `len(history_keys)` counts distinct keys. Duplicating a fixture history row gives [D] 6 retained rows but [D] 5 reported keys. General row-count accuracy is therefore **PARTIAL**. Count history rows directly, or label the quantity as unique keys. [Count expression](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:53)
+- Strengthen the retention receipt: compare complete written history rows with the originals and derive the retained count from `written`. Currently the assertion compares site sets, while the reported retained count comes from input `histories`; changed anchor fields could pass unnoticed. [Receipt assertions](/tmp/s3-c57-cite-lens-20260930-005647/synthetic_fixture.py:143)
+- Keep executed PASS claims out of this lens’s receipt. The filesystem control remains **UNVERIFIABLE** from this attempted run.
+
+**COSMETIC correction:** repair the awkward “and of excluded sites under” wording in the [documentation hunk](/tmp/s3-c57-cite-lens-20260930-005647/candidate.patch:8).

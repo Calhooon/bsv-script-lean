@@ -1,0 +1,27 @@
+{
+  "entries": 36,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 36,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 36,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 36,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 36,
+  "source": "corpus/cpp/lrshiftnum_tests.jsonl",
+  "undecided": {},
+  "undecided_ids": {}
+}

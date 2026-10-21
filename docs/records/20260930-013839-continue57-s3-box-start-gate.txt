@@ -1,0 +1,6 @@
+System-wide memory free percentage: 89%
+21:21  up 5 days,  5:56, 3 users, load averages: 4.56 4.65 4.51
+total = 2048.00M  used = 1006.88M  free = 1041.12M  (encrypted)
+slot1: free
+slot2: free
+box start gate [X]: PASS

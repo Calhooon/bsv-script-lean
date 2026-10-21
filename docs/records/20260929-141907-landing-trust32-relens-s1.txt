@@ -1,0 +1,41 @@
+S1's landing of lean #32's second lens, its RE-LENS and S1's second round (S1, Lean A, set 4 sitting 8; 2026-09-29)
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s8-r2 (1626a89, before the rebase) and
+  origin/lean-a-s8-r3 (52f2c7f); never force-pushed):
+  199cfc7 -> 819a4b8  the four re-lens reports filed verbatim, docs/audit/2026-09-29-lens32-trust-relens-part{A,B,C,D}-by-S1.md, their rows
+  1626a89 -> 20db3aa  S1's second round (docs/records/20260929-140334-trust32-relens-fixes-s1.md), make spec's pages, the v2 patch
+                      records for S2, S3 and S4b with their companions, the appended Corrections of the first round's records
+  52f2c7f             the v2 companions for S2 and S3 rebuilt on 14910db (S2's lens 3 had re-cut DESIGN §4.1, §6 and rows of
+                      corpus/INDEX.md), their records' sentences
+  and this record's commit, with the leg of record's record, its row and the state page's label (held out of the leg's
+  commit because tools/check_box.sh runs a clean tree; not a leg's path).
+  The rebase onto 14910db (14:0x UTC; main had S2's lens-3 fixes, run_diff.rs, DESIGN, INDEX, and S3's continue 44 and
+  45): docs/records/README.md conflicted (both lanes appended rows), resolved keeping both; the companions then re-checked
+  with `git apply --check` (two failed on S2's re-cut pages and were rebuilt: 52f2c7f).
+
+THE LEG OF RECORD: docs/records/20260929-141538-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at 52f2c7f, clean and pushed as origin/lean-a-s8-r3, in S1's own box worktree ~/bsv/worktrees/spec-box-lean-a:
+  twenty-one legs GREEN in 136 s (started 14:15:38 UTC), the axiom check 760, numcheck 0 mismatches, both large-lock rows
+  valid (the array machine 94 ms, the list machine 97 ms), the crypto leg's two lines at 0 mismatches in their new wording
+  (the key-1 signature of RFC 6979's nonce procedure; the lax parser's sequence length), specgen --check OK, the self-test
+  GREEN, rules_check GREEN over 37 manifests with the reader's new strictness (68,080 entries replayed).
+
+THE LANDING LOCK (D151, the ticket order): the leg ran before the hold (the continue-36 rule). The take asked at 14:19:21 UTC and took the lock at 14:22:53 UTC after 212 s. Inside the hold:
+  the final fetch (main unmoved at 14910db, no rebase), this record's commit, the byte-identity and the push; the release
+  after the push, its time on the block.
+
+THE BYTE-IDENTITY (the rule of continue 36): the leg's tree 52f2c7f and the landed tree differ on no leg's path:
+  git diff --quiet 52f2c7f <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md,
+  read before the push, its exit code on the block; this commit touches docs/STATE-OF-THE-WORLD.md and docs/records alone.
+
+**Correction.** (S1, Lean A, set 4 sitting 8, 2026-09-29, S1's fourth round; found by lean #32's third re-lens, part A, A3N-5)
+
+"differ on no leg's path" reads continue 36's path list, which names no `docs` page, while the cite leg reads every `.md` under `docs/` but the history pages (`tools/cite_check.py:58–59`). A docs page the rebase brought in was a cite-leg input that the leg of record did not read. The verdict stands on the later legs of record, each of which read those pages with the cite leg GREEN (`docs/records/20260929-155509-make-check-box.txt`, `…-171526-…`).
+
+**Correction.** (S1, Lean A, set 4 sitting 9, 2026-09-29, S1's fifth round; found by lean #32's fourth re-lens, `docs/audit/2026-09-29-lens32-trust-relens4-part{A,B,C,D}-by-S1.md`, part A, A4N-2)
+
+The Correction above is itself wrong in two places.
+- **The path list.** It names two `docs` pages (`docs/PROVENANCE.md`, `docs/PARAMETERS.md`), not the others the cite leg reads (`tools/cite_check.py:58–62`).
+- **The rebase.** No rebase came between the leg and this landing: `121d4d4`'s parent is the leg's tree `52f2c7f`. This landing's own commit changed the state page's row 78, whose changed lines carry no `file:line` citation.
+
+So the verdict stands without the later box legs, which skip the reference's rows by name.

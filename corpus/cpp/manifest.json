@@ -1,0 +1,812 @@
+{
+  "corpus": "cpp",
+  "pin": "bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)",
+  "reader": "tools/cpp_extract.sh + corpus/cpp/instrument.patch",
+  "instrument_patch_sha256": "07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205",
+  "engine_key": "sv-node-unit@v1.2.2",
+  "license": "derived from the reference's test sources; each file's license_header is its source's own notice: the Open BSV License Version 5, or MIT (the pin's COPYING redirects to LICENSE, which carries the MIT License from its line 60); corpus/cpp/LICENSE is byte for byte the pin's",
+  "files": [
+    {
+      "file": "big_int_tests.jsonl",
+      "source": "src/test/big_int_tests.cpp",
+      "source_sha256": "355611681ec21dea7c3a66dd2e1cd42a52934aa5237bcf0934b6e0914b65bc52",
+      "license_header": [
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 46,
+      "sha256": "6381b5480ac0b97b6f057202ed381bb2f3d1a878b456e23054c2d5edbed2612d",
+      "sha256_of_file": "6381b5480ac0b97b6f057202ed381bb2f3d1a878b456e23054c2d5edbed2612d",
+      "sha256_keys_masked": "6381b5480ac0b97b6f057202ed381bb2f3d1a878b456e23054c2d5edbed2612d",
+      "verdicts": {
+        "predicate": 46
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 46
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/big_int_tests/absolute_value": 1,
+        "cpp/big_int_tests/add": 2,
+        "cpp/big_int_tests/cmp": 2,
+        "cpp/big_int_tests/div": 2,
+        "cpp/big_int_tests/equality": 3,
+        "cpp/big_int_tests/inequality": 1,
+        "cpp/big_int_tests/is_negative_": 3,
+        "cpp/big_int_tests/mod": 2,
+        "cpp/big_int_tests/mult": 2,
+        "cpp/big_int_tests/negate": 6,
+        "cpp/big_int_tests/shift_left": 8,
+        "cpp/big_int_tests/shift_left_bint_exceeds_int_max": 1,
+        "cpp/big_int_tests/shift_left_bint_max_script_len": 1,
+        "cpp/big_int_tests/shift_right": 8,
+        "cpp/big_int_tests/shift_right_bint_exceeds_int_max": 1,
+        "cpp/big_int_tests/shift_right_bint_max_script_len": 1,
+        "cpp/big_int_tests/sub": 2
+      }
+    },
+    {
+      "file": "blockcheck_tests.jsonl",
+      "source": "src/test/blockcheck_tests.cpp",
+      "source_sha256": "140a863792102208249dee2bc6ba604c6f7bc5aea819238159f5cf12a46bf2b2",
+      "license_header": [
+        "Copyright (c) 2013-2015 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 3,
+      "sha256": "eafd346778c003622371f225bc46b63d298c8ad14007656ef16d20cb1c332935",
+      "sha256_of_file": "eafd346778c003622371f225bc46b63d298c8ad14007656ef16d20cb1c332935",
+      "sha256_keys_masked": "eafd346778c003622371f225bc46b63d298c8ad14007656ef16d20cb1c332935",
+      "verdicts": {
+        "predicate": 3
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 3
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/blockcheck_tests/blockfail": 3
+      }
+    },
+    {
+      "file": "bn_op_tests.jsonl",
+      "source": "src/test/bn_op_tests.cpp",
+      "source_sha256": "cf49929c2cce3420424e1363d29a54c0d46fd4afe07cc361a0819776ee716bf8",
+      "license_header": [
+        "Copyright (c) 2012-2015 The Bitcoin Core developers",
+        "Distributed under the MIT software license, see the accompanying",
+        "file COPYING or http://www.opensource.org/licenses/mit-license.php."
+      ],
+      "count": 249,
+      "sha256": "72485e5624404d32651137cf24d824f0e13bfea3500e08bb52aa058da5458a4b",
+      "sha256_of_file": "72485e5624404d32651137cf24d824f0e13bfea3500e08bb52aa058da5458a4b",
+      "sha256_keys_masked": "72485e5624404d32651137cf24d824f0e13bfea3500e08bb52aa058da5458a4b",
+      "verdicts": {
+        "error": 55,
+        "ok": 192,
+        "unasserted": 2
+      },
+      "not_replayable": 0,
+      "tables_by_row": 16,
+      "kinds": {
+        "evalscript": 249
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/bn_op_tests/bint_binary_ops": 44,
+        "cpp/bn_op_tests/bint_bint_numequalverify": 4,
+        "cpp/bn_op_tests/bint_ternary_ops": 15,
+        "cpp/bn_op_tests/bint_unary_ops": 33,
+        "cpp/bn_op_tests/op_bin2num": 12,
+        "cpp/bn_op_tests/op_checkmultisig": 15,
+        "cpp/bn_op_tests/op_checksig": 2,
+        "cpp/bn_op_tests/op_depth": 3,
+        "cpp/bn_op_tests/op_lshift": 13,
+        "cpp/bn_op_tests/op_lshift_far": 1,
+        "cpp/bn_op_tests/op_num2bin": 21,
+        "cpp/bn_op_tests/op_pick": 3,
+        "cpp/bn_op_tests/op_roll": 3,
+        "cpp/bn_op_tests/op_rshift": 14,
+        "cpp/bn_op_tests/op_rshift_far": 1,
+        "cpp/bn_op_tests/op_size": 2,
+        "cpp/bn_op_tests/op_split": 3,
+        "cpp/bn_op_tests/operands_too_large": 60
+      }
+    },
+    {
+      "file": "crypto_tests.jsonl",
+      "source": "src/test/crypto_tests.cpp",
+      "source_sha256": "ef37ce13b26c30ad3afa3fa6354f0522657766d85e686c26a84bafc65ac531b9",
+      "license_header": [
+        "Copyright (c) 2014-2016 The Bitcoin Core developers",
+        "Distributed under the MIT software license, see the accompanying",
+        "file COPYING or http://www.opensource.org/licenses/mit-license.php."
+      ],
+      "count": 31,
+      "sha256": "90698fb36a19c361694e547adcb1244b8c57f753c1b5a17c237e0d2517609365",
+      "sha256_of_file": "90698fb36a19c361694e547adcb1244b8c57f753c1b5a17c237e0d2517609365",
+      "sha256_keys_masked": "90698fb36a19c361694e547adcb1244b8c57f753c1b5a17c237e0d2517609365",
+      "verdicts": {
+        "predicate": 31
+      },
+      "not_replayable": 3,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 31
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/crypto_tests/ripemd160_testvectors": 10,
+        "cpp/crypto_tests/sha1_testvectors": 10,
+        "cpp/crypto_tests/sha256_testvectors": 11
+      }
+    },
+    {
+      "file": "cscript_tests.jsonl",
+      "source": "src/test/cscript_tests.cpp",
+      "source_sha256": "a024807aa84062f037beb51244ec0a19b2560938660ff72dfd57506d1b088d26",
+      "license_header": [
+        "Copyright (c) 2020 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 67,
+      "sha256": "b8b3ca9eabf9d768288b74bd27ac7c64dac406674906e707f77859071b487c75",
+      "sha256_of_file": "b8b3ca9eabf9d768288b74bd27ac7c64dac406674906e707f77859071b487c75",
+      "sha256_keys_masked": "b8b3ca9eabf9d768288b74bd27ac7c64dac406674906e707f77859071b487c75",
+      "verdicts": {
+        "predicate": 67
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 67
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/cscript_tests/GetOp2": 14,
+        "cpp/cscript_tests/GetSigOpCount": 37,
+        "cpp/cscript_tests/GetSigOpCount_p2sh": 16
+      }
+    },
+    {
+      "file": "instruction_iterator_tests.jsonl",
+      "source": "src/test/instruction_iterator_tests.cpp",
+      "source_sha256": "dcb7c360dbd21328cceafab7f61fa635d722f27a19abb8b4df5b17fc9980c0dc",
+      "license_header": [
+        "Copyright (c) 2020 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 21,
+      "sha256": "e0bc7f9f26a8fad7a082f722f765e04207982a7b17d7ea993d7566a1335c47b9",
+      "sha256_of_file": "e0bc7f9f26a8fad7a082f722f765e04207982a7b17d7ea993d7566a1335c47b9",
+      "sha256_keys_masked": "e0bc7f9f26a8fad7a082f722f765e04207982a7b17d7ea993d7566a1335c47b9",
+      "verdicts": {
+        "predicate": 21
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 21
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/instruction_iterator_tests/decode_instruction_tests": 19,
+        "cpp/instruction_iterator_tests/too_short_single_instruction": 1,
+        "cpp/instruction_iterator_tests/too_short_two_instructions": 1
+      }
+    },
+    {
+      "file": "int_serialization_tests.jsonl",
+      "source": "src/test/int_serialization_tests.cpp",
+      "source_sha256": "4f2a19687d5820cc6057ba0c661329db858750084965e9430bdeb43820e98d17",
+      "license_header": [
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 129,
+      "sha256": "a53cf4678e2dd27b2e59cf4b585c4d0d22318ed8faf27eec6b54f8acdc35f58f",
+      "sha256_of_file": "a53cf4678e2dd27b2e59cf4b585c4d0d22318ed8faf27eec6b54f8acdc35f58f",
+      "sha256_keys_masked": "a53cf4678e2dd27b2e59cf4b585c4d0d22318ed8faf27eec6b54f8acdc35f58f",
+      "verdicts": {
+        "predicate": 129
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 129
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/int_serialization_tests/is_minimal_encoding": 12,
+        "cpp/int_serialization_tests/minimally_encode": 12,
+        "cpp/int_serialization_tests/serialize_bint": 72,
+        "cpp/int_serialization_tests/serialize_int64_t": 33
+      }
+    },
+    {
+      "file": "limitedstack_tests.jsonl",
+      "source": "src/test/limitedstack_tests.cpp",
+      "source_sha256": "11d60fe2daefe6f842fd06b766eac5b9e5b1119b16bbbe3621f37e6e310e6227",
+      "license_header": [
+        "Copyright (c) 2018 The Bitcoin developers",
+        "Copyright (c) 2018-2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 2,
+      "sha256": "f3890b5bc2965ee060b7dad022429d0a9f3de6a502ea4947ec2e3e985e1e7325",
+      "sha256_of_file": "f3890b5bc2965ee060b7dad022429d0a9f3de6a502ea4947ec2e3e985e1e7325",
+      "sha256_keys_masked": "f3890b5bc2965ee060b7dad022429d0a9f3de6a502ea4947ec2e3e985e1e7325",
+      "verdicts": {
+        "predicate": 2
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 2
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/limitedstack_tests/limitedstack_insert_test": 1,
+        "cpp/limitedstack_tests/limitedstack_push_test": 1
+      }
+    },
+    {
+      "file": "lrshiftnum_tests.jsonl",
+      "source": "src/test/lrshiftnum_tests.cpp",
+      "source_sha256": "4828e8d8588027717ca1c3c590ff4a1eac849cd464b8a834c41687d81ee6f191",
+      "license_header": [
+        "Copyright (c) 2025 BSV Blockchain Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 36,
+      "sha256": "27e34949c6c2348f674ba1600f79720834c6d25dbfe7897e31b3d6b79a158075",
+      "sha256_of_file": "27e34949c6c2348f674ba1600f79720834c6d25dbfe7897e31b3d6b79a158075",
+      "sha256_keys_masked": "27e34949c6c2348f674ba1600f79720834c6d25dbfe7897e31b3d6b79a158075",
+      "verdicts": {
+        "error": 9,
+        "ok": 27
+      },
+      "not_replayable": 0,
+      "tables_by_row": 2,
+      "kinds": {
+        "evalscript": 36
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/lrshiftnum_tests/eval_script_large_op_lshiftnum_1bit": 1,
+        "cpp/lrshiftnum_tests/eval_script_large_op_rshiftnum_1bit": 1,
+        "cpp/lrshiftnum_tests/eval_script_op_lshiftnum": 16,
+        "cpp/lrshiftnum_tests/eval_script_op_lshiftnum_gt_max_script_len": 1,
+        "cpp/lrshiftnum_tests/eval_script_op_lshiftnum_max_script_len": 1,
+        "cpp/lrshiftnum_tests/eval_script_op_rshiftnum": 16
+      }
+    },
+    {
+      "file": "miner_tests.jsonl",
+      "source": "src/test/miner_tests.cpp",
+      "source_sha256": "9d5f09a06bf59b70b4c53a47e4a3ff299a75c1121a76bba6d112bb6584dc1974",
+      "license_header": [
+        "Copyright (c) 2011-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 9,
+      "sha256": "850d874ea6569f7f55d30d4dba0d3bdba01a8bd9a25181a403b200a83efe4f6a",
+      "sha256_of_file": "850d874ea6569f7f55d30d4dba0d3bdba01a8bd9a25181a403b200a83efe4f6a",
+      "sha256_keys_masked": "850d874ea6569f7f55d30d4dba0d3bdba01a8bd9a25181a403b200a83efe4f6a",
+      "verdicts": {
+        "predicate": 9
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 9
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/miner_tests/CreateNewBlock_validity": 9
+      }
+    },
+    {
+      "file": "multisig_tests.jsonl",
+      "source": "src/test/multisig_tests.cpp",
+      "source_sha256": "aa0622a3f903d775937ccfec3deddc34f0e710bc78704dda59820d7e51222151",
+      "license_header": [
+        "Copyright (c) 2011-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 56,
+      "sha256": "03b82afe6e38da5ff9e5934be13f2e9702518707b12cdb66f87018d264d4e90f",
+      "sha256_of_file": "03b82afe6e38da5ff9e5934be13f2e9702518707b12cdb66f87018d264d4e90f",
+      "sha256_keys_masked": "7c22d7bb1e4b77ae14bd3688772e0f77c1de6670fa730dd21a4c0b4d75f7e31f",
+      "verdicts": {
+        "error": 24,
+        "ok": 6,
+        "predicate": 26
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 26,
+        "verifyscript": 30
+      },
+      "drawn_at_run_time": 56,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/multisig_tests/multisig_IsStandard": 10,
+        "cpp/multisig_tests/multisig_Sign": 6,
+        "cpp/multisig_tests/multisig_Solver1": 10,
+        "cpp/multisig_tests/multisig_verify": 30
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "opcode_tests.jsonl.gz",
+      "source": "src/test/opcode_tests.cpp",
+      "source_sha256": "1a016dbb867f3a756c35b8988d39e70dd58533feacaf7ff00057c4ea92128c2c",
+      "license_header": [
+        "Copyright (c) 2018 The Bitcoin developers",
+        "Copyright (c) 2018-2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 144381,
+      "sha256": "88652c71c6f6d3ff85304edc89b3bce4f9911a2e775923bdc9795332bebd2a1e",
+      "sha256_of_file": "6481cd9880bd356ec43efc2669264e2d3b4405f54535653eb86db9cc38ec0751",
+      "sha256_keys_masked": "6437c6eeb1e1b9973854da09bda592428daab47d35695e86378b338fdfad7b22",
+      "verdicts": {
+        "error": 11457,
+        "ok": 132829,
+        "predicate": 15,
+        "unasserted": 80
+      },
+      "not_replayable": 0,
+      "tables_by_row": 16,
+      "kinds": {
+        "evalscript": 144366,
+        "predicate": 15
+      },
+      "drawn_at_run_time": 9,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/opcode_tests/EvalScript_flag_check_post_chronicle": 1,
+        "cpp/opcode_tests/bitwise_opcodes_test": 75006,
+        "cpp/opcode_tests/div_and_mod_opcode_tests": 900,
+        "cpp/opcode_tests/invert_test": 12,
+        "cpp/opcode_tests/limited_stack_test": 12,
+        "cpp/opcode_tests/lshift_big_int": 1,
+        "cpp/opcode_tests/lshift_test": 141,
+        "cpp/opcode_tests/mul_test": 504,
+        "cpp/opcode_tests/negative_valtype_test": 15,
+        "cpp/opcode_tests/op_1add_len_invariant": 1,
+        "cpp/opcode_tests/op_1sub_len_invariant": 1,
+        "cpp/opcode_tests/op_2div_post_chronicle": 11,
+        "cpp/opcode_tests/op_2div_pre_chronicle": 4,
+        "cpp/opcode_tests/op_2mul_len_invariant": 1,
+        "cpp/opcode_tests/op_2mul_post_chronicle": 11,
+        "cpp/opcode_tests/op_2mul_pre_chronicle": 4,
+        "cpp/opcode_tests/op_2rot": 2,
+        "cpp/opcode_tests/op_add_len_invariant": 1,
+        "cpp/opcode_tests/op_left_post_chronicle": 12,
+        "cpp/opcode_tests/op_left_pre_chronicle": 2,
+        "cpp/opcode_tests/op_mul_len_invariant": 1,
+        "cpp/opcode_tests/op_right_post_chronicle": 12,
+        "cpp/opcode_tests/op_right_pre_chronicle": 2,
+        "cpp/opcode_tests/op_sub_len_invariant": 1,
+        "cpp/opcode_tests/op_substr_post_chronicle": 16,
+        "cpp/opcode_tests/op_substr_pre_chronicle": 2,
+        "cpp/opcode_tests/op_ver_post_chronicle": 7,
+        "cpp/opcode_tests/op_ver_pre_chronicle": 1,
+        "cpp/opcode_tests/op_verif_post_chronicle": 22,
+        "cpp/opcode_tests/op_verif_pre_chronicle": 4,
+        "cpp/opcode_tests/op_vernotif_post_chronicle": 22,
+        "cpp/opcode_tests/op_vernotif_pre_chronicle": 4,
+        "cpp/opcode_tests/opcode_limit_tests": 21,
+        "cpp/opcode_tests/rshift_big_int": 1,
+        "cpp/opcode_tests/rshift_test": 141,
+        "cpp/opcode_tests/string_opcodes_test": 29913,
+        "cpp/opcode_tests/type_conversion_test": 37569
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "rpc_tests.jsonl",
+      "source": "src/test/rpc_tests.cpp",
+      "source_sha256": "167e71876ccce8e5e8c11e0db389e1352b952c18d1b77cbba77338ed6ff509b8",
+      "license_header": [
+        "Copyright (c) 2012-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 2,
+      "sha256": "5cc9389e047695e3be029b3627cd16452d1373e522ab3bdc175bc0d95f41fdad",
+      "sha256_of_file": "5cc9389e047695e3be029b3627cd16452d1373e522ab3bdc175bc0d95f41fdad",
+      "sha256_keys_masked": "5cc9389e047695e3be029b3627cd16452d1373e522ab3bdc175bc0d95f41fdad",
+      "verdicts": {
+        "predicate": 2
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 2
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/rpc_tests/rpc_rawsign": 2
+      }
+    },
+    {
+      "file": "script_P2SH_tests.jsonl",
+      "source": "src/test/script_P2SH_tests.cpp",
+      "source_sha256": "5708d32ceffbeae61a8ba46f49063e8e7ddeb0c6f5e512d647388240a77ceb16",
+      "license_header": [
+        "Copyright (c) 2012-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 150,
+      "sha256": "190483fd529aac9144be7d520d86b9cc6f1de6ce005c2a96f2b931c852b56eb2",
+      "sha256_of_file": "190483fd529aac9144be7d520d86b9cc6f1de6ce005c2a96f2b931c852b56eb2",
+      "sha256_keys_masked": "a96e30adc7ee46b11605b33ac665765487473d26e16cea4af716f726ebe3927e",
+      "verdicts": {
+        "error": 2,
+        "ok": 2,
+        "predicate": 146
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 146,
+        "verifyscript": 4
+      },
+      "drawn_at_run_time": 137,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/script_P2SH_tests/AreInputsStandard": 21,
+        "cpp/script_P2SH_tests/is": 9,
+        "cpp/script_P2SH_tests/norecurse": 2,
+        "cpp/script_P2SH_tests/set": 26,
+        "cpp/script_P2SH_tests/sign": 90,
+        "cpp/script_P2SH_tests/switchover": 2
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "script_tests.jsonl.gz",
+      "source": "src/test/script_tests.cpp",
+      "source_sha256": "76b1c1619230408034137f9e958f3d320dedbfddf01f6aaf842740785595698d",
+      "license_header": [
+        "Copyright (c) 2011-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 135669,
+      "sha256": "1992f9dea52a9de7fe9d268563b678fc9406e6b9665afef1b941f1ecf62cf213",
+      "sha256_of_file": "f24225535343d9917266786a3790c859da492cfe0fc0c27200f9814216fd6bf9",
+      "sha256_keys_masked": "2fd8807ce1d4a2e4e4485629ec6b15225e1045aa7e369c2a091f4a1571055057",
+      "verdicts": {
+        "error": 196,
+        "ok": 67898,
+        "predicate": 67575
+      },
+      "not_replayable": 60,
+      "tables_by_row": 15,
+      "kinds": {
+        "evalscript": 299,
+        "predicate": 67575,
+        "verifyscript": 67795
+      },
+      "drawn_at_run_time": 75,
+      "covered_not_extracted": {
+        "script_build": 100,
+        "script_json_test": 1483
+      },
+      "families": {
+        "cpp/script_tests/EvalScript_lows": 18,
+        "cpp/script_tests/EvalScript_minimal_encoding": 22,
+        "cpp/script_tests/EvalScript_multiple_op_checkmultisig_forkid_chronicle": 6,
+        "cpp/script_tests/EvalScript_multiple_op_checksig_forkid_chronicle": 6,
+        "cpp/script_tests/EvalScript_op_checkmultisig_forkid_chronicle": 46,
+        "cpp/script_tests/EvalScript_op_checksig_forkid_chronicle": 46,
+        "cpp/script_tests/VerifyScript_lows": 10,
+        "cpp/script_tests/VerifyScript_minimal_encoding": 10,
+        "cpp/script_tests/caching_invalid_signatures": 60,
+        "cpp/script_tests/chronicle_clean_stack": 28,
+        "cpp/script_tests/chronicle_forkid_chronicle_script_validation": 16,
+        "cpp/script_tests/chronicle_misc": 7,
+        "cpp/script_tests/chronicle_nullfail": 44,
+        "cpp/script_tests/chronicle_pushdata_only": 36,
+        "cpp/script_tests/chronicle_scriptsig_checksig": 12,
+        "cpp/script_tests/eval_script_op_checkmultisig_nulldummy": 16,
+        "cpp/script_tests/eval_script_op_checkmultisig_nullfail": 28,
+        "cpp/script_tests/eval_script_op_checksig_nullfail": 24,
+        "cpp/script_tests/eval_script_op_if_minimal_if": 64,
+        "cpp/script_tests/mt_2_plus_2": 8,
+        "cpp/script_tests/mt_p2pkh": 8,
+        "cpp/script_tests/op_pushdata1_op_size": 1,
+        "cpp/script_tests/op_pushdata2_op_size": 1,
+        "cpp/script_tests/op_pushdata4_op_size": 1,
+        "cpp/script_tests/script_CHECKMULTISIG12": 4,
+        "cpp/script_tests/script_CHECKMULTISIG23": 9,
+        "cpp/script_tests/script_FindAndDelete": 16,
+        "cpp/script_tests/script_IsPushOnly_on_invalid_scripts": 1,
+        "cpp/script_tests/script_IsUnspendable": 4,
+        "cpp/script_tests/script_PushData": 4,
+        "cpp/script_tests/script_Solver": 19,
+        "cpp/script_tests/script_standard_push": 135042,
+        "cpp/script_tests/solver_MultiSig_Decode_Check": 4,
+        "cpp/script_tests/txout_IsDust": 4,
+        "cpp/script_tests/txout_IsDustReturnScript": 6,
+        "cpp/script_tests/verify_script_minimal_if": 10,
+        "cpp/script_tests/verify_script_op_checksig_nulldummy": 16,
+        "cpp/script_tests/verify_script_op_checksig_nullfail": 12
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "scriptnum_tests.jsonl",
+      "source": "src/test/scriptnum_tests.cpp",
+      "source_sha256": "f5cfd668d4e7146459582091b977bfd53638e5052e101059ae7592ebbc72c775",
+      "license_header": [
+        "Copyright (c) 2012-2015 The Bitcoin Core developers",
+        "Distributed under the MIT software license, see the accompanying",
+        "file COPYING or http://www.opensource.org/licenses/mit-license.php."
+      ],
+      "count": 11017,
+      "sha256": "b42c202ab68494832d74f77d19e32a9236425365297221c6b95984398fbd93bc",
+      "sha256_of_file": "b42c202ab68494832d74f77d19e32a9236425365297221c6b95984398fbd93bc",
+      "sha256_keys_masked": "b42c202ab68494832d74f77d19e32a9236425365297221c6b95984398fbd93bc",
+      "verdicts": {
+        "predicate": 11017
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 11017
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/scriptnum_tests/add_max_length_invariant": 10,
+        "cpp/scriptnum_tests/addition": 16,
+        "cpp/scriptnum_tests/chronicle_construction": 4,
+        "cpp/scriptnum_tests/construction": 24,
+        "cpp/scriptnum_tests/creation": 630,
+        "cpp/scriptnum_tests/division": 18,
+        "cpp/scriptnum_tests/equality": 10,
+        "cpp/scriptnum_tests/less": 15,
+        "cpp/scriptnum_tests/lshift_max_length_invariant": 10,
+        "cpp/scriptnum_tests/lshift_negative_value": 31,
+        "cpp/scriptnum_tests/lshift_overflow_int64": 1,
+        "cpp/scriptnum_tests/minimize_encoding_test": 3121,
+        "cpp/scriptnum_tests/modular": 12,
+        "cpp/scriptnum_tests/mul_max_length_invariant": 10,
+        "cpp/scriptnum_tests/multiplication": 20,
+        "cpp/scriptnum_tests/negation": 8,
+        "cpp/scriptnum_tests/operators": 7020,
+        "cpp/scriptnum_tests/rshift_division_semantics": 36,
+        "cpp/scriptnum_tests/sub_max_length_invariant": 5,
+        "cpp/scriptnum_tests/subtraction": 16
+      }
+    },
+    {
+      "file": "sighash_tests.jsonl",
+      "source": "src/test/sighash_tests.cpp",
+      "source_sha256": "f2019cfadf0c7900ba12e747d9db7a10d10f7cfd3d96b317732d3e6e232719e8",
+      "license_header": [
+        "Copyright (c) 2013-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 1000,
+      "sha256": "126c9e8d2c5ec54381f847cd6078a9676fe2a4d91b327d3475d6764343db4bec",
+      "sha256_of_file": "126c9e8d2c5ec54381f847cd6078a9676fe2a4d91b327d3475d6764343db4bec",
+      "sha256_keys_masked": "126c9e8d2c5ec54381f847cd6078a9676fe2a4d91b327d3475d6764343db4bec",
+      "verdicts": {
+        "predicate": 1000
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 1000
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/sighash_tests/sighash_test": 1000
+      }
+    },
+    {
+      "file": "sighashtype_tests.jsonl",
+      "source": "src/test/sighashtype_tests.cpp",
+      "source_sha256": "d88e742c727ccba7eba3ef2163d4c945cc0ca11330e0aff4363721c94da6a8af",
+      "license_header": [
+        "Copyright (c) 2018 The Bitcoin developers",
+        "Distributed under the MIT software license, see the accompanying",
+        "file COPYING or http://www.opensource.org/licenses/mit-license.php."
+      ],
+      "count": 5121,
+      "sha256": "341325861023424b4a62d28dec70ac34bbfbf97f4a177a500db5976e14693317",
+      "sha256_of_file": "341325861023424b4a62d28dec70ac34bbfbf97f4a177a500db5976e14693317",
+      "sha256_keys_masked": "341325861023424b4a62d28dec70ac34bbfbf97f4a177a500db5976e14693317",
+      "verdicts": {
+        "predicate": 5121
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 5121
+      },
+      "drawn_at_run_time": 0,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/sighashtype_tests/sighash_construction_test": 2561,
+        "cpp/sighashtype_tests/sighash_serialization_test": 2560
+      }
+    },
+    {
+      "file": "sigopcount_tests.jsonl",
+      "source": "src/test/sigopcount_tests.cpp",
+      "source_sha256": "3b25870d22420af014719d054546576a08596acf623732c8c18c587af96eb2e2",
+      "license_header": [
+        "Copyright (c) 2012-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 61,
+      "sha256": "da0a3c85150506d722e9929c3373a5384c5fd0837120d045197ee21eb26fa59c",
+      "sha256_of_file": "da0a3c85150506d722e9929c3373a5384c5fd0837120d045197ee21eb26fa59c",
+      "sha256_keys_masked": "4d9b437ad9d465c23f2df9afb3b6f4ea6d9aedff62deb33fefd2defb503cac74",
+      "verdicts": {
+        "error": 6,
+        "predicate": 55
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 55,
+        "verifyscript": 6
+      },
+      "drawn_at_run_time": 22,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/sigopcount_tests/GetSigOpCount": 34,
+        "cpp/sigopcount_tests/GetSigOpCount_WithReturn": 5,
+        "cpp/sigopcount_tests/GetTxSigOpCost": 16,
+        "cpp/sigopcount_tests/test_max_sigops_per_tx": 6
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "test_txnvalidator.jsonl",
+      "source": "src/test/test_txnvalidator.cpp",
+      "source_sha256": "fe359b4746b4e3b29ee2f5e51bf931c129938d6dd5d126068aefee86e9b4c3db",
+      "license_header": [
+        "Copyright (c) 2019 The Bitcoin SV developers",
+        "Distributed under the MIT software license, see the accompanying",
+        "file COPYING or http://www.opensource.org/licenses/mit-license.php."
+      ],
+      "count": 36,
+      "sha256": "5db62018f2f349bb34bbeba1f0df37ce80788bc0e122167df8ac85f70dde83c4",
+      "sha256_of_file": "5db62018f2f349bb34bbeba1f0df37ce80788bc0e122167df8ac85f70dde83c4",
+      "sha256_keys_masked": "71de281e2e49b5f2fe4c50192aaaa088debb246bbc4badd971335ea4aee1a090",
+      "verdicts": {
+        "predicate": 36
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 36
+      },
+      "drawn_at_run_time": 36,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/test_txnvalidator/txnvalidator_doublespend_synch_api": 8,
+        "cpp/test_txnvalidator/txnvalidator_nvalueoutofrange_async_api": 20,
+        "cpp/test_txnvalidator/txnvalidator_nvalueoutofrange_sync_api": 8
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "transaction_tests.jsonl",
+      "source": "src/test/transaction_tests.cpp",
+      "source_sha256": "c346a9554da2afe2d7e2175709a3821cf25e94ca148ad2a94aa0492f2453f085",
+      "license_header": [
+        "Copyright (c) 2011-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file LICENSE."
+      ],
+      "count": 273,
+      "sha256": "4b71d02ea99ec94e079698cfe47a8349278fcd971e839248acd5c690ba9e8282",
+      "sha256_of_file": "4b71d02ea99ec94e079698cfe47a8349278fcd971e839248acd5c690ba9e8282",
+      "sha256_keys_masked": "02d4d563f8be5c54e5ef09bb65a8cc0d8dd366de5a5cfee2a7dde47d5721d247",
+      "verdicts": {
+        "error": 68,
+        "ok": 97,
+        "predicate": 106,
+        "unasserted": 2
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "evalscript": 2,
+        "predicate": 106,
+        "verifyscript": 165
+      },
+      "drawn_at_run_time": 234,
+      "covered_not_extracted": {
+        "tx_invalid": 68,
+        "tx_valid": 196
+      },
+      "families": {
+        "cpp/transaction_tests/basic_transaction_tests": 2,
+        "cpp/transaction_tests/test_Get": 1,
+        "cpp/transaction_tests/test_IsConsolidationTransactionNonStandard": 2,
+        "cpp/transaction_tests/test_IsConsolidationTransactionStandard": 6,
+        "cpp/transaction_tests/test_IsDustReturnTransaction": 5,
+        "cpp/transaction_tests/test_IsStandard": 11,
+        "cpp/transaction_tests/test_IsStandard_MaxTxSizePolicy": 4,
+        "cpp/transaction_tests/test_IsStandard_NonPushOnlyScriptSig_Chronicle": 5,
+        "cpp/transaction_tests/test_IsStandard_OP_FALSE_OP_RETURN": 15,
+        "cpp/transaction_tests/test_IsStandard_OP_RETURN": 15,
+        "cpp/transaction_tests/test_IsStandard_TxVersion_Chronicle": 10,
+        "cpp/transaction_tests/test_big_transaction": 2,
+        "cpp/transaction_tests/test_witness": 191,
+        "cpp/transaction_tests/tst_tx_toJson_OP_RETURN": 4
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    },
+    {
+      "file": "txvalidationcache_tests.jsonl.gz",
+      "source": "src/test/txvalidationcache_tests.cpp",
+      "source_sha256": "e5b9527c0a665ef2059ae9f296a40cd072e78a51b0425663d8c4089aaba1ebc9",
+      "license_header": [
+        "Copyright (c) 2011-2016 The Bitcoin Core developers",
+        "Copyright (c) 2019 Bitcoin Association",
+        "Distributed under the Open BSV software license, see the accompanying file",
+        "LICENSE."
+      ],
+      "count": 286727,
+      "sha256": "686bd8245f7c99b294fe5756587b94cf5a150fb5bcce7f0ac22fbc744d3bbe8c",
+      "sha256_of_file": "d4e75fdd156735bd43c50da9afac2c48b928afd92f399afea8697e8912c8a02a",
+      "sha256_keys_masked": "257c85288acc6ca9d4d7104b87b304a248203343127eb2d0d9161a0610378baa",
+      "verdicts": {
+        "predicate": 286727
+      },
+      "not_replayable": 0,
+      "tables_by_row": 0,
+      "kinds": {
+        "predicate": 286727
+      },
+      "drawn_at_run_time": 286727,
+      "covered_not_extracted": {},
+      "families": {
+        "cpp/txvalidationcache_tests/checkinputs_test": 286724,
+        "cpp/txvalidationcache_tests/tx_mempool_block_doublespend": 3
+      },
+      "kept": "the file on disk, an earlier run's key draw: this run drew other keys and reproduced its key-masked digest"
+    }
+  ]
+}

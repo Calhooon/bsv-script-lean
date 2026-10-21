@@ -1,0 +1,24 @@
+[export: 4 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: ccd6e41 (1 uncommitted paths at the start of the run, 1 at its end)
+started: 20260927-165244 UTC; wall: 111s (1 min 51 s)
+host: modal; load at start: 0.00, 0.00, 0.00; load at end: 0.00, 0.00, 0.00
+[withheld at export: a sibling tree's line]
+status: RED (exit 1)
+legs (the verdict lines, in order):
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  cite_check: GREEN (every anchored citation holds at the pin)
+  lean: a sorry is in the build log; main must be sorry-free
+[withheld at export: a sibling tree's line]
+  sample 16:52:44 UTC: load1 0.00; over 5% cpu: python 33% 0.1GB; bash 8% 0.0GB; bash 17% 0.0GB; python3 100% 0.0GB; bash 33% 0.0GB; other programs: 3 processes, 114% cpu; 
+  sample 16:52:54 UTC: load1 0.00; over 5% cpu: python 12% 0.1GB; cargo 21% 0.1GB; rustc 126% 0.5GB; rustc 104% 0.4GB; rustc 115% 0.4GB; rustc 96% 0.4GB; rustc 142% 0.5GB; rustc 99% 0.4GB; rustc 100% 0.4GB; rustc 193% 0.5GB; rustc 158% 0.6GB; cc 14% 0.0GB; other programs: 3 processes, 512% cpu; 
+  sample 16:53:04 UTC: load1 0.00; over 5% cpu: python 8% 0.1GB; git 573% 0.6GB; bash 33% 0.0GB; other programs: 2 processes, 133% cpu; 
+  sample 16:53:14 UTC: load1 0.00; over 5% cpu: python 6% 0.1GB; lake 23% 1.0GB; bash 33% 0.0GB; other programs: 2 processes, 100% cpu; 
+  sample 16:53:24 UTC: load1 0.00; over 5% cpu: lake 418% 1.2GB; bash 14% 0.0GB; other programs: 2 processes, 157% cpu; 
+  sample 16:53:35 UTC: load1 0.00; over 5% cpu: lake 672% 1.3GB; other programs: 2 processes, 133% cpu; 
+  sample 16:53:45 UTC: load1 0.00; over 5% cpu: lake 711% 1.4GB; lean 84% 0.8GB; other programs: 2 processes, 133% cpu; 
+  sample 16:53:55 UTC: load1 0.00; over 5% cpu: lake 585% 1.4GB; lean 76% 3.3GB; other programs: 2 processes, 100% cpu; 
+  sample 16:54:05 UTC: load1 0.00; over 5% cpu: lake 497% 1.4GB; lean 74% 5.9GB; other programs: 2 processes, 117% cpu; 
+  sample 16:54:15 UTC: load1 0.00; over 5% cpu: lake 432% 1.4GB; lean 77% 7.8GB; other programs: 2 processes, 100% cpu; 
+  sample 16:54:25 UTC: load1 0.00; over 5% cpu: lake 382% 1.4GB; lean 95% 1.7GB; bash 25% 0.0GB; other programs: 2 processes, 133% cpu; 

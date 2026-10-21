@@ -1,0 +1,288 @@
+{
+  "base_commit": "fc93e50160a878408acfd4978fde69f2bc1760ed",
+  "calls": 827,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 2,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 2,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 2,
+      "rpc-precheck": 0,
+      "unrealizable": 2
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 2,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 2,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [
+      {
+        "id": "chain-reorg-depth-3",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":3,\"final\":{\"coins\":[\"K\"],\"height\":105,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":104,\"outpoint\":\"T3\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":97000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"A3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T3\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":103,\"outpoint\":\"T2\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T2\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":105,\"outpoint\":\"B4:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":105}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-disconnected-now-nonfinal",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      }
+    ],
+    "finality": [],
+    "mempool": [
+      {
+        "id": "consolidation-fee-delta",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"c23a073a609d16dfaef35689b6c7d11fc8152271ef4a0c2bb73dc56317266050\"],\"judgment\":{\"status\":\"accepted\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 500): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "consolidation-disabled",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"judgment\":{\"code\":66,\"namespace\":\"node\",\"reason\":\"mempool min fee not met\",\"status\":\"rejected\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 500): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      }
+    ],
+    "oracle": [],
+    "utxo": [
+      {
+        "id": "availability/precedes-frozen",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "frozen/block",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-frozen\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      }
+    ]
+  },
+  "full_receipt": {
+    "bytes": 2389237,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-160907Z/receipt.json",
+    "sha256": "6886cb0172f1ad85617d9bb0ea4b3774b1be1bee4c1ce3d516b2f57d727ca954"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "713e5636ee72a927f8ec7f00e4396463f5c6d5f4a6a70b8c2165f86c22a1639d",
+      "height": 211
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261015-160907-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 1,
+    "ends": 1,
+    "events": 117,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "availability/precedes-frozen",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "frozen/block",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-reorg-depth-3",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-disconnected-now-nonfinal",
+        "verdict": "no-verdict"
+      }
+    ]
+  },
+  "rows_selected": [
+    "availability/precedes-frozen",
+    "chain-disconnected-now-nonfinal",
+    "chain-reorg-depth-3",
+    "consolidation-disabled",
+    "consolidation-fee-delta",
+    "frozen/block"
+  ],
+  "run_id": "cut2-66q4-20261015-160907",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-15T16:10:23Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 0,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 0,
+    "no-verdict": 4,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 180.065748166
+  }
+}

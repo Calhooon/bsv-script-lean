@@ -1,0 +1,11 @@
+{
+  "record": "docs/records/20261006-140418-r1-lengths.md",
+  "replacements": {
+    "harness/engines/instance41/runs/20261006-001608-corpora/gen/chunk-00000.manifest.json": {
+      "file": "corpus/instances/teranode/r1-lengths-2-gen.manifest.json",
+      "sha256": "62210de9e6a9994f271ce747c5cec0d70f529c4ab85cca1baf5f4d37eb0fdb19",
+      "superseded_sha256": "ba8137c5fe962baeddfaad90cdccd35dbc75c9ae9306f4893246653e7f1a2fee"
+    }
+  },
+  "schema": 1
+}

@@ -1,0 +1,1009 @@
+{
+ "adapter": "",
+ "branch": "lane/column-124",
+ "command": "make column IMPL=bsv-rs PIN=0.5.0",
+ "corpora": [
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "arith",
+   "equal": true,
+   "file": "corpus/arith/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 692,
+     "spec-mempool": 692
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 692,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 692,
+     "spec-mempool": 692
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 692,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "bytes",
+   "equal": true,
+   "file": "corpus/bytes/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 512,
+     "spec-mempool": 512
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 512,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 512,
+     "spec-mempool": 512
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 512,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-bn_op",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 75,
+     "spec-mempool": 170
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "5d34f5576b7dd62f09c39c9397be6a113d377d74baa4f35a9dd5271b2ce36eb5",
+    "classified_runs": {
+     "spec": 95
+    },
+    "entries": 170,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 75,
+     "spec-mempool": 170
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "5d34f5576b7dd62f09c39c9397be6a113d377d74baa4f35a9dd5271b2ce36eb5",
+    "classified_runs": {
+     "spec": 95
+    },
+    "entries": 170,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-lrshiftnum",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 13,
+     "spec-mempool": 32
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "a340d07a92c34e22d2928894e5502725c393e0bc271cc54a172f4004651dc2cd",
+    "classified_runs": {
+     "spec": 23
+    },
+    "entries": 36,
+    "undecided": 4,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 13,
+     "spec-mempool": 32
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "a340d07a92c34e22d2928894e5502725c393e0bc271cc54a172f4004651dc2cd",
+    "classified_runs": {
+     "spec": 23
+    },
+    "entries": 36,
+    "undecided": 4,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-multisig",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 24,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "d9620ffd552489d48e847d59b134c3c5e0cc6def3006e2e899117765bfb54c31",
+    "classified_runs": {
+     "spec": 6
+    },
+    "entries": 30,
+    "undecided": 30,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 24,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "d9620ffd552489d48e847d59b134c3c5e0cc6def3006e2e899117765bfb54c31",
+    "classified_runs": {
+     "spec": 6
+    },
+    "entries": 30,
+    "undecided": 30,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-opcode",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-opcode/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 67061,
+     "spec-mempool": 123
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "35e7c8b68b3d13a90528de31ea01ad29d6ba47344de2b021366cdbddff2698c1",
+    "classified_runs": {
+     "spec": 77263
+    },
+    "entries": 144324,
+    "undecided": 144201,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 67061,
+     "spec-mempool": 123
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "35e7c8b68b3d13a90528de31ea01ad29d6ba47344de2b021366cdbddff2698c1",
+    "classified_runs": {
+     "spec": 77263
+    },
+    "entries": 144324,
+    "undecided": 144201,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-script",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-script/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 357,
+     "spec-mempool": 134
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "186a46c2b9273f8941d496cb8734212d0431bd35b48f14d68ca0b61e31b8fe4d",
+    "classified_runs": {
+     "spec": 67634
+    },
+    "entries": 67991,
+    "undecided": 67857,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 357,
+     "spec-mempool": 134
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "186a46c2b9273f8941d496cb8734212d0431bd35b48f14d68ca0b61e31b8fe4d",
+    "classified_runs": {
+     "spec": 67634
+    },
+    "entries": 67991,
+    "undecided": 67857,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-script_P2SH",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 56,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "78be1fea439acef7bc3e22629df66167c7332c6e811bff48eadfacfbb524ec8c",
+    "classified_runs": {
+     "spec": 8
+    },
+    "entries": 64,
+    "undecided": 64,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 56,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "78be1fea439acef7bc3e22629df66167c7332c6e811bff48eadfacfbb524ec8c",
+    "classified_runs": {
+     "spec": 8
+    },
+    "entries": 64,
+    "undecided": 64,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-sigopcount",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 6,
+     "spec-mempool": 2
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 6,
+    "undecided": 4,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 6,
+     "spec-mempool": 2
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 6,
+    "undecided": 4,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-transaction",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 108,
+     "spec-mempool": 66
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "17c3f1b557e1a3fa1588820237a17a7a4e21f0b4840a086c2afb747737e0bb36",
+    "classified_runs": {
+     "spec": 59
+    },
+    "entries": 167,
+    "undecided": 101,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 108,
+     "spec-mempool": 66
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "17c3f1b557e1a3fa1588820237a17a7a4e21f0b4840a086c2afb747737e0bb36",
+    "classified_runs": {
+     "spec": 59
+    },
+    "entries": 167,
+    "undecided": 101,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=1,chronicle=1)",
+   "corpus": "cpp-txvalidationcache-t100-g1-c1",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1024,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1024,
+    "undecided": 1024,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1024,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1024,
+    "undecided": 1024,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=1,chronicle=102)",
+   "corpus": "cpp-txvalidationcache-t100-g1-c102",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 2048,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 2048,
+    "undecided": 2048,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 2048,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 2048,
+    "undecided": 2048,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=102,chronicle=102)",
+   "corpus": "cpp-txvalidationcache-t100-g102-c102",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 2049,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "776fc6537015918ee3289b0d638100a2315f5062808e1759425cd70d3572491b",
+    "classified_runs": {
+     "spec": 2048
+    },
+    "entries": 4097,
+    "undecided": 4097,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 2049,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "776fc6537015918ee3289b0d638100a2315f5062808e1759425cd70d3572491b",
+    "classified_runs": {
+     "spec": 2048
+    },
+    "entries": 4097,
+    "undecided": 4097,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=1,chronicle=1)",
+   "corpus": "cpp-txvalidationcache-t101-g1-c1",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 4096,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 4096,
+    "undecided": 4096,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 4096,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 4096,
+    "undecided": 4096,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=1,chronicle=103)",
+   "corpus": "cpp-txvalidationcache-t101-g1-c103",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 8192,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 8192,
+    "undecided": 8192,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 8192,
+     "spec-mempool": 0
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 8192,
+    "undecided": 8192,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=102,chronicle=1)",
+   "corpus": "cpp-txvalidationcache-t101-g102-c1",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "e35a1a872b5cbb03ea21e8e3b58d25ac677aa6d95def1ea305e412fe3fcae3d2",
+    "classified_runs": {
+     "spec": 2
+    },
+    "entries": 3,
+    "undecided": 3,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "e35a1a872b5cbb03ea21e8e3b58d25ac677aa6d95def1ea305e412fe3fcae3d2",
+    "classified_runs": {
+     "spec": 2
+    },
+    "entries": 3,
+    "undecided": 3,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-regtest(genesis=103,chronicle=103)",
+   "corpus": "cpp-txvalidationcache-t101-g103-c103",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 10240,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "fc2b6b63e89465bb1ac2c739c279b31107b7c3b763caa46336818217db3be3d4",
+    "classified_runs": {
+     "spec": 6144
+    },
+    "entries": 16384,
+    "undecided": 16384,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 10240,
+     "spec-mempool": 0
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "fc2b6b63e89465bb1ac2c739c279b31107b7c3b763caa46336818217db3be3d4",
+    "classified_runs": {
+     "spec": 6144
+    },
+    "entries": 16384,
+    "undecided": 16384,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "crypto",
+   "equal": true,
+   "file": "corpus/crypto/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 84,
+     "spec-mempool": 84
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 84,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 84,
+     "spec-mempool": 84
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 84,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "eras",
+   "equal": true,
+   "file": "corpus/eras/eras.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 32,
+     "spec-mempool": 32
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 74,
+    "undecided": 42,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 32,
+     "spec-mempool": 32
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 74,
+    "undecided": 42,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "flow",
+   "equal": true,
+   "file": "corpus/flow/flow.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1094,
+     "spec-mempool": 1094
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1094,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1094,
+     "spec-mempool": 1094
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1094,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "gen",
+   "equal": true,
+   "file": "corpus/gen/gen.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1152,
+     "spec-mempool": 1152
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1157,
+    "undecided": 5,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 1152,
+     "spec-mempool": 1152
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 1157,
+    "undecided": 5,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "million",
+   "equal": true,
+   "file": "corpus/million/witnesses.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 4,
+    "agree": {
+     "spec": 0,
+     "spec-mempool": 4
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "1059995ec8b31c989bff73a0539c391006bf3f13dc8225fa3e3f686897f55832",
+    "classified_runs": {
+     "spec": 4
+    },
+    "entries": 4,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "run": {
+    "aborts_as_witnesses": 4,
+    "agree": {
+     "spec": 0,
+     "spec-mempool": 4
+    },
+    "class_rows": 1,
+    "class_rows_sha256": "1059995ec8b31c989bff73a0539c391006bf3f13dc8225fa3e3f686897f55832",
+    "classified_runs": {
+     "spec": 4
+    },
+    "entries": 4,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 1
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "road",
+   "equal": true,
+   "file": "corpus/road/road.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 13512,
+     "spec-mempool": 13512
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 13512,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 13512,
+     "spec-mempool": 13512
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 13512,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "seed",
+   "equal": true,
+   "file": "corpus/seed/seed.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 10000,
+     "spec-mempool": 10000
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 10000,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 10000,
+     "spec-mempool": 10000
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 10000,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "stack",
+   "equal": true,
+   "file": "corpus/stack/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 262,
+     "spec-mempool": 262
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 262,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 262,
+     "spec-mempool": 262
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 262,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  },
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "tx",
+   "equal": true,
+   "file": "corpus/tx/tx.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 14,
+     "spec-mempool": 14
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 40,
+    "undecided": 26,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": 0,
+    "agree": {
+     "spec": 14,
+     "spec-mempool": 14
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 40,
+    "undecided": 26,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_diff: GREEN (every divergence explained by a rule with its citation)"
+  }
+ ],
+ "differing": [],
+ "ended": "2026-10-14T21:40:35Z",
+ "host": "box",
+ "load1_end": 9.03,
+ "load1_start": 6.87,
+ "mode": "dry run on the current pin",
+ "moved_rows": [],
+ "pin": {
+  "bsv-rs.checksum": "72a8372f5500535f1d192765d88e123fc41c363b423516157a8fc7e5ae9326f0",
+  "bsv-rs.commit": "d06ea0dd12afba8f1a5ced9daf7faa61ba97ea69",
+  "bsv-rs.crate": "0.5.0",
+  "bsv-rs.tag": "v0.5.0"
+ },
+ "red": [],
+ "scratch": "harness/target/column/20261014-213950-bsv-rs",
+ "sites_moved": [],
+ "skipped": [],
+ "started": "2026-10-14T21:39:50Z",
+ "tree": "750c52431928939b04d7b478700cdbd950e30ca3",
+ "uncommitted_paths_at_start": 0,
+ "verdict": "column: bsv-rs 0.5.0 (dry run on the current pin): 26 corpora, 276,063 entries; agree spec 122,704 (recorded 122,704); spec-mempool 27,885 (recorded 27,885); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 45 s: REPRODUCED",
+ "wall_s": 45
+}

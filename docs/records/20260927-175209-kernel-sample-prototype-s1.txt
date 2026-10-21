@@ -1,0 +1,100 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+The kernel-evaluated sample's prototype at Lean v4.33.0 on the Studio (S1, Lean A, set 4 sitting 3, 2026-09-27; filed at
+the lens's correction 4, docs/audit/2026-09-27-lens-S1-sitting3-by-S1.md: the END BLOCK's prototype figures had no record)
+
+WHAT: `lake env lean <file>` in ~/bsv/worktrees/spec-lean-a/lean (branch lean-a at 3c97fb9, Lean v4.33.0, its build of
+BsvScript complete, lean/.lake/packages the plan's shared v4.33 cache), under the plan's Lean lock, each run started only
+once the 1-minute load read under 20 (the script below). The Studio has no v4.34 stack (A20): the prototype checks the
+module's proofs at the toolchain before THE HOUR; the module was then built at v4.34.0 by the tripwire on Modal
+(docs/records/20260927-175334-make-check-modal.txt, 420143b).
+
+THE SCRIPT (scratch, outside every tree):
+  cd ~/bsv/worktrees/spec-lean-a/lean
+  while [ 1-minute load >= 20 ]; do sleep 10; done
+[withheld at export: a sibling tree's line]
+  /usr/bin/time -l lake env lean "$1" > "$1.out" 2>&1
+
+RUN 1 (17:44:49Z to 17:45:35Z): KS1.lean = the module as it stood then (the fuel copies, their equalities, the 25 vector
+definitions and the list) with four vector theorems only (vAdd, vPushOnlyV1, vMinimalV1Mempool, vNotifNested), with
+`set_option profiler true` and `profiler.threshold 300`.
+  lean_lock: S1 took slot1 (17:44:49Z)
+  start 17:44:49Z load 19.91 23.11 21.03 toolchain leanprover/lean4:v4.33.0
+         45.93 real         3.66 user         8.42 sys
+  exit 0 end 17:45:35Z
+  lean_lock: released slot1 (17:45:35Z)
+  	elaboration 144ms
+  	simp 238ms
+  	type checking 281ms
+  (lean's own output: no error and no warning; exit 0)
+
+RUN 2 (ended 17:52:09Z; real 61.89 s, so started about 17:51:07Z; the take and start lines were not kept, the command's
+output having been cut to its last 40 lines): KS2.lean = lean/BsvScript/Properties/KernelSample.lean exactly as committed
+at 420143b plus two lines before the namespace (`git show 420143b:lean/BsvScript/Properties/KernelSample.lean | diff -
+KS2.lean` prints only `> set_option profiler true` and `> set_option profiler.threshold 200`): the whole module, 25
+vectors and vectors_kernel. Lean's output, every line (profiler lines only; no error, no warning):
+  type checking took 501ms
+  simp took 213ms
+  simp took 355ms
+  type checking took 319ms
+  simp took 325ms
+  type checking took 213ms
+  simp took 210ms
+  type checking took 313ms
+  simp took 289ms
+  type checking took 278ms
+  simp took 211ms
+  type checking took 410ms
+  simp took 246ms
+  type checking took 369ms
+  type checking took 522ms
+  type checking took 503ms
+  type checking took 546ms
+  type checking took 597ms
+  type checking took 617ms
+  simp took 232ms
+  type checking took 543ms
+  type checking took 471ms
+  simp took 210ms
+  type checking took 289ms
+  simp took 270ms
+  type checking took 311ms
+  simp took 237ms
+  type checking took 350ms
+  type checking took 448ms
+  type checking took 489ms
+  type checking took 523ms
+  type checking took 477ms
+  type checking took 522ms
+  type checking took 479ms
+  type checking took 569ms
+  cumulative profiling times:
+  	attribute application 0.399ms
+  	compilation (IR) 3.53ms
+  	compilation (LCNF base) 89.5ms
+  	compilation (LCNF impure) 36.2ms
+  	compilation (LCNF mono) 37.9ms
+  	congr simp thm 30.4ms
+  	dsimp 29.5ms
+  	elaboration 550ms
+  	fix level params 2.01ms
+  	instantiate metavars 1.04ms
+  	interpretation 0.64ms
+  	let-to-have transformation 3.02ms
+  	linting 591ms
+  	module linting 0.000417ms
+  	overlappingInstancesLinter 24ms
+  	parsing 42.3ms
+  	process pre-definitions 80.4ms
+  	share common exprs 10.9ms
+  	simp 4.79s
+  	tactic execution 1.09s
+  	tacticAnalysis 61ms
+  	type checking 11.2s
+  	typeclass inference 229ms
+         61.89 real         5.57 user         9.43 sys
+            5739249664  maximum resident set size
+             137354888  peak memory footprint
+  exit 0 end 17:52:09Z; lean_lock: released slot1 (17:52:09Z)
+
+READ `[X]` from run 2's lines: 24 declarations above the 200 ms threshold in type checking, the slowest 0.617 s; the
+cumulative kernel type checking 11.2 s and simp 4.79 s over the file (the profiler's cumulative lines above).

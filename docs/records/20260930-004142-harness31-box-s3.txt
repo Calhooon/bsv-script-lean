@@ -1,0 +1,327 @@
+[export: 27 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+Model: Codex GPT-6.1-Sol. Own box, offline Rust tests and recorded seed command; no Lean build, full scanner, node RPC or paid application.
+Command: ssh box /bin/bash --noprofile --norc -s
+Script:
+set -euo pipefail
+export PATH="$HOME/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export CARGO_BUILD_JOBS=4 CARGO_NET_OFFLINE=true
+C=e39ba468c3c9bef42f6041509914767f81f34a79
+CL="$HOME/bsv/bsv-script-lean"
+W="$HOME/bsv/worktrees/spec-box-harness-c56"
+export CARGO_TARGET_DIR="$HOME/bsv/targets/spec-box-harness-c56"
+FREE=$(memory_pressure | tail -1)
+LOAD=$(sysctl -n vm.loadavg | awk '{print $2}')
+printf 'Gate free [M]: %s; one-minute load [M]: %s\n' "$FREE" "$LOAD"
+sysctl -n vm.swapusage
+sysctl -n hw.memsize
+uptime
+df -h /
+PCT=$(printf '%s' "$FREE" | sed -n 's/.*: *\([0-9]*\)%.*/\1/p')
+[ -n "$PCT" ] && [ "$PCT" -ge 50 ] && awk -v n="$LOAD" 'BEGIN{exit !(n<20)}' || { echo 'Gate CLOSED: no build started'; exit 2; }
+git -C "$CL" fetch -q origin s3-c56-harness
+if [ ! -d "$W" ]; then git -C "$CL" worktree add -q --detach "$W" "$C"; fi
+[ -z "$(git -C "$W" status --porcelain)" ] || { echo 'STOP: own box worktree dirty'; git -C "$W" status --short; exit 2; }
+git -C "$W" checkout -q --detach "$C"
+[ "$(git -C "$W" rev-parse HEAD)" = "$C" ] || exit 2
+printf 'Compiled source [LIT]: %s\n' "$C"
+cd "$W/harness"
+cargo test --release --locked --offline
+cd "$W"
+harness/run --impl bsv-rs --corpus seed --out "$CARGO_TARGET_DIR/run-seed"
+git -C "$W" diff --quiet "$C" -- corpus
+printf 'Corpus unchanged [X]; source [LIT] %s; scoped box leg GREEN\n' "$C"
+cat "$CARGO_TARGET_DIR/run-seed/seed.log"
+
+Transcript:
+Gate free [M]: System-wide memory free percentage: 89%; one-minute load [M]: 5.63
+total = 2048.00M  used = 1014.88M  free = 1033.12M  (encrypted)
+38654705664
+20:41  up 5 days,  5:16, 3 users, load averages: 5.63 5.89 5.07
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    13Gi    61Gi    18%    484k  643M    0%   /
+Compiled source [LIT]: e39ba468c3c9bef42f6041509914767f81f34a79
+   Compiling libc v0.2.189
+   Compiling zeroize v1.9.0
+   Compiling version_check v0.9.5
+   Compiling cfg-if v1.0.5
+   Compiling typenum v1.20.1
+   Compiling subtle v2.6.1
+   Compiling generic-array v0.14.7
+   Compiling const-oid v0.9.6
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.26
+   Compiling getrandom v0.2.17
+   Compiling base64ct v1.8.3
+   Compiling block-buffer v0.10.4
+   Compiling rand_core v0.6.4
+   Compiling cpufeatures v0.2.17
+   Compiling pem-rfc7468 v0.7.0
+   Compiling crypto-common v0.1.7
+   Compiling ff v0.13.1
+   Compiling digest v0.10.7
+   Compiling der v0.7.10
+   Compiling block-padding v0.3.3
+   Compiling syn v3.0.6
+   Compiling base16ct v0.2.0
+   Compiling inout v0.1.4
+   Compiling hmac v0.12.1
+   Compiling group v0.13.0
+   Compiling crypto-bigint v0.5.5
+   Compiling zerocopy v0.8.57
+   Compiling spki v0.7.3
+   Compiling pkcs8 v0.10.2
+   Compiling sec1 v0.7.3
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling elliptic-curve v0.13.8
+   Compiling cipher v0.4.4
+   Compiling futures-sink v0.3.34
+   Compiling memchr v2.8.3
+   Compiling serde_core v1.0.229
+   Compiling futures-core v0.3.34
+   Compiling futures-channel v0.3.34
+   Compiling futures-macro v0.3.34
+   Compiling rfc6979 v0.4.0
+   Compiling signature v2.2.0
+   Compiling universal-hash v0.5.1
+   Compiling opaque-debug v0.3.1
+   Compiling slab v0.4.12
+   Compiling futures-task v0.3.34
+   Compiling futures-io v0.3.34
+   Compiling zmij v1.0.23
+   Compiling pin-project-lite v0.2.17
+   Compiling polyval v0.6.2
+   Compiling futures-util v0.3.34
+   Compiling ecdsa v0.16.9
+   Compiling syn v2.0.119
+   Compiling ppv-lite86 v0.2.21
+   Compiling sha2 v0.10.9
+   Compiling thiserror v1.0.69
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling thiserror-impl v1.0.69
+   Compiling futures-executor v0.3.34
+   Compiling rand_chacha v0.3.1
+   Compiling num-integer v0.1.47
+   Compiling ghash v0.5.1
+   Compiling aes v0.8.4
+   Compiling ctr v0.9.2
+   Compiling primeorder v0.13.6
+   Compiling serde_derive v1.0.229
+   Compiling aead v0.5.2
+   Compiling itoa v1.0.18
+   Compiling once_cell v1.21.4
+   Compiling k256 v0.13.4
+   Compiling aes-gcm v0.10.3
+   Compiling p256 v0.13.2
+   Compiling num-bigint v0.4.8
+   Compiling rand v0.8.8
+   Compiling futures v0.3.34
+   Compiling cbc v0.1.2
+   Compiling async-trait v0.1.92
+   Compiling pbkdf2 v0.12.2
+   Compiling ripemd v0.1.3
+   Compiling sha1 v0.10.7
+   Compiling lazy_static v1.5.0
+   Compiling bs58 v0.5.1
+   Compiling base64 v0.22.1
+   Compiling urlencoding v2.1.3
+   Compiling hex v0.4.3
+   Compiling bsv-rs v0.3.30
+[withheld at export: a sibling tree's line]
+warning: field `unlock` is never read
+  --> src/bin/crypto_cases.rs:51:5
+   |
+47 | struct Case {
+   |        ---- field in this struct
+...
+51 |     unlock: Vec<u8>,
+   |     ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `bsv-script-harness` (bin "crypto_cases" test) generated 1 warning
+warning: `bsv-script-harness` (bin "crypto_cases") generated 1 warning (1 duplicate)
+    Finished `release` profile [optimized + debuginfo] target(s) in 18.79s
+[withheld at export: a sibling tree's line]
+
+running 16 tests
+test block::tests::a_coinbase_script_is_between_two_and_a_hundred_bytes ... ok
+test gosdk_codes::tests::the_message_rows_narrow_before_the_bare_rows ... ok
+test gen::tests::rng_is_reproducible ... ok
+test gen::tests::enc_num_vectors ... ok
+test block::tests::regtest_target_and_a_ground_header ... ok
+test block::tests::merkle_of_one_and_two ... ok
+test bsvrs_codes::tests::every_seed_message_shape_has_a_row ... ok
+test engine::tests::the_words_are_the_reference_numbers ... ok
+test svnode_codes::tests::the_descriptions_are_exact ... ok
+test pin_tests::cargo_lock_pins_the_recorded_bsv_rs_version ... ok
+test tssdk_codes::tests::the_seed_message_shapes_have_rows ... ok
+test rules::tests::spec_consensus_tells_a_policy_refusal_and_never_holds_unsupplied ... ok
+test txraw::tests::unparseable_scripts_still_frame ... ok
+test txraw::tests::round_trip ... ok
+test rules::tests::a_stop_row_explains_nothing_and_a_missing_class_is_refused ... ok
+test rules::tests::the_three_tables_load_and_every_named_class_exists ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 2 tests
+test tests::an_abort_on_a_decided_entry_is_a_witness ... ok
+test tests::the_spec_column_honours_the_entry ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 3 tests
+test block_and_standard_words_carry_both_utxo_markers_from_the_block_era ... ok
+test the_script_number_length_limit_is_the_reference_number_of_the_coin_era_and_the_path ... ok
+test protocol_era_is_none_below_genesis_and_named_above ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[withheld at export: a sibling tree's line]
+
+running 4 tests
+test recorded_words_require_coverage_and_do_not_call_the_live_evaluator ... ok
+test exported_columns_retain_ids_stamps_codes_and_input_indexes ... ok
+test incomplete_or_ambiguous_records_never_write_partial_output ... ok
+test corpus_checksum_is_checked_on_raw_bytes_before_parsing ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+   Doc-tests bsv_script_harness
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+harness/run: building --bin run_diff --bin spec_recorded (cargo build --release --locked)
+GREEN seed: (every divergence explained by a rule with its citation)
+[withheld at export: a sibling tree's line]
+Corpus unchanged [X]; source [LIT] e39ba468c3c9bef42f6041509914767f81f34a79; scoped box leg GREEN
+[withheld at export: a sibling tree's line]
+run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.30 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@8fde74b (sv-mainnet-default); 0.1s
+  agree: spec-mempool 10000 (like-for-like, the standard word), spec 10000 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+| column | rule | entries | ruling | witness | decided by |
+|---|---|---|---|---|---|
+[withheld at export: a sibling tree's line]
+run_diff: GREEN (every divergence explained by a rule with its citation)
+Exit [X] 0

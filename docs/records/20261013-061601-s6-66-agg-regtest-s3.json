@@ -1,0 +1,2158 @@
+{
+  "label": "[M]",
+  "record": "docs/records/20261013-061601-s6-66-agg-regtest-s3.md",
+  "base": "aaa70e8b784737cdb6676a3946438e5b242af9ca",
+  "pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "family_heads": {
+    "blk": "4cf8572f0e1091e3419b2f0cb12eec74909c485d",
+    "utx": "0ae2b8960c7c7b73f9c069f1e7a61e6746d4d30e",
+    "chn": "8d78a54f6d46201779d55ead3f5d5bd64d15d9cf",
+    "fin": "df53b0189005de2067b3968ec20b2032b7b003f5",
+    "mem": "956661e3f4f100dfbc5c4a17237c71051687db5b"
+  },
+  "counts": {
+    "block": {
+      "rows": 95,
+      "realized": 47,
+      "agree": 47,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 46,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "utxo": {
+      "rows": 80,
+      "realized": 48,
+      "agree": 48,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 30,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "chain": {
+      "rows": 44,
+      "realized": 22,
+      "agree": 22,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 2,
+      "needs-peer": 5,
+      "pending": 15
+    },
+    "finality": {
+      "rows": 114,
+      "realized": 75,
+      "agree": 75,
+      "diverge": 0,
+      "rpc-precheck": 1,
+      "unrealizable": 38,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "mempool": {
+      "rows": 109,
+      "realized": 59,
+      "agree": 59,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 31,
+      "needs-peer": 15,
+      "pending": 2
+    },
+    "oracle": {
+      "rows": 30,
+      "realized": 30,
+      "agree": 30,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "2026-10-12-bumpless-beef-stored-proof": {
+      "rows": 10,
+      "realized": 10,
+      "agree": 10,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "2026-10-12-mempool-presence-terminal": {
+      "rows": 10,
+      "realized": 10,
+      "agree": 10,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "intake": {
+      "rows": 20,
+      "realized": 20,
+      "agree": 20,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "five-family total": {
+      "rows": 442,
+      "realized": 251,
+      "agree": 251,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 147,
+      "needs-peer": 20,
+      "pending": 17
+    },
+    "chain/oracle total": {
+      "rows": 472,
+      "realized": 281,
+      "agree": 281,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 147,
+      "needs-peer": 20,
+      "pending": 17
+    },
+    "round total": {
+      "rows": 492,
+      "realized": 301,
+      "agree": 301,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 147,
+      "needs-peer": 20,
+      "pending": 17
+    }
+  },
+  "source_records": [
+    {
+      "path": "docs/records/20261013-024612-s6-66-regtest-s3.md",
+      "sha256": "5716e01dfef4fc6706fbd2f591e42551053ce5c38fcb82967b9cc4bccf5c2753",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json",
+      "receipt_sha256": "7c228b871acc11c4ed83cf3762a0d71179ff5766e492b4332d8a921b82c4a5ce"
+    },
+    {
+      "path": "docs/records/20261013-032121-s6-66b-regtest-s3.md",
+      "sha256": "e172ad143aeca9e9d7ab403e358c93dc17c5914f4a4c66cc7429b0cd215de301",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json",
+      "receipt_sha256": "0ef4e499a6a65ba3140f73b5b83b7dbbe56724e2e7fb70ffb60df009a7415188"
+    },
+    {
+      "path": "docs/records/20261013-041541-s6-66c-regtest-s3.md",
+      "sha256": "8b29e4bf8809834477637305e94800bb0d0e5b27ea0d3a30b4efc91a93239927",
+      "receipt": "docs/records/20261013-041541-s6-66c-regtest-s3.json",
+      "receipt_sha256": "b31600098010ab746e2b9b91e4d3c70be82a1b44d94fe259fb3c9cbd78534b48"
+    },
+    {
+      "path": "docs/records/20261013-045648-s6-66-utx-regtest-s3.md",
+      "sha256": "f3b6966092e68d4a76716722feb531ace4b867fcdf8eef22b7672b718e3157a2",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+      "receipt_sha256": "d707bad8d8790eb9e0ec6554fbf21fc73cafded10c5c6e6ca5322d7c2b112b78"
+    },
+    {
+      "path": "docs/records/20261013-045710-s6-66-fin-regtest-s3.md",
+      "sha256": "51d13bc7675c09978f1df2ac870618f7786e68db3718262c1471205f0a7da54c",
+      "receipt": "docs/records/20261013-045710-s6-66-fin-regtest-s3.json",
+      "receipt_sha256": "d82a08b057cff43fc0ee6fb26b06f251660c255c24ce4458e7e0a0a8b7cb43de"
+    },
+    {
+      "path": "docs/records/20261013-045714-s6-66-blk-regtest-s3.md",
+      "sha256": "7130b44ca759fc7cc7395d9dd3cb120fd700fc72159758f0cc3544726613f628",
+      "receipt": "docs/records/20261013-045714-s6-66-blk-regtest-s3.json",
+      "receipt_sha256": "52d8e93143f99f6a996390c37dc79c2c23bc4469d98e6a608d9b52095e6bd3a0"
+    },
+    {
+      "path": "docs/records/20261013-045854-s6-66-mem-regtest-s3.md",
+      "sha256": "89e31685996bc3f1c1d32f5bb8967878fd0b12510edbf7a60028b9bf20c10021",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json",
+      "receipt_sha256": "e18219500f65e0220b9a46e6782633aede8fda0a8168d64c9606c40331b6c32d"
+    },
+    {
+      "path": "docs/records/20261013-045905-s6-66-chn-regtest-s3.md",
+      "sha256": "c5ed73ac4a7526942a11ee8a947a39a0d1e98d1c7931fa0c2548ce496ed0f62f",
+      "receipt": "docs/records/20261013-045905-s6-66-chn-regtest-s3.json",
+      "receipt_sha256": "24f57db83cec67ef611f24a191ebfc241ae3fdf4a2adc24719e3cd24f22cb125"
+    },
+    {
+      "path": "docs/records/20261013-061734-s6-66-chn2-regtest-s3.md",
+      "sha256": "96b5d9803aeb44e23ad88103ae58d88cfe9deb72f9d4b012d974e336f0878a97",
+      "receipt": "docs/records/20261013-061734-s6-66-chn2-regtest-s3.json",
+      "receipt_sha256": "ff520fba8f0286d0c35848ae0551c4cbffb99d15a0f6374a29ecadc6359a03fa"
+    },
+    {
+      "path": "docs/records/20261013-061948-s6-66-mem2-regtest-s3.md",
+      "sha256": "978d87ed2ad2608af7c5ceb0dd03de11bf4c88e19d33c438898de524611fb130",
+      "receipt": "docs/records/20261013-061948-s6-66-mem2-regtest-s3.json",
+      "receipt_sha256": "f4ea1fd5ca49791e0d462124174d4bf4ce69dc68d82d57841adcd9668e9f7a63"
+    },
+    {
+      "path": "docs/records/20261013-074933-s6-66-chn3-regtest-s3.md",
+      "sha256": "08de75cfd342dea66bc5ba3958028c0f6c0c62e21f4b8f8d5227da14d96c0299",
+      "receipt": "docs/records/20261013-074933-s6-66-chn3-regtest-s3.json",
+      "receipt_sha256": "2a076309582bcd4d1f3290f6bbcbfd4a2f48681a13156e20c13a6c767cb255f4"
+    },
+    {
+      "path": "docs/records/20261013-075032-s6-66-mem3-regtest-s3.md",
+      "sha256": "eec6858dceb287e1ca038bb211a255a3317fc26fad1a57590a4cbbf4c12bd5d8",
+      "receipt": "docs/records/20261013-075032-s6-66-mem3-regtest-s3.json",
+      "receipt_sha256": "3ffae572ee4020177b457d023482dfb0890bfd75194d00bc7042443d2ec23ff5"
+    }
+  ],
+  "hashes": {
+    "corpus/chain/block/block.jsonl": "2c51d4b91f48808f60180e75d1097b455bc1a170cfe4fb18116f5c4ca8fcd025",
+    "corpus/chain/utxo/utxo.jsonl": "a85b28306d7b6f4b77beb2261ff49db5e05d29ab2a5de20c088b8725efe90608",
+    "corpus/chain/chain/chain.jsonl": "c43cc9c6fc47f7a81cf1c1445bc49cba1c0d98709e70953328dd8e6d5c665926",
+    "corpus/chain/finality/finality.jsonl": "34c799fee63b15a22481157fdd8a65dc4664197aa531875875225781ece7830e",
+    "corpus/chain/mempool/mempool.jsonl": "4ff2b5cd6c7fac580509758c7e817a919c52b4d6b822abb90ccfe9a1df09ec8d",
+    "corpus/chain/oracle/oracle.jsonl": "09433386513fd31b76fe0d5a4cfe30c7c0bd3df2b8e3951cbe96d23421bbb210",
+    "corpus/scenarios/2026-10-12-bumpless-beef-stored-proof.md": "95bc81c75932a45792a63330650a8070471929ab1d7a0f4e6668367f6382a188",
+    "corpus/scenarios/2026-10-12-mempool-presence-terminal.md": "84ab7ab3cbe113989fc0c5156b36664bed048cc74c618177b23d9fe630cbabf4",
+    "corpus/scenarios/witnesses/s6-66-block-block-empty.md": "f0b08d37cef21e5254a6022768aa81874b09a9288b48f6a368928e5510a9970f",
+    "corpus/scenarios/witnesses/s6-66-block-block-missing-coinbase.md": "ee8ee74b222f204937f03978040aa8c8672e53edb117d04643485cf748145028",
+    "corpus/scenarios/witnesses/s6-66-fin-mempool-capacity-1.md": "089920a5032a4b0f0975035329f7ec2ea61c7452e6df399babbf7c07f76cdf1a",
+    "corpus/scenarios/witnesses/s6-66-intake-launch-profile.md": "f3c309044f0bcedf96f921d6f862ef170085f8728f177ad1c308718d02585082",
+    "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-above.md": "9d020b480403f4a6fa1f37617a68b0c9e8a308ee0b50ee15e57c000cf1c3e2b1",
+    "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-default-rpc.md": "9d09cde8ea3f98049723e694525b5cee215407cbbcd2db94acb3763f5f6373e9",
+    "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-equality.md": "b35e53161ca2bb8363f73bb01ea5107a5f54ca22c508356f61523684ec159a64",
+    "corpus/scenarios/witnesses/s6-66-utx-scripts-false.md": "bafbdf5662e46a4138888e99b12b68880187d8ca2d60abf71c961f9ac561aa72",
+    "corpus/scenarios/witnesses/s6-66-utx-scripts-number-unequal.md": "d35e908fca9ec82b148ed1741aca531bc3f33d8c4ba9f28f0fa887eb4d092d76",
+    "corpus/scenarios/witnesses/s6-66b-maintenance-trigger.md": "c929bad6eb9075fe1a91bacebf1c543d1df4cd21392ae1b3c25c781e8760a37f",
+    "corpus/scenarios/witnesses/s6-66b-one-transaction-proof.md": "8d6725db2eebf9404385f9c6ef8d1594ff1d437a480a10ba77a18f0eb9c8a30e",
+    "docs/records/20261013-024612-s6-66-regtest-s3.json": "7c228b871acc11c4ed83cf3762a0d71179ff5766e492b4332d8a921b82c4a5ce",
+    "docs/records/20261013-024612-s6-66-regtest-s3.md": "5716e01dfef4fc6706fbd2f591e42551053ce5c38fcb82967b9cc4bccf5c2753",
+    "docs/records/20261013-032121-s6-66b-regtest-s3.json": "0ef4e499a6a65ba3140f73b5b83b7dbbe56724e2e7fb70ffb60df009a7415188",
+    "docs/records/20261013-032121-s6-66b-regtest-s3.md": "e172ad143aeca9e9d7ab403e358c93dc17c5914f4a4c66cc7429b0cd215de301",
+    "docs/records/20261013-041541-s6-66c-regtest-s3.json": "b31600098010ab746e2b9b91e4d3c70be82a1b44d94fe259fb3c9cbd78534b48",
+    "docs/records/20261013-041541-s6-66c-regtest-s3.md": "8b29e4bf8809834477637305e94800bb0d0e5b27ea0d3a30b4efc91a93239927",
+    "docs/records/20261013-045648-s6-66-utx-regtest-s3.json": "d707bad8d8790eb9e0ec6554fbf21fc73cafded10c5c6e6ca5322d7c2b112b78",
+    "docs/records/20261013-045648-s6-66-utx-regtest-s3.md": "f3b6966092e68d4a76716722feb531ace4b867fcdf8eef22b7672b718e3157a2",
+    "docs/records/20261013-045710-s6-66-fin-regtest-s3.json": "d82a08b057cff43fc0ee6fb26b06f251660c255c24ce4458e7e0a0a8b7cb43de",
+    "docs/records/20261013-045710-s6-66-fin-regtest-s3.md": "51d13bc7675c09978f1df2ac870618f7786e68db3718262c1471205f0a7da54c",
+    "docs/records/20261013-045714-s6-66-blk-regtest-s3.json": "52d8e93143f99f6a996390c37dc79c2c23bc4469d98e6a608d9b52095e6bd3a0",
+    "docs/records/20261013-045714-s6-66-blk-regtest-s3.md": "7130b44ca759fc7cc7395d9dd3cb120fd700fc72159758f0cc3544726613f628",
+    "docs/records/20261013-045854-s6-66-mem-regtest-s3.json": "e18219500f65e0220b9a46e6782633aede8fda0a8168d64c9606c40331b6c32d",
+    "docs/records/20261013-045854-s6-66-mem-regtest-s3.md": "89e31685996bc3f1c1d32f5bb8967878fd0b12510edbf7a60028b9bf20c10021",
+    "docs/records/20261013-045905-s6-66-chn-regtest-s3.json": "24f57db83cec67ef611f24a191ebfc241ae3fdf4a2adc24719e3cd24f22cb125",
+    "docs/records/20261013-045905-s6-66-chn-regtest-s3.md": "c5ed73ac4a7526942a11ee8a947a39a0d1e98d1c7931fa0c2548ce496ed0f62f",
+    "docs/records/20261013-061734-s6-66-chn2-regtest-s3.json": "ff520fba8f0286d0c35848ae0551c4cbffb99d15a0f6374a29ecadc6359a03fa",
+    "docs/records/20261013-061734-s6-66-chn2-regtest-s3.md": "96b5d9803aeb44e23ad88103ae58d88cfe9deb72f9d4b012d974e336f0878a97",
+    "docs/records/20261013-061948-s6-66-mem2-regtest-s3.json": "f4ea1fd5ca49791e0d462124174d4bf4ce69dc68d82d57841adcd9668e9f7a63",
+    "docs/records/20261013-061948-s6-66-mem2-regtest-s3.md": "978d87ed2ad2608af7c5ceb0dd03de11bf4c88e19d33c438898de524611fb130",
+    "docs/records/20261013-074933-s6-66-chn3-regtest-s3.json": "2a076309582bcd4d1f3290f6bbcbfd4a2f48681a13156e20c13a6c767cb255f4",
+    "docs/records/20261013-074933-s6-66-chn3-regtest-s3.md": "08de75cfd342dea66bc5ba3958028c0f6c0c62e21f4b8f8d5227da14d96c0299",
+    "docs/records/20261013-075032-s6-66-mem3-regtest-s3.json": "3ffae572ee4020177b457d023482dfb0890bfd75194d00bc7042443d2ec23ff5",
+    "docs/records/20261013-075032-s6-66-mem3-regtest-s3.md": "eec6858dceb287e1ca038bb211a255a3317fc26fad1a57590a4cbbf4c12bd5d8"
+  },
+  "scenarios": [
+    {
+      "path": "corpus/scenarios/2026-10-12-bumpless-beef-stored-proof.md",
+      "id": "2026-10-12-bumpless-beef-stored-proof",
+      "steps": [
+        {
+          "id": "b1",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "b2",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "b3",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "b4",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "b5",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "b6",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "q1",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "q2",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "q3",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "q4",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        }
+      ],
+      "sha256": "95bc81c75932a45792a63330650a8070471929ab1d7a0f4e6668367f6382a188"
+    },
+    {
+      "path": "corpus/scenarios/2026-10-12-mempool-presence-terminal.md",
+      "id": "2026-10-12-mempool-presence-terminal",
+      "steps": [
+        {
+          "id": "p1",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "p2",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "p3",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "p4",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "e1",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "e2",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "r1",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "r2",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "r3",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        },
+        {
+          "id": "r4",
+          "node": "measured agree [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+        }
+      ],
+      "sha256": "84ab7ab3cbe113989fc0c5156b36664bed048cc74c618177b23d9fe630cbabf4"
+    }
+  ],
+  "witnesses": [
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-block-block-empty.md",
+      "row": "block/empty",
+      "classification": "observation limit (RPC pre-check)",
+      "sha256": "f0b08d37cef21e5254a6022768aa81874b09a9288b48f6a368928e5510a9970f",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-block-block-missing-coinbase.md",
+      "row": "block/missing-coinbase",
+      "classification": "observation limit (RPC pre-check)",
+      "sha256": "ee8ee74b222f204937f03978040aa8c8672e53edb117d04643485cf748145028",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-fin-mempool-capacity-1.md",
+      "row": "mempool/capacity-1",
+      "classification": "scope limit",
+      "sha256": "089920a5032a4b0f0975035329f7ec2ea61c7452e6df399babbf7c07f76cdf1a",
+      "receipt": "docs/records/20261013-045710-s6-66-fin-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-intake-launch-profile.md",
+      "row": "intake-launch-profile",
+      "classification": "spec-wrong",
+      "sha256": "f3c309044f0bcedf96f921d6f862ef170085f8728f177ad1c308718d02585082",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-above.md",
+      "row": "absurd-fee-above",
+      "classification": "observation-limit",
+      "sha256": "9d020b480403f4a6fa1f37617a68b0c9e8a308ee0b50ee15e57c000cf1c3e2b1",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-default-rpc.md",
+      "row": "absurd-fee-default-rpc",
+      "classification": "observation-limit",
+      "sha256": "9d09cde8ea3f98049723e694525b5cee215407cbbcd2db94acb3763f5f6373e9",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-equality.md",
+      "row": "absurd-fee-equality",
+      "classification": "observation-limit",
+      "sha256": "b35e53161ca2bb8363f73bb01ea5107a5f54ca22c508356f61523684ec159a64",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-utx-scripts-false.md",
+      "row": "scripts/false",
+      "classification": "observation limit (reason detail)",
+      "sha256": "bafbdf5662e46a4138888e99b12b68880187d8ca2d60abf71c961f9ac561aa72",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-utx-scripts-number-unequal.md",
+      "row": "scripts/number-unequal",
+      "classification": "observation limit (reason detail)",
+      "sha256": "d35e908fca9ec82b148ed1741aca531bc3f33d8c4ba9f28f0fa887eb4d092d76",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66b-maintenance-trigger.md",
+      "row": "maintenance-trigger",
+      "classification": "spec-wrong",
+      "sha256": "c929bad6eb9075fe1a91bacebf1c543d1df4cd21392ae1b3c25c781e8760a37f",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66b-one-transaction-proof.md",
+      "row": "one-transaction-proof",
+      "classification": "spec-wrong",
+      "sha256": "8d6725db2eebf9404385f9c6ef8d1594ff1d437a480a10ba77a18f0eb9c8a30e",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json"
+    }
+  ],
+  "r7_fixture": {
+    "id": "s6-66-agg-r7-capacity-1",
+    "label": "[D]",
+    "node": "pending #66",
+    "source": "[SRC] src/time_locked_mempool.cpp:447-474 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+    "action": "accept",
+    "tx": "0200000001a189b35084531a7deb71cce5d801d057907d03116d26e779b8dc0e2525c0eab50000000000000000000128230000000000000151c9000000",
+    "cfg": {
+      "maxMempoolNonFinal": 1
+    },
+    "context": {
+      "tipHeight": 200,
+      "median": 1700000000,
+      "now": 1700000100,
+      "genesisHeight": 200,
+      "chronicleHeight": 210
+    },
+    "utxo": [
+      {
+        "hash": "a189b35084531a7deb71cce5d801d057907d03116d26e779b8dc0e2525c0eab5",
+        "index": 0,
+        "value": 10000,
+        "script": "51",
+        "height": 102
+      }
+    ],
+    "expected": {
+      "status": "rejected",
+      "code": 259,
+      "reason": "non-final-pool-full",
+      "stage": "commit",
+      "held": [],
+      "accepted": []
+    },
+    "expected_label": "[D]"
+  },
+  "source_reads": {
+    "src/validation.cpp": {
+      "time": "2026-10-13T06:16:01.259656+00:00",
+      "ranges": [
+        {
+          "start": 1119,
+          "end": 1123,
+          "text": "            isFinal = false;\n\n            // No point doing further validation on non-final txn if we not going to be able to store it\n            if(mempool.getNonFinalPool().getMaxMemory() == 0) {\n                state.DoS(0, false, REJECT_MEMPOOL_FULL, \"non-final-pool-full\");"
+        },
+        {
+          "start": 3690,
+          "end": 3715,
+          "text": "            for(const auto& check : failedChecks)\n            {\n                auto it = std::find_if(block_.vtx.begin(), block_.vtx.end(),\n                                [&check](const CTransactionRef& tx)\n                                {\n                                    return tx.get() == check.GetTransaction();\n                                });\n                if (it == block_.vtx.end())\n                {\n                    continue;\n                }\n\n                CValidationState state;\n                state.Invalid( false,\n                               REJECT_INVALID,\n                               strprintf(\"blk-bad-inputs (%s)\",\n                                         ScriptErrorString(check.GetScriptError())));\n                if(g_connman)\n                {\n                    g_connman->getInvalidTxnPublisher().Publish( { *it, pindex_, state } );\n                }\n            }\n\n            return state_.DoS(100, false, REJECT_INVALID, \"blk-bad-inputs\",\n                             \"parallel script check failed\");\n        }"
+        }
+      ]
+    },
+    "src/time_locked_mempool.cpp": {
+      "time": "2026-10-13T06:16:01.272225+00:00",
+      "ranges": [
+        {
+          "start": 447,
+          "end": 474,
+          "text": "// Insert a new transaction\nvoid CTimeLockedMempool::insertNL(NonFinalTxn&& nonfinaltxn, CValidationState& state)\n{\n    CTransactionRef txn { nonfinaltxn.GetTx() };\n\n    // Put new txn in the main index\n    auto& index { mTransactionMap.get<TagTxID>() };\n    index.emplace(std::move(nonfinaltxn));\n\n    // Record UTXOs locked by this transaction\n    for(const CTxIn& input : txn->vin)\n    {\n        mUTXOMap[input.prevout] = txn;\n    }\n\n    // Track memory used by this txn\n    mTxnMemoryUsage += txn->GetTotalSize();\n\n    // Check we haven't exceeded max memory\n    size_t memUsage { estimateMemoryUsageNL() };\n    if(memUsage > mMaxMemory)\n    {\n        LogPrint(BCLog::MEMPOOL, \"Dropping non-final tx %s because mempool is full\\n\",\n            txn->GetId().ToString());\n        state.Invalid(false, REJECT_MEMPOOL_FULL, \"non-final-pool-full\");\n        removeNL(txn);\n    }\n    else"
+        }
+      ]
+    },
+    "src/primitives/transaction.h": {
+      "time": "2026-10-13T06:16:01.284238+00:00",
+      "ranges": [
+        {
+          "start": 35,
+          "end": 50,
+          "text": "    TxId& operator=(const TxId& b) = default;\n};\n\nstd::istream & operator>>(std::istream&, TxId&);\n\n/**\n * A TxHash is the double sha256 hash of the full transaction data.\n */\nstruct TxHash : public uint256 {\n    explicit TxHash(const uint256 &b) : uint256(b) {}\n};\n\n/**\n * An outpoint - a combination of a transaction hash and an index n into its\n * vout.\n */"
+        }
+      ]
+    },
+    "src/script/script.h": {
+      "time": "2026-10-13T06:17:59.297696+00:00",
+      "ranges": [
+        {
+          "start": 30,
+          "end": 38,
+          "text": "\n// Maximum number of elements on the stack -- replaced with DEFAULT_STACK_MEMORY_USAGE after Genesis\nstatic const unsigned int MAX_STACK_ELEMENTS_BEFORE_GENESIS = 1000;\n\n// Threshold for nLockTime: below this value it is interpreted as block number,\n// otherwise as UNIX timestamp. Thresold is Tue Nov 5 00:53:20 1985 UTC\nstatic const unsigned int LOCKTIME_THRESHOLD = 500000000;\n\ntemplate <typename T> std::vector<uint8_t> ToByteVector(const T &in) {"
+        }
+      ]
+    }
+  },
+  "merge_commits": [
+    {
+      "sha": "aca8e7b2acb4a9834240632412ceab0b04b5e3b8",
+      "subject": "(S3, lane s6-66-agg, Codex GPT-6, [M] 2026-10-13T06:13:25Z) Fold block node column"
+    },
+    {
+      "sha": "1e3567a4e5b736040a262cd2d207460a0c520d1c",
+      "subject": "(S3, lane s6-66-agg, Codex GPT-6, [M] 2026-10-13T06:13:49Z) Fold UTXO and union provenance reads"
+    },
+    {
+      "sha": "52a39591afa30935ae5b3ec7c58296aefbe0406b",
+      "subject": "(S3, lane s6-66-agg, Codex GPT-6, [M] 2026-10-13T06:14:03Z) Fold chain and union provenance reads"
+    },
+    {
+      "sha": "11dbd77110a6f1099a4428b5be6e49a25066c742",
+      "subject": "(S3, lane s6-66-agg, Codex GPT-6, [M] 2026-10-13T06:14:16Z) Fold finality and union provenance reads"
+    },
+    {
+      "sha": "aaa70e8b784737cdb6676a3946438e5b242af9ca",
+      "subject": "(S3, lane s6-66-agg, Codex GPT-6, [M] 2026-10-13T06:14:30Z) Fold mempool and union provenance reads"
+    }
+  ],
+  "conflicts": [
+    {
+      "merge": "1e3567a",
+      "lane": "utx",
+      "file": "docs/PROVENANCE.md",
+      "conflict_start": 1133,
+      "retained_lane_line_numbers": [
+        1143,
+        1145,
+        1147,
+        1149
+      ],
+      "resolution": "union of both appended read logs in fold order"
+    },
+    {
+      "merge": "52a3959",
+      "lane": "chn",
+      "file": "docs/PROVENANCE.md",
+      "conflict_start": 1133,
+      "retained_lane_line_numbers": [
+        1150,
+        1152,
+        1154,
+        1156,
+        1158,
+        1160
+      ],
+      "resolution": "union of both appended read logs in fold order"
+    },
+    {
+      "merge": "11dbd77",
+      "lane": "fin",
+      "file": "docs/PROVENANCE.md",
+      "conflict_start": 1133,
+      "retained_lane_line_numbers": [
+        1161,
+        1163,
+        1165,
+        1167
+      ],
+      "resolution": "union of both appended read logs in fold order"
+    },
+    {
+      "merge": "aaa70e8",
+      "lane": "mem",
+      "file": "docs/PROVENANCE.md",
+      "conflict_start": 1133,
+      "retained_lane_line_numbers": [
+        1169,
+        1171,
+        1173
+      ],
+      "resolution": "union of both appended read logs in fold order"
+    }
+  ],
+  "r6_scan": [
+    {
+      "family": "block",
+      "id": "header/version-bip34",
+      "field": "expected.reason",
+      "expected_reason": "bad-version(0x00000001)",
+      "node": "unrealizable: named BIP34 height 1000 is a compiled-parameter override unavailable on regtest; src/chainparams.cpp:1461-1469; src/validation.cpp:5964-5974 [X] docs/records/20261013-045714-s6-66-blk-regtest-s3.md"
+    },
+    {
+      "family": "block",
+      "id": "header/version-bip66",
+      "field": "expected.reason",
+      "expected_reason": "bad-version(0x00000002)",
+      "node": "measured agree: {\"reason\":\"bad-version(0x00000002)\",\"status\":\"rejected\"} [X] docs/records/20261013-045714-s6-66-blk-regtest-s3.md"
+    },
+    {
+      "family": "block",
+      "id": "header/version-bip65",
+      "field": "expected.reason",
+      "expected_reason": "bad-version(0x00000003)",
+      "node": "measured agree: {\"reason\":\"bad-version(0x00000003)\",\"status\":\"rejected\"} [X] docs/records/20261013-045714-s6-66-blk-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/false",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (Script evaluated without error but finished with a false/empty top stack element)",
+      "node": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261013-061601-s6-66-agg-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/number-unequal",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (Script evaluated without error but finished with a false/empty top stack element)",
+      "node": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261013-061601-s6-66-agg-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/return-coin-height-9",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (OP_RETURN was encountered)",
+      "node": "unrealizable: the required pre-Genesis OP_RETURN chain coin is pruned at creation, so a live chain cannot reach its script stage; src/script/script.h:260-277 and src/coins.cpp:45-64 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261013-045648-s6-66-utx-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/mempool-tip-before-genesis",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (OP_RETURN was encountered)",
+      "node": "unrealizable: row combines a pre-Genesis tip 8 and mempool coin with onBlock=true at height 1200; ConnectBlock uses its actual predecessor and assigns included parents their block height, so this mixed context is not a live block state; src/validation.cpp:2667-2674,2972-2981,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261013-045648-s6-66-utx-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/resource-selector-False",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (Script is too big)",
+      "node": "unrealizable: row requests policy resource selection inside an onBlock=true script check; live ConnectBlock passes consensus=true with no RPC or launch selector override; src/validation.cpp:3380-3396 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261013-045648-s6-66-utx-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/explicit-word-128",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (NOPx reserved for soft-fork upgrades)",
+      "node": "unrealizable: row replaces the complete block script flag word; live block flags are derived from chain state, with regtest UAHF and DAA active from zero and no block flag-word override; inline verifyscript would not realize the chain boundary; src/verify_script_flags.cpp:31-81 and src/chainparams.cpp:1487-1491 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261013-045648-s6-66-utx-regtest-s3.md"
+    },
+    {
+      "family": "utxo",
+      "id": "scripts/real-p2pkh-bad-signature",
+      "field": "expected.reason",
+      "expected_reason": "blk-bad-inputs (Script evaluated without error but finished with a false/empty top stack element)",
+      "node": "unrealizable: row requires mainnet height-400000 pre-UAHF/pre-DAA script context and historical signed material; regtest enables UAHF and DAA from height zero with no launch override, so remapping would change the signature-rule boundary; src/chainparams.cpp:1487-1491 and src/verify_script_flags.cpp:52-66 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261013-045648-s6-66-utx-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "script-eval-false",
+      "field": "expected.reason",
+      "expected_reason": "mandatory-script-verify-flag-failed (Script evaluated without error but finished with a false/empty top stack element)",
+      "node": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"mandatory-script-verify-flag-failed (Script evaluated without error but finished with a false/empty top stack element)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "outer-relay-cltv-refusal",
+      "field": "expected.reason",
+      "expected_reason": "non-mandatory-script-verify-flag (Locktime requirement not satisfied)",
+      "node": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"non-mandatory-script-verify-flag (Locktime requirement not satisfied)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261013-045854-s6-66-mem-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "outer-chronicle-grace-0",
+      "field": "expected.reason",
+      "expected_reason": "mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)",
+      "node": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261013-045854-s6-66-mem-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "outer-chronicle-grace-72",
+      "field": "expected.reason",
+      "expected_reason": "flexible-mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)",
+      "node": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"flexible-mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261013-045854-s6-66-mem-regtest-s3.md"
+    }
+  ],
+  "followups": [
+    {
+      "issue": 61,
+      "row": "scripts/false",
+      "original_comment": 6138849503,
+      "comment_id": 6139610037,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6139610037",
+      "time": "2026-10-13T06:23:05.428726+00:00",
+      "body": "**Finding follow-up (rule 15).** [M] 2026-10-13, R6, lane `s6-66-agg`, row `scripts/false`; follows https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6138849503.\n\n[X] Classification as data: `observation limit (reason detail)`. The recorded submitblock rejection status and reason code `blk-bad-inputs` agree with the declared projection. [SRC] The parallel validation surface at [src/validation.cpp:3690-3715](https://github.com/bitcoin-sv/bitcoin-sv/blob/6504a3aff65ba97c0f6c80962b033e35ecbfed4b/src/validation.cpp#L3690-L3715) omits the parenthetical script-error detail from submitblock. That detail is unobservable here; the divergence classification is superseded.\n\n[X] The core comparator now permits only that block-path detail omission while retaining exact status, reason code and other fields. Caller, code, status and extra-field negative tests pass. The witness and node token carry the observation limit. [Aggregate record](https://github.com/Calgooon/bsv-script-lean/blob/lane/s6-66-agg/docs/records/20261013-061601-s6-66-agg-regtest-s3.md); the historical receipt remains intact.",
+      "verified_exact_body": true
+    },
+    {
+      "issue": 61,
+      "row": "scripts/number-unequal",
+      "original_comment": 6138849660,
+      "comment_id": 6139610228,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6139610228",
+      "time": "2026-10-13T06:23:06.224737+00:00",
+      "body": "**Finding follow-up (rule 15).** [M] 2026-10-13, R6, lane `s6-66-agg`, row `scripts/number-unequal`; follows https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6138849660.\n\n[X] Classification as data: `observation limit (reason detail)`. The recorded submitblock rejection status and reason code `blk-bad-inputs` agree with the declared projection. [SRC] The parallel validation surface at [src/validation.cpp:3690-3715](https://github.com/bitcoin-sv/bitcoin-sv/blob/6504a3aff65ba97c0f6c80962b033e35ecbfed4b/src/validation.cpp#L3690-L3715) omits the parenthetical script-error detail from submitblock. That detail is unobservable here; the divergence classification is superseded.\n\n[X] The core comparator now permits only that block-path detail omission while retaining exact status, reason code and other fields. Caller, code, status and extra-field negative tests pass. The witness and node token carry the observation limit. [Aggregate record](https://github.com/Calgooon/bsv-script-lean/blob/lane/s6-66-agg/docs/records/20261013-061601-s6-66-agg-regtest-s3.md); the historical receipt remains intact.",
+      "verified_exact_body": true
+    },
+    {
+      "issue": 60,
+      "row": "mempool/capacity-1",
+      "original_comment": 6139104677,
+      "comment_id": 6139724849,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/60#issuecomment-6139724849",
+      "time": "2026-10-13T06:30:23.739404+00:00",
+      "body": "**Finding follow-up (rule 15).** [M] 2026-10-13, R7, lane `s6-66-agg`, row `mempool/capacity-1`; follows https://github.com/Calgooon/bsv-script-lean/issues/60#issuecomment-6139104677.\n\n[X] Classification as data: `scope limit`. The exact materialized transaction and funding coin from the finality receipt were run through #62's full admission machine using mempoolcheck with maxMempoolNonFinal = 1. The machine answers `rejected 259 non-final-pool-full` at the commit stage, with empty held and accepted pools. This agrees with the recorded node admission result. [D] The isolated finality stage still says heldNonFinal; it does not include insertion.\n\n[SRC] The early gate at [src/validation.cpp:1119-1123](https://github.com/bitcoin-sv/bitcoin-sv/blob/6504a3aff65ba97c0f6c80962b033e35ecbfed4b/src/validation.cpp#L1119-L1123) precedes [CTimeLockedMempool::insertNL, src/time_locked_mempool.cpp:447-474](https://github.com/bitcoin-sv/bitcoin-sv/blob/6504a3aff65ba97c0f6c80962b033e35ecbfed4b/src/time_locked_mempool.cpp#L447-L474). BsvChain.insertNonFinal already models the capacity rule. No Lean correction is required for this row. The node token and witness classification supersede the divergence reading. [Aggregate record and executable input receipt](https://github.com/Calgooon/bsv-script-lean/blob/lane/s6-66-agg/docs/records/20261013-061601-s6-66-agg-regtest-s3.md).",
+      "verified_exact_body": true
+    }
+  ],
+  "rulings": {
+    "R6": {
+      "classification": "observation limit (reason detail)",
+      "rows": [
+        "utxo/scripts/false",
+        "utxo/scripts/number-unequal"
+      ],
+      "comparison": "status and reason code agree; detail unobservable via submitblock",
+      "receipt_comparisons": [
+        {
+          "id": "scripts/false",
+          "expected": {
+            "reason": "blk-bad-inputs (Script evaluated without error but finished with a false/empty top stack element)",
+            "status": "rejected"
+          },
+          "observed": {
+            "reason": "blk-bad-inputs",
+            "status": "rejected"
+          },
+          "source_receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+          "classification": "observation limit (reason detail)",
+          "label": "[X]",
+          "expected_label": "[D]"
+        },
+        {
+          "id": "scripts/number-unequal",
+          "expected": {
+            "reason": "blk-bad-inputs (Script evaluated without error but finished with a false/empty top stack element)",
+            "status": "rejected"
+          },
+          "observed": {
+            "reason": "blk-bad-inputs",
+            "status": "rejected"
+          },
+          "source_receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+          "classification": "observation limit (reason detail)",
+          "label": "[X]",
+          "expected_label": "[D]"
+        }
+      ]
+    },
+    "R7": {
+      "classification": "scope limit",
+      "row": "finality/mempool/capacity-1",
+      "machine": {
+        "status": "rejected",
+        "code": 259,
+        "reason": "non-final-pool-full",
+        "stage": "commit",
+        "held": [],
+        "accepted": []
+      }
+    },
+    "R8": {
+      "classification": "unrealizable",
+      "rows": [
+        "finality/threshold-499999998",
+        "finality/threshold-499999999"
+      ],
+      "reason": "literal candidate height 500000000 cannot be mined on a regtest instance in this harness"
+    }
+  },
+  "inherited_followups": [
+    {
+      "issue": 63,
+      "row": "block/empty",
+      "comment_id": 6137759539
+    },
+    {
+      "issue": 63,
+      "row": "block/missing-coinbase",
+      "comment_id": 6137759699
+    },
+    {
+      "issue": 66,
+      "row": "intake-launch-profile",
+      "comment_id": 6137636565
+    }
+  ],
+  "initial_lake_exception": {
+    "label": "[M]",
+    "log": "lean_lock: every slot held (slot1: s6-66-chn2 pid 42543 pgid 42543 at 2026-10-13T06:14:51Z on <host>;); s6-66b waits (06:15:13Z)\nlean_lock: s6-66b took slot1 (06:15:58Z)\n 2:15  up 8 days,  6:22, 15 users, load averages: 5.81 3.99 4.40\ninfo: mathlib: cloning https://github.com/leanprover-community/mathlib4\ninfo: mathlib: checking out revision '5ed2965256430c3649e86755f9576b54eca72435'\ninfo: plausible: cloning https://github.com/leanprover-community/plausible\ninfo: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'\ninfo: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient\ninfo: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'\ninfo: importGraph: cloning https://github.com/leanprover-community/import-graph\ninfo: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'\ninfo: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4\ninfo: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'\ninfo: aesop: cloning https://github.com/leanprover-community/aesop\ninfo: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'\ninfo: Qq: cloning https://github.com/leanprover-community/quote4\ninfo: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'\ninfo: batteries: cloning https://github.com/leanprover-community/batteries\ntools/chain_leg.sh: line 27: 55429 Terminated: 15          lake build finalitycheck utxocheck oraclecheck blockcheck mempoolcheck chaincheck\nlean_lock: released slot1 (06:16:31Z)\nmake: *** [chain-check] Error 143\n",
+    "clone_starts": 8,
+    "completed_checkouts": 7,
+    "remediation": "terminated Lake, discarded the worktree package copies when attaching local shared cache, restricted subsequent builds to GIT_ALLOW_PROTOCOL=file"
+  },
+  "checks": {
+    "fold-build": {
+      "log_sha256": "a2298f3dc539ef130b25715d2f8eec4471b72140e089ed3c8a103af3fad3d703",
+      "verdict_lines": [
+        "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 13.33s"
+      ]
+    },
+    "fold-test": {
+      "log_sha256": "4b0f84d4caf4aa54d4818685bbc2e45b16c2e03ae5c4644e60e28326919659f9",
+      "verdict_lines": [
+        "    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.10s",
+        "test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.22s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 10 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.84s",
+        "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    "fold-pins": {
+      "log_sha256": "cb1b6d13b9dc4d2a7822defd0422e42dd4f7bbf64af80d124450dc7f2b26dbb0",
+      "verdict_lines": [
+        "check-parameters: GREEN (17 inherited fields; 81 chain fields: 9 consensus / 72 policy including node settings; names, order, kinds, defaults, presence; 17 network fields / 4 networks / 68 cells; import direction)",
+        "check-pins: GREEN (97 sites agree with docs/PROVENANCE.md \u00a71a; 2 skipped by name: the built gobdk-runner, the predecessor-lean clone)"
+      ]
+    },
+    "fold-spec": {
+      "log_sha256": "ea83974fdc9d17fcbcfc6823288569b403b75d825226d5568b89c025df91f427",
+      "verdict_lines": [
+        "specgen --check: OK (117 files up to date; 1 rules flagged)"
+      ]
+    },
+    "fold-preservation": {
+      "log_sha256": "8562c709b3da35c2848b57cf3a4274ea844cade66738402b2efd320fbc970614",
+      "verdict_lines": [
+        "preservation against origin/main: GREEN [X] (all non-node JSONL bytes unchanged; intake bytes unchanged except authorized R2 trigger objects and its prose name; node markers normalized)",
+        "lane preservation: GREEN [X] (against 3732ad0; zero new non-node input changes)"
+      ]
+    },
+    "fold-cite": {
+      "log_sha256": "e2e6ad65d00b435e037e296d1baff5e011d5adf99cf3660063df8cd2623cb8ec",
+      "verdict_lines": [
+        "cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)"
+      ]
+    },
+    "fold-chain": {
+      "log_sha256": "307ce156ba782cbae9e66bfba6ed9f6d9e5e8cba0b96b5ff435bc7d5dfb45884",
+      "verdict_lines": [
+        "info: Test/NodeMetadata.lean:41:0: node metadata guards: GREEN [X] ([M] 11 valid/malformed cases)",
+        "Build completed successfully (2113 jobs).",
+        "finalitycheck: GREEN [X] ([M] 114 rows; agree 114; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: finalitycheck wall [M] 1.222496s",
+        "utxocheck: GREEN [X] ([M] 80 rows; agree 80; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: utxocheck wall [M] 1.189274s",
+        "mempoolcheck: GREEN [X] ([M] 109 rows; agree 109; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: mempoolcheck wall [M] 0.068041s",
+        "chaincheck: GREEN [X] ([M] 44 derived rows; agree 44; failures 0; node column independently recorded)",
+        "chain timing: chaincheck wall [M] 228.436308s",
+        "oraclecheck: inline mappings GREEN (8; uncovered re-checks decline)",
+        "oraclecheck: GREEN (36 rows; cpp-sigopcount 6; wrapper 30; agree 42; mismatch 0; key isolation 504)",
+        "chain timing: oraclecheck wall [M] 2.082670s",
+        "blockcheck: headers GREEN [X] ([M] 4233 rows; pow 4233; difficulty 3921; ancestry unavailable 312; mismatch 0; chain column [M])",
+        "blockcheck: boundaries GREEN [X] ([M] 95 rows; agree 95; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: blockcheck wall [M] 2.246274s",
+        "chain: GREEN [X] (spec projection; replay wall [M] 235.245476s; node excluded)"
+      ]
+    },
+    "final-build": {
+      "log_sha256": "535cd84f22bc65c619dd25d968107be917f593041dec958b748e9fc4f9c57993",
+      "verdict_lines": [
+        "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s"
+      ]
+    },
+    "final-test": {
+      "log_sha256": "f124d6579bcdb5f2d70cfb1cc2b11cd1c57c115ba1a45fc3d69d1925c4733ed0",
+      "verdict_lines": [
+        "    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.06s",
+        "test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.19s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 11 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.80s",
+        "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.54s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    "final-pins": {
+      "log_sha256": "cb1b6d13b9dc4d2a7822defd0422e42dd4f7bbf64af80d124450dc7f2b26dbb0",
+      "verdict_lines": [
+        "check-parameters: GREEN (17 inherited fields; 81 chain fields: 9 consensus / 72 policy including node settings; names, order, kinds, defaults, presence; 17 network fields / 4 networks / 68 cells; import direction)",
+        "check-pins: GREEN (97 sites agree with docs/PROVENANCE.md \u00a71a; 2 skipped by name: the built gobdk-runner, the predecessor-lean clone)"
+      ]
+    },
+    "final-spec": {
+      "log_sha256": "ea83974fdc9d17fcbcfc6823288569b403b75d825226d5568b89c025df91f427",
+      "verdict_lines": [
+        "specgen --check: OK (117 files up to date; 1 rules flagged)"
+      ]
+    },
+    "final-preservation": {
+      "log_sha256": "8562c709b3da35c2848b57cf3a4274ea844cade66738402b2efd320fbc970614",
+      "verdict_lines": [
+        "preservation against origin/main: GREEN [X] (all non-node JSONL bytes unchanged; intake bytes unchanged except authorized R2 trigger objects and its prose name; node markers normalized)",
+        "lane preservation: GREEN [X] (against 3732ad0; zero new non-node input changes)"
+      ]
+    },
+    "final-cite": {
+      "log_sha256": "929495e70a1ebedf78bbfd3c3a98346f40282a2bd224485828cde54c4873fcaa",
+      "verdict_lines": [
+        "cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)"
+      ]
+    },
+    "final-chain": {
+      "log_sha256": "a55f7e363893b9407001705bbf06787936f706ec00bccb778da32bba56d80b8b",
+      "verdict_lines": [
+        "info: Test/NodeMetadata.lean:41:0: node metadata guards: GREEN [X] ([M] 11 valid/malformed cases)",
+        "Build completed successfully (2113 jobs).",
+        "finalitycheck: GREEN [X] ([M] 114 rows; agree 114; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: finalitycheck wall [M] 0.040169s",
+        "utxocheck: GREEN [X] ([M] 80 rows; agree 80; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: utxocheck wall [M] 0.059873s",
+        "mempoolcheck: GREEN [X] ([M] 109 rows; agree 109; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: mempoolcheck wall [M] 0.078139s",
+        "chaincheck: GREEN [X] ([M] 44 derived rows; agree 44; failures 0; node column independently recorded)",
+        "chain timing: chaincheck wall [M] 226.713345s",
+        "oraclecheck: inline mappings GREEN (8; uncovered re-checks decline)",
+        "oraclecheck: GREEN (36 rows; cpp-sigopcount 6; wrapper 30; agree 42; mismatch 0; key isolation 504)",
+        "chain timing: oraclecheck wall [M] 0.897069s",
+        "blockcheck: headers GREEN [X] ([M] 4233 rows; pow 4233; difficulty 3921; ancestry unavailable 312; mismatch 0; chain column [M])",
+        "blockcheck: boundaries GREEN [X] ([M] 95 rows; agree 95; mismatch 0; spec column [D]; node column independently recorded)",
+        "chain timing: blockcheck wall [M] 1.055801s",
+        "chain: GREEN [X] (spec projection; replay wall [M] 228.844749s; node excluded)"
+      ]
+    },
+    "R7": {
+      "command": "lean/.lake/build/bin/mempoolcheck <r7_fixture serialized as one JSONL row>",
+      "output": "mempoolcheck: GREEN [X] ([M] 1 rows; agree 1; mismatch 0; spec column [D]; node column independently recorded)\n",
+      "actual_output": "mempoolcheck: RED [X] ([M] 1 rows; agree 0; mismatch 1; spec column [D]; node column independently recorded)\nmempoolcheck: MISMATCH s6-66-agg-r7-capacity-1: expected {\"status\":\"heldNonFinal\"}; actual {\"accepted\":[],\"blockSinceBump\":false,\"code\":259,\"held\":[],\"lastUpdate\":1000,\"nextSweep\":0,\"orphans\":[],\"pending\":[],\"pendingLow\":true,\"primary\":[],\"reason\":\"non-final-pool-full\",\"rollingRate\":0,\"spentCount\":0,\"stage\":\"commit\",\"status\":\"rejected\",\"trace\":[\"regular\",\"standard\",\"finality\",\"alreadyKnown\",\"conflict\",\"inputs\",\"sequence\",\"inputStandard\",\"sigops\",\"fee\",\"ancestors\",\"scripts\",\"detector\",\"commit\"],\"untrimmedBytes\":0,\"usage\":0}\n"
+    },
+    "R6": {
+      "output": "   Compiling bsv-script-harness v0.0.1 (harness)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.13s\n     Running unittests src/bin/run_scenarios.rs (harness/target/debug/deps/run_scenarios-09e085d17c4824d0)\n\nrunning 16 tests\ntest scenarios::block::lane::record_kind ... ignored, explicit owned loopback run; S6_BLOCK_KIND and S6_BLOCK_RECORD required\ntest scenarios::chain::lane::replay_chain_lane ... ignored, explicit owned chain replay; requires S6_CHAIN_RECORD and S6_CHAIN_KIND\ntest scenarios::finality::tests::lane_replay ... ignored, explicit isolated node replay; FIN_RECORD, FIN_BOUNDARY and FIN_RUN_ID required\ntest scenarios::mempool::lane_tests::lane_replay ... ignored\ntest scenarios::mempool::lane_tests::unavailable_recipe_cannot_fall_through_to_admission ... ok\ntest scenarios::utxo::lane_tests::capture_lane ... ignored, owned loopback node measurement; requires S6_UTXO_RECORD and S6_UTXO_KIND\ntest scenarios::core::tests::no_orphan_inference_from_absence ... ok\ntest scenarios::core::tests::only_node_token_changes ... ok\ntest scenarios::core::tests::exact_comparator_and_code_namespaces ... ok\ntest scenarios::core::tests::stop_remembers_successful_wait_despite_kill_error ... ok\ntest scenarios::core::tests::ordered_status_and_greatest_height ... ok\ntest scenarios::utxo::lane_tests::coin_projection_preserves_observable_distinctions ... ok\ntest scenarios::core::tests::cleanup_waits_after_failed_kill_and_drop_retries_failed_wait ... ok\ntest scenarios::core::tests::generated_witness_has_declared_schema_and_exact_submission ... ok\ntest scenarios::core::tests::submitblock_reason_detail_is_unobservable_only_on_matching_rejection ... ok\ntest scenarios::block::tests::mutations_bind_live_parent_and_preserve_boundary ... ok\n\ntest result: ok. 11 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 0.02s\n\n"
+    }
+  },
+  "rates": {
+    "block": 84.683,
+    "utxo": 87.75,
+    "chain": 6.144,
+    "finality": 95.987,
+    "mempool": 35.621
+  },
+  "runner_digests": {
+    "harness/src/scenarios/block.rs": "d08a932a48038df35c789f44a538ac282f452f09fe40a5014bf534d1601c80b0",
+    "harness/src/scenarios/chain.rs": "d25d77540cec219701880c188d9ae2e948ebed9386374f1f79b2283f8065efbe",
+    "harness/src/scenarios/core.rs": "73d7edb09b772ce37a3c61817cb070a9ab2e12e20e669b8af755303f017ca413",
+    "harness/src/scenarios/finality.rs": "6e0b3641691f54d35072d3c04f92c1fc8c110aefb1632a69c8d4a02b836cb9dc",
+    "harness/src/scenarios/intake.rs": "733ef3fb92bf0ad0cd9d11478da1b85e4a3ea9a4b18a273ed0dfade827ff8c54",
+    "harness/src/scenarios/mempool.rs": "71d219dc71d9cca772c0fe5adef385164fbdc1e790033a008776606e1a0b6703",
+    "harness/src/scenarios/mod.rs": "f44b4884c7a145f620d9c7f1f464c28acdd71a97ccb81770d91e4f4e36b671d0",
+    "harness/src/scenarios/oracle.rs": "d397f4cb1a6a437396b4a384d3bb12737f0a848c62ea091e3a18519b6b9a40a6",
+    "harness/src/scenarios/utxo.rs": "8cd93732c9de8b6ad24b1ef1aa396beab0df3d66c01218a102ac02df7e901847"
+  },
+  "findings": [
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-block-block-empty.md",
+      "row": "block/empty",
+      "classification": "observation limit (RPC pre-check)",
+      "sha256": "f0b08d37cef21e5254a6022768aa81874b09a9288b48f6a368928e5510a9970f",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json",
+      "issue": 63,
+      "comment_id": 6137350199,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/63#issuecomment-6137350199"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-block-block-missing-coinbase.md",
+      "row": "block/missing-coinbase",
+      "classification": "observation limit (RPC pre-check)",
+      "sha256": "ee8ee74b222f204937f03978040aa8c8672e53edb117d04643485cf748145028",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json",
+      "issue": 63,
+      "comment_id": 6137350348,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/63#issuecomment-6137350348"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-fin-mempool-capacity-1.md",
+      "row": "mempool/capacity-1",
+      "classification": "scope limit",
+      "sha256": "089920a5032a4b0f0975035329f7ec2ea61c7452e6df399babbf7c07f76cdf1a",
+      "receipt": "docs/records/20261013-045710-s6-66-fin-regtest-s3.json",
+      "issue": 60,
+      "comment_id": 6139104677,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/60#issuecomment-6139104677"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-intake-launch-profile.md",
+      "row": "intake-launch-profile",
+      "classification": "spec-wrong",
+      "sha256": "f3c309044f0bcedf96f921d6f862ef170085f8728f177ad1c308718d02585082",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json",
+      "issue": 66,
+      "comment_id": 6137350471,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/66#issuecomment-6137350471"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-above.md",
+      "row": "absurd-fee-above",
+      "classification": "observation-limit",
+      "sha256": "9d020b480403f4a6fa1f37617a68b0c9e8a308ee0b50ee15e57c000cf1c3e2b1",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json",
+      "issue": 62,
+      "comment_id": 6138949697,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/62#issuecomment-6138949697"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-default-rpc.md",
+      "row": "absurd-fee-default-rpc",
+      "classification": "observation-limit",
+      "sha256": "9d09cde8ea3f98049723e694525b5cee215407cbbcd2db94acb3763f5f6373e9",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json",
+      "issue": 62,
+      "comment_id": 6138949697,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/62#issuecomment-6138949697"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-mem-absurd-fee-equality.md",
+      "row": "absurd-fee-equality",
+      "classification": "observation-limit",
+      "sha256": "b35e53161ca2bb8363f73bb01ea5107a5f54ca22c508356f61523684ec159a64",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json",
+      "issue": 62,
+      "comment_id": 6138949697,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/62#issuecomment-6138949697"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-utx-scripts-false.md",
+      "row": "scripts/false",
+      "classification": "observation limit (reason detail)",
+      "sha256": "bafbdf5662e46a4138888e99b12b68880187d8ca2d60abf71c961f9ac561aa72",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+      "issue": 61,
+      "comment_id": 6138849503,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6138849503"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66-utx-scripts-number-unequal.md",
+      "row": "scripts/number-unequal",
+      "classification": "observation limit (reason detail)",
+      "sha256": "d35e908fca9ec82b148ed1741aca531bc3f33d8c4ba9f28f0fa887eb4d092d76",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+      "issue": 61,
+      "comment_id": 6138849660,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/61#issuecomment-6138849660"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66b-maintenance-trigger.md",
+      "row": "maintenance-trigger",
+      "classification": "spec-wrong",
+      "sha256": "c929bad6eb9075fe1a91bacebf1c543d1df4cd21392ae1b3c25c781e8760a37f",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json",
+      "issue": 66,
+      "comment_id": 6137636741,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/66#issuecomment-6137636741"
+    },
+    {
+      "path": "corpus/scenarios/witnesses/s6-66b-one-transaction-proof.md",
+      "row": "one-transaction-proof",
+      "classification": "spec-wrong",
+      "sha256": "8d6725db2eebf9404385f9c6ef8d1594ff1d437a480a10ba77a18f0eb9c8a30e",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json",
+      "issue": 75,
+      "comment_id": 6137636915,
+      "url": "https://github.com/Calgooon/bsv-script-lean/issues/75#issuecomment-6137636915"
+    }
+  ],
+  "build_load_samples": {
+    "label": "[M]",
+    "opening_cargo": 3.18505859375,
+    "retry_lake": 4.56,
+    "final_cargo": 3.44482421875,
+    "final_lake": 2.96,
+    "cargo_jobs": 4
+  },
+  "fix66_fold_heads": {
+    "mem2": "b21776fe08e72231d712ea393df9bd57785a041e",
+    "chn2": "8642e87eb9c3bd31c08c3b200f316cf9703e6c6d"
+  },
+  "remaining_historical": [
+    {
+      "family": "mempool",
+      "id": "missing-input-orphan-retained",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P child delivery into a known empty orphan pool, a missing-parent request and retained count, followed by parent delivery and child admission without resubmission.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "absurd-fee-p2p-no-rpc-ceiling",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P delivery of the high-fee frame, with exact admission and pool receipts showing the P2P route does not supply the RPC fee ceiling.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-fee-equality",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-fee-below",
+      "status": "pending",
+      "needs": "live rolling-fee history and detector scheduling witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "consolidation-fee-delta",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "consolidation-disabled",
+      "status": "pending",
+      "needs": "live rolling-fee history and detector scheduling witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "detector-final-insertion",
+      "status": "pending",
+      "needs": "controlled concurrent validation insertion/commit witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "detector-newly-committed",
+      "status": "pending",
+      "needs": "controlled concurrent validation insertion/commit witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "commit-size-equality",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "commit-size-over-cap",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "held-size-equality",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "held-size-over-cap",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "reject-parent-prevents-orphan-retention",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P rejection of the named parent, then its missing-input child; observe the reject-filter boundary and no retained orphan.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "reject-filter-p2p-silence",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P transcript that populates the recent-reject filter and repeats the named inventory request, with controlled completion for the suppressed request.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "reject-filter-rpc-retries",
+      "status": "needs-peer",
+      "needs": "Populate the reject filter through an isolated loopback P2P rejection, then retry the same transaction by RPC and retain the completed rejection and exact pool state.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-at-limit",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-below-limit-raises-next-rate",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-empty-retains-rolling-rate",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-secondary-mining-cap",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-leaf-before-low-fee-parent",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "trim-group-demotes-parent",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-expiry-equality",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P orphan retention, the declared expiry-equality clock and an explicitly completed orphan sweep, with exact isolated pool observations.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-hysteresis-skips-expiry",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P orphan retention and measured byte-accounting/hysteresis boundary, followed by a completed sweep attempt and retained-count evidence.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-parent-only-enqueues",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P child then parent delivery, with an observation of the pending retry queue before validation; parent arrival alone must not be inferred as admission.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-revalidation-accepts",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P child then valid parent delivery, controlled retry completion and exact accepted/orphan pool observations without child resubmission.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-revalidation-can-refuse",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P child then parent delivery that unlocks validation but leaves the declared later refusal; capture retry rejection and final pools.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-decay-no-block-gate",
+      "status": "pending",
+      "needs": "live rolling-rate history and block/clock completion witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-decay-interval-equality",
+      "status": "pending",
+      "needs": "live rolling-rate history and block/clock completion witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-decay-low-usage-half-life",
+      "status": "pending",
+      "needs": "live rolling-rate history and block/clock completion witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "held-rate-fractional-half-second",
+      "status": "pending",
+      "needs": "live rolling-fee history, measured allocator boundary or bucket-clock witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "rolling-block-resets-timestamp",
+      "status": "pending",
+      "needs": "live rolling-rate history and block/clock completion witness.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "limit-secondary-unsigned-underflow",
+      "status": "pending",
+      "needs": "measured allocator boundary and observable trim completion, including rolling-fee history.",
+      "node": "pending #66"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-admission-aggregate-134",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P arrivals at the declared aggregate orphan size boundary 134, with measured accounting and completed retention/trim observations.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-admission-aggregate-135",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P arrivals at the declared aggregate orphan size boundary 135, with measured accounting and completed retention/trim observations.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-p2p-size-60",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P delivery of the declared 60-byte missing-input frame, active orphan-size setting and completed retention observation.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-p2p-size-61",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P delivery of the declared 61-byte missing-input frame, active orphan-size setting and completed refusal observation.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "mempool",
+      "id": "orphan-selected-arrival-revalidation",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P parent arrival with the declared selected child retry order, controlled validation completion and exact final pool state.",
+      "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-undo-clean",
+      "status": "pending",
+      "needs": "clean connect/disconnect UTXO restoration and an explicit projection for internal undo-vector counts.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-coinbase-overwrite-residue",
+      "status": "pending",
+      "needs": "realize the row's disabled BIP30 overwrite precondition and test residue after undo.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-equal-work-rank",
+      "status": "pending",
+      "needs": "a controlled pointer-address tie after equal work, completion and sequence; ordinary RPC does not set pointer rank.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-equal-work-completion",
+      "status": "pending",
+      "needs": "controlled equal-work validation completion ordering and a measured selected tip.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-equal-work-sequence",
+      "status": "pending",
+      "needs": "equal-work candidates with equal completion state and controlled body arrival sequence.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-missing-body-ancestry",
+      "status": "pending",
+      "needs": "header-only ancestry, retained descendant bodies and the candidate-selection observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-undo-count",
+      "status": "pending",
+      "needs": "an explicit retained-undo-vector count fault and failed publication observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-missing-output",
+      "status": "pending",
+      "needs": "an explicit view fault that removes a connected output before undo, and publication-state observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-undo-collision",
+      "status": "pending",
+      "needs": "an explicit restored-prevout collision fault before undo and publication-state observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-output-metadata",
+      "status": "pending",
+      "needs": "an explicit view fault changing output creation metadata before undo, and restored-coin observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-parent-tip",
+      "status": "pending",
+      "needs": "a mismatched coins-view best pointer at ConnectBlock; ordinary submitblock binds the real parent.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-queued-script",
+      "status": "pending",
+      "needs": "a live invalid-script input reaching queued block verification, with the exact block rejection.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-soft-rejection",
+      "status": "pending",
+      "needs": "cited operator soft-rejection removal and restoration with actual chain/pool snapshots.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-soft-freeze",
+      "status": "pending",
+      "needs": "a frozen-input/list scenario that creates and clears effective block-freeze marks, with chain/pool snapshots; establish the available RPC route at the pin.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-disconnect-pool-cap",
+      "status": "pending",
+      "needs": "a node allocation/capacity realization for the row's declared byte-only accounting, plus temporary disconnect-pool visibility.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-retained-nonfinal-before-genesis",
+      "status": "pending",
+      "needs": "retain an accepted entry at an older tip, cross the pre-Genesis non-final boundary during reorg cleanup and observe removal.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-retained-nonfinal-after-genesis",
+      "status": "pending",
+      "needs": "retain an accepted entry at an older tip, cross the post-Genesis non-final boundary during reorg cleanup and observe removal.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-invalid-retry",
+      "status": "pending",
+      "needs": "materialize invalid parent and descendant candidates plus a valid competing branch, and observe failure propagation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-sequential-inputs",
+      "status": "pending",
+      "needs": "a real funded parent/child block, ordered application, resulting UTXOs and fee measurement.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-reversed-inputs",
+      "status": "pending",
+      "needs": "a real funded parent/child block in reversed body order and exact rejection.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-era-clear-9999",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P peer retaining the declared orphan before the era crossing; then exact pool and chain snapshots.",
+      "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-era-clear-10000",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P peer retaining the declared orphan before the era crossing; then exact pool and chain snapshots.",
+      "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-era-clear-14999",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P peer retaining the declared orphan before the era crossing; then exact pool and chain snapshots.",
+      "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-era-clear-15000",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P peer retaining the declared orphan before the era crossing; then exact pool and chain snapshots.",
+      "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-unrequested-equal-work",
+      "status": "needs-peer",
+      "needs": "Isolated loopback P2P unrequested equal-work block delivery and exact selected-tip observation; submitblock supplies the requested path.",
+      "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+    },
+    {
+      "family": "chain",
+      "id": "chain-reward-before-script",
+      "status": "pending",
+      "needs": "the excess-reward boundary combined with a failing queued script and rejection-order observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-body-return",
+      "status": "pending",
+      "needs": "pruned body ancestry and re-receipt, with linked descendant activation; expose the internal unlinked-set projection.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-receipt-order",
+      "status": "pending",
+      "needs": "headers A/B then bodies B/A behind a withheld linking parent, and selected-tip observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-mined-secondary",
+      "status": "pending",
+      "needs": "materialize the declared fee/ancestor-size boundary with actual transaction bytes and observe child promotion after mining the parent.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-batching",
+      "status": "pending",
+      "needs": "a live depth-50 old branch and depth-51 rival around the coinbase maturity and connection-batch boundaries; isolate the final cleanup observation.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-partial-disconnect-auto",
+      "status": "pending",
+      "needs": "owned undo fault injection after one successful disconnect and automatic cleanup visibility.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-partial-disconnect-invalidate",
+      "status": "pending",
+      "needs": "owned undo fault injection after one successful disconnect and explicit-invalidation cleanup visibility.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-partial-disconnect-freeze",
+      "status": "pending",
+      "needs": "owned undo fault injection after one successful disconnect and explicit-freeze cleanup visibility.",
+      "node": "pending #66"
+    },
+    {
+      "family": "chain",
+      "id": "chain-precious",
+      "status": "pending",
+      "needs": "header-only then body-linked equal-work candidates and cited preciousblock RPC receipts.",
+      "node": "pending #66"
+    }
+  ],
+  "remaining": {
+    "block": [],
+    "utxo": [],
+    "chain": [
+      {
+        "id": "chain-equal-work-rank",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-equal-work-completion",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-equal-work-sequence",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-missing-body-ancestry",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-undo-count",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-missing-output",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-undo-collision",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-output-metadata",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-soft-freeze",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-disconnect-pool-cap",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-era-clear-9999",
+        "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+      },
+      {
+        "id": "chain-era-clear-10000",
+        "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+      },
+      {
+        "id": "chain-era-clear-14999",
+        "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+      },
+      {
+        "id": "chain-era-clear-15000",
+        "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+      },
+      {
+        "id": "chain-unrequested-equal-work",
+        "node": "needs-peer #71 [X] docs/records/20261013-045905-s6-66-chn-regtest-s3.md"
+      },
+      {
+        "id": "chain-body-return",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-receipt-order",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-partial-disconnect-auto",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-partial-disconnect-invalidate",
+        "node": "pending #66"
+      },
+      {
+        "id": "chain-partial-disconnect-freeze",
+        "node": "pending #66"
+      }
+    ],
+    "finality": [],
+    "mempool": [
+      {
+        "id": "missing-input-orphan-retained",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "absurd-fee-p2p-no-rpc-ceiling",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "detector-newly-committed",
+        "node": "pending #66"
+      },
+      {
+        "id": "reject-parent-prevents-orphan-retention",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "reject-filter-p2p-silence",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "reject-filter-rpc-retries",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "trim-secondary-mining-cap",
+        "node": "pending #66"
+      },
+      {
+        "id": "orphan-expiry-equality",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-hysteresis-skips-expiry",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-parent-only-enqueues",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-revalidation-accepts",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-revalidation-can-refuse",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-admission-aggregate-134",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-admission-aggregate-135",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-p2p-size-60",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-p2p-size-61",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      },
+      {
+        "id": "orphan-selected-arrival-revalidation",
+        "node": "needs-peer #71 [X] docs/records/20261013-041541-s6-66c-regtest-s3.md"
+      }
+    ],
+    "oracle": []
+  },
+  "fix66_rest_citation_checks": [
+    {
+      "id": 6138949697,
+      "started_utc": "2026-10-13T07:28:11.672241+00:00",
+      "added_src_labels": 9,
+      "body_sha256": "ec562041590f3ac6e502fd9e99229c6c20d98891ee8aa7ce8936d6b1db515de1",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6137759539,
+      "started_utc": "2026-10-13T07:28:12.843405+00:00",
+      "added_src_labels": 1,
+      "body_sha256": "c500347ffd0e5e4722060c0c7f688e497b1e3f3966a0e130346a6ea96fc48b13",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6137759699,
+      "started_utc": "2026-10-13T07:28:14.032279+00:00",
+      "added_src_labels": 1,
+      "body_sha256": "ee9c3b726ffa47b1687e775a6f6de795d9abd7467257de6dd05174fa4dc33516",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6137636565,
+      "started_utc": "2026-10-13T07:28:15.136701+00:00",
+      "added_src_labels": 1,
+      "body_sha256": "a1ddc6d7bb1040eac7ed388e39571fed07359122aa095f4123d2dc62dd8e7468",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6137636741,
+      "started_utc": "2026-10-13T07:28:16.364619+00:00",
+      "added_src_labels": 3,
+      "body_sha256": "219a902736ddf7ba5c5c26a00831a12150ef86a5501b403f43cc2591cbd757b6",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6137636915,
+      "started_utc": "2026-10-13T07:28:17.494893+00:00",
+      "added_src_labels": 1,
+      "body_sha256": "edc86ecca86c8413a3afc25212f571c1957ed21fc64e790b2f3dc347e37754cf",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    },
+    {
+      "id": 6138080826,
+      "started_utc": "2026-10-13T07:28:18.586735+00:00",
+      "added_src_labels": 1,
+      "body_sha256": "3dfa9f5ae5a6b52fe7dac76f7cd228dccc849aa6cca976b0a658073fc36d8c9c",
+      "verdict": "[X] exact GET match; other body bytes preserved"
+    }
+  ],
+  "fix66_chain_check": {
+    "label": "[M]",
+    "recorded_utc": "2026-10-13T07:37:06.905113+00:00",
+    "command": "GIT_ALLOW_PROTOCOL=file make chain-check",
+    "checked_commit": "a14c27c2ca26d9e3b012bee89cd4bf0a9bf4a80e",
+    "checked_tree": "b02550cd7a8dd25c19ef5f21d803c33d3460931b",
+    "load1": 2.17,
+    "lock": "tools/chain_leg.sh sources tools/host_private.sh and its LEAN_LOCK_SH; shared lock acquired for the build",
+    "package_cache": "existing local package cache; no network fetch",
+    "exit": 0,
+    "output": [
+      "Build completed successfully (2113 jobs).",
+      "finalitycheck: GREEN [X] ([M] 114 rows; agree 114; mismatch 0; spec column [D]; node column independently recorded)",
+      "chain timing: finalitycheck wall [M] 1.205280s",
+      "utxocheck: GREEN [X] ([M] 80 rows; agree 80; mismatch 0; spec column [D]; node column independently recorded)",
+      "chain timing: utxocheck wall [M] 1.191176s",
+      "mempoolcheck: GREEN [X] ([M] 109 rows; agree 109; mismatch 0; spec column [D]; node column independently recorded)",
+      "chain timing: mempoolcheck wall [M] 1.246037s",
+      "chaincheck: GREEN [X] ([M] 44 derived rows; agree 44; failures 0; node column independently recorded)",
+      "chaincheck scenarios: [M] 20 declared steps agree [X] in the spec projection; node column independently recorded; client/path/status projections owed",
+      "chain timing: chaincheck wall [M] 234.511674s",
+      "oraclecheck: inline mappings GREEN (8; uncovered re-checks decline)",
+      "oraclecheck: GREEN (36 rows; cpp-sigopcount 6; wrapper 30; agree 42; mismatch 0; key isolation 504)",
+      "chain timing: oraclecheck wall [M] 2.079559s",
+      "blockcheck: headers GREEN [X] ([M] 4233 rows; pow 4233; difficulty 3921; ancestry unavailable 312; mismatch 0; chain column [M])",
+      "blockcheck: boundaries GREEN [X] ([M] 95 rows; agree 95; mismatch 0; spec column [D]; node column independently recorded)",
+      "chain timing: blockcheck wall [M] 2.268629s",
+      "chain: GREEN [X] (spec projection; replay wall [M] 242.502840s; node excluded)"
+    ],
+    "verdict": "[X] GREEN; standalone, excluded from all"
+  },
+  "fix66_verification": {
+    "label": "[M]",
+    "recorded_utc": "2026-10-13T07:40:05.649788+00:00",
+    "source_commit": "a14c27c2ca26d9e3b012bee89cd4bf0a9bf4a80e",
+    "checks": {
+      "cargo": {
+        "command": "CARGO_BUILD_JOBS=4 cargo test --locked --manifest-path harness/Cargo.toml",
+        "exit": 0,
+        "output": [
+          "test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.18s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 12 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.76s",
+          "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.57s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      },
+      "cite": {
+        "command": "PYTHONPATH=<session-guard> python3 tools/cite_check.py",
+        "exit": 0,
+        "output": [
+          "cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      },
+      "pins": {
+        "command": "PYTHONPATH=<session-guard> CARGO_BUILD_JOBS=4 make check-pins",
+        "exit": 0,
+        "output": [
+          "check-parameters: GREEN (17 inherited fields; 81 chain fields: 9 consensus / 72 policy including node settings; names, order, kinds, defaults, presence; 17 network fields / 4 networks / 68 cells; import direction)",
+          "check-pins: GREEN (96 sites agree with docs/PROVENANCE.md \u00a71a; 3 skipped by name: the built gobdk-runner, the predecessor-harness clone, the predecessor-lean clone)"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      },
+      "specgen": {
+        "command": "python3 tools/specgen.py --check",
+        "exit": 0,
+        "output": [
+          "specgen --check: OK (117 files up to date; 1 rules flagged)"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      },
+      "metadata": {
+        "command": "python3 tools/scenario_metadata_check.py",
+        "exit": 0,
+        "output": [
+          "node metadata: GREEN [X] ([M] 590 exact-shaped tokens; six INDEX hashes)",
+          "witness schema/index: GREEN [X] ([M] 11 files)",
+          "receipt expectation labels: GREEN [X] ([M] 707 expectations)"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      },
+      "preservation": {
+        "command": "Python raw-byte/parsed-row comparison against origin/main; reviewed R2 triggers checked against 9c68ee2",
+        "exit": 0,
+        "output": [
+          "family preservation: GREEN [X] ([M] 442 rows; every non-node byte unchanged against origin/main)",
+          "intake preservation: GREEN [X] ([M] 2 files; only node metadata and the reviewed R2 trigger/prose amendment)"
+        ],
+        "verdict": "[X] GREEN within stated scope"
+      }
+    },
+    "leak_checks": [
+      {
+        "check": "round paths",
+        "matches": 0,
+        "exit": 1
+      },
+      {
+        "check": "broad paths",
+        "matches": 98,
+        "exit": 0
+      },
+      {
+        "check": "emails",
+        "matches": 0,
+        "exit": 1
+      }
+    ],
+    "closed_exclusions": "Session guard adds docs/sealed/ to citation HISTORY_PREFIX and excludes predecessor clone pointers before either checker enters main. Those clones were not tested by these checks.",
+    "status": "[X] Walled only on the broad inherited path grep; round receipts, email and local hostname checks empty",
+    "preservation_script": "import json,re,subprocess\nfrom pathlib import Path\nnode = re.compile(r'(\"node\"\\s*:\\s*)\"(?:[^\"\\\\]|\\\\.)*\"')\ndef git(ref,p): return subprocess.check_output(['git','show',ref+':'+str(p)],text=True)\ndef mask(s):return node.sub(r'\\1\"<node>\"',s)\nn=0\nfor fam in ['block','utxo','chain','finality','mempool']:\n p=Path(f'corpus/chain/{fam}/{fam}.jsonl');before=git('origin/main',p);after=p.read_text();assert mask(before)==mask(after),fam\n for a,b in zip(before.splitlines(),after.splitlines(),strict=True):\n  aa=json.loads(a);bb=json.loads(b);del aa['node'];del bb['node'];assert aa==bb;n+=1\nprint(f'family preservation: GREEN [X] ([M] {n} rows; every non-node byte unchanged against origin/main)')\ndef normalize(s, triggers):\n s=mask(s)\n s=re.sub(r'measured agree \\[X\\] docs/records/20261013-032121-s6-66b-regtest-s3.md','pending #66',s)\n s=s.replace('`action.trigger` RPC batch','`action.trigger` oracle event')\n matches=list(re.finditer(r'\"trigger\":\\s*',s));decoder=json.JSONDecoder()\n for m in reversed(matches):\n  value,end=decoder.raw_decode(s[m.end():]);triggers.append(value);s=s[:m.end()]+'\"<R2-trigger>\"'+s[m.end()+end:]\n return s\nfor p in sorted(Path('corpus/scenarios').glob('2026*.md')):\n old=[];new=[];reviewed=[]\n assert normalize(git('origin/main',p),old)==normalize(p.read_text(),new),p\n normalize(git('9c68ee29160e7a97ccd34fb463259f97e8d0afce',p),reviewed)\n assert new==reviewed\n assert len(old)==len(new)\n assert all(t['type']=='oracleInstrumentation' for t in old)\n assert all(t['type']=='rpc' and t['rpc']=='sendrawtransactions' and t['transactions']==['sweep0','sweep1'] for t in new)\nprint('intake preservation: GREEN [X] ([M] 2 files; only node metadata and the reviewed R2 trigger/prose amendment)')\n"
+  },
+  "counts_before_fix66b": {
+    "block": {
+      "rows": 95,
+      "realized": 47,
+      "agree": 47,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 46,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "utxo": {
+      "rows": 80,
+      "realized": 48,
+      "agree": 48,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 30,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "chain": {
+      "rows": 44,
+      "realized": 19,
+      "agree": 19,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 1,
+      "needs-peer": 5,
+      "pending": 19
+    },
+    "finality": {
+      "rows": 114,
+      "realized": 75,
+      "agree": 75,
+      "diverge": 0,
+      "rpc-precheck": 1,
+      "unrealizable": 38,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "mempool": {
+      "rows": 109,
+      "realized": 57,
+      "agree": 57,
+      "diverge": 0,
+      "rpc-precheck": 2,
+      "unrealizable": 31,
+      "needs-peer": 15,
+      "pending": 4
+    },
+    "oracle": {
+      "rows": 30,
+      "realized": 30,
+      "agree": 30,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "intake": {
+      "rows": 20,
+      "realized": 20,
+      "agree": 20,
+      "diverge": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0,
+      "needs-peer": 0,
+      "pending": 0
+    },
+    "five-family total": {
+      "rows": 442,
+      "realized": 246,
+      "agree": 246,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 146,
+      "needs-peer": 20,
+      "pending": 23
+    },
+    "chain/oracle total": {
+      "rows": 472,
+      "realized": 276,
+      "agree": 276,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 146,
+      "needs-peer": 20,
+      "pending": 23
+    },
+    "round total": {
+      "rows": 492,
+      "realized": 296,
+      "agree": 296,
+      "diverge": 0,
+      "rpc-precheck": 7,
+      "unrealizable": 146,
+      "needs-peer": 20,
+      "pending": 23
+    }
+  },
+  "fix66b_fold_heads": {
+    "mem3": "7e1721ada3e2780454fc77ae3438d58228d6e11b",
+    "chn3": "e882ca52a58aaeca26d0e98fd0eb43e937b8ebe6",
+    "leg": "d8be14f39d945901968730807d853f4c4fc259b7"
+  },
+  "source_records_before_fix66b": [
+    {
+      "path": "docs/records/20261013-024612-s6-66-regtest-s3.md",
+      "sha256": "7bb568daae03136912009eeb15c0e5425058e571dd7a69f0045b42d1022ad3b1",
+      "receipt": "docs/records/20261013-024612-s6-66-regtest-s3.json",
+      "receipt_sha256": "7c228b871acc11c4ed83cf3762a0d71179ff5766e492b4332d8a921b82c4a5ce"
+    },
+    {
+      "path": "docs/records/20261013-032121-s6-66b-regtest-s3.md",
+      "sha256": "96c04bd3802c114ec19340662a0f20d1ba5b6028b4c9569640dd1807c831106c",
+      "receipt": "docs/records/20261013-032121-s6-66b-regtest-s3.json",
+      "receipt_sha256": "0ef4e499a6a65ba3140f73b5b83b7dbbe56724e2e7fb70ffb60df009a7415188"
+    },
+    {
+      "path": "docs/records/20261013-041541-s6-66c-regtest-s3.md",
+      "sha256": "9fa3dbe8c0edd053ad9b4a59c41aa0ba194f8852661d80cb5e8bbe42b290dcda",
+      "receipt": "docs/records/20261013-041541-s6-66c-regtest-s3.json",
+      "receipt_sha256": "b31600098010ab746e2b9b91e4d3c70be82a1b44d94fe259fb3c9cbd78534b48"
+    },
+    {
+      "path": "docs/records/20261013-045648-s6-66-utx-regtest-s3.md",
+      "sha256": "5cd1bb9a28a99afd114740c30c6880907969310dd52b3f08b1048d151970afff",
+      "receipt": "docs/records/20261013-045648-s6-66-utx-regtest-s3.json",
+      "receipt_sha256": "d707bad8d8790eb9e0ec6554fbf21fc73cafded10c5c6e6ca5322d7c2b112b78"
+    },
+    {
+      "path": "docs/records/20261013-045710-s6-66-fin-regtest-s3.md",
+      "sha256": "48ec99e9f27603d10267a0babbe211484122e20f88228c92a0ff3d943e0bb9a6",
+      "receipt": "docs/records/20261013-045710-s6-66-fin-regtest-s3.json",
+      "receipt_sha256": "d82a08b057cff43fc0ee6fb26b06f251660c255c24ce4458e7e0a0a8b7cb43de"
+    },
+    {
+      "path": "docs/records/20261013-045714-s6-66-blk-regtest-s3.md",
+      "sha256": "a3372ca09eb7c25e046f483abfad979f0f0dffbe3b1496fe44a895fa70ea487e",
+      "receipt": "docs/records/20261013-045714-s6-66-blk-regtest-s3.json",
+      "receipt_sha256": "52d8e93143f99f6a996390c37dc79c2c23bc4469d98e6a608d9b52095e6bd3a0"
+    },
+    {
+      "path": "docs/records/20261013-045854-s6-66-mem-regtest-s3.md",
+      "sha256": "e1f8f3e4d3d7b1abec74ca478444ead5e95e7b334211011a24118b31cb9fa76d",
+      "receipt": "docs/records/20261013-045854-s6-66-mem-regtest-s3.json",
+      "receipt_sha256": "e18219500f65e0220b9a46e6782633aede8fda0a8168d64c9606c40331b6c32d"
+    },
+    {
+      "path": "docs/records/20261013-045905-s6-66-chn-regtest-s3.md",
+      "sha256": "2dc2a22c5d456ac14af8ec6618a70984cfaf7fd4715ffda7ed2aae22eaa30a24",
+      "receipt": "docs/records/20261013-045905-s6-66-chn-regtest-s3.json",
+      "receipt_sha256": "24f57db83cec67ef611f24a191ebfc241ae3fdf4a2adc24719e3cd24f22cb125"
+    },
+    {
+      "path": "docs/records/20261013-061948-s6-66-mem2-regtest-s3.md",
+      "sha256": "3ffc9d1977d174f450a3283da92ad6692fdd9fd0e904cf9c9e43ccd3b4db9c40",
+      "receipt": "docs/records/20261013-061948-s6-66-mem2-regtest-s3.json",
+      "receipt_sha256": "f4ea1fd5ca49791e0d462124174d4bf4ce69dc68d82d57841adcd9668e9f7a63"
+    },
+    {
+      "path": "docs/records/20261013-061734-s6-66-chn2-regtest-s3.md",
+      "sha256": "16743d9b6e72b95da9f53d16bc997b64058c9908ca540f15b2e8e6c7a17d3797",
+      "receipt": "docs/records/20261013-061734-s6-66-chn2-regtest-s3.json",
+      "receipt_sha256": "ff520fba8f0286d0c35848ae0551c4cbffb99d15a0f6374a29ecadc6359a03fa"
+    }
+  ],
+  "runner_digests_before_fix66b": {
+    "harness/src/scenarios/block.rs": "2f9610f92fef34e7f373dc2da799128ed7db3cdfaf7b5519c23b640bccf07c37",
+    "harness/src/scenarios/chain.rs": "8087e1eda4eb38adcc366c4a91bf4e243d7b6ef181145b86c41196d8d64fa038",
+    "harness/src/scenarios/core.rs": "eecddcd2ff9fc7608605a7055fbb60dff76a8eb267b66d2465bad24c30c54850",
+    "harness/src/scenarios/finality.rs": "fe1054bf523eb92aae38d21cceb1eb0231e022ed7bb1571b557e5f63721c72a1",
+    "harness/src/scenarios/intake.rs": "648afc8207afa37df2de2a471e70de018a498bbb62140c706f6d31eb3d100069",
+    "harness/src/scenarios/mempool.rs": "58280fb69b60fc63de9c3548efb101fac66946c2ca509a4da80b78a1544be185",
+    "harness/src/scenarios/mod.rs": "81ae4be94367f35b5b0328159a369a6ec66c3701f9b098b0c8649b96d12ba966",
+    "harness/src/scenarios/oracle.rs": "c851285e6201d6e94f089aa09bafcc6265cce0842b2feaae03139f2551139516",
+    "harness/src/scenarios/utxo.rs": "8cd93732c9de8b6ad24b1ef1aa396beab0df3d66c01218a102ac02df7e901847"
+  },
+  "fix66b_verification_record": "docs/records/20261013-082500-fix-66b-verification-s3.md"
+}

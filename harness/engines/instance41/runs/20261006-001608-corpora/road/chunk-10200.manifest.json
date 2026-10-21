@@ -1,0 +1,950 @@
+{
+  "artifacts_sha256": {
+    "answers.jsonl": "b172b5ec883b12e30b9b9b153413556a6599a3d4a16b7c0be8b1ca1bf6a10387",
+    "funding.jsonl": "53553d69e03f04386d5bfcdf327341b600f72c951de5f8263af49287ae244daa",
+    "rpc.jsonl": "61850230fa0df86a1c69e82e815cbee2a6331b5ab84144bc39b5f691cc7c13eb",
+    "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corpus": {
+    "manifest_count": 13512,
+    "name": "road",
+    "path": "corpus/road/road.jsonl",
+    "run_count": 3312,
+    "run_from": 10200,
+    "sha256": "a292c5dbf682505379a5ff1b3870f5fbcbcfe65bdeaa4632b9eb7250eef7e543"
+  },
+  "counts": {
+    "block": {
+      "agreeing": 3231,
+      "disagreeing": 0,
+      "entries": 3312,
+      "judged": 3231,
+      "no_reference": 0,
+      "undecided": 73,
+      "unfundable": 8
+    },
+    "mempool": {
+      "agreeing": 3231,
+      "disagreeing": 0,
+      "entries": 3312,
+      "judged": 3231,
+      "no_reference": 0,
+      "undecided": 73,
+      "unfundable": 8
+    }
+  },
+  "final_tip": {
+    "bestblockhash": "0156ce257cfb4398dac9eee8e1d33e15ef637b89476b244be3a0a9090dd1b178",
+    "blocks": 252,
+    "chain": "regtest",
+    "mediantime": 1791249512,
+    "time": 1791250326
+  },
+  "funding_wall": null,
+  "initial_tip": {
+    "bestblockhash": "28ac66b9106c7d25040f551fcf5e6c95757fbb27b85b44b61bdb086d39569593",
+    "blocks": 249,
+    "chain": "regtest",
+    "mediantime": 1791249068,
+    "time": 1791249905
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "host": "box",
+    "listeners": [
+      "127.0.0.1:8000",
+      "127.0.0.1:8081",
+      "127.0.0.1:8082",
+      "127.0.0.1:8084",
+      "127.0.0.1:8085",
+      "127.0.0.1:8086",
+      "127.0.0.1:8087",
+      "127.0.0.1:8088",
+      "127.0.0.1:8090",
+      "127.0.0.1:8833",
+      "127.0.0.1:8834",
+      "127.0.0.1:9091",
+      "127.0.0.1:9292"
+    ],
+    "native_client_sha256": "528ec6de05c65498aea684d92a8572e92bdba814322bab87e049c6513a78dee4",
+    "pid": 53309,
+    "rpc": "http://127.0.0.1:9292",
+    "settings": {
+      "environment": {
+        "DATADIR": "~/bsv/targets/spec-teranode/data",
+        "GOMAXPROCS": "4",
+        "GOMEMLIMIT": "6GiB",
+        "HOME": "~",
+        "LC_ALL": "C",
+        "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+        "SETTINGS_CONTEXT": "test",
+        "SETTINGS_ENV_FILE": "/dev/null",
+        "TMPDIR": "~/bsv/targets/spec-teranode/data/runtime/tmp"
+      },
+      "files": {
+        "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
+        "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
+        "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+      },
+      "services": [
+        "-all=0",
+        "-blockchain=1",
+        "-subtreevalidation=1",
+        "-blockvalidation=1",
+        "-blockassembly=1",
+        "-asset=1",
+        "-propagation=1",
+        "-rpc=1",
+        "-p2p=0",
+        "-alert=0",
+        "-legacy=0",
+        "-validator=1"
+      ]
+    },
+    "settings_hash": "133d2473bdbbfe199b39f7e586a80c37eed0936b952749759f616593bed8ce88",
+    "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
+    "tag": "v0.16.0",
+    "validator": "127.0.0.1:8081"
+  },
+  "mapping": {
+    "basis": "tracker comment 5853443740; go-chaincfg v1.6.2 params.go:276-277 (mainnet), 463,475-476 (regtest)",
+    "funding_targets": {
+      "post-chronicle": "200 or a later tip of the same era",
+      "post-genesis": "next available height, 100 through 198",
+      "pre-genesis": "none: no coinbase output matures below height 100; undecided"
+    },
+    "mainnet": {
+      "chronicle": 943816,
+      "genesis": 620538
+    },
+    "outpoints": "rebound, locking scripts and values preserved; signature and absolute-height/time rows excluded",
+    "regtest": {
+      "chronicle": 200,
+      "coinbase_maturity": 100,
+      "genesis": 100
+    },
+    "spend_height": "confirmed funding height + 1; actual chain tip + 1"
+  },
+  "paths": {
+    "block": "node ValidatorAPI.ValidateTransaction, SkipPolicyChecks=true, InBlock=true, parents read from its store; full block-wrapper acceptance is not inferred",
+    "mempool": "node sendrawtransaction under its recorded test settings"
+  },
+  "provenance": "synthetic seed corpus; node at the tagged pin on the local private chain; witnesses are unclassified findings",
+  "rpc_calls": 16192,
+  "undecided": [
+    {
+      "id": "road-crypto-00008",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00008",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00010",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00010",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00011",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00011",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00012",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00012",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00013",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00013",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00014",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00014",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00016",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00016",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00018",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00018",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00020",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00020",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00024",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00024",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00025",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00025",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00028",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00028",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00029",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00029",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00030",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00030",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00031",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00031",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00032",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00032",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00033",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00033",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00034",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00034",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00035",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00035",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00036",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00036",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00038",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00038",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00039",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00039",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00040",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00040",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00041",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00041",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00042",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00042",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00050",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00050",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00051",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00051",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00052",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00052",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00053",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00053",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00054",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00054",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00055",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00055",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00056",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00056",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00058",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00058",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00060",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00060",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00062",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00062",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00066",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00066",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00067",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00067",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00070",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00070",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00071",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00071",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00072",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00072",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00073",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00073",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00074",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00074",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00075",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00075",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00076",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00076",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00077",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00077",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00078",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00078",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00079",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00079",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00080",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00080",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00081",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00081",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00082",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00082",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00083",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00083",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00084",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-crypto-00084",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00173",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00173",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00174",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00174",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00175",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00175",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00176",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00176",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00178",
+      "path": "block",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00178",
+      "path": "mempool",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00179",
+      "path": "block",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00179",
+      "path": "mempool",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00429",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00429",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00430",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00430",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00431",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00431",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00432",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00432",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-bytes-00434",
+      "path": "block",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00434",
+      "path": "mempool",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00435",
+      "path": "block",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-bytes-00435",
+      "path": "mempool",
+      "reason": "CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)"
+    },
+    {
+      "id": "road-gen-00013",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00013",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00014",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00014",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00969",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00969",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00970",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00970",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00971",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00971",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00972",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00972",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00983",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00983",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00992",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00992",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00993",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    },
+    {
+      "id": "road-gen-00993",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not rewrite signatures"
+    }
+  ],
+  "unfundable": [
+    {
+      "id": "road-flow-00927",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][e432e742c0ca1a15a6e63672da8a8dcea64f6c4fcdc0dc88a2a712aa00bf1f84] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00927",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][e432e742c0ca1a15a6e63672da8a8dcea64f6c4fcdc0dc88a2a712aa00bf1f84] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00928",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][1d4c49989ad1c37afe416e0b156ae11750e0692dcfe9283b650b46c02d5b652e] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00928",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][1d4c49989ad1c37afe416e0b156ae11750e0692dcfe9283b650b46c02d5b652e] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00929",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][7dc6b60f4011d264b844306b05ae5cfe47bcf6c265aa88c9b8b94e87a29bf7c2] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00929",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][7dc6b60f4011d264b844306b05ae5cfe47bcf6c265aa88c9b8b94e87a29bf7c2] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00930",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][03eea3b7173f1d0e36cd93b12090722f651cd4996d6f2a75cfefd35c87d308da] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-00930",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][03eea3b7173f1d0e36cd93b12090722f651cd4996d6f2a75cfefd35c87d308da] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-01093",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][c3f147744014eab4a8acfd3aefa86156a93eec5f874564530439f85ff9eaf0ab] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-01093",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][c3f147744014eab4a8acfd3aefa86156a93eec5f874564530439f85ff9eaf0ab] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-01094",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][50bdbe46ece48fbbde6e3fa1194d4bdff6174e8b0d797b74fbc69d10f668d9f8] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-flow-01094",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][50bdbe46ece48fbbde6e3fa1194d4bdff6174e8b0d797b74fbc69d10f668d9f8] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-bytes-00105",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][de2a62b5f1a89275eabb3a001880e95f1846e319f322e70ec8ec81dfd012a839] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-bytes-00105",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][de2a62b5f1a89275eabb3a001880e95f1846e319f322e70ec8ec81dfd012a839] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-bytes-00361",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][39479b651cc91211b96a514838be6d188b470bfd0a3911b37a08c5a6d748bfab] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "road-bytes-00361",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][39479b651cc91211b96a514838be6d188b470bfd0a3911b37a08c5a6d748bfab] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    }
+  ],
+  "wall_seconds": 388.402914042
+}

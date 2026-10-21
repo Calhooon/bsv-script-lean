@@ -1,0 +1,549 @@
+{
+ "engine": "bsv-rs",
+ "pin": "0.3.33",
+ "source": "transcribed 2026-09-26 (S3, set 4) from harness/src/bin/run_diff.rs explain()/rule_record()/era_rule_record() at e74a503, arm by arm in order; the classes' text verbatim",
+ "classes": {
+  "crypto.checksig.unlock": {
+   "decided_by": "interpreter.cpp:1474–1481 (the locking script appended to the scriptCode of a CHECKSIG in the unlocking script under CHRONICLE), 2321–2334; bsv-rs 0.3.24 spend.rs:186, 237",
+   "ruling": "impl-wrong",
+   "note": "reached only with a non-push unlocking script, which bsv-rs refuses regardless of version"
+  },
+  "engine.resource-abort": {
+   "decided_by": "the reference decides the input (its verdict recorded in the entry as sv-node@v1.2.2 on both instances, corpus/INDEX.md §4c; the spec's verdict in the witness); bsv-rs 0.3.33 spend.rs:467–473 (the LOCAL budget in force, memory_limit(): with memory_limit None, as engine.rs runs the crate, under a word WORD_MEMORY_LIMIT, 110–118, the node's POLICY default 100,000,000 on the block path as on the mempool path; in the default mode DEFAULT_MEMORY_LIMIT 32,000,000, 108), charged before any growth by check_node_budget 2415–2430 (the policy's verdict first, 2416–2422; then the local budget as a resource_error, 2423–2428, 2451–2463) and at OP_NUM2BIN's element check before the allocation (1190–1191); the reference bounds an element after Genesis by the stack memory budget alone (limitedstack; configscriptpolicy.cpp:139–154; the consensus budget is the operator's MANDATORY -maxstackmemoryusageconsensus, bitcoind.cpp:140–157, 0 meaning INT64_MAX, configscriptpolicy.cpp:280–283 and consensus.h:82, and the spec's oracle sets 0, harness/oracle/bitcoin.conf:40; OP_NUM2BIN's own bound INT32_MAX at interpreter.cpp:1749–1752) and a number by its length at the read (script_num.cpp:62 → interpreter.cpp:1807–1810) or at the shift's result (script_num.cpp:303–317 at v1.2.3); through 0.3.29 the default mode's budget applied in every mode (spend.rs:73 at 0.3.29, spend.rs:72 at 0.3.28): the Finding on #47 (5860579463) is the block path's budget at 0.3.30; the class stays for the seeded run's six (T3's call and the parent's decision, 2026-09-28): under memory_limit Some(usize::MAX), the oracle's budget, each of the four witness lines gives the spec's verdict ([X-local] in T3's window, its sitting-4 END BLOCK, 2026-09-28T13:23:23Z)",
+   "ruling": "impl-wrong",
+   "note": "the crate returns no verdict where the reference decides (a refusal with its code or an acceptance): an abort by D15 (2026-09-24, #42), a witness and never an undecided run; the entry names the crate's budget, not a semantics"
+  },
+  "engine.word-out-of-scope": {
+   "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+   "ruling": "open",
+   "note": "an explicit flag word outside the crate's declared scope (#49's corpus/cpp/replay carries the reference's unit-test words, most of them pre-Genesis and without FORKID): the crate refuses the word where the reference judges the script; the same scope as eras.utxo.pre-genesis's NotApplicable, reached through the entry's explicit word, so the driver files it as a verdict and not as undecided"
+  },
+  "eras.height.cltv": {
+   "decided_by": "verify_script_flags.cpp:46–48; interpreter.cpp:519–560",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis spend: NotApplicable in bsv-rs"
+  },
+  "eras.height.csv": {
+   "decided_by": "verify_script_flags.cpp:50–52; interpreter.cpp:562–597",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis spend: NotApplicable in bsv-rs"
+  },
+  "eras.height.daa": {
+   "decided_by": "verify_script_flags.cpp:64–69 (the tip's height); interpreter.cpp:282–287, 1491–1497",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis spend: NotApplicable in bsv-rs"
+  },
+  "eras.height.dersig": {
+   "decided_by": "verify_script_flags.cpp:42–44 (tip + 1); interpreter.cpp:275–280",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis spend: NotApplicable in bsv-rs"
+  },
+  "eras.height.p2sh": {
+   "decided_by": "verify_script_flags.cpp:38–40 against the tip's height (validation.cpp:2973–2982, 3473)",
+   "ruling": "impl-wrong",
+   "note": "the P2SH flag enters the block word one block after p2shHeight; a pre-Genesis coin: NotApplicable in bsv-rs"
+  },
+  "eras.height.uahf": {
+   "decided_by": "verify_script_flags.cpp:54–59 (the tip's height); interpreter.cpp:291–307, 2315–2319",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis spend: NotApplicable in bsv-rs"
+  },
+  "eras.spend.chronicle": {
+   "decided_by": "verify_script_flags.cpp:77–78; interpreter.cpp:40–44, 2326–2327, 296–303, 2112–2124",
+   "ruling": "impl-wrong",
+   "note": "CHRONICLE by the spend era: the version gate, the hash-type bit, the original digest"
+  },
+  "eras.spend.genesis": {
+   "decided_by": "verify_script_flags.cpp:71–75; policy.h:230–233; interpreter.cpp:2321–2334",
+   "ruling": "impl-wrong",
+   "note": "GENESIS and SIGPUSHONLY by the spend era"
+  },
+  "eras.utxo.post-chronicle": {
+   "decided_by": "interpreter.cpp:360–375, 598–608, 773–812, 609–764; consensus.h:66; bsv-rs flags.rs UTXO_AFTER_CHRONICLE, spend.rs utxo_after_chronicle (0.3.27)",
+   "ruling": "impl-wrong",
+   "note": "a post-Chronicle coin: the re-enabled opcodes and the 32 MB numbers"
+  },
+  "eras.utxo.post-genesis": {
+   "decided_by": "interpreter.cpp:411–427; the post-Genesis rules at their sites (858–861, 829–831, 520, 563); bsv-rs flags.rs UTXO_AFTER_GENESIS",
+   "ruling": "impl-wrong",
+   "note": "a post-Genesis, pre-Chronicle coin under the spend's word with its own Chronicle marker off"
+  },
+  "eras.utxo.pre-genesis": {
+   "decided_by": "interpreter.cpp:411–427 (the coin's era from the markers), 455–456, 1800–1803, 466–467, 470–471, 520, 563, 829–831, 867–869; configscriptpolicy.cpp:65–154 (the pre-Genesis limits)",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin: bsv-rs has no word for it (NotApplicable); a divergence here is the runner's, investigate"
+  },
+  "expansion.as-nop": {
+   "decided_by": "interpreter.cpp:609–641 (OP_SUBSTR), 642–666 (OP_LEFT), 667–691 (OP_RIGHT), 692–727 (OP_LSHIFTNUM), 728–764 (OP_RSHIFTNUM): executed for a post-Chronicle UTXO, NOPs before, each in its own pre-Chronicle branch (611–616, 644–649, 669–674, 694–699, 730–735); bsv-rs 0.3.24 spend.rs:407 (0xb3..=0xb7 => {} a NOP in every era)",
+   "ruling": "impl-wrong",
+   "note": "the script carries an expansion opcode; bsv-rs judges it as if the opcode were absent (#18)"
+  },
+  "expansion.shift.count-bigint": {
+   "decided_by": "interpreter.cpp:708–711 and 744–747 (OP_LSHIFTNUM/OP_RSHIFTNUM read the count as CScriptNum{…, true}: the big-int path; a negative count is INVALID_NUMBER_RANGE at 713–714 / 749–750), script_num.cpp:301–315 (the left shift's size bound: OVERFLOW) and 332–360 (the right shift), big_int.cpp:359–369 (operator<<=(const bint&)) and 383–393 (operator>>=(const bint&)): a count that does not fit an int throws big_int_error, caught at interpreter.cpp:1819–1821 as SCRIPT_ERR_BIG_INT; the spec's own SV-node instance says SCRIPT_ERR_BIG_INT on gen-00835 (1 OP_RSHIFTNUM 2147483648; corpus/INDEX.md §4c); bsv-rs 0.3.28 spend.rs:1904 (a negative count refused; any other count shifts: 1 >> 2^31 = 0, valid)",
+   "ruling": "impl-wrong",
+   "note": "the crate shifts by any non-negative count where the reference refuses a count outside int with SCRIPT_ERR_BIG_INT (a right shift; a left shift by such a count fails the size bound first, SCRIPT_ERR_SCRIPTNUM_OVERFLOW, which the crate meets with a resource abort at its element budget: undecided, #42)"
+  },
+  "flags.discourage-upgradable-nops": {
+   "decided_by": "policy.h:186 (a standard-set, never-mandatory flag; script_flags.h:56–57); interpreter.cpp:765–771, 522, 565, 613, 646, 671, 696, 732; bsv-rs 0.3.24 spend.rs:406–408 (NOP1..NOP10 do nothing, no relay policy)",
+   "ruling": "open",
+   "note": "a POLICY flag: the relay word refuses an executed upgradable NOP, the block word and bsv-rs accept it; not a consensus divergence (blockScriptFlags_policy_off)"
+  },
+  "flags.policy-as-consensus": {
+   "decided_by": "policy.h:178–190 (MINIMALDATA, NULLDUMMY, CLEANSTACK are standard-set flags; verify_script_flags.cpp:32–81 never sets them in a block word; blockScriptFlags_policy_off); bsv-rs 0.3.24 spend.rs:190–192 (require_minimal, require_low_s, require_clean_stack for version <= 1), 1404–1416 (the dummy); fixed in 0.3.26 (bsv-rs#10: the block word carries none of them)",
+   "ruling": "impl-wrong",
+   "note": "bsv-rs 0.3.24 judged a version-1 spend by the relay restrictions as a consensus validator; under the block word (0.3.26+) this rule is expected empty"
+  },
+  "flags.sigpushonly": {
+   "decided_by": "interpreter.cpp:2321–2334 (push-only only under SIGPUSHONLY with Genesis-without-Chronicle, or Chronicle with version <= 1); bsv-rs 0.3.24 spend.rs:186, 237 (require_push_only, not version-gated)",
+   "ruling": "impl-wrong",
+   "note": "post-Chronicle a version-2 spend may carry non-push opcodes in its unlocking script; bsv-rs refuses it regardless of version"
+  },
+  "flags.version-gate.nulldummy": {
+   "decided_by": "interpreter.cpp:1664–1670 (NULLDUMMY under the flag and the version gate); bsv-rs 0.3.24 spend.rs:1404–1416 (the dummy must be empty regardless of version)",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "flags.version-gate.nullfail": {
+   "decided_by": "interpreter.cpp:1491–1497, 1641–1647 (SCRIPT_ERR_SIG_NULLFAIL under NULLFAIL and the version gate); bsv-rs has no NULLFAIL rule (spend.rs: no site)",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "flow.else": {
+   "decided_by": "conditional_tracker.cpp:51–55 with interpreter.cpp:829–831 (a second OP_ELSE for the same OP_IF is unbalanced post-Genesis); bsv-rs 0.3.24 spend.rs:431–437 (toggles again)",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "flow.return": {
+   "decided_by": "interpreter.cpp:856–871 with 482 (a non-top-level OP_RETURN post-Genesis stops execution but the conditional balance is still enforced, and a later top-level OP_RETURN returns OK); bsv-rs 0.3.24 spend.rs:455–468 (jumps to the end and clears the if-stack)",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "flow.unknown-opcode": {
+   "decided_by": "interpreter.cpp:1795 (the switch's default: SCRIPT_ERR_BAD_OPCODE when executed; opcodes.h:152 FIRST_UNDEFINED_OP_VALUE); bsv-rs 0.3.24 spend.rs:409–410 (0xba..=0xff => {} a NOP)",
+   "ruling": "impl-wrong",
+   "note": "an executed undefined opcode fails in the reference and is a no-op in bsv-rs"
+  },
+  "flow.ver": {
+   "decided_by": "interpreter.cpp:598–608 (OP_VER pushes the version for a post-Chronicle UTXO), 773–781, 806–812 (OP_VERIF/OP_VERNOTIF); bsv-rs 0.3.24 spend.rs:1699–1701 (is_opcode_disabled)",
+   "ruling": "impl-wrong",
+   "note": "the Chronicle opcodes are disabled always in bsv-rs"
+  },
+  "limits.maxscriptnumlength": {
+   "decided_by": "script_num.cpp:62 (the constructor's length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; configscriptpolicy.cpp:88–95 (750,000 post-Genesis, 32,000,000 post-Chronicle at consensus, consensus.h:64, :66; the policy default 10,000, policy.h:156); bsv-rs script_num.rs (a BigNumber, no length limit at 0.3.27)",
+   "ruling": "impl-wrong",
+   "note": "bsv-rs 0.3.27 read a number of any length (the class's witnesses); since 0.3.28, under a flag word, the crate caps the number length at the word's era (spend.rs max_script_num_length, flags.rs max_script_num_length: 750,000 post-Genesis, 32,000,000 post-Chronicle, the policy 10,000 on a mempool word); the reference's consensus width is the coin's era's (#20, the eras corpus: a 1,048,577-byte number on a post-Genesis, pre-Chronicle coin); on the like-for-like column the policy width 10,000 is a POLICY limit"
+  },
+  "num.arith.2div": {
+   "decided_by": "interpreter.cpp:360–375, 1251–1254 (bn /= 2); bsv-rs 0.3.24 spend.rs:1699–1701",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "num.arith.2mul": {
+   "decided_by": "interpreter.cpp:360–375 (disabled unless the UTXO era is post-Chronicle), 1247–1250 (bn += bn); bsv-rs 0.3.24 spend.rs:1699–1701",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "p2sh.disabled": {
+   "decided_by": "interpreter.cpp:2355, 2383 (SCRIPT_UTXO_AFTER_GENESIS): the P2SH shape is a plain script for a coin created after Genesis; bsv-rs flags.rs (no P2SH evaluation, faithful under UTXO_AFTER_GENESIS)",
+   "ruling": "impl-wrong",
+   "note": "the hash puzzle"
+  },
+  "p2sh.grandfathered": {
+   "decided_by": "interpreter.cpp:2354–2356, 2380–2424 (a pre-Genesis coin only); script.cpp:164–168",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin: NotApplicable in bsv-rs"
+  },
+  "p2sh.output.post-genesis": {
+   "decided_by": "validation.cpp:610–623 (bad-txns-vout-p2sh): a transaction-level rule the script engines never see",
+   "ruling": "impl-wrong",
+   "note": "the scripts are valid on both sides; the S3 node oracle decides the transaction"
+  },
+  "p2sh.pushonly": {
+   "decided_by": "interpreter.cpp:2385–2387",
+   "ruling": "impl-wrong",
+   "note": "the P2SH path's own push-only demand; a pre-Genesis coin: NotApplicable in bsv-rs"
+  },
+  "push.truncated": {
+   "decided_by": "script.h:190–191 (GetOp2 returns false on a truncated push) → interpreter.cpp:450–451 SCRIPT_ERR_BAD_OPCODE; bsv-rs 0.3.24 script.rs:217–260 clamps the push to the bytes present (.min(length))",
+   "ruling": "impl-wrong",
+   "note": "bsv-rs's parser is lenient: a truncated push becomes a shorter push and the script runs on"
+  },
+  "sighash.dispatch.chronicle-bip143": {
+   "decided_by": "interpreter.cpp:2112–2124 (SignatureHash: the BIP143 digest iff SCRIPT_ENABLE_SIGHASH_FORKID and the FORKID bit and NOT the CHRONICLE bit, 2118–2121; the original digest otherwise, 2123: Q2, the CHRONICLE bit reaches the original digest on mainnet today), 291–303 (the bit legal under SCRIPT_CHRONICLE); the spec's own SV-node instance agrees with the spec on every CHRONICLE-bit row of corpus/gen, both instances (corpus/INDEX.md §4c, 2026-09-24); bsv-rs 0.3.28 spend.rs:1953–1962 (compute_sighash_for_signing for every scope) and 0.3.28 sighash.rs:682 (the BIP143 function; no original digest)",
+   "ruling": "impl-wrong",
+   "note": "the crate verifies a CHRONICLE-bit signature against the BIP143 digest where the reference uses the original digest: it refuses the valid spends (the type, original and truncated-push rows) and accepts a CHRONICLE-bit signature made over BIP143 (gen-00992) that the reference refuses; a class for the crate's tracker (S3, 2026-09-24)"
+  },
+  "sighash.scriptcode.findanddelete": {
+   "decided_by": "interpreter.cpp:255–263, 1484 (no FindAndDelete when FORKID is enabled and in the type); bsv-rs 0.3.24 spend.rs:1360, 1512 (find_and_delete always)",
+   "ruling": "impl-wrong",
+   "note": ""
+  },
+  "sighash.type.undefined-base": {
+   "decided_by": "interpreter.cpp:291–295 (under STRICTENC, GetHashType(vchSig).isDefined() or SCRIPT_ERR_SIG_HASHTYPE) with sighashtype.h:82–90 (isDefined: the base type with the ANYONECANPAY, FORKID and CHRONICLE bits cleared is ALL, NONE or SINGLE); the spec's own SV-node instance says SIG_HASHTYPE on gen-00969, gen-00970 and gen-00971 (§4c); bsv-rs 0.3.28 spend.rs:1739–1766 (check_signature_encoding: DER, low-S and the FORKID bit; no base-type check)",
+   "ruling": "impl-wrong",
+   "note": "a signature whose hash type has base 0, 4 or 31 is accepted by the crate and verified over that type's BIP143 digest; the reference refuses it before verifying; a class for the crate's tracker (S3, 2026-09-24)"
+  },
+  "splice.num2bin.memory": {
+   "decided_by": "interpreter.cpp:1771–1777 with configscriptpolicy.cpp:139–154 (the consensus budget INT64_MAX); bsv-rs 0.3.24 spend.rs:54, 764–770 (a 32,000,000-byte local limit, a resource error)",
+   "ruling": "impl-wrong",
+   "note": "the 0.3.24 reading (a resource verdict reported, never counted) kept as history; since 2026-09-24 the crate's abort on an entry the spec decides is the witness class engine.resource-abort (D15)"
+  },
+  "splice.substr.int64-reader": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  }
+ },
+ "rows": [
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "id_in": [
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "gen-00796",
+     "gen-01018",
+     "gen-01020",
+     "gen-01024",
+     "gen-01026",
+     "gen-01028",
+     "gen-01030",
+     "gen-01032",
+     "gen-01034",
+     "gen-01036",
+     "gen-01038",
+     "gen-01040",
+     "gen-01042",
+     "gen-01044",
+     "gen-01046",
+     "gen-01050",
+     "gen-01052",
+     "gen-01054",
+     "gen-01056",
+     "gen-01058",
+     "gen-01062",
+     "gen-01064",
+     "gen-01066",
+     "gen-01068",
+     "gen-01070",
+     "gen-01074",
+     "gen-01076",
+     "gen-01078",
+     "gen-01080",
+     "gen-01082",
+     "gen-01086",
+     "gen-01088",
+     "gen-01090",
+     "gen-01092",
+     "gen-01094",
+     "gen-01096",
+     "gen-01098",
+     "gen-01102",
+     "gen-01104",
+     "gen-01106",
+     "gen-01108",
+     "gen-01112",
+     "gen-01116",
+     "gen-01118",
+     "gen-01120",
+     "gen-01122",
+     "gen-01126",
+     "gen-01130",
+     "gen-01132",
+     "gen-01134",
+     "gen-01136",
+     "gen-01140",
+     "gen-01144",
+     "gen-01146",
+     "gen-01148",
+     "gen-01150",
+     "gen-01154",
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "road-gen-00796"
+    ],
+    "spec": "invalid",
+    "engine": "valid",
+    "has_opcode_any": [
+     179,
+     180,
+     181
+    ]
+   },
+   "class": "splice.substr.int64-reader"
+  },
+  {
+   "why": "D15 (#42, 2026-09-24): the crate's RESOURCE abort on an entry the spec decides is a witness, never an undecided run (the driver files it before any other arm)",
+   "when": {
+    "engine": "resource"
+   },
+   "class": "engine.resource-abort"
+  },
+  {
+   "why": "#49's replay (2026-10-06): an explicit word the crate refuses as outside its scope (bsv-rs 0.3.33 flags.rs:500–519), before any shape row",
+   "when": {
+    "engine_code": "SCRIPT_ERR_INVALID_FLAGS",
+    "native_starts_with": "Invalid verification flags: SIGHASH_FORKID is not set"
+   },
+   "class": "engine.word-out-of-scope"
+  },
+  {
+   "why": "#49's replay (2026-10-06): an explicit word the crate refuses as outside its scope (bsv-rs 0.3.33 flags.rs:500–519), before any shape row",
+   "when": {
+    "engine_code": "SCRIPT_ERR_INVALID_FLAGS",
+    "native_starts_with": "Invalid verification flags: GENESIS is not set"
+   },
+   "class": "engine.word-out-of-scope"
+  },
+  {
+   "why": "#49's replay (2026-10-06): an explicit word the crate refuses as outside its scope (bsv-rs 0.3.33 flags.rs:500–519), before any shape row",
+   "when": {
+    "engine_code": "SCRIPT_ERR_INVALID_FLAGS",
+    "native_starts_with": "Invalid verification flags: UTXO_AFTER_GENESIS is not set"
+   },
+   "class": "engine.word-out-of-scope"
+  },
+  {
+   "why": "#49's replay (2026-10-06): an explicit word the crate refuses as outside its scope (bsv-rs 0.3.33 flags.rs:500–519), before any shape row",
+   "when": {
+    "engine_code": "SCRIPT_ERR_INVALID_FLAGS",
+    "native_starts_with": "Invalid verification flags: CHRONICLE without GENESIS"
+   },
+   "class": "engine.word-out-of-scope"
+  },
+  {
+   "why": "the number-length limit (#20's eras corpus found it): the reference refuses a read above MaxScriptNumLength; an engine without the limit says valid",
+   "when": {
+    "spec_code": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength"
+  },
+  {
+   "why": "the eras corpus (#20, #23): every row carries its rule; a divergence on one is that rule's (an era rule the table does not know is unexplained)",
+   "when": {
+    "rule_prefix_any": [
+     "eras.",
+     "p2sh."
+    ]
+   },
+   "class_from": {
+    "eras.utxo.pre-genesis": "eras.utxo.pre-genesis",
+    "eras.utxo.post-genesis": "eras.utxo.post-genesis",
+    "eras.utxo.post-chronicle": "eras.utxo.post-chronicle",
+    "eras.spend.genesis": "eras.spend.genesis",
+    "eras.spend.chronicle": "eras.spend.chronicle",
+    "eras.height.p2sh": "eras.height.p2sh",
+    "eras.height.dersig": "eras.height.dersig",
+    "eras.height.cltv": "eras.height.cltv",
+    "eras.height.csv": "eras.height.csv",
+    "eras.height.uahf": "eras.height.uahf",
+    "eras.height.daa": "eras.height.daa",
+    "p2sh.grandfathered": "p2sh.grandfathered",
+    "p2sh.disabled": "p2sh.disabled",
+    "p2sh.pushonly": "p2sh.pushonly",
+    "p2sh.output.post-genesis": "p2sh.output.post-genesis"
+   },
+   "class_else": "unexplained"
+  },
+  {
+   "why": "the recorded candidate families of the hand-written corpora carry their rule: flags.version-gate under NULLFAIL",
+   "when": {
+    "family_candidate": true,
+    "rule": "flags.version-gate",
+    "spec_code": "SCRIPT_ERR_SIG_NULLFAIL"
+   },
+   "class": "flags.version-gate.nullfail"
+  },
+  {
+   "why": "the recorded candidate families: flags.version-gate otherwise (NULLDUMMY)",
+   "when": {
+    "family_candidate": true,
+    "rule": "flags.version-gate"
+   },
+   "class": "flags.version-gate.nulldummy"
+  },
+  {
+   "why": "the recorded candidate families of the hand-written corpora carry their rule (an unmapped rule falls through to the shapes)",
+   "when": {
+    "family_candidate": true
+   },
+   "class_from": {
+    "flow.ver": "flow.ver",
+    "flow.verif": "flow.ver",
+    "push.truncated": "push.truncated",
+    "flow.unknown-opcode": "flow.unknown-opcode",
+    "flow.else": "flow.else",
+    "flow.return": "flow.return",
+    "flags.sigpushonly": "flags.sigpushonly",
+    "flow.nop": "flags.discourage-upgradable-nops",
+    "num.arith.2mul": "num.arith.2mul",
+    "num.arith.2div": "num.arith.2div",
+    "splice.num2bin.memory": "splice.num2bin.memory",
+    "crypto.checksig.unlock": "crypto.checksig.unlock",
+    "sighash.scriptcode.findanddelete": "sighash.scriptcode.findanddelete",
+    "expansion.substr": "expansion.as-nop",
+    "expansion.left": "expansion.as-nop",
+    "expansion.right": "expansion.as-nop",
+    "expansion.lshiftnum": "expansion.as-nop",
+    "expansion.rshiftnum": "expansion.as-nop"
+   }
+  },
+  {
+   "why": "the shapes: a truncated push is BAD_OPCODE to the reference and clamped by the crate",
+   "when": {
+    "spec_code": "SCRIPT_ERR_BAD_OPCODE",
+    "truncated_push": true
+   },
+   "class": "push.truncated"
+  },
+  {
+   "why": "the shapes: an executed undefined opcode (0xba and above)",
+   "when": {
+    "spec_code": "SCRIPT_ERR_BAD_OPCODE",
+    "has_opcode_at_least": 186
+   },
+   "class": "flow.unknown-opcode"
+  },
+  {
+   "why": "the shapes: push-only demanded of a version-2 unlocking script",
+   "when": {
+    "spec": "valid",
+    "engine": "not-valid",
+    "native_starts_with": "Unlocking scripts can only contain push operations",
+    "version": "v2+",
+    "unlock_push_only": false
+   },
+   "class": "flags.sigpushonly"
+  },
+  {
+   "why": "the shapes: a disabled opcode (the crate's message) with OP_VER/OP_VERIF/OP_VERNOTIF present",
+   "when": {
+    "native_starts_with": "This opcode is currently disabled",
+    "has_opcode_any": [
+     98,
+     101,
+     102
+    ]
+   },
+   "class": "flow.ver"
+  },
+  {
+   "why": "the shapes: a disabled opcode with OP_2MUL present",
+   "when": {
+    "native_starts_with": "This opcode is currently disabled",
+    "has_opcode_any": [
+     141
+    ]
+   },
+   "class": "num.arith.2mul"
+  },
+  {
+   "why": "the shapes: a disabled opcode with OP_2DIV present",
+   "when": {
+    "native_starts_with": "This opcode is currently disabled",
+    "has_opcode_any": [
+     142
+    ]
+   },
+   "class": "num.arith.2div"
+  },
+  {
+   "why": "the relay policy flag for upgradable NOPs in the like-for-like column",
+   "when": {
+    "column": "spec-mempool",
+    "spec_code": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS",
+    "engine": "valid"
+   },
+   "class": "flags.discourage-upgradable-nops"
+  },
+  {
+   "why": "the block path: a version-1 spend judged by the relay restrictions no block word carries",
+   "when": {
+    "column": "spec",
+    "spec": "valid",
+    "engine": "not-valid",
+    "version": "v1",
+    "engine_code_in": [
+     "SCRIPT_ERR_MINIMALDATA",
+     "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+     "SCRIPT_ERR_CLEANSTACK",
+     "SCRIPT_ERR_SIG_HIGH_S",
+     "SCRIPT_ERR_SIG_NULLDUMMY"
+    ]
+   },
+   "class": "flags.policy-as-consensus"
+  },
+  {
+   "why": "the block path: NULLDUMMY enforced on a version-2 spend",
+   "when": {
+    "column": "spec",
+    "spec": "valid",
+    "engine": "not-valid",
+    "version": "v2+",
+    "engine_code": "SCRIPT_ERR_SIG_NULLDUMMY"
+   },
+   "class": "flags.version-gate.nulldummy"
+  },
+  {
+   "why": "NULLFAIL: the reference refuses, the engine accepts",
+   "when": {
+    "spec_code": "SCRIPT_ERR_SIG_NULLFAIL",
+    "engine": "valid"
+   },
+   "class": "flags.version-gate.nullfail"
+  },
+  {
+   "why": "the sighash family of corpus/gen (#26, 2026-09-24): the crate computes the BIP143 digest for every hash type: a CHRONICLE-bit signature fails where the reference uses the original digest, and one made over BIP143 verifies where the reference refuses it",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "sig_type_bit_any": 32,
+    "verdicts_differ": true
+   },
+   "class": "sighash.dispatch.chronicle-bip143"
+  },
+  {
+   "why": "the sighash family: the crate checks DER, low-S and the FORKID bit, never the base type",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "spec_code": "SCRIPT_ERR_SIG_HASHTYPE",
+    "engine": "valid"
+   },
+   "class": "sighash.type.undefined-base"
+  },
+  {
+   "why": "the numeric shifts' count (the gen corpus, 2026-09-24): the reference refuses a count outside int with SCRIPT_ERR_BIG_INT; bsv-rs shifts by any non-negative count",
+   "when": {
+    "rule_in": [
+     "expansion.lshiftnum",
+     "expansion.rshiftnum"
+    ],
+    "spec_code": "SCRIPT_ERR_BIG_INT",
+    "engine": "valid"
+   },
+   "class": "expansion.shift.count-bigint"
+  },
+  {
+   "why": "the expansion opcodes (#18): since 0.3.27 the crate executes them, so this class fires only when bsv-rs's own message does not name the opcode it ran",
+   "when": {
+    "has_opcode_any": [
+     179,
+     180,
+     181,
+     182,
+     183
+    ],
+    "native_contains_none": [
+     "OP_SUBSTR",
+     "OP_LEFT",
+     "OP_RIGHT",
+     "OP_LSHIFTNUM",
+     "OP_RSHIFTNUM"
+    ]
+   },
+   "class": "expansion.as-nop"
+  }
+ ]
+}

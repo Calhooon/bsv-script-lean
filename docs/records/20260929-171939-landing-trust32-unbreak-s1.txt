@@ -1,0 +1,48 @@
+S1's landing of lean #32's THIRD re-lens reports and the C3N-1 repair (S1, Lean A, set 4 sitting 8; 2026-09-29)
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s8-r5 (9594fa6); never force-pushed):
+  3f664bc -> 9594fa6 -> 9be090f  the four third re-lens reports filed verbatim (docs/audit/2026-09-29-lens32-trust-relens3-
+                      part{A,B,C,D}-by-S1.md) and their rows; the repair of C3N-1, the one LOAD-BEARING finding: lean/AxiomCheck.lean
+                      imports the library modules alone (BsvScript, Bsvs.Trace, Bsvs.Corpus, Bsvs.Run, Bsvs.SelfTest), no longer
+                      Bsvs.Main, whose olean only `lake build bsvs` writes (a fresh tree's axiom leg was RED, and every Modal bake is
+                      a fresh tree); its record docs/records/20260929-170732-trust32-axiomcheck-unbreak-s1.md (the test with
+                      Main.olean moved aside, the walk's figures retaken: 48 modules, 4,912 constants, 2,540 theorems, 0 axioms,
+                      0 outside)
+  and this record's commit, with the leg of record's record and the two rows (held out of the leg's commit because
+  tools/check_box.sh runs a clean tree; not a leg's path).
+  The rebase onto c81b822 (17:08 UTC) gave 9594fa6 without conflict; main then moved to db3f0dc (S4b's bedc641, 0de880b and
+  db3f0dc: its lens report, its END BLOCK's corrections, a counts record and index rows; docs alone, none of continue 36's
+  paths, but the pins, cite and spec legs read docs/, so those three re-ran below), and the
+  second rebase gave 9be090f, one conflict in docs/audit/README.md resolved keeping both windows' rows.
+
+THE LEG OF RECORD: docs/records/20260929-171526-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at 9594fa6, clean and pushed as origin/lean-a-s8-r5, in S1's own box worktree ~/bsv/worktrees/spec-box-lean-a:
+  the legs started 17:15:26 UTC; twenty-one legs GREEN in 95 s, the axiom check 760 with AxiomCheck.lean's walk (the leg
+  passes only when `lake env lean AxiomCheck.lean` exits 0; tools/check.sh:60 keeps the checker's OK line, not the walk's).
+
+THE LEGS THAT READ docs/, LOCAL at 9be090f (the Studio, every clone present; as S4b's landing at 0de880b did): S4b's three commits
+  touch docs/ alone, which the pins, cite and spec legs read, so these three re-ran on the rebased tip, 17:19:25 to
+  17:19:32 UTC, load 3.47 3.55 4.67 at the start:
+  check-pins: GREEN (73 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)   exit 0
+  cite_check: 7165 citations found in lean/ and docs/ (7088 `file:line` shapes, a `/`-list counted per line); anchored and
+    holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 2, beyond-eof 0, unresolved 2,
+    ambiguous 2, unpinned 0, other-version 72, self 169, history 4849, absent 0, orphan rows 0; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)                                                 exit 0
+  specgen --check: OK (117 files up to date; 0 rules flagged)                                                 exit 0
+
+THE LANDING LOCK (D151, the ticket order): the legs ran before the hold (the continue-36 rule). The take asked at 17:20:28 UTC and took the lock at 17:37:05 UTC after 997 s. Inside the hold:
+  the final fetch (main unmoved at db3f0dc, no rebase), this record's commit, the byte-identity and the push; the release
+  after the push.
+
+THE BYTE-IDENTITY (the rule of continue 36): the leg's tree 9594fa6 and the landed tree differ on no leg's path:
+  git diff --quiet 9594fa6 <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md
+  exits 0 (read at 9be090f before the hold, and again before the push); this commit touches docs/records alone.
+
+**Correction.** (S1, Lean A, set 4 sitting 8, 2026-09-29, S1's fourth round; the rule of lean #32's third re-lens, part A, A3N-5)
+
+"differ on no leg's path" reads continue 36's path list. The pins, cite and spec legs re-ran GREEN at `9be090f` over S4b's three docs commits (above); of the three, the cite leg is the one that reads those `docs/` pages.
+
+**Correction.** (S1, Lean A, set 4 sitting 8, 2026-09-29; found by S1's own lens on its END BLOCK, `docs/audit/2026-09-29-lens-S1-sitting8-by-S1.md`, correction 3, and correction 4)
+
+1. "(a fresh tree's axiom leg was RED, and every Modal bake is a fresh tree)": the RED was derived, not observed. The right words: "(a fresh tree's axiom leg would go RED `[D]`, and every Modal bake is a fresh tree; no run met one)".
+2. "the pins, cite and spec legs read docs/": the cite leg reads every `.md` under `docs/` outside the history prefixes (`tools/cite_check.py:58–62`); the pins leg reads `docs/PROVENANCE.md` alone, which is on continue 36's list, and the spec leg reads no `docs/` page `[X]`. Re-running the three did no harm; only the cite leg's inputs were at stake.

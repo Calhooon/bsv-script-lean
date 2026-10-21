@@ -1,0 +1,11 @@
+{
+  "network": "regtest",
+  "hash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
+  "hash_order": "display (the byte-reversed SHA256d of the header, as the RPC prints it)",
+  "label": "[SRC]",
+  "source": "src/chainparams.cpp:1512-1515",
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "census": "docs/PARAMETERS.md, the hashGenesisBlock row (regtest column)",
+  "read_by": "harness/src/scenarios/depth.rs (the base every depth chain is built on)",
+  "added": "2026-10-17, lane gate-107 (#107): moved out of harness/src, where the mechanism check refuses a 64-hex literal"
+}

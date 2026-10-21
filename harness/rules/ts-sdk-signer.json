@@ -1,0 +1,108 @@
+{
+  "engine": "ts-sdk-signer",
+  "pin": "3.0.0",
+  "source": "[D] #145 signer column. The existing RuleSet schema: spec is the node's control verdict, engine is the node's SDK verdict, column is the signing method, native holds measured scriptCode/digest predicates. Control refusals are not signer disagreements. Counts include only actual node judgments.",
+  "classes": {
+    "sighash.scriptcode.in-unlock.lock-only": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:1471-1506 forms the unlock tail plus locking script after Chronicle, and refuses an incorrect signature. Before Chronicle it uses the unlock tail alone. [SRC] @bsv/sdk 3.0.0 script/templates/P2PKH.ts:77-100 resolves the template's locking script through script/templates/SignatureUtils.ts:140-158, and SignatureUtils.ts:199-213 passes that lock as subscript. The adapter's api-default method mirrors this lock selection at harness/engines/ts/signer.mjs:210-218 and supplies it as subscript at :122. primitives/TransactionSignature.ts:262 and :394-396 serialize the supplied subscript; the formatter does not derive the in-unlock scriptCode. TypeScript lines are the pinned package source map sourcesContent.",
+      "ruling": "caller-scriptcode-required",
+      "note": "The adapter's api-default mode explicitly supplies the prevout locking script to TransactionSignature.format. The formatter uses the supplied subscript; it does not derive scriptCode for an in-unlock CHECKSIG. Supplying the corpus scriptCode makes these measured rows valid. No in-unlock template was exercised at this pin."
+    },
+    "sighash.single.out-of-range.one": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:2086-2100 returns uint256 one when SINGLE's input index is beyond the outputs; :2112-2124 selects this original digest for CHRONICLE. [SRC] @bsv/sdk 3.0.0 script/templates/SignatureUtils.ts:199-213 supplies lockingScript as subscript; script/templates/P2PKH.ts:102-130 hashes and signs the formatted preimage; primitives/TransactionSignature.ts:254-365 serializes the original transaction and :425-440 dispatches to it. Lines are the pinned package source map sourcesContent.",
+      "ruling": "impl-wrong",
+      "note": "The SDK signs the hash of its full original serialization where the node verifies constant one. Classified only after the node refuses the SDK and accepts the hand-signed control. A no-FORKID row refused on encoding alone is a control refusal, not evidence of this digest divergence."
+    },
+    "corpus.control.sigpushonly": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:2321-2334 supplies this encoding or push-only refusal. [SRC] @bsv/sdk 3.0.0 script/templates/SignatureUtils.ts:199-213 supplies lockingScript as subscript; script/templates/P2PKH.ts:102-130 hashes and signs the formatted preimage; primitives/TransactionSignature.ts:254-365 serializes the original transaction and :425-440 dispatches to it. Lines are the pinned package source map sourcesContent.",
+      "ruling": "control-refusal",
+      "note": "The corpus deliberately places a non-push unlock under a word/version requiring push-only. Both the SDK and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    },
+    "corpus.control.illegal-chronicle": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:296-303 supplies this encoding or push-only refusal. [SRC] @bsv/sdk 3.0.0 script/templates/SignatureUtils.ts:199-213 supplies lockingScript as subscript; script/templates/P2PKH.ts:102-130 hashes and signs the formatted preimage; primitives/TransactionSignature.ts:254-365 serializes the original transaction and :425-440 dispatches to it. Lines are the pinned package source map sourcesContent.",
+      "ruling": "control-refusal",
+      "note": "The corpus deliberately sets the Chronicle hash-type bit before Chronicle. Both the SDK and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    },
+    "corpus.control.must-use-forkid": {
+      "decided_by": "[SRC] bitcoin-sv v1.2.3 6504a3af src/script/interpreter.cpp:296-306 supplies this encoding or push-only refusal. [SRC] @bsv/sdk 3.0.0 script/templates/SignatureUtils.ts:199-213 supplies lockingScript as subscript; script/templates/P2PKH.ts:102-130 hashes and signs the formatted preimage; primitives/TransactionSignature.ts:254-365 serializes the original transaction and :425-440 dispatches to it. Lines are the pinned package source map sourcesContent.",
+      "ruling": "control-refusal",
+      "note": "The corpus's 0x03 sentinel omits FORKID under a word requiring it; the encoding gate prevents a digest verdict. Both the SDK and hand-signed control must have this exact reject token. This is counted apart from signer divergences."
+    }
+  },
+  "rows": [
+    {
+      "why": "A valid control and a refused default signature at an in-unlock site, with a measured lock-only scriptCode and unequal digest.",
+      "when": {
+        "column": "template",
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_CHECKSIGVERIFY",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_EVAL_FALSE"
+        ],
+        "native_contains": "lock-only"
+      },
+      "class": "sighash.scriptcode.in-unlock.lock-only"
+    },
+    {
+      "why": "A valid control and a refused default signature at an in-unlock site, with a measured lock-only scriptCode and unequal digest.",
+      "when": {
+        "column": "api-default",
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_CHECKSIGVERIFY",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_EVAL_FALSE"
+        ],
+        "native_contains": "lock-only"
+      },
+      "class": "sighash.scriptcode.in-unlock.lock-only"
+    },
+    {
+      "why": "The control digest is constant one for SINGLE and differs from the SDK digest; the node accepts the control and refuses the SDK.",
+      "when": {
+        "spec": "valid",
+        "engine": "invalid",
+        "engine_code_in": [
+          "SCRIPT_ERR_EVAL_FALSE",
+          "SCRIPT_ERR_SIG_NULLFAIL",
+          "SCRIPT_ERR_CHECKSIGVERIFY"
+        ],
+        "native_contains": "single-one-mismatch"
+      },
+      "class": "sighash.single.out-of-range.one"
+    },
+    {
+      "why": "The corpus deliberately places a non-push unlock under a word/version requiring push-only. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_SIG_PUSHONLY",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      "class": "corpus.control.sigpushonly"
+    },
+    {
+      "why": "The corpus deliberately sets the Chronicle hash-type bit before Chronicle. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_ILLEGAL_CHRONICLE",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      "class": "corpus.control.illegal-chronicle"
+    },
+    {
+      "why": "The corpus's 0x03 sentinel omits FORKID under a word requiring it; the encoding gate prevents a digest verdict. Both sides must give the same token.",
+      "when": {
+        "spec": "invalid",
+        "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+        "engine": "invalid",
+        "engine_code": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      "class": "corpus.control.must-use-forkid"
+    }
+  ]
+}

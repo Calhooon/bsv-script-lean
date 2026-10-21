@@ -1,0 +1,48 @@
+#50's landing (S1, Lean A, set 4 sitting 6; 2026-09-29): the commits, the landing lock, the leg of record, the pages' live legs
+
+THE COMMITS (by pathspec under the hooks, S1's tag, each stamp a date -u read; pushed first at origin/lean-a-50, never
+force-pushed):
+  68580c4 -> 028bb1c  #50: the machine over an array-backed stack, proven a refinement of Machine (verifyScriptA_eq),
+                      substituted at Eval.verifyScript by @[csimp]; lean/BsvScript/Impl/ (eight modules), Eval.lean,
+                      the library root, 115 lines on lean/AxiomCheck.lean, make spec's pages (spec on S1's line)
+  db30924 -> 5900e66  #50's records: docs/records/20260929-072759-impl-50-s1.md, docs/records/20260929-073117-ladder50-s1.md,
+                      their README rows
+  and this record's commit, with the leg's record.
+  The rebase onto c59a484 (07:34 UTC, under the hold): spec/ conflicted in nine pages (main's S2 commits moved Flags,
+  Sighash, Tx, TxRules, Eras, P2SH and tools/specgen.py); resolved by regenerating every page with tools/specgen.py over
+  the rebased sources ("specgen: 117 files written ... 0 rules flagged", then "specgen --check: OK"); lean/AxiomCheck.lean
+  merged clean (688 lines: main's 573 and #50's 115); docs/records/README.md kept both sides' rows. Pushed as
+  origin/lean-a-50-l1 at 5900e66 before the leg.
+
+THE LOCAL LEG (D142) at 5900e66 on the Studio under the Lean lock: lake build (the default targets) 07:34:39-07:35:22 UTC,
+  load 7.07, "Build completed successfully (1044 jobs)", 43.14 s, 1,913,798,656 B; tools/axiom_check.py 07:35:25 UTC:
+  "axiom check: OK (688 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])".
+
+THE LANDING LOCK (D151; the plan's tools/lean_lock.sh, the lock a symlink on the box): taken 07:34:02 UTC by S1 after 0 s;
+  the fetch and the rebase, the local leg, the push of the branch and the leg of record (below) inside the hold; then the
+  final fetch (07:42:58 UTC: main still at c59a484, nothing to rebase), this record's commit and the push to main; the
+  release after the push (the push and the release times are this record's commit's own line on the lane page's block).
+
+THE LEG OF RECORD: docs/records/20260929-073919-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at 5900e66, clean and pushed: the box, S1's own box worktree ~/bsv/worktrees/spec-box-lean-a, the tag
+  check-box:lean-a on the Lean slot (slot2, 07:37:08 UTC, after T4b's and T9c's holds; released while it waited for the box
+  leg lock, re-taken with it) and on the box leg lock (queued at 07:37:08 behind P1b, P6 and P7; taken 07:39:19 UTC);
+  twenty-one legs GREEN in 186 s (07:39:19 -> 07:42:25 UTC), the axiom check 688, the flow leg's large-lock row valid in
+  102 ms (#50's item (4) on the box), specgen --check OK; its commit line 5900e66 with 0 uncommitted paths.
+
+THE PAGES' LIVE LEG: the box's cite leg anchors only what the box's clones allow (15 anchored; the reference clone skipped
+  by name there), so the cite leg re-ran live at 5900e66 on the Studio (07:42 UTC, load 3.06): "cite_check: 4818 citations
+  found ...; anchored and holding at the pin 1733, MOVED 0" and "cite_check: GREEN (every anchored citation holds at the
+  pin)".
+
+THE BYTE-IDENTITY: the leg's tree is the landed tree but for docs/records (this record and the leg's record, committed after
+  the leg); git diff --quiet 5900e66 <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md
+  docs/PARAMETERS.md: exit 0 (read before the push).
+
+**Correction** (2026-09-29, S1's own lens on its sitting-6 END BLOCK, docs/audit/2026-09-29-lens-S1-sitting6-by-S1.md, its
+correction 2; this record is not edited above): "pushed first at origin/lean-a-50, never force-pushed" stopped being true after
+this record's commit. In the landing's push command, between the push to main (07:43:47 UTC) and the release (07:43:49),
+S1 moved origin/lean-a-50 from db30924 to 6370ab3 with --force-with-lease (a side branch, never main; not a fast-forward) [X]
+(git ls-remote). The pre-rebase commits the records measure, db30924 and its parent 68580c4, stay reachable at
+origin/lean-a-50-pre (db30924, pushed at 07:45 UTC). The landing lock's release, which
+the record defers to the block, was 07:43:49 UTC (the session log).

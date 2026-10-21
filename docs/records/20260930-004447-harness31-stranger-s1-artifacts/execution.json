@@ -1,0 +1,12 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "source": "e39ba468c3c9bef42f6041509914767f81f34a79",
+  "implementation": "bsv-rs",
+  "harness_exit": 0,
+  "environment": {
+    "CARGO_BUILD_JOBS": "4",
+    "CARGO_NET_OFFLINE": "true",
+[withheld at export: a sibling tree's line]
+  },
+  "report": "/tmp/codex-s1-c56/report"
+}

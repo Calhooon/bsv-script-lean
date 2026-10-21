@@ -1,0 +1,28 @@
+{
+  "entries": 129,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/int_serialization_tests.jsonl",
+  "undecided": {
+    "a predicate (bsv::IsMinimallyEncoded, layer consensus): the drivers judge spends, and none has a hook that runs it": 12,
+    "a predicate (bsv::MinimallyEncode, layer consensus): the drivers judge spends, and none has a hook that runs it": 12,
+    "a predicate (bsv::serialize(bint) and bint::deserialize, layer consensus): the drivers judge spends, and none has a hook that runs it": 72,
+    "a predicate (bsv::serialize(int64_t) and bsv::deserialize<int64_t>, layer consensus): the drivers judge spends, and none has a hook that runs it": 33
+  },
+  "undecided_ids": {
+    "a predicate (bsv::IsMinimallyEncoded, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-int_serialization-00106..00117"
+    ],
+    "a predicate (bsv::MinimallyEncode, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-int_serialization-00118..00129"
+    ],
+    "a predicate (bsv::serialize(bint) and bint::deserialize, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-int_serialization-00034..00105"
+    ],
+    "a predicate (bsv::serialize(int64_t) and bsv::deserialize<int64_t>, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-int_serialization-00001..00033"
+    ]
+  }
+}

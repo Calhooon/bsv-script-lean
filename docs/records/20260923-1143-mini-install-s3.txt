@@ -1,0 +1,11 @@
+the spec's own node instance on the always-on host (S3, 2026-09-23 15:43 UTC; #27)
+command: harness/oracle/spec-node.sh mini install; mini status; mini tunnel; mini cookie (the working tree that landed as f02707d)
+binary: the pinned bundle at ~/bsv/oracle/bin on the host (bitcoin-sv v1.2.2 879fc8b42; never modified; its own LaunchAgent untouched)
+instance: LaunchAgent com.bsvspec.oracle, datadir ~/bsv/spec-oracle/data, conf harness/oracle/bitcoin.conf (mainnet activation heights, every policy zeroed), RPC 127.0.0.1:18563 / P2P 18564 on the host; the Studio's tunnel 127.0.0.1:18663; the cookie fetched to ~/bsv/targets/spec-oracle-mini/regtest/.cookie
+output:
+  spec-node.sh: installed on mini: height 0 · rpc 127.0.0.1:18563 there · agent com.bsvspec.oracle
+  launchctl: state = running · pid = 58823; the host's load 1.25 1.55 3.15
+  height 0; "version": 101020200; "subversion": "/Bitcoin SV:1.2.2/"
+  spec-node.sh: tunnel 127.0.0.1:18663 → mini:18563
+  spec-node.sh: cookie fetched (it changes on every node start)
+then: run_svnode on corpus/flow through the tunnel: 1094 entries, agree spec 1094, spec-mempool 1094, 0 undecided, GREEN (20260923-1143-svnode-smoke-s3.md)

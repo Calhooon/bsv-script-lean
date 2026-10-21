@@ -1,0 +1,66 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+D155's gate in the lane's one route to Modal, and its landing (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28; continue 30,
+[withheld at export: a sibling tree's line]
+
+THE GATE: e4a4d22, tools/check_route.sh (make check above a load of 20, make check-modal): modal_day.py before modal run.
+
+THE TEST (CHECK_ROUTE_DRY=1: nothing launched; the NEAR, CLOSED and no-answer meters are stubs in the parent's scratch):
+  D155's gate in tools/check_route.sh, tested 2026-09-28T16:48:39Z with CHECK_ROUTE_DRY=1 (nothing launched); stubs for the meter in the parent's scratch
+  == 1 OPEN, the real meter
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+[withheld at export: a sibling tree's line]
+     check_route: DRY, the gate passed, nothing launched
+     exit 0
+  == 2 NEAR THE CAP, no MODAL_PRICED (a stub at $85)
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+     MODAL TODAY 2026-09-28 UTC: $85.00 [M] of the $100 daily cap (D155): NEAR THE CAP: launch only what your block already prices · stub
+     check_route: NEAR THE CAP (D155): launch only what your block prices; rerun with MODAL_PRICED='<where your block prices this run>', or run make check-local under a load of 20
+     exit 3
+  == 3 NEAR THE CAP, MODAL_PRICED set (the stub)
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+     MODAL TODAY 2026-09-28 UTC: $85.00 [M] of the $100 daily cap (D155): NEAR THE CAP: launch only what your block already prices · stub
+     check_route: NEAR THE CAP; priced by the caller's block: the END BLOCK's (1)
+     check_route: DRY, the gate passed, nothing launched
+     exit 0
+  == 4 CLOSED (a stub at $101, rc 1)
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+     MODAL TODAY 2026-09-28 UTC: $101.00 [M] of the $100 daily cap (D155): CLOSED · stub
+[withheld at export: a sibling tree's line]
+     exit 3
+  == 5 the meter did not answer (a stub, rc 2)
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+     modal_day: the meter did not answer (stub)
+     check_route: the meter did not answer (modal_day.py rc 2): no Modal launch (D155)
+     exit 3
+  == 6 the tool absent
+     check: MODAL (1-minute load 7.95; tools/modal_check.py, cpu 16 / 32 GiB, retries 0, ≤ $1.35 a check)
+     check_route: /nonexistent/modal_day.py is absent: no Modal launch without the day's meter (D155)
+     exit 3
+  == 7 the local route
+     check: LOCAL (1-minute load 7.95, under 20; tools/check.sh all with the sampler)
+     check_route: DRY, nothing run
+     exit 0
+  Modal clients attached after the tests: 0
+
+THE LANDING, on main at aa51c48 (the moving-main rule of docs/records/20260928-120344-moving-main-s3.txt):
+THE STAMP: docs/records/20260928-162256-make-check.txt, twenty-one legs GREEN at 613304c (LOCAL, D142).
+BYTE-IDENTITY of the legs' tree between 613304c and the tip e4a4d22, outside the paths no leg reads or that the live legs below re-check:
+  git diff --quiet 613304c e4a4d22 -- :!HANDOFF.md :!docs/records :!tools/check_route.sh
+  exit 0
+  no leg reads tools/check_route.sh (the router, not a leg: grep over tools/check.sh and the legs' tools finds it 2 times); HANDOFF.md no leg reads; docs/records the cite leg's history
+
+THE LEGS, LIVE AT THE TIP e4a4d22:
+load before: { 8.65 12.22 17.75 }
+== tools/check.sh pins (16:50:04Z)
+    OK     the built SV-node's version string                                      v1.2.2.0-g879fc8b42-dev
+  check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+exit 0
+== tools/check.sh cite (16:50:23Z)
+  cite_check: 3210 citations found in lean/ and docs/ (3150 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 154, history 1174, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec (16:50:27Z)
+  == spec: tools/specgen.py --check: the generated specification document is byte-identical to a regeneration from the Lean sources, the corpora and the witnesses (#17) ==
+  specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 10.35 12.41 17.69 }

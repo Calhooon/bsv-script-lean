@@ -1,0 +1,41 @@
+{
+  "entries": 56,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 30,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 30,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 30,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 30,
+  "source": "corpus/cpp/multisig_tests.jsonl",
+  "undecided": {
+    "a predicate (IsStandardOutput, layer policy): the drivers judge spends, and none has a hook that runs it": 10,
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": 6,
+    "a predicate (Solver, layer policy): the drivers judge spends, and none has a hook that runs it": 10
+  },
+  "undecided_ids": {
+    "a predicate (IsStandardOutput, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-multisig-00031..00040"
+    ],
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-multisig-00051..00056"
+    ],
+    "a predicate (Solver, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-multisig-00041..00050"
+    ]
+  }
+}

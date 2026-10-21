@@ -1,0 +1,852 @@
+{
+ "engine": "ts-sdk",
+ "pin": "3.0.0",
+ "source": "transcribed 2026-09-26 (S3, set 4) from harness/src/bin/run_engine.rs explain()/rule_record() at e74a503, arm by arm in order; the classes' text verbatim; the tx.* rows and the two classes tx.locktime.discouraged and tx.default-mode.locktime-nops added 2026-09-26 with the tx corpus (Spend.ts at the pin b3155fa2e, read from the ts-stack clone's object) | 2026-09-27 06:5x UTC (S3, the parent; D83): the era-heuristic note (13) moved below the four width rows; the pre-flight on main's recorded data with S3r2's binary (rules.rs knowing spec_consensus): every ts-sdk manifest EQUAL but gen, where the default columns move as the recorded table's own move already showed and further: default/spec no-era 37 -> 35 and width 1 -> 3 (gen-00002 the smallest), default/spec-mempool no-era 5 -> 1, width 4 -> 3, policy 0 -> 5 (gen-00004 the smallest); eras EQUAL; re-read at 2.8.10 for #51/#52 on 2026-10-05, lane harness-b-repin2; re-read at 3.0.0 for #55 on 2026-10-05, lane harness-b-55 (Spend.ts byte-identical to 2.8.10, so every line holds) | 2026-10-06 (lane r34-rules, S3): the owner's rulings on #32 of 2026-10-05: R4, the four default-mode omission classes on the consensus side implementation-wrong with the default-mode scope in each note, the policy-only rows split into flags.default-mode.policy-only (open) by two rows reading spec_consensus; R3, the class engine.decode-refusal and its row (the SDK's decoder, @bsv/sdk 3.0.0 Transaction.ts and BigNumber.ts read from the installed package's source map)",
+ "classes": {
+  "bitwise.shift.bigint-limit": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:692–764; script_num.cpp:303–317 at v1.2.3 (the numeric shift result width); [SRC] @bsv/sdk 3.0.0 Spend.ts:1048–1093 (numeric shifts, BigInt result at 1066), 1438–1469 (byte shifts preserve the input width).",
+   "ruling": "impl-wrong",
+   "note": "The default mode has no numeric width bound. A BigInt RangeError is an SDK abort by D15, filed as a witness."
+  },
+  "engine.timeout": {
+   "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+   "ruling": "impl-wrong",
+   "note": "the engine returned no verdict on an input the reference decides within the wall and its 10× re-run (D15: an engine that cannot return the verdict disagrees observably; D15a: an entry decided on the re-run carries the engine's verdict and no witness for time alone); a witness, never an undecided run; the entry names the engine's cost, never a semantics"
+  },
+  "eras.default-mode.no-era": {
+   "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+   "ruling": "open",
+   "note": "the default mode has no height input, so the era-boundary rows (a coin or a spend before Genesis, at the Chronicle boundary, at the DERSIG/CLTV/CSV/UAHF/DAA heights, the grandfathered P2SH) are decided by the version heuristic and differ from consensus by construction; reported for the mode's users, never a consensus claim (the explicit-flags columns are the comparable ones)"
+  },
+  "eras.utxo.spend-bit-conflated": {
+   "decided_by": "interpreter.cpp:411 (utxo_after_genesis = flags & SCRIPT_UTXO_AFTER_GENESIS, the COIN's era bit; policy.h:233–238 sets it per input from the coin's height) against the spend's GENESIS bit (verify_script_flags.cpp:71–75, the block's era); the rules that hang on the coin's era: OP_RETURN 856–871, the 520-byte element 455–458, the 1,000 elements 1800–1803, the 500 ops 466–467, the 4-byte numbers (script_num.cpp:62 with configscriptpolicy.cpp:83–86), the 10,000-byte script 429–430, the 20 keys (consensus.h:50), the disabled opcodes in a dead branch 470–471, the second OP_ELSE 829–831; ts-sdk 2.8.0 Spend.ts:326–335 (#isAfterGenesis with explicit flags = GENESIS || UTXO_AFTER_GENESIS || UTXO_AFTER_CHRONICLE) read at 387–392 (the number width), 743–750 and 794–805 (the disabled opcodes), 1110–1114 (the single ELSE), 1142–1145 (OP_RETURN), 1642 (the key count) and the limits 23–27",
+   "ruling": "impl-wrong",
+   "note": "the engine reads the coin's era from the spend's GENESIS bit, so a coin created before Genesis and spent in any later block is judged under the post-Genesis rules in the explicit-flags mode: the pre-Genesis limits and rules the reference applies to that coin (the eras corpus's pre-genesis rows) are not applied, and the post-Genesis single-ELSE rule is applied where the reference allows the second OP_ELSE"
+  },
+  "expansion.rshiftnum.negative-rounding": {
+   "decided_by": "script_num.cpp:340–352 (the int64 path: `-((-value) >> bit_shift)`, division by 2^count rounding toward zero) and the big-int path (the magnitude shifted, the sign kept: big_int.cpp:371–393); the spec's own SV-node instance agrees with the spec on gen-00829 (−3 OP_RSHIFTNUM 3 = 0; corpus/INDEX.md §4c); go-sdk v1.5.2 operations.go:2569–2575 (big.Int.Rsh on the signed value: an arithmetic shift, −3 >> 3 = −1)",
+   "ruling": "impl-wrong",
+   "note": "a negative number shifted right by the engine rounds toward negative infinity where the reference rounds toward zero: a spend the reference accepts (the result 0 compared by OP_EQUAL) fails on the engine"
+  },
+  "expansion.shift.count-bigint": {
+   "decided_by": "interpreter.cpp:708–711 and 744–747 (the count as CScriptNum{…, true}, the big-int path), big_int.cpp:359–369 and 383–393 (a bint count that does not fit an int throws big_int_error) → interpreter.cpp:1819–1821 SCRIPT_ERR_BIG_INT; the spec's own SV-node instance says SCRIPT_ERR_BIG_INT on gen-00835 (corpus/INDEX.md §4c); go-sdk v1.5.2 operations.go:2547–2575 (the count capped at MaxScriptNumberLengthAfterChronicle × 8 and shifted, never refused); ts-sdk 2.8.0 Spend.ts:947–978 (value << bits / value >> bits as BigInts, a negative count alone refused)",
+   "ruling": "impl-wrong",
+   "note": "the engine shifts by a count the reference refuses as outside int (SCRIPT_ERR_BIG_INT): a right shift by 2^31 is 0 to the engine and a refusal on the reference"
+  },
+  "flags.discourage-upgradable-nops": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+   "ruling": "open",
+   "note": "a POLICY flag: the relay word refuses an executed upgradable NOP, the block word and the default mode accept it; not a consensus divergence"
+  },
+  "flags.policy-as-consensus": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+   "ruling": "open",
+   "note": "the SDK's default mode judges a version-1 spend by the relay restrictions no block word carries: a mode, not a claim about consensus; an application that validates blocks with the default mode rejects consensus-valid version-1 spends"
+  },
+  "flags.version-gate.absent": {
+   "decided_by": "interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.5.2 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:232 (clean stack), 342 (push-only), 753 (high S), operations.go:2059/2301 (NULLFAIL), 2178 (NULLDUMMY), 408/411 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone; ts-sdk 2.8.0 Spend.ts:341–366 (#shouldEnforceMinimalData/LowS/NullDummy/SigPushOnly/CleanStack return #hasFlag(...) when explicit flags are given, the transaction version never read), 1090–1096 (MINIMALIF), 1613/1737 (NULLFAIL)",
+   "ruling": "impl-wrong",
+   "note": "under a post-Chronicle word (CHRONICLE set) the reference turns MINIMALDATA, LOW_S, NULLFAIL, NULLDUMMY, MINIMALIF, CLEANSTACK and SIGPUSHONLY off for a transaction of version > 1; the engine applies each whenever its flag is set: a consensus-valid version-2 spend is refused under the node's own word (the block word carries LOW_S, NULLFAIL and SIGPUSHONLY; the relay word all seven)"
+  },
+  "flags.version-gate.nullfail": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+   "ruling": "impl-wrong",
+   "note": "the default mode accepts a version-1 spend with a failing non-empty signature that the reference's word refuses at the spend's height. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run. A row the block word accepts and only the relay word refuses is flags.default-mode.policy-only, never this class."
+  },
+  "flow.else": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+   "ruling": "impl-wrong",
+   "note": "the default mode (no explicit word) accepts a second OP_ELSE the reference refuses post-Genesis. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run."
+  },
+  "limits.maxscriptnumlength": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+   "ruling": "impl-wrong",
+   "note": "The explicit numeric reads enforce the consensus widths. OP_BIN2NUM does not pass that width to its result test; the default mode has no number width. A policy-only refusal is classified separately."
+  },
+  "limits.maxscriptnumlength.policy": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+   "ruling": "open",
+   "note": "A policy width, kept separate from consensus: the node relay default refuses numbers above 10000 bytes that its block word accepts; the SDK has no policy width parameter."
+  },
+  "sighash.default-mode.forkid-not-required": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+   "ruling": "impl-wrong",
+   "note": "the default mode accepts a signature without the FORKID bit that the reference's block word refuses before verifying at every spend height from the UAHF on. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run. A row the block word accepts and only the relay word refuses (a spend below the UAHF height) is flags.default-mode.policy-only, never this class."
+  },
+  "sighash.dispatch.forkid-bit-without-flag": {
+   "decided_by": "interpreter.cpp:2112–2124 (SignatureHash: the BIP143 digest iff SCRIPT_ENABLE_SIGHASH_FORKID is in the flags AND the type has the FORKID bit, 2118–2121; the original digest otherwise), verify_script_flags.cpp:32–59 (no FORKID flag in the block word before the UAHF height 478,559), 291 and 302–303 (the FORKID bit is refused only under STRICTENC, absent from that word); the spec's own SV-node instance accepts gen-00995 on both instances; go-sdk v1.5.2 transaction/signaturehash.go:19–26 (the FORKID BIT alone selects the BIP143 preimage, else the legacy one) and 90–92 (the cached path the same)",
+   "ruling": "impl-wrong",
+   "note": "a pre-UAHF spend whose hash type carries the FORKID bit is hashed the original way by the reference and accepted; the engine hashes it as BIP143 and the signature fails: the flag has no part in its dispatch"
+  },
+  "sighash.must-use-forkid": {
+   "decided_by": "interpreter.cpp:305–306 (SCRIPT_ERR_MUST_USE_FORKID when the word enables FORKID and the signature's hash type lacks the bit; under STRICTENC, which 2314–2318 forces whenever FORKID is enabled), verify_script_flags.cpp:56–58 (both bits from the UAHF height, 478,559 on mainnet); go-sdk v1.5.2 script/interpreter/thread.go:528–558 checkHashTypeEncoding: a hash type without ForkID whose base type is defined returns nil at 541–546, so the EnableSighashForkID-without-ForkID refusal at 555–556 (ErrIllegalForkID, the table's MUST_USE_FORKID row) is unreachable for the case it names",
+   "ruling": "impl-wrong",
+   "note": "the reference refuses the spend before verifying the signature; the engine verifies it and judges the spend by the outcome (here a failing signature under OP_CHECKSIG OP_NOT: valid under the block word, NULLFAIL under the relay word); a consensus-invalid spend accepted under the node's own block word"
+  },
+  "sighash.original.truncated-push": {
+   "decided_by": "interpreter.cpp:1862–1892 (SerializeScriptCode: the size prefix counts the whole scriptCode minus the OP_CODESEPARATORs parsed, the bytes stop at the parser's failure point after the opcode and a whole length prefix; script.h:163–196 GetOp2) reached through the original digest (2123; the CHRONICLE bit, Q2) for a lock `<pk> OP_CHECKSIG OP_RETURN <a truncated push>` whose top-level OP_RETURN terminates a post-Genesis script successfully with the rest unparsed (856–871); the spec's own SV-node instance agrees with the spec on all six shapes (corpus/INDEX.md §4c, 2026-09-24); ts-sdk 2.8.0 Spend.ts:1552–1564 (the scriptCode built from the parsed chunks of the locking script and re-serialized; the chunks are the lazy parser's, Script.#parseChunks, not Script.fromBinary's, which only stores the bytes: at 3.0.0 Script.ts:157–160 and 599, whose top-level OP_RETURN branch 608–611 takes the rest of the script as one data chunk, so this class's truncated push after the top-level OP_RETURN is never read as a push; the adapter builds the lock from hex, LockingScript.fromHex, harness/engines/ts/runner.mjs:84) and 1565 (findAndDelete on the chunks): the digest differs on five of the six shapes (the lone PUSHDATA1 opcode, gen-00997, survives), so the signature fails (NULLFAIL under a word that carries it, a false top otherwise)",
+   "ruling": "impl-wrong",
+   "note": "a spend the reference accepts (the signature over the reference's serialization of an unparseable scriptCode) fails on the engine: the engine's re-serialization of a truncated push is not the reference's byte walk; the BIP143 twins (the scriptCode hashed whole) agree"
+  },
+  "sighash.scriptcode.findanddelete": {
+   "decided_by": "interpreter.cpp:255–263 CleanupScriptCode (no FindAndDelete when FORKID is enabled and in the hash type), 1484; ts-sdk 2.8.0 Spend.ts:1604 (OP_CHECKSIG) and 1689 (OP_CHECKMULTISIG): subscript.findAndDelete(the signature) unconditionally",
+   "ruling": "impl-wrong",
+   "note": "the signature's own push is deleted from the scriptCode under FORKID, so a signature over the deleted scriptCode verifies where the reference hashes the push in and refuses the spend"
+  },
+  "sighash.type.chronicle-bit": {
+   "decided_by": "interpreter.cpp:291–303 (under STRICTENC an undefined hash type is SIG_HASHTYPE, the CHRONICLE bit is legal iff the word carries SCRIPT_CHRONICLE: ILLEGAL_CHRONICLE before, accepted after) with sighashtype.h:14–22 (SIGHASH_CHRONICLE = 0x20) and 2112–2124 (the original digest for a Chronicle-bit signature); go-sdk v1.5.2 transaction/sighash/flag.go:18–26 (ForkID 0x40 and AnyOneCanPay 0x80 are the only high bits; no 0x20) and script/interpreter/thread.go:548–549 (a hash type above SingleForkID 0x43 is ErrInvalidSigHashType); ts-sdk 2.8.0 Spend.ts:533–542 (#enforceSignatureHashType: the CHRONICLE bit is legal iff #isAfterChronicle(), which with explicit flags is the COIN's UTXO_AFTER_CHRONICLE at 337–339, where the reference reads the SPEND's SCRIPT_CHRONICLE at interpreter.cpp:298; the refusal is thrown inside the try of #checkSignatureEncoding 563–575 and re-labelled 'The signature format is invalid' by its catch)",
+   "ruling": "impl-wrong",
+   "note": "a version-2 spend post-Chronicle whose signature carries the CHRONICLE bit is consensus-valid on the reference (the eras corpus's chronicle-bit rows at 943,816 and above); go-sdk refuses it as an undefined hash type under the node's own words, block and relay alike; ts-sdk refuses it whenever the COIN was created before Chronicle, whatever block spends it, reporting a format error"
+  },
+  "sighash.type.forkid-bit.pre-genesis": {
+   "decided_by": "interpreter.cpp:291 (the hash-type checks run under SCRIPT_VERIFY_STRICTENC alone), 302–303 (SCRIPT_ERR_ILLEGAL_FORKID: the FORKID bit without SCRIPT_ENABLE_SIGHASH_FORKID); the block word before the UAHF carries neither (verify_script_flags.cpp:32–59), so the reference verifies the signature over the original digest and accepts it (the node on gen-00995); ts-sdk 2.8.0 Spend.ts:509–515 (#enforceSignatureForkId: 'must not use SIGHASH_FORKID' when the FORKID flag is absent, the coin is pre-Genesis and the type has the bit) called from #checkSignatureEncoding's try (526–537) whenever DER signatures are enforced (DERSIG, LOW_S or STRICTENC), the refusal re-labelled 'The signature format is invalid' by its catch",
+   "ruling": "impl-wrong",
+   "note": "a pre-UAHF spend the reference accepts under its own block word (DERSIG on, STRICTENC off) is refused by the engine: a STRICTENC-gated check applied under DERSIG"
+  },
+  "splice.num2bin.memory": {
+   "decided_by": "interpreter.cpp:1749–1752 (OP_NUM2BIN refuses a size above INT32_MAX with SCRIPT_ERR_PUSH_SIZE before anything is built), 1771–1777 with configscriptpolicy.cpp:139–154 (the consensus memory budget INT64_MAX); ts-sdk 2.8.0 Spend.ts:391–395 (#maxPushSize is Number.POSITIVE_INFINITY after Genesis: no bound below 2^32), 1816–1836 (a size up to 0xffffffff reaches Array.from({length: size}); above it ScriptResourceLimitError)",
+   "ruling": "impl-wrong",
+   "note": "a width of 2^31 the reference refuses with PUSH_SIZE makes the SDK allocate the element and V8 abort the process (`FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory`, node 22, 1.7 GB resident, deterministic in a fresh process); a 40,000,000-byte element the reference builds within its budget is built by the SDK in a fresh process (about 0.8 GB resident) and has killed a long-lived adapter process once under batching (recovered by the harness's retry in a fresh process). A resource wall and a process death, never a verdict: an abort by D15, a witness (never an undecided run since 2026-09-24)"
+  },
+  "splice.substr.int64-reader": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`). [SRC] @bsv/sdk 3.0.0 `Spend.ts:539–562` reads the lower eight bytes above that width, uses BigInt.asIntN(64), and clamps.",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  },
+  "tx.locktime.nop": {
+   "decided_by": "interpreter.cpp:519–560 (OP_CHECKLOCKTIMEVERIFY executes for a pre-Genesis UTXO: the checker's CheckLockTime 2166–2202; a NOP for a post-Genesis UTXO 520–526); ts-sdk 2.8.0 Spend.ts:1016–1019 (OP_CHECKLOCKTIMEVERIFY falls through to break in every mode; the CHECKLOCKTIMEVERIFY name is never read: the run's manifest counts it among the names the engine has no flag for)",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin's CLTV lock is never enforced by the engine: a spend the reference refuses as SCRIPT_ERR_UNSATISFIED_LOCKTIME is valid to it under the node's own words"
+  },
+  "tx.sequence.check-absent": {
+   "decided_by": "interpreter.cpp:562–597 (OP_CHECKSEQUENCEVERIFY for a pre-Genesis UTXO: the checker's CheckSequence 2204–2250 compares the masked operand with the input's nSequence, the transaction's version and the disable bit); ts-sdk 2.8.0 Spend.ts:1021–1050 (under the CHECKSEQUENCEVERIFY flag: the operand's sign, the disable bit and the version only; the input's sequence is never read)",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin's relative lock is never compared with the input's sequence by the engine: a spend the reference refuses as SCRIPT_ERR_UNSATISFIED_LOCKTIME is valid to it under the node's own words"
+  },
+  "tx.sequence.post-genesis-utxo": {
+   "decided_by": "interpreter.cpp:562–597 (OP_CHECKSEQUENCEVERIFY executes for a pre-Genesis UTXO only; for a post-Genesis UTXO 563–569: a NOP, discouraged under the policy flag); ts-sdk 2.8.0 Spend.ts:1020–1050 (executed whenever the CHECKSEQUENCEVERIFY name is given, the UTXO era never read; the check is the version and the disable bit only, never the input's sequence)",
+   "ruling": "impl-wrong",
+   "note": "under a word carrying CHECKSEQUENCEVERIFY (every block and relay word since CSVHeight) a post-Genesis spend that leaves a number without the disable bit under OP_NOP3 is refused for a version-1 transaction where the reference treats the opcode as a NOP; OP_CHECKLOCKTIMEVERIFY is a NOP in every mode (Spend.ts:1016–1018): the pre-Genesis families of #26 exhibit that one"
+  },
+  "tx.locktime.discouraged": {
+   "decided_by": "ts-sdk 2.8.0 Spend.ts:818–832 (#enforceDiscouragedNop: under DISCOURAGE_UPGRADABLE_NOPS an executing OP_NOP1, OP_CHECKLOCKTIMEVERIFY, OP_CHECKSEQUENCEVERIFY, OP_NOP9 or OP_NOP10 is refused as \"discouraged by verification flags\", the coin's era never read); the reference executes OP_CHECKLOCKTIMEVERIFY and OP_CHECKSEQUENCEVERIFY for a pre-Genesis coin (interpreter.cpp:519–597) and treats them as NOPs discouraged by the policy flag only for a post-Genesis coin (520–526 and 563–569)",
+   "ruling": "impl-wrong",
+   "note": "under the node's own relay word a valid spend of a pre-Genesis coin through OP_CHECKLOCKTIMEVERIFY or OP_CHECKSEQUENCEVERIFY is refused by the engine (the tx.* corpus, 2026-09-26); the block word carries no DISCOURAGE flag, so there the same opcodes are NOPs to the engine (tx.locktime.nop, tx.sequence.check-absent)"
+  },
+  "tx.default-mode.locktime-nops": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:522–597; [SRC] @bsv/sdk 3.0.0 Spend.ts:892–931 (CLTV and CSV require explicit flag names), 327–329 (no flag names in the default mode).",
+   "ruling": "impl-wrong",
+   "note": "(a class under a still-private advisory: withheld, D135) (withheld until the advisory publishes). Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run."
+  },
+  "engine.decode-refusal": {
+   "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+   "ruling": "impl-wrong",
+   "note": "The owner's ruling R3 on #32 (2026-10-05, road 1: D15 as written): the SDK's own decoder refuses a corpus transaction the reference decodes and the spec decides, so the engine returns no script verdict where the spec has one: an engine abort under D15, implementation-wrong, the engine's script status undecided (engine-undecided), the recorded script verdict kept, counted once as a witness and never as an undecided run as well. The script verdict and the transaction's validity are distinct: this class does not establish an engine failure on a transaction the reference would accept (the corpus's row is one the reference refuses at its transaction checks). Scoped to @bsv/sdk 3.0.0, every column, the corpora of corpus/witnesses/ts-sdk/manifest.json and the pin."
+  },
+  "flags.default-mode.policy-only": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+   "ruling": "open",
+   "note": "A POLICY omission, kept apart from the four consensus classes of the default mode (the owner's ruling R4 on #32, 2026-10-05: the policy-only class stays open beside them): the entry is valid under the reference's block word at its spend height and refused only by the relay word (MUST_USE_FORKID below the UAHF height, NULLFAIL where only the relay word carries it); the default mode accepts it. A mode against a node's policy, never a consensus claim; scoped to @bsv/sdk 3.0.0 without verifyFlags, the default/spec-mempool column, the corpora of corpus/witnesses/ts-sdk/manifest.json and the pin."
+  },
+  "splice.substr.int64-reader.first-8-bytes": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`). [SRC] @bsv/sdk 3.0.0 `Spend.ts:539–562` reads the lower eight bytes above that width, uses BigInt.asIntN(64), and clamps.",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  },
+  "crypto.checksig.unlock.ungated": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.3 interpreter.cpp:1471–1481 (the locking script appended to the scriptCode of a CHECKSIG in the unlocking script only when checksigData && IsChronicle(flags)), 1567–1577 (CHECKMULTISIG, the same gate), 2338–2342 (VerifyScript passes &scriptPubKey as checksigData); verify_script_flags.cpp:77–78 (SCRIPT_CHRONICLE from the SPEND's block era); @bsv/sdk 3.0.0 Spend.ts:1681–1692 (the subscript continues into the locking script whenever context is UnlockingScript, no flag read), Spend.ts:343–345 (the CHRONICLE flag is read by #enforceNonMalleability, not by the append)",
+   "ruling": "impl-wrong",
+   "note": "#144 (lane xsig-144, 2026-10-16): a spend whose block is before Chronicle (no SCRIPT_CHRONICLE in the word) with a CHECKSIG executing in the unlocking script: the reference signs the unlocking script from its last OP_CODESEPARATOR to its end alone; the engine appends the locking script in every era, so it accepts the signature over unlock ++ lock the reference refuses (SCRIPT_ERR_SIG_NULLFAIL) and refuses the one the reference accepts; reachable only before Genesis (the push-only rule applies after Genesis and before Chronicle for every version, and after Chronicle for version ≤ 1, interpreter.cpp:2321–2334; there SIGPUSHONLY refuses the non-push unlock before any signature is read); measured on corpus/xsig-144/xsig-144.jsonl xsig-00001/00002 and on the lane's regtest chain (docs/records/*-s4b-144-checksig-in-unlock-signers-s4b.md); and xsig-00015/00016, the #147 minimal example (docs/records/20261016-234834-s3-147-minimal-example-s3.md)"
+  }
+ },
+ "rows": [
+  {
+   "why": "(19) the truncated-push scriptCode: ts-sdk's digest over it differs from the reference's on five of six shapes",
+   "when": {
+    "rule": "sighash.original.truncated-push",
+    "spec": "valid",
+    "engine": "not-valid"
+   },
+   "class": "sighash.original.truncated-push"
+  },
+  {
+   "why": "(20) the CHRONICLE bit refused: go-sdk has no image of it (SIG_HASHTYPE)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 32,
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(20) the CHRONICLE bit refused: ts-sdk gates it on the COIN's era (a format error)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 32,
+    "native_contains": "signature format is invalid"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(21) ts-sdk refuses the FORKID bit without the FORKID flag before Genesis under DERSIG; the reference checks it under STRICTENC alone",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 64,
+    "spend_height_lt": 478559,
+    "native_contains": "signature format is invalid"
+   },
+   "class": "sighash.type.forkid-bit.pre-genesis"
+  },
+  {
+   "why": "R4 on #32 (2026-10-05): a sighash row valid under the block word and refused only by the relay word's FORKID requirement is the policy-only class, never the consensus one",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "default",
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+    "engine": "valid"
+   },
+   "class": "flags.default-mode.policy-only"
+  },
+  {
+   "why": "(22) the default mode has no FORKID flag: MUST_USE_FORKID is never raised (R4 on #32: implementation-wrong in the default mode)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "default",
+    "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+    "engine": "valid"
+   },
+   "class": "sighash.default-mode.forkid-not-required"
+  },
+  {
+   "why": "an engine that gives no answer within the driver's wall on an input the reference decides (D15): a witness",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "adapter-timeout"
+   },
+   "class": "engine.timeout"
+  },
+  {
+   "why": "the engine cannot decide: a JavaScript limit on the shifts",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "RangeError: Maximum BigInt size exceeded",
+    "has_opcode_any": [
+     152,
+     153,
+     182,
+     183
+    ]
+   },
+   "class": "bitwise.shift.bigint-limit"
+  },
+  {
+   "why": "the engine cannot decide: the process dying on OP_NUM2BIN's element",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "adapter-died",
+    "has_opcode_any": [
+     128
+    ]
+   },
+   "class": "splice.num2bin.memory"
+  },
+  {
+   "why": "the engine cannot decide: its own resource limit",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "ScriptResourceLimitError"
+   },
+   "class": "splice.num2bin.memory"
+  },
+  {
+   "why": "R3 on #32 (2026-10-05, D15 as written): the SDK's own decoder refused a transaction the spec decides (runner.mjs's tx-decode, gosdk_codes::DECODE_REFUSALS): an engine abort",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "tx-decode:"
+   },
+   "class": "engine.decode-refusal"
+  },
+  {
+   "why": "any other undecided run is unexplained (the code returned None here before every later arm)",
+   "when": {
+    "engine": "undecided"
+   },
+   "class": "unexplained"
+  },
+  {
+   "why": "#144: a CHECKSIG in the unlocking script judged under a word without CHRONICLE (the spend before Chronicle): ts-sdk appends the locking script to the scriptCode regardless of the flag (Spend.ts:1681–1692); the reference only under SCRIPT_CHRONICLE (interpreter.cpp:1471–1481)",
+   "when": {
+    "column": "word",
+    "rule": "crypto.checksig.unlock",
+    "spend_height_lt": 943816,
+    "verdicts_differ": true
+   },
+   "class": "crypto.checksig.unlock.ungated"
+  },
+  {
+   "why": "#144: the same spends in ts-sdk's default mode: no heights, the era read from the version (a v2 spend judged as after Chronicle, where the append is the reference's too): the era heuristic, not NULLFAIL, decides them",
+   "when": {
+    "column": "default",
+    "rule": "crypto.checksig.unlock",
+    "default_mode_heuristic_mismatch": true,
+    "verdicts_differ": true
+   },
+   "class": "eras.default-mode.no-era"
+  },
+  {
+   "why": "(1) the absent version gate: under a node's word (CHRONICLE set) a version-2 spend is judged by the seven gated restrictions the reference turns off for it",
+   "when": {
+    "column": "word",
+    "version": "v2+",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code_in": [
+     "SCRIPT_ERR_MINIMALDATA",
+     "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+     "SCRIPT_ERR_CLEANSTACK",
+     "SCRIPT_ERR_SIG_PUSHONLY",
+     "SCRIPT_ERR_SIG_NULLFAIL",
+     "SCRIPT_ERR_SIG_HIGH_S",
+     "SCRIPT_ERR_SIG_NULLDUMMY",
+     "SCRIPT_ERR_MINIMALIF"
+    ]
+   },
+   "class": "flags.version-gate.absent"
+  },
+  {
+   "why": "(1) ts-sdk reports a high-S refusal under LOW_S as a format error (Spend.ts:560/573; tier 2)",
+   "when": {
+    "column": "word",
+    "version": "v2+",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_DER",
+    "family_contains": "high-s"
+   },
+   "class": "flags.version-gate.absent"
+  },
+  {
+   "why": "(2) FindAndDelete of the signature under FORKID (ts-sdk, every mode): the entry's rule",
+   "when": {
+    "rule": "sighash.scriptcode.findanddelete",
+    "spec": "invalid",
+    "engine": "valid"
+   },
+   "class": "sighash.scriptcode.findanddelete"
+  },
+  {
+   "why": "(2) FindAndDelete of the signature under FORKID (ts-sdk, every mode): the family",
+   "when": {
+    "family_contains": "findanddelete-forkid",
+    "spec": "invalid",
+    "engine": "valid"
+   },
+   "class": "sighash.scriptcode.findanddelete"
+  },
+  {
+   "why": "(3) the second OP_ELSE in the default mode",
+   "when": {
+    "column": "default",
+    "rule": "flow.else",
+    "spec_code": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+    "engine": "valid"
+   },
+   "class": "flow.else"
+  },
+  {
+   "why": "(4) OP_CHECKSEQUENCEVERIFY executed for a post-Genesis UTXO under the flag (ts-sdk)",
+   "when": {
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "has_opcode_any": [
+     178
+    ],
+    "engine_code_in": [
+     "SCRIPT_ERR_UNSATISFIED_LOCKTIME",
+     "SCRIPT_ERR_NEGATIVE_LOCKTIME",
+     "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+     "SCRIPT_ERR_INVALID_STACK_OPERATION"
+    ]
+   },
+   "class": "tx.sequence.post-genesis-utxo"
+  },
+  {
+   "why": "(5) the default mode against the block path: version 1 judged by the relay restrictions",
+   "when": {
+    "column": "default/spec",
+    "version": "v1",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code_in": [
+     "SCRIPT_ERR_MINIMALDATA",
+     "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+     "SCRIPT_ERR_CLEANSTACK",
+     "SCRIPT_ERR_SIG_PUSHONLY",
+     "SCRIPT_ERR_SIG_NULLFAIL",
+     "SCRIPT_ERR_SIG_HIGH_S",
+     "SCRIPT_ERR_SIG_NULLDUMMY",
+     "SCRIPT_ERR_MINIMALIF"
+    ],
+    "engine_code_not": "SCRIPT_ERR_SIG_NULLFAIL"
+   },
+   "class": "flags.policy-as-consensus"
+  },
+  {
+   "why": "R4 on #32 (2026-10-05): a NULLFAIL row valid under the block word and refused only by the relay word is the policy-only class, never the consensus one",
+   "when": {
+    "column": "default",
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_SIG_NULLFAIL",
+    "engine": "valid"
+   },
+   "class": "flags.default-mode.policy-only"
+  },
+  {
+   "why": "(6) NULLFAIL never applied in the default mode (R4 on #32: implementation-wrong in the default mode)",
+   "when": {
+    "column": "default",
+    "spec_code": "SCRIPT_ERR_SIG_NULLFAIL",
+    "engine": "valid"
+   },
+   "class": "flags.version-gate.nullfail"
+  },
+  {
+   "why": "(7) the policy flag DISCOURAGE_UPGRADABLE_NOPS is not in the default mode",
+   "when": {
+    "column": "default",
+    "spec_code": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS",
+    "engine": "valid"
+   },
+   "class": "flags.discourage-upgradable-nops"
+  },
+  {
+   "why": "(8) MUST_USE_FORKID never enforced (go-sdk; the eras corpus, 2026-09-24): the engine says anything but MUST_USE_FORKID where the reference refuses the type without the bit",
+   "when": {
+    "column": "word",
+    "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+    "engine_code_not": "SCRIPT_ERR_MUST_USE_FORKID"
+   },
+   "class": "sighash.must-use-forkid"
+  },
+  {
+   "why": "(9) the CHRONICLE hash-type bit (0x20) has no image in go-sdk (the eras corpus, 2026-09-24): the family",
+   "when": {
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE",
+    "family_contains": "chronicle-bit"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(9) the CHRONICLE hash-type bit (0x20) has no image in go-sdk: the eras rule",
+   "when": {
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE",
+    "rule": "eras.spend.chronicle"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(10) the eras corpus, ts-sdk, a pre-Genesis coin: CLTV is a NOP in every mode of the engine; the reference executes it for a pre-Genesis coin",
+   "when": {
+    "column": "word",
+    "rule_prefix_any": [
+     "eras.",
+     "p2sh."
+    ],
+    "prevout_height_lt_any": 620538,
+    "verdicts_differ": true,
+    "has_opcode_any": [
+     177
+    ],
+    "spec_code": "SCRIPT_ERR_UNSATISFIED_LOCKTIME",
+    "engine": "valid"
+   },
+   "class": "tx.locktime.nop"
+  },
+  {
+   "why": "(11) the eras corpus, ts-sdk, a pre-Genesis coin: CSV under the flag never reads the input's sequence; the reference compares it for a pre-Genesis coin",
+   "when": {
+    "column": "word",
+    "rule_prefix_any": [
+     "eras.",
+     "p2sh."
+    ],
+    "prevout_height_lt_any": 620538,
+    "verdicts_differ": true,
+    "has_opcode_any": [
+     178
+    ],
+    "spec_code": "SCRIPT_ERR_UNSATISFIED_LOCKTIME",
+    "engine": "valid"
+   },
+   "class": "tx.sequence.check-absent"
+  },
+  {
+   "why": "(12) the eras corpus, ts-sdk, a pre-Genesis coin: the coin's era read from the SPEND's GENESIS bit: every pre-Genesis coin spent after Genesis is judged post-Genesis",
+   "when": {
+    "column": "word",
+    "rule_prefix_any": [
+     "eras.",
+     "p2sh."
+    ],
+    "prevout_height_lt_any": 620538,
+    "verdicts_differ": true
+   },
+   "class": "eras.utxo.spend-bit-conflated"
+  },
+  {
+   "why": "the tx.* corpus (2026-09-26): under the relay word the engine refuses OP_CHECKLOCKTIMEVERIFY/OP_CHECKSEQUENCEVERIFY on a pre-Genesis coin as discouraged NOPs (Spend.ts:818–832), where the reference executes them",
+   "when": {
+    "rule_in": [
+     "tx.locktime",
+     "tx.sequence"
+    ],
+    "column": "word",
+    "prevout_height_lt_any": 620538,
+    "spec": "valid",
+    "engine": "invalid",
+    "engine_code": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+   },
+   "class": "tx.locktime.discouraged"
+  },
+  {
+   "why": "the tx.* corpus: OP_CHECKLOCKTIMEVERIFY is a NOP in every mode of the engine (1018–1019); the reference executes it for a pre-Genesis coin",
+   "when": {
+    "rule": "tx.locktime",
+    "column": "word",
+    "prevout_height_lt_any": 620538,
+    "has_opcode_any": [
+     177
+    ],
+    "spec": "invalid",
+    "engine": "valid"
+   },
+   "class": "tx.locktime.nop"
+  },
+  {
+   "why": "the tx.* corpus: OP_CHECKSEQUENCEVERIFY under the flag never reads the input's sequence nor the type bit (1021–1049: the operand's sign, its disable bit and the version only); the reference compares the masked operand with the input's sequence for a pre-Genesis coin",
+   "when": {
+    "rule": "tx.sequence",
+    "column": "word",
+    "prevout_height_lt_any": 620538,
+    "has_opcode_any": [
+     178
+    ],
+    "spec": "invalid",
+    "engine": "valid"
+   },
+   "class": "tx.sequence.check-absent"
+  },
+  {
+   "why": "the tx.* corpus: the default mode carries no lock-time opcodes (CLTV a NOP, CSV only under a flag the mode never sets)",
+   "when": {
+    "rule_in": [
+     "tx.locktime",
+     "tx.sequence"
+    ],
+    "column": "default",
+    "prevout_height_lt_any": 620538,
+    "spec": "invalid",
+    "engine": "valid"
+   },
+   "class": "tx.default-mode.locktime-nops"
+  },
+  {
+   "why": "(13) the default mode takes no heights: the era-boundary rows cannot be modelled by it (a note, never a consensus claim): the eras rows",
+   "when": {
+    "column": "default",
+    "rule_prefix_any": [
+     "eras.",
+     "p2sh."
+    ],
+    "verdicts_differ": true
+   },
+   "class": "eras.default-mode.no-era"
+  },
+  {
+   "why": "(14p) the POLICY width alone (S3, set 4, 2026-09-27): the spec valid at consensus and refusing on the mempool path with the width's code, the engine accepting: the node's policy setting, never a consensus claim",
+   "when": {
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength.policy"
+  },
+  {
+   "why": "(14p) the same through OP_BIN2NUM's result test, on the width rule (the code has other sources)",
+   "when": {
+    "rule": "limits.maxscriptnumlength",
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength.policy"
+  },
+  {
+   "why": "(14) no script-number length limit after Genesis (ts-sdk, in every mode; bsv-rs had none until 0.3.28): the reference's 750,000 / 32,000,000 / 10,000",
+   "when": {
+    "spec_code": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength"
+  },
+  {
+   "why": "(14b) the consensus width reached through OP_BIN2NUM's result test (S3, set 4, 2026-09-27), on the width rule",
+   "when": {
+    "rule": "limits.maxscriptnumlength",
+    "spec_code": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength"
+  },
+  {
+   "why": "(13) the default mode takes no heights: any entry whose coin's era differs from the version heuristic's (a NOTE, never a cause: since 2026-09-27 06:5x UTC it stands AFTER the four width rows (14p)/(14)/(14b), which name a cause the source decides: ts-sdk's default mode has no script-number width at all (Spend.ts:386–389, #scriptNumMaxSize undefined but for a pre-Genesis coin under explicit flags), so an entry the spec refuses by a width is the width's whichever era the heuristic assigns the coin; the parent's word on S3r2's second stop)",
+   "when": {
+    "column": "default",
+    "default_mode_heuristic_mismatch": true,
+    "verdicts_differ": true
+   },
+   "class": "eras.default-mode.no-era"
+  },
+  {
+   "why": "(17) the numeric shifts' count outside int: the reference's big-int shift refuses it (SCRIPT_ERR_BIG_INT); an engine that shifts by any count says valid",
+   "when": {
+    "rule_in": [
+     "expansion.lshiftnum",
+     "expansion.rshiftnum"
+    ],
+    "spec_code": "SCRIPT_ERR_BIG_INT",
+    "engine": "valid"
+   },
+   "class": "expansion.shift.count-bigint"
+  },
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "rule": "splice.substr.int64-reader",
+    "spec": "valid",
+    "engine": "not-valid",
+    "id_in": [
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "gen-00796",
+     "gen-01018",
+     "gen-01020",
+     "gen-01024",
+     "gen-01026",
+     "gen-01028",
+     "gen-01030",
+     "gen-01032",
+     "gen-01034",
+     "gen-01036",
+     "gen-01038",
+     "gen-01040",
+     "gen-01042",
+     "gen-01044",
+     "gen-01046",
+     "gen-01050",
+     "gen-01052",
+     "gen-01054",
+     "gen-01056",
+     "gen-01058",
+     "gen-01062",
+     "gen-01064",
+     "gen-01066",
+     "gen-01068",
+     "gen-01070",
+     "gen-01074",
+     "gen-01076",
+     "gen-01078",
+     "gen-01080",
+     "gen-01082",
+     "gen-01086",
+     "gen-01088",
+     "gen-01090",
+     "gen-01092",
+     "gen-01094",
+     "gen-01096",
+     "gen-01098",
+     "gen-01102",
+     "gen-01104",
+     "gen-01106",
+     "gen-01108",
+     "gen-01112",
+     "gen-01116",
+     "gen-01118",
+     "gen-01120",
+     "gen-01122",
+     "gen-01126",
+     "gen-01130",
+     "gen-01132",
+     "gen-01134",
+     "gen-01136",
+     "gen-01140",
+     "gen-01144",
+     "gen-01146",
+     "gen-01148",
+     "gen-01150",
+     "gen-01154",
+     "gen-01016",
+     "gen-01022",
+     "gen-01048",
+     "gen-01060",
+     "gen-01072",
+     "gen-01084",
+     "gen-01100",
+     "gen-01110",
+     "gen-01114",
+     "gen-01124",
+     "gen-01128",
+     "gen-01138",
+     "gen-01142",
+     "gen-01152",
+     "gen-01156"
+    ]
+   },
+   "class": "splice.substr.int64-reader.first-8-bytes"
+  },
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "rule": "splice.substr.int64-reader",
+    "spec": "invalid",
+    "engine": "valid",
+    "id_in": [
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "gen-00796",
+     "gen-01018",
+     "gen-01020",
+     "gen-01024",
+     "gen-01026",
+     "gen-01028",
+     "gen-01030",
+     "gen-01032",
+     "gen-01034",
+     "gen-01036",
+     "gen-01038",
+     "gen-01040",
+     "gen-01042",
+     "gen-01044",
+     "gen-01046",
+     "gen-01050",
+     "gen-01052",
+     "gen-01054",
+     "gen-01056",
+     "gen-01058",
+     "gen-01062",
+     "gen-01064",
+     "gen-01066",
+     "gen-01068",
+     "gen-01070",
+     "gen-01074",
+     "gen-01076",
+     "gen-01078",
+     "gen-01080",
+     "gen-01082",
+     "gen-01086",
+     "gen-01088",
+     "gen-01090",
+     "gen-01092",
+     "gen-01094",
+     "gen-01096",
+     "gen-01098",
+     "gen-01102",
+     "gen-01104",
+     "gen-01106",
+     "gen-01108",
+     "gen-01112",
+     "gen-01116",
+     "gen-01118",
+     "gen-01120",
+     "gen-01122",
+     "gen-01126",
+     "gen-01130",
+     "gen-01132",
+     "gen-01134",
+     "gen-01136",
+     "gen-01140",
+     "gen-01144",
+     "gen-01146",
+     "gen-01148",
+     "gen-01150",
+     "gen-01154",
+     "gen-01016",
+     "gen-01022",
+     "gen-01048",
+     "gen-01060",
+     "gen-01072",
+     "gen-01084",
+     "gen-01100",
+     "gen-01110",
+     "gen-01114",
+     "gen-01124",
+     "gen-01128",
+     "gen-01138",
+     "gen-01142",
+     "gen-01152",
+     "gen-01156"
+    ]
+   },
+   "class": "splice.substr.int64-reader.first-8-bytes"
+  },
+  {
+   "why": "(18) the right shift of a negative number: the reference rounds toward zero; an engine that shifts arithmetically rounds toward negative infinity",
+   "when": {
+    "rule": "expansion.rshiftnum",
+    "family_contains": "negative",
+    "spec": "valid",
+    "engine": "not-valid"
+   },
+   "class": "expansion.rshiftnum.negative-rounding"
+  },
+  {
+   "why": "(15) the CHRONICLE hash-type bit gated on the COIN's era instead of the SPEND's (ts-sdk): the refusal surfaces as a format error: the family",
+   "when": {
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_DER",
+    "family_contains": "chronicle-bit"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(15) the CHRONICLE hash-type bit gated on the COIN's era instead of the SPEND's (ts-sdk): the eras rule",
+   "when": {
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_DER",
+    "rule": "eras.spend.chronicle"
+   },
+   "class": "sighash.type.chronicle-bit"
+  }
+ ]
+}

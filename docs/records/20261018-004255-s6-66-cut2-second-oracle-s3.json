@@ -1,0 +1,1060 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 1418,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 22,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 22,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 78,
+      "rpc-precheck": 0,
+      "unrealizable": 56
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [],
+    "finality": [],
+    "mempool": [],
+    "oracle": [],
+    "utxo": [
+      {
+        "id": "availability/missing-raw",
+        "label": "[X]",
+        "reference_token": "rpc-precheck: -25 Missing inputs (src/rpc/rawtransaction.cpp:1636-1638) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is rpc-precheck, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "availability/spent-raw",
+        "label": "[X]",
+        "reference_token": "rpc-precheck: -25 Missing inputs (src/rpc/rawtransaction.cpp:1636-1638) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is rpc-precheck, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase/future-height",
+        "label": "[X]",
+        "reference_token": "unrealizable: row overrides compiled COINBASE_MATURITY 100; no regtest RPC or launch override; src/consensus/consensus.h:71-75 and src/validation.cpp:2616-2625 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase/config-2-depth-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: row overrides compiled COINBASE_MATURITY 100; no regtest RPC or launch override; src/consensus/consensus.h:71-75 and src/validation.cpp:2616-2625 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase/config-2-depth-2",
+        "label": "[X]",
+        "reference_token": "unrealizable: row overrides compiled COINBASE_MATURITY 100; no regtest RPC or launch override; src/consensus/consensus.h:71-75 and src/validation.cpp:2616-2625 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation/depth-999",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-premature-spend-of-confiscation\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation/depth-1000",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":true,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation/depth-1001",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":true,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation/config-2-depth-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: row overrides compiled CONFISCATION_MATURITY 1000; no regtest RPC or launch override; src/consensus/consensus.h:76-79 and src/validation.cpp:2628-2635 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation/config-2-depth-2",
+        "label": "[X]",
+        "reference_token": "unrealizable: row overrides compiled CONFISCATION_MATURITY 1000; no regtest RPC or launch override; src/consensus/consensus.h:76-79 and src/validation.cpp:2628-2635 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "frozen/admission",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-frozen\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's config and context (maturities, frozen lists, the policy flag) are selected through the reference's settings and blacklist RPCs; the instance runs its recipe's settings and Teranode's alert-system freeze (stores/utxo/Interface.go:522-532) is not that list"
+      },
+      {
+        "id": "frozen/policy-only-block",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"outputs_match\":true,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row freezes its coin at the policy level only; Teranode's freeze has one level (the freeze RPC, services/rpc/handlers.go:2708-2730, into the UTXO store's FreezeUTXOs, stores/utxo/sql/alert_system.go:52-103), so a policy-only freeze has no Teranode setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "order/frozen-before-maturity-value",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires an out-of-MoneyRange stored coin; creating its output is rejected before AddCoins and no RPC injects UTXO cache entries; src/validation.cpp:542-558,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "order/coinbase-before-confiscation",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires an out-of-MoneyRange stored coin; creating its output is rejected before AddCoins and no RPC injects UTXO cache entries; src/validation.cpp:542-558,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "order/earlier-value-before-later-frozen",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires an out-of-MoneyRange stored coin; creating its output is rejected before AddCoins and no RPC injects UTXO cache entries; src/validation.cpp:542-558,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/input-2099999999999999",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/input-2100000000000000",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/input-2100000000000001",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires an out-of-MoneyRange stored coin; creating its output is rejected before AddCoins and no RPC injects UTXO cache entries; src/validation.cpp:542-558,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/input--2",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires an out-of-MoneyRange stored coin; creating its output is rejected before AddCoins and no RPC injects UTXO cache entries; src/validation.cpp:542-558,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/aggregate-2100000000000000",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/aggregate-2100000000000001",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "value/equal-max-values",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/policy-ceiling-ignored",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee-stage/max-minus-one",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee-stage/max",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee-stage/max-plus-one",
+        "label": "[X]",
+        "reference_token": "unrealizable: fee stage requires valueIn above MAX_MONEY, but live CheckTxInputs rejects input or running value range before fee arithmetic; src/validation.cpp:2637-2662 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee-stage/negative-input",
+        "label": "[X]",
+        "reference_token": "unrealizable: negative valueIn cannot reach live fee arithmetic: spent sentinel fails availability and other negative coins fail MoneyRange; src/coins.cpp:116-128 and src/validation.cpp:2556-2560,2637-2662 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee-stage/equal-max",
+        "label": "[X]",
+        "reference_token": "unrealizable: required funded amount exceeds regtest total subsidy bound 15000 BSV; compiled halving interval 150 and 50 BSV initial subsidy have no launch override; src/chainparams.cpp:1460 and src/validation.cpp:2252-2265,3655-3664 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/return-height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":null,\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 9, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/false-return-height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":null,\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 9, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/true-height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 9, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/return-height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"6a\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 10, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/false-return-height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":null,\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 10, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/true-height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 10, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/return-height-20",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"6a\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 20, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/false-return-height-20",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":null,\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 20, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/true-height-20",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 20, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/oversized-height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":null,\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 9, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/oversized-height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"6161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161\"},\"created_height_matches\":true,\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 10, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "outputs/mempool-stored-height",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":true,\"chain_absent\":true,\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"6a\"},\"pool\":[\"cc84199469183ef895750235dc137112fa1b4aca94435bac2c5d8bef24794dc4\"],\"sentinel\":true,\"spent\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin or context carries the reference's mempool height (2147483647, a pool parent's height); a block on the bridge's road assigns every coin its block's height, so the cell is not a block on the instance's chain [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase-add/height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"outputs\":[{\"coinbase\":true,\"satoshis\":50,\"script\":\"51\"},null,null],\"removed\":true,\"status\":\"ok\",\"unrelated_retained\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 9, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase-add/height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"outputs\":[{\"coinbase\":true,\"satoshis\":50,\"script\":\"51\"},null,{\"coinbase\":true,\"satoshis\":1,\"script\":\"6a\"}],\"removed\":true,\"status\":\"ok\",\"unrelated_retained\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 10, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase-add/height-20",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"outputs\":[{\"coinbase\":true,\"satoshis\":50,\"script\":\"51\"},null,{\"coinbase\":true,\"satoshis\":1,\"script\":\"6a\"}],\"removed\":true,\"status\":\"ok\",\"unrelated_retained\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 10, chronicleHeight 20, height 20, network \"regtest\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "coinbase-add/overwrite-undo-loss",
+        "label": "[X]",
+        "reference_token": "unrealizable: row preloads a different output value under the exact new transaction id/index; a live prefix cannot inject that cache entry without a transaction-id collision, and no RPC supplies arbitrary coin state; src/coins.cpp:386-401,548-565 and src/validation.cpp:3060-3115 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "overwrite/regular-precondition",
+        "label": "[X]",
+        "reference_token": "unrealizable: row preloads a different output value under the exact new transaction id/index; a live prefix cannot inject that cache entry without a transaction-id collision, and no RPC supplies arbitrary coin state; src/coins.cpp:386-401,548-565 and src/validation.cpp:3060-3115 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/return-coin-height-9",
+        "label": "[X]",
+        "reference_token": "unrealizable: the required pre-Genesis OP_RETURN chain coin is pruned at creation, so a live chain cannot reach its script stage; src/script/script.h:260-277 and src/coins.cpp:45-64 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/return-coin-height-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":true,\"output\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"parent_sentinel\":true,\"pool\":[\"b39288526989f9f88c809c68f881a6d0160372d6b5c121a7803f509caa4b9fea\",\"fd3400fc90116f233450d563be848d53039d85ffd9fdd4f7b77e97e3d988cb3b\"]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin or context carries the reference's mempool height (2147483647, a pool parent's height); a block on the bridge's road assigns every coin its block's height, so the cell is not a block on the instance's chain [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/mempool-tip-before-genesis",
+        "label": "[X]",
+        "reference_token": "unrealizable: row combines a pre-Genesis tip 8 and mempool coin with onBlock=true at height 1200; ConnectBlock uses its actual predecessor and assigns included parents their block height, so this mixed context is not a live block state; src/validation.cpp:2667-2674,2972-2981,3437-3444 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/resource-selector-False",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requests policy resource selection inside an onBlock=true script check; live ConnectBlock passes consensus=true with no RPC or launch selector override; src/validation.cpp:3380-3396 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/explicit-word-0",
+        "label": "[X]",
+        "reference_token": "unrealizable: row replaces the complete block script flag word; live block flags are derived from chain state, with regtest UAHF and DAA active from zero and no block flag-word override; inline verifyscript would not realize the chain boundary; src/verify_script_flags.cpp:31-81 and src/chainparams.cpp:1487-1491 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/explicit-word-128",
+        "label": "[X]",
+        "reference_token": "unrealizable: row replaces the complete block script flag word; live block flags are derived from chain state, with regtest UAHF and DAA active from zero and no block flag-word override; inline verifyscript would not realize the chain boundary; src/verify_script_flags.cpp:31-81 and src/chainparams.cpp:1487-1491 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no block-context measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation-tx/invalid-contents",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-ctx-invalid\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation-tx/not-whitelisted",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-ctx-not-whitelisted\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "confiscation-tx/whitelisted-bypass",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"outputs_match\":true,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's coin is a confiscation transaction's output or the row whitelists one; Teranode has no confiscation transaction: its counterpart is the alert system's reassignment of a frozen output to a new output hash (services/alert/node.go:397-511; stores/utxo/sql/alert_system.go:147-177, spendable after utxostore_reassignedUtxoSpendableAfterBlocks, settings/utxostore_settings.go:54), a different object, so the row's coin and its maturity have no Teranode realization [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/real-p2pkh",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires mainnet height-400000 pre-UAHF/pre-DAA script context and historical signed material; regtest enables UAHF and DAA from height zero with no launch override, so remapping would change the signature-rule boundary; src/chainparams.cpp:1487-1491 and src/verify_script_flags.cpp:52-66 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 620538, chronicleHeight 943816, height 400000, network \"mainnet\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "scripts/real-p2pkh-bad-signature",
+        "label": "[X]",
+        "reference_token": "unrealizable: row requires mainnet height-400000 pre-UAHF/pre-DAA script context and historical signed material; regtest enables UAHF and DAA from height zero with no launch override, so remapping would change the signature-rule boundary; src/chainparams.cpp:1487-1491 and src/verify_script_flags.cpp:52-66 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's context sits at an era boundary of the reference's recipe (genesisHeight 620538, chronicleHeight 943816, height 400000, network \"mainnet\"); the instance's eras are fixed at Genesis 100 / Chronicle 200 with no setting (go-chaincfg v1.6.2 params.go:475-476) and its network is regtest, so the row's era cell is not the instance's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "availability/precedes-frozen",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "frozen": true,
+          "seconds": 0.000765583,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "coinbase/depth-99",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000752792,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-premature-spend-of-coinbase\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "coinbase/depth-100",
+        "label": "[X]",
+        "observed": {
+          "height": 1551,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "coinbase/depth-101",
+        "label": "[X]",
+        "observed": {
+          "height": 1653,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "frozen/block",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "frozen": true,
+          "seconds": 0.000778666,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-frozen\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "value/input-0",
+        "label": "[X]",
+        "observed": {
+          "height": 1656,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":0,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "value/input-1",
+        "label": "[X]",
+        "observed": {
+          "height": 1658,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "value/below-output",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000634709,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/output-2100000000000001",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000687583,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-toolarge\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/output-18446744073709551615",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000691667,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-negative\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/duplicate-input",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000673958,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-duplicate\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/zero",
+        "label": "[X]",
+        "observed": {
+          "height": 1664,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":0,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/one",
+        "label": "[X]",
+        "observed": {
+          "height": 1666,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/below-out",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000715166,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/subtract",
+        "label": "[X]",
+        "observed": {
+          "height": 1669,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":100,\"script\":\"51\"},\"fee\":23,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/true",
+        "label": "[X]",
+        "observed": {
+          "height": 1671,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/false",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000684833,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/number-equal",
+        "label": "[X]",
+        "observed": {
+          "height": 1674,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/number-unequal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000572625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/return-coin-height-10",
+        "label": "[X]",
+        "observed": {
+          "height": 1677,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/return-coin-height-20",
+        "label": "[X]",
+        "observed": {
+          "height": 1679,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/resource-selector-True",
+        "label": "[X]",
+        "observed": {
+          "height": 1681,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "full_receipt": {
+    "bytes": 4334093,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-004255/receipt.json",
+    "sha256": "ddc6efb48bedc7485c1f52d5cd7c705527f5d037ac43dd0945eb809a02fbf5c1"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "627128dffeba3e68ab7ac54054313acedb98096f759d86ef6b7f65b101462fcc",
+      "height": 1681
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261018-004255-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 11,
+    "ends": 11,
+    "events": 619,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "availability/precedes-frozen",
+        "verdict": "agree"
+      },
+      {
+        "row": "coinbase/depth-99",
+        "verdict": "agree"
+      },
+      {
+        "row": "coinbase/depth-100",
+        "verdict": "agree"
+      },
+      {
+        "row": "coinbase/depth-101",
+        "verdict": "agree"
+      },
+      {
+        "row": "frozen/block",
+        "verdict": "agree"
+      },
+      {
+        "row": "value/input-0",
+        "verdict": "agree"
+      },
+      {
+        "row": "value/input-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "value/below-output",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/output-2100000000000001",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/output-18446744073709551615",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/duplicate-input",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/zero",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/one",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/below-out",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/subtract",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/true",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/false",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/number-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/number-unequal",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/return-coin-height-10",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/return-coin-height-20",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/resource-selector-True",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "availability/missing-raw",
+    "availability/precedes-frozen",
+    "availability/spent-raw",
+    "coinbase-add/height-10",
+    "coinbase-add/height-20",
+    "coinbase-add/height-9",
+    "coinbase-add/overwrite-undo-loss",
+    "coinbase/config-2-depth-1",
+    "coinbase/config-2-depth-2",
+    "coinbase/depth-100",
+    "coinbase/depth-101",
+    "coinbase/depth-99",
+    "coinbase/future-height",
+    "confiscation-tx/invalid-contents",
+    "confiscation-tx/not-whitelisted",
+    "confiscation-tx/whitelisted-bypass",
+    "confiscation/config-2-depth-1",
+    "confiscation/config-2-depth-2",
+    "confiscation/depth-1000",
+    "confiscation/depth-1001",
+    "confiscation/depth-999",
+    "fee-stage/below-out",
+    "fee-stage/equal-max",
+    "fee-stage/max",
+    "fee-stage/max-minus-one",
+    "fee-stage/max-plus-one",
+    "fee-stage/negative-input",
+    "fee-stage/one",
+    "fee-stage/subtract",
+    "fee-stage/zero",
+    "fee/policy-ceiling-ignored",
+    "frozen/admission",
+    "frozen/block",
+    "frozen/policy-only-block",
+    "order/coinbase-before-confiscation",
+    "order/earlier-value-before-later-frozen",
+    "order/frozen-before-maturity-value",
+    "outputs/false-return-height-10",
+    "outputs/false-return-height-20",
+    "outputs/false-return-height-9",
+    "outputs/mempool-stored-height",
+    "outputs/oversized-height-10",
+    "outputs/oversized-height-9",
+    "outputs/return-height-10",
+    "outputs/return-height-20",
+    "outputs/return-height-9",
+    "outputs/true-height-10",
+    "outputs/true-height-20",
+    "outputs/true-height-9",
+    "overwrite/regular-precondition",
+    "scripts/explicit-word-0",
+    "scripts/explicit-word-128",
+    "scripts/false",
+    "scripts/mempool-tip-before-genesis",
+    "scripts/number-equal",
+    "scripts/number-unequal",
+    "scripts/real-p2pkh",
+    "scripts/real-p2pkh-bad-signature",
+    "scripts/resource-selector-False",
+    "scripts/resource-selector-True",
+    "scripts/return-coin-height-10",
+    "scripts/return-coin-height-20",
+    "scripts/return-coin-height-2147483647",
+    "scripts/return-coin-height-9",
+    "scripts/true",
+    "structure/duplicate-input",
+    "structure/output-18446744073709551615",
+    "structure/output-2100000000000001",
+    "value/aggregate-2100000000000000",
+    "value/aggregate-2100000000000001",
+    "value/below-output",
+    "value/equal-max-values",
+    "value/input--2",
+    "value/input-0",
+    "value/input-1",
+    "value/input-2099999999999999",
+    "value/input-2100000000000000",
+    "value/input-2100000000000001"
+  ],
+  "run_id": "gate95-20261017-234627-004255",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-18T00:43:10Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 22,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 22,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 158.452010916
+  }
+}

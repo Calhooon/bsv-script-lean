@@ -1,0 +1,186 @@
+[export: 12 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 4446887 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260927-134309 UTC; wall: 883s (14 min 43 s)
+[withheld at export: a sibling tree's line]
+status: GREEN
+legs (the verdict lines, in order):
+  check-pins: GREEN (71 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+  cite_check: 2612 citations found in lean/ and docs/ (2547 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1061, MOVED 0; not anchored (reported, never RED): unanchored 910, beyond-eof 7, unresolved 12, ambiguous 15, unpinned 11, other-version 2, self 379, history 215, absent 0, orphan rows 2; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  lean: build OK, sorry-free
+  axiom check: OK (394 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.28: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.3.28 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+  sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.28 ECDSA); 0 failures; negative control bit-flip fails on every entry
+  arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.28 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+  arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+  stackcheck: 262 engine cases; comparable 260: agree 260, mismatch 0, unimplemented 0; recorded (not counted) 2
+  crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+  crypto: ECDSA vectors from bsv-rs 0.3.28: 1340 cases, 0 mismatches
+  crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+  crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+  seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and expansion opcodes of #11/#18) and 0 elsewhere
+  scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  txtests bitcoin-sv-v1.2.2-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+  txtests bitcoin-sv-v1.2.2-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+  flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  specgen --check: OK (117 files up to date; 2 rules flagged)
+  bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+  versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+  erascheck: 74 rows × 2 cells = 148 cells decided under Params.derive (SV-node's mainnet defaults, block and mempool) with the error code (eras 128, p2sh 16, p2sh-txlevel 4); 2 rows decided at the transaction level (CheckRegularTransaction): 0 mismatches
+  witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+  witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: witness-policy-00003 witness-policy/tx-size (params.policy.maxtxsizepolicy): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: 3 witness transactions decided under both nodes' derived parameters, 0 mismatches
+  bsvs --self-test
+  bsvs --self-test: GREEN
+  run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.3.28 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided=0 nondeterminism=0, 0.2s
+  run_bsvrs --smoke: GREEN (10000 entries agree with their recorded bsv-rs verdicts)
+  run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.28 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the block word per input, the spec-mempool column under the standard word per input, from the entry's spend height and the coin's height (engine::word_for); entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@4446887 (sv-mainnet-default); 0.8s
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.5.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.5.2 (docs/PROVENANCE.md §1a)); the spec at spec@4446887 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 4.2s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@2.8.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 2.8.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@4446887 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 9.1s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  rules_check: go-sdk on arith: 692 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 8 divergent runs in 1 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: go-sdk on bytes: 512 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 149 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on crypto: 84 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 15 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on eras: 74 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 9 divergent runs in 5 classes; EQUAL to the manifest
+  rules_check: go-sdk on flow: 1094 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 307 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on gen: 1011 entries replayed from go-sdk@v1.5.2 (spec spec@8389375 recorded in the corpus); 75 divergent runs in 16 classes; EQUAL to the manifest
+  rules_check: go-sdk on seed: 10000 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 1002 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on stack: 262 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 4 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on tx: 37 entries replayed from go-sdk@v1.5.2 (spec spec@714fbd6 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: ts-sdk on arith: 692 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 136 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: ts-sdk on bytes: 512 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 309 divergent runs in 4 classes; EQUAL to the manifest
+  rules_check: ts-sdk on crypto: 84 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 30 divergent runs in 9 classes; EQUAL to the manifest
+  rules_check: ts-sdk on eras: 74 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 114 divergent runs in 14 classes; EQUAL to the manifest
+  rules_check: ts-sdk on flow: 1094 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 612 divergent runs in 6 classes; EQUAL to the manifest
+  rules_check: ts-sdk on gen: 1011 entries replayed from ts-sdk@2.8.0 (spec spec@8389375 recorded in the corpus); 155 divergent runs in 30 classes; EQUAL to the manifest
+  rules_check: ts-sdk on seed: 10000 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 1162 divergent runs in 3 classes; EQUAL to the manifest
+  rules_check: ts-sdk on stack: 262 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 16 divergent runs in 6 classes; EQUAL to the manifest
+  rules_check: ts-sdk on tx: 37 entries replayed from ts-sdk@2.8.0 (spec spec@714fbd6 recorded in the corpus); 40 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on arith: 692 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on bytes: 512 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on crypto: 84 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on eras: 74 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on flow: 1094 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on gen: 1011 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on seed: 10000 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: gobdk on stack: 262 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on tx: 37 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on arith: 692 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on crypto: 84 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on eras: 74 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on flow: 1094 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on gen: 1011 entries run live under the two words (bsv-rs@0.3.28; spec spec@8389375); 64 divergent runs in 10 classes; EQUAL to the manifest
+  rules_check: bsv-rs on seed: 10000 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on stack: 262 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 4 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: bsv-rs on tx: 37 entries run live under the two words (bsv-rs@0.3.28; spec spec@714fbd6); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: GREEN (the tables reproduce every recorded classification) (35 corpus × engine manifests, 54552 entries replayed, 4211 divergent runs classified; 47 s)
+  make check: GREEN (stubs are listed above by name; a stub is not a pass)
+[withheld at export: a sibling tree's line]
+  sample 13:43:09 UTC: load1 9.53; over 5% cpu: lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 10% 1.7GB; lean 9% 3.0GB; lean 9% 3.0GB; other programs: 12 processes, 177% cpu; 
+  sample 13:43:19 UTC: load1 11.20; over 5% cpu: lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 18% 2.2GB; lean 13% 3.5GB; lean 14% 3.5GB; other programs: 7 processes, 224% cpu; 
+  sample 13:43:29 UTC: load1 11.67; over 5% cpu: lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 14% 2.5GB; lean 11% 3.3GB; lean 11% 3.3GB; lake 41% 0.6GB; other programs: 5 processes, 67% cpu; 
+  sample 13:43:39 UTC: load1 12.31; over 5% cpu: lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 13% 3.0GB; lean 12% 3.7GB; lean 13% 3.7GB; lake 91% 0.8GB; sh 8% 0.0GB; other programs: 7 processes, 131% cpu; 
+  sample 13:43:50 UTC: load1 14.83; over 5% cpu: lean 14% 2.8GB; lean 14% 2.8GB; lean 14% 2.8GB; lean 14% 2.8GB; lean 14% 2.8GB; lean 14% 2.8GB; lean 14% 2.8GB; lean 15% 2.8GB; lean 14% 2.8GB; lean 16% 3.2GB; lean 16% 3.2GB; lean 34% 0.7GB; lean 34% 0.7GB; lean 34% 0.7GB; lean 34% 0.7GB; lean 34% 0.7GB; lean 34% 0.7GB; lean 34% 0.7GB; node 32% 0.1GB; other programs: 10 processes, 152% cpu; 
+  sample 13:44:00 UTC: load1 15.50; over 5% cpu: lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 17% 1.7GB; lean 18% 1.7GB; lean 16% 3.0GB; lean 16% 3.0GB; lean 16% 1.9GB; lean 16% 1.9GB; lean 16% 1.9GB; lean 16% 1.9GB; lean 16% 1.9GB; lean 16% 1.9GB; lean 16% 1.9GB; other programs: 16 processes, 193% cpu; 
+  sample 13:44:11 UTC: load1 17.05; over 5% cpu: lean 34% 1.3GB; lean 34% 1.3GB; lean 35% 1.3GB; lean 35% 1.3GB; lean 34% 1.3GB; lean 34% 1.3GB; lean 35% 1.3GB; lean 35% 1.3GB; lean 35% 1.3GB; lean 30% 2.5GB; lean 31% 2.5GB; lean 17% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; other programs: 6 processes, 81% cpu; 
+  sample 13:44:21 UTC: load1 18.16; over 5% cpu: lean 29% 1.0GB; lean 28% 1.0GB; lean 28% 1.0GB; lean 28% 1.0GB; lean 28% 1.0GB; lean 29% 1.0GB; lean 28% 1.0GB; lean 28% 1.0GB; lean 28% 1.0GB; lean 11% 1.6GB; lean 11% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; lean 14% 1.6GB; other programs: 6 processes, 126% cpu; 
+  sample 13:44:31 UTC: load1 19.35; over 5% cpu: lean 12% 1.0GB; lean 12% 1.0GB; lean 12% 1.0GB; lean 12% 1.0GB; lean 13% 1.0GB; lean 12% 1.0GB; lean 12% 1.0GB; lean 12% 1.0GB; lean 12% 1.0GB; lean 16% 1.4GB; lean 16% 1.2GB; lean 13% 1.4GB; lean 14% 1.4GB; lean 13% 1.4GB; lean 13% 1.3GB; lean 13% 1.4GB; lean 13% 1.4GB; lean 13% 1.4GB; other programs: 10 processes, 216% cpu; 
+  sample 13:44:42 UTC: load1 24.33; over 5% cpu: lean 30% 0.6GB; lean 31% 0.6GB; lean 33% 1.1GB; lean 37% 1.2GB; lean 80% 1.3GB; lean 14% 1.2GB; lean 31% 1.2GB; lean 79% 1.2GB; lean 8% 1.1GB; lean 25% 1.2GB; lean 47% 1.2GB; lean 6% 1.7GB; lean 6% 1.7GB; lean 7% 1.7GB; lean 7% 1.7GB; lean 6% 1.7GB; lean 6% 1.7GB; lean 6% 1.7GB; other programs: 12 processes, 182% cpu; 
+  sample 13:44:52 UTC: load1 27.62; over 5% cpu: lean 11% 1.2GB; lean 10% 1.2GB; lean 32% 0.4GB; lean 13% 1.2GB; lean 19% 0.8GB; lean 13% 1.0GB; lean 15% 0.7GB; lean 8% 1.1GB; lean 16% 1.0GB; lean 13% 1.1GB; lean 13% 1.6GB; lean 11% 1.6GB; lean 12% 1.6GB; lean 13% 1.6GB; lean 12% 1.6GB; lean 11% 1.6GB; lean 11% 1.6GB; other programs: 20 processes, 453% cpu; 
+  sample 13:45:02 UTC: load1 30.10; over 5% cpu: lean 12% 2.1GB; lean 12% 2.1GB; lean 21% 0.5GB; lean 22% 0.5GB; lean 20% 0.5GB; lean 22% 0.5GB; lean 21% 0.5GB; lean 15% 0.6GB; lean 15% 1.2GB; lean 14% 1.8GB; lean 15% 1.8GB; lean 14% 1.8GB; lean 15% 1.8GB; lean 14% 1.8GB; lean 14% 1.8GB; lean 15% 1.8GB; other programs: 11 processes, 530% cpu; 
+  sample 13:45:12 UTC: load1 32.69; over 5% cpu: lean 13% 2.2GB; lean 13% 2.2GB; lean 17% 1.0GB; lean 22% 1.0GB; lean 17% 1.0GB; lean 24% 1.0GB; lean 15% 1.0GB; lean 16% 0.6GB; lean 14% 1.2GB; lean 14% 2.0GB; lean 14% 2.0GB; lean 14% 2.0GB; lean 14% 2.0GB; lean 13% 2.0GB; lean 14% 2.0GB; lean 14% 2.0GB; other programs: 15 processes, 450% cpu; 
+  sample 13:45:23 UTC: load1 33.57; over 5% cpu: lean 10% 1.9GB; lean 10% 1.9GB; lean 13% 1.5GB; lean 13% 1.5GB; lean 13% 1.5GB; lean 13% 1.5GB; lean 13% 1.5GB; lean 7% 0.7GB; lean 13% 1.1GB; lean 12% 1.8GB; lean 12% 1.8GB; lean 11% 1.8GB; lean 12% 1.8GB; lean 11% 1.8GB; lean 12% 1.8GB; lean 11% 1.8GB; other programs: 18 processes, 315% cpu; 
+  sample 13:45:33 UTC: load1 33.13; over 5% cpu: lean 12% 1.3GB; lean 12% 1.3GB; lean 13% 1.6GB; lean 13% 1.6GB; lean 13% 1.6GB; lean 13% 1.6GB; lean 13% 1.6GB; lean 11% 0.9GB; lean 16% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; other programs: 12 processes, 317% cpu; 
+  sample 13:45:43 UTC: load1 33.12; over 5% cpu: lean 10% 0.9GB; lean 10% 0.9GB; lean 11% 1.6GB; lean 10% 1.6GB; lean 12% 1.6GB; lean 11% 1.6GB; lean 12% 1.6GB; lean 13% 1.3GB; lean 13% 1.4GB; lean 12% 1.1GB; lean 12% 1.1GB; lean 12% 1.1GB; lean 12% 1.1GB; lean 12% 1.1GB; lean 12% 1.1GB; lean 12% 1.1GB; other programs: 13 processes, 317% cpu; 
+  sample 13:45:53 UTC: load1 33.51; over 5% cpu: lean 11% 1.0GB; lean 12% 1.0GB; lean 9% 1.4GB; lean 11% 1.4GB; lean 11% 1.4GB; lean 11% 1.4GB; lean 11% 1.4GB; lean 13% 0.7GB; lean 12% 1.3GB; lean 11% 1.0GB; lean 14% 1.0GB; lean 14% 1.0GB; lean 11% 1.0GB; lean 13% 1.0GB; lean 13% 1.0GB; lean 14% 1.0GB; other programs: 21 processes, 418% cpu; 
+  sample 13:46:04 UTC: load1 35.88; over 5% cpu: lean 12% 1.0GB; lean 11% 1.0GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 13% 1.3GB; lean 17% 0.9GB; lean 17% 1.2GB; lean 14% 0.9GB; lean 14% 0.9GB; lean 14% 0.9GB; lean 14% 0.9GB; lean 14% 0.9GB; lean 14% 0.9GB; lean 14% 0.9GB; other programs: 10 processes, 302% cpu; 
+  sample 13:46:14 UTC: load1 35.83; over 5% cpu: lean 14% 1.4GB; lean 14% 1.4GB; lean 13% 1.3GB; lean 12% 1.3GB; lean 12% 1.3GB; lean 12% 1.3GB; lean 13% 1.3GB; lean 39% 0.6GB; lean 16% 1.4GB; lean 15% 1.1GB; lean 16% 1.1GB; lean 16% 1.1GB; lean 16% 1.1GB; lean 16% 1.1GB; lean 16% 1.1GB; lean 16% 1.1GB; other programs: 8 processes, 448% cpu; 
+  sample 13:46:24 UTC: load1 34.47; over 5% cpu: lean 11% 2.1GB; lean 8% 2.1GB; lean 10% 1.2GB; lean 10% 1.2GB; lean 10% 1.2GB; lean 10% 1.2GB; lean 10% 1.2GB; lean 26% 0.4GB; lean 10% 1.2GB; lean 11% 2.1GB; lean 15% 2.1GB; lean 11% 2.1GB; lean 12% 2.1GB; lean 12% 2.1GB; lean 11% 2.1GB; lean 11% 2.1GB; other programs: 15 processes, 406% cpu; 
+  sample 13:46:34 UTC: load1 36.16; over 5% cpu: lean 12% 1.9GB; lean 13% 1.9GB; lean 18% 1.4GB; lean 18% 1.4GB; lean 18% 1.4GB; lean 17% 1.4GB; lean 17% 1.4GB; lean 16% 1.2GB; lean 18% 2.0GB; lean 18% 2.0GB; lean 18% 2.0GB; lean 18% 2.0GB; lean 18% 2.0GB; lean 19% 2.0GB; lean 19% 2.0GB; other programs: 12 processes, 354% cpu; 
+  sample 13:46:45 UTC: load1 32.74; over 5% cpu: lean 10% 1.5GB; lean 10% 1.5GB; lean 10% 2.3GB; lean 10% 2.3GB; lean 10% 2.3GB; lean 10% 2.3GB; lean 9% 2.3GB; lean 13% 1.4GB; lean 64% 1.6GB; lean 44% 1.6GB; lean 40% 1.6GB; lean 19% 1.6GB; lean 44% 1.6GB; lean 28% 1.6GB; lean 21% 1.5GB; other programs: 8 processes, 157% cpu; 
+  sample 13:46:55 UTC: load1 34.49; over 5% cpu: lean 9% 1.5GB; lean 9% 1.5GB; lean 9% 1.7GB; lean 9% 1.7GB; lean 9% 1.7GB; lean 9% 1.7GB; lean 9% 1.7GB; lean 29% 0.2GB; lean 13% 1.5GB; lean 13% 1.3GB; lean 27% 1.5GB; lean 13% 1.3GB; lean 24% 0.7GB; lean 13% 1.4GB; lean 13% 1.4GB; other programs: 12 processes, 328% cpu; 
+  sample 13:47:05 UTC: load1 31.48; over 5% cpu: lean 11% 2.1GB; lean 11% 2.1GB; lean 10% 2.0GB; lean 10% 2.0GB; lean 10% 2.0GB; lean 10% 2.0GB; lean 10% 2.0GB; lean 22% 0.8GB; lean 25% 0.6GB; lean 25% 0.6GB; other programs: 17 processes, 355% cpu; 
+  sample 13:47:15 UTC: load1 29.60; over 5% cpu: lean 20% 3.0GB; lean 20% 3.0GB; lean 16% 2.5GB; lean 17% 2.5GB; lean 17% 2.5GB; lean 16% 2.5GB; lean 16% 2.5GB; lean 21% 2.1GB; lean 28% 2.0GB; lean 28% 2.0GB; other programs: 13 processes, 283% cpu; 
+  sample 13:47:25 UTC: load1 28.15; over 5% cpu: lean 15% 3.2GB; lean 15% 3.2GB; lean 13% 2.7GB; lean 13% 2.7GB; lean 13% 2.7GB; lean 13% 2.7GB; lean 13% 2.7GB; lean 18% 3.0GB; lean 14% 3.3GB; lean 14% 3.3GB; other programs: 13 processes, 303% cpu; 
+  sample 13:47:36 UTC: load1 28.45; over 5% cpu: lean 27% 2.9GB; lean 80% 2.9GB; lean 42% 2.5GB; lean 25% 2.5GB; lean 38% 2.5GB; lean 39% 2.5GB; lean 35% 2.5GB; lean 14% 2.8GB; lean 11% 2.7GB; lean 11% 2.7GB; other programs: 7 processes, 120% cpu; 
+  sample 13:47:46 UTC: load1 25.68; over 5% cpu: lean 29% 2.8GB; lean 30% 2.8GB; lean 31% 2.8GB; lean 31% 2.8GB; lean 30% 2.8GB; lean 12% 2.8GB; lean 10% 3.1GB; lean 10% 3.1GB; lean 54% 0.5GB; lean 65% 0.5GB; lean 70% 0.4GB; other programs: 8 processes, 170% cpu; 
+  sample 13:47:56 UTC: load1 26.52; over 5% cpu: lean 12% 3.0GB; lean 11% 3.2GB; lean 11% 3.2GB; lean 12% 2.5GB; lean 12% 2.5GB; lean 12% 2.5GB; lean 54% 0.8GB; lean 53% 0.8GB; other programs: 18 processes, 438% cpu; 
+  sample 13:48:06 UTC: load1 26.69; over 5% cpu: lean 15% 2.7GB; lean 14% 3.9GB; lean 14% 3.9GB; lean 14% 4.0GB; lean 14% 4.0GB; lean 15% 4.0GB; lean 14% 2.4GB; lean 14% 2.4GB; other programs: 12 processes, 245% cpu; 
+  sample 13:48:17 UTC: load1 24.29; over 5% cpu: lean 18% 3.6GB; lean 30% 3.7GB; lean 30% 3.7GB; lean 13% 3.8GB; lean 13% 3.8GB; lean 14% 3.8GB; lean 13% 3.7GB; lean 13% 3.7GB; other programs: 9 processes, 281% cpu; 
+  sample 13:48:27 UTC: load1 23.63; over 5% cpu: cargo 6% 0.0GB; lean 17% 2.9GB; lean 21% 2.7GB; lean 26% 3.0GB; lean 12% 3.2GB; lean 13% 3.2GB; lean 13% 3.2GB; lean 12% 3.1GB; lean 12% 3.1GB; other programs: 18 processes, 331% cpu; 
+  sample 13:48:37 UTC: load1 24.10; over 5% cpu: lean 32% 0.4GB; lean 32% 0.4GB; lean 21% 3.4GB; lean 9% 3.3GB; lean 9% 3.3GB; lean 9% 3.3GB; lean 9% 3.2GB; lean 9% 3.2GB; other programs: 8 processes, 288% cpu; 
+  sample 13:48:47 UTC: load1 22.40; over 5% cpu: lean 25% 1.8GB; lean 25% 1.8GB; lean 27% 2.3GB; lean 28% 2.3GB; lean 18% 3.8GB; lean 18% 3.8GB; lean 18% 3.8GB; lean 18% 3.8GB; lean 18% 3.8GB; other programs: 9 processes, 345% cpu; 
+  sample 13:48:57 UTC: load1 22.18; over 5% cpu: lean 11% 2.6GB; lean 11% 2.6GB; lean 10% 4.0GB; lean 10% 4.0GB; lean 11% 2.7GB; lean 12% 2.7GB; lean 12% 2.7GB; lean 18% 3.7GB; lean 18% 3.7GB; other programs: 16 processes, 301% cpu; 
+  sample 13:49:08 UTC: load1 23.76; over 5% cpu: lean 10% 2.4GB; lean 10% 2.4GB; lean 8% 2.9GB; lean 8% 2.9GB; lake 78% 0.2GB; lean 38% 1.9GB; lean 16% 2.9GB; lean 16% 2.9GB; other programs: 14 processes, 240% cpu; 
+  sample 13:49:18 UTC: load1 23.09; over 5% cpu: lean 16% 3.1GB; lean 16% 3.1GB; lean 15% 3.1GB; lean 15% 3.1GB; lean 16% 2.2GB; lean 16% 2.2GB; lean 58% 0.4GB; lean 22% 1.8GB; other programs: 9 processes, 323% cpu; 
+  sample 13:49:28 UTC: load1 21.10; over 5% cpu: lean 16% 4.2GB; lean 16% 4.2GB; lean 18% 3.2GB; lean 18% 3.2GB; lean 16% 4.2GB; lean 17% 4.2GB; lean 23% 2.6GB; other programs: 10 processes, 260% cpu; 
+  sample 13:49:38 UTC: load1 18.45; over 5% cpu: lean 27% 4.8GB; lean 27% 4.7GB; lean 12% 3.4GB; lean 12% 3.4GB; lean 60% 5.0GB; lean 60% 5.0GB; lean 13% 3.9GB; other programs: 15 processes, 320% cpu; 
+  sample 13:49:48 UTC: load1 19.48; over 5% cpu: lean 120% 4.2GB; lean 26% 4.1GB; lean 20% 4.1GB; lean 51% 2.0GB; lean 52% 2.0GB; other programs: 12 processes, 285% cpu; 
+  sample 13:49:59 UTC: load1 18.93; over 5% cpu: lean 74% 4.7GB; lean 74% 4.7GB; lean 93% 0.5GB; other programs: 11 processes, 347% cpu; 
+  sample 13:50:09 UTC: load1 18.05; over 5% cpu: lake 13% 0.2GB; lean 99% 5.0GB; lake 22% 0.6GB; lean 67% 0.2GB; other programs: 11 processes, 429% cpu; 
+  sample 13:50:19 UTC: load1 16.65; over 5% cpu: lean 15% 3.9GB; lean 15% 3.9GB; lean 15% 3.0GB; other programs: 12 processes, 358% cpu; 
+  sample 13:50:29 UTC: load1 17.08; over 5% cpu: lean 20% 4.9GB; git 306% 0.0GB; lake 179% 0.7GB; rustc 30% 0.2GB; rustc 32% 0.2GB; lean 43% 0.4GB; other programs: 7 processes, 130% cpu; 
+  sample 13:50:39 UTC: load1 17.84; over 5% cpu: lake 181% 0.9GB; lean 25% 1.2GB; lake 12% 0.7GB; rustc 45% 0.2GB; other programs: 4 processes, 139% cpu; 
+  sample 13:50:49 UTC: load1 17.42; over 5% cpu: lean 13% 3.6GB; rustc 56% 0.4GB; lean 22% 0.8GB; lake 128% 0.7GB; other programs: 10 processes, 204% cpu; 
+  sample 13:50:59 UTC: load1 18.35; over 5% cpu: lean 11% 5.0GB; lean 16% 2.6GB; other programs: 9 processes, 762% cpu; 
+  sample 13:51:09 UTC: load1 22.85; over 5% cpu: lean 22% 5.4GB; lean 28% 4.7GB; lake 142% 0.7GB; other programs: 9 processes, 388% cpu; 
+  sample 13:51:20 UTC: load1 25.51; over 5% cpu: lean 35% 4.7GB; other programs: 10 processes, 568% cpu; 
+  sample 13:51:30 UTC: load1 23.63; over 5% cpu: lake 130% 0.8GB; other programs: 8 processes, 533% cpu; 
+  sample 13:51:40 UTC: load1 23.12; over 5% cpu: lake 30% 0.1GB; other programs: 10 processes, 403% cpu; 
+  sample 13:51:50 UTC: load1 23.97; over 5% cpu: other programs: 7 processes, 643% cpu; 
+  sample 13:52:00 UTC: load1 23.00; over 5% cpu: lake 115% 0.8GB; other programs: 6 processes, 447% cpu; 
+  sample 13:52:10 UTC: load1 23.89; over 5% cpu: .lakecryptocheck 72% 0.1GB; other programs: 10 processes, 633% cpu; 
+  sample 13:52:20 UTC: load1 24.08; over 5% cpu: lake 61% 0.9GB; other programs: 9 processes, 591% cpu; 
+  sample 13:52:30 UTC: load1 25.40; over 5% cpu: lake 252% 0.8GB; other programs: 10 processes, 292% cpu; 
+  sample 13:52:40 UTC: load1 25.24; over 5% cpu: lean 24% 0.7GB; other programs: 5 processes, 453% cpu; 
+  sample 13:52:50 UTC: load1 24.49; over 5% cpu: lean 11% 2.2GB; other programs: 5 processes, 726% cpu; 
+  sample 13:53:00 UTC: load1 23.69; over 5% cpu: lean 11% 3.4GB; other programs: 4 processes, 42% cpu; 
+  sample 13:53:11 UTC: load1 21.50; over 5% cpu: lean 13% 4.6GB; other programs: 7 processes, 263% cpu; 
+  sample 13:53:21 UTC: load1 19.29; over 5% cpu: lean 100% 5.3GB; other programs: 7 processes, 356% cpu; 
+  sample 13:53:31 UTC: load1 17.03; over 5% cpu: lake 222% 0.7GB; other programs: 7 processes, 340% cpu; 
+  sample 13:53:41 UTC: load1 17.36; over 5% cpu: lean 29% 5.4GB; rustc 84% 0.5GB; bsvs 19% 1.3GB; git 24% 0.0GB; other programs: 7 processes, 525% cpu; 
+  sample 13:53:51 UTC: load1 18.87; over 5% cpu: rustc 320% 0.5GB; bsvs 98% 3.2GB; other programs: 6 processes, 269% cpu; 
+  sample 13:54:01 UTC: load1 20.58; over 5% cpu: bsvs 80% 3.3GB; lake 261% 0.8GB; rustc 80% 0.4GB; other programs: 5 processes, 109% cpu; 
+  sample 13:54:11 UTC: load1 20.33; over 5% cpu: bsvs 75% 3.7GB; rustc 222% 1.1GB; rustc 160% 0.4GB; lake 19% 0.6GB; rustc 73% 0.2GB; other programs: 3 processes, 17% cpu; 
+  sample 13:54:21 UTC: load1 19.25; over 5% cpu: bsvs 98% 3.7GB; rustc 262% 1.0GB; other programs: 3 processes, 149% cpu; 
+  sample 13:54:31 UTC: load1 34.27; over 5% cpu: rustc 54% 1.1GB; lake 91% 0.7GB; other programs: 5 processes, 511% cpu; 
+  sample 13:54:41 UTC: load1 40.42; over 5% cpu: rustc 133% 1.0GB; lake 214% 1.0GB; lean 29% 0.5GB; other programs: 5 processes, 79% cpu; 
+  sample 13:54:51 UTC: load1 37.70; over 5% cpu: lean 16% 1.9GB; rustc 115% 0.3GB; other programs: 9 processes, 501% cpu; 
+  sample 13:55:01 UTC: load1 34.72; over 5% cpu: lean 11% 3.4GB; rustc 49% 0.7GB; other programs: 3 processes, 331% cpu; 
+  sample 13:55:11 UTC: load1 30.45; over 5% cpu: lean 34% 4.7GB; rustc 54% 1.2GB; other programs: 8 processes, 543% cpu; 
+  sample 13:55:22 UTC: load1 29.21; over 5% cpu: rustc 43% 1.2GB; other programs: 4 processes, 501% cpu; 
+  sample 13:55:32 UTC: load1 27.36; over 5% cpu: rustc 147% 1.3GB; lake 138% 0.8GB; other programs: 9 processes, 231% cpu; 
+  sample 13:55:42 UTC: load1 30.26; over 5% cpu: rustc 77% 1.1GB; lean 105% 5.3GB; other programs: 7 processes, 422% cpu; 
+  sample 13:55:52 UTC: load1 27.51; over 5% cpu: lake 172% 0.7GB; other programs: 6 processes, 374% cpu; 
+  sample 13:56:02 UTC: load1 25.66; over 5% cpu: lean 22% 4.7GB; other programs: 4 processes, 202% cpu; 
+  sample 13:56:12 UTC: load1 22.40; over 5% cpu: .lakewitnesscheck 100% 3.1GB; other programs: 10 processes, 318% cpu; 
+  sample 13:56:22 UTC: load1 20.37; over 5% cpu: lake 159% 0.9GB; lean 43% 0.1GB; other programs: 9 processes, 274% cpu; 
+  sample 13:56:32 UTC: load1 19.23; over 5% cpu: bsvs 65% 3.2GB; other programs: 4 processes, 639% cpu; 
+  sample 13:56:42 UTC: load1 23.97; over 5% cpu: bsvs 39% 3.3GB; bsvs 42% 0.2GB; other programs: 10 processes, 618% cpu; 
+  sample 13:56:52 UTC: load1 36.16; over 5% cpu: bsvs 21% 3.3GB; run_engine 7% 0.1GB; gosdk-runner 35% 0.0GB; other programs: 7 processes, 706% cpu; 
+  sample 13:57:02 UTC: load1 46.04; over 5% cpu: bsvs 29% 3.7GB; run_engine 7% 0.1GB; node 34% 0.1GB; other programs: 6 processes, 495% cpu; 
+  sample 13:57:13 UTC: load1 56.66; over 5% cpu: bsvs 57% 3.7GB; bsvs 66% 3.2GB; other programs: 5 processes, 752% cpu; 
+  sample 13:57:23 UTC: load1 53.26; over 5% cpu: bsvs 55% 3.3GB; bsvs 59% 1.3GB; other programs: 7 processes, 671% cpu; 
+  sample 13:57:33 UTC: load1 49.97; over 5% cpu: bsvs 66% 3.7GB; bsvs 59% 3.2GB; other programs: 8 processes, 672% cpu; 
+  sample 13:57:43 UTC: load1 47.16; over 5% cpu: bsvs 61% 3.3GB; other programs: 7 processes, 674% cpu; 

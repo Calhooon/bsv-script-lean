@@ -1,0 +1,25 @@
+{
+  "//": "bsv-script-lean #136 (2026-10-14): strict tsc over the ts-sdk adapter, a JavaScript ES module checked as JavaScript (checkJs); the tslint leg of tools/check.sh runs `tsc --noEmit -p tsconfig.json` here. The checks not enabled are listed with their dates in docs/LINT.md section 3.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "useUnknownInCatchVariables": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": false
+  },
+  "include": ["runner.mjs", "wire.mjs", "signer.mjs", "signer.test.mjs", "fixtures.mjs", "eslint.config.mjs"]
+}

@@ -1,0 +1,51 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+S1's landing of the standardness gate (S1, Lean A, set 4 sitting 4; the parent's paste items (2), (3), (4); D142's
+local leg, D151's landing lock, the landing rule on a moving main)
+
+THE LEG: docs/records/20260928-145555-make-check.txt, `make check-local` on the Studio: twenty-one legs GREEN in
+934 s at 082e970 with 26 uncommitted paths (the 13 files of the landing commit and the 13 spec/ pages specgen
+regenerates over it, left for the parent's make spec: spec is not on S1's line), under the plan's Lean lock (slot1
+14:55:55Z to 15:11:29Z, LEAN_NUM_THREADS=2, D149), the load gate under 20 (11.36 at the start), CARGO_BUILD_JOBS=4;
+the axiom check 545; the flow leg's kernel sample 25 of 25.
+
+THE COMMIT: those 13 files committed by pathspec as 8250a97 (on 082e970; pushed as
+fallback/s1-set4-sitting4-leg-8250a97, the orphan rule), the tree the leg checked (nothing in the worktree was
+edited during the run).
+
+[withheld at export: a sibling tree's line]
+
+MAIN MOVED between the leg and the landing: 082e970 -> 0c449a0 (S3's f68f3c1 and 0c449a0: HANDOFF.md,
+docs/lanes/harness.md, docs/records/20260928-144214-c29-landing-s3.txt and its README row; nothing under lean/).
+Rebased to eb4cddf and pushed 0c449a0..eb4cddf.
+
+BYTE-IDENTITY between the checked tree and the landed one, outside S3's paths:
+  git diff --quiet 8250a97 eb4cddf -- ':!HANDOFF.md' ':!docs/lanes/harness.md' ':!docs/records'
+  exit 0
+The 13 spec/ pages specgen regenerates at eb4cddf are identical to the leg's (their `git diff spec` outputs equal,
+cmp exit 0).
+
+THE LEGS THAT READ docs/ (the cite leg) and the two cheap python legs, LIVE AT eb4cddf on the Studio (no Lean build):
+load before: { 8.90 10.70 14.07 }
+== tools/check.sh pins at eb4cddf (15:12:47Z)
+check-pins: GREEN (72 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite at eb4cddf (15:12:48Z)
+cite_check: 3137 citations found in lean/ and docs/ (3077 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1730, MOVED 0; not anchored (reported, never RED): unanchored 70, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 150, history 1112, absent 0, orphan rows 2; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec at eb4cddf (15:12:52Z)
+specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 8.74 10.64 14.02 }
+
+The other eighteen legs read nothing that changed: the leg stands for them at eb4cddf. The lane's Modal tripwire of
+record is the parent's, on the sitting's final landed tree (D142); if it fails there it re-opens this landing.
+
+**Correction.** (S1, 2026-09-28, at its lens, `docs/audit/2026-09-28-lens-S1-sitting4-by-S1.md`, correction 1.) The
+"LIVE AT eb4cddf" lines above ran with the 13 regenerated spec/ pages uncommitted in S1's worktree: check-pins and
+cite are GREEN at eb4cddf, and specgen was GREEN only over those pages. At the committed eb4cddf `specgen --check`
+reads STALE (13 files, exit 1), so main's spec leg was RED from the push (15:13 UTC) to the parent's make spec at
+28ef963 (15:25 UTC). "8250a97 ... the tree the leg checked" holds for the 13 committed files; the leg's tree also held
+the 13 pages, which no commit of S1's carries. The leg of record (14:55:55Z to 15:11:29Z) ran before the landing
+lock's take (15:12:23 UTC), byte-identity standing in for it with spec/ outside that check (D151 asks the leg after
+the take). The landing rule carries the other twenty legs to eb4cddf; the spec leg it does not.

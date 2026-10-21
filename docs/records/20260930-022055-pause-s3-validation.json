@@ -1,0 +1,20 @@
+{
+  "document_structure [X]": "PASS",
+  "issue_count [D]": 15,
+  "steps_per_issue [D]": 3,
+  "new_em_dashes [D]": 0,
+  "artifact_sha256 [D]": {
+    "docs/records/20260930-022055-pause-s3-issues.json": "63852bca4af8bc18497e968ec25b90553c3e33b058c4dee4b6dd43967c05564b",
+    "docs/records/20260930-022055-pause-s3-wave.json": "2637fd5fa2e8f6141b4a4028f58af57fa877a748e40de0ca1446cce85e592600",
+    "docs/records/20260930-022055-pause-s3-money.json": "8b5766bc4ad9db1d1218ce5d589231088afdd5d8fb0aa6035744922be68c380c",
+    "docs/records/20260930-022055-pause-s3-rederivation.json": "bb0c3c85b0eb14dece08790ba36c6afd3b61d8c34ee37a1a5f6927755d0a7fb4",
+    "docs/records/20260930-022055-pause-s3.md": "93b6e2af60514a201a43d06cd6a79c2cf486a034b408ca819e7a16069e156504",
+    "docs/records/20260930-022055-pause-s3-trees.json": "79261da4c36620c56fa762932d1058320dd0a2f7b9a280da5977b29e13f3c780",
+    "docs/records/20260930-022055-pause-s3-branches.json": "3a99284dde49dc86c4c2a0fb84ab4690c3c1d8f55661b95d675fe31c592503a0",
+    "docs/records/20260930-022055-pause-s3-pickup-issues.json": "4f4e9320ce1c5c52deb4604c79e0054d6464513a8921782b8f044d1ac17b3c13",
+    "docs/records/20260930-022055-pause-s3-machine.json": "a3159d26341699e54d5e5daf64c309f20860d6afb5e28c84766c4699d8bea735",
+    "docs/audit/2026-09-30-s3-opener-lens-s1-sitting10.md": "0994940b65f1d84de48d7f6a0ed595d221818913138855fc33ec8170ae92e183",
+    "docs/audit/2026-09-30-s3-opener-lens-s2-sitting10.md": "ee5ceabfc675c45a34d81c103d6b87baa9712bd4a123ddfbf23594288d86117a"
+  },
+  "runtime_diff_exit [X]": 0
+}

@@ -1,0 +1,17 @@
+{
+  "path": ["../../harness", "../../tools"],
+  "format": ["rust", "typescript", "javascript", "python", "bash", "go"],
+  "ignore": [
+    "**/target/**",
+    "**/node_modules/**",
+    "**/.lake/**",
+    "**/tools/host_private.sh"
+  ],
+  "minTokens": 50,
+  "minLines": 5,
+  "threshold": 3.81,
+  "maxSize": "4mb",
+  "reporters": ["json"],
+  "gitignore": true,
+  "absolute": true
+}

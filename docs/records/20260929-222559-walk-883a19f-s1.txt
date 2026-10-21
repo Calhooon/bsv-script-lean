@@ -1,0 +1,14 @@
+S1's walk of the environment on the landed tree 883a19f (S1, Lean A, set 4 sitting 9, 2026-09-29), quoted by S1's END BLOCK of 2026-09-29T22:26:39Z on docs/lanes/lean.md
+
+WHY: the walk's figures in the fifth round's record were taken at 21:31 UTC on S1's working tree (on c4191cc; committed as
+  61a4ef6 at 21:44), which did not carry S2's e089260 (21:32 UTC: S1's version-4 patch for S2, applied under S2's tag; it
+  changed lean/BsvScript/Tx.lean, lean/BsvScript/Flags.lean and lean/Test/ErasCheck.lean). This run takes them again on the
+  landed tree, which carries both.
+
+THE RUN (the Studio, in lean/, the tree clean at 883a19f; the Lean lock; each step in its own session, by a script whose traps
+  release the lock):
+  the lock taken 22:25:59Z, load { 1.66 2.80 3.75 }; released 22:26:28Z
+  lake build (the default targets): exit 0 at 22:26:25Z; Build completed successfully (1045 jobs).
+  lake env lean AxiomCheck.lean: exit 0 at 22:26:28Z; 760 entries (the "depends on axioms" and "does not depend" lines); no NOT ALLOWED line; no error line
+  the walk's line, verbatim:
+    axiom walk: 48 modules of BsvScript, Bsvs and Test.OpNames, 4912 constants, 2540 theorems, 0 axioms, 0 compiler overrides (implemented_by, extern, init, a hand-made _unsafe_rec), 0 dependencies outside Lean's three

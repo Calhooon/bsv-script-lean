@@ -1,0 +1,19 @@
+suite: script_P2SH_tests
+source: src/test/script_P2SH_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/script_P2SH_tests.jsonl
+status: passed
+test_cases_passed: 6
+assertions_passed: 167
+cases_with_entries: 6
+entries: 150
+sha256: 190483fd529aac9144be7d520d86b9cc6f1de6ce005c2a96f2b931c852b56eb2
+sha256_keys_masked: a96e30adc7ee46b11605b33ac665765487473d26e16cea4af716f726ebe3927e
+entries_masked: 137
+sha256_of_the_run: 19b8758bc04f476a3220c1f3cebb9d488ef30758f72fdc23c949093920934867
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=script_P2SH_tests

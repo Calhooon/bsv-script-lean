@@ -1,0 +1,194 @@
+{
+  "corpus": "cpp-opcode",
+  "file": "cases.jsonl",
+  "generator": "tools/cpp_replay.py project (#49 item 2): the spend form of corpus/cpp/opcode_tests.jsonl.gz",
+  "seed": "none (a projection of the committed C++ table, byte-deterministic)",
+  "count": 144324,
+  "sha256": "fe8a5c065df8ddfff355f4ba7f0f37ae7570c492b4c610aa98fec40f4dd93d48",
+  "families": {
+    "cpp/opcode_tests/bitwise_opcodes_test": 75006,
+    "cpp/opcode_tests/div_and_mod_opcode_tests": 900,
+    "cpp/opcode_tests/invert_test": 12,
+    "cpp/opcode_tests/lshift_test": 141,
+    "cpp/opcode_tests/mul_test": 504,
+    "cpp/opcode_tests/op_2div_post_chronicle": 11,
+    "cpp/opcode_tests/op_2div_pre_chronicle": 4,
+    "cpp/opcode_tests/op_2mul_post_chronicle": 11,
+    "cpp/opcode_tests/op_2mul_pre_chronicle": 4,
+    "cpp/opcode_tests/op_2rot": 2,
+    "cpp/opcode_tests/op_left_post_chronicle": 12,
+    "cpp/opcode_tests/op_left_pre_chronicle": 2,
+    "cpp/opcode_tests/op_right_post_chronicle": 12,
+    "cpp/opcode_tests/op_right_pre_chronicle": 2,
+    "cpp/opcode_tests/op_substr_post_chronicle": 16,
+    "cpp/opcode_tests/op_substr_pre_chronicle": 2,
+    "cpp/opcode_tests/op_ver_post_chronicle": 7,
+    "cpp/opcode_tests/op_ver_pre_chronicle": 1,
+    "cpp/opcode_tests/op_verif_post_chronicle": 22,
+    "cpp/opcode_tests/op_verif_pre_chronicle": 4,
+    "cpp/opcode_tests/op_vernotif_post_chronicle": 22,
+    "cpp/opcode_tests/op_vernotif_pre_chronicle": 4,
+    "cpp/opcode_tests/opcode_limit_tests": 12,
+    "cpp/opcode_tests/rshift_test": 141,
+    "cpp/opcode_tests/string_opcodes_test": 29901,
+    "cpp/opcode_tests/type_conversion_test": 37569
+  },
+  "rules": {
+    "cpp.opcode_tests.bitwise_opcodes_test": 75006,
+    "cpp.opcode_tests.div_and_mod_opcode_tests": 900,
+    "cpp.opcode_tests.invert_test": 12,
+    "cpp.opcode_tests.lshift_test": 141,
+    "cpp.opcode_tests.mul_test": 504,
+    "cpp.opcode_tests.op_2div_post_chronicle": 11,
+    "cpp.opcode_tests.op_2div_pre_chronicle": 4,
+    "cpp.opcode_tests.op_2mul_post_chronicle": 11,
+    "cpp.opcode_tests.op_2mul_pre_chronicle": 4,
+    "cpp.opcode_tests.op_2rot": 2,
+    "cpp.opcode_tests.op_left_post_chronicle": 12,
+    "cpp.opcode_tests.op_left_pre_chronicle": 2,
+    "cpp.opcode_tests.op_right_post_chronicle": 12,
+    "cpp.opcode_tests.op_right_pre_chronicle": 2,
+    "cpp.opcode_tests.op_substr_post_chronicle": 16,
+    "cpp.opcode_tests.op_substr_pre_chronicle": 2,
+    "cpp.opcode_tests.op_ver_post_chronicle": 7,
+    "cpp.opcode_tests.op_ver_pre_chronicle": 1,
+    "cpp.opcode_tests.op_verif_post_chronicle": 22,
+    "cpp.opcode_tests.op_verif_pre_chronicle": 4,
+    "cpp.opcode_tests.op_vernotif_post_chronicle": 22,
+    "cpp.opcode_tests.op_vernotif_pre_chronicle": 4,
+    "cpp.opcode_tests.opcode_limit_tests": 12,
+    "cpp.opcode_tests.rshift_test": 141,
+    "cpp.opcode_tests.string_opcodes_test": 29901,
+    "cpp.opcode_tests.type_conversion_test": 37569
+  },
+  "verdicts": {
+    "invalid": 66588,
+    "valid": 77736
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      }
+    },
+    {
+      "name": "spec-history",
+      "version": "bf4b543",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-history-mempool",
+      "version": "bf4b543",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "spec",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    }
+  ],
+  "engine_executions": 1154592,
+  "generated": "2026-10-06",
+  "provenance": "bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d) unit tables, corpus/cpp/manifest.json; the source's sha256 6481cd9880bd356ec43efc2669264e2d3b4405f54535653eb86db9cc38ec0751"
+}

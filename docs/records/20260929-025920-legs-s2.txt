@@ -1,0 +1,11 @@
+S2 (Lean B), set 4 sitting 6, 2026-09-29: the console-only leg of the lens landing (docs only; D156, D142)
+host: the Studio, ~/bsv/worktrees/spec-lean-b (branch lean-b); the run from `env -u BASH_ENV /bin/bash --noprofile --norc tools/check.sh cite`
+what lands: the lens's six load-bearing corrections of S2's END BLOCK of 2026-09-29T02:14:54Z (docs/audit/2026-09-29-lens-S2-sitting6-by-S2.md, filed in the same commit): the block, docs/DESIGN.md §12.5 and §12.6, three records' appended corrections, two rows of docs/records/README.md, the audit file and its row
+the leg of record: PENDING, a `make check-box` from a detached checkout at b3406bf launched at 02:42:53 UTC and in the box's queue at this landing; the first box record, docs/records/20260929-015344-make-check-box.txt, is a leg at 994d280 and does not count (the parent's Finding 5882258722 on #35)
+
+the byte-identity line (the fourteen paths: lean harness corpus spec eval Makefile tools/check.sh tools/check_route.sh tools/check_pins.py tools/axiom_check.py tools/specgen.py tools/cite_check.py tools/modal_check.py docs/PROVENANCE.md):
+  git diff --quiet b3406bf <HEAD> -- <the fourteen>: exit 0 before the push
+
+the cite leg, 02:59:20 to 02:59:24 UTC, the 1-minute load 4.41 at the start and 4.38 at the end, on the tree of the commit that carries this record, this record and its row aside:
+  cite_check: 3263 citations found in lean/ and docs/ (3203 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 160, history 1221, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)

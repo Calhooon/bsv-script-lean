@@ -1,0 +1,1388 @@
+{
+  "counts": {
+    "agree": 14,
+    "diverge": 0,
+    "label": "[M]",
+    "realized": 14,
+    "rows": 14
+  },
+  "record": "docs/records/20261015-130232-s7-82-prune-s1.md",
+  "scenario": "2026-10-15-prune-retention",
+  "steps": [
+    {
+      "expected": {
+        "pruneheight": 0,
+        "removed": [],
+        "reply": {
+          "error": {
+            "code": -1,
+            "message": "Blockchain is too short for pruning."
+          }
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s1",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "reply": {
+          "error": {
+            "code": -1,
+            "message": "Blockchain is too short for pruning."
+          }
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 486,
+        "removed": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "reply": {
+          "height": 500,
+          "result": 500
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s2",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "bits": {
+          "agree": true,
+          "blocks": 1001,
+          "data_disagree": [],
+          "retained": 515,
+          "undo_disagree": []
+        },
+        "files": {
+          "agree": true,
+          "blk": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "lean": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "rev": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ]
+        },
+        "reply": {
+          "result": 500
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 992,
+        "removed": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "reply": {
+          "height": 1012,
+          "result": 1012
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s3",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "bits": {
+          "agree": true,
+          "blocks": 1301,
+          "data_disagree": [],
+          "retained": 309,
+          "undo_disagree": []
+        },
+        "files": {
+          "agree": true,
+          "blk": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "lean": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "rev": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ]
+        },
+        "reply": {
+          "result": 1012
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 992,
+        "removed": [],
+        "reply": {
+          "height": 0,
+          "result": 0
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s4",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "bits": {
+          "agree": true,
+          "blocks": 1301,
+          "data_disagree": [],
+          "retained": 309,
+          "undo_disagree": []
+        },
+        "files": {
+          "agree": true,
+          "blk": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "lean": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "rev": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ]
+        },
+        "reply": {
+          "result": 0
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 992,
+        "removed": [],
+        "reply": {
+          "error": {
+            "code": -8,
+            "message": "Blockchain is shorter than the attempted prune height."
+          }
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s5",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "reply": {
+          "error": {
+            "code": -8,
+            "message": "Blockchain is shorter than the attempted prune height."
+          }
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 992,
+        "removed": [],
+        "reply": {
+          "error": {
+            "code": -8,
+            "message": "Negative block height."
+          }
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s6",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "reply": {
+          "error": {
+            "code": -8,
+            "message": "Negative block height."
+          }
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruned": true,
+        "pruneheight": 992
+      },
+      "expected_label": "[D]",
+      "id": "s7",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "pruned": true,
+        "pruneheight": 992
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "probes": [
+          {
+            "answers": {
+              "getblock0": {
+                "code": -1,
+                "kind": "head-then-error",
+                "message": "42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not found on disk"
+              },
+              "getblock1": {
+                "code": -1,
+                "kind": "error",
+                "message": "Block file 42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not available."
+              },
+              "getblockhash": {
+                "kind": "served"
+              },
+              "getblockheader": {
+                "absent": [
+                  "size"
+                ],
+                "kind": "served"
+              },
+              "getblockheader2": {
+                "absent": [
+                  "size",
+                  "tx",
+                  "merkleproof"
+                ],
+                "kind": "served"
+              },
+              "getchaintxstats": {
+                "kind": "served"
+              },
+              "getmerkleproof": {
+                "code": -32603,
+                "kind": "error",
+                "message": "Can't read block from disk"
+              },
+              "getmerkleproof2": {
+                "code": -32603,
+                "kind": "error",
+                "message": "Can't read block from disk"
+              },
+              "getrawtransaction": {
+                "code": -5,
+                "kind": "error",
+                "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+              },
+              "gettxout": {
+                "kind": "served"
+              }
+            },
+            "data": false,
+            "hash": "42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56",
+            "index": 140,
+            "treeHeld": false
+          },
+          {
+            "answers": {
+              "getblock0": {
+                "code": -1,
+                "kind": "head-then-error",
+                "message": "0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not found on disk"
+              },
+              "getblock1": {
+                "code": -1,
+                "kind": "error",
+                "message": "Block file 0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not available."
+              },
+              "getblockhash": {
+                "kind": "served"
+              },
+              "getblockheader": {
+                "absent": [
+                  "size"
+                ],
+                "kind": "served"
+              },
+              "getblockheader2": {
+                "absent": [
+                  "size",
+                  "tx",
+                  "merkleproof"
+                ],
+                "kind": "served"
+              },
+              "getchaintxstats": {
+                "kind": "served"
+              },
+              "getmerkleproof": {
+                "kind": "served"
+              },
+              "getmerkleproof2": {
+                "kind": "served"
+              },
+              "getrawtransaction": {
+                "code": -5,
+                "kind": "error",
+                "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+              },
+              "gettxout": {
+                "kind": "served"
+              }
+            },
+            "data": false,
+            "hash": "0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d",
+            "index": 141,
+            "treeHeld": true
+          },
+          {
+            "answers": {
+              "getblock0": {
+                "kind": "served"
+              },
+              "getblock1": {
+                "kind": "served"
+              },
+              "getblockhash": {
+                "kind": "served"
+              },
+              "getblockheader": {
+                "kind": "served"
+              },
+              "getblockheader2": {
+                "kind": "served"
+              },
+              "getchaintxstats": {
+                "kind": "served"
+              },
+              "getmerkleproof": {
+                "kind": "served"
+              },
+              "getmerkleproof2": {
+                "kind": "served"
+              },
+              "getrawtransaction": {
+                "kind": "served"
+              },
+              "gettxout": {
+                "kind": "served"
+              }
+            },
+            "data": true,
+            "hash": "75e854bb7e617cecc5b9cf8ad08771ae20d146baf60e7ced59eea0ef0ed493b4",
+            "index": 1250,
+            "treeHeld": false
+          }
+        ]
+      },
+      "expected_label": "[D]",
+      "id": "s8",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "probes": [
+          {
+            "data": false,
+            "height": 140,
+            "probe": "P",
+            "requests": [
+              {
+                "agree": true,
+                "lean": {
+                  "code": -1,
+                  "kind": "head-then-error",
+                  "message": "42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not found on disk"
+                },
+                "observed": {
+                  "kind": "head-then-error",
+                  "raw": "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Oct 2026 13:02:37 GMT\r\nConnection: close\r\n\r\n{\"result\":null,\"error\":{\"code\":-1,\"message\":\"42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not found on disk\"},\"id\":\"s7-82\"}\nc\r\n{\"result\": \"\r\nHTTP/1.1 500 Internal Server Error\r\nContent-Type: application/json\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Oct 2026 13:02:37 GMT\r\nConnection: close\r\n\r\n"
+                },
+                "request": "getblock0"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -1,
+                  "kind": "error",
+                  "message": "Block file 42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not available."
+                },
+                "observed": {
+                  "code": -1,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "Block file 42aa7064879517b9d2792b07e7e87ff871a7ece2dbb6dbcc72129ab85b60cf56 not available."
+                },
+                "request": "getblock1"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": null,
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockhash"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "absent": [
+                    "size"
+                  ],
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "status",
+                    "time",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "absent": [
+                    "size",
+                    "tx",
+                    "merkleproof"
+                  ],
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "status",
+                    "time",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "time",
+                    "txcount",
+                    "window_block_count"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getchaintxstats"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -32603,
+                  "kind": "error",
+                  "message": "Can't read block from disk"
+                },
+                "observed": {
+                  "code": -32603,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "Can't read block from disk"
+                },
+                "request": "getmerkleproof"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -32603,
+                  "kind": "error",
+                  "message": "Can't read block from disk"
+                },
+                "observed": {
+                  "code": -32603,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "Can't read block from disk"
+                },
+                "request": "getmerkleproof2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -5,
+                  "kind": "error",
+                  "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+                },
+                "observed": {
+                  "code": -5,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+                },
+                "request": "getrawtransaction"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bestblock",
+                    "coinbase",
+                    "confirmations",
+                    "confiscation",
+                    "scriptPubKey",
+                    "value"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "gettxout"
+              }
+            ],
+            "treeHeld": false
+          },
+          {
+            "data": false,
+            "height": 141,
+            "probe": "T",
+            "requests": [
+              {
+                "agree": true,
+                "lean": {
+                  "code": -1,
+                  "kind": "head-then-error",
+                  "message": "0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not found on disk"
+                },
+                "observed": {
+                  "kind": "head-then-error",
+                  "raw": "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Oct 2026 13:02:37 GMT\r\nConnection: close\r\n\r\n{\"result\":null,\"error\":{\"code\":-1,\"message\":\"0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not found on disk\"},\"id\":\"s7-82\"}\nc\r\n{\"result\": \"\r\nHTTP/1.1 500 Internal Server Error\r\nContent-Type: application/json\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Oct 2026 13:02:37 GMT\r\nConnection: close\r\n\r\n"
+                },
+                "request": "getblock0"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -1,
+                  "kind": "error",
+                  "message": "Block file 0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not available."
+                },
+                "observed": {
+                  "code": -1,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "Block file 0850d5e2ea428d93a97ce62e6a7953c01fc38fcfc3590443929bbc7b4674da7d not available."
+                },
+                "request": "getblock1"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": null,
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockhash"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "absent": [
+                    "size"
+                  ],
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "status",
+                    "time",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "absent": [
+                    "size",
+                    "tx",
+                    "merkleproof"
+                  ],
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "status",
+                    "time",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "time",
+                    "txcount",
+                    "window_block_count"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getchaintxstats"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "flags",
+                    "index",
+                    "nodes",
+                    "target",
+                    "txOrId"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getmerkleproof"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "index",
+                    "nodes",
+                    "target",
+                    "txOrId"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getmerkleproof2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "code": -5,
+                  "kind": "error",
+                  "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+                },
+                "observed": {
+                  "code": -5,
+                  "fields": null,
+                  "kind": "error",
+                  "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions."
+                },
+                "request": "getrawtransaction"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bestblock",
+                    "coinbase",
+                    "confirmations",
+                    "confiscation",
+                    "scriptPubKey",
+                    "value"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "gettxout"
+              }
+            ],
+            "treeHeld": true
+          },
+          {
+            "data": true,
+            "height": 1250,
+            "probe": "R",
+            "requests": [
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": null,
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblock0"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "size",
+                    "status",
+                    "time",
+                    "tx",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblock1"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": null,
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockhash"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "size",
+                    "status",
+                    "time",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bits",
+                    "chainwork",
+                    "confirmations",
+                    "difficulty",
+                    "hash",
+                    "height",
+                    "mediantime",
+                    "merkleproof",
+                    "merkleroot",
+                    "nextblockhash",
+                    "nonce",
+                    "num_tx",
+                    "previousblockhash",
+                    "size",
+                    "status",
+                    "time",
+                    "tx",
+                    "version",
+                    "versionHex"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getblockheader2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "time",
+                    "txcount",
+                    "window_block_count"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getchaintxstats"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "flags",
+                    "index",
+                    "nodes",
+                    "target",
+                    "txOrId"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getmerkleproof"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "index",
+                    "nodes",
+                    "target",
+                    "txOrId"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getmerkleproof2"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "blockhash",
+                    "blockheight",
+                    "blocktime",
+                    "confirmations",
+                    "hash",
+                    "hex",
+                    "locktime",
+                    "size",
+                    "time",
+                    "txid",
+                    "version",
+                    "vin",
+                    "vout"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "getrawtransaction"
+              },
+              {
+                "agree": true,
+                "lean": {
+                  "kind": "served"
+                },
+                "observed": {
+                  "code": null,
+                  "fields": [
+                    "bestblock",
+                    "coinbase",
+                    "confirmations",
+                    "confiscation",
+                    "scriptPubKey",
+                    "value"
+                  ],
+                  "kind": "served",
+                  "message": null
+                },
+                "request": "gettxout"
+              }
+            ],
+            "treeHeld": false
+          }
+        ],
+        "tree_asked_before_pruning": {
+          "getmerkleproof": {
+            "kind": "served"
+          },
+          "getmerkleproof2": {
+            "kind": "served"
+          }
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "P": {
+          "code": -32603,
+          "kind": "error",
+          "message": "Can't read block from disk"
+        },
+        "T": {
+          "kind": "served",
+          "treeHeld": "store"
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s9",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "P": {
+          "code": -32603,
+          "kind": "error",
+          "message": "Can't read block from disk"
+        },
+        "T": {
+          "kind": "served"
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "held": "held in the record under the discretion group until routed",
+        "tip_stops_at": 991
+      },
+      "expected_label": "[D]",
+      "id": "s10",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "held": "held in the record under the discretion group until routed",
+        "last_tip_height": 991
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "removed": [],
+        "reply": {
+          "height": -1000,
+          "result": 18446744073709550616
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s11",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "bits": {
+          "agree": true,
+          "blocks": 1001,
+          "data_disagree": [],
+          "retained": 1001,
+          "undo_disagree": []
+        },
+        "blk_after": 46,
+        "blk_before": 46,
+        "reply": {
+          "result": 18446744073709550616
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruned": false,
+        "pruneheight_present": false,
+        "reply": {
+          "error": {
+            "code": -1,
+            "message": "Cannot prune blocks because node is not in prune mode."
+          }
+        }
+      },
+      "expected_label": "[D]",
+      "id": "s12",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "pruned": false,
+        "pruneheight_present": false,
+        "reply": {
+          "error": {
+            "code": -1,
+            "message": "Cannot prune blocks because node is not in prune mode."
+          }
+        }
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "refusals": [
+          {
+            "arg": 549,
+            "error": "Prune configured below the minimum of 550 MiB.  Please use a higher number."
+          },
+          {
+            "arg": -1,
+            "error": "Prune cannot be configured with a negative value."
+          }
+        ]
+      },
+      "expected_label": "[D]",
+      "id": "s13",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "refusals": [
+          {
+            "agree": true,
+            "arg": 549,
+            "lean": "Prune configured below the minimum of 550 MiB.  Please use a higher number.",
+            "node": {
+              "error": "launch exit exit status: 1: Error: Prune configured below the minimum of 550 MiB.  Please use a higher number.\n",
+              "started": false
+            },
+            "stderr": "Error: Prune configured below the minimum of 550 MiB.  Please use a higher number."
+          },
+          {
+            "agree": true,
+            "arg": -1,
+            "lean": "Prune cannot be configured with a negative value.",
+            "node": {
+              "error": "launch exit exit status: 1: Error: Prune cannot be configured with a negative value.\n",
+              "started": false
+            },
+            "stderr": "Error: Prune cannot be configured with a negative value."
+          }
+        ]
+      },
+      "verdict": "agree"
+    },
+    {
+      "expected": {
+        "pruneheight": 0,
+        "removed": []
+      },
+      "expected_label": "[D]",
+      "id": "s14",
+      "label": "[D]",
+      "node": "measured agree [X] docs/records/20261015-130232-s7-82-prune-s1.md",
+      "observed": {
+        "bits": {
+          "agree": true,
+          "blocks": 1101,
+          "data_disagree": [],
+          "retained": 1101,
+          "undo_disagree": []
+        },
+        "pruned": true,
+        "pruneheight": 0
+      },
+      "verdict": "agree"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+--- a/harness/src/bin/run_diff.rs
++++ b/harness/src/bin/run_diff.rs
+@@ -64,6 +64,7 @@
+ use bsv_rs::primitives::hash::sha256;
+ use bsv_script_harness::bsvrs_codes;
+ use bsv_script_harness::corpus::{Divergence, Entry, ExpectJson, ImplConfigJson, Manifest};
++use bsv_script_harness::differential::{read_spec, spec_json as spec_json_of, CorpusInput};
+ use bsv_script_harness::engine::{run_tx, run_tx_words, words_of, EngineConfig, Mode, Verdict};
+ use bsv_rs::script::{ProtocolEra, ScriptFlags};
+ use bsv_script_harness::rules::{self, Explanation, RuleSet};
+@@ -74,31 +75,8 @@
+     args.iter().position(|a| a == name).and_then(|i| args.get(i + 1).cloned())
+ }
+ 
+-#[derive(Clone, Debug, serde::Deserialize)]
+-struct SpecVerdict {
+-    verdict: String,
+-    #[serde(default)]
+-    code: Option<String>,
+-    #[serde(default)]
+-    input: Option<usize>,
+-}
+-
+-#[derive(Clone, Debug, serde::Deserialize)]
+-struct SpecLine {
+-    id: String,
+-    spec: SpecVerdict,
+-    #[serde(rename = "spec-mempool")]
+-    spec_mempool: SpecVerdict,
+-    config: String,
+-    commit: String,
+-}
+-
+ fn verdict_json_of(v: &Verdict, i: Option<usize>, code: Option<&str>) -> ExpectJson {
+     ExpectJson { verdict: v.kind().to_string(), code: code.map(|c| c.to_string()), reason: v.reason(), input: i }
+-}
+-
+-fn spec_json_of(s: &SpecVerdict) -> ExpectJson {
+-    ExpectJson { verdict: s.verdict.clone(), code: s.code.clone(), reason: None, input: s.input }
+ }
+ 
+ /// The spec column's word per input (#32's third lens, A-P7): the column honours the entry, as `eval/bsvs corpus`
+@@ -140,38 +118,21 @@
+     let witnesses_dir = arg(&args, "--witnesses").unwrap_or_else(|| "../corpus/witnesses".into());
+     let record = args.iter().any(|a| a == "--record");
+ 
+-    // the manifest beside the corpus, if any
+-    let dir = std::path::Path::new(&corpus_path).parent().map(|p| p.to_path_buf()).unwrap_or_default();
+-    let file_name = std::path::Path::new(&corpus_path).file_name().unwrap().to_string_lossy().to_string();
+-    let corpus_name = dir.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "corpus".into());
+-    let manifest_path = [dir.join("manifest.json"), dir.join("cases-manifest.json")]
+-        .into_iter()
+-        .find(|p| p.exists() && std::fs::read_to_string(p).map(|s| s.contains(&format!("\"{file_name}\""))).unwrap_or(false));
+-    let bytes = std::fs::read(&corpus_path).expect("corpus file");
++    let CorpusInput { file_name, corpus_name, bytes, manifest_path, manifest } =
++        CorpusInput::load(std::path::Path::new(&corpus_path)).unwrap_or_else(|e| {
++            eprintln!("run_diff: {e}");
++            std::process::exit(1);
++        });
+     let mut cfg = EngineConfig::default();
+-    let mut manifest: Option<Manifest> = None;
+-    if let Some(mp) = &manifest_path {
+-        let m: Manifest = serde_json::from_str(&std::fs::read_to_string(mp).expect("manifest")).expect("manifest json");
+-        let sha = hex::encode(sha256(&bytes));
+-        if sha != m.sha256 {
+-            eprintln!("run_diff: {corpus_path} sha256 {sha} != manifest {}", m.sha256);
+-            std::process::exit(1);
+-        }
++    if let Some(m) = &manifest {
+         if let Some(imp) = m.implementations.iter().find(|i| i.name == "bsv-rs") {
+             cfg = EngineConfig::from_json(&imp.config);
+         }
+-        manifest = Some(m);
+-    }
+-    // the spec's verdicts
+-    let mut spec: BTreeMap<String, SpecLine> = BTreeMap::new();
+-    for line in std::io::BufReader::new(std::fs::File::open(&spec_path).expect("spec file")).lines() {
+-        let line = line.unwrap();
+-        if line.trim().is_empty() {
+-            continue;
+-        }
+-        let s: SpecLine = serde_json::from_str(&line).expect("spec line");
+-        spec.insert(s.id.clone(), s);
+-    }
++    }
++    let spec = read_spec(std::path::Path::new(&spec_path)).unwrap_or_else(|e| {
++        eprintln!("run_diff: {e}");
++        std::process::exit(2);
++    });
+     let commit = spec.values().next().map(|s| s.commit.clone()).unwrap_or_else(|| "unknown".into());
+     let config = spec.values().next().map(|s| s.config.clone()).unwrap_or_else(|| "unknown".into());
+     let spec_key = format!("spec@{commit}");

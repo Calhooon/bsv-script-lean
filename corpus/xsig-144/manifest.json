@@ -1,0 +1,154 @@
+{
+  "corpus": "xsig-144",
+  "file": "xsig-144.jsonl",
+  "generator": "tools/xsig_witness.py (#144, lane xsig-144): the witness on a fresh regtest instance of v1.2.3, signed by go-sdk v1.7.2, @bsv/sdk 3.0.0 and by hand",
+  "seed": "the keys are sha256('xsig-144/' + label); shape B's in-script key is d = 1",
+  "count": 16,
+  "sha256": "7db4149afd92f546a1be99142d1df9f739038ef9cda0f0539df4e1fbe491a9cc",
+  "families": {
+    "crypto/checksig-in-unlock/xsig/A/a:go-sdk-lock-only": 1,
+    "crypto/checksig-in-unlock/xsig/A/b:ts-sdk-template-lock-only": 1,
+    "crypto/checksig-in-unlock/xsig/A/c:correct-scriptcode": 1,
+    "crypto/checksig-in-unlock/xsig/A/d:ts-sdk-format-correct-subscript": 1,
+    "crypto/checksig-in-unlock/xsig/A/pre-chronicle/unlock+lock": 1,
+    "crypto/checksig-in-unlock/xsig/A/pre-chronicle/unlock-only": 1,
+    "crypto/checksig-in-unlock/xsig/A/pre-genesis/unlock+lock": 1,
+    "crypto/checksig-in-unlock/xsig/A/pre-genesis/unlock-only": 1,
+    "crypto/checksig-in-unlock/xsig/B/a:go-sdk-lock-only": 1,
+    "crypto/checksig-in-unlock/xsig/B/b:ts-sdk-template-lock-only": 1,
+    "crypto/checksig-in-unlock/xsig/B/c:correct-scriptcode": 1,
+    "crypto/checksig-in-unlock/xsig/B/d:ts-sdk-format-correct-subscript": 1,
+    "crypto/checksig-in-unlock/xsig/C/c1:post-chronicle/signed-over-ad51": 1,
+    "crypto/checksig-in-unlock/xsig/C/c2:post-chronicle/signed-over-ad": 1,
+    "crypto/checksig-in-unlock/xsig/C/c3:pre-genesis/signed-over-ad51": 1,
+    "crypto/checksig-in-unlock/xsig/C/c4:pre-genesis/signed-over-ad": 1
+  },
+  "rules": {
+    "crypto.checksig.unlock": 16
+  },
+  "verdicts": {
+    "valid": 7,
+    "invalid": 9
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "memory_limit": 32000000,
+        "require_push_only": true,
+        "words": "per-input",
+        "mode": "the reference's word per input from the entry's spend height and the coin's height (engine::word_for: the block word of the spend's era when params.consensus, the standard word otherwise, the coin's Chronicle marker by the coin's era; a pre-Genesis spend or coin is not applicable = undecided), the transaction's own version"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "f5e7e0a6",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "spec-sv-node-mempool",
+      "version": "f5e7e0a6",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "spec-sv-node-mempool",
+      "version": "fb3558f2",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "spec-sv-node",
+      "version": "f5e7e0a6",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-sv-node",
+      "version": "fb3558f2",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec",
+      "version": "f5e7e0a6",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "the SAME zeroed instance (run_svnode without --rpc-mempool): the mempool word under the consensus limits, not the node's default policy caps",
+        "mode": "the verifyscript RPC under the mempool word (Params.derive with consensus = false)",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6), a fresh instance of the lane's on a port of 18571..18590, stopped and removed after the run",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params, the word asked of eval/bsvs (Params.derive); txo.height = the prevout's",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300"
+      }
+    },
+    {
+      "name": "ts-sdk-default",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22 (docs/PROVENANCE.md §1a)",
+        "mode": "the SDK's default mode: no explicit word, its own derivation from the transaction version (Spend.ts #isRelaxed = version > 1)"
+      }
+    },
+    {
+      "name": "ts-sdk-mempool",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "ts-sdk",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    }
+  ],
+  "engine_executions": 224,
+  "generated": "2026-10-16T18:52:03Z",
+  "provenance": "docs/records/*-s4b-144-checksig-in-unlock-signers-s4b.md; shape C docs/records/20261016-234834-s3-147-minimal-example-s3.md"
+}

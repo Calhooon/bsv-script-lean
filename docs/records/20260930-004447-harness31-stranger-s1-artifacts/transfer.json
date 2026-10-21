@@ -1,0 +1,10 @@
+{
+  "command": [
+    "ssh",
+    "box",
+    "tar -C /tmp/codex-s1-c56 -cf - commands.jsonl execution.json machine.json report"
+  ],
+  "exit": 0,
+  "stderr": "",
+  "stamp": "2026-09-30T00:45:28.471757+00:00"
+}

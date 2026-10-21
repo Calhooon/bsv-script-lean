@@ -1,0 +1,13 @@
+.DS_Store
+.lake/
+*.log
+!docs/audit/*.log
+**/.lake/
+**/target/
+/scratch/
+harness/target/
+node_modules/
+SECRETS.md
+target/
+corpus/witnesses/policy-defaults-large.jsonl
+__pycache__/

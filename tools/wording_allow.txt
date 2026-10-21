@@ -1,0 +1,306 @@
+# tools/wording_allow.txt: exact phrases in which a gated word is not a claim
+# (bsv-script-lean #46's wording leg, tools/export_gate.py). One phrase per line,
+# matched case-insensitively; a hit inside an allowed phrase is not a hit.
+# the wording rules themselves, which name the words they refuse
+never "first"
+never "conformant"
+first-class
+the first input
+first input
+first output
+first 8 bytes
+first byte
+first bytes
+first element
+first item
+first operand
+first argument
+first push
+first opcode
+first key
+first signature
+first pubkey
+first public key
+first stack item
+first item on the stack
+first 8
+first eight
+first and last
+first and the last
+first or last
+first, last
+first=first
+"first":
+"first"
+{first}
+first.is_empty
+top-first
+bottom-first
+top byte first
+low first
+high first
+first column
+first row
+first line
+first entry
+first matching row
+first component
+first instruction
+first fragment
+first non-zero byte
+first failing input
+first non-valid input
+first value past
+first unwritten opcode
+first tx
+# the Lean tactic combinator of that name
+first | rfl
+first | omega
+first | exact
+first | simp
+first | decide
+first | (
+(first
+<;> first
+all_goals first
+# a record's file name, quoted wherever the record is cited
+gen-first-cut
+# the phrases tools/wording_gate.sh carried inline until 2026-10-06 (#33's vetted list; lane scrub-46 moved
+# them here so both gates read one list)
+first `d − 1`
+first `k`
+first three checks
+first test
+first reason
+first height
+first value
+first step
+byte first
+first use
+first the length limit
+first (`1760`)
+first (`pubkey.cpp:207–213`)
+charged first
+refused `dust` first
+refuses it first
+refused first by consensus
+runs first
+comes first
+fire first
+tested first
+deleted first
+the same test first
+the flag first
+whole stack first
+markers first
+height first
+asks a family first
+the width first
+runs as the first
+the first of the longer
+the policy's verdict first
+leg first
+leg, first in
+cache get` first
+mode first
+note on #27 first
+move first prepared
+the first with the load
+first round
+first cut
+first half
+first run
+first sitting
+first launch
+first hour
+first clause
+first block
+first lens
+first chain
+first go-sdk run
+first 1,000
+first 3,000
+first bold segment
+first parent
+first GREEN
+first box record
+first written
+first said
+the word "first"
+a claim of "first"
+"first";
+"first" as a claim
+`first`
+twenty-first
+move; the first, from
+after the first from 0.3.24
+first).
+first Done-bar item
+supersede the first
+binds first
+"conformant" without a run
+calls the spec permissive
+word "permissive"
+# the exact ordinal phrases of the export's pages on 2026-10-06 (lane scrub-46; tools/export_gate.py scans every
+# exported text file, so the list covers code, data and the vendored reference vectors as well as the pages)
+# a class name and a superseded rule's name (D72), quoted wherever the class is
+first-8-bytes
+# positions in a sequence the reference or the spec defines (bytes, elements, inputs, entries, checks, steps)
+first d − 1
+first 8 bytes
+first nonzero byte
+nonzero byte after the first
+bytes after the first
+bytes past the first
+on every path but the first
+first `n` elements
+first 32 bits
+first 64 primes
+first `{}`
+first n corpus lines
+first n entries
+first ≈ 5,000
+first 5,000
+first pairs
+first non-accepting
+first failure
+first post-genesis height
+first occurrence
+first solution
+first of two conflicting spends
+first two runs
+first two are the crate's
+first spend in mempool
+first 1 hybrid pubkey
+first part is not involved
+first sign wrong
+invalid param first
+neg value first
+first op_checkmultisig transaction
+first whose
+first refusal
+first sentence
+first order
+first mini row
+first sdk run
+first record run
+first attempt
+first caller's
+first fetch
+first read
+first word
+first raise
+first enforced
+# an order of evaluation the reference or a tool fixes (X happens before Y)
+bottom first
+top first
+innermost first
+outermost first
+most significant first
+nearest first
+prefixes first
+backticked ones first
+statements first
+read first, in order
+the size bound first
+the length bound first
+the size first
+size first, so
+the consensus size first
+the depth first
+depth first
+asks this first
+nop rule first
+a flag first
+p2sh first
+first (`72–83`
+first (`1074`)
+the standardness gate first
+gate first (
+its first (`univalue_read
+`id` first
+refused the first
+on the first
+data shrunk to its first
+cap fires first
+eval_false first
+run first. exit
+non-minimal first
+a bigint first
+bigint first
+refuses it first
+refused it first
+fail first due
+the coinbase first
+a coinbase first
+policy first)
+report first
+the corners first
+the parents first
+shape first
+instance first
+self-test first
+builds first
+slot first
+cache first
+packages first
+lake first loads
+rules out the first
+push it first
+base/start) first
+the lock read first
+docstrings first
+table first
+grow first
+text first
+prefix of the first
+accept the first
+like the first's
+first, §5)
+# the source's own variable of that name (cite_check.py's citation span, check_pins.py's first line, the engines' first line)
+first = int(
+else first
+first < 1
+last < first
+first - 1
+first - 6
+last != first
+first = (r.stdout
+version (\s+)", first
+let first =
+first.to_string
+first.strip_prefix
+unwrap_or(first)
+.first()
+[i].first
+first=first, last=last
+# quoted from a pinned upstream's own source text (Teranode's policy_settings.go:9 at the pin, an anchor row of cite_check.py)
+much more permissive than btcs 10kb limit
+# 2026-10-15, lane anchor-cite (#43): the anchoring pass's rows of cite_check.py quote these pinned source lines
+// first transaction must be coinbase.
+i->first,
+(ret.first)
+const evalresult& first,
+return first.score()
+take this mutex first.
+into the first position of the first subtree
+# 2026-10-06, lane fix32-final-harness (#46): orderings and a range's ends, not claims
+folded into `first..last`
+bytes refusing first
+for the first group
+`first..last` (tools/cpp_replay.py expand_ids)
+# the era replay's tooling and ledgers (#49, 2026-10-06): ordinals of the fixture's own order, never a claim
+the first loop's spend
+the first loop spends
+the test's first spend
+its first spend into block 101
+the corpus's first spend
+the first configuration of each tip
+the chain the first call mined
+activation heights first
+the coinbase at height 1 the first
+# rules_check's tie-break on witnesses of equal size (D83c): an ordinal, never a claim
+keeps the FIRST of equal size
+# 2026-10-17, lane gate-107 (#107): the reference node's own RPC error text, quoted verbatim in corpus/rpc/contract.json
+# with its citation (:164 in the row; the throw spans src/wallet/rpcwallet.cpp:163-165 at the pin), an instruction's ordering, never a claim
+please call keypoolrefill first

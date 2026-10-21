@@ -1,0 +1,25 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+#!/usr/bin/env bash
+# S2's ladder runner (scratch): each rung ALONE through `eval/bsvs corpus` under /usr/bin/time -l, the 1-minute load read before
+# each; then corpus/tx whole. Usage: run_ladder.sh <tag> <rungs comma list> ; writes $SP/ladder/<tag>/…
+set -uo pipefail
+SP=/private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad
+[withheld at export: a sibling tree's line]
+tag=$1; rungs=$2
+out=$SP/ladder/$tag; mkdir -p $out
+echo "ladder $tag at $(git -C $ROOT rev-parse --short HEAD) ($(git -C $ROOT status --porcelain | grep -c .) uncommitted), bsvs $(stat -f %Sm -t %FT%T $ROOT/lean/.lake/build/bin/bsvs) sha256 $(shasum -a 256 $ROOT/lean/.lake/build/bin/bsvs | cut -c1-16)" | tee $out/summary.txt
+for n in ${rungs//,/ }; do
+  l1=$(sysctl -n vm.loadavg | awk '{print $2}')
+  t0=$(date -u +%H:%M:%S)
+  /usr/bin/time -l $ROOT/eval/bsvs corpus $SP/ladder/rung-$n.jsonl --out $out/rung-$n.out.jsonl > $out/rung-$n.time.txt 2>&1
+  rc=$?
+  real=$(grep -E '^ *[0-9.]+ real' $out/rung-$n.time.txt | awk '{print $1}')
+  rss=$(grep 'maximum resident set size' $out/rung-$n.time.txt | awk '{print $1}')
+  echo "rung $n: rc $rc, real ${real} s, max RSS ${rss} B, load1 before ${l1}, started ${t0} UTC; $(cut -c1-300 $out/rung-$n.out.jsonl 2>/dev/null)" | tee -a $out/summary.txt
+done
+l1=$(sysctl -n vm.loadavg | awk '{print $2}'); t0=$(date -u +%H:%M:%S)
+/usr/bin/time -l $ROOT/eval/bsvs corpus $ROOT/corpus/tx/tx.jsonl --out $out/corpus-tx.out.jsonl > $out/corpus-tx.time.txt 2>&1
+rc=$?
+real=$(grep -E '^ *[0-9.]+ real' $out/corpus-tx.time.txt | awk '{print $1}'); rss=$(grep 'maximum resident set size' $out/corpus-tx.time.txt | awk '{print $1}')
+echo "corpus/tx: rc $rc, real ${real} s, max RSS ${rss} B, load1 before ${l1}, started ${t0} UTC; $(grep -c . $out/corpus-tx.out.jsonl) lines" | tee -a $out/summary.txt
+echo "done $(date -u +%H:%M:%S) UTC" | tee -a $out/summary.txt

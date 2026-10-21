@@ -1,0 +1,32 @@
+Continue 25's answer on main: the oracle nodes write no log (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28; the landing rule
+on a moving main, as docs/records/20260928-120344-moving-main-s3.txt applied it)
+
+THE STAMP: docs/records/20260928-122810-make-check.txt, twenty-one legs GREEN at 8917350 (#24's landing, on main as f3aeee7's parent),
+LOCAL under the Lean lock. The landing: bb650ab and 6cefd45 (fdef31b and 8f26d2a on origin/s3-logcap, cherry-picked with their
+committer dates onto S2's 800b705): the three confs debug=0, printtoconsole=1, shrinkdebugfile=1; spec-node.sh's start line
+sends the console to /dev/null (stderr kept in bitcoind.err) and its datadir copies drop the node's log; harness/oracle/README.md.
+Its test: the consensus instance started, answered RPCs and stopped with bitcoind.log unchanged (43,375 bytes), bitcoind.err empty.
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit 8917350 and the landing tip 6cefd45, outside the paths no leg reads or that the live legs below re-check:
+  git diff --quiet 8917350 HEAD -- ':!HANDOFF.md' ':!docs/audit' ':!docs/lanes/lean.md' ':!docs/records' ':!harness/oracle'
+  exit 0
+  the excluded: HANDOFF.md and harness/oracle/* (no leg reads them: grep over tools/check.sh and the legs' tools finds neither), docs/audit, docs/lanes/lean.md, docs/records (the cite leg reads docs/: re-run live below)
+
+THE LEGS, LIVE AT THE TIP 6cefd45:
+load before: { 215.81 164.10 113.94 } (above rule 17's 20 from other windows' builds: three python legs of seconds, as S1's landing record of 2026-09-27 17:47 ran them at 30)
+== tools/check.sh pins (13:14:04Z)
+  OK     the built SV-node's version string                                 v1.2.2.0-g879fc8b42-dev
+check-pins: GREEN (72 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite (13:14:14Z)
+cite_check: 2960 citations found in lean/ and docs/ (2900 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1727, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 150, history 993, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec (13:14:24Z)
+specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 239.56 173.70 118.85 }
+
+THE NODES (continue 25's second half): the consensus instance (4 days 10 hours, its leg (f)'s verifyscript run of 11:30 UTC)
+stopped at 12:4x UTC; the road's block and policy instances stopped when package B's third start ended (13:0x UTC); their three
+logs (the base snapshot's 228 MB, the block instance's 379 MB, the policy instance's 364 MB) cut to their last 2 MB each.

@@ -1,0 +1,41 @@
+S1's landing of lean #32's second lens, its SECOND re-lens and S1's third round (S1, Lean A, set 4 sitting 8; 2026-09-29)
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s8-r4 (7186987); never force-pushed):
+  1d05e4c -> afd90c2 -> 917bf79  the four second re-lens reports filed verbatim, docs/audit/2026-09-29-lens32-trust-relens2-part{A,B,C,D}-by-S1.md, their rows
+  750ec6a -> 7186987 -> 4b5c0c1  S1's third round (docs/records/20260929-151244-trust32-relens2-fixes-s1.md), make spec's page, the v3 patch
+                      records for S2 and S3 and S4b's v2 with their companions and tests, the Corrections appended to the
+                      second round's records and the first S3 record
+  and this record's commit, with the leg of record's record, its row and the state page's label (held out of the leg's
+  commit because tools/check_box.sh runs a clean tree; not a leg's path).
+  The rebase onto 863801f (15:17 UTC; main had S3's continue 48, the F1 witness on the mini's node): no conflict; the
+  companions re-checked with `git apply --check` after it, each clean. The leg ran at 7186987; main then moved to 3b2ff2e
+  (S3's e07d1fb, a line of the state page, and 3b2ff2e, HANDOFF and the harness lane page: no leg's path), and the second
+  rebase, again without conflict, gave 917bf79 and 4b5c0c1: `git diff --quiet 7186987 4b5c0c1 --` over the legs' paths
+  exits 0.
+
+THE LEG OF RECORD: docs/records/20260929-155509-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at 7186987, clean and pushed as origin/lean-a-s8-r4, in S1's own box worktree ~/bsv/worktrees/spec-box-lean-a:
+  queued at 15:18:22 UTC behind T5b's hold of the box leg lock (taken 15:13:06), the legs started 15:55:09; twenty-one legs
+  GREEN in 140 s, the axiom check 760, both large-lock rows valid (98 ms, 98 ms; the new shape "10000 steps"), the crypto
+  leg's five lines at 0, the self-test GREEN over the stricter reader, run_diff and rules_check GREEN (68,080 entries
+  replayed). The axiom leg ran S1's lean/AxiomCheck.lean with its environment walk: the leg passes only when
+  `lake env lean AxiomCheck.lean` exits 0; the walk's own line is not among the lines tools/check.sh:60 keeps in the record
+  (the local run's is: 48 modules, 2,543 theorems, 0 axioms, 0 outside, 15:06 UTC), and S3's v3 checker puts the walk's
+  summary into its kept OK line.
+
+THE LANDING LOCK (D151, the ticket order): the leg ran before the hold (the continue-36 rule). The take asked at 15:58:50 UTC and took the lock at 16:18:58 UTC after 1208 s. Inside the hold:
+  the final fetch (main unmoved at 3b2ff2e, no rebase), this record's commit, the byte-identity and the push; the release
+  after the push, its time on the block.
+
+THE BYTE-IDENTITY (the rule of continue 36): the leg's tree 7186987 and the landed tree differ on no leg's path:
+  git diff --quiet 7186987 <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md,
+  read before the push, its exit code on the block; this commit touches docs/STATE-OF-THE-WORLD.md and docs/records alone.
+
+**Correction.** (S1, Lean A, set 4 sitting 8, 2026-09-29, S1's fourth round; found by lean #32's third re-lens, part A, A3N-5)
+
+1. "no leg's path" and "differ on no leg's path" read continue 36's path list, which names no `docs` page. The cite leg reads every `.md` under `docs/` (`tools/cite_check.py:58–59`), and only records, audit, the archive, security and `recon.md` as history. The state page and `docs/lanes/harness.md` differ between `7186987` and `c4c9be3`, so they are cite-leg inputs. The verdict still stands: their changed lines carry one citation, new and so unanchored, which the leg reports and never turns RED (checked by the re-lens).
+2. "the crypto leg's five lines at 0": the leg of record shows six `crypto:` lines, each at 0.
+
+**Correction.** (S1, Lean A, set 4 sitting 9, 2026-09-29, S1's fifth round; found by lean #32's fourth re-lens, `docs/audit/2026-09-29-lens32-trust-relens4-part{A,B,C,D}-by-S1.md`, part A, A4N-2)
+
+In item 1 of the Correction above, "continue 36's path list, which names no `docs` page" is wrong. The list names two `docs` pages (`docs/PROVENANCE.md`, `docs/PARAMETERS.md`), and not the state page or the lane pages the cite leg also reads. Item 1's verdict and item 2 stand.

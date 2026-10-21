@@ -1,0 +1,63 @@
+[export: 10 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+lane C, P6's sitting 24 [X]; S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE FINDING: GNU make 3.81 (the Studio's) resolves a recipe's FIRST WORD on make's own startup PATH, not the PATH the Makefile
+exports, so a recipe starting with `bash` or `zsh` runs whatever the caller's PATH put first.
+
+THE CHANGE, 7a4ed92 (landed as 8e75f9f): every recipe that starts a script or a shell starts `/usr/bin/env -u BASH_ENV /bin/bash --noprofile --norc`
+(CLEAN_BASH; CLEAN_BASH_WITH carries MAKE_CHECK), 26 recipes and the two loop lines that run eval/bsvs; SHELL := /bin/sh for the
+recipes make hands a shell (the cd and for lines); the exported PATH is the toolchains' directories, then the system's, then the
+caller's; BASH_ENV and ENV unexported; tools/check_route.sh, tools/check_box.sh (the box's remote /bin/bash) and tools/modal_check.py
+(/bin/bash) name their shells by absolute path. RULES-TREE (28)'s legs unchanged.
+AND, 5f2b3b8 (landed as f7ad524): tools/check_box.sh takes the box leg lock in its SYMLINK form (D158, the plan's docs/HOSTS.md: the mkdir form retired;
+found while the run at 7a4ed92 waited on a holder it could not read): the holder line as the link's target, taken by ln -sn and
+read back, released only as this take's own line, never broken; tested on a scratch path on the box (a free path, another's link,
+an old-form directory). The run at 7a4ed92 was stopped while it waited, holding no leg lock.
+
+THE DEMONSTRATION:
+continue 33's finding and this Makefile's defense, demonstrated 2026-09-29T00:37:04Z with GNU make 3.81 (a fake bash and env first on the caller's PATH, in the parent's scratch):
+1. a recipe whose first word is a bare shell:
+   make old (bash -c ...): 'FAKE bash ran instead'
+   make new (/bin/bash -c ...): 'the real bash ran'
+2. the spec's Makefile under the same caller PATH (CHECK_ROUTE_DRY=1):
+[withheld at export: a sibling tree's line]
+   make check-box: 'check: BOX (1-minute load 5.50); check_route: DRY, nothing run '
+
+THE PATH A RECIPE SEES on the Studio (a scratch makefile including this one; the first sixteen entries, then where each tool resolves):
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  /usr/local/cargo/bin
+  /usr/local/go/bin
+  /usr/local/node/bin
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
+  /usr/local/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  /opt/homebrew/bin/python3
+  /opt/homebrew/bin/go
+  /opt/homebrew/bin/node
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  /bin/bash
+  /usr/bin/env
+  (python3, go, cargo and lake resolve as before; a bare `node` is Homebrew's, and tools/node_bin.sh still prefers $NODE_BIN and
+  nvm v22 for every leg that runs node, so the pins leg's node.major stands)
+
+THE TRIPWIRE AT 5f2b3b8, on the box (make check-box): docs/records/20260929-010419-make-check-box.txt, twenty-one legs GREEN in 234 s, every leg's own verdict
+line present (RULES-TREE (28)), the axiom check 545, a 1-minute load of 33.86 there at its start; on the box the Makefile's PATH puts
+the spec's own Go 1.27.0 and Node 22.18.0 before Homebrew's Node 26, so the pins leg's majors hold there too.
+
+THE LANDING: 7a4ed92 and 5f2b3b8 (origin/s3-c33) cherry-picked with their committer dates onto main at 3dd1f8f (continue 34's
+pastes, docs only) as 8e75f9f and f7ad524; byte-identical with 5f2b3b8 outside HANDOFF.md, the records and docs/lanes/harness.md
+(exit 0); the legs that read those pages, live at the tip:
+  pins (01:09:53Z): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite (01:09:59Z): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (01:10:01Z): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)

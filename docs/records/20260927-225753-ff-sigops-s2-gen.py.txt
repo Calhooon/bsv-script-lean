@@ -1,0 +1,25 @@
+# S2's witness for S1's ask 5 (the pre-Genesis sigop count at a literal 0xff; set 4 sitting 3, 2026-09-27): two entries built on
+# corpus/tx's tx-00033 frame (version 2; one input with an empty scriptSig spending tx-00033's OP_1 coin at height 605,000; a
+# pre-Genesis spend at 610,000, consensus true; lock time 0), each with ONE output of 0 satoshis:
+#   ff-witness: the locking script 0xff then 20,001 x 0xac (OP_CHECKSIG): GetSigOpCount stops at the 0xff (script.cpp:40-41,
+#               instruction_iterator.h:26-27), so the node counts 0; the spec's walk before the fix counted 20,001 > 20,000.
+#   ff-control: the same 20,001 x 0xac without the 0xff: 20,001 on both, over MAX_TX_SIGOPS_COUNT_BEFORE_GENESIS (consensus.h:47).
+import json, sys
+src, out = sys.argv[1], sys.argv[2]
+e = next(json.loads(l) for l in open(src) if json.loads(l)["id"] == "tx-00033")
+b = bytes.fromhex(e["tx"])
+head = b[:46]                      # version 4 + nIn 1 + the input 41 bytes
+assert head[:4] == bytes.fromhex("02000000") and head[4] == 1
+def cs(n):
+    if n < 253: return bytes([n])
+    if n <= 0xffff: return b"\xfd" + n.to_bytes(2, "little")
+    return b"\xfe" + n.to_bytes(4, "little")
+rows = []
+for name, script in [("ff-witness", b"\xff" + b"\xac" * 20001), ("ff-control", b"\xac" * 20001)]:
+    tx = head + b"\x01" + (0).to_bytes(8, "little") + cs(len(script)) + script + (0).to_bytes(4, "little")
+    rows.append({"id": name, "family": "tx/rules/pre-genesis/sigops-invalidopcode", "rule": "tx.rules", "tx": tx.hex(),
+                 "prevouts": e["prevouts"], "params": e["params"], "expect": {},
+                 "note": "S2's witness for S1's ask 5: %d-byte locking script, %d bytes serialized" % (len(script), len(tx))})
+    print(name, len(script), len(tx))
+with open(out, "w") as f:
+    for r in rows: f.write(json.dumps(r) + "\n")

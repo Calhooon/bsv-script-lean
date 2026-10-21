@@ -1,0 +1,2 @@
+{"commit":"b3406bf","config":"sv-mainnet-default","id":"eras-00012","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"b3406bf","config":"sv-mainnet-default","id":"tx-00040","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}

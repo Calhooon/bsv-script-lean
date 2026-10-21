@@ -1,0 +1,10 @@
+{
+  "name": "bsv-script-lean-jscpd",
+  "version": "0.0.1",
+  "private": true,
+  "description": "bsv-script-lean #138: the copy-paste leg's tool, pinned exactly (tools/jscpd_check.sh installs it into the toolchains directory with npm ci)",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "jscpd": "5.4.1"
+  }
+}

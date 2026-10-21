@@ -1,0 +1,1036 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 2757,
+  "counts": {
+    "block": {
+      "agree": 9,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 10,
+      "no-verdict": 4,
+      "non-judging": 1,
+      "pending": 0,
+      "rows": 15,
+      "rpc-precheck": 0,
+      "unrealizable": 1
+    },
+    "chain": {
+      "agree": 4,
+      "diverge": 1,
+      "label": "[M]",
+      "measured": 5,
+      "no-verdict": 4,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 36,
+      "rpc-precheck": 0,
+      "unrealizable": 27
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 29,
+      "rpc-precheck": 0,
+      "unrealizable": 29
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [
+      {
+        "id": "next/daa-missing",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "header/time-above-median",
+        "label": "[X]",
+        "observed": {
+          "height": 106,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "header/time-at-two-hours",
+        "label": "[X]",
+        "observed": {
+          "height": 107,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "header/time-over-two-hours",
+        "label": "[X]",
+        "observed": {
+          "connection_ended": false,
+          "fsm_running": true,
+          "fsm_state_value": 1,
+          "seconds": 61.232521,
+          "send": true,
+          "status": "no-verdict",
+          "stored": false
+        },
+        "reference_token": "measured agree: {\"reason\":\"time-too-new\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "header/difficulty-before-time",
+        "label": "[X]",
+        "observed": {
+          "connection_ended": false,
+          "fsm_running": true,
+          "fsm_state_value": 1,
+          "seconds": 61.130849625,
+          "send": true,
+          "status": "no-verdict",
+          "stored": false
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-diffbits\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "pow/zero",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000637584,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "pow/negative",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000503792,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "pow/overflow",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000622334,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "reward/limit-plus-0",
+        "label": "[X]",
+        "observed": {
+          "height": 108,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "reward/limit-plus-1",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.197199917,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-cb-amount\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "ttor/ordered",
+        "label": "[X]",
+        "observed": {
+          "status": "ok",
+          "stored": -1,
+          "sweep": {
+            "active": false,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "ttor/reversed",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-blk-ttor\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "ttor/distance-one-below",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "header/version-bip66",
+        "label": "[X]",
+        "observed": {
+          "connection_ended": false,
+          "fsm_running": true,
+          "fsm_state_value": 1,
+          "seconds": 61.035886708,
+          "send": true,
+          "status": "no-verdict",
+          "stored": false
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-version(0x00000002)\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "header/version-bip65",
+        "label": "[X]",
+        "observed": {
+          "connection_ended": false,
+          "fsm_running": true,
+          "fsm_state_value": 1,
+          "seconds": 61.145899166,
+          "send": true,
+          "status": "no-verdict",
+          "stored": false
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-version(0x00000003)\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      }
+    ],
+    "chain": [
+      {
+        "id": "chain-undo-clean",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"disconnected\":true,\"overwrittenCoinPresent\":false,\"restored\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-coinbase-overwrite-residue",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"disconnected\":true,\"overwrittenCoinPresent\":false,\"restored\":false} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-equal-work-rank",
+        "label": "[X]",
+        "reference_token": "unrealizable: The row's tie is the final pointer comparison: equal work, equal validation completion and equal sequence id leave CBlockIndexWorkComparator to compare CBlockIndex heap addresses, which the source says happens only with blocks loaded from disk. A restart can produce the tie, but the allocator sets which address is lower; no RPC, setting or lifecycle step controls it, so a declared winner cannot be realized (DESIGN-S6 2.4 records such a tie as non-judging). [SRC] src/block_index.h:373-375,1239-1270; src/validation.cpp:6670-6688 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-missing-body-ancestry",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"selectedBase\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row removes one stored block's body by pruneblockchain; the instance has no pruneblockchain handler (services/rpc/Server.go:160-226, the unimplemented list :277-285: no entry), so a stored block whose body alone is absent cannot be arranged [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-undo-count",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"published\":false,\"status\":\"BsvChain.DisconnectResult.failed\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-missing-output",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"published\":false,\"status\":\"BsvChain.DisconnectResult.unclean\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-undo-collision",
+        "label": "[X]",
+        "reference_token": "unrealizable: The row needs a restored prevout already present in the coins view at undo time. Disconnection runs from the tip down and, within a block, in reverse transaction order; for an unmodified body an undo entry restores the spending input's own prevout. The implemented rev-record edits change restored data, not that prevout or pre-existing coins. This harness has no chainstate writer or block-body corruption instrument. The stopped-datadir surface could in principle support either: disk reads check header proof of work and the indexed header hash without recomputing the body's merkle root, and checklevel=0 skips block validity checks. A body-prevout replacement is an unmeasured candidate; its changed transaction id can also cause an output-removal mismatch, which must be controlled before an isolated collision is counted. [SRC] src/processing_block_index.cpp:21-71; src/validation.cpp:2941-2952,4065-4090,6802,6844-6859; src/block_file_access.cpp:247-275; src/block_index.cpp:245-260; src/init.cpp:3960-3966 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-output-metadata",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"published\":true,\"restoresInitial\":true,\"status\":\"BsvChain.DisconnectResult.ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-parent-tip",
+        "label": "[X]",
+        "reference_token": "unrealizable: The declared mismatched coins best pointer is an internal assertion, not a submitblock rejection. ConnectTip constructs its coins view on the selected active parent; no RPC or launch setting supplies the synthetic pointer. [SRC] src/validation.cpp:3034-3038,4204-4349 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-soft-rejection",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"operatorReceipts\":true,\"removed\":{\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[\"T\"]},\"restored\":{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-soft-freeze",
+        "label": "[X]",
+        "reference_token": "unrealizable: The row sets an effective freeze of zero descendants on an already-active block and later clears it, restoring that block at height 102. At the pin a block's freeze is assigned when its own connection spends a consensus-frozen output. The duration setter rejects negatives but has no upper bound: literal zero maps to INT32_MAX, while nonzero int64 values narrow into an int32 field. On the pinned build's ordinary conversion, 4294967296 narrows to zero; the block is frozen but its child receives -1 and is not effectively frozen. This source-derived boundary is unmeasured. It does not supply the row's explicit set/clear route on an already-active block: no supported RPC clears the persisted block mark; clearing blacklist entries is a different operation. The declaration remains unchanged pending the captain's re-cut decision. [SRC] src/init.cpp:3340-3347; src/config.cpp:2602-2612; src/config.h:984; src/validation.cpp:3402-3407,3720-3740; src/block_index.h:548-557,576-580,1135-1140; src/disk_block_index.h:100-116; src/rpc/frozentxo_rpc.cpp:501-528 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-disconnect-pool-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: The row caps the disconnect pool at the coinbase's serialized size under byte-only accounting and reads the queued and filtered sets. At the pin the cap is -maxmempool, which accepts 0 or at least 30 percent of the 1000 MB default; the pool's usage is malloc-based DynamicMemoryUsage, not serialized bytes; and the queue lives only inside one reorganization with no RPC reader. [SRC] src/config.cpp:2440-2460; src/init.cpp:2385-2389; src/policy/policy.h:87; src/validation.cpp:4109-4114; src/txmempool.cpp:2529-2559; src/txmempool.h:1455-1505 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-retained-nonfinal-before-genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-retained-nonfinal-after-genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-era-clear-9999",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":0,\"deltas\":1,\"feeReset\":true,\"held\":1,\"orphans\":1,\"retry\":{\"accepted\":[\"C\",\"P\"],\"orphans\":0}} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-era-clear-10000",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":1,\"deltas\":1,\"feeReset\":false,\"held\":1,\"orphans\":1,\"retry\":{\"accepted\":[\"C\",\"P\"],\"orphans\":0}} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-era-clear-14999",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":0,\"deltas\":1,\"feeReset\":true,\"held\":1,\"orphans\":1,\"retry\":{\"accepted\":[\"C\",\"P\"],\"orphans\":0}} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-era-clear-15000",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":1,\"deltas\":1,\"feeReset\":false,\"held\":1,\"orphans\":1,\"retry\":{\"accepted\":[\"C\",\"P\"],\"orphans\":0}} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-genesis",
+        "label": "[X]",
+        "reference_token": "unrealizable: The row replaces hashGenesisBlock with a synthetic excessive-reward block hash. The pinned regtest constructor fixes and asserts its genesis hash; there is no RPC or launch override for that hash. [SRC] src/chainparams.cpp:1508-1519; src/validation.cpp:3034-3052 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-body-return",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"selectedB\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row removes one stored block's body by pruneblockchain; the instance has no pruneblockchain handler (services/rpc/Server.go:160-226, the unimplemented list :277-285: no entry), so a stored block whose body alone is absent cannot be arranged [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-receipt-order",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"equalWork\":true,\"selectedB\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row stores headers without their bodies from the peer and then bodies whose parent has no body; the bridge disconnects a peer whose headers it did not request outside the headers mode of its sync (services/legacy/netsync/manager.go:2491-2498) and keeps no body whose parent it lacks, answering it with a getblocks (:1988-2003), so the waiting bodies cannot be arranged [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-mined-secondary",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"ancestorCount\":0,\"bothSecondaryBefore\":true,\"childPrimary\":true,\"onlyChild\":true,\"secondaryAncestorCount\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-batching",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"fundingLive\":true,\"height\":152,\"readmitted\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-partial-disconnect-auto",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"failed\":true,\"height\":102,\"readmitted\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-partial-disconnect-invalidate",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"failed\":true,\"height\":102,\"readmitted\":false} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-partial-disconnect-freeze",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"failed\":true,\"height\":102,\"readmitted\":false} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row reads the reference's undo or block-index records, its disconnect pool, its held or orphan pools across an era crossing, its frozen list, or a model-only operand; Teranode reverses a block's spends in the UTXO store and the subtree processor (stores/utxo/Interface.go:458; services/blockassembly/subtreeprocessor/SubtreeProcessor.go:4720) with no undo record, has no non-final pool (services/validator/Validator.go:976-983) and no such disconnect queue [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-precious",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"headerStayedInactive\":true,\"operatorReceipts\":true,\"selectedB\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row calls preciousblock; the instance lists it among its unimplemented commands (services/rpc/Server.go:284, the list :277-285) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "chain-disconnected-readmitted",
+        "label": "[X]",
+        "observed": {
+          "height": 101,
+          "instance_height": 104
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[\"T\"]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "rpc",
+        "verdict": "agree"
+      },
+      {
+        "adjudication": {
+          "class": "scenario.reconsider.revalidation-refused",
+          "ruling": "open"
+        },
+        "id": "chain-invalidate-reconsider",
+        "label": "[X]",
+        "observed": {},
+        "reference_token": "measured agree: [{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]},{\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[\"T\"]},{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]}] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "rpc",
+        "stage": "subtree-fetch",
+        "verdict": "diverge"
+      },
+      {
+        "id": "chain-reorg-depth-1",
+        "label": "[X]",
+        "observed": {
+          "automaticAgrees": true,
+          "disconnects": 1
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":1,\"final\":{\"coins\":[\"K\"],\"height\":103,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reorg-depth-2",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":2,\"final\":{\"coins\":[\"K\"],\"height\":104,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":103,\"outpoint\":\"T2\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T2\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":104}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-reorg-depth-3",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":3,\"final\":{\"coins\":[\"K\"],\"height\":105,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":104,\"outpoint\":\"T3\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":97000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"A3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T3\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":103,\"outpoint\":\"T2\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T2\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":105,\"outpoint\":\"B4:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":105}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-disconnected-now-nonfinal",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-disconnected-now-immature",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-equal-work-completion",
+        "label": "[X]",
+        "observed": {
+          "equalWork": true
+        },
+        "reference_token": "measured agree: {\"equalWork\":true,\"selected\":\"B\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-equal-work-sequence",
+        "label": "[X]",
+        "observed": {
+          "equalWork": true
+        },
+        "reference_token": "measured agree: {\"equalWork\":true,\"selected\":\"B\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      }
+    ],
+    "finality": [
+      {
+        "id": "finality/threshold-499999998",
+        "label": "[X]",
+        "reference_token": "unrealizable: literal candidate height 500000000 cannot be mined on a regtest instance in this harness; LOCKTIME_THRESHOLD at src/script/script.h:36 and src/validation.cpp:227-237 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/threshold-499999999",
+        "label": "[X]",
+        "reference_token": "unrealizable: literal candidate height 500000000 cannot be mined on a regtest instance in this harness; LOCKTIME_THRESHOLD at src/script/script.h:36 and src/validation.cpp:227-237 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/threshold-500000000",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact threshold-adjacent lock requires cutoff 500000000, below fixed regtest genesis time 1296688602; accepted ancestry cannot reach that cutoff, and translating the lock would erase the numeric threshold boundary ([SRC] src/chainparams.cpp:1507-1516; src/validation.cpp:227-237,5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/threshold-500000001",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact threshold-adjacent lock requires cutoff 500000000, below fixed regtest genesis time 1296688602; accepted ancestry cannot reach that cutoff, and translating the lock would erase the numeric threshold boundary ([SRC] src/chainparams.cpp:1507-1516; src/validation.cpp:227-237,5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/threshold-500000002",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact threshold-adjacent lock requires cutoff 500000000, below fixed regtest genesis time 1296688602; accepted ancestry cannot reach that cutoff, and translating the lock would erase the numeric threshold boundary ([SRC] src/chainparams.cpp:1507-1516; src/validation.cpp:227-237,5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/empty-inputs",
+        "label": "[X]",
+        "reference_token": "unrealizable: an empty ordinary input vector fails CheckRegularTransaction before contextual finality; the model's vacuous all-final result has no full-transaction observation ([SRC] src/validation.cpp:520-538,5874-5890,6067-6074 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/eleven-unsorted",
+        "label": "[X]",
+        "reference_token": "unrealizable: the requested chronological suffix requires its penultimate header time 1 after a parent median at least 5, even with all unknown older headers lower; an equal-offset rematerialization is refused before index insertion ([SRC] src/validation.cpp:5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/older-twelfth-ignored",
+        "label": "[X]",
+        "reference_token": "unrealizable: the requested chronological suffix requires its penultimate header time 1 after a parent median at least 5, even with all unknown older headers lower; an equal-offset rematerialization is refused before index insertion ([SRC] src/validation.cpp:5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/eleven-duplicates",
+        "label": "[X]",
+        "reference_token": "unrealizable: the chronological suffix requires another time-1 header after a parent median at least 1; even arbitrarily low older ancestry cannot satisfy the strict header-time check ([SRC] src/validation.cpp:5949-5954; src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/short-three",
+        "label": "[X]",
+        "reference_token": "unrealizable: the requested short-chain order places a header below its existing parent median; translating the fixed genesis timestamp preserves that violation ([SRC] src/validation.cpp:5949-5954; src/block_index.h:720-737; src/chainparams.cpp:1507-1516 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/short-four-upper-middle",
+        "label": "[X]",
+        "reference_token": "unrealizable: the requested short-chain order places a header below its existing parent median; translating the fixed genesis timestamp preserves that violation ([SRC] src/validation.cpp:5949-5954; src/block_index.h:720-737; src/chainparams.cpp:1507-1516 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/configured-span",
+        "label": "[X]",
+        "reference_token": "unrealizable: medianTimeSpan is a compiled constant with no regtest RPC or launch override [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/empty-total-extension",
+        "label": "[X]",
+        "reference_token": "unrealizable: model total extension has no nonempty active block index with the pinned median span [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "median/zero-span-total-extension",
+        "label": "[X]",
+        "reference_token": "unrealizable: model total extension has no nonempty active block index with the pinned median span [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/flags--1",
+        "label": "[X]",
+        "reference_token": "measured agree (wallet build): {\"status\":\"final\"} [M] 2026-10-14 [X] docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md",
+        "unrealizable": "the row selects the tip check's lock-time flags word; the instance's mempool finality compares the lock with the median time past unconditionally (services/validator/Validator.go:550-590,968-979), with no flags selector [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/flags-0",
+        "label": "[X]",
+        "reference_token": "unrealizable: the admission caller always sets LOCKTIME_MEDIAN_TIME_PAST; no RPC or launch override supplies this stage flag word ([SRC] src/validation.cpp:1096-1106,5998-6028; src/policy/policy.h:246-255 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/flags-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: the admission caller always sets LOCKTIME_MEDIAN_TIME_PAST; no RPC or launch override supplies this stage flag word ([SRC] src/validation.cpp:1096-1106,5998-6028; src/policy/policy.h:246-255 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/flags-2",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the tip check's lock-time flags word; the instance's mempool finality compares the lock with the median time past unconditionally (services/validator/Validator.go:550-590,968-979), with no flags selector [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/flags-3",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the tip check's lock-time flags word; the instance's mempool finality compares the lock with the median time past unconditionally (services/validator/Validator.go:550-590,968-979), with no flags selector [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/before-genesis-rejected",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's tip sits below its recipe's Genesis height 10; the instance's Genesis is 100 (go-chaincfg v1.6.2 params.go:475) and no coin matures below height 101 (params.go:463), so no pre-Genesis tip can carry a spend [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/successor-genesis-held",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's tip sits below its recipe's Genesis height 10; the instance's Genesis is 100 (go-chaincfg v1.6.2 params.go:475) and no coin matures below height 101 (params.go:463), so no pre-Genesis tip can carry a spend [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/capacity-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":259,\"namespace\":\"node\",\"reason\":\"non-final-pool-full\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/capacity-1",
+        "label": "[X]",
+        "reference_token": "measured agree: rejected 259 non-final-pool-full (scope: full admission; the isolated stage says heldNonFinal) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/capacity-52428800",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/final-zero-capacity",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/pregenesis-nonstandard",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":64,\"namespace\":\"node\",\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/successor-activation-held",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/adjusted-time-does-not-unlock",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/signed-mtp-2147483647-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      }
+    ],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 9736710,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-235714/receipt.json",
+    "sha256": "97f079035445c2f266dcdd52ecd45741534a8febf4c7c59c8ab1ce1336c744ee"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "50f7240205a8e407e4d9e8e896dff72ad3f5f79a16692457d6983c8f55b99a7b",
+      "height": 1472
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261017-235714-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 6,
+    "ends": 6,
+    "events": 1321,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "chain-disconnected-readmitted",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-invalidate-reconsider",
+        "verdict": "diverge"
+      },
+      {
+        "row": "header/time-above-median",
+        "verdict": "agree"
+      },
+      {
+        "row": "header/time-at-two-hours",
+        "verdict": "agree"
+      },
+      {
+        "row": "header/time-over-two-hours",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "header/difficulty-before-time",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "pow/zero",
+        "verdict": "agree"
+      },
+      {
+        "row": "pow/negative",
+        "verdict": "agree"
+      },
+      {
+        "row": "pow/overflow",
+        "verdict": "agree"
+      },
+      {
+        "row": "reward/limit-plus-0",
+        "verdict": "agree"
+      },
+      {
+        "row": "reward/limit-plus-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "ttor/ordered",
+        "verdict": "agree"
+      },
+      {
+        "row": "ttor/reversed",
+        "verdict": "agree"
+      },
+      {
+        "row": "ttor/distance-one-below",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "header/version-bip66",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "header/version-bip65",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-reorg-depth-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reorg-depth-2",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-reorg-depth-3",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-disconnected-now-nonfinal",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-disconnected-now-immature",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-equal-work-completion",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-equal-work-sequence",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "chain-batching",
+    "chain-body-return",
+    "chain-coinbase-overwrite-residue",
+    "chain-disconnect-pool-cap",
+    "chain-disconnected-now-immature",
+    "chain-disconnected-now-nonfinal",
+    "chain-disconnected-readmitted",
+    "chain-equal-work-completion",
+    "chain-equal-work-rank",
+    "chain-equal-work-sequence",
+    "chain-era-clear-10000",
+    "chain-era-clear-14999",
+    "chain-era-clear-15000",
+    "chain-era-clear-9999",
+    "chain-genesis",
+    "chain-invalidate-reconsider",
+    "chain-mined-secondary",
+    "chain-missing-body-ancestry",
+    "chain-missing-output",
+    "chain-output-metadata",
+    "chain-parent-tip",
+    "chain-partial-disconnect-auto",
+    "chain-partial-disconnect-freeze",
+    "chain-partial-disconnect-invalidate",
+    "chain-precious",
+    "chain-receipt-order",
+    "chain-reorg-depth-1",
+    "chain-reorg-depth-2",
+    "chain-reorg-depth-3",
+    "chain-retained-nonfinal-after-genesis",
+    "chain-retained-nonfinal-before-genesis",
+    "chain-soft-freeze",
+    "chain-soft-rejection",
+    "chain-undo-clean",
+    "chain-undo-collision",
+    "chain-undo-count",
+    "finality/empty-inputs",
+    "finality/threshold-499999998",
+    "finality/threshold-499999999",
+    "finality/threshold-500000000",
+    "finality/threshold-500000001",
+    "finality/threshold-500000002",
+    "header/difficulty-before-time",
+    "header/time-above-median",
+    "header/time-at-two-hours",
+    "header/time-over-two-hours",
+    "header/version-bip65",
+    "header/version-bip66",
+    "median/configured-span",
+    "median/eleven-duplicates",
+    "median/eleven-unsorted",
+    "median/empty-total-extension",
+    "median/older-twelfth-ignored",
+    "median/short-four-upper-middle",
+    "median/short-three",
+    "median/zero-span-total-extension",
+    "mempool/adjusted-time-does-not-unlock",
+    "mempool/capacity-0",
+    "mempool/capacity-1",
+    "mempool/capacity-52428800",
+    "mempool/final-zero-capacity",
+    "mempool/pregenesis-nonstandard",
+    "mempool/successor-activation-held",
+    "next/daa-missing",
+    "pow/negative",
+    "pow/overflow",
+    "pow/zero",
+    "reward/limit-plus-0",
+    "reward/limit-plus-1",
+    "tip/before-genesis-rejected",
+    "tip/flags--1",
+    "tip/flags-0",
+    "tip/flags-1",
+    "tip/flags-2",
+    "tip/flags-3",
+    "tip/signed-mtp-2147483647-lock-2147483646",
+    "tip/successor-genesis-held",
+    "ttor/distance-one-below",
+    "ttor/ordered",
+    "ttor/reversed"
+  ],
+  "run_id": "gate95-20261017-234627-235714",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-17T23:57:15Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 13,
+    "diverge": 1,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 15,
+    "no-verdict": 8,
+    "non-judging": 1,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 741.267431958
+  }
+}

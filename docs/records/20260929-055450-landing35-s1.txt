@@ -1,0 +1,30 @@
+#35's two patches landed (S1, Lean A, set 4 sitting 6; 2026-09-29): the commits, the landing lock, the leg of record, the byte-identity
+
+THE COMMITS (by pathspec under the hooks, S1's tag; each carries its own `make spec` pages, `spec` on S1's docs/OWNERS line
+since W0's 05:2x UTC line, so main's spec leg never reads STALE):
+  a210516  #35: Numbers.lean imports 74 named Mathlib modules (S2's narrowing, applied under S1's tag) + 6 spec pages (the
+           moved line cites of Numbers.lean)
+  d3a73e0  #35: BsvScript.Gadget (S2's module, applied under S1's tag), five theorems on the axiom list + 5 spec pages
+           (spec/modules.md, spec/theorems.md, spec/README.md's counts 541 / 569 / 625, OP_CODESEPARATOR, OP_RETURN)
+  1630e42  the two patches' record (docs/records/20260929-051445-patches-35-s1.md, its companion, its README row)
+  The pages were folded into their commits by a non-interactive `git rebase --exec` that ran `tools/specgen.py` after each
+  commit and amended it when spec/ moved (the messages kept); pushed first as origin/lean-a-s6-l2 at f3ded51.
+
+THE LANDING LOCK (D151; the plan's tools/lean_lock.sh, the lock a symlink on the box since the plan's abafd910):
+  taken 05:54:50 UTC by S1 after T4d's hold (its holder line stamped 05:51:48, when the take began); the final fetch and the
+  rebase onto 27d93f7 (S2's worked example; a README conflict resolved keeping both rows), the spec pages folded, the branch
+  pushed, the leg of record (below) inside the hold; then the final fetch again (main at 892eaff: S2's docs), the rebase to
+  1630e42, the byte-identity, the moved pages' legs live, the push 892eaff..1630e42 at 06:13:21 UTC; released 06:13:22 UTC.
+
+THE LEG OF RECORD: docs/records/20260929-060950-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at f3ded51, clean and pushed: the box, S1's own box worktree ~/bsv/worktrees/spec-box-lean-a (made by this
+  run), the tag check-box:lean-a on the Lean slot and on the box leg lock (taken 06:09:49 UTC after 691 s of waiting);
+  twenty-one legs GREEN in 172 s (06:09:50 -> 06:12:42 UTC), the axiom check 569, the flow leg's large-lock row valid in
+  101 ms, specgen --check OK; its commit line f3ded51 with 0 uncommitted paths (the route's own check: a record naming
+  another commit reads RED).
+
+THE BYTE-IDENTITY (the landing rule on a moving main): git diff --name-only f3ded51 1630e42 = S2's 892eaff alone
+  (docs/DESIGN.md, docs/audit/2026-09-29-lens32-properties-part{A,B,C,D}-by-S2.md, docs/audit/README.md); git diff --quiet
+  f3ded51 1630e42 -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md: exit 0. The legs
+  that read the moved pages, re-run live at 1630e42 on the Studio under the lock (06:13 UTC, load 12.80): "cite_check: GREEN
+  (every anchored citation holds at the pin)"; "specgen --check: OK (117 files up to date; 0 rules flagged)".

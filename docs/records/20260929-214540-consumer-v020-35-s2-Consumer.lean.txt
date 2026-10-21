@@ -1,0 +1,35 @@
+import BsvScript
+/-!
+# A scratch consumer of `bsvscript` (S2, #35 35a, 2026-09-29), outside the spec's tree
+
+It requires the package through Lake at a commit (`lakefile.toml`) and uses the interface of
+`docs/DESIGN.md` §12: the evaluator by name, a theorem of the spec by name, and a verdict decided by
+the kernel through the kernel sample's route (§12.4 (5)).
+-/
+set_option autoImplicit false
+
+open BsvScript BsvScript.Numbers BsvScript.Machine BsvScript.Params BsvScript.Properties.KernelSample
+
+/-- A consumer's vector, in the kernel sample's shape: `3 4 OP_ADD 7 OP_NUMEQUAL` is valid. -/
+def cAdd : KernelVector :=
+  { name := "3 4 OP_ADD 7 OP_NUMEQUAL", cite := "1304–1306; 1338–1341",
+    lock := [0x53, 0x54, 0x93, 0x57, 0x9c], expect := .valid }
+
+/-- The kernel decides the consumer's vector on the spec's definitions. -/
+theorem cAdd_kernel : cAdd.run = cAdd.expect := by
+  simp only [KernelVector.run, Eval.verifyScript, Machine.verifyScript, Machine.phase2, Machine.evalScript,
+    loop_eq_fuel_length, isPushOnly_eq_fuel_length]
+  decide +kernel
+
+/-- The spec's determinism theorem, used by name from outside the tree. -/
+theorem consumer_deterministic (p : EvalParams) (c : Context) (s l : Bytes) (v : Verdict)
+    (h : Eval.verifyScript p c s l = v) : v = Eval.verifyScript p c s l :=
+  Eval.verifyScript_deterministic p c s l v _ h rfl
+
+/-- The gadget API's worked example, used by name from outside the tree (`docs/DESIGN.md` §12.4): BIP 199's hash-lock
+proved as a triple with `BsvScript.Gadget`. -/
+example := @BsvScript.Gadget.HashLock.hashLock_triple
+
+#eval cAdd.run
+#print axioms cAdd_kernel
+#print axioms BsvScript.Gadget.HashLock.hashLock_triple

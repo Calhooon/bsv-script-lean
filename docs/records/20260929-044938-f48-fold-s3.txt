@@ -1,0 +1,65 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+S1's sitting-5 END BLOCK (2026-09-29T03:57:03Z, #48 CLOSED) folded, its asks to the parent BUILT FIRST (the relay of 2026-09-29
+04:0x UTC; S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE BUILDS, 12a4a09 (origin/s3-f48):
+(1) make spec over #48's landing (S1's seat carries no spec/ line; main's spec leg read STALE, 26 files, until this landing):
+    26 pages: README.md opcodes/OP_ADD.md opcodes/OP_DIV.md opcodes/OP_EQUAL.md opcodes/OP_EQUALVERIFY.md opcodes/OP_FROMALTSTACK.md opcodes/OP_INVERT.md opcodes/OP_LEFT.md opcodes/OP_LSHIFT.md opcodes/OP_LSHIFTNUM.md opcodes/OP_MAX.md opcodes/OP_MIN.md opcodes/OP_MOD.md opcodes/OP_MUL.md opcodes/OP_NUMEQUALVERIFY.md opcodes/OP_PICK.md opcodes/OP_RIGHT.md opcodes/OP_ROLL.md opcodes/OP_RSHIFT.md opcodes/OP_RSHIFTNUM.md opcodes/OP_SIZE.md opcodes/OP_SUB.md opcodes/OP_TOALTSTACK.md opcodes/OP_TUCK.md opcodes/OP_WITHIN.md theorems.md
+    git diff -- spec, sha256's first 16 hex: 89809f58d5235faa (S1's END BLOCK (c)(2): 89809f58d5235faa, the same on the Studio and the
+    box); specgen --check: OK (117 files up to date; 0 rules flagged).
+(2) tools/check.sh's require_leg_lines TABLE (RULES-TREE (28)), beside the flow leg's two rows:
+    flow (the large lock)|^ *flowcheck: the large lock .*: valid in [0-9]+ ms, the budget [0-9]+ ms$
+    tested by `tools/check.sh lines <log>` on five logs: the verdict lines of S1's leg of record
+    (docs/records/20260929-033336-make-check-box.txt), whole; without the large-lock line; and with it replaced by each of the
+    row's three RED forms (lean/Test/FlowCheck.lean:170, :175, :179: not judged within the budget, an exception, a verdict not
+    valid or over the budget, each ending ': RED'):
+    green: exit 0: the legs' own verdict lines: every leg's present (RULES-TREE (28))
+    nolarge: exit 1: make check: RED: a leg printed no verdict line of its own: flow (the large lock) (RULES-TREE (28): a leg with no line is RED)
+    red1: exit 1: make check: RED: a leg printed no verdict line of its own: flow (the large lock) (RULES-TREE (28): a leg with no line is RED)
+    red2: exit 1: make check: RED: a leg printed no verdict line of its own: flow (the large lock) (RULES-TREE (28): a leg with no line is RED)
+    red3: exit 1: make check: RED: a leg printed no verdict line of its own: flow (the large lock) (RULES-TREE (28): a leg with no line is RED)
+(3) docs/PARAMETERS.md §1, after the limits table: S1's paragraph on the evaluator's reach, verbatim. Its figures read against
+    docs/records/20260929-020042-ladder48-s1.md, lines 74 and 76:
+      | **256,000,000** | **255,999,976 B** | 4,654,545 | **29.83 s** · **21,866,037,248 B**; 719.51 × 10⁹ (under the box leg lock, symlink form, 03:05:58–03:06:29 UTC; the RSS cap 24 GB) | 3.11 |
+      **The reach on the box `[M]`: a 255,999,976-byte lock, judged valid on the block path in 29.83 s at a peak of 21.87 GB.**
+    and its citation at the pin (bitcoin-sv 879fc8b42, src/consensus/consensus.h:29, with ONE_GIGABYTE at :17):
+      29: static const uint64_t MAX_TX_SIZE_CONSENSUS_AFTER_GENESIS = ONE_GIGABYTE;
+      17: static const uint64_t ONE_GIGABYTE = ONE_MEGABYTE * 1000;
+    the cite leg GREEN on the Studio with the paragraph in place.
+(8) the next wall filed as #50 (2026-09-29, S1's ask 8): OP_PICK/OP_ROLL's fetch walks the stack list to depth n, 84.1 % of a
+    pool-lock judgment's samples after #48 (docs/records/20260929-013146-rejudge-48-s1.md:73); a stack with constant-time
+    indexing, proven a refinement of Machine.
+
+THE TRIPWIRE AT 12a4a09, on the box (make check-box, the caller harness-land's box worktree): docs/records/20260929-043845-make-check-box.txt, twenty-one
+legs GREEN in 603 s, every leg's own verdict line present with the new row among them (RULES-TREE (28)), the axiom check 564,
+a 1-minute load of 5.21 there at its start. The large-lock row's own line:
+  flowcheck: the large lock (lean #48): 550001 B over a stack 1000000 deep, 10000 steps of every compiled depth test, the block path: valid in 97 ms, the budget 5000 ms
+Its route's own lines:
+  check: BOX (the caller's HEAD 12a4a09, for harness-land, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 04:04:29Z load1 8.85] the toolchains: go1.27.0, node v22.18.0
+  [box 04:04:29Z load1 8.85] the box shell's pid is 84707: to stop this run, kill it on the box (the helper's TERM trap releases the leg lock and the EXIT trap the Lean slot once the current foreground command ends, a minute or two)
+  lean_lock: every slot held (slot1: T1 pid 88698 pgid 88690 at 2026-09-29T03:51:49Z on box;slot2: T4 pid 12099 pgid 12091 at 2026-09-29T04:03:11Z on box;); check-box:harness-land waits (04:04:29Z)
+  lean_lock: check-box:harness-land took slot2 (04:07:44Z)
+  lean_lock: released slot2 (04:07:44Z)
+  [box 04:07:44Z load1 8.65] the box leg lock is held (tag p1b-3n-ga, pid 7029); check-box:harness-land waits without a Lean slot
+  [box 04:12:44Z load1 23.82] the box leg lock is held (tag T1, pid 88698); check-box:harness-land waits without a Lean slot
+  [box 04:17:45Z load1 9.05] the box leg lock is held (tag check-verifier:P7b, pid 63159); check-box:harness-land waits without a Lean slot
+[withheld at export: a sibling tree's line]
+  [box 04:27:45Z load1 12.20] the box leg lock is held (tag T1, pid 88736); check-box:harness-land waits without a Lean slot
+  [box 04:32:45Z load1 9.49] the box leg lock is held (tag T1, pid 88736); check-box:harness-land waits without a Lean slot
+  [box 04:37:45Z load1 6.46] the box leg lock is held (tag check-verifier:P6, pid 52936); check-box:harness-land waits without a Lean slot
+  lean_lock: check-box:harness-land took slot1 (04:38:45Z)
+[withheld at export: a sibling tree's line]
+  [box 04:38:45Z load1 5.21] the Lean slot and the box leg lock taken; the worktree at 12a4a09, clean
+  [box 04:38:45Z load1 5.21] make check-local
+  [box 04:48:48Z load1 3.05] the box leg lock RELEASED by pid 84707 (04:48:48Z)
+  [box 04:48:48Z load1 3.05] make check-local rc 0
+  lean_lock: released slot1 (04:48:48Z)
+  the record docs/records/20260929-043845-make-check-box.txt (written by tools/check.sh on the box, brought home unchanged; commit it with the run's page line)
+
+THE LANDING: 12a4a09 (origin/s3-f48) cherry-picked with its committer date onto main at d8b8bf1 (S1's own lens on its block: docs/audit, docs/lanes/lean.md, one record and the records index) as 8c504b5; git diff --quiet 12a4a09 8c504b5 outside the 5 paths main moved since 2dd2b9a: exit 0; the legs that read those pages, live at 8c504b5 under the gate:
+  pins (04:49:26Z, started at a 1-minute load of 3.45): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite (04:49:30Z, started at a 1-minute load of 3.45): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (04:49:31Z, started at a 1-minute load of 3.41): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+  at 8c504b5

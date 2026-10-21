@@ -1,0 +1,12 @@
+S3's landing record for LANE F's END BLOCK at the relaunch of 17:33 UTC (set 4 sitting 3 continued, on Fable 5.1; 20260929-174724 UTC)
+
+the commit: 2941164923ad3c7b67010552e85d3a66d381f0bc (HANDOFF.md, docs/records/README.md, docs/records/20260929-174329-endblock-relaunch-s3.md), over af702ab on main
+the legs that read its paths, run LOCAL on the Studio at that commit (tools/check.sh <leg> under /usr/bin/env -u BASH_ENV /bin/bash --noprofile --norc;
+the 1-minute load 3.44 at the start; pins 4 s, cite 4 s, spec 2 s):
+    specgen --check: OK (117 files up to date; 0 rules flagged)
+    cite_check: 7165 citations found in lean/ and docs/ (7088 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 2, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 169, history 4849, absent 0, orphan rows 0; skipped 0
+    cite_check: GREEN (every anchored citation holds at the pin)
+    check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+every other leg by the landing rule (D142): git diff --quiet 9594fa6 2941164 -- . ':(exclude)docs' ':(exclude)HANDOFF.md' exits 0;
+    the leg of record at 9594fa6 is S1's make check-box, twenty-one legs GREEN (docs/records/20260929-171526-make-check-box.txt)
+the sitting's Modal leg of record (D142): the lane's one at its final landed tree, named in the sitting's closing heading

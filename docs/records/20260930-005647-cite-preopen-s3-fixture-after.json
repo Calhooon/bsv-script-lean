@@ -1,0 +1,36 @@
+{
+  "status [X]": "PASS",
+  "old_control_closed_paths_opened [D]": 5,
+  "old_control_guard_failed [X]": true,
+  "candidate_closed_paths_opened [D]": 0,
+  "excluded_names [LIT]": [
+    "docs/BLOCKS-ARCHIVE.md",
+    "docs/audit/owner-closed-synthetic.md",
+    "docs/recon.md",
+    "docs/records/owner-closed-synthetic.md",
+    "docs/security/owner-closed-synthetic.md"
+  ],
+  "live_citation_sites [D]": 1,
+  "history_anchor_rows_retained [D]": 6,
+  "live_orphan_rows_dropped [D]": 1,
+  "active_anchor_failure_exit [X]": 1,
+  "checked_modes [LIT]": [
+    {
+      "args": [],
+      "exit [X]": 0
+    },
+    {
+      "args": [
+        "--list"
+      ],
+      "exit [X]": 0
+    },
+    {
+      "args": [
+        "--propose",
+        "--write"
+      ],
+      "exit [X]": 0
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Oracle chain corpus
+
+[M] 2026-10-13, lane s6-66b supersedes the s6-66 partial column: rows 30, realized 30, agree 30, diverge 0, rpc-precheck 0, unrealizable 0, needs-peer 0, pending 0. Each row is replayed through verifyscript on a fresh owned pinned instance; [X] observations and complete requests are in the [record](../../../docs/records/20261013-032121-s6-66b-regtest-s3.md) and its JSON receipt.
+
+[M] 2026-10-13, lane fix-pend2: one full fresh-instance run at `352d089c` re-measured this column with the same counts [X]; every token now cites the [fix-pend2 record](../../../docs/records/20261013-162245-s6-fix-pend2-regtest-s3.md) (the earlier [pend-66 run](../../../docs/records/20261013-144556-s6-pend-66-regtest-s3.md) at `e7d28cff` had the same counts).
+
+The recipe submits the exact transaction bytes, input index, selected prevout value and locking script, plus the effective flag word, checked against reportflags. All five effective resource limits are configured per row. Explicit flags allow txo.height omission ([SRC] src/rpc/misc.cpp:769-775 at the pin), preserving the resolved era, including inverse and modified-mandatory calls; supplying a height would rederive flags at src/rpc/misc.cpp:813-822. This measures each recorded wrapper request, not the wrapper derivation algorithm or admission. Node error descriptions map through the existing svnode_codes table; timeout and unmapped errors fail the run without inventing a verdict.
+
+[M] Standard/nonstandard validation durations are 1000/2000 milliseconds, with a 60000-millisecond RPC total budget. Effective limits and duration configuration cite [SRC] src/configscriptpolicy.cpp:164-308 and src/init.cpp:2640-2690,2840-2870. Every final conf is retained. The manifest binds the updated JSONL hash and points to its per-row [X] observations; all original non-node bytes are preserved.

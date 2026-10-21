@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580" role="img" aria-labelledby="title desc">
+  <title id="title">bsv-script-lean: from the node's source to a report</title>
+  <desc id="desc">The bitcoin-sv source at v1.2.3, cited at its pin, is written as the Lean definition in lean/BsvScript and lean/BsvChain. The theorems are proven about the definition, and the definition compiles to the evaluator eval/bsvs. The harness takes the corpus and runs the same transactions through the evaluator and through SV-node, Teranode, bsv-rs, go-sdk, @bsv/sdk and GoBDK. It writes a report, GREEN, or RED with a witness transaction, and every run writes a record under docs/records.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.5; }
+    .key { fill: #ddf4ff; stroke: #0969da; stroke-width: 2; }
+    .group { fill: none; stroke: #8c959f; stroke-width: 1; stroke-dasharray: 4 4; }
+    .edge { fill: none; stroke: #6e7781; stroke-width: 1.5; }
+    .tip { fill: #6e7781; }
+    .h { font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .t { font: 400 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #424a53; }
+    .p { font: 400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #0969da; }
+    .title { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .box { fill: #161b22; stroke: #6e7681; }
+      .key { fill: #0c2d6b; stroke: #4493f8; }
+      .group { stroke: #6e7681; }
+      .edge { stroke: #8b949e; }
+      .tip { fill: #8b949e; }
+      .h, .title { fill: #e6edf3; }
+      .t { fill: #b1bac4; }
+      .p { fill: #4493f8; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="tip" d="M 0 0 L 10 5 L 0 10 z"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="580" rx="8"/>
+  <text class="title" x="30" y="36">From the node's source to a report</text>
+
+  <!-- row 1: the reference, the definition, the theorems -->
+  <rect class="box" x="30" y="60" width="260" height="80" rx="6"/>
+  <text class="h" x="44" y="84">The reference</text>
+  <text class="t" x="44" y="104">bitcoin-sv v1.2.3, cited at its pin</text>
+  <text class="p" x="44" y="124">docs/PROVENANCE.md</text>
+
+  <rect class="key" x="350" y="60" width="260" height="80" rx="6"/>
+  <text class="h" x="364" y="84">The Lean definition</text>
+  <text class="t" x="364" y="104">every rule cites its source line</text>
+  <text class="p" x="364" y="124">lean/BsvScript · lean/BsvChain</text>
+
+  <rect class="box" x="670" y="60" width="260" height="80" rx="6"/>
+  <text class="h" x="684" y="84">The theorems</text>
+  <text class="t" x="684" y="104">proven about the definition</text>
+  <text class="p" x="684" y="124">spec/theorems.md</text>
+
+  <path class="edge" d="M 290 100 L 348 100" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 610 100 L 668 100" marker-end="url(#arrow)"/>
+
+  <!-- row 2: the evaluator -->
+  <rect class="box" x="350" y="200" width="260" height="80" rx="6"/>
+  <text class="h" x="364" y="224">The evaluator</text>
+  <text class="t" x="364" y="244">the definition, compiled</text>
+  <text class="p" x="364" y="264">eval/bsvs</text>
+
+  <path class="edge" d="M 480 140 L 480 198" marker-end="url(#arrow)"/>
+
+  <!-- row 3: the corpus and the harness -->
+  <rect class="box" x="30" y="340" width="260" height="80" rx="6"/>
+  <text class="h" x="44" y="364">The corpus</text>
+  <text class="t" x="44" y="384">entries with their recorded verdicts</text>
+  <text class="p" x="44" y="404">corpus/INDEX.md</text>
+
+  <rect class="box" x="350" y="340" width="260" height="80" rx="6"/>
+  <text class="h" x="364" y="364">The harness</text>
+  <text class="t" x="364" y="384">the same transactions through each</text>
+  <text class="p" x="364" y="404">harness/README.md</text>
+
+  <path class="edge" d="M 480 280 L 480 338" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 290 380 L 348 380" marker-end="url(#arrow)"/>
+
+  <!-- the implementations, pinned -->
+  <rect class="group" x="660" y="160" width="280" height="280" rx="8"/>
+  <text class="t" x="672" y="178">implementations, pinned</text>
+
+  <rect class="box" x="670" y="186" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="202" style="font-size:13px">SV-node v1.2.3</text>
+  <text class="p" x="682" y="216">harness/oracle/</text>
+
+  <rect class="box" x="670" y="228" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="244" style="font-size:13px">Teranode v0.16.0</text>
+  <text class="p" x="682" y="258">harness/engines/teranode/</text>
+
+  <rect class="box" x="670" y="270" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="286" style="font-size:13px">bsv-rs 0.7.0</text>
+  <text class="p" x="682" y="300">harness/src/bin/run_bsvrs.rs</text>
+
+  <rect class="box" x="670" y="312" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="328" style="font-size:13px">go-sdk v1.7.2</text>
+  <text class="p" x="682" y="342">harness/engines/go/</text>
+
+  <rect class="box" x="670" y="354" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="370" style="font-size:13px">@bsv/sdk 3.0.0</text>
+  <text class="p" x="682" y="384">harness/engines/ts/</text>
+
+  <rect class="box" x="670" y="396" width="260" height="36" rx="5"/>
+  <text class="h" x="682" y="412" style="font-size:13px">GoBDK 4eab3acd</text>
+  <text class="p" x="682" y="426">harness/engines/gobdk/</text>
+
+  <path class="edge" d="M 610 380 L 640 380 L 640 204 L 668 204" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 640 246 L 668 246" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 640 288 L 668 288" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 640 330 L 668 330" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 640 372 L 668 372" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 640 380 L 640 414 L 668 414" marker-end="url(#arrow)"/>
+
+  <!-- row 4: the report and the records -->
+  <rect class="key" x="350" y="480" width="300" height="80" rx="6"/>
+  <text class="h" x="364" y="504">The report</text>
+  <text class="t" x="364" y="524">GREEN, or RED with a witness</text>
+  <text class="p" x="364" y="544">corpus/witnesses/ · tools/witness.sh</text>
+
+  <rect class="box" x="30" y="480" width="260" height="80" rx="6"/>
+  <text class="h" x="44" y="504">The records</text>
+  <text class="t" x="44" y="524">every run writes one</text>
+  <text class="p" x="44" y="544">docs/records/</text>
+
+  <path class="edge" d="M 480 420 L 480 478" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 350 520 L 292 520" marker-end="url(#arrow)"/>
+
+  <text class="t" x="670" y="504">Words: docs/GLOSSARY.md</text>
+  <text class="t" x="670" y="524">Trust boundary: docs/HYPOTHESES.md</text>
+</svg>

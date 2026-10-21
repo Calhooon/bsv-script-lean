@@ -1,0 +1,16 @@
+# The discretion hold's overlap test (#43), S3, lane fix6-anchor (Claude Opus 5.5, on the Studio)
+# [X] 2026-10-15 11:29 UTC, on lane/anchor-cite at 81ccbf90; the 1-minute load read 13.12 at the start (under 20); the script is tools/discretion_overlap.py, hunk headers only, counts only (the ids are named in tools/cite_check.py and not repeated here; --ids prints them)
+# $ python3 tools/discretion_overlap.py
+discretion_overlap: HEAD 81ccbf90; v1.2.2 = 879fc8b4, v1.2.3 = 6504a3af; hunk headers only; insertion points counted
+held: 102 pairs in HELD_DISCRETION (84 the fix lane's at 96868e9c, 18 the ruling's); overlap 82; no overlap 20; no row found 0
+held: overlap by source table: 76cded76 64, b06ceb2f 18
+held: no overlap by source table: 76cded76 20
+held: no overlap ids sha256 3bacaf92278057c1ab1c8cf691c66499eb9e139028408ab876997fe35d905795 (the sorted [site, cite] list as JSON); pinned at v1.2.2 1
+table: 3562 bitcoin-sv rows at HEAD; 1862 in 30 files the tags differ in (195 pinned at v1.2.2); overlap 0
+# $ python3 tools/discretion_overlap.py --no-points
+discretion_overlap: HEAD 81ccbf90; v1.2.2 = 879fc8b4, v1.2.3 = 6504a3af; hunk headers only; insertion points not counted
+held: 102 pairs in HELD_DISCRETION (84 the fix lane's at 96868e9c, 18 the ruling's); overlap 82; no overlap 20; no row found 0
+held: overlap by source table: 76cded76 64, b06ceb2f 18
+held: no overlap by source table: 76cded76 20
+held: no overlap ids sha256 3bacaf92278057c1ab1c8cf691c66499eb9e139028408ab876997fe35d905795 (the sorted [site, cite] list as JSON); pinned at v1.2.2 1
+table: 3562 bitcoin-sv rows at HEAD; 1862 in 30 files the tags differ in (195 pinned at v1.2.2); overlap 0

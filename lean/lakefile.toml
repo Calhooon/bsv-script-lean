@@ -1,0 +1,143 @@
+# bsv-script-lean: the Lake project (seeded 2026-09-22, #3).
+# Toolchain and mathlib at the joint re-pin (R6; #35's road (a), ruled A5 2026-09-27):
+# Lean v4.34.0 + Mathlib 5ed2965, the one pin the spec and its two consumers move to within
+# one hour, so a consumer requires this package with one Mathlib in its graph; docs/PROVENANCE.md §1.
+# `lake exe cache get` fetches mathlib's oleans on a fresh machine.
+name = "bsvscript"
+defaultTargets = ["BsvScript", "BsvChain", "Bsvs", "StaleRunCheck"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "5ed2965256430c3649e86755f9576b54eca72435"
+
+[[lean_lib]]
+name = "BsvScript"
+
+# The transaction state machine (#59). BsvChain.Params imports BsvScript.Params;
+# Lake follows that dependency. The pins leg rejects the reverse import.
+[[lean_lib]]
+name = "BsvChain"
+roots = ["BsvChain"]
+
+# The kernel-checked stale run of #68 G2 (#120, 2026-10-14): its own library, so `lake build BsvChain`
+# never reduces it (the BsvChain root does not import it; [M] 2026-10-14 alone 229 s and 28.1 GB on the box).
+# A bare `lake build` builds it; the axioms leg of tools/check.sh builds it and AxiomCheck.lean walks it.
+[[lean_lib]]
+name = "StaleRunCheck"
+roots = ["BsvChain.Properties.StaleRun"]
+
+# Source-derived finality boundaries (#60); node measurements arrive with #66.
+[[lean_exe]]
+name = "finalitycheck"
+root = "Test.FinalityCheck"
+
+# Source-derived UTXO boundaries (#61); node measurements arrive with #66.
+[[lean_exe]]
+name = "utxocheck"
+root = "Test.UtxoCheck"
+
+# Recorded script-oracle agreement (#76); joins the scenario leg at #66.
+[[lean_exe]]
+name = "oraclecheck"
+root = "Test.OracleCheck"
+
+# Public header measurements and derived block boundaries (#63).
+[[lean_exe]]
+name = "blockcheck"
+root = "Test.BlockCheck"
+
+# The evaluator CLI's Lean side (#14): the corpus entry, the multi-input runner, the trace
+# proven equal to the loop, the self-test; the exe `bsvs` is what eval/bsvs runs.
+[[lean_lib]]
+name = "Bsvs"
+roots = ["Bsvs.Corpus", "Bsvs.Trace", "Bsvs.Run", "Bsvs.SelfTest"]
+
+# The property check of the Numbers module against the bsv-rs vectors (#7).
+[[lean_lib]]
+name = "TestSupport"
+roots = ["Test.OpNames", "Test.Common", "Test.ScriptNotation", "Test.ReaderCheck", "Test.NodeMetadata", "Test.SentinelCheck", "Test.MinerIdCheck", "Test.P2PCheck", "Test.PruneCheck", "Test.CompactCheck", "Test.DsntCheck"]
+
+[[lean_exe]]
+name = "numcheck"
+root = "Test.NumbersCheck"
+
+# The flow check of the machine against the bsv-rs flow corpus (#8).
+[[lean_exe]]
+name = "flowcheck"
+root = "Test.FlowCheck"
+
+[[lean_exe]]
+name = "sighashcheck"
+root = "Test.SighashCheck"
+
+[[lean_exe]]
+name = "arithcheck"
+root = "Test.ArithCheck"
+
+[[lean_exe]]
+name = "seedcheck"
+root = "Test.SeedCheck"
+
+[[lean_exe]]
+name = "scripttests"
+root = "Test.ScriptTestsCheck"
+
+[[lean_exe]]
+name = "stackcheck"
+root = "Test.StackCheck"
+
+[[lean_exe]]
+name = "cryptocheck"
+root = "Test.CryptoCheck"
+
+[[lean_exe]]
+name = "txtests"
+root = "Test.TxTestsCheck"
+
+# The flags check: both branches under the derived words against bsv-rs (#13).
+[[lean_exe]]
+name = "flagscheck"
+root = "Test.FlagsCheck"
+
+# The evaluator CLI (#14): eval/bsvs execs this binary.
+[[lean_exe]]
+name = "bsvs"
+root = "Bsvs.Main"
+
+[[lean_exe]]
+name = "bytescheck"
+root = "Test.BytesCheck"
+
+# The witness check: the policy-default witnesses under both nodes' derived parameters (#21).
+[[lean_exe]]
+name = "witnesscheck"
+root = "Test.WitnessCheck"
+
+# The version-1 branch check (#19): the four gated restrictions at every read site, four cells each.
+[[lean_exe]]
+name = "versiongatecheck"
+root = "Test.VersionGateCheck"
+
+# The eras check (#20, #23): the era boundaries, the activation heights and P2SH, two cells each;
+# `--write-corpus` writes corpus/eras.
+[[lean_exe]]
+name = "erascheck"
+root = "Test.ErasCheck"
+
+# WITHHELD: d8-node-team-discretion private history target.
+
+# Source-derived mempool policy boundaries (#62); node column arrives with #66.
+[[lean_exe]]
+name = "mempoolcheck"
+root = "Test.MempoolCheck"
+
+# Source-derived chain and reorg boundaries (#64); node column arrives with #66.
+[[lean_exe]]
+name = "chaincheck"
+root = "Test.ChainCheck"
+
+# The wire views' column (#86, 2026-10-15): corpus/wire through the spec's EF, BUMP, BEEF, Atomic BEEF and TSC codecs.
+[[lean_exe]]
+name = "wirecheck"
+root = "Test.WireCheck"

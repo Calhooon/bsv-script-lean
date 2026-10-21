@@ -1,0 +1,16 @@
+legs record (S2, Lean B, set 4 sitting 4; D142's local legs, [X local]; the Studio, LOCAL)
+
+(i) THE LANDED TREE 616008e (S1's ask 5's fix), for S2's own lens's correction 6: the cite and spec legs in a detached checkout of 616008e (git worktree add --detach, removed after), started 23:55:31 UTC, the 1-minute load 7.83 15.36 21.41:
+cite_check: 2830 citations found in lean/ and docs/ (2770 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1792, MOVED 0; not anchored (reported, never RED): unanchored 189, beyond-eof 1, unresolved 27, ambiguous 7, unpinned 0, other-version 28, self 502, history 284, absent 0, orphan rows 12; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+specgen --check: OK (117 files up to date; 2 rules flagged)
+
+(ii) THE TREE OF THE COMMIT THAT CARRIES THIS RECORD, this record aside (S2's own lens's corrections: docs/lanes/lean.md, docs/records/README.md, docs/audit/README.md and the filed report, the ff record's appended Correction, lean/AxiomCheck.lean's comment line), the axiom, cite and spec legs under the plan's Lean lock:
+base 310a837, 6 paths modified
+start 23:59:38 UTC load { 7.36 10.62 17.70 } (slot1)
+axiom check --self-test: OK (entries ['A.one', 'A.two', 'A.three', 'A.four']; flagged ['A.three'])
+axiom check: OK (531 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+cite_check: 2898 citations found in lean/ and docs/ (2838 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1794, MOVED 0; not anchored (reported, never RED): unanchored 215, beyond-eof 1, unresolved 27, ambiguous 7, unpinned 0, other-version 28, self 525, history 301, absent 0, orphan rows 12; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+specgen --check: OK (117 files up to date; 2 rules flagged)
+end 00:00:22 UTC load { 7.01 10.11 17.18 }

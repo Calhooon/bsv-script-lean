@@ -1,0 +1,55 @@
+{
+  "stamp [M]": "2026-09-30T02:20:55Z",
+  "source [SRC]": "plan/tools/wave.py WAVE[bsv-script-lean], C4 section 11",
+  "issues [SRC]": [
+    {
+      "issue [LIT]": 45,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-27T01:28:00Z",
+      "checked_boxes [D]": 0,
+      "open_boxes [D]": 0
+    },
+    {
+      "issue [LIT]": 26,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-28T12:05:53Z",
+      "checked_boxes [D]": 2,
+      "open_boxes [D]": 0
+    },
+    {
+      "issue [LIT]": 27,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-28T12:06:13Z",
+      "checked_boxes [D]": 3,
+      "open_boxes [D]": 0
+    },
+    {
+      "issue [LIT]": 30,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-27T23:08:01Z",
+      "checked_boxes [D]": 2,
+      "open_boxes [D]": 0
+    },
+    {
+      "issue [LIT]": 24,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-28T12:43:58Z",
+      "checked_boxes [D]": 2,
+      "open_boxes [D]": 0
+    },
+    {
+      "issue [LIT]": 25,
+      "state [SRC]": "closed",
+      "closed_at [SRC]": "2026-09-27T23:07:59Z",
+      "checked_boxes [D]": 2,
+      "open_boxes [D]": 0
+    }
+  ],
+  "closed_issues [D]": 6,
+  "named_issues [D]": 6,
+  "closed_percent [D]": 100.0,
+  "weighted_met [D]": 12,
+  "weighted_total [D]": 12,
+  "weighted_percent [D]": 100.0,
+  "scope [LIT]": "historical named wave front; current D185 leaves lane F outside remaining wave-1 boxes"
+}

@@ -1,0 +1,1431 @@
+[export: 35 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+check: BOX (the caller's HEAD d675b6f, for harness, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+[box 01:21:36Z load1 4.56] the toolchains: go1.27.0, node v22.18.0
+[box 01:21:36Z load1 4.56] the box shell's pid is 47363: to stop this run, kill -TERM it on the box (during the legs its trap stops them within seconds; in a lock's wait, once the current sleep ends; then the EXIT trap releases both locks)
+lean_lock: check-box:harness took slot1 (01:21:36Z)
+[withheld at export: a sibling tree's line]
+lean_lock: released slot1 (01:21:36Z)
+[box 01:21:36Z load1 4.56] the box leg lock's queue: this take's ticket 001790731296673449000.0047363.00101 withdrawn at its take (it yielded to an older waiter at 0 read(s); its waits ended by a wake 0 time(s), by the poll 0)
+[withheld at export: a sibling tree's line]
+lean_lock: check-box:harness took slot1 (01:21:36Z)
+[box 01:21:36Z load1 4.56] the box leg lock and a Lean slot taken; the worktree at d675b6f, clean
+[box 01:21:36Z load1 4.56] make check-local
+== pins: tools/check_pins.py: docs/PROVENANCE.md §1a against every site (the toolchains, the engines, the manifests, --locked) ==
+  OK     lean/lean-toolchain                                                leanprover/lean4:v4.34.0
+  OK     lean/lake-manifest.json mathlib rev                                5ed2965256430c3649e86755f9576b54eca72435
+  OK     harness/rust-toolchain.toml channel                                1.95.0
+  OK     rustc in use under harness/                                        rustc 1.95.0 (59807616e 2026-04-14)
+  OK     harness/Cargo.toml bsv-rs requirement                              =0.3.30
+  OK     harness/Cargo.lock bsv-rs version                                  0.3.30
+  OK     harness/Cargo.lock bsv-rs checksum                                 83c0a8a54be45e3cf194bf1ed3a10a3722baec0c5057ae258bf3bc42f97fb404
+  OK     harness/src/lib.rs BSV_RS_VERSION                                  0.3.30
+  OK     harness/src/lib.rs BSV_RS_KEY                                      bsv-rs@0.3.30
+  OK     corpus/seed/manifest.json implementations[bsv-rs].version          0.3.30
+  OK     corpus/flow/manifest.json implementations[bsv-rs].version          0.3.30
+  OK     corpus/arith/cases-manifest.json implementations[bsv-rs].version   0.3.30
+  OK     corpus/stack/cases-manifest.json implementations[bsv-rs].version   0.3.30
+  OK     corpus/crypto/cases-manifest.json implementations[bsv-rs].version  0.3.30
+  OK     corpus/bytes/cases-manifest.json implementations[bsv-rs].version   0.3.30
+  OK     corpus/eras/manifest.json implementations[bsv-rs].version          0.3.30
+  OK     corpus/gen/manifest.json implementations[bsv-rs].version           0.3.30
+  OK     corpus/tx/manifest.json implementations[bsv-rs].version            0.3.30
+  OK     corpus/witnesses/manifest.json [arith].bsv-rs                      0.3.30
+  OK     corpus/witnesses/manifest.json [crypto].bsv-rs                     0.3.30
+  OK     corpus/witnesses/manifest.json [eras].bsv-rs                       0.3.30
+  OK     corpus/witnesses/manifest.json [flow].bsv-rs                       0.3.30
+  OK     corpus/witnesses/manifest.json [gen].bsv-rs                        0.3.30
+  OK     corpus/witnesses/manifest.json [million].bsv-rs                    0.3.30
+  OK     corpus/witnesses/manifest.json [road].bsv-rs                       0.3.30
+  OK     corpus/witnesses/manifest.json [seed].bsv-rs                       0.3.30
+  OK     corpus/witnesses/manifest.json [stack].bsv-rs                      0.3.30
+  OK     corpus/witnesses/manifest.json [tx].bsv-rs                         0.3.30
+  OK     corpus/numbers/bsv-rs-0.3.30.jsonl                                 present
+  OK     corpus/arith/bsv-rs-0.3.30.jsonl                                   present
+  OK     corpus/sighash/bsv-rs-0.3.30.jsonl                                 present
+  OK     corpus/crypto/ecdsa-bsv-rs-0.3.30.jsonl                            present
+  OK     tools/check.sh: bsv-rs vector versions named                       0.3.30
+  OK     Makefile: bsv-rs vector versions named                             0.3.30
+  OK     tools/check.sh: every cargo invocation carries --locked            yes
+  OK     Makefile: every cargo invocation carries --locked                  yes
+  OK     bsv-rs crate facts at the pin (harness/tests/crate_pins.rs)        ProtocolEra::mainnet None below 620538; block/standard words carry the block era's UTXO markers
+  OK     harness/src/engines.rs GO_SDK_VERSION                              v1.5.2
+  OK     harness/src/engines.rs TS_SDK_VERSION                              2.8.0
+  OK     harness/engines/go/go.mod go-sdk requirement                       v1.5.2
+  OK     harness/engines/go/go.sum module hash                              github.com/bsv-blockchain/go-sdk v1.5.2 h1:CMRF9HcXQxvDgQK0n6wTy4/RyoGGL4HAjzHmCpqCgCs=
+  OK     harness/engines/go/go.sum go.mod hash                              github.com/bsv-blockchain/go-sdk v1.5.2/go.mod h1:clGHSZoOwrnqJrzEw4VHYZk3JQXbrr+mnybCXZCdrt4=
+  OK     harness/engines/gobdk/go.mod gobdk requirement                     v1.2.5-0.20260526081552-cdfa7814ee5d
+  OK     harness/engines/gobdk/go.sum module hash                           github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d h1:bSTJ5f/DpTWPpnheayyZje7MK0bMSgB5xuWaxh/AOHY=
+  OK     harness/engines/gobdk/go.sum go.mod hash                           github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d/go.mod h1:XxBr/Y+e+pMw3+e2xYECvEayfZM3RX3n0jVvOGC3krE=
+  OK     gobdk.pseudo_version names gobdk.commit                            cdfa7814ee5d
+  OK     go in use                                                          go version go1.27.0 darwin/arm64
+  OK     harness/engines/ts/package.json @bsv/sdk (exact)                   2.8.0
+  OK     harness/engines/ts/package-lock.json @bsv/sdk version              2.8.0
+  OK     harness/engines/ts/package-lock.json @bsv/sdk integrity            sha512-pXavnJa8F5ozKSOwVIphLZrTEJgEADlfj8Yu9CIOsdVC/X+CuGfHFwK9I5egr/EC1D2KCxmAbGls9erpc637Yw==
+[withheld at export: a sibling tree's line]
+  SKIP   the reference clone                                                clone absent: ~/bsv/bitcoin-sv
+  SKIP   the Teranode clone                                                 clone absent: ~/bsv/teranode
+[withheld at export: a sibling tree's line]
+  SKIP   the go-chaincfg clone                                              clone absent: ~/bsv/go-chaincfg
+  SKIP   the GoBDK clone                                                    clone absent: ~/bsv/bdk
+  OK     ~/bsv/bsv-rs v0.3.30                                               c7ff2c3b3eb8b926c5b1f48a3d626e6da7017d15
+  SKIP   the go-sdk clone                                                   clone absent: ~/bsv/go-sdk
+  SKIP   the ts-stack clone                                                 clone absent: ~/bsv/ts-stack
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+== cite: tools/cite_check.py: every anchored file:line citation of lean/ and docs/ at the pin (#43) ==
+cite_check: [LIT] docs/BLOCKS-ARCHIVE.md: closed to model turns, not opened
+cite_check: [LIT] docs/recon.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-26-lens-S3r1-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-26-lens-S4b-commits-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S1-block-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S1-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S1-sitting3-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S2-block-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S2-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting4-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S3-fold-sitting3-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S3r2-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-block-by-S4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-sitting3-block-by-S4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-28-lens-S1-sitting4-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-28-lens-S3-sitting3-end-by-S3.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting5-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting6-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting7-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting8-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting6-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting7-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting8-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9b-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9c-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting5-by-S4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting6-by-S4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting7-by-S4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partA-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partB-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partC-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partD-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partA-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partB-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partC-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partD-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens2-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens3-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens4-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partA-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partB-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partC-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partD-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partA-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partB-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partC-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partD-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens2-by-S2.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partA-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partB-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partC-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partD-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partA-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partB-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partC-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partD-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partA-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partB-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partC-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partD-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partA-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partB-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partC-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partD-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partA-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partB-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partC-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partD-by-S1.md: closed to model turns, not opened
+cite_check: [LIT] docs/audit/README.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260923-1143-svnode-smoke-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-025740-eras-engines-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-030828-svnode-record-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-040437-gen-first-cut-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-051100-gen-rerecord-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-110732-d15-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-114622-d72-rerecord-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260924-150154-sighash-family-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-205320-ladder45-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-205650-gobdk-shim-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-210253-gobdk-shim-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-210609-rules-check-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-211729-gobdk-hunk-d83c-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-211841-ladder45-after-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-213535-diff45-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-213915-run-diff-d83c-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-215135-tx-families-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260926-231004-txroad-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-023153-witness-replay-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-030651-gen-redesign-red-s3r2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-030904-toolchain-dryrun-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-031436-diff-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-044619-gen-redesign-s3r2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-050002-release-bsv-rs-0.3.29-t3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-083627-gen-redesign-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-085525-pipefail-grep-audit-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-120430-post-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-122126-witness-replay-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-125018-decoder-wall-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-125717-pool-lock-45-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-130311-repin-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-152550-release-bsv-rs-0.3.30-t3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-165145-pool-lock-45b-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-165244-tripwire-negatives-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-170817-d135-sdk-classes-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-171920-official-v122-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-174629-diff-bsv-rs-0.3.30-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-181348-coverage-v122-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-183819-seed1m-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-225753-ff-sigops-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260927-231608-d123-road-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-110928-47-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-111408-num2bin-memory-relabel-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-113333-road-a3-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-113357-million-witnesses-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-114104-d135-filing-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-115150-replay-173805-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-120047-stacked-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-121537-diff24-full-corpus-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-152551-road-b-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260928-155752-road-a4-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-013146-rejudge-48-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-013409-mathlib-surface-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-013700-foreign-fixture-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-014620-gadget-api-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-015132-consumer-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-020042-ladder48-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-020414-narrowing-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-051445-patches-35-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-054539-recon-1-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-054850-gadget-hashlock-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-055242-d135-ghsa-state-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-070435-lens32-s1-patch-s2-notes.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-070435-lens32-s1-patch-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-072759-impl-50-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-073117-ladder50-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-080436-patches-s7-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-080537-lens32-s1-patch-v2-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-085123-codec-53-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-091340-lens32-s1-patch-v3-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-093156-f1-int64-node-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-093610-patch-v3-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-094751-ladder53-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-120456-witness-census-lens32-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-122316-trust32-fixes-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-124515-trust32-patch-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-124515-trust32-patch-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s2-v2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s3-v2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-140334-trust32-relens-fixes-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-142257-memory-s4b-runs-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s2-v3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s3-v3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s4b-v2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-151244-trust32-relens2-fixes-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-151524-f1-mini-node-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-152447-witness-census2-lens32-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-152956-lens32-3-s3-patch-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-152956-lens32-3-s4b-patch-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-160241-f1-gobdk-teranode-s4b.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-170732-trust32-axiomcheck-unbreak-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s2-v4.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s3-v4.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s4b-v3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-174125-trust32-relens3-fixes-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-174329-endblock-relaunch-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-181102-lens32-3-s3-patch-s2-v2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-181102-lens32-3-s4b-patch-s2-v2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-212842-cite-nearmiss-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-212842-trust32-patch-s2-v5.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-212842-trust32-patch-s4b-v4.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-212842-trust32-relens4-fixes-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-214540-consumer-v020-35-s2.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-220055-endblock-relaunch2-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260929-235431-million-replay-price-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-000628-continue55-endblock-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-001041-continue55-landing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-003303-harness31-seed-results-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-003618-cite-history-before-open-proposal-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-003619-continue56-routing-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-004205-continue56-sub-launches-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-004447-harness31-stranger-s1.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-004625-continue56-endblock-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-005647-cite-preopen-s3.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/20260930-005734-s2-sitting10.md: closed to model turns, not opened
+cite_check: [LIT] docs/records/README.md: closed to model turns, not opened
+cite_check: [LIT] docs/security/README.md: closed to model turns, not opened
+cite_check: [LIT] docs/security/SDK-INTERPRETER-DIVERGENCES-2026-09-28-RECORD.md: closed to model turns, not opened
+cite_check: [LIT] docs/security/SDK-INTERPRETER-DIVERGENCES-2026-09-28.md: closed to model turns, not opened
+cite_check: excluded files [D] 197; closed to model turns, not opened; excluded anchor rows [D] 0 (retained, not scanned)
+[withheld at export: a sibling tree's line]
+cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)
+== lean: lake build (lean/) ==
+✔ [541/756] Built BsvScript.Params (432ms)
+✔ [997/1045] Built BsvScript.Opcodes (305ms)
+✔ [998/1045] Built Test.OpNames (248ms)
+⚠ [999/1045] Built BsvScript.Numbers (4.9s)
+warning: BsvScript/Numbers.lean:445:68: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BsvScript/Numbers.lean:778:16: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h3, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:786:20: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h1, h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:866:26: This simp argument is unused:
+  hlt
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [signTopRev, hmod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:866:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BsvScript/Numbers.lean:1165:41: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [decode, List.reverse_append, List.reverse_replicate, List.reverse_reverse, List.reverse_cons,
+    List.reverse_nil, List.nil_append, List.cons_append, List.append_assoc, decodeRev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:1194:47: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [deserializeInt64, decode, decodeRev, h8]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [1000/1045] Built BsvScript.Hash.Sha256 (1.3s)
+✔ [1001/1045] Built BsvScript.Crypto.Secp256k1 (1.2s)
+✔ [1002/1045] Built BsvScript.Machine (1.8s)
+✔ [1003/1045] Built BsvScript.Hash.Sha1 (1.2s)
+✔ [1004/1045] Built BsvScript.Hash.Ripemd160 (1.3s)
+✔ [1005/1045] Built BsvScript.SigOps (1.4s)
+⚠ [1006/1045] Built BsvScript.Gadget (1.8s)
+warning: BsvScript/Gadget.lean:92:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BsvScript/Gadget.lean:186:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1007/1045] Built BsvScript.Tx (1.2s)
+warning: BsvScript/Tx.lean:33:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.inputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:35:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.lockTime`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:32:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.version`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:34:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.outputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+✔ [1008/1045] Built BsvScript.Ops.Arith (1.2s)
+✔ [1009/1045] Built BsvScript.Ops.Bitwise (1.4s)
+✔ [1010/1045] Built BsvScript.Ops.Stack (1.3s)
+✔ [1011/1045] Built Bsvs.Corpus (1.3s)
+✔ [1012/1045] Built BsvScript.Sighash (1.7s)
+✔ [1013/1045] Built BsvScript.Ops.Expansion (1.2s)
+✔ [1014/1045] Built BsvScript.Ops.Splice (1.2s)
+✔ [1015/1045] Built BsvScript.Impl.State (1.5s)
+✔ [1016/1045] Built BsvScript.Ops.Crypto (1.2s)
+✔ [1017/1045] Built BsvScript.Impl.Stack (1.2s)
+✔ [1018/1045] Built BsvScript.Impl.Splice (1.3s)
+✔ [1019/1045] Built BsvScript.Impl.Expansion (1.4s)
+✔ [1020/1045] Built BsvScript.TxRules (2.2s)
+✔ [1021/1045] Built BsvScript.Impl.Arith (1.1s)
+✔ [1022/1045] Built BsvScript.Impl.Bitwise (1.2s)
+✔ [1023/1045] Built BsvScript.Impl.Machine (1.5s)
+✔ [1024/1045] Built BsvScript.Impl.Crypto (1.2s)
+✔ [1025/1045] Built BsvScript.TxContext (984ms)
+✔ [1026/1045] Built BsvScript.Eval (883ms)
+✔ [1027/1045] Built BsvScript.Gadget.HashLock (1.4s)
+✔ [1028/1045] Built Bsvs.Trace (1.6s)
+✔ [1029/1045] Built BsvScript.Properties.Resources (2.1s)
+✔ [1030/1045] Built BsvScript.Properties.Basic (1.1s)
+✔ [1031/1045] Built BsvScript.Properties.Coverage (2.5s)
+✔ [1032/1045] Built BsvScript.Properties.Widths (1.3s)
+✔ [1033/1045] Built BsvScript.Properties.VersionGate (1.4s)
+✔ [1034/1045] Built BsvScript.Flags (2.3s)
+✔ [1035/1045] Built BsvScript.Properties.Hooks (1.7s)
+✔ [1036/1045] Built BsvScript.Standard (1.4s)
+✔ [1037/1045] Built BsvScript.Properties.KernelSample (1.7s)
+✔ [1038/1045] Built BsvScript.Properties.Eras (1.9s)
+⚠ [1039/1045] Built BsvScript.Properties.P2SH (1.1s)
+warning: BsvScript/Properties/P2SH.lean:49:20: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [isP2SH, hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Properties/P2SH.lean:96:19: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1040/1045] Built BsvScript.TxPolicy (3.3s)
+warning: BsvScript/TxPolicy.lean:274:83: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1041/1045] Built BsvScript (1.2s)
+✔ [1043/1045] Built Bsvs.Run (1.3s)
+✔ [1044/1045] Built Bsvs.SelfTest (1.1s)
+Build completed successfully (1045 jobs).
+lean: build OK, sorry-free
+== axioms: tools/axiom_check.py (its parser's self-test first: a wrapped axiom list must be judged, 2026-09-27) ==
+axiom check --self-test: OK (entries ['A.one', 'A.two', 'A.three', 'A.four']; flagged ['A.three'])
+  BsvScript.Properties.verifyScript_congr: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.gate_noninterference: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.phase2_stack_mem_only: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.opreturn_suffix: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checksig_empty_sig: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_zero: ['propext']
+  BsvScript.Numbers.decode_nil: ['propext']
+  BsvScript.Numbers.decode_negzero: none
+  BsvScript.Numbers.negzero_not_minimal: none
+  BsvScript.Numbers.decode_encode: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_valid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_minimal: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.isMinimallyEncoded_encode: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.width_127: none
+  BsvScript.Numbers.width_128: none
+  BsvScript.Numbers.width_neg128: none
+  BsvScript.Numbers.width_2p31: ['propext']
+  BsvScript.Numbers.width_neg2p31: ['propext']
+  BsvScript.Numbers.width_2p63m1: ['propext']
+  BsvScript.Numbers.width_2p63: ['propext']
+  BsvScript.Numbers.width_neg127: none
+  BsvScript.Numbers.width_32767: none
+  BsvScript.Numbers.width_32768: none
+  BsvScript.Numbers.width_2p31m1: ['propext']
+  BsvScript.Numbers.vec_1: none
+  BsvScript.Numbers.vec_neg1: none
+  BsvScript.Numbers.vec_255: none
+  BsvScript.Numbers.vec_256: none
+  BsvScript.Numbers.vec_neg255: none
+  BsvScript.Numbers.castToBool_iff_beNat: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.castToBool_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.magBytes_leNat: ['propext', 'Quot.sound']
+  BsvScript.Numbers.encode_decode_of_minimal: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.minimallyEncodeRef_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.beNat_lt: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_length_le_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_length_le_iff_pow: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_length_le_four_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.num2bin_none_iff: ['propext', 'Quot.sound']
+  BsvScript.Numbers.num2bin_length: ['propext', 'Quot.sound']
+  BsvScript.Numbers.num2bin_decode: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.deserializeInt64_eq_decode: ['propext', 'Quot.sound']
+  BsvScript.Numbers.deserializeInt64_nine: ['propext', 'Quot.sound']
+  BsvScript.Numbers.deserializeInt64_long: ['propext', 'Quot.sound']
+  BsvScript.Numbers.deserializeInt64_isSome: ['propext']
+  BsvScript.Ops.Expansion.readInt64Operand_ne_none: ['propext', 'Quot.sound']
+  BsvScript.Numbers.readNumInt64_eq_readNum: ['propext', 'Quot.sound']
+  BsvScript.Eval.verifyScript_deterministic: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.blocks_size: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.sha256_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.sha256d_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.preimageBIP143_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighashBIP143_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighashOriginal_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighashOriginal_nIn_out_of_range: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighashOriginal_single_no_output: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_nil: ['propext']
+  BsvScript.Ops.Arith.binaryValue_div_zero: ['propext']
+  BsvScript.Ops.Arith.binaryValue_mod_zero: ['propext']
+  BsvScript.Ops.Arith.readOperand_length_le: ['propext']
+  BsvScript.Ops.Bitwise.rshift_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Bitwise.lshift_length: ['propext', 'Quot.sound']
+  BsvScript.Ops.Bitwise.shift_zero_of_wide: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Stack.swapTop_length: ['propext']
+  BsvScript.Ops.Stack.eraseTop_length: ['propext']
+  BsvScript.Ops.Splice.split_halves: none
+  BsvScript.Hash.Sha1.blocks_size: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.sha1_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.Ripemd160.blocks_size: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.ripemd160_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Hash.hash160_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Crypto.Secp256k1.normalizeS_low: ['propext', 'Quot.sound']
+  BsvScript.Ops.Crypto.isValidSignatureEncoding_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Crypto.checkSignatureEncoding_empty: ['propext']
+  BsvScript.TxContext.checkLockTime_final: ['propext']
+  BsvScript.TxContext.checkSequence_version_lt_two: ['propext']
+  BsvScript.TxRules.isCoinBase_length: ['propext']
+  BsvScript.Params.Flags.ofWord_toWord: ['propext', 'Quot.sound']
+  BsvScript.Params.Flags.toWord_ofWord: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Params.blockScriptFlags_policy_off: ['propext']
+  BsvScript.Params.flagWord_neverSet_off: ['propext']
+  BsvScript.Params.flagWord_valid: ['propext']
+  BsvScript.Params.flagWord_cleanStackDemand: ['propext']
+  BsvScript.Params.flagWord_utxoEra: ['propext']
+  BsvScript.Params.flagWord_block_valid: ['propext']
+  BsvScript.Params.derive_consensus_separation: ['propext']
+  BsvScript.Params.verifyScript_consensus_separation: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Params.Flags.gate_off_of_chronicle: ['propext']
+  BsvScript.Params.flagWord_mempool_eq_block_mainnet: ['propext', 'Quot.sound']
+  BsvScript.Params.verifyScript_relay_block_version2: ['propext', 'Classical.choice', 'Quot.sound']
+  Bsvs.Trace.loop_stepK: ['propext', 'Classical.choice', 'Quot.sound']
+  Bsvs.Trace.stepK_map: ['propext', 'Quot.sound']
+  Bsvs.Trace.traceLoop_fst: ['propext', 'Classical.choice', 'Quot.sound']
+  Bsvs.Trace.traceEvalScript_fst: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.coverage: none
+  BsvScript.Properties.arith_exec_isSome: ['propext']
+  BsvScript.Properties.bitwise_exec_isSome: ['propext']
+  BsvScript.Properties.stack_exec_isSome: ['propext']
+  BsvScript.Properties.splice_exec_isSome: ['propext']
+  BsvScript.Properties.crypto_exec_isSome: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.expansion_exec_isSome: ['propext']
+  BsvScript.Properties.opExec_isSome_of_hookOwns: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.execIf_ne_unimpl: ['propext']
+  BsvScript.Properties.execCltv_ne_unimpl: ['propext']
+  BsvScript.Properties.execCsv_ne_unimpl: ['propext']
+  BsvScript.Properties.execFlow_of_not_flowOwns: ['propext']
+  BsvScript.Properties.hasCase_false_of_ge: ['propext', 'Quot.sound']
+  BsvScript.Properties.execFlow_ne_unimpl: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.execStep_ne_unimpl: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_ne_unimplemented: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.evalScript_ne_unimplemented: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.enforceNonMalleability_iff: ['propext']
+  BsvScript.Properties.Flags.gate_of_on: ['propext']
+  BsvScript.Properties.enforceNonMalleability_gate: ['propext']
+  BsvScript.Properties.Flags.gate_gate: ['propext']
+  BsvScript.Properties.mkEnv_requireMinimal: ['propext']
+  BsvScript.Properties.execStep_minimaldata: ['propext']
+  BsvScript.Properties.execStep_push_of_not_requireMinimal: ['propext']
+  BsvScript.Properties.execStep_push_err_of_not_requireMinimal: ['propext']
+  BsvScript.Properties.readNum_minencode: ['propext']
+  BsvScript.Properties.readNum_of_not_requireMinimal: ['propext']
+  BsvScript.Properties.readOperand_minencode: ['propext']
+  BsvScript.Properties.readOperand_of_not_requireMinimal: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_highS: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_ne_highS: ['propext']
+  BsvScript.Properties.verifyScript_sigpushonly: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.phase2_ne_valid_of_cleanStackDemand: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_cleanstack_without_p2sh: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.phase2_cleanstack: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_minimaldata_off: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_sigpushonly_off: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_cleanstack_off: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_lowS_off: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.Era.genesisActive_eq_toNat: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.Era.chronicleActive_eq_toNat: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.Era.chronicleActive_imp_genesisActive: ['propext']
+  BsvScript.Properties.protocolEraOf_total: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_eq_preGenesis_iff: ['propext', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_eq_postGenesis_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_eq_postChronicle_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.genesisActive_protocolEraOf: ['propext', 'Quot.sound']
+  BsvScript.Properties.chronicleActive_protocolEraOf: ['propext', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_toNat_mono: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_genesis_boundary: ['propext', 'Quot.sound']
+  BsvScript.Properties.protocolEraOf_chronicle_boundary: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEra_preGenesis_iff: ['propext', 'Quot.sound']
+  BsvScript.Properties.protocolEra_postGenesis_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEra_postChronicle_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.protocolEra_genesisActive: ['propext', 'Quot.sound']
+  BsvScript.Properties.protocolEra_chronicleActive: ['propext', 'Quot.sound']
+  BsvScript.Properties.inputScriptBlockHeight_mempool: ['propext']
+  BsvScript.Properties.inputScriptBlockHeight_of_ne: ['propext']
+  BsvScript.Properties.bdkCalculateFlags_consensus: ['propext']
+  BsvScript.Properties.bdkCalculateFlags_policy: ['propext']
+  BsvScript.Properties.flagWord_block_p2sh: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_derSig: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_cltv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_csv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_strictEnc: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_forkid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_lowS: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_block_nullFail: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_era_bits: ['propext']
+  BsvScript.Properties.flagWord_genesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.flagWord_sigPushOnly: ['propext', 'Quot.sound']
+  BsvScript.Properties.flagWord_chronicle: ['propext', 'Quot.sound']
+  BsvScript.Properties.flagWord_utxoAfterGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.flagWord_utxoAfterChronicle: ['propext', 'Quot.sound']
+  BsvScript.Properties.flagWord_mempool_of_eras: ['propext']
+  BsvScript.Properties.flagWord_block_utxoAfterGenesis: ['propext']
+  BsvScript.Properties.flagWord_block_utxoEra: ['propext']
+  BsvScript.Properties.normalize_protocolEra: ['propext']
+  BsvScript.Properties.normalize_promiscuous: ['propext']
+  BsvScript.Properties.normalize_genesisActivationHeight: ['propext']
+  BsvScript.Properties.normalize_chronicleActivationHeight: ['propext']
+  BsvScript.Properties.derive_flags: none
+  BsvScript.Properties.derive_utxoEra: ['propext']
+  BsvScript.Properties.derive_limits_preGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.derive_limits_block_postGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.derive_preGenesis_coin: ['propext', 'Quot.sound']
+  BsvScript.Properties.mkEnv_utxoEra: none
+  BsvScript.Properties.forkAdjust_utxoEra: none
+  BsvScript.Properties.gate_utxoEra: none
+  BsvScript.Properties.utxoEra_of_not_afterGenesis: ['propext']
+  BsvScript.Properties.utxoAfterChronicle_of_not_afterGenesis: ['propext']
+  BsvScript.Properties.execFlow_return_preGenesis: ['propext']
+  BsvScript.Properties.execFlow_return_postGenesis_top: ['propext']
+  BsvScript.Properties.execFlow_return_postGenesis_nested: ['propext']
+  BsvScript.Properties.loop_pushSize_preGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_disabled_preGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_disabled_postGenesis_dead: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.execFlow_ver_preChronicle: ['propext']
+  BsvScript.Properties.execFlow_verif_preGenesis: ['propext']
+  BsvScript.Properties.execFlow_verif_postGenesis_preChronicle: ['propext']
+  BsvScript.Properties.execCltv_nop_postGenesis: ['propext']
+  BsvScript.Properties.execCltv_unsatisfied_preGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.execCltv_satisfied_preGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.execCsv_nop_postGenesis: ['propext']
+  BsvScript.Properties.execCsv_unsatisfied_preGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.execFlow_else_preGenesis: ['propext']
+  BsvScript.Properties.execFlow_else_postGenesis_second: ['propext']
+  BsvScript.Properties.expansion_exec_preChronicle: ['propext']
+  BsvScript.Properties.isP2SH_of_shape: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.p2shCopy_iff: ['propext']
+  BsvScript.Properties.p2shCopy_of_utxoAfterGenesis: ['propext']
+  BsvScript.Properties.forkAdjust_p2shCopy: none
+  BsvScript.Properties.phase2_of_not_p2shCopy: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.phase2_p2sh_disabled_postGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.verifyScript_p2sh_disabled_postGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.derive_p2shCopy_grandfathered_block: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.flagWord_mempool_p2sh: ['propext']
+  BsvScript.Properties.derive_p2shCopy_grandfathered_mempool: ['propext', 'Quot.sound']
+  BsvScript.Properties.derive_p2shCopy_postGenesis_coin: ['propext', 'Quot.sound']
+  BsvScript.Properties.checkRegularTransaction_p2sh_output: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.beNat_append: ['propext', 'Quot.sound']
+  BsvScript.Numbers.beNatLimbs_eq: ['propext']
+  BsvScript.Numbers.beNatFast_eq: ['propext', 'Quot.sound']
+  BsvScript.Numbers.beNat_eq_fast: ['propext', 'Quot.sound']
+  BsvScript.Numbers.fixedLE_length: ['propext']
+  BsvScript.Numbers.fixedLE_valid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.leNat_fixedLE: ['propext', 'Quot.sound']
+  BsvScript.Numbers.leNat_append: ['propext']
+  BsvScript.Numbers.fixedLE_split: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.fixedLE_mod: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.mod56: ['propext']
+  BsvScript.Numbers.two_pow_le_of_log2: ['propext']
+  BsvScript.Numbers.shift56: ['propext']
+  BsvScript.Numbers.fixedLELimbs_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.fixedLEFast_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.splitWidth_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.magBytes_split: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.magBytesFast_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.magBytes_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.decodeRev_eq_fast: ['Quot.sound']
+  BsvScript.Numbers.decode_eq_fast: none
+  BsvScript.Numbers.encode_eq_fast: none
+  BsvScript.Numbers.minimallyEncode_eq_fast: none
+  BsvScript.Numbers.num2bin_eq_fast: none
+  BsvScript.Machine.takeExact_go_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.takeExact_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.getOpTail_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.isPushOnly_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.loop_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.evalScript_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.phase2_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.verifyScript_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_dispatch: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_eq_bip143: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_original_of_not_enabled: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_original_of_chronicle: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.sighash_original_of_no_forkid_bit: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.SigHashType.baseType_lt: none
+  BsvScript.Sighash.SigHashType.isDefined_iff: ['propext']
+  BsvScript.Sighash.SigHashType.not_isDefined_of_base: ['propext', 'Quot.sound']
+  BsvScript.Sighash.SigHashType.isDefined_add_forkValue: ['propext', 'Quot.sound']
+  BsvScript.Sighash.SigHashType.ofSig_raw: none
+  BsvScript.Sighash.SigHashType.ofSig_nil: none
+  BsvScript.Sighash.SigHashType.isDefined_zero: none
+  BsvScript.Sighash.SigHashType.ofSig_raw_lt: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.SigHashType.isDefined_ofSig_iff: ['propext']
+  BsvScript.Sighash.cleanupScriptCode_forkid: ['propext']
+  BsvScript.Sighash.cleanupScriptCode_of_not_enabled: ['propext']
+  BsvScript.Sighash.cleanupScriptCode_of_no_forkid_bit: ['propext']
+  BsvScript.Sighash.pushData_ne_nil: ['propext']
+  BsvScript.Sighash.pushData_length: ['propext']
+  BsvScript.Sighash.truncatedHead_length_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.truncatedHead_length_pos: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.truncatedHead_of_not_pushdata: ['propext']
+  BsvScript.Sighash.scriptCodeWalk_nil: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.scriptCodeWalk_truncated: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.getOpTail_codesep: ['propext']
+  BsvScript.Sighash.scriptCodeWalk_codesep: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.scriptCodeWalk_op: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.serScriptCodeOriginal_truncated: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Prevouts_anyonecanpay: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Prevouts_all: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Sequence_zero: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Sequence_all: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Outputs_none: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Outputs_single: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Outputs_single_past: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Outputs_all: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.serInputOriginal_other: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.serInputOriginal_signed: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.serInputOriginal_anyonecanpay: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.serOutputOriginal_single_other: ['propext']
+  BsvScript.Sighash.sighashOriginal_hashed: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkSignatureEncoding_of_not_strictEnc: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_sigHashtype: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_illegalForkid: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_illegalChronicle: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_mustUseForkid: ['propext']
+  BsvScript.Properties.checkSignatureEncoding_ok_strictEnc: ['propext']
+  BsvScript.Properties.checkLockTime_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkLockTime_of_lt: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkLockTime_kind_mismatch: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkLockTime_missing_input: ['propext']
+  BsvScript.Properties.checkSequence_disable_flag: ['propext']
+  BsvScript.Properties.checkSequence_final: ['propext']
+  BsvScript.Properties.checkSequence_missing_input: ['propext']
+  BsvScript.Properties.checkSequence_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.getOpTail_nonpush: ['propext']
+  BsvScript.TxRules.sigOpCountPreGenesis_nil: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_checksig: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_checksigverify: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_checkmultisig: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_checkmultisigverify: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_truncated: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_other: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkRegularTransaction_coinbase: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkCoinbase_not_coinbase: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_vinEmpty: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_voutEmpty: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_oversize: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkCoinbase_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.stripPrefixes_length_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.stripPrefixes_fuel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDeleteLoop_fuel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_prefix: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_op: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_truncated: ['propext']
+  BsvScript.Sighash.findAndDelete_nil_script: ['propext']
+  BsvScript.Sighash.findAndDelete_sublist: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_length_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.findAndDelete_single_pass: ['propext']
+  BsvScript.Properties.execCsv_satisfied_preGenesis: ['propext', 'Quot.sound']
+  BsvScript.Properties.execCsv_disable_flag_operand: ['propext', 'Quot.sound']
+  BsvScript.Properties.execStep_codeseparator: ['propext']
+  BsvScript.Properties.execStep_codeseparator_unexecuted: ['propext']
+  BsvScript.Properties.loop_codeseparator: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.scriptCodeOf_chronicle: ['propext']
+  BsvScript.Properties.scriptCodeOf_eq_codeSep: ['propext']
+  BsvScript.Properties.mkEnv_block_discourage_off: ['propext']
+  BsvScript.Properties.nopOrDiscourage_block: ['propext']
+  BsvScript.Properties.execFlow_nop_block: ['propext']
+  BsvScript.Properties.cltv_csv_block_postGenesis: ['propext']
+  BsvScript.Properties.nopOrDiscourage_standard: ['propext']
+  BsvScript.Properties.execFlow_nop_standard: ['propext']
+  BsvScript.TxRules.forIn_eq_checkOutputs: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkOutputs_ok_iff: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkOutputs_append: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkOutputs_voutNegative: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkOutputs_voutTooLarge: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkOutputs_txoutTotalTooLarge: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_voutNegative: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_voutTooLarge: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_txoutTotalTooLarge: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_sigops: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkTransactionCommon_ok_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.forIn_eq_checkInputs: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkRegularTransaction_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkInputs_ok_iff: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkInputs_append: ['propext', 'Quot.sound']
+  BsvScript.TxRules.checkRegularTransaction_prevoutNull: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkRegularTransaction_inputsDuplicate: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.checkRegularTransaction_ok_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.txPolicyGate_ok_iff: ['propext']
+  BsvScript.TxPolicy.txPolicyGate_txSize: ['propext']
+  BsvScript.TxPolicy.txPolicyGate_tooManySigOps: ['propext']
+  BsvScript.TxPolicy.checkTransactionCommon_ok_size: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.checkTransactionCommon_ok_sigops: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.txPolicyGate_consensus_preGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.txPolicyGate_consensus_postGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.txPolicyGateFor_preGenesis_iff: ['propext', 'Quot.sound']
+  BsvScript.Properties.evalScript_scriptSize: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.evalScript_of_size_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_opCount: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.pushElem_ok: none
+  BsvScript.Properties.pushElem_opCount: none
+  BsvScript.Properties.execIf_opCount: ['propext']
+  BsvScript.Properties.execCltv_opCount: none
+  BsvScript.Properties.execCsv_opCount: ['propext']
+  BsvScript.Properties.execFlow_preserves: ['propext']
+  BsvScript.Properties.execFlow_opCount: ['propext']
+  BsvScript.Properties.execStep_opCount: ['propext']
+  BsvScript.Properties.loop_opCount_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.pushElem_stackSize_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.pushElem_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.popElem_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.toAlt_memInv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.fromAlt_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.sum_map_set: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.sum_map_eraseIdx: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.sum_map_insertIdx: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.eraseTop_memInv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.insertTop_memInv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.swapTop_memInv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.execIf_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.execCltv_memInv: ['propext']
+  BsvScript.Properties.execCsv_memInv: ['propext']
+  BsvScript.Properties.execFlow_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.execStep_memInv: ['propext', 'Quot.sound']
+  BsvScript.Properties.loop_memInv: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_stackSize_preGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_depth_preGenesis: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_pubkeyCount: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_pubkeyCount_neg: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_opCount: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.pushElem_ne_scriptnumOverflow: ['propext']
+  BsvScript.Properties.pushResult_overflow_iff: ['propext']
+  BsvScript.Properties.pushResult_ok: ['propext', 'Quot.sound']
+  BsvScript.Properties.pushBool_shape: ['propext', 'Quot.sound']
+  BsvScript.Tx.readLE_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Tx.readBytes_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Tx.readVarInt_eq_fast: none
+  BsvScript.Tx.readTxIn_eq_fast: none
+  BsvScript.Tx.readTxOut_eq_fast: none
+  BsvScript.Tx.decodeTxPrefix_eq_fast: ['propext']
+  BsvScript.Tx.decodeTx_eq_fast: ['propext']
+  BsvScript.Tx.hexDecodeCharsLoop_eq: ['propext', 'Quot.sound']
+  BsvScript.Tx.hexDecodeChars_eq_viaLoop: ['propext', 'Quot.sound']
+  BsvScript.SigOps.getOpTail_above_pushdata4: ['propext']
+  BsvScript.SigOps.getOpTail_mem: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.decode_le_of_length_le_four: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.multisigSigOps_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.opSigOps_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.sigOpWalk_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.multisigSigOps_legacy: ['propext']
+  BsvScript.SigOps.sigOpWalk_legacy_isSome: ['propext', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_legacy_isSome: ['propext', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_endif: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_ff: ['propext', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_return: ['propext', 'Quot.sound']
+  BsvScript.SigOps.sigOpCount_multisig_max: ['propext']
+  BsvScript.SigOps.sigOpCount_multisig_errors: ['propext']
+  BsvScript.SigOps.sigOpCount_opN_paths: ['propext']
+  BsvScript.SigOps.p2shRedeemSigOps_examples: ['propext']
+  BsvScript.SigOps.sumOpt_eq_none_iff: ['propext']
+  BsvScript.SigOps.sumOpt_append: ['propext', 'Quot.sound']
+  BsvScript.SigOps.sumOpt_zeros: ['propext', 'Quot.sound']
+  BsvScript.TxPolicy.sigOpWalk_legacy_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.sigOpCount_legacy_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.sumOpt_map_some: ['propext']
+  BsvScript.TxPolicy.sigOpCountWithoutP2SHAt_legacy_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.p2shSigOpCount_genesis_coins: ['propext', 'Quot.sound']
+  BsvScript.TxPolicy.txSigOpCount_genesis_coins: ['propext', 'Quot.sound']
+  BsvScript.TxPolicy.txSigOpCount_output_error: ['propext', 'Quot.sound']
+  BsvScript.TxPolicy.txPolicyGateCounted_error: ['propext']
+  BsvScript.TxPolicy.txPolicyGateCounted_postGenesis_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.mempoolTxPolicy_multisig_witness: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.mempoolTxPolicy_endif_witness: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.readNum_overflow_iff: ['propext']
+  BsvScript.Properties.hashOp_ok: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.cat_ok: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.split_ok: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.encode_length_mono: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.num2binOp_stackSize_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.readOperand_error: ['propext']
+  BsvScript.Properties.popElem_error: ['propext']
+  BsvScript.Properties.pushElem_error: ['propext']
+  BsvScript.Properties.lshiftnum_ne_bigInt: ['propext', 'Quot.sound']
+  BsvScript.Properties.rshiftnum_ok: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.Frame.refl: ['propext']
+  BsvScript.Properties.Frame.trans: ['propext']
+  BsvScript.Properties.popElem_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.pushElem_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.pushCount_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.pushResult_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.pushBool_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.swapTop_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.eraseTop_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.insertTop_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.toAlt_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.fromAlt_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.cat_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.split_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.num2binOp_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.bin2num_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.unary_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.binary_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.within_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.bitwise2_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.invert_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.shift_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.equal_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.ite_pos_of: none
+  BsvScript.Properties.ite_neg_of: none
+  BsvScript.Properties.need_ok_iff: ['propext']
+  BsvScript.Properties.execStack_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.ofExcept_ok: ['propext']
+  BsvScript.Properties.popPopPush_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.nopOrDiscourage_frame: ['propext']
+  BsvScript.Properties.substr_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.left_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.right_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.lshiftnum_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.rshiftnum_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.hashOp_frame: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.checkSigOp_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.forIn_frame: ['propext', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_ok: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.Frame.good: ['propext']
+  BsvScript.Properties.some_ofExcept_ok: ['propext']
+  BsvScript.Properties.arith_exec_good: ['propext', 'Quot.sound']
+  BsvScript.Properties.bitwise_exec_good: ['propext', 'Quot.sound']
+  BsvScript.Properties.stack_exec_good: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.splice_exec_good: ['propext', 'Quot.sound']
+  BsvScript.Properties.crypto_exec_good: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.expansion_exec_good: ['propext', 'Quot.sound']
+  BsvScript.Properties.opExec_good: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.hookOpCount_opExec: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.hookMem_opExec: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_opCount_le_opExec: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.loop_memInv_opExec: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.popElem_ok: none
+  BsvScript.Properties.checkSigOp_nullfail: ['propext', 'Quot.sound']
+  BsvScript.Properties.forIn_drop: ['propext', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_nulldummy: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.standardnessEnforced_eras: ['propext']
+  BsvScript.TxPolicy.txPolicyGateFor_svMainnetDefault_size: ['propext']
+  BsvScript.Properties.forIn_rangeFrom_guard: ['propext', 'Quot.sound']
+  BsvScript.Properties.checkMultiSigOp_nullfail: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.isPushOnly_eq_fuel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.isPushOnly_eq_fuel_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.loop_eq_fuel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.loop_eq_fuel_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vAdd_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vModSign_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vDivZero_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vNumEqVerify_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vWithin_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vNegZero_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vPick_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vRot_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vDropEmpty_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vAlt_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vFromAltEmpty_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vDepth_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vIfElse_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vNotifNested_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vUnclosedIf_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vEndifAlone_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vVerifyFalse_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vReturnSuffix_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vFalseTop_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vCat_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vPushOnlyV1_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vPushOnlyV2_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vMinimalV1Mempool_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vMinimalV2Mempool_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vMinimalV1Block_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Properties.KernelSample.vectors_kernel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_invalidop: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpWalk_legacy_eq_all: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_eq_sigOpCount: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_replicate_checksig: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxRules.sigOpCountPreGenesis_ff_witness: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Standard.solver_p2sh: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Standard.solver_opTrue: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Standard.isDust_iff: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Standard.inputsReason_postChronicle: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Standard.inputsReason_empty: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.acceptsNonStandardOutput_defaults: none
+  BsvScript.TxPolicy.refusesNonStandard_of_ne: ['propext']
+  BsvScript.TxPolicy.refusesNonStandard_scriptPubKey: ['propext']
+  BsvScript.TxPolicy.standardnessRefusal_off: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.mempoolTxPolicy_of_standard: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.mempoolTxPolicy_teranodeDefault: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.stdWitnessTx_inputs: ['propext', 'Quot.sound']
+  BsvScript.TxPolicy.standardnessRefusal_preGenesis_witnesses: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.TxPolicy.standardnessRefusal_postGenesis_witnesses: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Machine.atLeast_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Arith.unary_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Arith.binary_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Arith.within_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Bitwise.bitwise2_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Bitwise.invert_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Bitwise.shift_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Bitwise.equal_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Expansion.substr_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Expansion.left_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Expansion.right_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Expansion.lshiftnum_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Expansion.rshiftnum_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Stack.need_eq_fast: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Ops.Stack.pickBound_eq: ['propext', 'Quot.sound']
+  BsvScript.Ops.Stack.execStack_eq_fast: ['propext', 'Quot.sound']
+  BsvScript.Gadget.loop_eq_run: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.getOpTail_append: ['propext', 'Quot.sound']
+  BsvScript.Gadget.run_append: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.Triple.seq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.Triple.conseq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.run_sha256: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.run_push32: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.run_equalverify_same: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.framed_push32: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.framed_single: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.sha256_triple: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.push32_triple: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.equalverify_triple: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Gadget.HashLock.hashLock_triple: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.reverse_set: ['propext', 'Quot.sound']
+  BsvScript.Impl.reverse_eraseIdx: ['propext', 'Quot.sound']
+  BsvScript.Impl.reverse_insertIdx: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.abs_ofState: ['propext']
+  BsvScript.Impl.IState.ofState_abs: ['propext']
+  BsvScript.Impl.IState.abs_cond: none
+  BsvScript.Impl.IState.abs_alt: none
+  BsvScript.Impl.IState.abs_memUsed: none
+  BsvScript.Impl.IState.abs_nonTopLevelReturn: none
+  BsvScript.Impl.IState.abs_codeSep: none
+  BsvScript.Impl.IState.ofState_size: ['propext']
+  BsvScript.Impl.arr_back_none: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.arr_back_some: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.abs_stack_of_back_none: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.abs_stack_of_back_some: ['propext', 'Quot.sound']
+  BsvScript.Impl.topArr_eq: ['propext', 'Quot.sound']
+  BsvScript.Impl.setTopArr_eq: ['propext', 'Quot.sound']
+  BsvScript.Impl.eraseTopArr_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.insertTopArr_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.pushElemI_abs: ['propext']
+  BsvScript.Impl.IState.popElemI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.topAtI_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.swapTopI_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.eraseTopI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.insertTopI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.pushCountI_abs: ['propext']
+  BsvScript.Impl.IState.needI_abs: ['propext']
+  BsvScript.Impl.IState.depth_abs: ['propext']
+  BsvScript.Impl.IState.toAltI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.fromAltI_abs: ['propext']
+  BsvScript.Impl.IState.need_abs: ['propext']
+  BsvScript.Impl.IState.topAt_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.pushElem_abs: ['propext']
+  BsvScript.Impl.IState.popElem_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.swapTop_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.eraseTop_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.insertTop_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.pushCount_abs: ['propext']
+  BsvScript.Impl.IState.toAlt_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.IState.fromAlt_abs: ['propext']
+  BsvScript.Impl.IState.length_abs: ['propext']
+  BsvScript.Impl.IState.headD_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.IState.isEmpty_abs: ['propext']
+  BsvScript.Impl.IState.throw_bind_except: none
+  BsvScript.Impl.IState.map_throw_except: none
+  BsvScript.Impl.IState.abs_opCount: none
+  BsvScript.Impl.IState.abs_withOpCount: none
+  BsvScript.Impl.IState.popTail_abs: none
+  BsvScript.Impl.HookRI.abs_ofExcept: none
+  BsvScript.Impl.dispatch_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.execStackI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Stack.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Stack.execI_of_not_owns: ['propext', 'Quot.sound']
+  BsvScript.Impl.Stack.isSome_execI: ['propext', 'Quot.sound']
+  BsvScript.Impl.Arith.pushResult_abs: ['propext']
+  BsvScript.Impl.Arith.pushBool_abs: ['propext']
+  BsvScript.Impl.Arith.unaryI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Arith.binaryI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Arith.withinI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Arith.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Arith.execI_of_not_owns: ['propext', 'Quot.sound']
+  BsvScript.Impl.Arith.isSome_execI: ['propext', 'Quot.sound']
+  BsvScript.Impl.Bitwise.bitwise2I_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Bitwise.invertI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Bitwise.shiftI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Bitwise.equalI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Bitwise.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Bitwise.execI_of_not_owns: ['propext']
+  BsvScript.Impl.Bitwise.isSome_execI: ['propext']
+  BsvScript.Impl.Splice.catI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Splice.splitI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Splice.num2binOpI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Splice.bin2numI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Splice.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Splice.execI_of_not_owns: ['propext', 'Quot.sound']
+  BsvScript.Impl.Splice.isSome_execI: ['propext', 'Quot.sound']
+  BsvScript.Impl.Expansion.nopOrDiscourageI_abs: none
+  BsvScript.Impl.Expansion.substrI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.leftI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.rightI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.lshiftnumI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.rshiftnumI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Expansion.execI_of_not_owns: ['propext', 'Quot.sound']
+  BsvScript.Impl.Expansion.isSome_execI: ['propext', 'Quot.sound']
+  BsvScript.Impl.Crypto.scriptCodeOf_abs: none
+  BsvScript.Impl.Crypto.hashOpI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.checkSigOpI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.multisigLoop_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.forIn_bind_abs: ['propext', 'Quot.sound']
+  BsvScript.Impl.Crypto.checkMultiSigOpI_abs: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.execI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.execI_of_not_owns: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.Crypto.isSome_execI: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.pushStep_eq: ['propext']
+  BsvScript.Impl.verifyStep_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.hookStep_eq: ['propext']
+  BsvScript.Impl.execIfI_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.execCltvI_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.execCsvI_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.execFlowI_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.execStepI_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.LoopRel.of_err: none
+  BsvScript.Impl.LoopRel.of_ok: none
+  BsvScript.Impl.ofState_alt: none
+  BsvScript.Impl.loopI_rel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.evalScriptI_rel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.evalScriptA_rel: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.phase2_eq_gen: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.phase2Gen_congr: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.verifyScript_eq_gen: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.verifyScriptGen_congr: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Impl.verifyScriptA_eq: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Eval.opExecI_refines: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Eval.verifyScript_eq_I: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.decode_eq_signInt: ['propext']
+  BsvScript.Numbers.valid_cons: ['propext', 'Quot.sound']
+  BsvScript.Numbers.valid_nil: ['propext', 'Quot.sound']
+  BsvScript.Numbers.valid_reverse: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytesFuel_valid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.leNat_magBytesFuel: ['propext', 'Quot.sound']
+  BsvScript.Numbers.beNat_reverse: ['propext', 'Quot.sound']
+  BsvScript.Numbers.beNat_zero_cons: ['propext']
+  BsvScript.Numbers.beNat_append_single: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytes_reverse_head: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.decodeRev_signTopRev: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.signTopRev_valid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.magBytesFuel_fuel_irrel: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytes_cons: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytes_zero: ['propext']
+  BsvScript.Numbers.magBytes_valid: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.leNat_magBytes: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytes_length_le: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.lastNZ_append_single: ['propext']
+  BsvScript.Numbers.leNat_pos_of_lastNZ: ['propext', 'Quot.sound']
+  BsvScript.Numbers.magBytes_beNat_reverse: ['propext', 'Quot.sound']
+  BsvScript.Numbers.encode_ofNat: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_negOfNat: ['propext', 'Quot.sound']
+  BsvScript.Numbers.beNat_leading_zeros: ['propext']
+  BsvScript.Numbers.beNat_pos_of_top: ['propext', 'Quot.sound']
+  BsvScript.Numbers.encode_beNat_pos: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.encode_beNat_neg: ['propext', 'Quot.sound']
+  BsvScript.Numbers.dropZeros_spec: ['propext', 'Quot.sound']
+  BsvScript.Numbers.minimallyEncodeRef_eq_minimallyEncode: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Numbers.foldl_beNat_acc: ['propext']
+  BsvScript.Numbers.beNat_cons: ['propext']
+  BsvScript.Numbers.encode_length_eq: ['propext']
+  BsvScript.Numbers.num2binPad_length: ['propext', 'Quot.sound']
+  BsvScript.Numbers.decode_num2binPad: ['propext', 'Quot.sound']
+  BsvScript.Sighash.le32_length: ['propext']
+  BsvScript.Sighash.le64_length: ['propext']
+  BsvScript.Sighash.zero32_length: ['propext']
+  BsvScript.Sighash.serVersion_length: ['propext']
+  BsvScript.Sighash.SigHashType.serialize_length: ['propext']
+  BsvScript.Sighash.serOutPoint_length: ['propext']
+  BsvScript.Sighash.bip143Prevouts_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Sequence_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.bip143Outputs_length: ['propext', 'Classical.choice', 'Quot.sound']
+  BsvScript.Sighash.one256_length: ['propext']
+  BsvScript.Hash.compress_size: ['propext', 'Quot.sound']
+  BsvScript.Hash.wordBytes_length: ['propext']
+  BsvScript.Hash.Sha1.compress_size: ['propext', 'Quot.sound']
+  BsvScript.Hash.Ripemd160.compress_size: ['propext', 'Quot.sound']
+  BsvScript.Hash.Ripemd160.wordBytesLE_length: ['propext']
+  BsvScript.Params.testBit_bitOf: ['propext', 'Quot.sound']
+  BsvScript.Properties.isSome_orElse: none
+  axiom walk: 48 modules of BsvScript, Bsvs and Test.OpNames, 4912 constants, 2540 theorems, 0 axioms, 0 compiler overrides (implemented_by, extern, init, a hand-made _unsafe_rec), 0 dependencies outside Lean's three
+axiom check: OK (760 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+== numbers: lean/Test/NumbersCheck.lean against corpus/numbers ==
+Build completed successfully (1980 jobs).
+numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.30: 0 mismatch(es)
+== flow: lean/Test/FlowCheck.lean against corpus/flow ==
+Build completed successfully (2034 jobs).
+flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+flowcheck: the kernel sample (BsvScript/Properties/KernelSample.lean): 25 vectors; the compiled evaluator agrees with the kernel's verdict on 25, disagrees on 0
+flowcheck: the large lock (lean #48): the array machine (#50): 550001 B over a stack 1000000 deep, 10000 steps, the block path: valid in 101 ms, the budget 5000 ms
+flowcheck: the large lock (lean #48): the list machine (#48's copies): 550001 B over a stack 1000000 deep, 10000 steps, the block path: valid in 103 ms, the budget 5000 ms
+== sighash: lean/Test/SighashCheck.lean against corpus/sighash (bsv-rs vectors · the reference's sighash.json · mainnet signatures) ==
+Build completed successfully (1992 jobs).
+sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+sighash: bsv-rs 0.3.30 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+sighash: GREEN (the ECDSA leg follows)
+sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.30 ECDSA); 0 failures; negative control bit-flip fails on every entry
+== arith: lean/Test/ArithCheck.lean against corpus/arith (bsv-rs value vectors · the engine cases) ==
+Build completed successfully (2030 jobs).
+arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.30 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+== stack: lean/Test/StackCheck.lean against corpus/stack (the engine cases) ==
+Build completed successfully (2030 jobs).
+stackcheck: 262 engine cases; comparable 262: agree 262, mismatch 0, unimplemented 0; recorded (not counted) 0
+== crypto: lean/Test/CryptoCheck.lean (hash vectors · ECDSA vectors from bsv-rs · mainnet inputs through the evaluator · the signature cases) ==
+Build completed successfully (2030 jobs).
+crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+crypto: ECDSA vectors from bsv-rs 0.3.30: 1340 cases, 0 mismatches
+crypto: the curve's facts (2·G, n·G = O, (n−1)·G = −G) and the key-1 signature of RFC 6979's nonce procedure (two keys, a flipped digest bit): 0 mismatches
+crypto: the lax parser's sequence length (88 01×8, 87 01×7 verify; an overlong form fails): 0 mismatches
+crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+== seed: lean/Test/SeedCheck.lean: the seed corpus through the evaluator (deferred families reported) ==
+Build completed successfully (2028 jobs).
+seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and expansion opcodes of #11/#18) and 0 elsewhere
+  arith: agree 7191, mismatch 0, unimplemented 0
+  elem: agree 528, mismatch 0, unimplemented 0
+  mutation: agree 832, mismatch 0, unimplemented 0
+  num: agree 638, mismatch 0, unimplemented 0
+  splice: agree 424, mismatch 0, unimplemented 0
+  stack: agree 387, mismatch 0, unimplemented 0
+== scripttests: lean/Test/ScriptTestsCheck.lean: the reference's script_tests.json at the pin (rows an unwritten opcode blocks are skipped and counted) ==
+Build completed successfully (2034 jobs).
+scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  skipped by the first unwritten opcode: 
+== txtests: lean/Test/TxTestsCheck.lean: the reference's tx_valid.json and tx_invalid.json at the pin ==
+Build completed successfully (2040 jobs).
+txtests bitcoin-sv-v1.2.2-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+txtests bitcoin-sv-v1.2.2-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+== flags: lean/Test/FlagsCheck.lean: both branches under Params.derive's block and mempool words against bsv-rs (corpus/flow, corpus/seed) ==
+Build completed successfully (2036 jobs).
+flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  block vs mempool: version-2 differ 3 (all DISCOURAGE_UPGRADABLE_NOPS, 0 unexplained); version-1 differ by mempool code: SCRIPT_ERR_CLEANSTACK 23, SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS 3, SCRIPT_ERR_MINIMALDATA 274 (0 unexplained)
+  the gate cleared: version-2 verdicts changed 0 (must be 0), version-1 verdicts changed 309
+flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  block vs mempool: version-2 differ 2 (all DISCOURAGE_UPGRADABLE_NOPS, 0 unexplained); version-1 differ by mempool code: SCRIPT_ERR_CLEANSTACK 65, SCRIPT_ERR_MINIMALDATA 10, SCRIPT_ERR_SCRIPTNUM_MINENCODE 85 (0 unexplained)
+  the gate cleared: version-2 verdicts changed 0 (must be 0), version-1 verdicts changed 160
+== spec: tools/specgen.py --check: the generated specification document is byte-identical to a regeneration from the Lean sources, the corpora and the witnesses (#17) ==
+specgen --check: OK (117 files up to date; 0 rules flagged)
+== bytes: lean/Test/BytesCheck.lean: every byte 0x00–0xff under both versions against bsv-rs ==
+Build completed successfully (2030 jobs).
+bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+== versiongate: lean/Test/VersionGateCheck.lean: MINIMALDATA, CLEANSTACK, SIGPUSHONLY, LOW_S at every read site, four cells each (version 1 and 2, the block and mempool words), verdict and error code (#19) ==
+Build completed successfully (2038 jobs).
+versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+== eras: lean/Test/ErasCheck.lean: the coin's era, the spend's height and era (every activation flag under the tip's-height convention), P2SH grandfathered and disabled, two cells each with the error code (#20, #23); corpus/eras is the same table ==
+Build completed successfully (2044 jobs).
+erascheck: 74 rows × 2 cells = 148 cells decided under Params.derive (SV-node's mainnet defaults, block and mempool) with the error code (eras 128, p2sh 16, p2sh-txlevel 4); 2 rows decided at the transaction level (CheckRegularTransaction): 0 mismatches
+== witnesses: lean/Test/WitnessCheck.lean: the policy-default witnesses under both nodes' derived parameters (corpus/witnesses) ==
+Build completed successfully (2036 jobs).
+witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+witnesscheck: ../corpus/witnesses/policy-defaults-large.jsonl absent (make policywitnesses regenerates it; its sha256 is in corpus/witnesses/policy-defaults-manifest.json): not counted
+witnesscheck: 2 witness transactions decided under both nodes' derived parameters, 0 mismatches
+== eval: eval/bsvs --self-test (the fixed vectors with their citations, the flow and seed corpora through the CLI's runner against bsv-rs, determinism executed) ==
+Build completed successfully (2052 jobs).
+bsvs --self-test
+  fixed vectors: 28 of 28 pass, each run twice
+  two inputs: the transaction verdict is input 1's EVAL_FALSE, input 0 valid (Q5)
+  a coinbase input's script is never evaluated (DESIGN §5.5)
+  flow.jsonl: 1094 entries: agree 1094, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented or undefined-in-reference (reported, not counted) 0
+  seed.jsonl: 10000 entries: agree 10000, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented or undefined-in-reference (reported, not counted) 0
+bsvs --self-test: GREEN
+== harness: smoke run on corpus/seed against bsv-rs; the differential of the spec against bsv-rs on the seed (every divergence a cited rule, #15); the same differential against go-sdk and ts-sdk at their pins (#29); the classifier tables replayed against every witness manifest (rules_check, D83c) ==
+run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.3.30 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided=0 nondeterminism=0, 0.1s
+run_bsvrs --smoke: GREEN (10000 entries agree with their recorded bsv-rs verdicts)
+run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.30 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@d675b6f (sv-mainnet-default); 0.1s
+  agree: spec-mempool 10000 (like-for-like, the standard word), spec 10000 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+  witnesses: 0 written to ../lean/.lake/witnesses/seed.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../lean/.lake/witnesses/manifest.json
+run_diff: GREEN (every divergence explained by a rule with its citation)
+run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.5.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.5.2 (docs/PROVENANCE.md §1a)); the spec at spec@d675b6f (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 0.6s
+  agree: spec 9988, spec-mempool 9010; engine aborts filed as witnesses (D15) 0 (timeouts 0, of which 0 decided on the 10× re-run, D15a; process deaths 0, of which 0 recovered in a fresh process); undecided runs (the adapter's own codes or no spec verdict, never a witness) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; engine codes/messages outside the tables 0; adapter errors 0
+  reference bits the engine has no flag for (reported per run, 10000 runs): SCRIPT_CHRONICLE ×20000, SCRIPT_GENESIS ×20000
+  tier-2 notes (both invalid, the codes differ; never a divergence):
+    spec: spec SCRIPT_ERR_BAD_OPCODE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 55
+    spec: spec SCRIPT_ERR_DIV_BY_ZERO vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_EVAL_FALSE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 15
+    spec: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs go-sdk SCRIPT_ERR_BAD_OPCODE: 3
+    spec: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 2
+    spec: spec SCRIPT_ERR_INVALID_OPERAND_SIZE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_BAD_OPCODE: 24
+    spec: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 41
+    spec: spec SCRIPT_ERR_MOD_BY_ZERO vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_PUBKEYTYPE vs go-sdk SCRIPT_ERR_BAD_OPCODE: 1
+    spec: spec SCRIPT_ERR_PUSH_SIZE vs go-sdk SCRIPT_ERR_IMPOSSIBLE_ENCODING: 2
+    spec: spec SCRIPT_ERR_PUSH_SIZE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 3
+    spec: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs go-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    spec: spec SCRIPT_ERR_SIG_DER vs go-sdk SCRIPT_ERR_SIG_HASHTYPE: 3
+    spec: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs go-sdk SCRIPT_ERR_BAD_OPCODE: 1
+    spec: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 10
+    spec: spec SCRIPT_ERR_VERIFY vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_BAD_OPCODE vs go-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_BAD_OPCODE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 54
+    spec-mempool: spec SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 2
+    spec-mempool: spec SCRIPT_ERR_DIV_BY_ZERO vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs go-sdk SCRIPT_ERR_CLEANSTACK: 74
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs go-sdk SCRIPT_ERR_MINIMALDATA: 2
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs go-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 21
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 14
+    spec-mempool: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs go-sdk SCRIPT_ERR_BAD_OPCODE: 3
+    spec-mempool: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 2
+    spec-mempool: spec SCRIPT_ERR_INVALID_OPERAND_SIZE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_SPLIT_RANGE vs go-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_BAD_OPCODE: 24
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_MINIMALDATA: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 2
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 41
+    spec-mempool: spec SCRIPT_ERR_MOD_BY_ZERO vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_PUBKEYTYPE vs go-sdk SCRIPT_ERR_BAD_OPCODE: 1
+    spec-mempool: spec SCRIPT_ERR_PUSH_SIZE vs go-sdk SCRIPT_ERR_IMPOSSIBLE_ENCODING: 1
+    spec-mempool: spec SCRIPT_ERR_PUSH_SIZE vs go-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_PUSH_SIZE vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 3
+    spec-mempool: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs go-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    spec-mempool: spec SCRIPT_ERR_SIG_DER vs go-sdk SCRIPT_ERR_SIG_HASHTYPE: 3
+    spec-mempool: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs go-sdk SCRIPT_ERR_BAD_OPCODE: 1
+    spec-mempool: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 10
+    spec-mempool: spec SCRIPT_ERR_VERIFY vs go-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+  witnesses: 2 written to ../lean/.lake/witnesses/go-sdk/seed.jsonl (sha256 e83834ac1ccf85a2dd0a5bb485de047db3f4a56480f0d8de1c0d84ff6f97d8d3); manifest ../lean/.lake/witnesses/go-sdk/manifest.json
+run_engine: GREEN (every divergence explained by a rule with its citation)
+run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@2.8.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 2.8.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@d675b6f (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.2s
+  agree: default/spec 9840, default/spec-mempool 10000, spec 9988, spec-mempool 9010; engine aborts filed as witnesses (D15) 0 (timeouts 0, of which 0 decided on the 10× re-run, D15a; process deaths 0, of which 0 recovered in a fresh process); undecided runs (the adapter's own codes or no spec verdict, never a witness) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; engine codes/messages outside the tables 0; adapter errors 0
+  reference bits the engine has no flag for (reported per run, 10000 runs): CHECKLOCKTIMEVERIFY ×20000, CHRONICLE ×20000
+  tier-2 notes (both invalid, the codes differ; never a divergence):
+    default/spec: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs ts-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    default/spec-mempool: spec SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS vs ts-sdk SCRIPT_ERR_BAD_OPCODE: 1
+    default/spec-mempool: spec SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS vs ts-sdk SCRIPT_ERR_EVAL_FALSE: 1
+    default/spec-mempool: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs ts-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    spec: spec SCRIPT_ERR_BAD_OPCODE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 87
+    spec: spec SCRIPT_ERR_DIV_BY_ZERO vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_EVAL_FALSE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 15
+    spec: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 4
+    spec: spec SCRIPT_ERR_INVALID_OPERAND_SIZE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 61
+    spec: spec SCRIPT_ERR_MOD_BY_ZERO vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_PUBKEYTYPE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec: spec SCRIPT_ERR_PUSH_SIZE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 3
+    spec: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs ts-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    spec: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 11
+    spec: spec SCRIPT_ERR_VERIFY vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_BAD_OPCODE vs ts-sdk SCRIPT_ERR_MINIMALDATA: 4
+    spec-mempool: spec SCRIPT_ERR_BAD_OPCODE vs ts-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 7
+    spec-mempool: spec SCRIPT_ERR_BAD_OPCODE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 86
+    spec-mempool: spec SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 2
+    spec-mempool: spec SCRIPT_ERR_DIV_BY_ZERO vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs ts-sdk SCRIPT_ERR_MINIMALDATA: 2
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs ts-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 21
+    spec-mempool: spec SCRIPT_ERR_EVAL_FALSE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 14
+    spec-mempool: spec SCRIPT_ERR_IMPOSSIBLE_ENCODING vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 4
+    spec-mempool: spec SCRIPT_ERR_INVALID_OPERAND_SIZE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_SPLIT_RANGE vs ts-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs ts-sdk SCRIPT_ERR_MINIMALDATA: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs ts-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_INVALID_STACK_OPERATION vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 61
+    spec-mempool: spec SCRIPT_ERR_MOD_BY_ZERO vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_PUBKEYTYPE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+    spec-mempool: spec SCRIPT_ERR_PUSH_SIZE vs ts-sdk SCRIPT_ERR_SCRIPTNUM_MINENCODE: 1
+    spec-mempool: spec SCRIPT_ERR_PUSH_SIZE vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 3
+    spec-mempool: spec SCRIPT_ERR_SCRIPTNUM_OVERFLOW vs ts-sdk SCRIPT_ERR_PUBKEY_COUNT: 1
+    spec-mempool: spec SCRIPT_ERR_UNBALANCED_CONDITIONAL vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 11
+    spec-mempool: spec SCRIPT_ERR_VERIFY vs ts-sdk SCRIPT_ERR_SIG_PUSHONLY: 1
+  witnesses: 3 written to ../lean/.lake/witnesses/ts-sdk/seed.jsonl (sha256 2df83e71454d1c0b3ea335cf7b48744db10d53a0fa019cfab9afd331b004d636); manifest ../lean/.lake/witnesses/ts-sdk/manifest.json
+run_engine: GREEN (every divergence explained by a rule with its citation)
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on arith: 692 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 8 divergent runs in 1 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on bytes: 512 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 149 divergent runs in 1 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on crypto: 84 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 15 divergent runs in 2 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on eras: 74 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 9 divergent runs in 5 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on flow: 1094 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 307 divergent runs in 2 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on gen: 1011 entries replayed from go-sdk@v1.5.2 (spec spec@8389375 from eval/bsvs corpus, the corpus carrying no spec key); 75 divergent runs in 16 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on seed: 10000 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 1002 divergent runs in 2 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: go-sdk on stack: 262 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 4 divergent runs in 1 classes; EQUAL to the manifest
+rules_check: go-sdk on tx: 40 entries replayed from go-sdk@v1.5.2 (spec spec@013f578 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on arith: 692 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 136 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on bytes: 512 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 309 divergent runs in 4 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on crypto: 84 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 30 divergent runs in 9 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on eras: 74 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 114 divergent runs in 14 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on flow: 1094 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 612 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on gen: 1011 entries replayed from ts-sdk@2.8.0 (spec spec@8389375 from eval/bsvs corpus, the corpus carrying no spec key); 155 divergent runs in 30 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on seed: 10000 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 1162 divergent runs in 3 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: ts-sdk on stack: 262 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 16 divergent runs in 6 classes; EQUAL to the manifest
+rules_check: ts-sdk on tx: 40 entries replayed from ts-sdk@2.8.0 (spec spec@013f578 recorded in the corpus); 40 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on arith: 692 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on bytes: 512 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on crypto: 84 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on eras: 74 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on flow: 1094 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on gen: 1011 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on seed: 10000 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+rules_check: gobdk on stack: 262 entries replayed from gobdk@cdfa7814 (spec spec@714fbd6 from eval/bsvs corpus, the corpus carrying no spec key); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: gobdk on tx: 40 entries replayed from gobdk@cdfa7814 (spec spec@013f578 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on arith: 692 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on crypto: 84 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on eras: 74 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on flow: 1094 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on gen: 1011 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on million: 4 entries run live under the two words (bsv-rs@0.3.30; spec spec@a4df442); 4 divergent runs in 1 classes; EQUAL to the manifest
+rules_check: bsv-rs on road: 13512 entries run live under the two words (bsv-rs@0.3.30; spec spec@8e449b5); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on seed: 10000 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on stack: 262 entries run live under the two words (bsv-rs@0.3.30; spec spec@8fde74b); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: bsv-rs on tx: 40 entries run live under the two words (bsv-rs@0.3.30; spec spec@013f578); 0 divergent runs in 0 classes; EQUAL to the manifest
+rules_check: GREEN (the tables reproduce every recorded classification) (37 corpus × engine manifests, 68080 entries replayed, 4147 divergent runs classified; 46 s)
+the legs' own verdict lines: every leg's present (RULES-TREE (28))
+make check: GREEN (stubs are listed above by name; a stub is not a pass)
+[withheld at export: a sibling tree's line]
+[box 01:24:32Z load1 4.70] the box leg lock RELEASED by pid 47363 (01:24:32Z)
+CHECK_BOX_RECORD=docs/records/20260930-012136-make-check.txt
+[box 01:24:32Z load1 4.70] make check-local rc 0
+lean_lock: released slot1 (01:24:32Z)
+the record docs/records/20260930-012136-make-check-box.txt (written by tools/check.sh on the box, brought home unchanged; commit it with the run's page line)

@@ -1,0 +1,199 @@
+{
+  "artifacts_sha256": {
+    "answers.jsonl": "56fd8bf79f48a6b32c31618cf666ac3cecaecbc623b2726aa86bc0673cb7a980",
+    "funding.jsonl": "8ba2afa906637362ccf4d643b404846618e5a8d8302d55b4a0b814cb89a73672",
+    "rpc.jsonl": "08f4d50458353aa46181f2afabf74058c7ddc5afea3d224b2b1bc1d8dc2dd238",
+    "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corpus": {
+    "manifest_count": 1094,
+    "name": "flow",
+    "path": "corpus/flow/flow.jsonl",
+    "run_count": 1094,
+    "run_from": 0,
+    "sha256": "3c4c9bb82bc056a746d9faceb6ce6fe7747ca37a002c53f14548ba33e7e5d858"
+  },
+  "counts": {
+    "block": {
+      "agreeing": 1088,
+      "disagreeing": 0,
+      "entries": 1094,
+      "judged": 1088,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 6
+    },
+    "mempool": {
+      "agreeing": 1088,
+      "disagreeing": 0,
+      "entries": 1094,
+      "judged": 1088,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 6
+    }
+  },
+  "final_tip": {
+    "bestblockhash": "437e66abe3b813ddbfbd2d1c46ec8280773a485a598658a6ff9e436ded4c1633",
+    "blocks": 225,
+    "chain": "regtest",
+    "mediantime": 1791243894,
+    "time": 1791248133
+  },
+  "funding_wall": null,
+  "initial_tip": {
+    "bestblockhash": "227aa24f848b7c6b351536b953431a3712d45b96101e99fb5c681283779cdbb4",
+    "blocks": 222,
+    "chain": "regtest",
+    "mediantime": 1791243507,
+    "time": 1791247815
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "host": "box",
+    "listeners": [
+      "127.0.0.1:8000",
+      "127.0.0.1:8081",
+      "127.0.0.1:8082",
+      "127.0.0.1:8084",
+      "127.0.0.1:8085",
+      "127.0.0.1:8086",
+      "127.0.0.1:8087",
+      "127.0.0.1:8088",
+      "127.0.0.1:8090",
+      "127.0.0.1:8833",
+      "127.0.0.1:8834",
+      "127.0.0.1:9091",
+      "127.0.0.1:9292"
+    ],
+    "native_client_sha256": "528ec6de05c65498aea684d92a8572e92bdba814322bab87e049c6513a78dee4",
+    "pid": 69583,
+    "rpc": "http://127.0.0.1:9292",
+    "settings": {
+      "environment": {
+        "DATADIR": "~/bsv/targets/spec-teranode/data",
+        "GOMAXPROCS": "4",
+        "GOMEMLIMIT": "6GiB",
+        "HOME": "~",
+        "LC_ALL": "C",
+        "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+        "SETTINGS_CONTEXT": "test",
+        "SETTINGS_ENV_FILE": "/dev/null",
+        "TMPDIR": "~/bsv/targets/spec-teranode/data/runtime/tmp"
+      },
+      "files": {
+        "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
+        "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
+        "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+      },
+      "services": [
+        "-all=0",
+        "-blockchain=1",
+        "-subtreevalidation=1",
+        "-blockvalidation=1",
+        "-blockassembly=1",
+        "-asset=1",
+        "-propagation=1",
+        "-rpc=1",
+        "-p2p=0",
+        "-alert=0",
+        "-legacy=0",
+        "-validator=1"
+      ]
+    },
+    "settings_hash": "133d2473bdbbfe199b39f7e586a80c37eed0936b952749759f616593bed8ce88",
+    "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
+    "tag": "v0.16.0",
+    "validator": "127.0.0.1:8081"
+  },
+  "mapping": {
+    "basis": "tracker comment 5853443740; go-chaincfg v1.6.2 params.go:276-277 (mainnet), 463,475-476 (regtest)",
+    "funding_targets": {
+      "post-chronicle": "200 or a later tip of the same era",
+      "post-genesis": "next available height, 100 through 198",
+      "pre-genesis": "none: no coinbase output matures below height 100; undecided"
+    },
+    "mainnet": {
+      "chronicle": 943816,
+      "genesis": 620538
+    },
+    "outpoints": "rebound, locking scripts and values preserved; signature and absolute-height/time rows excluded",
+    "regtest": {
+      "chronicle": 200,
+      "coinbase_maturity": 100,
+      "genesis": 100
+    },
+    "spend_height": "confirmed funding height + 1; actual chain tip + 1"
+  },
+  "paths": {
+    "block": "node ValidatorAPI.ValidateTransaction, SkipPolicyChecks=true, InBlock=true, parents read from its store; full block-wrapper acceptance is not inferred",
+    "mempool": "node sendrawtransaction under its recorded test settings"
+  },
+  "provenance": "synthetic seed corpus; node at the tagged pin on the local private chain; witnesses are unclassified findings",
+  "rpc_calls": 5474,
+  "undecided": [],
+  "unfundable": [
+    {
+      "id": "flow-00927",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][0b33f3309f54ba4d864cb80e43dfb05531bb37111687f824abd9d1f095181b1f] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00927",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][0b33f3309f54ba4d864cb80e43dfb05531bb37111687f824abd9d1f095181b1f] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00928",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][6a664dd59921aabccb0a2a25eeecdf0651358890084fb09cdd3d66c547c69316] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00928",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][6a664dd59921aabccb0a2a25eeecdf0651358890084fb09cdd3d66c547c69316] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00929",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][5acd587e02f1f6efe64a4bb828bd523deabcccff45a41d113eaf197e5d87963f] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00929",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][5acd587e02f1f6efe64a4bb828bd523deabcccff45a41d113eaf197e5d87963f] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00930",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][41fd331c1c9b65d61a60410401795aa8c144ab8d3f85227006be7510abde2d58] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-00930",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][41fd331c1c9b65d61a60410401795aa8c144ab8d3f85227006be7510abde2d58] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-01093",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][833d9a94082cd8c2f6f5284e506819f7937f38fe53eab1625ec6f3ba4eacd7a3] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-01093",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][833d9a94082cd8c2f6f5284e506819f7937f38fe53eab1625ec6f3ba4eacd7a3] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-01094",
+      "path": "block",
+      "reason": "TX rejected: PROCESSING (4): [Validate][83ad7614d2e608ae8a89c57ff784e1350b3d4ce7a7d59fbdcb34d4269c9a0a28] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    },
+    {
+      "id": "flow-01094",
+      "path": "mempool",
+      "reason": "TX rejected: PROCESSING (4): [Validate][83ad7614d2e608ae8a89c57ff784e1350b3d4ce7a7d59fbdcb34d4269c9a0a28] error validating transaction -> PROCESSING (4): GoBDK fail to ValidateTransaction -> UNKNOWN (0): Exception thrown from C++ code"
+    }
+  ],
+  "wall_seconds": 133.116708042
+}

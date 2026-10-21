@@ -1,0 +1,164 @@
+[export: 7 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+cite_check record (tools/cite_check.py, the citation leg, the twenty-first leg of make check since f84a62a; #43's upkeep after its close at 06:36 UTC; S4b, set 4 sitting 3)
+commit: e65da5b (the branch harness-b rebased on origin/main 2436523, pushed: f7c834d the leg's go-chaincfg source and the resolver's self rule with the first refresh, e65da5b the refresh after the rebase; 1,197 rows; not on main until the lens); 0 uncommitted paths at the run (the make-check record 20260927-125104 moved out of the tree for it and back)
+started: 2026-09-27 13:07:52 UTC; the leg 3.7 s wall (2.60 s user); the first set of these runs at 12:50:21 UTC at 0310ec4 (step (4) below)
+[withheld at export: a sibling tree's line]
+commands: tools/cite_check.py; --list; --propose (a dry run, nothing written); --repin go-chaincfg.commit=198ccf650e914b1ece818553ade71512760e0eaf (the tag v1.6.2 of ~/bsv/go-chaincfg); --repin reference.commit=6fe29fb2e; HOME=<an empty directory> (every clone absent: the Modal container's case); the same with CITE_CHECK_REQUIRE_CLONES=1
+
+== the leg at e65da5b ==
+cite_check: 2529 citations found in lean/ and docs/ (2464 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1918, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 12, ambiguous 3, unpinned 0, other-version 11, self 374, history 210, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit status: 0
+
+== the counts at each step of this sitting (every line the leg's own; the working tree at each step, its base named) ==
+(0) at 62c30da, the tip when this sitting began, the leg unmodified:
+    cite_check: 2476 citations found in lean/ and docs/ (2411 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1065, MOVED 0; not anchored (reported, never RED): unanchored 813, beyond-eof 7, unresolved 10, ambiguous 15, unpinned 11, other-version 2, self 346, history 207, absent 0, orphan rows 1; skipped 0
+(1) the parent's hunk alone over 62c30da (go-chaincfg in REPOS, VERSION_KEYS, CLONE_PREFIX; the CONTEXT entry kept): 23 params.go citations now resolve to go-chaincfg, the 11 that were `unpinned`, 5 `beyond-eof` and 7 `ambiguous` (those 12 had resolved to Teranode's services/legacy/params.go, 96 lines, or to no single source): 13 as `unanchored`, 10 as `other-version` (the pages' and the lenses' "v1.6.2" beside the citation):
+    cite_check: 2476 citations found in lean/ and docs/ (2411 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1065, MOVED 0; not anchored (reported, never RED): unanchored 826, beyond-eof 2, unresolved 10, ambiguous 8, unpinned 0, other-version 12, self 346, history 207, absent 0, orphan rows 1; skipped 0
+(2) --propose --write over (1): 291 rows proposed (176 text, 115 sym; the 826 unanchored occurrences are 291 distinct (site, citation, first, last) keys, 100 of them the 595 occurrences of docs/CONFORMANCE-2026-09-27.md), 1 orphan row dropped (lean/BsvScript/Ops/Arith.lean `script_num.h:66–70`, the citation S1's c5eae24 re-cut to `65–69`), 1,174 rows; the leg (1,892 anchored = 1,065 + 826 + 1: docs/lanes/harness.md:142's beyond-eof occurrence is held by the row of its key, see below):
+    cite_check: 2476 citations found in lean/ and docs/ (2411 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1892, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 10, ambiguous 8, unpinned 0, other-version 12, self 346, history 207, absent 0, orphan rows 0; skipped 0
+[withheld at export: a sibling tree's line]
+      ambiguous -> self  docs/audit/2026-09-27-lens-S2-block-by-S2.md:14 PROVENANCE.md:14
+[withheld at export: a sibling tree's line]
+      ambiguous -> self  docs/audit/2026-09-27-lens-S2-by-S3.md:11 PROVENANCE.md:14
+      pinned    -> self  docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md:24 lakefile.toml:11   (the same)
+      ambiguous -> self  docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:25 PROVENANCE.md:16
+      ambiguous -> self  docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:47 build.sh:24
+      ambiguous -> self  docs/audit/2026-09-27-lens-S4b-by-S3.md:33 main.go:20–23
+    the two rows then orphaned, dropped by a second --propose --write (0 proposed, 2 dropped, 1,172 rows); the leg:
+    cite_check: 2476 citations found in lean/ and docs/ (2411 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1890, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 10, ambiguous 3, unpinned 0, other-version 12, self 353, history 207, absent 0, orphan rows 0; skipped 0
+(4) committed as f0630c9, rebased onto 4974440 (S2's docs/DESIGN.md and docs/lanes/lean.md: 2 more citations, one held by an existing row, one `self`) and pushed as 0310ec4; at 0310ec4, clean, 12:50:21 UTC (the load 13.13):
+    cite_check: 2478 citations found in lean/ and docs/ (2413 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1891, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 10, ambiguous 3, unpinned 0, other-version 12, self 354, history 207, absent 0, orphan rows 0; skipped 0
+    and the tripwire ran at 0310ec4 by the route: docs/records/20260927-125104-make-check.txt (LOCAL, twenty-one legs GREEN).
+(5) rebased onto 2436523 (S1's carried items at 3eb9885: lean/BsvScript/Params.lean's go-chaincfg word v1.5.8 and its `configscriptpolicy.cpp:61` re-cut, S1's own lens report, docs/lanes/lean.md) as f7c834d: 31 unanchored, 1 orphan row; --propose --write: 26 rows proposed (16 text, 10 sym), 1 orphan row dropped (Params.lean `configscriptpolicy.cpp:60`, re-cut by S1 to :61), 1,197 rows; committed as e65da5b: the leg above.
+The anchored count moved 1,065 -> 1,918; the table's rows 884 -> 1,197; `unpinned` 11 -> 0 (go-chaincfg is pinned; the class stays for a source a page names that §1a does not pin).
+
+== the citations no row anchors at e65da5b, by class (--list; reported, never RED) ==
+  ambiguous  docs/audit/2026-09-27-lens-S3r2-by-S3.md:48 main.go:169
+  ambiguous  docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:47 main.go:70–89
+  ambiguous  docs/audit/2026-09-27-lens-S4b-by-S3.md:22 main.go:41–43
+  beyond-eof docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:24 build.sh:74 -> gobdk:contrib/docker/build.sh (4 lines)
+  other-version docs/PARAMETERS.md:128 params.go:276–277
+  other-version docs/PARAMETERS.md:144 params.go:276
+  other-version docs/PROVENANCE.md:150 doc/release-notes.md:1–8
+  other-version docs/PROVENANCE.md:153 doc/release-notes.md:24–37
+  other-version docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:44 params.go:276–277
+  other-version docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:54 params.go:276–277
+  other-version docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:54 params.go:276–277
+  other-version docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:54 params.go:276
+  other-version docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:54 params.go:265–274
+  other-version docs/audit/2026-09-27-lens-S4b-by-S3.md:43 params.go:276–277
+  other-version docs/lanes/harness.md:240 params.go:276–277
+  unresolved docs/audit/2026-09-27-lens-S1-block-by-S1.md:50 031436-diff-s1.md:13–14
+  unresolved docs/audit/2026-09-27-lens-S1-block-by-S1.md:118 031436-diff-s1.md:13–14
+  unresolved docs/audit/2026-09-27-lens-S1-by-S3.md:51 WINDOWS.md:1344–1375
+  unresolved docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md:29 diff-s1.md:13–14
+  unresolved docs/audit/2026-09-27-lens-S2-block-by-S2.md:20 HOSTS.md:27
+  unresolved docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md:18 HOSTS.md:27
+  unresolved docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md:47 HOSTS.md:27
+  unresolved docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:14 WINDOWS.md:1668
+  unresolved docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:43 WINDOWS.md:1936
+  unresolved docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:60 WINDOWS.md:1668
+  unresolved docs/audit/2026-09-27-lens-S4b-by-S3.md:23 WINDOWS.md:1886
+  unresolved docs/lanes/harness.md:288 HOSTS.md:24
+  and 374 citations into this repository's own files (self), 210 in docs/records/ (history); 1,918 anchored and holding
+
+== what the classes above say (read by S4b; for the pages' owners, unclassified) ==
+- other-version, the go-chaincfg sites that still name v1.6.2 as their version: docs/PARAMETERS.md:128 ("from go-chaincfg v1.6.2 `params.go:276–277`") and :144 ("go-chaincfg v1.6.2 `params.go:276`"), S3's page: S4b's ask A7 of sitting 1 named them (at :127 and :143 then); 2d4ce51 re-cut §3's two cells (:148, :156) and STATE:46, not these two. The mainnet lines are 276–277 at both versions (620,538 / 943,816): the two cite the right lines under the wrong version word. (lean/BsvScript/Params.lean's site, other-version at 0310ec4, is anchored at e65da5b: S1 landed v1.5.8 at 3eb9885.) The other nine other-version occurrences quote the old text on purpose (the two lenses of S4b's sitting 1, the parent's paste at docs/lanes/harness.md:240, PROVENANCE's two v1.2.0 release notes) and stay.
+- docs/lanes/harness.md:142 (S1's sitting-3 paste) `params.go:276–277`: its paragraph's nearest source word is "Teranode", so the resolver alone reads Teranode's services/legacy/params.go (96 lines); the occurrence shares its key (site, citation, lines) with :240's go-chaincfg row, and that row anchors it at go-chaincfg `params.go:276–277`, the lines the paste means.
+- beyond-eof, docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:24 `build.sh:74`: this repository's harness/engines/gobdk/build.sh:74 (`GOPROXY=off GOSUMDB=off`), read as GoBDK's contrib/docker/build.sh (4 lines) because the paragraph names GoBDK: the one mis-resolution of this kind the self rule leaves (never anchored).
+- a limit, unchanged: the citation shape's extensions include no `mod` or `sum`, so `go.mod:15` / `go.sum:181–182` citations are not found by the leg at all.
+
+== the proposal's dry run at e65da5b: nothing to anchor, nothing orphaned; its heuristic leads (UNVERIFIED; a lead is not a finding) ==
+cite_check --propose: 0 rows proposed (Counter()), 0 orphan rows dropped, 1197 rows after
+  beyond-eof: docs/audit/2026-09-27-lens-S4b-block-by-S4b.md:24 build.sh:74: gobdk:contrib/docker/build.sh has 4 lines at the pin
+  near-miss: docs/CONFORMANCE-2026-09-27.md:203 cites interpreter.cpp:829–831 beside `OP_ELSE`, which is not in src/script/interpreter.cpp:829–831 at the pin but is at line(s) 827
+  near-miss: docs/CONFORMANCE-2026-09-27.md:204 cites interpreter.cpp:829–831 beside `OP_ELSE`, which is not in src/script/interpreter.cpp:829–831 at the pin but is at line(s) 827
+  near-miss: docs/CONFORMANCE-2026-09-27.md:234 cites interpreter.cpp:565–597 beside `OP_CHECKSEQUENCEVERIFY`, which is not in src/script/interpreter.cpp:565–597 at the pin but is at line(s) 562
+  near-miss: docs/CONFORMANCE-2026-09-27.md:261 cites validation.cpp:1245 beside `REJECT_NONSTANDARD`, which is not in src/validation.cpp:1245–1245 at the pin but is at line(s) 1244
+  near-miss: docs/DESIGN.md:122 cites conditional_tracker.cpp:46–49 beside `op_else`, which is not in src/script/conditional_tracker.cpp:46–49 at the pin but is at line(s) 51
+  near-miss: docs/DESIGN.md:139 cites interpreter.h:52 beside `CheckSig`, which is not in src/script/interpreter.h:52–52 at the pin but is at line(s) 54
+  near-miss: docs/PARAMETERS.md:126 cites txvalidator.cpp:583 beside `GetConsensus`, which is not in core/txvalidator.cpp:583–583 at the pin but is at line(s) 584
+  near-miss: docs/PARAMETERS.md:148 cites ScriptVerifierGoBDK.go:124–137 beside `GoBDK`, which is not in services/validator/ScriptVerifierGoBDK.go:124–137 at the pin but is at line(s) 139
+  near-miss: docs/PARAMETERS.md:149 cites configscriptpolicy.cpp:60 beside `requireStandard`, which is not in src/configscriptpolicy.cpp:60–60 at the pin but is at line(s) 61
+  near-miss: docs/PARAMETERS.md:174 cites bdk/core/txvalidator.cpp:864 beside `blockHeight`, which is not in core/txvalidator.cpp:864–864 at the pin but is at line(s) 858, 865, 869
+  near-miss: docs/PARAMETERS.md:200 cites script_flags.h:13–115 beside `uint32_t`, which is not in src/script/script_flags.h:13–115 at the pin but is at line(s) 117
+  near-miss: docs/PARAMETERS.md:36 cites consensus.h:40 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:40–40 at the pin but is at line(s) 43
+  near-miss: docs/PARAMETERS.md:38 cites consensus.h:58 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:58–58 at the pin but is at line(s) 55, 60
+  near-miss: docs/PARAMETERS.md:39 cites consensus.h:50 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:50–50 at the pin but is at line(s) 55
+  near-miss: docs/PARAMETERS.md:99 cites policy.h:227–230 beside `SCRIPT_VERIFY_SIGPUSHONLY`, which is not in src/policy/policy.h:227–230 at the pin but is at line(s) 232
+  near-miss: docs/STATE-OF-THE-WORLD.md:42 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: docs/STATE-OF-THE-WORLD.md:59 cites interpreter.cpp:1786–1790 beside `OP_BIN2NUM`, which is not in src/script/interpreter.cpp:1786–1790 at the pin but is at line(s) 1780
+  near-miss: docs/audit/2026-09-27-lens-S1-block-by-S1.md:127 cites script_num.h:66–70 beside `int64_t`, which is not in src/script/script_num.h:66–70 at the pin but is at line(s) 65, 74
+  near-miss: docs/audit/2026-09-27-lens-S1-by-S3.md:76 cites interpreter.cpp:694–699 beside `OP_LSHIFTNUM`, which is not in src/script/interpreter.cpp:694–699 at the pin but is at line(s) 692
+  near-miss: docs/audit/2026-09-27-lens-S1-by-S3.md:88 cites interpreter.cpp:1786–1790 beside `OP_BIN2NUM`, which is not in src/script/interpreter.cpp:1786–1790 at the pin but is at line(s) 1780
+  near-miss: docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md:42 cites spend.rs:190–192 beside `script_num`, which is not in src/script/spend.rs:190–192 at the pin but is at line(s) 186, 187
+  near-miss: docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md:55 cites spend.rs:190–192 beside `script_num`, which is not in src/script/spend.rs:190–192 at the pin but is at line(s) 186, 187
+  near-miss: docs/audit/2026-09-27-lens-S2-by-S3.md:11 cites validation.cpp:527-536/572-593/601-603 beside `CheckTransactionCommon`, which is not in src/validation.cpp:601–603 at the pin but is at line(s) 605, 606
+  near-miss: docs/lanes/lean.md:177 cites script_flags.h:56–57 beside `DISCOURAGE`, which is not in src/script/script_flags.h:56–57 at the pin but is at line(s) 59
+  near-miss: docs/lanes/lean.md:201 cites spend.rs:190–192 beside `script_num`, which is not in src/script/spend.rs:190–192 at the pin but is at line(s) 186, 187
+  near-miss: docs/lanes/lean.md:45 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: docs/lanes/lean.md:72 cites interpreter.cpp:694–699 beside `OP_LSHIFTNUM`, which is not in src/script/interpreter.cpp:694–699 at the pin but is at line(s) 692
+  near-miss: lean/BsvScript/Numbers.lean:153 cites interpreter.cpp:1810–1813 beside `SCRIPT_ERR_SCRIPTNUM_OVERFLOW`, which is not in src/script/interpreter.cpp:1810–1813 at the pin but is at line(s) 1809
+  near-miss: lean/BsvScript/Numbers.lean:428 cites script_num.h:57 beside `INT64_SERIALIZED_SIZE`, which is not in src/script/script_num.h:57–57 at the pin but is at line(s) 55
+  near-miss: lean/BsvScript/Ops/Crypto.lean:13 cites interpreter.cpp:1402–1443 beside `OP_CODESEPARATOR`, which is not in src/script/interpreter.cpp:1402–1443 at the pin but is at line(s) 1445
+  near-miss: lean/BsvScript/Ops/Expansion.lean:17 cites script_num.h:60–63 beside `int64`, which is not in src/script/script_num.h:60–63 at the pin but is at line(s) 58, 65
+  near-miss: lean/BsvScript/Ops/Splice.lean:8 cites interpreter.cpp:1687–1706 beside `OP_SPLIT`, which is not in src/script/interpreter.cpp:1687–1706 at the pin but is at line(s) 1708
+  near-miss: lean/BsvScript/Ops/Stack.lean:7 cites interpreter.cpp:876–1055 beside `OP_SIZE`, which is not in src/script/interpreter.cpp:876–1055 at the pin but is at line(s) 1057
+  near-miss: lean/BsvScript/Params.lean:210 cites policy.h:81 beside `UINT32_MAX`, which is not in src/policy/policy.h:81–81 at the pin but is at line(s) 83
+  near-miss: lean/BsvScript/Params.lean:290 cites ScriptVerifierGoBDK.go:171 beside `SetMaxSigOpsPostGenesisPolicy`, which is not in services/validator/ScriptVerifierGoBDK.go:171–171 at the pin but is at line(s) 175
+  near-miss: lean/BsvScript/Params.lean:42 cites interpreter.cpp:285 beside `SCRIPT_VERIFY_LOW_S`, which is not in src/script/interpreter.cpp:285–285 at the pin but is at line(s) 282
+  near-miss: lean/BsvScript/Params.lean:70 cites interpreter.cpp:40–44 beside `SCRIPT_CHRONICLE`, which is not in src/script/interpreter.cpp:40–44 at the pin but is at line(s) 48, 49
+  near-miss: lean/BsvScript/Properties/Eras.lean:239 cites policy.h:217–221 beside `CHRONICLE`, which is not in src/policy/policy.h:217–221 at the pin but is at line(s) 211, 214
+  near-miss: lean/BsvScript/Properties/Eras.lean:239 cites verify_script_flags.cpp:71–75 beside `CHRONICLE`, which is not in src/verify_script_flags.cpp:71–75 at the pin but is at line(s) 78
+  near-miss: lean/BsvScript/Properties/Eras.lean:543 cites conditional_tracker.cpp:57–65 beside `has_op_else`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 51
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:214 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:285 cites script_tests.cpp:282–283 beside `CLEANSTACK`, which is not in src/test/script_tests.cpp:282–283 at the pin but is at line(s) 281
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:386 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Sighash.lean:286 cites script.h:205–219 beside `FindAndDelete`, which is not in src/script/script.h:205–219 at the pin but is at line(s) 200
+  near-miss: lean/BsvScript/Sighash.lean:536 cites script.h:169–188 beside `GetOp2`, which is not in src/script/script.h:169–188 at the pin but is at line(s) 163
+  near-miss: lean/BsvScript/TxPolicy.lean:19 cites policy.h:81 beside `UINT32_MAX`, which is not in src/policy/policy.h:81–81 at the pin but is at line(s) 83
+  near-miss: lean/BsvScript/TxRules.lean:175 cites validation.cpp:601–603 beside `CheckRegularTransaction`, which is not in src/validation.cpp:601–603 at the pin but is at line(s) 595
+  near-miss: lean/Bsvs/Run.lean:35 cites consensus.h:27 beside `MAX_TX_SIZE_CONSENSUS_AFTER_GENESIS`, which is not in src/consensus/consensus.h:27–27 at the pin but is at line(s) 29
+  near-miss: lean/Test/ErasCheck.lean:186 cites configscriptpolicy.cpp:67–70 beside `MaxOpsPerScript`, which is not in src/configscriptpolicy.cpp:67–70 at the pin but is at line(s) 65
+  near-miss: lean/Test/ErasCheck.lean:215 cites conditional_tracker.cpp:57–65 beside `OP_ELSE`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 53
+  near-miss: lean/Test/ErasCheck.lean:276 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:319 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:360 cites verify_script_flags.cpp:43 beside `DERSIG`, which is not in src/verify_script_flags.cpp:43–43 at the pin but is at line(s) 42, 44
+(53 near-miss leads here; 47 in (2)'s proposal and 51 in the dry run at 0310ec4: a dry run scans every occurrence of an anchored citation, a proposal only the first occurrence of each unanchored key (hence docs/CONFORMANCE-2026-09-27.md:204 and :234 and the second spend.rs:190–192 of docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md at 0310ec4), docs/lanes/lean.md's script_flags.h:56–57 follows S2's re-cut of its sentence at 4974440, and two more arrive with 3eb9885's pages: docs/audit/2026-09-27-lens-S1-block-by-S1.md:127 and docs/lanes/lean.md:201.)
+
+== the new source is live: go-chaincfg re-pinned IN MEMORY to v1.6.2 (regtest reads 100 / 200 there at the same lines 475–476, 10,000 / 15,000 at v1.5.8) ==
+cite_check --repin go-chaincfg.commit=198ccf650e914b1ece818553ade71512760e0eaf (in memory; the pins block is unchanged):
+  MOVED docs/PARAMETERS.md:156 params.go:475–476: params.go:475 at the pin is not the anchored text
+  MOVED docs/PROVENANCE.md:17 params.go:475–476: params.go:475 at the pin is not the anchored text
+cite_check: 2529 citations found in lean/ and docs/ (2464 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1916, MOVED 2; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 12, ambiguous 3, unpinned 0, other-version 11, self 374, history 210, absent 0, orphan rows 0; skipped 0
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+exit 1
+
+== sitting 1's re-pin again: the reference re-pinned IN MEMORY to 6fe29fb2e (the 40th entry of `git log 879fc8b42`; 312 commits in 6fe29fb2e..879fc8b42 [D]) ==
+  (280 MOVED lines; the first three:)
+  MOVED lean/BsvScript/Flags.lean:14 standard.cpp:330–337: src/script/standard.cpp:330 at the pin is not the anchored text
+  MOVED lean/BsvScript/Flags.lean:132 standard.cpp:330–337: src/script/standard.cpp:330 at the pin is not the anchored text
+  MOVED lean/BsvScript/Machine.lean:8 interpreter.cpp:388–1833: `EvalScript` is not in src/script/interpreter.cpp:388–1833 at the pin (it is at 385, 1973, 1985, 1999, 2007, 2326)
+cite_check: 2529 citations found in lean/ and docs/ (2464 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1638, MOVED 280; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 12, ambiguous 3, unpinned 0, other-version 11, self 374, history 210, absent 0, orphan rows 0; skipped 0
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+exit 1
+(123 moved at c49996d's 980 anchored, 273 at 0310ec4's 1,891, 280 at e65da5b's 1,918: the rows grew, the verdict is the same, RED.)
+
+== the Modal container's case at e65da5b: every clone absent (HOME an empty directory) ==
+[withheld at export: a sibling tree's line]
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+-- the same with CITE_CHECK_REQUIRE_CLONES=1 --
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and bitcoin-sv is absent (clone absent: ~/bsv/bitcoin-sv)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and teranode is absent (clone absent: ~/bsv/teranode)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and gobdk is absent (clone absent: ~/bsv/bdk)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and bsv-rs is absent (clone absent: ~/bsv/bsv-rs)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and go-sdk is absent (clone absent: ~/bsv/go-sdk)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and ts-sdk is absent (clone absent: ~/bsv/ts-stack)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and go-chaincfg is absent (clone absent: ~/bsv/go-chaincfg)
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+exit 1

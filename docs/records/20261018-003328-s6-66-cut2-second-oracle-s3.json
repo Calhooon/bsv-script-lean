@@ -1,0 +1,1015 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 503,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 9,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 21,
+      "no-verdict": 0,
+      "non-judging": 12,
+      "pending": 0,
+      "rows": 48,
+      "rpc-precheck": 0,
+      "unrealizable": 27
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 30,
+      "rpc-precheck": 0,
+      "unrealizable": 30
+    },
+    "utxo": {
+      "agree": 2,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 2,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 2,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [],
+    "finality": [],
+    "mempool": [
+      {
+        "id": "regular-pre-genesis-sigops-20000",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"bad-txns-too-many-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-pre-genesis-sigops-20001",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txn-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-genesis-grace-202",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"flexible-bad-txn-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":202}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-genesis-grace-273",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txn-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":273}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-genesis-grace-opposite-also-fails",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txn-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":202}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-census-sigop-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects a sigop cap of 1; the pinned getter returns the compiled pre-Genesis cap 20000 with no launch or RPC selector (src/config.cpp:2417-2420) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: maxTxSigOpsCountConsensusBeforeGenesis has no Teranode setting ([SRC] no maxtxsigopscountconsensusbeforegenesis key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-census-size-equal-10000",
+        "label": "[X]",
+        "reference_token": "unrealizable: this row overrides a compiled transaction-size consensus getter to 61 bytes; the pinned getters return compiled constants with no launch or RPC override (src/configscriptpolicy.cpp:397-412) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: maxTxSizeConsensusBeforeGenesis has no Teranode setting ([SRC] no maxtxsizeconsensusbeforegenesis key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-census-size-over-10000",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects a pre-Genesis size cap of 60 bytes; the pinned getter returns the compiled constant with no launch or RPC selector (src/configscriptpolicy.cpp:397-405) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: maxTxSizeConsensusBeforeGenesis has no Teranode setting ([SRC] no maxtxsizeconsensusbeforegenesis key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-census-size-equal-0",
+        "label": "[X]",
+        "reference_token": "unrealizable: this row overrides a compiled transaction-size consensus getter to 61 bytes; the pinned getters return compiled constants with no launch or RPC override (src/configscriptpolicy.cpp:397-412) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":0}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: maxTxSizeConsensusAfterGenesis has no Teranode setting ([SRC] no maxtxsizeconsensusaftergenesis key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "regular-census-size-over-0",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects a post-Genesis size cap of 60 bytes; the pinned getter returns the compiled constant with no launch or RPC selector (src/configscriptpolicy.cpp:408-412) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":0}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: maxTxSizeConsensusAfterGenesis has no Teranode setting ([SRC] no maxtxsizeconsensusaftergenesis key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "script-budget-high-relay",
+        "label": "[X]",
+        "reference_token": "measured non-judging: {\"accepted\":[],\"pending\":[\"4df22113bf485316d8036816d0e7932496782728f08d47f51c0a6d84a5a2833b\"],\"pendingLow\":true,\"status\":\"deferred\"} [non-judging (#71): the scripts-stage outcome is a time-budget expiry under the default CPU validation clock ([SRC] src/txn_validation_config.h:36-37; src/init.cpp:2890-2895; src/validation.cpp:990-1006) against maxstdtxvalidationduration=1 ms, its floor (src/config.cpp:688-705); which check expired, relay or block word, is not observable: both set one reason with empty detail (src/validation.cpp:1349-1356,1424-1431); fixture: 200 P2PKH inputs replace the row's P2SH(OP_TRUE) coin; expiry observed in this run] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"useLimits\":true} and context {\"budget\":\"relay\",\"genesisHeight\":100}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "script-budget-high-block",
+        "label": "[X]",
+        "reference_token": "measured non-judging: {\"accepted\":[],\"pending\":[\"4df22113bf485316d8036816d0e7932496782728f08d47f51c0a6d84a5a2833b\"],\"pendingLow\":true,\"status\":\"deferred\"} [non-judging (#71): the scripts-stage outcome is a time-budget expiry under the default CPU validation clock ([SRC] src/txn_validation_config.h:36-37; src/init.cpp:2890-2895; src/validation.cpp:990-1006) against maxstdtxvalidationduration=1 ms, its floor (src/config.cpp:688-705); which check expired, relay or block word, is not observable: both set one reason with empty detail (src/validation.cpp:1349-1356,1424-1431); fixture: 200 P2PKH inputs replace the row's P2SH(OP_TRUE) coin; expiry observed in this run] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"useLimits\":true} and context {\"budget\":\"block\",\"genesisHeight\":100}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "outer-block-failure-mandatory-success",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects skipScriptFlags=640; sendrawtransaction accepts only the transaction and fee booleans, with no script-flag override selector (src/rpc/rawtransaction.cpp:1560-1594); the exact request is unavailable on this cut-1 RPC [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"skipScriptFlags\":640} and context {\"genesisHeight\":10000,\"tipHeight\":1500}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935); the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "outer-mandatory-budget-low-invalid",
+        "label": "[X]",
+        "reference_token": "unrealizable: the P2P surface was tried: a P2P request carries no skip flags (src/net/net_processing.cpp:3384-3393), and the relay word answered {\"code\":64,\"namespace\":\"node\",\"reason\":\"non-mandatory-script-verify-flag (Locktime requirement not satisfied)\",\"status\":\"rejected\"} at the relay check; the one per-request skipscriptflags selector is sendrawtransactions' configuration (src/rpc/rawtransaction.cpp:1282-1292,1467), whose batch validation passes fUseLimits=false (src/txn_validator.cpp:261-266); -promiscuousmempoolflags replaces the node-wide relay word (src/verify_script_flags.cpp:11-28), not the row's request mask. The masked limited request has no surface at 6504a3af [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"lowPriority\":true,\"skipScriptFlags\":640,\"useLimits\":true} and context {\"budget\":\"mandatory\",\"genesisHeight\":10000,\"tipHeight\":1500}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935); the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "outer-relay-cltv-refusal",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"non-mandatory-script-verify-flag (Locktime requirement not satisfied)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000,\"tipHeight\":1500}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "outer-chronicle-grace-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"chronicleHeight\":202}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: chronicleGracefulPeriod has no Teranode setting ([SRC] no chroniclegracefulperiod key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "outer-chronicle-grace-72",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"flexible-mandatory-script-verify-flag-failed (Only non-push operators allowed in signatures)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"chronicleHeight\":202}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: chronicleGracefulPeriod has no Teranode setting ([SRC] no chroniclegracefulperiod key in the tag's Go sources or settings.conf (git grep empty)); requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "held-rate-zero-elapsed",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requires a preset full replacement bucket and exactly zero elapsed system_clock time; setmocktime only sets GetTime, and RPC exposes neither the bucket fill/last-drain setters nor that clock (src/leaky_bucket.h:65-102; src/utiltime.cpp:22-33) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-rate-fractional-half-second",
+        "label": "[X]",
+        "reference_token": "unrealizable: the selected bucket sample requires preset fill 7200 and exactly 500000000 elapsed nanoseconds; the pinned bucket reads system_clock directly and exposes no sample/setter, while setmocktime only controls GetTime (src/leaky_bucket.h:65-102; src/utiltime.cpp:22-33). A delayed RPC cannot establish this exact sample [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "rolling-block-resets-timestamp",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"rollingRate\":8000} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 8000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "limit-secondary-unsigned-underflow",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects resident maxMempool=61 bytes and zero disk; the pinned launch rejects nonzero resident limits below 300 MB (src/config.cpp:2440-2456; src/init.cpp:2384-2398). Raising the cap or adding disk changes the selected configuration and byte-only accounting boundary [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "orphan-admission-aggregate-134",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"orphanBytes\":61,\"orphanCount\":1,\"orphans_final\":0,\"parent_requests\":true,\"retainedSetSize\":1} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects maxOrphanTxSize 134 (a byte cap on the orphan pool); the bridge caps its orphan map by count (legacy_maxOrphanTxs, settings/legacy_settings.go:14), so the byte boundary has no Teranode setting, and the map has no surface to read the retained set (services/legacy/netsync/manager.go:487) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "orphan-admission-aggregate-135",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"orphanBytes\":122,\"orphanCount\":2,\"orphans_final\":0,\"parent_requests\":true,\"retainedSetSize\":2} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects maxOrphanTxSize 135 (a byte cap on the orphan pool); the bridge caps its orphan map by count (legacy_maxOrphanTxs, settings/legacy_settings.go:14), so the byte boundary has no Teranode setting, and the map has no surface to read the retained set (services/legacy/netsync/manager.go:487) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "orphan-p2p-size-60",
+        "label": "[X]",
+        "reference_token": "unrealizable: peer attempted the literal 60-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects maxTxSizePolicy 60 or 61; the reference refused the launch (its token: unrealizable, src/configscriptpolicy.cpp:415-440 at 6504a3af), so no measurement of the row stands beside the second oracle's, and the bridge's orphan map has no surface to read the retained child (services/legacy/netsync/manager.go:487) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "orphan-p2p-size-61",
+        "label": "[X]",
+        "reference_token": "unrealizable: peer attempted the literal 61-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects maxTxSizePolicy 60 or 61; the reference refused the launch (its token: unrealizable, src/configscriptpolicy.cpp:415-440 at 6504a3af), so no measurement of the row stands beside the second oracle's, and the bridge's orphan map has no surface to read the retained child (services/legacy/netsync/manager.go:487) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "promotion-visit-cap-0",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row sets maxPrimaryPromotionVisits to 0; the pinned private constexpr is 1000 with no launch or RPC setter (src/txmempool.h:423; src/txmempool.cpp:481-565) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "promotion-visit-cap-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row sets maxPrimaryPromotionVisits to 1; the pinned private constexpr is 1000 with no launch or RPC setter (src/txmempool.h:423; src/txmempool.cpp:481-565) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "absurd-fee-p2p-no-rpc-ceiling",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {
+          "rpc_ceiling_reject": true
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"P\"],\"orphans\":0,\"rpc_ceiling_reject\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "reject-parent-prevents-orphan-retention",
+        "judged_fields": [],
+        "label": "[X]",
+        "observed": {
+          "cached_silence": true,
+          "requested_after_reset": false,
+          "requested_before_rejection": true,
+          "tip_changed": true,
+          "wire_rejected_parent": false
+        },
+        "reference_token": "measured agree: {\"cached_silence\":true,\"orphans\":0,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"tip_changed\":true,\"wire_rejected_parent\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "reject-filter-p2p-silence",
+        "judged_fields": [],
+        "label": "[X]",
+        "observed": {
+          "cached_silence": true,
+          "requested_after_reset": false,
+          "requested_before_rejection": true,
+          "tip_changed": true
+        },
+        "reference_token": "measured agree: {\"cached_silence\":true,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"silence_after_conflict_expiry\":true,\"tip_changed\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "orphan-parent-only-enqueues",
+        "judged_fields": [
+          "retried_without_resubmission"
+        ],
+        "label": "[X]",
+        "observed": {
+          "retried_without_resubmission": true
+        },
+        "reference_token": "measured agree: {\"fence_rejected\":true,\"orphans_final\":0,\"queued\":{\"accepted\":[\"P\"],\"orphans\":1,\"pending\":1},\"retried_without_resubmission\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "orphan-revalidation-accepts",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {
+          "missing_parent_request": false,
+          "orphan_retained": 1
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "orphan-revalidation-can-refuse",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {
+          "missing_parent_request": false
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"P\"],\"child_reject\":{\"code\":16,\"reason\":\"bad-txns-in-belowout\"},\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "orphan-selected-arrival-revalidation",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {
+          "missing_parent_request": false,
+          "orphan_retained": 1
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "rejects-silence-until-reset",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "request",
+            "rejected 16",
+            "silence",
+            "silent",
+            "tip",
+            "silence",
+            "silent",
+            "silence"
+          ]
+        },
+        "reference_token": "measured agree: {\"answers\":[\"request\",\"rejected 16 bad-txns-in-belowout\",\"silence\",\"suppressed\",\"tip\",\"request\",\"rejected 16 bad-txns-in-belowout\",\"silence\"]} [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "rejects-lazy-reset-tip-returns",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "request",
+            "rejected 16",
+            "silence",
+            "tip",
+            "tip",
+            "silence",
+            "tip",
+            "silence"
+          ]
+        },
+        "reference_token": "measured agree: {\"answers\":[\"request\",\"rejected 16 bad-txns-in-belowout\",\"silence\",\"tip\",\"tip\",\"silence\",\"tip\",\"request\"]} [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "rejects-commit-refusal-not-remembered",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "rejected",
+            "rejected 16",
+            "silence",
+            "rejected 16",
+            "silence"
+          ]
+        },
+        "reference_token": "measured non-judging: {\"answers\":[\"heldNonFinal\",\"rejected 16 bad-txn-update\",\"request\",\"rejected 16 bad-txns-in-belowout\",\"silence\"]} [non-judging (#71): step 1 is a limited validation whose outcome depends on the node's CPU validation clock ([SRC] src/validation.cpp:990-1006,1077-1078,1335-1355,1414-1430,1444-1464; src/init.cpp:2890-2895 at 6504a3af), under default validationclockcpu=1, maxstdtxvalidationduration=3, maxnonstdtxvalidationduration=1000, maxtxchainvalidationbudget=50; no expiry in the completed validation that returned bad-txn-update; the projection matches the declared trace] [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "rejects-rpc-neither-reads-nor-writes",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "rejected 16",
+            "rejected",
+            "silence",
+            "rejected",
+            "request",
+            "rejected 16",
+            "silence"
+          ]
+        },
+        "reference_token": "measured agree: {\"answers\":[\"rejected 16 bad-txns-in-belowout\",\"rejected 16 bad-txns-in-belowout\",\"silence\",\"rejected 16 bad-txns-in-belowout\",\"request\",\"rejected 16 bad-txns-in-belowout\",\"silence\"]} [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "agree"
+      },
+      {
+        "id": "rejects-budget-low-timeout-remembered",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "accepted",
+            "silence",
+            "tip",
+            "silence"
+          ]
+        },
+        "reference_token": "measured non-judging: {\"answers\":[\"rejected 64 too-long-validation-time\",\"silence\",\"tip\",\"request\"]} [non-judging (#71): the outcome of the heavy frame depends on the node's CPU validation clock ([SRC] src/txn_validation_config.h:36-37; src/init.cpp:2890-2895; src/validation.cpp:990-1006) against maxnonstdtxvalidationduration=10, maxtxchainvalidationbudget=0; expiry observed in this run; the projection matches the declared trace] [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "rejects-budget-ample-accepted",
+        "label": "[X]",
+        "observed": {
+          "answers": [
+            "accepted",
+            "silence"
+          ]
+        },
+        "reference_token": "measured non-judging: {\"answers\":[\"accepted\",\"silence\"]} [non-judging (#71): the outcome of the heavy frame depends on the node's CPU validation clock ([SRC] src/txn_validation_config.h:36-37; src/init.cpp:2890-2895; src/validation.cpp:990-1006) against maxtxchainvalidationbudget=0; no expiry in this run; the projection matches the declared trace] [X] docs/records/20261014-013947-s6-71-regtest-s3.md",
+        "road": "trace",
+        "verdict": "agree"
+      },
+      {
+        "id": "sequence-disabled-after-genesis",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"55d0fd0d0433dd83d1886513abcef391c835511b714a28abea39ec37c79de58c\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "script-input-value",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "script-eval-false",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"mandatory-script-verify-flag-failed (Script evaluated without error but finished with a false/empty top stack element)\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "reject-filter-rpc-retries",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"cached_silence\":true,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"rpc_retry_admitted\":true,\"silence_after_conflict_expiry\":true,\"tip_changed\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "inputs-nonstandard-refused",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"bad-txns-nonstandard-inputs\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "4af2cf151fdff3313163fb8d60fddce72f53dd4d557eb7d36882daf3805dfba9"
+        },
+        "verdict": "agree"
+      },
+      {
+        "id": "sigops-above-cap",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"bad-txns-too-many-sigops\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "e94213833075366616992edb0f857d0e9f25cd17eb817f560bdcefaa55216788"
+        },
+        "verdict": "agree"
+      },
+      {
+        "id": "sigops-at-cap",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"3a316ea079738830121d3ad9ccab38e2f9dcd8356a0d5131e3730101b33d153b\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "e94213833075366616992edb0f857d0e9f25cd17eb817f560bdcefaa55216788"
+        },
+        "verdict": "agree"
+      },
+      {
+        "id": "absurd-fee-zero-disables",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "b823aece2cb335f4cf30e82b7d8f6ace3950d227ec18d6a08bb37cb81977afe5"
+        },
+        "verdict": "non-judging"
+      }
+    ],
+    "oracle": [
+      {
+        "id": "oracle/scripts/true",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/false",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/number-equal",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/number-unequal",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/return-coin-height-9",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_OP_RETURN\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/return-coin-height-10",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/return-coin-height-20",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/return-coin-height-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/mempool-tip-before-genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_OP_RETURN\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/resource-selector-True",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/resource-selector-False",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_SCRIPT_SIZE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/explicit-word-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/explicit-word-128",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/real-p2pkh",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/scripts/real-p2pkh-bad-signature",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/minimal-push",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_MINIMALDATA\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/minimal-push-recheck",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/exclude-minimaldata",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/exclude-before-input",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/outer/mandatory",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/limits/block-word-policy",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_SCRIPT_SIZE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/limits/modified-mandatory",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/limits/block-word-consensus",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/mandatory-failure",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/relay/mandatory-failure-recheck",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/grace/genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_OP_RETURN\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/grace/genesis-mandatory",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_OP_RETURN\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/grace/genesis-inverse",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/multi/input-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"verdict\":\"valid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      },
+      {
+        "id": "oracle/multi/input-1",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"code\":\"SCRIPT_ERR_EVAL_FALSE\",\"verdict\":\"invalid\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks a script verdict through verifyscript, which the instance's RPC does not serve ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)); the script layer's Teranode column is #41's (docs/records/20261006-013805-instance41-corpora.md)"
+      }
+    ],
+    "utxo": [
+      {
+        "id": "availability/missing",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000693042,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "availability/spent",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.222472542,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "full_receipt": {
+    "bytes": 1665811,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-003328/receipt.json",
+    "sha256": "23e14d547b4b3701a2cdfdfac9be0cea397d8a2defde9f1a266f6eacfe53151d"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "694dc714a0ea7c7c649edd20b297887c2283ffd369c4d51f3bb67f241ff310d7",
+      "height": 1352
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261018-003328-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 2,
+    "ends": 2,
+    "events": 1687,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "absurd-fee-p2p-no-rpc-ceiling",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "reject-parent-prevents-orphan-retention",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "reject-filter-p2p-silence",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "orphan-parent-only-enqueues",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "orphan-revalidation-accepts",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "orphan-revalidation-can-refuse",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "orphan-selected-arrival-revalidation",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "rejects-silence-until-reset",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "rejects-lazy-reset-tip-returns",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "rejects-commit-refusal-not-remembered",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "rejects-rpc-neither-reads-nor-writes",
+        "verdict": "agree"
+      },
+      {
+        "row": "rejects-budget-low-timeout-remembered",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "rejects-budget-ample-accepted",
+        "verdict": "agree"
+      },
+      {
+        "row": "availability/missing",
+        "verdict": "agree"
+      },
+      {
+        "row": "availability/spent",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "absurd-fee-p2p-no-rpc-ceiling",
+    "absurd-fee-zero-disables",
+    "availability/missing",
+    "availability/spent",
+    "held-rate-fractional-half-second",
+    "held-rate-zero-elapsed",
+    "inputs-nonstandard-refused",
+    "limit-secondary-unsigned-underflow",
+    "oracle/grace/genesis",
+    "oracle/grace/genesis-inverse",
+    "oracle/grace/genesis-mandatory",
+    "oracle/limits/block-word-consensus",
+    "oracle/limits/block-word-policy",
+    "oracle/limits/modified-mandatory",
+    "oracle/multi/input-0",
+    "oracle/multi/input-1",
+    "oracle/outer/mandatory",
+    "oracle/relay/exclude-before-input",
+    "oracle/relay/exclude-minimaldata",
+    "oracle/relay/mandatory-failure",
+    "oracle/relay/mandatory-failure-recheck",
+    "oracle/relay/minimal-push",
+    "oracle/relay/minimal-push-recheck",
+    "oracle/scripts/explicit-word-0",
+    "oracle/scripts/explicit-word-128",
+    "oracle/scripts/false",
+    "oracle/scripts/mempool-tip-before-genesis",
+    "oracle/scripts/number-equal",
+    "oracle/scripts/number-unequal",
+    "oracle/scripts/real-p2pkh",
+    "oracle/scripts/real-p2pkh-bad-signature",
+    "oracle/scripts/resource-selector-False",
+    "oracle/scripts/resource-selector-True",
+    "oracle/scripts/return-coin-height-10",
+    "oracle/scripts/return-coin-height-20",
+    "oracle/scripts/return-coin-height-2147483647",
+    "oracle/scripts/return-coin-height-9",
+    "oracle/scripts/true",
+    "orphan-admission-aggregate-134",
+    "orphan-admission-aggregate-135",
+    "orphan-p2p-size-60",
+    "orphan-p2p-size-61",
+    "orphan-parent-only-enqueues",
+    "orphan-revalidation-accepts",
+    "orphan-revalidation-can-refuse",
+    "orphan-selected-arrival-revalidation",
+    "outer-block-failure-mandatory-success",
+    "outer-chronicle-grace-0",
+    "outer-chronicle-grace-72",
+    "outer-mandatory-budget-low-invalid",
+    "outer-relay-cltv-refusal",
+    "promotion-visit-cap-0",
+    "promotion-visit-cap-1",
+    "regular-census-sigop-cap",
+    "regular-census-size-equal-0",
+    "regular-census-size-equal-10000",
+    "regular-census-size-over-0",
+    "regular-census-size-over-10000",
+    "regular-genesis-grace-202",
+    "regular-genesis-grace-273",
+    "regular-genesis-grace-opposite-also-fails",
+    "regular-pre-genesis-sigops-20000",
+    "regular-pre-genesis-sigops-20001",
+    "reject-filter-p2p-silence",
+    "reject-filter-rpc-retries",
+    "reject-parent-prevents-orphan-retention",
+    "rejects-budget-ample-accepted",
+    "rejects-budget-low-timeout-remembered",
+    "rejects-commit-refusal-not-remembered",
+    "rejects-lazy-reset-tip-returns",
+    "rejects-rpc-neither-reads-nor-writes",
+    "rejects-silence-until-reset",
+    "rolling-block-resets-timestamp",
+    "script-budget-high-block",
+    "script-budget-high-relay",
+    "script-eval-false",
+    "script-input-value",
+    "sequence-disabled-after-genesis",
+    "sigops-above-cap",
+    "sigops-at-cap"
+  ],
+  "run_id": "gate95-20261017-234627-003328",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-18T00:33:29Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 11,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 23,
+    "no-verdict": 0,
+    "non-judging": 12,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 541.175804959
+  }
+}

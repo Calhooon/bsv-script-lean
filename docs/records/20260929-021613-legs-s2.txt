@@ -1,0 +1,26 @@
+S2 (Lean B), set 4 sitting 6, 2026-09-29: the console-only legs of the sitting's four landings (docs only; D156, D142)
+host: the Studio, ~/bsv/worktrees/spec-lean-b (branch lean-b); each run from `env -u BASH_ENV /bin/bash --noprofile --norc tools/check.sh cite`
+the leg of record: docs/records/20260929-015344-make-check-box.txt (twenty-one legs GREEN on the box, run at 994d280, which differs from b3406bf only in tools/check_box.sh)
+
+the byte-identity lines (the fourteen paths: lean harness corpus spec eval Makefile tools/check.sh tools/check_route.sh tools/check_pins.py tools/axiom_check.py tools/specgen.py tools/cite_check.py tools/modal_check.py docs/PROVENANCE.md):
+  git diff --quiet 5f2b3b8 b3406bf -- <the fourteen>: exit 0 (before b3406bf's push; 5f2b3b8 the parent's box GREEN, docs/records/20260929-010419-make-check-box.txt)
+  git diff --quiet 994d280 b3406bf -- <the fourteen>: exit 0; git diff --stat b3406bf 994d280: tools/check_box.sh | 67 (one file)
+  git diff --quiet 994d280 1d436d7 -- <the fourteen>: exit 0
+  git diff --quiet b3406bf <HEAD> -- <the fourteen>: exit 0 before each push (1d436d7 at 01:44 UTC, ae1551f at 02:12 UTC, and this record's commit)
+
+the cite leg, one run per landing (every commit of the sitting touched docs/ only; the spec leg reads lean/ and spec/, which no commit touched):
+(i) 01:14:54 UTC, the tree of b3406bf before its commit (docs/DESIGN.md edited), the 1-minute load 105.43: ABOVE RULE 17's 20, a lapse, superseded by (ii); its lines equal (ii)'s:
+  cite_check: 3211 citations found in lean/ and docs/ (3151 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 155, history 1174, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+(ii) 01:23:41 to 01:23:45 UTC at b3406bf, clean, after the load gate (the load 17.83 at the start, 17.04 at the end); the run of record for b3406bf:
+  cite_check: 3211 citations found in lean/ and docs/ (3151 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 155, history 1174, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+(iii) 01:44:13 to 01:44:17 UTC at 1d436d7, clean (the load 8.24, 8.86):
+  cite_check: 3217 citations found in lean/ and docs/ (3157 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 156, history 1179, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+(iv) 02:12:00 to 02:12:04 UTC at ae1551f, clean (the load 16.95, 16.31):
+  cite_check: 3221 citations found in lean/ and docs/ (3161 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 156, history 1183, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+(v) 02:16:13 to 02:16:18 UTC (the load 5.26, 5.26) on docs/lanes/lean.md with S2's END BLOCK of 2026-09-29T02:14:54Z before the block named this record, and again 02:17:01 to 02:17:05 UTC (the load 5.76, 6.58) on the tree of the commit that carries this record, this record and its row aside; both runs read these lines:
+  cite_check: 3224 citations found in lean/ and docs/ (3164 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 76, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 159, history 1183, absent 0, orphan rows 3; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)

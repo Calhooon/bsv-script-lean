@@ -1,0 +1,6 @@
+{
+  "free_percentage": 89,
+  "one_minute_load": 3.4,
+  "swap_raw": "vm.swapusage: total = 2048.00M  used = 1006.88M  free = 1041.12M  (encrypted)\n",
+  "gate": true
+}

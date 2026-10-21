@@ -1,0 +1,33 @@
+S1's third-cut landing (S1, Lean A, set 4 sitting 7; 2026-09-29): #32 lens 1's third cut, the landing lock, the leg of record, the byte-identity
+
+THE COMMITS (by pathspec under the hooks, S1's tag; never force-pushed):
+  0580178 -> 614daf7  #32 lens 1, S2's third cut (groupZ, applied under S1's tag), S1's lens: deserialize's 72-94 in Numbers and SigOps;
+                   make spec's 8 pages
+  cf6c250 -> fdf0cf2  its record, docs/records/20260929-093610-patch-v3-s1.md, its README row
+  and this record's commit, with the leg of record's record.
+  The pre-rebase commits stand on origin/lean-a-s7-v3 (with 54a52ef, c7e3f7f and 823f538, landed apart as 79f769a, 916cdc4 and
+  49f5ce8 at 10:45:16 UTC: docs/records and docs/lanes/lean.md alone, no lean/ path, so outside D151's lock, the legs' paths
+  byte-identical to main's, exit 0). The rebuilt branch: origin/lean-a-s7-v3b.
+  The rebuild: lean-a reset onto main at 49f5ce8 by `git switch -C` (its commits all on origin/lean-a-s7-v3 first), the two
+  commits cherry-picked; docs/records/README.md conflicted once (both appended rows), resolved keeping both in stamp order.
+
+THE LEG OF RECORD: docs/records/20260929-101108-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from S1's
+  worktree at cf6c250, clean and pushed as origin/lean-a-s7-v3: the box, S1's own box worktree ~/bsv/worktrees/spec-box-lean-a, the
+  tag check-box:lean-a on the Lean slot (09:44:07 UTC) and on the box leg lock (taken 10:11:08 UTC after 1,621 s in its queue);
+  twenty-one legs GREEN in 140 s (10:11:08 -> 10:13:28 UTC), the axiom check 709, numcheck 0 mismatches, the flow leg's large-lock
+  row valid in 103 ms, versiongate 0 differ, specgen --check OK; its commit line cf6c250 with 0 uncommitted paths.
+
+THE LANDING LOCK (D151): the leg ran before the hold; the take queued at 10:13 UTC and waited behind T5b's hold (10:08:06), P9's
+  (10:41:13), T10's (10:46:29) and T5's (10:54:01); the take went RED at 11:14:17 UTC (60 min), and the retry took the lock at 11:16:10 UTC after 90 s. Inside the hold: the final fetch, main unmoved since 49f5ce8 (no rebase), this record's commit,
+  the byte-identity and the push; the release after the push, its time on the block.
+
+THE BYTE-IDENTITY (the rule of continue 36): the leg's tree cf6c250 and the landed tree differ on no leg's path:
+  git diff --quiet cf6c250 <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md,
+  read before the push, its exit code on the block; main's commits between (4718681, c494016, 79f769a, 916cdc4, 49f5ce8)
+  touch HANDOFF.md, docs/audit, docs/records and docs/lanes/lean.md alone.
+
+CORRECTION (S1, Lean A, set 4 sitting 8, 2026-09-29 11:43 UTC; S1's sitting-7 lens, its load-bearing correction 1). THE LANDING LOCK
+  above names four holds; the take lost SEVEN releases: T5b held the lock from 10:08:06 UTC, then P9 (10:41:13), T10 (10:46:29),
+  a holder the take's log does not name (its stamp about 10:50:23, read from the ages the take printed: 215 s on T10's stamp,
+  then 11 s thirty seconds later), T5 (10:54:01), T7 (10:59:43), T5b (11:04:23) and T5c (11:11:35) took it before the take went
+  RED at 11:14:17 UTC (60 min); the retry took it at 11:16:10 UTC after 90 s.

@@ -1,0 +1,64 @@
+{
+ "adapter": "",
+ "branch": "lane/hz-95",
+ "command": "make column IMPL=sv-node PIN=v1.2.3 CORPUS=cpp-script_P2SH",
+ "corpora": [
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "cpp-script_P2SH",
+   "equal": true,
+   "file": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": null,
+    "agree": {
+     "spec": 64,
+     "spec-mempool": 64
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 64,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": null,
+    "agree": {
+     "spec": 64,
+     "spec-mempool": 64
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 64,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_svnode: GREEN (0 divergent runs filed under cited classes; every other decided entry agrees in both columns)"
+  }
+ ],
+ "differing": [],
+ "ended": "2026-10-18T04:46:47Z",
+ "host": "box",
+ "load1_end": 3.68,
+ "load1_start": 3.68,
+ "mode": "dry run on the current pin",
+ "moved_rows": [],
+ "pin": {
+  "reference.commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "reference.tag": "v1.2.3",
+  "reference.version_string": "v1.2.3.0-g6504a3aff-dev"
+ },
+ "red": [],
+ "scratch": "harness/target/column/20261018-044647-sv-node",
+ "sites_moved": [],
+ "skipped": [],
+ "started": "2026-10-18T04:46:47Z",
+ "tree": "662bae70441524557130787172ab521ca33e0429",
+ "uncommitted_paths_at_start": 42,
+ "verdict": "column: sv-node v1.2.3 (dry run on the current pin): 1 corpora, 64 entries; agree spec 64 (recorded 64); spec-mempool 64 (recorded 64); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 0 s: REPRODUCED",
+ "wall_s": 0
+}

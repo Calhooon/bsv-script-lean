@@ -1,0 +1,131 @@
+import hashlib, json, os, re, shutil, signal, subprocess, sys, time
+from pathlib import Path
+
+# Scratch-only replay instrumentation. No node RPC and no transaction output.
+# Bounds [LIT]: wall 120 s, sampled group RSS 8 GiB, sample interval 0.2 s.
+WALL_S = 120
+RSS_KIB = 8 * 1024 * 1024
+PIN = '1402ec2d139d8d636e7b6859ca2b6a054387bf5c'
+WID = 'witness-million-spec-engine.resource-abort-million-seed-969309'
+root = Path(sys.argv[1])
+w = Path.home() / 'bsv/worktrees/spec-box-lean-b'
+binary = w / 'lean/.lake/build/bin/bsvs'
+os.setsid()
+p = None
+interrupted = None
+
+def received(sig, frame):
+    global interrupted
+    interrupted = sig
+
+for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGHUP):
+    signal.signal(sig, received)
+
+def cmd(args):
+    r = subprocess.run(args, capture_output=True, text=True, timeout=15)
+    if r.returncode:
+        raise RuntimeError(f'command refused: {args[0]} exit {r.returncode}')
+    return r.stdout.strip()
+
+def git(*args):
+    return cmd(['git', '-C', str(w), *args])
+
+def group_exists(pgid):
+    rows = cmd(['ps', '-axo', 'pgid=,stat=']).splitlines()
+    return any(int(f[0]) == pgid and not f[1].startswith('Z')
+               for line in rows if len(f := line.split()) == 2)
+
+def stop_group(child):
+    if not group_exists(child.pid):
+        child.wait()
+        return
+    os.killpg(child.pid, signal.SIGTERM)
+    until = time.monotonic() + 3
+    while group_exists(child.pid) and time.monotonic() < until:
+        child.poll()
+        time.sleep(0.05)
+    if group_exists(child.pid):
+        os.killpg(child.pid, signal.SIGKILL)
+    child.wait()
+
+assert git('rev-parse', 'HEAD') == PIN
+assert not git('status', '--porcelain')
+assert binary.is_file()
+st = binary.stat()
+expected = f"{git('rev-parse', 'HEAD:lean')} {hashlib.sha256(b'').hexdigest()[:16]} {int(st.st_mtime)} {st.st_ino}"
+assert Path(str(binary)+'.fingerprint').read_text().strip() == expected
+mp = cmd(['memory_pressure'])
+free = int(re.search(r'System-wide memory free percentage: (\d+)%', mp).group(1))
+load = os.getloadavg()[0]
+print('[M] gate '+json.dumps({'stamp':cmd(['date','-u','+%FT%TZ']),'memory_free_pct':free,'load1':load,'swap':cmd(['sysctl','vm.swapusage']),'physical_bytes':int(cmd(['sysctl','-n','hw.memsize']))}), flush=True)
+assert free >= 50 and load < 20, 'machine gate is closed'
+assert cmd([str(w/'eval/bsvs'),'--version']).startswith('bsvs spec@1402ec2 ')
+print('[X] artifact '+json.dumps({'pin':PIN,'sha256':hashlib.file_digest(binary.open('rb'),'sha256').hexdigest(),'fingerprint':expected,'build_needed':False}), flush=True)
+for rel in ['tools','eval','harness','corpus/witnesses','driver/release']:
+    (root/rel).mkdir(parents=True,exist_ok=True)
+row=json.loads((root/'selected-witness.jsonl').read_text())
+assert row['id']==WID
+assert row['divergence']['b']=='bsv-rs@0.3.30'
+shutil.copyfile(root/'selected-witness.jsonl',root/'corpus/witnesses/million.jsonl')
+(root/'eval/bsvs').write_text('#!/bin/bash\nset -eu\nexec '+str(w/'eval/bsvs')+' "$@"\n')
+(root/'eval/bsvs').chmod(0o755)
+# A driver build happens only if the evaluator finishes. It is offline and bounded
+# by the same process-group watcher. No Lean build runs in this recipe.
+(root/'driver/release/run_diff').write_text('''#!/bin/bash
+set -eu
+export CARGO_BUILD_JOBS=4
+export CARGO_TARGET_DIR="$HOME/bsv/targets/spec-box"
+S2_TREE="$HOME/bsv/worktrees/spec-box-lean-b"
+cargo +1.95.0 build --offline --locked --release --manifest-path "$S2_TREE/harness/Cargo.toml" --bin run_diff > "'''+str(root/'driver-build.log')+'''" 2>&1
+shasum -a 256 "$CARGO_TARGET_DIR/release/run_diff" > "'''+str(root/'driver-sha256.txt')+'''"
+exec "$CARGO_TARGET_DIR/release/run_diff" "$@"
+''')
+(root/'driver/release/run_diff').chmod(0o755)
+env=os.environ.copy()
+env.update({'BSVS_REBUILD':'0','CARGO_BUILD_JOBS':'4','CARGO_TARGET_DIR':str(root/'driver'),'BSV_SCRIPT_LEAN_ROOT':str(w)})
+log_path=root/'replay.log'
+samples=[]
+reason=None
+started=time.monotonic()
+try:
+    with log_path.open('w') as out:
+        p=subprocess.Popen(['/usr/bin/time','-l','bash',str(root/'tools/witness.sh'),WID],stdout=out,stderr=subprocess.STDOUT,env=env,start_new_session=True)
+        (root/'child.json').write_text(json.dumps({'pid':p.pid,'pgid':p.pid})+'\n')
+        while p.poll() is None:
+            elapsed=time.monotonic()-started
+            proc=cmd(['ps','-axo','pid=,pgid=,rss='])
+            members=[tuple(map(int,l.split())) for l in proc.splitlines() if len(l.split())==3]
+            rss=sum(x[2] for x in members if x[1]==p.pid)
+            samples.append({'wall_s':round(elapsed,3),'rss_kib':rss})
+            (root/'samples.json').write_text(json.dumps(samples)+'\n')
+            if interrupted:
+                reason=f'signal-{interrupted}'
+            elif rss >= RSS_KIB:
+                reason='rss-threshold'
+            elif elapsed >= WALL_S:
+                reason='wall-bound'
+            if reason:
+                print('[M] stop_trigger '+json.dumps({'reason':reason,'wall_s':round(elapsed,3),'rss_kib':rss}),flush=True)
+                stop_group(p)
+                break
+            time.sleep(0.2)
+        p.wait()
+finally:
+    if p is not None and group_exists(p.pid):
+        stop_group(p)
+wall=time.monotonic()-started
+text=log_path.read_text(errors='replace')
+(root/'samples.json').write_text(json.dumps(samples)+'\n')
+assert git('rev-parse','HEAD')==PIN
+assert binary.stat().st_ino==st.st_ino and binary.stat().st_mtime_ns==st.st_mtime_ns
+result={'source_pin':PIN,'wall_s':round(wall,3),'wall_bound_s':WALL_S,'rss_threshold_kib':RSS_KIB,'sample_interval_s':0.2,'sampled_peak_rss_kib':max((r['rss_kib'] for r in samples),default=0),'sample_count':len(samples),'stop_reason':reason,'replay_exit':p.returncode,'group_gone':not group_exists(p.pid),'witness_green':'witness.sh: GREEN' in text,'artifact_unchanged':True}
+(root/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+print('[X] replay_output_begin',flush=True)
+print(text,flush=True)
+print('[X] replay_output_end',flush=True)
+print('[M] replay_summary '+json.dumps(result),flush=True)
+if (root/'driver-build.log').exists():
+    print('[X] driver_build '+(root/'driver-build.log').read_text(errors='replace')[-2000:],flush=True)
+if (root/'driver-sha256.txt').exists():
+    print('[X] driver_sha256 '+(root/'driver-sha256.txt').read_text().strip(),flush=True)
+sys.exit(0 if result['witness_green'] and p.returncode==0 else 124 if reason=='wall-bound' else 125 if reason=='rss-threshold' else 1)

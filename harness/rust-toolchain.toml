@@ -1,0 +1,5 @@
+# bsv-script-lean #40: the harness crate's Rust toolchain, pinned (docs/PROVENANCE.md §1a `rust.toolchain`;
+# `make check-pins` refuses a drift). rustup selects it for every cargo invocation under harness/.
+[toolchain]
+channel = "1.95.0"
+profile = "minimal"

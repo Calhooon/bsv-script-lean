@@ -1,0 +1,14 @@
+S4b's landing record for its END BLOCK commit, set 4 sitting 6, 20260929-163733 UTC (the landing rule on a moving main, P9 through P3)
+
+the commit: ea4fa00caf73576242f1a7d663708d9de668ea25 (the END BLOCK on docs/lanes/harness.md and the table's 8 rows and 1 orphan in tools/cite_check.py), over 7701713 on main
+the legs:
+  pins, cite and spec (the legs that read docs/ and the table) re-ran LOCAL at ea4fa00 on the Studio, every clone present:
+    check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+    cite_check: 6910 citations found in lean/ and docs/ (6833 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 2, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 169, history 4594, absent 0, orphan rows 0; skipped 0
+    cite_check: GREEN (every anchored citation holds at the pin)
+    specgen --check: OK (117 files up to date; 0 rules flagged)
+  the eighteen others stand on S1's GREEN box leg at 7186987 (docs/records/20260929-155509-make-check-box.txt), as for 7701713
+  (docs/records/20260929-163323-f1-landing-s4b.txt): git diff --quiet 7186987 ea4fa00 -- . ':(exclude)docs' ':(exclude)tools/cite_check.py'
+  ':(exclude)harness/engines/gobdk' ':(exclude)HANDOFF.md'  -> exit 0 (no leg reads those but the pins leg the shim's go.mod and go.sum,
+  byte-identical)
+the load: 12:37  up 6 days, 19:39, 9 users, load averages: 6.27 5.86 5.33

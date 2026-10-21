@@ -1,0 +1,286 @@
+diff --git a/harness/src/bin/run_signer.rs b/harness/src/bin/run_signer.rs
+index 47986c7d..51dc3d47 100644
+--- a/harness/src/bin/run_signer.rs
++++ b/harness/src/bin/run_signer.rs
+@@ -25,6 +25,23 @@ use serde_json::{json, Value};
+ 
+ type Result<T> = std::result::Result<T, String>;
+ const METHODS: [&str; 3] = ["template", "api-default", "api-scriptcode"];
++/// #148 (d-bis): bsv-rs 0.7.0 also signs through its public scriptCode override.
++const BSVRS_METHODS: [&str; 4] = [
++    "template",
++    "api-default",
++    "api-scriptcode",
++    "api-context-scriptcode",
++];
++fn methods(engine: &str) -> &'static [&'static str] {
++    if engine == "bsv-rs" {
++        &BSVRS_METHODS
++    } else {
++        &METHODS
++    }
++}
++fn explicit_scriptcode(engine: &str, method: &str) -> bool {
++    engine == "bsv-rs" && matches!(method, "api-scriptcode" | "api-context-scriptcode")
++}
+ const ENGINES: [(&str, &str); 3] = [
+     ("go-sdk", GO_SDK_VERSION),
+     ("ts-sdk", TS_SDK_VERSION),
+@@ -622,7 +639,7 @@ fn measure(
+     let mut keyed = BTreeMap::new();
+     for row in rows {
+         if row.engine != engine
+-            || !METHODS.contains(&row.method.as_str())
++            || !methods(engine).contains(&row.method.as_str())
+             || keyed
+                 .insert((row.id.clone(), row.method.clone()), row)
+                 .is_some()
+@@ -632,7 +649,11 @@ fn measure(
+     }
+     let expected: BTreeSet<_> = cases
+         .iter()
+-        .flat_map(|c| METHODS.map(|m| (c.row.entry.id.clone(), m.to_string())))
++        .flat_map(|c| {
++            methods(engine)
++                .iter()
++                .map(|m| (c.row.entry.id.clone(), m.to_string()))
++        })
+         .collect();
+     if keyed.keys().cloned().collect::<BTreeSet<_>>() != expected {
+         return Err("adapter row coverage differs from corpus times methods".into());
+@@ -685,17 +706,20 @@ fn measure(
+         single_decisions: Vec::new(),
+         divergent: BTreeMap::new(),
+         red: 0,
+-        counts: METHODS.map(|m| (m.into(), Counts::default())).into(),
++        counts: methods(engine)
++            .iter()
++            .map(|m| (m.to_string(), Counts::default()))
++            .collect(),
+         words: words.clone(),
+         results: Vec::new(),
+         witnesses: BTreeMap::new(),
+         verdict_line: String::new(),
+     };
+     'cases: for case in cases {
+-        for method in METHODS {
++        for &method in methods(engine) {
+             let signed = &keyed[&(case.row.entry.id.clone(), method.to_string())];
+             validate(signed, case)?;
+-            if engine == "bsv-rs" && method == "api-scriptcode" && !consistent(signed, case) {
++            if explicit_scriptcode(engine, method) && !consistent(signed, case) {
+                 record.red += 1;
+             }
+             let counts = record.counts.get_mut(method).ok_or("method count")?;
+@@ -704,7 +728,7 @@ fn measure(
+                 record
+                     .results
+                     .push(json!({"id": signed.id, "method": method, "unsigned": signed.note}));
+-                if engine == "bsv-rs" && method == "api-scriptcode" {
++                if explicit_scriptcode(engine, method) {
+                     break 'cases;
+                 }
+                 continue;
+@@ -865,7 +889,7 @@ fn markdown(records: &[Record], stopped: bool) -> String {
+     );
+     s.push_str("[D] Synthetic outpoints are judged by `verifyscript` with the corpus prevouts; no coins are funded and nothing is submitted or broadcast. Each signed engine transaction and the self-check's hand-signed control are judged under both derived words. Both columns use the oracle's zeroed policy caps (consensus limits); relay means the relay flag word, not mempool admission or default policy limits. Locktime/finality and fees are outside this script judgment. `stopOnFirstInvalid=false` judges every input. A trace is one input in one column; site digests are compared separately, once per signed method. The node exposes input verdicts, not per-site execution verdicts. Refusal counts count each transaction once per class; classes can overlap when different inputs fail for different reasons. The refused union is signed minus valid for each column.\n\n| engine | method | signed [M] | valid block / relay [M] | refused by class block / relay [M] | unsigned by reason [M] |\n|---|---|---|---|---|---|\n");
+     for r in records {
+-        for method in METHODS {
++        for &method in methods(&r.engine) {
+             let c = &r.counts[method];
+             s += &format!(
+                 "| {} | {} | {} | {} / {} | {} / {} | {} |\n",
+@@ -892,7 +916,7 @@ fn markdown(records: &[Record], stopped: bool) -> String {
+         if r.engine == "bsv-rs" {
+             s += &format!("[M] `{}`. This compares two callers of the same library digest primitives; it is a self-consistency check. Every signed result is separately judged by the node.\n\n", consistency_line(r));
+             s += "[SRC] bsv-rs 0.5.0 `src/script/template.rs:85-99` selects the source locking script and calls the BIP143-only function `src/primitives/bsv/sighash.rs:941-944`. Its dispatched function at `:962-983` selects the original digest for Chronicle and returns constant one for original SINGLE beyond outputs. The node selects scriptCode at bitcoin-sv v1.2.3 `6504a3af` `src/script/interpreter.cpp:1471-1481`, dispatches at `:2112-2124` and returns original SINGLE constant one at `:2086-2100`. [SRC] bsv-rs 0.5.0 `src/primitives/bsv/sighash.rs:941-944` builds the BIP143 preimage (`:384`, `SighashCache::preimage` `:546-570`) whose hashOutputs is 32 zero bytes for SINGLE beyond outputs (`SighashCache::hash_outputs` `:534-536`), whatever the CHRONICLE bit; the node returns constant one for the same scope (`interpreter.cpp:2086-2100`, `:2112-2124`).\n\n[SRC] The public `unlock` paths are bsv-rs 0.5.0 `src/script/templates/p2pkh.rs:151-175`, `src/script/templates/p2pk.rs:67-86` and `src/script/templates/multisig.rs:161-187`. The options at `src/script/template.rs:112-120` cannot express Chronicle or omit FORKID, so those template rows are unsigned. Transaction signing at `src/transaction/transaction.rs:1430-1459` uses the same context.\n\n[D] Class precedence is lock-only, constant-one, then Chronicle BIP143. In-unlock Chronicle rows can have both scriptCode and dispatch differences; the lock-only count is not proof that scriptCode is the sole cause. The Chronicle BIP143 marker requires scriptCode equal to the control and an exact BIP143 preimage/digest. Control refusals are separate classes: SIG_PUSHONLY (`interpreter.cpp:2321-2334`), ILLEGAL_CHRONICLE (`:296-303`) and MUST_USE_FORKID (`:296-306`) at the same node pin; they are not signer disagreements.\n\n";
+-            for method in METHODS {
++            for &method in methods(&r.engine) {
+                 let decisions: Vec<_> = r
+                     .single_decisions
+                     .iter()
+diff --git a/harness/src/bin/signer_bsvrs.rs b/harness/src/bin/signer_bsvrs.rs
+index 5c8dffa8..281a7501 100644
+--- a/harness/src/bin/signer_bsvrs.rs
++++ b/harness/src/bin/signer_bsvrs.rs
+@@ -1,6 +1,9 @@
+-//! bsv-rs 0.5.0 signer adapter for #147. The node column judges the output.
+-//! Public templates use SigningContext (template.rs:85-99,188-190); the
+-//! explicit scriptCode path uses sighash.rs:962-983, like the hand control.
++//! bsv-rs signer adapter for #147, measured at main 5841f98 (0.7.0, #148 d-bis).
++//! The node column judges the output. Public templates use SigningContext,
++//! which dispatches by hash type at 0.7.0 (template.rs:133-154); the explicit
++//! scriptCode path uses compute_sighash_dispatched_for_signing, like the hand
++//! control; api-context-scriptcode passes the corpus scriptCode through the
++//! 0.7.0 public override SigningContext::with_script_code (template.rs:114-117).
+ 
+ use std::io::{BufRead, Write};
+ use std::path::Path;
+@@ -21,7 +24,12 @@ use serde::Serialize;
+ use serde_json::Value;
+ 
+ type Result<T> = std::result::Result<T, String>;
+-const METHODS: [&str; 3] = ["template", "api-default", "api-scriptcode"];
++const METHODS: [&str; 4] = [
++    "template",
++    "api-default",
++    "api-scriptcode",
++    "api-context-scriptcode",
++];
+ 
+ #[derive(Serialize)]
+ struct Trace {
+@@ -145,10 +153,15 @@ fn sign(row: &Row, method: &str, traces: &mut Vec<Trace>) -> Result<String> {
+         let mut digests = Vec::new();
+         let mut preimages = Vec::new();
+         for (site, h) in si.scriptcode_hex.iter().enumerate() {
+-            let code = if method == "api-scriptcode" {
+-                unhex(h)?
++            let site_code = if method == "api-context-scriptcode" {
++                Some(Script::from_binary(&unhex(h)?).map_err(|e| e.to_string())?)
+             } else {
+-                lock.to_binary()
++                None
++            };
++            let code = match (&site_code, method) {
++                (Some(script), _) => script.to_binary(),
++                (None, "api-scriptcode") => unhex(h)?,
++                _ => lock.to_binary(),
+             };
+             let params = SighashParams {
+                 version: tx.version,
+@@ -160,24 +173,24 @@ fn sign(row: &Row, method: &str, traces: &mut Vec<Trace>) -> Result<String> {
+                 satoshis: prevout.satoshis,
+                 scope: si.sighash_type,
+             };
+-            let (digest, preimage) = if method == "api-scriptcode" {
+-                let digest = compute_sighash_dispatched_for_signing(&params);
+-                let preimage = if si.sighash_type & 0x40 != 0 && si.sighash_type & 0x20 == 0 {
+-                    build_sighash_preimage(&params)
+-                } else if si.sighash_type & 0x1f == 3 && si.index >= tx.outputs.len() {
+-                    Vec::new() // Constant one is a digest, not a serialized preimage.
+-                } else {
+-                    build_sighash_preimage_original(&params)
+-                };
+-                (digest, preimage)
++            // The preimage follows the digest's dispatch (template.rs:122-128).
++            let preimage = if si.sighash_type & 0x40 != 0 && si.sighash_type & 0x20 == 0 {
++                build_sighash_preimage(&params)
++            } else if si.sighash_type & 0x1f == 3 && si.index >= tx.outputs.len() {
++                Vec::new() // Constant one is a digest, not a serialized preimage.
+             } else {
+-                // The library selects the lock and BIP143 itself (template.rs:85-99).
+-                (
+-                    context
+-                        .compute_sighash(si.sighash_type)
+-                        .map_err(|e| e.to_string())?,
+-                    build_sighash_preimage(&params),
+-                )
++                build_sighash_preimage_original(&params)
++            };
++            let digest = match (&site_code, method) {
++                (Some(script), _) => SigningContext::new(&raw, si.index, prevout.satoshis, &lock)
++                    .with_script_code(script)
++                    .compute_sighash(si.sighash_type)
++                    .map_err(|e| e.to_string())?,
++                (None, "api-scriptcode") => compute_sighash_dispatched_for_signing(&params),
++                // The library selects the lock; 0.7.0 dispatches by hash type.
++                _ => context
++                    .compute_sighash(si.sighash_type)
++                    .map_err(|e| e.to_string())?,
+             };
+             traces.push(Trace {
+                 index: si.index,
+@@ -254,10 +267,10 @@ fn row_result(value: &Value, method: &'static str) -> Signed {
+     match attempt {
+         Ok(tx) => {
+             result.tx_hex = Some(tx);
+-            result.note = if method == "api-scriptcode" {
+-                "bsv-rs dispatched digest and supplied scriptCode; empty preimage_hex denotes constant one."
+-            } else {
+-                "bsv-rs SigningContext selects the source lock and BIP143; template mode uses the public unlock output."
++            result.note = match method {
++                "api-scriptcode" => "bsv-rs dispatched digest and supplied scriptCode; empty preimage_hex denotes constant one.",
++                "api-context-scriptcode" => "bsv-rs SigningContext::with_script_code over the supplied scriptCode; empty preimage_hex denotes constant one.",
++                _ => "bsv-rs SigningContext selects the source lock and dispatches by hash type; template mode uses the public unlock output.",
+             }.into();
+         }
+         Err(e) => result.note = e,
+
+#148 lens, for the re-pin lane (not part of the measured source): the self-consistency line also holds api-context-scriptcode to the hand digests.
+diff --git a/harness/src/bin/run_signer.rs b/harness/src/bin/run_signer.rs
+index 51dc3d4..39514eb 100644
+--- a/harness/src/bin/run_signer.rs
++++ b/harness/src/bin/run_signer.rs
+@@ -558,6 +558,9 @@ struct Record {
+     api_scriptcode_rows: usize,
+     api_scriptcode_equal: usize,
+     api_scriptcode_unequal: usize,
++    context_scriptcode_rows: usize,
++    context_scriptcode_equal: usize,
++    context_scriptcode_unequal: usize,
+     single_decisions: Vec<Value>,
+     divergent: BTreeMap<String, usize>,
+     red: usize,
+@@ -703,6 +706,9 @@ fn measure(
+         api_scriptcode_rows: 0,
+         api_scriptcode_equal: 0,
+         api_scriptcode_unequal: 0,
++        context_scriptcode_rows: 0,
++        context_scriptcode_equal: 0,
++        context_scriptcode_unequal: 0,
+         single_decisions: Vec::new(),
+         divergent: BTreeMap::new(),
+         red: 0,
+@@ -736,6 +742,8 @@ fn measure(
+             counts.signed += 1;
+             if method == "api-scriptcode" {
+                 record.api_scriptcode_rows += 1;
++            } else if method == "api-context-scriptcode" {
++                record.context_scriptcode_rows += 1;
+             }
+             let mut columns = Vec::new();
+             for (c, column) in ["block", "relay"].iter().enumerate() {
+@@ -815,6 +823,12 @@ fn measure(
+                                 } else {
+                                     record.api_scriptcode_unequal += 1;
+                                 }
++                            } else if method == "api-context-scriptcode" {
++                                if equal {
++                                    record.context_scriptcode_equal += 1;
++                                } else {
++                                    record.context_scriptcode_unequal += 1;
++                                }
+                             }
+                             if equal {
+                                 record.digest_equal += 1;
+@@ -870,9 +884,26 @@ fn tally(counts: &BTreeMap<String, usize>) -> String {
+ }
+
+ fn consistency_line(r: &Record) -> String {
+-    format!("signer self-consistency: {} [X] ({} api-scriptcode rows, {} site digests equal, {} unequal) engine={}",
+-        if r.api_scriptcode_rows == r.rows && r.api_scriptcode_equal > 0 && r.api_scriptcode_unequal == 0 { "GREEN" } else { "RED" },
+-        r.api_scriptcode_rows, r.api_scriptcode_equal, r.api_scriptcode_unequal, r.engine)
++    // #148 lens: the fourth method is held to the hand digests in the line too.
++    let context = methods(&r.engine).contains(&"api-context-scriptcode");
++    let held = r.api_scriptcode_rows == r.rows
++        && r.api_scriptcode_equal > 0
++        && r.api_scriptcode_unequal == 0;
++    let context_held = !context
++        || (r.context_scriptcode_rows == r.rows
++            && r.context_scriptcode_equal > 0
++            && r.context_scriptcode_unequal == 0);
++    let context_part = if context {
++        format!(
++            " ({} api-context-scriptcode rows, {} site digests equal, {} unequal)",
++            r.context_scriptcode_rows, r.context_scriptcode_equal, r.context_scriptcode_unequal
++        )
++    } else {
++        String::new()
++    };
++    format!("signer self-consistency: {} [X] ({} api-scriptcode rows, {} site digests equal, {} unequal){} engine={}",
++        if held && context_held { "GREEN" } else { "RED" },
++        r.api_scriptcode_rows, r.api_scriptcode_equal, r.api_scriptcode_unequal, context_part, r.engine)
+ }
+
+ fn markdown(records: &[Record], stopped: bool) -> String {

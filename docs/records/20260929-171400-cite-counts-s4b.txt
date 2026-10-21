@@ -1,0 +1,20 @@
+S4b's record of the cite leg's counts before and after #43's write, set 4 sitting 6, 20260929-171400 UTC
+(for the lens's correction 2: docs/audit/2026-09-29-lens-S4b-sitting6-by-S4b.md; the two figures the END BLOCK of 2026-09-29T16:35:49Z
+quoted from the sitting's own runs, re-run here at their commits so a record names them)
+
+how: `git worktree add --detach /tmp/s4b-s6/wt-<commit> <commit>`, that commit's own tools/cite_check.py over its tree on the Studio
+(every clone of docs/PROVENANCE.md §1a present), then `git worktree remove`; both trees clean before the removal (0 porcelain lines)
+
+at 3bb2367 (the base 3b2ff2e plus the shim's commit; before the write; 17:13:34Z):
+  cite_check: 6599 citations found in lean/ and docs/ (6522 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1700, MOVED 0; not anchored (reported, never RED): unanchored 363, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 168, history 4292, absent 0, orphan rows 49; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  cite_check --propose: 281 rows proposed (Counter({'text': 197, 'sym': 84})), 49 orphan rows dropped, 1377 rows after
+
+at ecd9f1d (the table written: 279 rows, 49 orphans dropped, 2 held; before the rebase that landed it as 4916e50; 17:13:15Z):
+  cite_check: 6610 citations found in lean/ and docs/ (6533 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2061, MOVED 0; not anchored (reported, never RED): unanchored 2, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 168, history 4303, absent 0, orphan rows 0; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  cite_check --propose: 0 rows proposed (Counter()), 0 orphan rows dropped, 1375 rows after
+
+on main the same table (4916e50 to 7701713) read 6,907 citations, 2,061 anchored and holding, MOVED 0, unanchored 7, orphan rows 1
+(S1's third round since the write): docs/records/20260929-163323-f1-landing-s4b.txt; after the END BLOCK commit ea4fa00: 2,069
+anchored, unanchored 2, orphan rows 0: docs/records/20260929-163733-endblock-landing-s4b.txt

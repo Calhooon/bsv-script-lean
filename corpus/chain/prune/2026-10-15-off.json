@@ -1,0 +1,1 @@
+{"config":{"hysteresis":25,"minBlocksToKeep":288,"mode":"off","preferredBlockFileSize":134217728},"events":[{"block":[0,285,false]},{"prune":{"param":10,"tip":0}}],"probes":[],"pruneAfterHeight":1000}

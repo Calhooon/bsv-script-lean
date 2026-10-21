@@ -1,0 +1,88 @@
+{
+  "entries": 144381,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 144230,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 94
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 144324,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 144324,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 144324,
+  "source": "corpus/cpp/opcode_tests.jsonl.gz",
+  "undecided": {
+    "a predicate (NegativeValtype, layer consensus): the drivers judge spends, and none has a hook that runs it": 15,
+    "a stack element above 520 bytes cannot be pushed on a pre-Genesis coin (script.h:29)": 12,
+    "an invalid word (UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259-2262)": 1,
+    "the call's limits are below any node configuration's (a test's own parameters)": 6,
+    "the call's stack limit 106 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 107 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 165 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 231 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 65 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 3,
+    "the call's stack limit 66 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 71 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 1,
+    "the call's stack limit 99 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": 3,
+    "the checker `DummySignatureChecker` decides a signature, lock-time or sequence opcode the script executes, and no spend reproduces it": 9,
+    "the spend form is above 1,000,000 bytes: the corpus format writes an element as hex, and no driver reads corpus/cpp's runs": 2
+  },
+  "undecided_ids": {
+    "a predicate (NegativeValtype, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-opcode-00001..00015"
+    ],
+    "a stack element above 520 bytes cannot be pushed on a pre-Genesis coin (script.h:29)": [
+      "cpp-opcode-75561..75566",
+      "cpp-opcode-105198..105200",
+      "cpp-opcode-105204..105206"
+    ],
+    "an invalid word (UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259-2262)": [
+      "cpp-opcode-144379"
+    ],
+    "the call's limits are below any node configuration's (a test's own parameters)": [
+      "cpp-opcode-144358..144363"
+    ],
+    "the call's stack limit 106 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105233"
+    ],
+    "the call's stack limit 107 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105232"
+    ],
+    "the call's stack limit 165 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105236"
+    ],
+    "the call's stack limit 231 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105234"
+    ],
+    "the call's stack limit 65 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105240..105242"
+    ],
+    "the call's stack limit 66 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105239"
+    ],
+    "the call's stack limit 71 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105231"
+    ],
+    "the call's stack limit 99 binds below any node configuration's (docs/PARAMETERS.md \u00a71)": [
+      "cpp-opcode-105235",
+      "cpp-opcode-105237..105238"
+    ],
+    "the checker `DummySignatureChecker` decides a signature, lock-time or sequence opcode the script executes, and no spend reproduces it": [
+      "cpp-opcode-144228..144236"
+    ],
+    "the spend form is above 1,000,000 bytes: the corpus format writes an element as hex, and no driver reads corpus/cpp's runs": [
+      "cpp-opcode-75316..75317"
+    ]
+  }
+}

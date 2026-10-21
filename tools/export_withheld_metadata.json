@@ -1,0 +1,94 @@
+{
+  "corpus/cpp/replay/cpp-sigopcount/cases-manifest.json": [
+    {
+      "pointer": "/provenance",
+      "group": "d8-node-team-discretion",
+      "sha256": "b59aa75ec920f04ffac2d7dffc30cb5b1276c47722e7355cb73f14e272506309"
+    }
+  ],
+  "corpus/gen/manifest.json": [
+    {
+      "pointer": "/generator",
+      "group": "d8-node-team-discretion",
+      "sha256": "1c762237cbc43b205d000f0fd58b995af30176cf0c4068560602f9484785ede8"
+    },
+    {
+      "pointer": "/implementations/3/config/runs",
+      "group": "d8-node-team-discretion",
+      "sha256": "8edb82327813df7fcc27ba516d59375ac4553854bb5c2fce025cff161429e658"
+    },
+    {
+      "pointer": "/implementations/4/config/runs",
+      "group": "d8-node-team-discretion",
+      "sha256": "8edb82327813df7fcc27ba516d59375ac4553854bb5c2fce025cff161429e658"
+    }
+  ],
+  "corpus/witnesses/go-sdk/manifest.json": [
+    {
+      "pointer": "/gen/history/0/rules/6/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "275caef525688d4bbc5018192273621730253cf39489e5bac3f24937c013a4c3"
+    },
+    {
+      "pointer": "/gen/history/0/rules/14/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "275caef525688d4bbc5018192273621730253cf39489e5bac3f24937c013a4c3"
+    }
+  ],
+  "corpus/witnesses/gobdk/manifest.json": [
+    {
+      "pointer": "/gen/rules/0/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "b6d7603f5ad27172cebcb7c2049667e09bfea45ee8bca633d7fddb14c69d2ab5"
+    },
+    {
+      "pointer": "/gen/rules/1/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "b6d7603f5ad27172cebcb7c2049667e09bfea45ee8bca633d7fddb14c69d2ab5"
+    }
+  ],
+  "corpus/witnesses/sv-node-v1.2.2/manifest.json": [
+    {
+      "pointer": "/gen/rules/0/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "574e8bccfe437f31bb6c72d8f99202e54ebcfa82887d57da4470b334ed8898ee"
+    },
+    {
+      "pointer": "/gen/rules/1/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "574e8bccfe437f31bb6c72d8f99202e54ebcfa82887d57da4470b334ed8898ee"
+    },
+    {
+      "pointer": "/road/rules/0/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "574e8bccfe437f31bb6c72d8f99202e54ebcfa82887d57da4470b334ed8898ee"
+    },
+    {
+      "pointer": "/road/rules/1/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "574e8bccfe437f31bb6c72d8f99202e54ebcfa82887d57da4470b334ed8898ee"
+    }
+  ],
+  "corpus/witnesses/ts-sdk/manifest.json": [
+    {
+      "pointer": "/gen/history/0/rules/4/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "3bf711cd23ba57a9a2f8e9a2a0ef8777cc0fb906f81d1c77cf8674cf1405efe8"
+    },
+    {
+      "pointer": "/gen/history/0/rules/12/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "3bf711cd23ba57a9a2f8e9a2a0ef8777cc0fb906f81d1c77cf8674cf1405efe8"
+    },
+    {
+      "pointer": "/gen/history/0/rules/14/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "3bf711cd23ba57a9a2f8e9a2a0ef8777cc0fb906f81d1c77cf8674cf1405efe8"
+    },
+    {
+      "pointer": "/gen/history/0/rules/17/decided_by",
+      "group": "d8-node-team-discretion",
+      "sha256": "3bf711cd23ba57a9a2f8e9a2a0ef8777cc0fb906f81d1c77cf8674cf1405efe8"
+    }
+  ]
+}

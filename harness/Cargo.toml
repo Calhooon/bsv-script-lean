@@ -1,0 +1,125 @@
+# [export: 1 target table withheld by tools/export_public.py, its source on the withheld list; the original is in the private history]
+# bsv-script-lean: the conformance harness (seeded 2026-09-22, #4).
+# The bsv-rs runner links the pinned crate (docs/PROVENANCE.md §1); the seed
+# generator is the predecessor's differential fuzz pattern, vendored mechanism-free
+# (src/gen.rs, src/engine.rs headers). No transaction of any private program.
+[package]
+name = "bsv-script-harness"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+# #132 (2026-10-14, lane gate-132): the lint table. The harness is its own one-crate workspace, so the table is the
+# workspace's and `[lints] workspace = true` takes it. unwrap, expect and panic are denied in every target; tests are
+# exempt by harness/clippy.toml (allow-*-in-tests). The node drivers and submitters (rpc, txroad, block, engines,
+# run_svnode, oracle_chain, run_scenarios with scenarios/, run_teranode) and the record and report writers (stamp,
+# run_bsvrs, run_engine, run_diff, spec_recorded) return their failures through `fail::OrErr` and an exit code; an
+# `#[allow]` stays there only where the failure is an invariant, on the function, with its reason. The offline corpus
+# generators, the two checkers (rules_check, sighash_verify) and the integration tests carry per-function allows with
+# theirs. docs/LINT.md section 1b lists every one. The leg: `tools/check.sh clippy`, `make clippy`.
+[workspace]
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+[lints]
+workspace = true
+
+[dependencies]
+# #86 (2026-10-15, lane wire-86): the `transaction` feature for the wire views' column (run_wire: EF, BUMP, BEEF);
+# it enables no optional dependency, so Cargo.lock is unchanged.
+bsv-rs = { version = "=0.7.0", features = ["transaction"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+
+[[bin]]
+name = "seed_gen"
+path = "src/bin/seed_gen.rs"
+
+# #145 piece 1 (2026-10-16, lane sign-145a): the signable corpus, corpus/signer/ (harness/src/signer.rs).
+[[bin]]
+name = "signer_gen"
+path = "src/bin/signer_gen.rs"
+
+[[bin]]
+name = "run_bsvrs"
+path = "src/bin/run_bsvrs.rs"
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "num_vectors"
+path = "src/bin/num_vectors.rs"
+
+[[bin]]
+name = "flow_cases"
+path = "src/bin/flow_cases.rs"
+
+[[bin]]
+name = "sighash_vectors"
+path = "src/bin/sighash_vectors.rs"
+
+[[bin]]
+name = "sighash_verify"
+path = "src/bin/sighash_verify.rs"
+
+[[bin]]
+name = "arith_vectors"
+path = "src/bin/arith_vectors.rs"
+
+[[bin]]
+name = "arith_cases"
+path = "src/bin/arith_cases.rs"
+
+[[bin]]
+name = "stack_cases"
+path = "src/bin/stack_cases.rs"
+
+[[bin]]
+name = "ecdsa_vectors"
+path = "src/bin/ecdsa_vectors.rs"
+
+[[bin]]
+name = "crypto_cases"
+path = "src/bin/crypto_cases.rs"
+
+[[bin]]
+name = "run_diff"
+path = "src/bin/run_diff.rs"
+
+[[bin]]
+name = "bytes_cases"
+path = "src/bin/bytes_cases.rs"
+
+[[bin]]
+name = "policy_witnesses"
+path = "src/bin/policy_witnesses.rs"
+
+[[bin]]
+name = "run_engine"
+path = "src/bin/run_engine.rs"
+
+[[bin]]
+name = "run_svnode"
+path = "src/bin/run_svnode.rs"
+
+[[bin]]
+name = "rules_check"
+path = "src/bin/rules_check.rs"
+
+[[bin]]
+name = "oracle_chain"
+path = "src/bin/oracle_chain.rs"
+
+[[bin]]
+name = "spec_recorded"
+path = "src/bin/spec_recorded.rs"
+
+# The wire views' bsv-rs column (#86): corpus/wire through bsv-rs's EF, BUMP and BEEF codecs.
+[[bin]]
+name = "run_wire"
+path = "src/bin/run_wire.rs"

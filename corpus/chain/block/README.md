@@ -1,0 +1,33 @@
+# Block chain corpus
+
+[M] 2026-10-13, current column after the mem3, chn3 and leg fold: rows 95, realized 47, agree 47, diverge 0, rpc-precheck 2, unrealizable 46, needs-peer 0, pending 0. The [aggregate record](../../../docs/records/20261013-061601-s6-66-agg-regtest-s3.md) holds the current counts and R6-R8 adjudications. [X] Per-row node observations at the pinned build, within each recorded projection; RPC prechecks are separate from realized comparisons.
+
+[M] 2026-10-13, lane fix-pend2: one full fresh-instance run at `352d089c` re-measured this column with the same counts [X]; every token now cites the [fix-pend2 record](../../../docs/records/20261013-162245-s6-fix-pend2-regtest-s3.md) (the earlier [pend-66 run](../../../docs/records/20261013-144556-s6-pend-66-regtest-s3.md) at `e7d28cff` had the same counts).
+
+The JSONL has no manifest. Only the `node` value token changes for this column; every other byte is retained. The SHA256 cell in `corpus/INDEX.md` hashes the complete current JSONL, including node metadata. Regenerating source-derived cases can replace node metadata and requires a new recorded node run.
+
+## Recorded boundary recipes
+
+[M] The dated recipes below describe their source runs; their run-local counts are historical checkpoints. The opening tuple is the current family total.
+
+[M] 2026-10-13, lane s6-66-blk, context-block recipe: [M] 16 rows, realized 5, agree 5, diverge 0, rpc-precheck 0, unrealizable 11, needs-peer 0, pending 0 within this kind. Live mature OP_TRUE funding realizes median equality/below and the pre-CSV own-time cutoff; exact launchable-size blocks realize equality and one byte over. Unavailable BIP34 overrides and refused small size settings are cited per row [X]. The context/body duplicate size predicate is observed through the submitblock acceptance/reason projection. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, block recipe: [M] 32 rows, realized 21, agree 21, diverge 0, rpc-precheck 2, unrealizable 9, needs-peer 0, pending 0 within this kind. Rebuild the live P2SH era pair, regular-structure-before-sigops order, Genesis sigop bypass and exact launchable sizes. The bypass uses 20001 sigops, above the compiled cap. Refused small size settings, disabled-check options and overridden compiled caps have individual pinned reachability reasons. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, nextwork recipe: [M] 14 rows, realized 0, agree 0, diverge 0, rpc-precheck 0, unrealizable 14, needs-peer 0, pending 0 within this kind. Each row has an individual pinned reachability reason: compiled regtest no-retargeting precedes EDA, periodic, testnet delay/backscan and DAA; injected parent bits and the mainnet no-parent limit cannot be installed. No synthetic calculation is labeled a node observation. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, context-header recipe: [M] 10 rows, realized 8, agree 8, diverge 0, rpc-precheck 0, unrealizable 2, needs-peer 0, pending 0 within this kind. Rebuild header timestamp equality, future-window edges, difficulty-before-time, and signed negative adjusted time on live ancestry. Version boundaries use compiled BIP66/BIP65 heights. Unavailable BIP34 override and incomplete ancestry are marked individually. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, pow recipe: [M] 6 rows, realized 3, agree 3, diverge 0, rpc-precheck 0, unrealizable 3, needs-peer 0, pending 0 within this kind. Submit exact zero, negative and overflow compact targets on a live parent and require the exact high-hash result before projecting PoW false. Mainnet limit and chosen hash preimages have individual reachability limits. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, compact recipe: [M] 5 rows, realized 0, agree 0, diverge 0, rpc-precheck 0, unrealizable 5, needs-peer 0, pending 0 within this kind. The target/negative/overflow result tuple is not exposed by the node RPC surface. Each exact compact row is individually marked with the pinned decoding and validation caller ranges; no high-hash result substitutes for the tuple. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, subsidy recipe: [M] 5 rows, realized 5, agree 5, diverge 0, rpc-precheck 0, unrealizable 0, needs-peer 0, pending 0 within this kind. Remap schedule positions to regtest heights 1, 149, 150, 4950 and 9600. Read actual empty-pool mined coinbase totals, covering the era boundary, value rounded to zero and the shift guard. Heights are rematerialized; the mainnet corpus inputs stay unchanged. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, ttor recipe: [M] 5 rows, realized 3, agree 3, diverge 0, rpc-precheck 0, unrealizable 2, needs-peer 0, pending 0 within this kind. Submit ordered and reversed dependent side bodies at live height/tip 200/300 and 201/300, preserving distances 100 and 99. Accepted side bodies require stored getblock and non-invalid tip evidence in addition to the RPC envelope. Null-tip and ahead-of-tip isolated-stage observations have individual reachability reasons. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13, lane s6-66-blk, coinbase-amount recipe: [M] 2 rows, realized 2, agree 2, diverge 0, rpc-precheck 0, unrealizable 0, needs-peer 0, pending 0 within this kind. Spend a mature live coinbase with exactly seven satoshis of fees at height 101. Claim subsidy plus seven or eight satoshis and compare active inclusion or bad-cb-amount. Every row verdict is [X]. [Record and JSON receipt](../../../docs/records/20261013-045714-s6-66-blk-regtest-s3.md).
+
+[M] 2026-10-13: [aggregate counts and R6-R8 rulings](../../../docs/records/20261013-061601-s6-66-agg-regtest-s3.md) supersede this lane checkpoint.
+
+[M] 2026-10-17 (#107, lane gate-107): the row now named `block/pow-precedes-root` was renamed on this date (the mechanism check's vocabulary leg read a listed term across a hyphen of its former id, which the dated records before this date carry); only the `id` moved, the row's bytes and verdicts are the same.

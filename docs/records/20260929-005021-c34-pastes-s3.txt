@@ -1,0 +1,18 @@
+Continue 34's answer lands (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29): S1's sitting-5 paste (#48) and S2's sitting-6 paste
+(#35's 35a, with S1's ask 5) on docs/lanes/harness.md, each opening with @@RULES:SUB@@, and the heading on HANDOFF §0 (D150); docs only.
+
+THE STAMP: docs/records/20260928-202923-make-check-box.txt, twenty-one legs GREEN at a2e752a on the box (RULES-TREE (28)); main since:
+40a3ee8 (HANDOFF.md and the records only). BYTE-IDENTITY of the legs' tree between a2e752a and the tip, outside the paths this landing
+and 40a3ee8 touch (the cite leg reads docs/: live below):
+  git diff --quiet a2e752a HEAD -- :!HANDOFF.md :!docs/records :!docs/lanes/harness.md
+  exit 0
+
+THE LEGS, LIVE AT THE TIP (uncommitted: the two pages), 00:50:21Z, load { 7.45 11.16 10.63 }:
+== pins: exit 0
+  check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+== cite: exit 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+== spec: exit 0
+  specgen --check: OK (117 files up to date; 0 rules flagged)
+
+PASTE.PY'S PICK AT THIS TREE (tools/blocks.py's lane_paste rule: the latest stamped heading with a fenced block): S1 and S2 at the new pastes.

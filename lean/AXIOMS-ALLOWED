@@ -1,0 +1,6 @@
+# The only axioms a main theorem may depend on (CLAUDE.md rule 7), one per line.
+# No signature-verification hypothesis was ever added: #11 wrote the ECDSA equation as an
+# executable definition and Q9 was ruled (A) on #38 (2026-09-22; docs/HYPOTHESES.md §2). The list is Lean's three.
+propext
+Classical.choice
+Quot.sound

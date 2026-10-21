@@ -1,0 +1,20 @@
+The stacked landing's commits on main, each with its earlier twins (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28)
+
+Every twin is the same commit cherry-picked with its committer date (the pre-push stamp hook): origin/s3-road-r2 on e33e7cd
+(#47's landing), origin/s3-road-r3 on S4b's f118fd8, main on W0's 5567e57. The branches stay pushed (A19); pages written before
+a rebuild name the commit they were written at. The stamp's rule: docs/records/20260928-120344-moving-main-s3.txt.
+
+main      r3        r2 (or the branch it came from)   subject
+5659619   270c032   a4df442                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:14 UTC) #26: splice.num2bin.memory exercised, stack-00227/00228 relabelled from the candid
+9873545   33aec3f   35274ce                           (S3, set 4 sitting 3, on Opus 5.5, 2026-09-27 23:14 UTC) D123's conf (acceptnonstdtxn=0) and S1's ask 1 (the mempool gate's whole sigop count); tools/
+5924cf8   783d0e5   ef11f5a                           (S3, set 4 sitting 3, on Opus 5.5, 2026-09-27 23:25 UTC) D123's re-run of corpus/tx on the block road: the node's mempool 30 of 37 (standardness), the
+8d80e0d   e1838bd   7ad4b17                           (S3, set 4 sitting 3, on Opus 5.5, 2026-09-27 23:34 UTC) tools/road_variant.py leaves out an entry with a P2SH-shaped coin: no post-Genesis chain hold
+b3d850c   b0ea6b2   5e4a176                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:24 UTC) #26 and S2's ask 2: corpus/tx gains S2's 0xff sigop pair and the tx-size entry (pa
+51e77d9   312ac27   982f10c                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:28 UTC) corpus/tx's 40 entries re-run at the rebuilt tip (spec@5e4a176): the road GREEN, s
+790f8b4   8b48c24   6e7a660                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:32 UTC) the audit's (f), A27: the 10^6 run's four witnesses as corpus/million, re-run on t
+7ea382e   f641415   eb9bbe9                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:41 UTC) the pages of the stacked landing: 0 rules flagged, corpus/tx at 40, corpus/million
+a44f441   40d26ee   e675ad1                           (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:41 UTC) the conformance report re-cut at eb9bbe9, the commit whose manifests and classifie
+b720ad1   308015f   -                                 (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:51 UTC) S4b's A15 and A17: ts-sdk's filed class PRIVATE and PENDING empty; the CLTV/CSV NO
+abab6a8   3ff5327   -                                 (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 11:52 UTC) #26's carried replay (S.G10, #20): block 173,805 spends no P2SH-shaped output; the
+febcd4e   227a516   -                                 (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 12:01 UTC) the stacked landing: local tripwire at 3ff5327 GREEN (21 legs, 382 s); S4b's fold;
+8fde74b   -         -                                 (S3, set 4 sitting 3, continued, on Opus 5.5, 2026-09-28 12:03 UTC) the stacked landing on a moving main: W0's 5567e57 (docs/OWNERS alone); the stamp 

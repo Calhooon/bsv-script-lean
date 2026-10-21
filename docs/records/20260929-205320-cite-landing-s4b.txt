@@ -1,0 +1,20 @@
+# #43's upkeep, sitting 7: the landing (S4b, set 4 sitting 7, 2026-09-29)
+
+the commit: d23246d on origin/harness-b-cite (from main at 9a43a89), rebased onto origin/main ffe0a75 as c870006
+the leg of record: make check-box (D156) in ~/bsv/worktrees/spec-box-harness-b at d23246d: GREEN, wall 124 s; docs/records/20260929-204937-make-check-box.txt
+  the box leg lock TAKEN 20:49:36Z after 1629 s of waiting, RELEASED 20:51:41Z (the leg's log); before it the box worktree was reinstalled at d23246d's lock (npm ci, @bsv/sdk 2.8.0, 20:13Z): it held 2.8.10 from the #51/#52 re-run, and main's check_box.sh installs only when absent
+
+THE LANDING RULE ON A MOVING MAIN: main moved from 9a43a89 to ffe0a75 in HANDOFF.md, docs/lanes (2 files), docs/records (7) and docs/audit (4)
+  git diff --quiet d23246d c870006 -- . ':!HANDOFF.md' ':!docs/lanes' ':!docs/records' ':!docs/audit' ':!docs/BLOCKS-ARCHIVE.md': exit 0
+  so every leg but the ones that read those pages stands on the box leg; pins, cite and spec re-ran locally at c870006 (the Studio, uptime 20:52Z: load averages 3.69 4.10 6.26):
+
+## make check-pins, rc 0
+check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+
+## make citecheck, rc 0
+cite_check: 7774 citations found in lean/ and docs/ (7693 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2073, MOVED 0; not anchored (reported, never RED): unanchored 4, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 202, history 5419, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+  the unanchored 4: the three held (lean/BsvScript/Sighash.lean:544 spend.rs:1356-1361; docs/lanes/lean.md:509 interpreter.cpp:1810-1813; docs/lanes/lean.md:783 script.cpp:214, the held quote, moved from :777 by S2's block) and docs/lanes/lean.md:613 core_read.cpp:20-35, landed after the write: the next refresh
+
+## make speccheck, rc 0
+specgen --check: OK (117 files up to date; 0 rules flagged)

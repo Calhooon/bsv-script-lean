@@ -1,0 +1,20 @@
+[export: 4 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+The Lean landing lock (D151) of the landing of S1's asks 1 and 4 and T3's precision (S3, set 4 sitting 3, continued, on Opus 5.5;
+2026-09-28; RULES-SUB (11), RULES-TREE (25): the record names the take and the release)
+
+THE TAKE (tools/lean_lock.sh's lean_landing_take S3, over ssh to the box; trip-a4.sh in the parent's scratch, its lines verbatim):
+  lean-landing-lock: held by P9 box 2026-09-28T15:56:19Z; S3 waits (0s)
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  [16:19:42Z] origin/main 9c6fad4, HEAD 0149243
+  [16:19:42Z] MAIN MOVED: stop, the landing lock HELD for the rebase
+
+THE FINAL FETCH at the take found main moved (S1's lens corrections, aca7a03 and 60f5cb2, lean/ doc comments only, and 9c6fad4),
+so the landing was rebuilt UNDER THE HELD LOCK: 7d00f11, 8d41d44, 3d2f7d1 and 0149243 cherry-picked with their committer dates onto
+9c6fad4 as 58bbbcc, d87f19a, 9c3051d and 5844765, the fix-ups and make spec's three pages 613304c; the leg of record at 613304c,
+docs/records/20260928-162256-make-check.txt (trip-a4b.sh, without a second take).
+
+THE PUSH: 16:39:02 UTC, git push origin HEAD:main: 9c6fad4..651a69a (the heading and the leg's record on 613304c; byte-identical to 613304c outside HANDOFF.md and docs/records, exit 0)
+THE RELEASE: lean-landing-lock: released by S3 at 16:39:03 UTC (held 16:19:41 to 16:39:03 UTC, 19 min 22 s, under D151's 40)

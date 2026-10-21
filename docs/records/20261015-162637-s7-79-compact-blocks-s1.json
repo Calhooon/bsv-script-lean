@@ -1,0 +1,685 @@
+{
+  "base_commit": "6ae5669bbd61a4cbe354b976c948c56861371b0b",
+  "binary": {
+    "banner": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev",
+    "path": "~/bsv/targets/sv-v1.2.3/bin/bitcoind",
+    "sha256": "ea73a708d277d88487a5d8ffc97e2b859937b8428387fc117b07f4add88b1421",
+    "source": "docs/PROVENANCE.md 1a reference.binary"
+  },
+  "frames": [
+    {
+      "command": "version",
+      "hash": null,
+      "hex": "dab5bffa76657273696f6e00000000007a000000b6929ef8801101002100000000000000fff0536500000000000000000000000000000000000000000000000000000000000021000000000000000000000000000000000000000000000000008be7b1338e135b89122f426974636f696e2053563a312e322e332f65000000011100621f6e4965154e40803b54c9db1c64a2",
+      "source": "A>PA"
+    },
+    {
+      "command": "verack",
+      "hash": null,
+      "hex": "dab5bffa76657261636b000000000000000000005df6e0e2",
+      "source": "A>PA"
+    },
+    {
+      "command": "protoconf",
+      "hash": null,
+      "hex": "dab5bffa70726f746f636f6e660000001b00000030d5edd0020000200015426c6f636b5072696f726974792c44656661756c74",
+      "source": "A>PA"
+    },
+    {
+      "command": "authch",
+      "hash": null,
+      "hex": "dab5bffa61757468636800000000000028000000e6050fea010000002000000060ee05c68b3853821503a73df16b5d922b41fa0452042948c87f9bb5edcff931",
+      "source": "A>PA"
+    },
+    {
+      "command": "sendheaders",
+      "hash": null,
+      "hex": "dab5bffa73656e646865616465727300000000005df6e0e2",
+      "source": "A>PA"
+    },
+    {
+      "command": "sendcmpct",
+      "hash": null,
+      "hex": "dab5bffa73656e64636d70637400000009000000ccfe104a000100000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "ping",
+      "hash": null,
+      "hex": "dab5bffa70696e6700000000000000000800000091a1a783d01db841975ab870",
+      "source": "A>PA"
+    },
+    {
+      "command": "getheaders",
+      "hash": null,
+      "hex": "dab5bffa67657468656164657273000065020000b3345d1a80110100128361bf095785be127bc496f5e88905ac3ce6ba203f1068871e6b439387af6c0a5652072d00017a9b56c7b4ced6d6e576b333d639e55a56859b07c8731068547fec5c9881626ee0e3625009dcd508e8adc4b7894a21610b8a1c03cae8a4bde27fdc77e8878f56d04b1c9a8fdd6d635b8a83cccfe0ce5b762f64a2316677623d6bc1f0ba0e1c28bd04c57e7b4520f93967d33c645e43dbdc543baefc787a5b314800064c22465862d4265e9070a1d7340f129fc951b8e497e4d62ad2208db25b111938f4e2e6045cda51c80d82ce30359baf1a13e266f69483b0c0b03f04a5fe0637928de25378743f351bb25252df28b1209632a04fb90e06cad1e4c6dbbb4d0704752d6069d2d31e365948d6881a481a3886be6483c1878f54281613548b7d04f5e970a00918d347a490019aaa19805ab9f0082633555f6a863ff54501159e2ccde9e236eb1c5bcaa08ee8ad186f89ac08a6f2996a89b7f1535fc3653398d67c66d8c4d6a701ca4ccd15f9b6c0583bcb9d15a5944bf4356f7aea3dbd1b83f7226eef6bc7feb41e6aedbd8a268fcfc2a6e5c878f93f5f5d196899182aeade5f0a284a29b37b5885442a2d4ed1c34dccdcc7ad1e42c203b317194106aa3ce2417f2d04ed0f980b7325ad7a17c941a124cb53253ca789bb2aa9aadd984dd9eb221956c52e6e9204264e9c075af2d074ba4c16bb4126098a95d0037b977be1188a2556a08db860442bc890507a7c2fb02835d10e7997e6eb955451d1276accf0cb3506226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0000000000000000000000000000000000000000000000000000000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e760000000000000000002500000079f2e3e20102000000407cea9cf1596bfa2a1e66b7cfc1561f89889f187c3df5e0174ff657cb6f2214",
+      "source": "A>PA"
+    },
+    {
+      "command": "cmpctblock",
+      "hash": "14226fcb57f64f17e0f53d7c189f88891f56c1cfb7661e2afa6b59f19cea7c40",
+      "hex": "dab5bffa636d706374626c6f636b0000c3000000c06f913304000000de2987d014612dcb0d12ec181ec03ee16fe54ac161971b0d2ccff4ae6ed23e1c2f79054ad1199306d3f8311a73b3a64d2cd85f6465baf7c4960d92ad77bd7e4800f15365ffff7f200100000029cf54d1e691ca2400010001000000010000000000000000000000000000000000000000000000000000000000000000ffffffff130166106b302d636f696e626173652d6f6e6c79ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e76000000000000000000490000002f316629020100000032941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c010000008bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e7600000000000000000025000000737f22a201020000004e398cb41ed5912c38652af306705afe7039e7ae550a0f3f5d32477f7cf89252",
+      "source": "A>PA"
+    },
+    {
+      "command": "cmpctblock",
+      "hash": "5292f87c7f47325d3f0f0a55aee73970fe5a7006f32a65382c91d51eb48c394e",
+      "hex": "dab5bffa636d706374626c6f636b0000c9000000627ddfe004000000407cea9cf1596bfa2a1e66b7cfc1561f89889f187c3df5e0174ff657cb6f2214a0e265b5494fb51298567519976ff83f89bfc00038979319e62dc4c7abb6c62a01f15365ffff7f2000000000f9279418a01ad948024d22beb8fd89e3feee8603d7010001000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0d01670a6b312d6861732d616c6cffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e670000000000000000080000003fe664720200000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "blocktxn",
+      "hash": "5292f87c7f47325d3f0f0a55aee73970fe5a7006f32a65382c91d51eb48c394e",
+      "hex": "dab5bffa626c6f636b74786e00000000e00000006493f7804e398cb41ed5912c38652af306705afe7039e7ae550a0f3f5d32477f7cf89252010100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a4730440220391e84bf05c7cc919a0925bb0ff226fcd5f08c4358d226f8dc0c9d4712e139b6022025c5ec6dd9bc0e6d5b6d33e1e7b8c85bb3015388df182720abe7a92e7b7ed31c412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01b8820100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e67000000000000000008000000f05d0d220300000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e7600000000000000000025000000538eb7230101000000801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e76000000000000000000250000002d5283e2010200000043f4ef36e3fb788e92264b8dac200e4e3aadf30600a3753e1d2bd6ec2deab545",
+      "source": "A>PA"
+    },
+    {
+      "command": "cmpctblock",
+      "hash": "45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443",
+      "hex": "dab5bffa636d706374626c6f636b0000ca0000005a11e0e2040000004e398cb41ed5912c38652af306705afe7039e7ae550a0f3f5d32477f7cf89252eb82d8ec05a57468a1732bc856ae9ed9bdb36c6b66d12ee84044df4dacddcf2902f15365ffff7f2001000000374fe7140e86ed6f0294543692a801007bf8c5016c010001000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0e01680b6b322d6861732d70617274ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e670000000000000000080000000e14e6240400000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "blocktxn",
+      "hash": "45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443",
+      "hex": "dab5bffa626c6f636b74786e00000000e0000000352fded443f4ef36e3fb788e92264b8dac200e4e3aadf30600a3753e1d2bd6ec2deab545010100000001801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036000000006a47304402200b65c13f7ab986e91af359e246a903863bf8b3e2cb96bbe39a6007eae30d237a02202cd05f85818fe61a956bc88aef75a432c9fda6ae8f999a6cb2e9283ede34628f412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0100770100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e6700000000000000000800000003b44ddf0500000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hash": null,
+      "hex": "dab5bffa696e7600000000000000000025000000a3e8027f01020000002d0d0a6c00f148ce87c97e97697cded41ed1a4640368bfba7b5e85f5b0abeb02",
+      "source": "A>PA"
+    },
+    {
+      "command": "cmpctblock",
+      "hash": "02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d",
+      "hex": "dab5bffa636d706374626c6f636b0000cb0000008d67042f0400000043f4ef36e3fb788e92264b8dac200e4e3aadf30600a3753e1d2bd6ec2deab545fba80bc8d8434fa1fff2b9f84fc5ebcaef7dc6e09196ece72e63bc9b3c3cc2f403f15365ffff7f2000000000a4857e3844c4ec6502bd95e26de24a26264ebeea8c010001000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0f01690c6b332d6c61636b732d616c6cffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e67000000000000000008000000dc57ac860600000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "blocktxn",
+      "hash": "02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d",
+      "hex": "dab5bffa626c6f636b74786e000000009e010000fc14a1342d0d0a6c00f148ce87c97e97697cded41ed1a4640368bfba7b5e85f5b0abeb02020100000001ea05b9c08a0414ad465c2f5661765cf5b3ebcb77d771b0e55a5cc14de41e6d1a000000006a4730440220486ed6f4d6af61114bce9085a6a88bc691ec15b10314373eb349438757ee5ff102203857290daa0dfacb42c1ef77fd46ec5f58691be2587bb5f15f69539e1b0e35f5412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0118730100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac000000000100000001c3e29f8d4c480fcf0b5c76e2438fe4359fd1894b41b9b1d135c926d25171af5f0000000069463043021f71111121a5fa70d797491cb67644d4aaff70239f6f905a05f4ca20237887b102204031db499cd1a08035acfd91002632b67ac2ef74d2547beb6c59cba29be8ff87412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01306f0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "pong",
+      "hash": null,
+      "hex": "dab5bffa706f6e670000000000000000080000008c820c800700000000000000",
+      "source": "A>PA"
+    }
+  ],
+  "full_receipt": {
+    "bytes": 403308,
+    "label": "[M]",
+    "path": "compact-79-20261015-162637/receipt.json",
+    "sha256": "bcf9381463ed2dabf16c21631db65c16bb14e081c1d679ee47b2af29484ce381"
+  },
+  "funding_block": "1c3ed26eaef4cf2c0d1b9761c14ae56fe13ec01e18ec120dcb2d6114d08729de",
+  "names": {
+    "F": {
+      "hex": "010000000187416f6e1c94be63770af8f30b05b87dfe8c51ba7253fe475f9fe7a562a952b6000000006b483045022100c453d18fdf61d5bd3f26abe630aaeca8fd32aa947096255fa0901254f0e0bec402202a93edf060ea38632483033171407220247ca6cef61bc0d1b66b6386e453dc15412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a0860100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "8451e32abb863b1303a1a8de88ff33dfc4a62768768b81efb382d94d4b5e05dc"
+    },
+    "T1": {
+      "hex": "0100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a4730440220391e84bf05c7cc919a0925bb0ff226fcd5f08c4358d226f8dc0c9d4712e139b6022025c5ec6dd9bc0e6d5b6d33e1e7b8c85bb3015388df182720abe7a92e7b7ed31c412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01b8820100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+    },
+    "T2": {
+      "hex": "010000000132941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000006a473044022008b21406c9a53fecb250624e8db06f0ebcad0d3d0ab06dd62489922a824d1b2d0220063722402518c79b7bbb7bd5021e0c642c3b6671546b4f8d651b5496b02e9eef412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01d07e0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+    },
+    "T3": {
+      "hex": "01000000018bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295000000006a47304402207afbc0a6c25409ef841d1c444847cf195e41373095abae0310423f0a8e9e32ba022075724adead87eca446e925c4bf32864a10c6854b0b8c5d5760a3a52da31b4208412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01e87a0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980"
+    },
+    "T4": {
+      "hex": "0100000001801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036000000006a47304402200b65c13f7ab986e91af359e246a903863bf8b3e2cb96bbe39a6007eae30d237a02202cd05f85818fe61a956bc88aef75a432c9fda6ae8f999a6cb2e9283ede34628f412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0100770100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "1a6d1ee44dc15c5ae5b071d777cbebb3f55c7661562f5c46ad14048ac0b905ea"
+    },
+    "T5": {
+      "hex": "0100000001ea05b9c08a0414ad465c2f5661765cf5b3ebcb77d771b0e55a5cc14de41e6d1a000000006a4730440220486ed6f4d6af61114bce9085a6a88bc691ec15b10314373eb349438757ee5ff102203857290daa0dfacb42c1ef77fd46ec5f58691be2587bb5f15f69539e1b0e35f5412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0118730100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "5faf7151d226c935d1b1b9414b89d19f35e48f43e2765c0bcf0f484c8d9fe2c3"
+    },
+    "T6": {
+      "hex": "0100000001c3e29f8d4c480fcf0b5c76e2438fe4359fd1894b41b9b1d135c926d25171af5f0000000069463043021f71111121a5fa70d797491cb67644d4aaff70239f6f905a05f4ca20237887b102204031db499cd1a08035acfd91002632b67ac2ef74d2547beb6c59cba29be8ff87412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01306f0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+      "txid": "38f60a581c0ca15e460575e97f7575e210b9283f6cd542ac0b449310f36aa2fd"
+    }
+  },
+  "ports": {
+    "a": {
+      "p2p": 18574,
+      "rpc": 18573
+    },
+    "b": {
+      "p2p": 18576,
+      "rpc": 18575
+    }
+  },
+  "record": "docs/records/20261015-162637-s7-79-compact-blocks-s1.md",
+  "run_id": "compact-79-20261015-162637",
+  "scenario": "corpus/scenarios/2026-10-15-compact-blocks-two-node.md",
+  "settings": {
+    "blockreconstructionextratxn": "default 100",
+    "excessiveblocksize": 1000001,
+    "maxblocktxnpercent": "default 99"
+  },
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "started_utc": "2026-10-15T16:26:37Z",
+  "steps": [
+    {
+      "b_console": [
+        "2023-11-14 22:13:20 [msghand] received: cmpctblock (195 bytes) peer=0",
+        "2023-11-14 22:13:20 [msghand] Initialized PartiallyDownloadedBlock for block 14226fcb57f64f17e0f53d7c189f88891f56c1cfb7661e2afa6b59f19cea7c40 using a cmpctblock of size 195",
+        "2023-11-14 22:13:20 [msghand] Successfully reconstructed block 14226fcb57f64f17e0f53d7c189f88891f56c1cfb7661e2afa6b59f19cea7c40 with 1 txn prefilled, 0 txn from mempool (incl at least 0 from extra pool) and 0 txn requested"
+      ],
+      "b_pool": [],
+      "b_pool_has_relayed": true,
+      "b_tip_reached": true,
+      "block": {
+        "hash": "14226fcb57f64f17e0f53d7c189f88891f56c1cfb7661e2afa6b59f19cea7c40",
+        "hex": "04000000de2987d014612dcb0d12ec181ec03ee16fe54ac161971b0d2ccff4ae6ed23e1c2f79054ad1199306d3f8311a73b3a64d2cd85f6465baf7c4960d92ad77bd7e4800f15365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff130166106b302d636f696e626173652d6f6e6c79ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+      },
+      "counters_after": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "cmpctblock": 219,
+            "getheaders": 637,
+            "headers": 8312,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5761,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "height": 102,
+      "id": "k0-coinbase-only",
+      "pa_ask": [],
+      "pa_expect_blocktxn": null,
+      "pa_expect_cmpctblock": true,
+      "pool_after": {
+        "a": [],
+        "b": []
+      },
+      "relayed": [],
+      "submitted": {
+        "status": "ok"
+      },
+      "time": 1700000000
+    },
+    {
+      "b_console": [
+        "2023-11-14 22:13:21 [msghand] received: cmpctblock (201 bytes) peer=0",
+        "2023-11-14 22:13:21 [msghand] Initialized PartiallyDownloadedBlock for block 5292f87c7f47325d3f0f0a55aee73970fe5a7006f32a65382c91d51eb48c394e using a cmpctblock of size 201",
+        "2023-11-14 22:13:21 [msghand] Successfully reconstructed block 5292f87c7f47325d3f0f0a55aee73970fe5a7006f32a65382c91d51eb48c394e with 1 txn prefilled, 2 txn from mempool (incl at least 0 from extra pool) and 0 txn requested"
+      ],
+      "b_pool": [
+        {
+          "hex": "0100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a4730440220391e84bf05c7cc919a0925bb0ff226fcd5f08c4358d226f8dc0c9d4712e139b6022025c5ec6dd9bc0e6d5b6d33e1e7b8c85bb3015388df182720abe7a92e7b7ed31c412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01b8820100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+          "txid": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+        },
+        {
+          "hex": "010000000132941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000006a473044022008b21406c9a53fecb250624e8db06f0ebcad0d3d0ab06dd62489922a824d1b2d0220063722402518c79b7bbb7bd5021e0c642c3b6671546b4f8d651b5496b02e9eef412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01d07e0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+          "txid": "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+        }
+      ],
+      "b_pool_has_relayed": true,
+      "b_tip_reached": true,
+      "block": {
+        "hash": "5292f87c7f47325d3f0f0a55aee73970fe5a7006f32a65382c91d51eb48c394e",
+        "hex": "04000000407cea9cf1596bfa2a1e66b7cfc1561f89889f187c3df5e0174ff657cb6f2214a0e265b5494fb51298567519976ff83f89bfc00038979319e62dc4c7abb6c62a01f15365ffff7f20000000000301000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0d01670a6b312d6861732d616c6cffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac000000000100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a4730440220391e84bf05c7cc919a0925bb0ff226fcd5f08c4358d226f8dc0c9d4712e139b6022025c5ec6dd9bc0e6d5b6d33e1e7b8c85bb3015388df182720abe7a92e7b7ed31c412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01b8820100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000010000000132941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000006a473044022008b21406c9a53fecb250624e8db06f0ebcad0d3d0ab06dd62489922a824d1b2d0220063722402518c79b7bbb7bd5021e0c642c3b6671546b4f8d651b5496b02e9eef412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01d07e0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+      },
+      "counters_after": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "cmpctblock": 444,
+            "getheaders": 637,
+            "headers": 8418,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5980,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "cmpctblock": 219,
+            "getheaders": 637,
+            "headers": 8312,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5919,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "height": 103,
+      "id": "k1-has-all",
+      "pa_ask": [
+        1
+      ],
+      "pa_expect_blocktxn": true,
+      "pa_expect_cmpctblock": true,
+      "pool_after": {
+        "a": [],
+        "b": []
+      },
+      "relayed": [
+        "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432",
+        "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+      ],
+      "submitted": {
+        "status": "ok"
+      },
+      "time": 1700000001
+    },
+    {
+      "b_console": [
+        "2023-11-14 22:13:22 [msghand] received: cmpctblock (202 bytes) peer=0",
+        "2023-11-14 22:13:22 [msghand] Initialized PartiallyDownloadedBlock for block 45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443 using a cmpctblock of size 202",
+        "2023-11-14 22:13:22 [msghand] sending getblocktxn (34 bytes) peer=0",
+        "2023-11-14 22:13:22 [msghand] received: blocktxn (224 bytes) peer=0",
+        "2023-11-14 22:13:22 [msghand] Successfully reconstructed block 45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443 with 1 txn prefilled, 1 txn from mempool (incl at least 0 from extra pool) and 1 txn requested",
+        "2023-11-14 22:13:22 [msghand] Reconstructed block 45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443 required tx 1a6d1ee44dc15c5ae5b071d777cbebb3f55c7661562f5c46ad14048ac0b905ea"
+      ],
+      "b_pool": [
+        {
+          "hex": "01000000018bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295000000006a47304402207afbc0a6c25409ef841d1c444847cf195e41373095abae0310423f0a8e9e32ba022075724adead87eca446e925c4bf32864a10c6854b0b8c5d5760a3a52da31b4208412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01e87a0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+          "txid": "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980"
+        }
+      ],
+      "b_pool_has_relayed": true,
+      "b_tip_reached": true,
+      "block": {
+        "hash": "45b5ea2decd62b1d3e75a30006f3ad3a4e0e20ac8d4b26928e78fbe336eff443",
+        "hex": "040000004e398cb41ed5912c38652af306705afe7039e7ae550a0f3f5d32477f7cf89252eb82d8ec05a57468a1732bc856ae9ed9bdb36c6b66d12ee84044df4dacddcf2902f15365ffff7f20010000000301000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0e01680b6b322d6861732d70617274ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac0000000001000000018bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295000000006a47304402207afbc0a6c25409ef841d1c444847cf195e41373095abae0310423f0a8e9e32ba022075724adead87eca446e925c4bf32864a10c6854b0b8c5d5760a3a52da31b4208412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01e87a0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac000000000100000001801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036000000006a47304402200b65c13f7ab986e91af359e246a903863bf8b3e2cb96bbe39a6007eae30d237a02202cd05f85818fe61a956bc88aef75a432c9fda6ae8f999a6cb2e9283ede34628f412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0100770100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+      },
+      "counters_after": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "blocktxn": 248,
+            "cmpctblock": 670,
+            "getheaders": 637,
+            "headers": 8524,
+            "inv": 158,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 645,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getblocktxn": 58,
+            "getdata": 6102,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "cmpctblock": 444,
+            "getheaders": 637,
+            "headers": 8418,
+            "inv": 158,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 645,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 6041,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "height": 104,
+      "id": "k2-has-part",
+      "pa_ask": [
+        2
+      ],
+      "pa_expect_blocktxn": true,
+      "pa_expect_cmpctblock": true,
+      "pool_after": {
+        "a": [],
+        "b": []
+      },
+      "relayed": [
+        "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980"
+      ],
+      "submitted": {
+        "status": "ok"
+      },
+      "time": 1700000002
+    },
+    {
+      "b_console": [
+        "2023-11-14 22:13:23 [msghand] received: cmpctblock (203 bytes) peer=0",
+        "2023-11-14 22:13:23 [msghand] Initialized PartiallyDownloadedBlock for block 02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d using a cmpctblock of size 203",
+        "2023-11-14 22:13:23 [msghand] sending getblocktxn (35 bytes) peer=0",
+        "2023-11-14 22:13:23 [msghand] received: blocktxn (414 bytes) peer=0",
+        "2023-11-14 22:13:23 [msghand] Successfully reconstructed block 02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d with 1 txn prefilled, 0 txn from mempool (incl at least 0 from extra pool) and 2 txn requested",
+        "2023-11-14 22:13:23 [msghand] Reconstructed block 02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d required tx 5faf7151d226c935d1b1b9414b89d19f35e48f43e2765c0bcf0f484c8d9fe2c3",
+        "2023-11-14 22:13:23 [msghand] Reconstructed block 02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d required tx 38f60a581c0ca15e460575e97f7575e210b9283f6cd542ac0b449310f36aa2fd"
+      ],
+      "b_pool": [],
+      "b_pool_has_relayed": true,
+      "b_tip_reached": true,
+      "block": {
+        "hash": "02ebabb0f5855e7bbabf680364a4d11ed4de7c69977ec987ce48f1006c0a0d2d",
+        "hex": "0400000043f4ef36e3fb788e92264b8dac200e4e3aadf30600a3753e1d2bd6ec2deab545fba80bc8d8434fa1fff2b9f84fc5ebcaef7dc6e09196ece72e63bc9b3c3cc2f403f15365ffff7f20000000000301000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0f01690c6b332d6c61636b732d616c6cffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac000000000100000001ea05b9c08a0414ad465c2f5661765cf5b3ebcb77d771b0e55a5cc14de41e6d1a000000006a4730440220486ed6f4d6af61114bce9085a6a88bc691ec15b10314373eb349438757ee5ff102203857290daa0dfacb42c1ef77fd46ec5f58691be2587bb5f15f69539e1b0e35f5412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff0118730100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac000000000100000001c3e29f8d4c480fcf0b5c76e2438fe4359fd1894b41b9b1d135c926d25171af5f0000000069463043021f71111121a5fa70d797491cb67644d4aaff70239f6f905a05f4ca20237887b102204031db499cd1a08035acfd91002632b67ac2ef74d2547beb6c59cba29be8ff87412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01306f0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+      },
+      "counters_after": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "blocktxn": 686,
+            "cmpctblock": 897,
+            "getheaders": 637,
+            "headers": 8630,
+            "inv": 158,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 645,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getblocktxn": 117,
+            "getdata": 6163,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "blocktxn": 248,
+            "cmpctblock": 670,
+            "getheaders": 637,
+            "headers": 8524,
+            "inv": 158,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 645,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getblocktxn": 58,
+            "getdata": 6102,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "height": 105,
+      "id": "k3-lacks-all",
+      "pa_ask": [
+        1,
+        2
+      ],
+      "pa_expect_blocktxn": true,
+      "pa_expect_cmpctblock": true,
+      "pool_after": {
+        "a": [],
+        "b": []
+      },
+      "relayed": [],
+      "submitted": {
+        "status": "ok"
+      },
+      "time": 1700000003
+    }
+  ],
+  "test_peer": {
+    "mininode": {
+      "path": "~/bsv/bitcoin-sv/test/functional/test_framework/mininode.py",
+      "pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+      "sha256": "2501f6ec4cacc7634826222047f126aa821cce0486859d8a47e5b8c1221ac0cf"
+    },
+    "path": "harness/peer/peer.py",
+    "sha256": "0df255e56973d4bee3a196db6ed191ea681ac0d7025d3a4ef8b5799608c1a2a6"
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 12.561219833
+  }
+}

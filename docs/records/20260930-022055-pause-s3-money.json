@@ -1,0 +1,96 @@
+{
+  "stamp [M]": "2026-09-30T02:20:55Z",
+  "rows [SRC]": [
+    {
+      "app [LIT]": "ap-2YDZGWo8X8uiFu167RL18Y",
+      "usd [M stored]": "0.291",
+      "source [SRC]": "docs/records/README.md",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-NV9kO4JMVXf57CuxLTlNj0",
+      "usd [M stored]": "0.049",
+      "source [SRC]": "docs/records/README.md",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-hRLIQrDWvqFY70XtCkQQ4v",
+      "usd [M stored]": "0.550",
+      "source [SRC]": "docs/records/README.md",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-g8eVjUoFjfxSt3cU3HPMBI",
+      "usd [M stored]": "0.631",
+      "source [SRC]": "docs/records/README.md",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-WWzyBfdRPdf1D9sRV4BF7X",
+      "usd [M stored]": "0.482",
+      "source [SRC]": "docs/records/README.md",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-OI34WE55Tm5py0q59RaSXS",
+      "usd [M stored]": "0.169",
+      "source [SRC]": "docs/records/20260924-051612-modal-launch-died-s3.txt",
+      "precision [LIT]": "rounded recorded app cost"
+    },
+    {
+      "app [LIT]": "ap-1xkcR6EGEQMoLj9Ia9pQNm",
+      "period [M stored]": "2026-09-29T00:00:00",
+      "usd [M stored]": "0.00098883",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-KOkCBDSOLHUEy5ztRw4dEX",
+      "period [M stored]": "2026-09-29T00:00:00",
+      "usd [M stored]": "0.00205270",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-mvNqYdAXf5WwOATc7Bp8La",
+      "period [M stored]": "2026-09-29T00:00:00",
+      "usd [M stored]": "0.00175671",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-zxrIpffC3KRegmZz7K5K4e",
+      "period [M stored]": "2026-09-29T00:00:00",
+      "usd [M stored]": "0.00194683",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-QhY8VKxqO3HgNeUOOIUYaP",
+      "period [M stored]": "2026-09-28T11:00:00",
+      "usd [M stored]": "0.14512125",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-cPD3G3kczer3MYxyzNH0f7",
+      "period [M stored]": "2026-09-28T12:00:00",
+      "usd [M stored]": "0.12703213",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    },
+    {
+      "app [LIT]": "ap-mi1hbXfEBuL93YoKXSeXct",
+      "period [M stored]": "2026-09-28T13:00:00",
+      "usd [M stored]": "0.63866748",
+      "source [SRC]": "docs/records/20260929-174329-endblock-relaunch-s3.md",
+      "precision [LIT]": "stored billing row"
+    }
+  ],
+  "known_rows [D]": 13,
+  "known_subtotal_usd [D]": "3.08956593",
+  "program_total [LIT]": "UNVERIFIABLE from these permitted records; the subtotal is incomplete and includes rounded early values, so it is not a complete ledger or a fresh meter reading",
+  "sitting_paid_apps [D]": 0,
+  "sitting_spend_usd [M inventory]": "0",
+  "source [SRC]": "this sitting invoked no Modal command or paid request"
+}

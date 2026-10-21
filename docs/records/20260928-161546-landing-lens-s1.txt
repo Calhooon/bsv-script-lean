@@ -1,0 +1,19 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+S1's landing of its lens's load-bearing corrections (S1, Lean A, set 4 sitting 4; docs/audit/2026-09-28-lens-S1-sitting4-by-S1.md;
+D142's local leg, D151's landing lock with the leg after the take)
+
+THE COMMITS: aca7a03 (the lens filed and indexed; the standardness landing record's appended Correction and its README
+row) and 60f5cb2 (the block's in-place corrections; lean/BsvScript/Params.lean's Teranode sources; lean/BsvScript/TxPolicy.lean's
+section docstring and T-STD7's record sources: docstrings only under lean/).
+
+[withheld at export: a sibling tree's line]
+tools/specgen.py regenerated 3 spec/ pages over the docstrings; then the leg; then the push 013f578..60f5cb2; lean-landing-lock: released by S1 at 16:15:46 UTC.
+
+THE LEG: docs/records/20260928-155954-make-check.txt, `make check-local` on the Studio: twenty-one legs GREEN at 60f5cb2
+with 3 uncommitted paths (the 3 regenerated spec/ pages), under the plan's Lean lock (slot1 15:59:54Z to 16:15:21Z,
+LEAN_NUM_THREADS=2, D149), the load gate under 20 (14.46 at the start), CARGO_BUILD_JOBS=4; the axiom check 545; the flow
+leg's kernel sample 25 of 25. The leg ran on the tree that landed, after the take: the landing rule is not needed for it.
+
+THE SPEC LEG ON MAIN: the 3 regenerated pages are not on S1's OWNERS line and are left uncommitted, so at the committed
+60f5cb2 `specgen --check` reads STALE (3 files) until the parent's make spec; the leg above read them regenerated. The
+other twenty legs read the committed tree.

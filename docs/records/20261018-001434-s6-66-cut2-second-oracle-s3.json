@@ -1,0 +1,1062 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 1356,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 7,
+      "diverge": 1,
+      "label": "[M]",
+      "measured": 8,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 8,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 15,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 15,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 72,
+      "rpc-precheck": 0,
+      "unrealizable": 57
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [
+      {
+        "id": "chain-missing-input",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000669833,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-txns-inputs-missingorspent\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reward",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.195560917,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: \"bad-cb-amount\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-queued-script",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000672375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"blk-bad-inputs\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-sequential-inputs",
+        "label": "[X]",
+        "observed": {
+          "height": 1360,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"childLive\":true,\"fees\":2000,\"parentSpent\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reversed-inputs",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000625458,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-txns-inputs-missingorspent\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reward-before-script",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000680667,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-cb-amount\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-invalid-retry",
+        "label": "[X]",
+        "observed": {
+          "badFailed": true,
+          "childFailedParent": true,
+          "selectedGood": true
+        },
+        "reference_token": "measured agree: {\"badFailed\":true,\"childFailedParent\":true,\"childNotFailedSelf\":true,\"selectedGood\":true,\"view\":{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "adjudication": {
+          "class": "scenario.unrequested-body.regtest-bridge-admits",
+          "ruling": "open"
+        },
+        "diverging_fields": [
+          "bodyAbsent",
+          "ignored"
+        ],
+        "id": "chain-unrequested-equal-work",
+        "label": "[X]",
+        "observed": {
+          "bodyAbsent": false,
+          "equalWork": true,
+          "ignored": false,
+          "notFailed": true
+        },
+        "reference_token": "measured agree: {\"bodyAbsent\":true,\"equalWork\":true,\"ignored\":true,\"notFailed\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "diverge"
+      }
+    ],
+    "finality": [
+      {
+        "id": "mempool/signed-mtp-2147483647-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/signed-mtp-2147483647-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/signed-mtp-2147483647-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/signed-mtp-2147483647-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/signed-mtp-2147483647-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/signed-mtp-2147483648-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/signed-mtp-2147483648-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/signed-mtp-2147483648-lock-2147483646",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "tip/signed-mtp-2147483648-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "mempool/signed-mtp-2147483648-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/signed-mtp-2147483648-lock-2147483647",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's block times sit at 2^31 seconds (the year 2038); a block of the instance's chain is at most the host clock plus two hours (model/Block.go:689-697) and above its parent's median, so no block the road delivers carries them [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/before-csv-equal-own-time",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row's block time 500000010 is below its parent median 500000011; header time-too-old precedes the requested own-time finality stage, and equal-offset rematerialization preserves that failure ([SRC] src/validation.cpp:5949-5954,6042-6074 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/absent-csv-unresolved",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest CSVHeight is the compiled integer 576, not an absent optional input; no RPC or launch override removes it ([SRC] src/chainparams.cpp:1470; src/validation.cpp:6042-6050 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/no-parent-zero-lock",
+        "label": "[X]",
+        "reference_token": "unrealizable: a missing parent is available only for the compiled genesis block, which cannot be replaced with this stage transaction through submitblock ([SRC] src/chainparams.cpp:1507-1516; src/validation.cpp:6042-6056 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/configured-span",
+        "label": "[X]",
+        "reference_token": "unrealizable: the requested median span differs from compiled nMedianTimeSpan=11, with no RPC or launch override ([SRC] src/block_index.h:720-737 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the reference realized no measurement of the row (its token is unrealizable, the reason in it), so no measurement of the row stands beside the second oracle's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/height-below",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/height-equal",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/height-above",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/zero-relative",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requires a spendable coin at height zero; the pinned genesis coinbase never enters the spendable UTXO view, and moving the coin would erase the zero-height clamped-ancestor boundary ([SRC] src/validation.cpp:3040-3050; src/chainparams.cpp:1507-1516 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/mempool-zero",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/mempool-one",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/disable-bit",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/low-sixteen-mask",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/mask-maximum",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/version-one",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/version-zero",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/negative-version-unsigned",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/flag-off",
+        "label": "[X]",
+        "reference_token": "unrealizable: before Genesis the admission caller always selects LOCKTIME_VERIFY_SEQUENCE; no RPC or launch override disables that bit while preserving the pre-Genesis CheckSequenceLocks branch ([SRC] src/policy/policy.h:246-255; src/validation.cpp:1096-1106,370-373 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/mixed-height-maximum",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/disabled-and-active",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-below",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-equal",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-above",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-zero-clamped-ancestor",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requires a spendable coin at height zero; the pinned genesis coinbase never enters the spendable UTXO view, and moving the coin would erase the zero-height clamped-ancestor boundary ([SRC] src/validation.cpp:3040-3050; src/chainparams.cpp:1507-1516 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-uses-coin-predecessor",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/time-mempool-one",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/missing-coin",
+        "label": "[X]",
+        "reference_token": "rpc-precheck: -25 Missing inputs (src/rpc/rawtransaction.cpp:1634-1638) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/height-vector-mismatch",
+        "label": "[X]",
+        "reference_token": "unrealizable: the live caller resizes and populates one height per transaction input; mismatched vectors are a model totalization and violate the source assertion ([SRC] src/validation.cpp:261,387-405 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/missing-ancestor",
+        "label": "[X]",
+        "reference_token": "unrealizable: a live active chain retains every required coin predecessor index; this incomplete model ancestor list cannot reach the dereferencing stage ([SRC] src/validation.cpp:295-297,387-405 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/genesis-minus-one",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/genesis-at-tip-short-circuit",
+        "label": "[X]",
+        "reference_token": "unrealizable: the isolated bypass supplies missing coin/vector/ancestry inputs; live admission must establish input availability before CheckSequenceLocks, so this malformed-input short circuit has no matching RPC path ([SRC] src/validation.cpp:1164-1204,370-373 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "sequence/genesis-after-tip-short-circuit",
+        "label": "[X]",
+        "reference_token": "unrealizable: the isolated bypass supplies missing coin/vector/ancestry inputs; live admission must establish input availability before CheckSequenceLocks, so this malformed-input short circuit has no matching RPC path ([SRC] src/validation.cpp:1164-1204,370-373 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "flags/era-9",
+        "label": "[X]",
+        "reference_token": "measured agree: 3 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "flags/era-10",
+        "label": "[X]",
+        "reference_token": "measured agree: 2 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "flags/era-20",
+        "label": "[X]",
+        "reference_token": "measured agree: 2 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/zero",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"fee\":0,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/one",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"fee\":1,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/max-minus-one",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact input amount exceeds all spendable regtest issuance: compiled halving interval 150 and 50-coin initial subsidy bound total issuance below 15000 coins; no RPC or launch override creates this input ([SRC] src/chainparams.cpp:1460; src/validation.cpp:2252-2264,3654-3661 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/max",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact input amount exceeds all spendable regtest issuance: compiled halving interval 150 and 50-coin initial subsidy bound total issuance below 15000 coins; no RPC or launch override creates this input ([SRC] src/chainparams.cpp:1460; src/validation.cpp:2252-2264,3654-3661 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/max-plus-one",
+        "label": "[X]",
+        "reference_token": "unrealizable: the positive input above MAX_MONEY is rejected before the isolated fee stage, and exceeds regtest issuance ([SRC] src/validation.cpp:2637-2663; src/amount.h:130-134 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/below-out",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/negative-input-stage",
+        "label": "[X]",
+        "reference_token": "unrealizable: negative output values cannot enter the live UTXO set and input MoneyRange precedes the isolated fee stage ([SRC] src/validation.cpp:542-551,2637-2663 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/equal-max-values",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact input amount exceeds all spendable regtest issuance: compiled halving interval 150 and 50-coin initial subsidy bound total issuance below 15000 coins; no RPC or launch override creates this input ([SRC] src/chainparams.cpp:1460; src/validation.cpp:2252-2264,3654-3661 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "fee/subtract-one",
+        "label": "[X]",
+        "reference_token": "unrealizable: the exact input amount exceeds all spendable regtest issuance: compiled halving interval 150 and 50-coin initial subsidy bound total issuance below 15000 coins; no RPC or launch override creates this input ([SRC] src/chainparams.cpp:1460; src/validation.cpp:2252-2264,3654-3661 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "expiry/below",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requests expiry 10 seconds; the node launch setting parses integer hours and multiplies by 3600, with no RPC setter for a 10-second purge age ([SRC] src/time_locked_mempool.cpp:403-404; src/init.cpp:463-467 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "expiry/equal",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requests expiry 10 seconds; the node launch setting parses integer hours and multiplies by 3600, with no RPC setter for a 10-second purge age ([SRC] src/time_locked_mempool.cpp:403-404; src/init.cpp:463-467 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "expiry/above",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requests expiry 10 seconds; the node launch setting parses integer hours and multiplies by 3600, with no RPC setter for a 10-second purge age ([SRC] src/time_locked_mempool.cpp:403-404; src/init.cpp:463-467 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "finality/lock-zero",
+        "label": "[X]",
+        "observed": {
+          "height": 1351,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-below",
+        "label": "[X]",
+        "observed": {
+          "height": 1352,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000679625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-above",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000633166,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-below",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000506708,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001106458,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-above",
+        "label": "[X]",
+        "observed": {
+          "height": 1353,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/all-final-future-height",
+        "label": "[X]",
+        "observed": {
+          "height": 1354,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/mixed-future-height",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.00074375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/all-final-future-time",
+        "label": "[X]",
+        "observed": {
+          "height": 1355,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/mixed-future-time",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000645875,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-ignores-time",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000655625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-ignores-height",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000631458,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "median/short-one",
+        "label": "[X]",
+        "observed": {
+          "height": 0,
+          "status": "ok",
+          "value": 42
+        },
+        "reference_token": "measured agree: 42 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "median",
+        "verdict": "agree"
+      },
+      {
+        "id": "median/short-two-upper-middle",
+        "label": "[X]",
+        "observed": {
+          "height": 1,
+          "status": "ok",
+          "value": 9
+        },
+        "reference_token": "measured agree: 9 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "median",
+        "verdict": "agree"
+      }
+    ],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 4031813,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-001434/receipt.json",
+    "sha256": "2c24335072b8c6b31014865792a905f8caf60e7b7cc39c7b2c8fe3139fdc5522"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 103,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "4d6e638841d61026743d89360a08953ea3a8043f7161170511ec31962f3d0898",
+      "height": 1365
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261018-001434-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 14,
+    "ends": 14,
+    "events": 1789,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "finality/lock-zero",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/all-final-future-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/mixed-future-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/all-final-future-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/mixed-future-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-ignores-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-ignores-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-missing-input",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reward",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-queued-script",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-sequential-inputs",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reversed-inputs",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reward-before-script",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-invalid-retry",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-unrequested-equal-work",
+        "verdict": "diverge"
+      }
+    ]
+  },
+  "rows_selected": [
+    "block/absent-csv-unresolved",
+    "block/before-csv-equal-own-time",
+    "block/configured-span",
+    "block/no-parent-zero-lock",
+    "block/signed-mtp-2147483647-lock-2147483646",
+    "block/signed-mtp-2147483647-lock-2147483647",
+    "block/signed-mtp-2147483648-lock-2147483646",
+    "block/signed-mtp-2147483648-lock-2147483647",
+    "chain-invalid-retry",
+    "chain-missing-input",
+    "chain-queued-script",
+    "chain-reversed-inputs",
+    "chain-reward",
+    "chain-reward-before-script",
+    "chain-sequential-inputs",
+    "chain-unrequested-equal-work",
+    "expiry/above",
+    "expiry/below",
+    "expiry/equal",
+    "fee/below-out",
+    "fee/equal-max-values",
+    "fee/max",
+    "fee/max-minus-one",
+    "fee/max-plus-one",
+    "fee/negative-input-stage",
+    "fee/one",
+    "fee/subtract-one",
+    "fee/zero",
+    "finality/all-final-future-height",
+    "finality/all-final-future-time",
+    "finality/height-above",
+    "finality/height-below",
+    "finality/height-equal",
+    "finality/height-ignores-time",
+    "finality/lock-zero",
+    "finality/mixed-future-height",
+    "finality/mixed-future-time",
+    "finality/time-above",
+    "finality/time-below",
+    "finality/time-equal",
+    "finality/time-ignores-height",
+    "flags/era-10",
+    "flags/era-20",
+    "flags/era-9",
+    "median/short-one",
+    "median/short-two-upper-middle",
+    "mempool/signed-mtp-2147483647-lock-2147483646",
+    "mempool/signed-mtp-2147483647-lock-2147483647",
+    "mempool/signed-mtp-2147483648-lock-2147483646",
+    "mempool/signed-mtp-2147483648-lock-2147483647",
+    "sequence/disable-bit",
+    "sequence/disabled-and-active",
+    "sequence/flag-off",
+    "sequence/genesis-after-tip-short-circuit",
+    "sequence/genesis-at-tip-short-circuit",
+    "sequence/genesis-minus-one",
+    "sequence/height-above",
+    "sequence/height-below",
+    "sequence/height-equal",
+    "sequence/height-vector-mismatch",
+    "sequence/low-sixteen-mask",
+    "sequence/mask-maximum",
+    "sequence/mempool-one",
+    "sequence/mempool-zero",
+    "sequence/missing-ancestor",
+    "sequence/missing-coin",
+    "sequence/mixed-height-maximum",
+    "sequence/negative-version-unsigned",
+    "sequence/time-above",
+    "sequence/time-below",
+    "sequence/time-equal",
+    "sequence/time-mempool-one",
+    "sequence/time-uses-coin-predecessor",
+    "sequence/time-zero-clamped-ancestor",
+    "sequence/version-one",
+    "sequence/version-zero",
+    "sequence/zero-relative",
+    "tip/signed-mtp-2147483647-lock-2147483647",
+    "tip/signed-mtp-2147483648-lock-2147483646",
+    "tip/signed-mtp-2147483648-lock-2147483647"
+  ],
+  "run_id": "gate95-20261017-234627-001434",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-18T00:14:34Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 22,
+    "diverge": 1,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 23,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 270.473749917
+  }
+}

@@ -1,0 +1,5 @@
+# harness/rustfmt.toml (S3, lane gate-134, #134, 2026-10-14 [M]): the formatting configuration of the harness crate.
+# The edition is the crate's (harness/Cargo.toml `edition = "2021"`): `cargo fmt` passes it from the manifest, and a bare
+# `rustfmt` (the pre-commit hook, tools/hooks/git/pre-commit) reads it from here, so both judge the same style. rustfmt's
+# defaults otherwise; the toolchain is the pinned one (harness/rust-toolchain.toml).
+edition = "2021"

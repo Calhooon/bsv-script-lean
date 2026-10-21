@@ -1,0 +1,210 @@
+import BsvScript.Gadget
+import BsvScript.Eval
+/-!
+# A worked example of the gadget API: BIP 199's hash-lock (#35, 35a; `docs/DESIGN.md` §12.4)
+
+BIP 199, the hashed time-locked contract (bitcoin/bips `bip-0199.mediawiki`, blob `74bf6d6b`, lines 26–27 and 34,
+read 2026-09-29), locks the seller's branch with `[HASHOP] <digest> OP_EQUALVERIFY`, `[HASHOP]` being `OP_SHA256`
+or `OP_HASH160`: the hash puzzle a contract compiler produces for a preimage. With `OP_SHA256` and a 32-byte digest
+`h` the gadget is the 35 bytes `a8 20 <h> 88`. This module states and proves what it computes, at the gadget
+level (`BsvScript.Gadget`), over the spec's evaluator `Eval.opExec`:
+
+* `run_sha256`, `run_push32` and `run_equalverify_same`: each instruction's effect on the machine state, through
+  `Gadget.run` over the loop's own step (`Machine.loop`);
+* `sha256_triple`, `push32_triple` and `equalverify_triple`: the same three as `Gadget.Triple`s;
+* `hashLock_triple`: the gadget's own triple, composed from the three by `Triple.seq` (the digest's equality
+  carried across by `Triple.conseq`): on a stack whose top `x` hashes to `h` it runs to its end and leaves the
+  stack below `x`, two opcodes charged, `x`'s memory given back.
+
+The hypotheses are the gadget's preconditions at the reference: an executing branch with no non-top-level
+`OP_RETURN` (`459`), the op count two under `maxOpsPerScript` (`466–467`), the memory counter 128 under
+`maxStackMemoryUsage` (`limitedstack.h:163–173`), and a post-Genesis UTXO (the pre-Genesis limits, `455–456`
+and `1800–1803`, stay out of the statement).
+-/
+
+set_option autoImplicit false
+
+namespace BsvScript.Gadget.HashLock
+open BsvScript.Params BsvScript.Numbers BsvScript.Machine BsvScript.Gadget
+
+/-- BIP 199's hash branch with `[HASHOP]` = `OP_SHA256` (`0xa8`): the digest `h` pushed by its length byte
+(`0x20` for 32 bytes, the minimal push, `interpreter.cpp:473–481`), then `OP_EQUALVERIFY` (`0x88`). -/
+def gadget (h : Bytes) : Bytes := [Op.OP_SHA256] ++ ((0x20 :: h) ++ [Op.OP_EQUALVERIFY])
+
+/-- **`OP_SHA256`** (`1402–1443`) on a stack whose top is `x`: the top replaced by `sha256 x`, one opcode
+charged, `x`'s memory given back and the digest's charged (`limitedstack.h:163–173`). -/
+theorem run_sha256 (env : Env) (t : Bytes) (st : State) (x : Bytes) (rest : List Bytes)
+    (hstk : st.stack = x :: rest) (hact : st.cond.isActive = true) (hret : st.nonTopLevelReturn = false)
+    (hops : st.opCount + 1 ≤ env.params.limits.maxOpsPerScript)
+    (hmem : st.memUsed + 32 + elementOverhead ≤ env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    run Eval.opExec env [Op.OP_SHA256] t st =
+      .next { st with opCount := st.opCount + 1, stack := Hash.sha256 x :: rest,
+                      memUsed := st.memUsed - (x.length + elementOverhead) + 32 + elementOverhead } := by
+  have hops' : ¬ (st.opCount + 1 > env.params.limits.maxOpsPerScript) := by omega
+  have hmem' : ¬ (st.memUsed - (x.length + elementOverhead) + 32 + elementOverhead >
+      env.params.limits.maxStackMemoryUsage) := by omega
+  rw [run.eq_2]
+  simp [getOpTail, execStep, execFlow, isOpcodeDisabled, Eval.opExec, Ops.Arith.exec, Ops.Arith.isUnary,
+    Ops.Arith.isBinary, Ops.Bitwise.exec, Ops.Stack.exec, Ops.Splice.exec, Ops.Crypto.exec, Ops.Expansion.exec,
+    Ops.Crypto.hashOp, Ops.Stack.need, popElem, pushElem, HookR.ofExcept, bind, Except.bind, Hash.sha256_length,
+    hstk, hact, hret, hgen, hops', hmem', run.eq_1,
+    Op.OP_SHA256, Op.OP_PUSHDATA4, Op.OP_16, Op.OP_1NEGATE, Op.OP_1, Op.OP_NOP, Op.OP_CHECKLOCKTIMEVERIFY,
+    Op.OP_CHECKSEQUENCEVERIFY, Op.OP_VER, Op.OP_NOP1, Op.OP_NOP9, Op.OP_NOP10, Op.OP_VERIF, Op.OP_VERNOTIF,
+    Op.OP_IF, Op.OP_NOTIF, Op.OP_ELSE, Op.OP_ENDIF, Op.OP_VERIFY, Op.OP_RETURN, Op.OP_CODESEPARATOR,
+    Op.OP_2MUL, Op.OP_2DIV, Op.OP_1ADD, Op.OP_0NOTEQUAL, Op.OP_ADD, Op.OP_MAX, Op.OP_LSHIFT, Op.OP_RSHIFT,
+    Op.OP_WITHIN, Op.OP_AND, Op.OP_OR, Op.OP_XOR, Op.OP_INVERT, Op.OP_EQUAL, Op.OP_EQUALVERIFY,
+    Op.OP_TOALTSTACK, Op.OP_TUCK, Op.OP_SIZE, Op.OP_CAT, Op.OP_SPLIT, Op.OP_NUM2BIN, Op.OP_BIN2NUM,
+    Op.OP_RIPEMD160, Op.OP_SHA1, Op.OP_HASH256]
+
+/-- **The digest's push** (`473–481`): `0x20` then the 32 bytes of `h`, a minimal push (`checkMinimalPush`),
+pushes `h` and charges its memory; no opcode is counted (`466–467` counts above `OP_16` only). -/
+theorem run_push32 (env : Env) (t h : Bytes) (st : State) (hlen : h.length = 32)
+    (hact : st.cond.isActive = true) (hret : st.nonTopLevelReturn = false)
+    (hmem : st.memUsed + 32 + elementOverhead ≤ env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    run Eval.opExec env (0x20 :: h) t st =
+      .next { st with stack := h :: st.stack, memUsed := st.memUsed + 32 + elementOverhead } := by
+  have hmem' : ¬ (st.memUsed + 32 + elementOverhead > env.params.limits.maxStackMemoryUsage) := by omega
+  rcases h with _ | ⟨a, _ | ⟨b, h'⟩⟩
+  · simp at hlen
+  · simp at hlen
+  have hl' : h'.length = 30 := by simpa using hlen
+  have htake : (a :: b :: h').take 32 = a :: b :: h' := List.take_of_length_le (by simp [hl'])
+  have hdrop : (a :: b :: h').drop 32 = [] := List.drop_of_length_le (by simp [hl'])
+  rw [run.eq_2]
+  simp [getOpTail, execStep, checkMinimalPush, pushElem, isOpcodeDisabled, hl', htake, hdrop, hact, hret, hgen, hmem',
+    run.eq_1, Op.OP_PUSHDATA4, Op.OP_PUSHDATA1, Op.OP_16, Op.OP_2MUL, Op.OP_2DIV]
+
+/-- **`OP_EQUALVERIFY`** (`1189–1217`) on two equal elements `v` on top: both popped, the result pushed and
+verified away, one opcode charged. -/
+theorem run_equalverify_same (env : Env) (t : Bytes) (st : State) (v : Bytes) (rest : List Bytes)
+    (hstk : st.stack = v :: v :: rest) (hact : st.cond.isActive = true) (hret : st.nonTopLevelReturn = false)
+    (hops : st.opCount + 1 ≤ env.params.limits.maxOpsPerScript)
+    (hmem : st.memUsed - (v.length + elementOverhead) - (v.length + elementOverhead) + 1 + elementOverhead ≤
+      env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    run Eval.opExec env [Op.OP_EQUALVERIFY] t st =
+      .next { st with opCount := st.opCount + 1, stack := rest,
+                      memUsed := st.memUsed - (v.length + elementOverhead) - (v.length + elementOverhead) + 1 +
+                        elementOverhead - (1 + elementOverhead) } := by
+  have hops' : ¬ (st.opCount + 1 > env.params.limits.maxOpsPerScript) := by omega
+  have hmem' : ¬ (st.memUsed - (v.length + elementOverhead) - (v.length + elementOverhead) + 1 + elementOverhead >
+      env.params.limits.maxStackMemoryUsage) := by omega
+  rw [run.eq_2]
+  simp [getOpTail, execStep, execFlow, isOpcodeDisabled, Eval.opExec, Ops.Arith.exec, Ops.Arith.isUnary,
+    Ops.Arith.isBinary, Ops.Bitwise.exec, Ops.Bitwise.equal, Ops.Bitwise.vchTrue, popElem, pushElem,
+    HookR.ofExcept, bind, Except.bind, pure, Except.pure, hstk, hact, hret, hgen, hops', hmem', run.eq_1,
+    Op.OP_PUSHDATA4, Op.OP_16, Op.OP_1NEGATE, Op.OP_1, Op.OP_NOP, Op.OP_CHECKLOCKTIMEVERIFY,
+    Op.OP_CHECKSEQUENCEVERIFY, Op.OP_VER, Op.OP_NOP1, Op.OP_NOP9, Op.OP_NOP10, Op.OP_VERIF, Op.OP_VERNOTIF,
+    Op.OP_IF, Op.OP_NOTIF, Op.OP_ELSE, Op.OP_ENDIF, Op.OP_VERIFY, Op.OP_RETURN, Op.OP_CODESEPARATOR,
+    Op.OP_2MUL, Op.OP_2DIV, Op.OP_1ADD, Op.OP_0NOTEQUAL, Op.OP_ADD, Op.OP_MAX, Op.OP_LSHIFT, Op.OP_RSHIFT,
+    Op.OP_WITHIN, Op.OP_AND, Op.OP_OR, Op.OP_XOR, Op.OP_INVERT, Op.OP_EQUAL, Op.OP_EQUALVERIFY]
+
+/-- The digest's push is framed: `0x20` reads exactly the 32 bytes that follow it. -/
+theorem framed_push32 (h : Bytes) (hlen : h.length = 32) : framed (0x20 :: h) = true := by
+  rcases h with _ | ⟨a, _ | ⟨b, h'⟩⟩
+  · simp at hlen
+  · simp at hlen
+  have hl' : h'.length = 30 := by simpa using hlen
+  have htake : (a :: b :: h').take 32 = a :: b :: h' := List.take_of_length_le (by simp [hl'])
+  have hdrop : (a :: b :: h').drop 32 = [] := List.drop_of_length_le (by simp [hl'])
+  rw [framed.eq_2]
+  simp [getOpTail, hl', htake, hdrop, Op.OP_PUSHDATA4, Op.OP_PUSHDATA1, framed.eq_1]
+
+/-- A one-opcode fragment above `OP_PUSHDATA4` is framed. -/
+theorem framed_single (op : Nat) (hop : Op.OP_PUSHDATA4 < op) : framed [op] = true := by
+  rw [framed.eq_2]
+  have : ¬ op ≤ Op.OP_PUSHDATA4 := by omega
+  simp [getOpTail, this, framed.eq_1]
+
+/-- **`OP_SHA256` as a triple.** From a state whose top is `x` (the rest of the stack, the alt stack, the
+conditional state and the counters named by ghost values), the top becomes `sha256 x`, one opcode charged, `x`'s
+memory given back and the digest's 32 bytes charged. -/
+theorem sha256_triple (env : Env) (x : Bytes) (rest a0 : List Bytes) (c0 : Cond) (o0 m0 : Nat)
+    (hc0 : c0.isActive = true) (hops : o0 + 1 ≤ env.params.limits.maxOpsPerScript)
+    (hmem : m0 + 32 + elementOverhead ≤ env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    Triple Eval.opExec env
+      (fun st => st.stack = x :: rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 ∧ st.memUsed = m0)
+      [Op.OP_SHA256]
+      (fun st => st.stack = Hash.sha256 x :: rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 + 1 ∧ st.memUsed = m0 - (x.length + elementOverhead) + 32 + elementOverhead) := by
+  intro st t ⟨hs, ha, hc, hr, ho, hm⟩
+  subst ho hm
+  exact ⟨_, run_sha256 env t st x rest hs (hc ▸ hc0) hr hops hmem hgen, rfl, ha, hc, hr, rfl, rfl⟩
+
+/-- **The digest's push as a triple.** The digest `h` goes on top of the stack `s`, its memory charged; no
+opcode is counted. -/
+theorem push32_triple (env : Env) (h : Bytes) (s a0 : List Bytes) (c0 : Cond) (o0 m0 : Nat)
+    (hlen : h.length = 32) (hc0 : c0.isActive = true)
+    (hmem : m0 + 32 + elementOverhead ≤ env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    Triple Eval.opExec env
+      (fun st => st.stack = s ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 ∧ st.memUsed = m0)
+      (0x20 :: h)
+      (fun st => st.stack = h :: s ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 ∧ st.memUsed = m0 + 32 + elementOverhead) := by
+  intro st t ⟨hs, ha, hc, hr, ho, hm⟩
+  subst hm
+  exact ⟨_, run_push32 env t h st hlen (hc ▸ hc0) hr hmem hgen, by simp [hs], ha, hc, hr, ho, rfl⟩
+
+/-- **`OP_EQUALVERIFY` on two equal elements as a triple.** Both are popped, the result pushed and verified
+away, one opcode charged. -/
+theorem equalverify_triple (env : Env) (v : Bytes) (rest a0 : List Bytes) (c0 : Cond) (o0 m0 : Nat)
+    (hc0 : c0.isActive = true) (hops : o0 + 1 ≤ env.params.limits.maxOpsPerScript)
+    (hmem : m0 - (v.length + elementOverhead) - (v.length + elementOverhead) + 1 + elementOverhead ≤
+      env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    Triple Eval.opExec env
+      (fun st => st.stack = v :: v :: rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 ∧ st.memUsed = m0)
+      [Op.OP_EQUALVERIFY]
+      (fun st => st.stack = rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 + 1 ∧
+                 st.memUsed = m0 - (v.length + elementOverhead) - (v.length + elementOverhead) + 1 +
+                   elementOverhead - (1 + elementOverhead)) := by
+  intro st t ⟨hs, ha, hc, hr, ho, hm⟩
+  subst ho hm
+  exact ⟨_, run_equalverify_same env t st v rest hs (hc ▸ hc0) hr hops hmem hgen, rfl, ha, hc, hr, rfl, rfl⟩
+
+/-- **The hash-lock as a triple** (BIP 199's `OP_SHA256 <h> OP_EQUALVERIFY`; `docs/DESIGN.md` §12.4). *What it
+says:* from every state whose top is a preimage `x` of `h`, the rest of the stack, the alt stack, the conditional
+state and the counters named by ghost values, the gadget runs to its end, whatever follows it, in the state that
+keeps all of them but the top, with two opcodes charged and `x`'s memory given back. *What it assumes:* the
+gadget's preconditions (the module's header). *Why it matters:* the preimage check a contract compiler produces is
+proved once, at the gadget level, as the composition of its three instructions' triples by `Triple.seq`, the
+digest's equality carried across by `Triple.conseq`; a consumer's chain of gadgets composes it the same way. -/
+theorem hashLock_triple (env : Env) (h x : Bytes) (rest a0 : List Bytes) (c0 : Cond) (o0 m0 : Nat)
+    (hlen : h.length = 32) (hsha : Hash.sha256 x = h) (hc0 : c0.isActive = true)
+    (hops : o0 + 2 ≤ env.params.limits.maxOpsPerScript)
+    (hmem : m0 + 128 ≤ env.params.limits.maxStackMemoryUsage)
+    (hgen : env.utxoAfterGenesis = true) :
+    Triple Eval.opExec env
+      (fun st => st.stack = x :: rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 ∧ st.memUsed = m0)
+      (gadget h)
+      (fun st => st.stack = rest ∧ st.alt = a0 ∧ st.cond = c0 ∧ st.nonTopLevelReturn = false ∧
+                 st.opCount = o0 + 2 ∧ st.memUsed = m0 - (x.length + elementOverhead)) := by
+  have T1 := sha256_triple env x rest a0 c0 o0 m0 hc0 (by omega) (by simp only [elementOverhead]; omega) hgen
+  have T2 := push32_triple env h (Hash.sha256 x :: rest) a0 c0 (o0 + 1)
+    (m0 - (x.length + elementOverhead) + 32 + elementOverhead) hlen hc0
+    (by simp only [elementOverhead]; omega) hgen
+  have T3 := equalverify_triple env h rest a0 c0 (o0 + 1)
+    (m0 - (x.length + elementOverhead) + 32 + elementOverhead + 32 + elementOverhead) hc0 (by omega)
+    (by simp only [elementOverhead, hlen]; omega) hgen
+  unfold gadget
+  refine Triple.seq (framed_single _ (by decide)) T1 (Triple.seq (framed_push32 h hlen) T2
+    (Triple.conseq ?_ ?_ T3))
+  · intro st ⟨hs, ha, hc, hr, ho, hm⟩
+    exact ⟨by rw [hs, hsha], ha, hc, hr, ho, hm⟩
+  · intro st ⟨hs, ha, hc, hr, ho, hm⟩
+    refine ⟨hs, ha, hc, hr, by omega, ?_⟩
+    rw [hm]
+    simp only [elementOverhead, hlen]
+    omega
+
+
+end BsvScript.Gadget.HashLock

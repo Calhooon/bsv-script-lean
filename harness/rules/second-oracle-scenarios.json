@@ -1,0 +1,65 @@
+{
+ "engine": "second-oracle-scenarios",
+ "pin": "Teranode v0.16.0 at 4edb60a40c6628ff0ef60231c2628efd7103fde5; the reference bitcoin-sv v1.2.3 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+ "source": "written 2026-10-15 (S3, lane cut2-66q2, #66 cut 2) for the scenario column of the second oracle (harness/src/scenarios/teranode.rs, road.rs): a row here names the class of a scenario row whose measured verdict differs from the reference's, with its citation at both pins; the column attaches the class to the row by its id (`when.id_in` only), and a diverging row no row names is unexplained (CLAUDE.md rule 4: a Finding drafted with its witness hash). Extended 2026-10-15 (S3, lane cut2-66abl7, the gateway): the two rows the 4b07ff54 run moved to diverge (docs/records/20261015-151316-s6-66-cut2-second-oracle-s3.md)",
+ "classes": {
+  "scenario.header-median.regtest-warning": {
+   "decided_by": "[SRC] Teranode v0.16.0 at 4edb60a4: model/Block.go:715-736 (CheckHeaderContextual: a header time at or below the median of the eleven headers ending at the parent is an error only when the network's GenerateSupported is false, otherwise a warning, :728-735); go-chaincfg v1.6.2 (the version the tag's go.mod requires) params.go:484 (RegressionNetParams, :450: GenerateSupported true) and :286 (MainNetParams, :251: false). The reference: bitcoin-sv v1.2.3 at 6504a3af src/validation.cpp:5950-5954 (time-too-old on every network).",
+   "ruling": "open",
+   "note": "the instance relaxes the median-time-past header rule on the networks that allow CPU mining (its regtest), where the reference refuses on every network; on mainnet both refuse by source. The cell's verdict differs on a network parameter of the instance's regtest, not on a mainnet consensus rule: whether the regtest cell is a divergence or non-judging is the owner's ruling (rule 15)"
+  },
+  "scenario.reconsider.revalidation-refused": {
+   "decided_by": "[SRC] Teranode v0.16.0 at 4edb60a4: services/rpc/handlers.go:1919-1960 (reconsiderblock re-validates the block through the block validation service and answers -25 on its failure, :1946-1951), services/blockvalidation/Server.go:1401-1449 (RevalidateBlock: the block's read, its header's read, the subtree fetch, the re-validation). The reference: bitcoin-sv v1.2.3 at 6504a3af src/rpc/blockchain.cpp:2770-2815 (reconsiderblock clears the failure flags, src/validation.cpp:5528, and activates the best chain).",
+   "ruling": "open",
+   "note": "an operator RPC, never block validity: after invalidateblock the reference's reconsiderblock restores the block and its spend, the instance's refuses the re-validation and keeps the spend in block assembly; the stage of the refusal is the row's enumerated `stage` (road.rs revalidation_stage), judged in code from the source's fixed texts"
+  },
+  "scenario.unrequested-body.regtest-bridge-admits": {
+   "decided_by": "[SRC] Teranode v0.16.0 at 4edb60a4: services/legacy/netsync/manager.go:1789-1801 (handleBlockMsg: a body whose hash is not in requestedBlocks is fed to the chain code on regtest, the peer disconnected with a warning on every other network) and :3156-3159 (BlockRequested answers true on regtest). The reference: bitcoin-sv v1.2.3 at 6504a3af src/validation.cpp:6308-6317 (AcceptBlock, :6238, fHasMoreWork :6281: an unrequested block is processed only with more work than the tip).",
+   "ruling": "open",
+   "note": "the body is consensus-valid and equal-work to the tip: the reference's unrequested gate is an admission policy that drops its bytes unprocessed, the instance's regtest bridge feeds it to the chain code and stores it. On mainnet both leave the body unprocessed (the reference silently, the bridge by disconnecting the peer). The cell's verdict differs on the instance's regtest admission of unrequested bodies, not on a block-validity rule: whether the regtest cell is a divergence or non-judging is the owner's ruling (rule 15)"
+  },
+  "scenario.invalidateblock.unmined-not-revalidated": {
+   "decided_by": "[SRC] Teranode v0.16.0 at 4edb60a4: services/rpc/handlers.go:1862-1900 (invalidateblock), services/blockchain/Server.go:2380-2445 (the store's invalidation and the BlockMinedUnset notification), services/blockvalidation/BlockValidation.go:572-578 and :1410-1520 (setTxMinedStatus with unsetMined: model.UpdateTxMinedStatus, :1500, flips the block's transactions to unmined with no re-validation of their spends), services/blockassembly/BlockAssembler.go:731-758 (the reset's moveBack, recovered by loadUnminedTransactions), services/rpc/handlers.go:1353-1386 (getrawmempool reads block assembly's list). The reference: bitcoin-sv v1.2.3 at 6504a3af src/validation.cpp:4065-4110 (DisconnectTip saves the block's transactions to the disconnectpool), :5290-5291 (InvalidateBlock re-adds them through AddToMempoolForReorg), src/txmempool.cpp:2330-2410 (the re-validation, :2384, and the now-immature removal, :2403-2406, RemoveForReorgNL :947).",
+   "ruling": "open",
+   "note": "an operator-RPC path, never block validity: after invalidateblock the reference re-validates the disconnected transactions at the rewound tip and drops a spend of a now-immature coinbase from its mempool; the instance flips the block's transactions to unmined and block assembly lists the spend without re-validating it. Only the row's pool field diverges (the coinbase, the height and the held agree): whether that cell is a divergence or non-judging is the owner's ruling (rule 15), and whether block assembly re-validates the recovered candidates before inclusion is not measured by this row"
+  }
+ },
+ "rows": [
+  {
+   "why": "header/time-at-median: the block's header time equals the parent's median time past; the instance's regtest warns and connects it",
+   "when": {
+    "id_in": [
+     "header/time-at-median"
+    ]
+   },
+   "class": "scenario.header-median.regtest-warning"
+  },
+  {
+   "why": "chain-invalidate-reconsider: the instance answers reconsiderblock -25 and stays on the invalidated tip",
+   "when": {
+    "id_in": [
+     "chain-invalidate-reconsider"
+    ]
+   },
+   "class": "scenario.reconsider.revalidation-refused"
+  },
+  {
+   "why": "chain-unrequested-equal-work: the equal-work rival sent as a body with no announcement; the instance's regtest bridge stores it, the reference's unrequested gate drops it",
+   "when": {
+    "id_in": [
+     "chain-unrequested-equal-work"
+    ]
+   },
+   "class": "scenario.unrequested-body.regtest-bridge-admits"
+  },
+  {
+   "why": "chain-disconnected-now-immature: after invalidateblock the spend of the now-immature coinbase re-enters the instance's pool unvalidated; the reference's reorg path drops it",
+   "when": {
+    "id_in": [
+     "chain-disconnected-now-immature"
+    ]
+   },
+   "class": "scenario.invalidateblock.unmined-not-revalidated"
+  }
+ ]
+}

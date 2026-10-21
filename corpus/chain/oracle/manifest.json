@@ -1,0 +1,19 @@
+{
+  "corpus": "chain/oracle",
+  "file": "oracle.jsonl",
+  "count": 30,
+  "sha256": "09433386513fd31b76fe0d5a4cfe30c7c0bd3df2b8e3951cbe96d23421bbb210",
+  "generator": "tools/oracle_cases.py; oraclecheck --record",
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "material": "corpus/chain/utxo/utxo.jsonl script rows and wrapper variants",
+  "columns": [
+    "spec",
+    "spec-mempool"
+  ],
+  "verdict_label": "[M]",
+  "evaluator": "BsvChain.evalOracle via BsvScript.Eval.verifyScript",
+  "oracle_source_sha256": "cb649868a75f42a6868db856881ea32d6b0b61f71b03aaa9358218de8f7702b8",
+  "key": "column + structural transaction + all prevouts + input + coinHeight + spendHeight + exact EvalParams",
+  "node": "measured per-row observations [X] docs/records/20261013-041541-s6-66c-regtest-s3.md",
+  "inline_expectations": "[D] pinned source rejection mapping"
+}

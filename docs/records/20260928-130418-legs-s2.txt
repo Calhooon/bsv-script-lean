@@ -1,0 +1,9 @@
+legs record (S2, Lean B, set 4 sitting 5; D142's local legs, [X local]; the Studio, LOCAL; queued 12:49:16 UTC at the 1-minute load 58.71 behind the load gate, started at 17.94)
+
+THE TREE OF THE COMMIT THAT CARRIES THIS RECORD, this record and its README row aside (S2's own lens on its sitting-5 END BLOCK: docs/lanes/lean.md, docs/audit/README.md, docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md; docs only, no Lean file), the two legs that read docs:
+base f3aeee7, 3 paths modified or new (the lens landing of sitting 5: docs/lanes/lean.md, docs/audit/README.md, the filed report)
+start 13:04:18 UTC load { 17.94 59.46 59.42 }
+cite_check: 2960 citations found in lean/ and docs/ (2900 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1727, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 150, history 993, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+specgen --check: OK (117 files up to date; 0 rules flagged)
+end 13:04:25 UTC load { 18.67 58.24 58.98 }

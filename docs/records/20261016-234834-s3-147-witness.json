@@ -1,0 +1,116 @@
+{
+ "instance": {
+  "binary": "~/bsv/targets/sv-v1.2.3/bin/bitcoind",
+  "rpc_port": 18573,
+  "genesisactivationheight": 115,
+  "chronicleactivationheight": 130,
+  "maxgenesisgracefulperiod": 0,
+  "maxchroniclegracefulperiod": 0,
+  "version": "/Bitcoin SV:1.2.3/",
+  "stopped_and_removed": true
+ },
+ "keys": "sha256('xsig-144/' + label) mod n: funder, utxo, secret0, shape-c; shape B's in-script key is d = 1",
+ "checks": [],
+ "spends": [
+  {
+   "shape": "C",
+   "label": "c1",
+   "method": "c1:post-chronicle/signed-over-ad51",
+   "era": "post-chronicle",
+   "coin": {
+    "txid": "dc7323d03e1bc4f30fe64d040bab6aea06a743bfda008a4b26476e154b4b6e2c",
+    "vout": 0,
+    "script": "51",
+    "satoshis": 100000,
+    "height": 132,
+    "funding_tx": "02000000018a9d9faf88dbd4831e6fe0f556a0ce97b4f2d4f696b73ce16123ea031af69c0e000000006b483045022100974b2c2ddce408aa4872a845f550a81ebb54299c5bc3a5a600f241adbd1b289402204e26f0e5536af7dd3b01e422a6dd8e403bfb26b408926e5dc0cac1a661488dac412102cdf73a0be0fbb9fed9558c848105aa00682d93dd79ec122112a51de3c7c2b5d3ffffffff03a0860100000000000151a0860100000000000151b0bd022a010000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000"
+   },
+   "script_code": "ad51",
+   "signed_over": "ad51",
+   "tx": "02000000012c6e4b4b156e47264b8a00dabf43a706ea6aab0b044de60ff3c41b3ed02373dc000000006c4730440220559819d13bfb8cb1c7b601efc3fc0006a18ddeff7a67d9b6268b0043217bf1de0220643492fcfe8a79a80eee9e216999c8630034365f8e1f81c1fe461572e2eaf5dc412103a648dc56809d34ecaf0db02f0c2c0e023f2407e35a2ecb5cec14571ff3054868abadffffffff01b8820100000000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000",
+   "txid": "22c088f0d344ac7f44c2b11a80c09b3a65a8f1671d412bad90f4767c93136473",
+   "reference_submit": {
+    "verdict": "accepted",
+    "tip_before": 132,
+    "blockhash": "111f9ad36ffd5ed807060227ed9ec1e6c19ed5b87c5eefe3f967956d25952bbd",
+    "confirmations": 1,
+    "height": 133
+   }
+  },
+  {
+   "shape": "C",
+   "label": "c2",
+   "method": "c2:post-chronicle/signed-over-ad",
+   "era": "post-chronicle",
+   "coin": {
+    "txid": "dc7323d03e1bc4f30fe64d040bab6aea06a743bfda008a4b26476e154b4b6e2c",
+    "vout": 1,
+    "script": "51",
+    "satoshis": 100000,
+    "height": 132,
+    "funding_tx": "02000000018a9d9faf88dbd4831e6fe0f556a0ce97b4f2d4f696b73ce16123ea031af69c0e000000006b483045022100974b2c2ddce408aa4872a845f550a81ebb54299c5bc3a5a600f241adbd1b289402204e26f0e5536af7dd3b01e422a6dd8e403bfb26b408926e5dc0cac1a661488dac412102cdf73a0be0fbb9fed9558c848105aa00682d93dd79ec122112a51de3c7c2b5d3ffffffff03a0860100000000000151a0860100000000000151b0bd022a010000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000"
+   },
+   "script_code": "ad51",
+   "signed_over": "ad",
+   "tx": "02000000012c6e4b4b156e47264b8a00dabf43a706ea6aab0b044de60ff3c41b3ed02373dc010000006d483045022100cb32373783c5b7d466d0d7c03770503b62e67712c45d1a150a07150f27193eab02205f0f1d3f2eb179a3076038c4cf5e9ad6db7b278fbeaff9cc04dc7d6c4c09e34b412103a648dc56809d34ecaf0db02f0c2c0e023f2407e35a2ecb5cec14571ff3054868abadffffffff01b8820100000000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000",
+   "txid": "ea81b400342f1708849a44d673d2b4dc5ae8bbfc6c5cb708e72d1b120e2a5a93",
+   "reference_submit": {
+    "verdict": "rejected",
+    "code": -26,
+    "message": "16: mandatory-script-verify-flag-failed (Script failed an OP_CHECKSIGVERIFY operation)",
+    "tip_before": 132
+   }
+  },
+  {
+   "shape": "C",
+   "label": "c3",
+   "method": "c3:pre-genesis/signed-over-ad51",
+   "era": "pre-genesis",
+   "coin": {
+    "txid": "dcab09691f64dc15ec04e2261a80f1ea7dfffc302fe50345c91eefa92a2c1c47",
+    "vout": 0,
+    "script": "51",
+    "satoshis": 100000,
+    "height": 102,
+    "funding_tx": "0200000001d7add3bcb87450807119ce46983099032dbfa9d0b5e5e84ec513e6264c150c4c000000006a473044022031c07ced98d3c6db241631ab86a5b07aeca4d384d1c6d09c9bf7af0ac604373a022078718bd90eac65e74750c310a4034c7a36d2077b2217192ae19edc61e703151c412102cdf73a0be0fbb9fed9558c848105aa00682d93dd79ec122112a51de3c7c2b5d3ffffffff03a0860100000000000151a0860100000000000151b0bd022a010000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000"
+   },
+   "script_code": "ad",
+   "signed_over": "ad51",
+   "tx": "0200000001471c2c2aa9ef1ec94503e52f30fcff7deaf1801a26e204ec15dc641f6909abdc000000006c47304402203e60748c6a5f9d31f327eeb37a26be6b51f9ca141edce9eae85c88572c8d4a2f02203d1e1644aa1ec7b7eb966a3606914e485d0c496a75d77c96d8ca1e9e182d8d8d412103a648dc56809d34ecaf0db02f0c2c0e023f2407e35a2ecb5cec14571ff3054868abadffffffff01b8820100000000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000",
+   "txid": "6e7da7b401a6a3ada1618ecebeba15da904b6b258f58ab417185ea1d2b174f61",
+   "reference_submit": {
+    "verdict": "rejected",
+    "code": -26,
+    "message": "16: mandatory-script-verify-flag-failed (Signature must be zero for failed CHECK(MULTI)SIG operation)",
+    "tip_before": 102
+   }
+  },
+  {
+   "shape": "C",
+   "label": "c4",
+   "method": "c4:pre-genesis/signed-over-ad",
+   "era": "pre-genesis",
+   "coin": {
+    "txid": "dcab09691f64dc15ec04e2261a80f1ea7dfffc302fe50345c91eefa92a2c1c47",
+    "vout": 1,
+    "script": "51",
+    "satoshis": 100000,
+    "height": 102,
+    "funding_tx": "0200000001d7add3bcb87450807119ce46983099032dbfa9d0b5e5e84ec513e6264c150c4c000000006a473044022031c07ced98d3c6db241631ab86a5b07aeca4d384d1c6d09c9bf7af0ac604373a022078718bd90eac65e74750c310a4034c7a36d2077b2217192ae19edc61e703151c412102cdf73a0be0fbb9fed9558c848105aa00682d93dd79ec122112a51de3c7c2b5d3ffffffff03a0860100000000000151a0860100000000000151b0bd022a010000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000"
+   },
+   "script_code": "ad",
+   "signed_over": "ad",
+   "tx": "0200000001471c2c2aa9ef1ec94503e52f30fcff7deaf1801a26e204ec15dc641f6909abdc010000006c4730440220399e1b5a8e23cda732ba4847d3a4473c375fff5bbddd4e49c8871542d30c86f5022011d7f0c2c370e5a36e5c038ea1273832cd99d5681a80187c46238342bfdd8378412103a648dc56809d34ecaf0db02f0c2c0e023f2407e35a2ecb5cec14571ff3054868abadffffffff01b8820100000000001976a9141bd7273f6f30b0562860e983100050cdc6e2f9cd88ac00000000",
+   "txid": "ebaa0e9e58389d0eced035068d52950b66a5f78b0aab41aea908a3f5596e8c26",
+   "reference_submit": {
+    "verdict": "accepted",
+    "tip_before": 102,
+    "blockhash": "357fac5a8e996aeef044935bf5507c88fe17a2466b91144c3cd71c468f085cad",
+    "confirmations": 1,
+    "height": 103
+   }
+  }
+ ],
+ "tip": 133,
+ "generated": "2026-10-16T23:48:34Z"
+}

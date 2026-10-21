@@ -1,0 +1,862 @@
+[
+  {
+    "raw_tx": "020000000117f75260ac89f0f2313428a5382094fe688e67688916c3b0fb7693c1e11e2ab70100000000ffffffff014a542a00000000001976a914658b581b33a42917dad4e5455523a5d740958b1188ac00000000",
+    "script": "2102b1d8c3f8125e213f5201d5349fa8b58bdfbaa0eabf86ef31c80b390b56c9c108ad210212b0dc77e3bc4fa1a4c2a5a361fa3fe5b3bed37472a0332563c2d72ce16985bbac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "b14a265996d4b143df8cc688620c793fe636a6d35787ed48dd5341dcc51f03bb",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00001:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "210212b0dc77e3bc4fa1a4c2a5a361fa3fe5b3bed37472a0332563c2d72ce16985bbac",
+    "sdk_hash": "10948be0e8b3c1d2acd809fa7c1cb28c7a532a2aeb8ac71571d9dcbd7a76d4c7",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2777090,
+    "hash_at_amount": "5cc15c672ee42e49df1117932a113a48a0135fa81c08f1ce2f93828ca2271bc9",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00001 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001c4e1527a1b5a04b60bb1b011847f42e374ffa021c124f8815b1200e832739dee0000000000ffffffff0172391300000000001976a91457322289a05dd27afc6005f0420793817ccd69ea88ac00000000",
+    "script": "210296545ce4d08fb8da97d9ea83d751b0291872013ac0cd72bf597ca0fe35ce42e9ad21037c9d24437bd51f3cc31257302006850a831878daf559ee484b2ce747634ec09fac",
+    "input_index": 0,
+    "hash_type": 66,
+    "expected_hash": "ba3b7e4007cd6fcd2cf58de7c2e7ceffa842a1e6e1061fefa5a2f02199d1f517",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00003:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "21037c9d24437bd51f3cc31257302006850a831878daf559ee484b2ce747634ec09fac",
+    "sdk_hash": "8fc0419321891eeafe3eaaee8085bee96b8b9e19e7856822350bffbf871eb6b0",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1262890,
+    "hash_at_amount": "23365df1a4a153870e83af7d05c2d4dc6929e0b23a2672ac0560eb68ad4628c5",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00003 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000019f08b044854780a7ab1dc39352d10e58ee6ddc8e60d1c01e7223d20dca3a28ce0200000000ffffffff01d7d62000000000001976a914c99d0d114d965537beb50608d7a590491b9bb05c88ac00000000",
+    "script": "21028d91483e850ca18b192bbfa14c62bbd130a7899cdb060c4ae4788a4728288829ad21021942f64afeee172d0f6638fc385a0d3ac8a609b14ccfe9ff96652dd30df0ec60ac",
+    "input_index": 0,
+    "hash_type": 67,
+    "expected_hash": "66024afd39ea2c39bf6e25b0dff19fba5c4f4f0facfc05c6f7e46290aee56a44",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00005:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "21021942f64afeee172d0f6638fc385a0d3ac8a609b14ccfe9ff96652dd30df0ec60ac",
+    "sdk_hash": "a92893ee25aa0e1a340567e73b2760d21fbc855ed6d12304c3fe1500d9a2061a",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2155151,
+    "hash_at_amount": "39b00fe5c9a257bacc50da7c4453926280250cf13e946175d661604371fb2091",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00005 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001de56c14c302aca34c122c623a88d7ffbcef8e86ddc946e8e495cf42f1ce475c50000000000ffffffff0164521800000000001976a9145ea0826db8874ecefe1e2563c09e58764399bd5e88ac00000000",
+    "script": "2103de18999039fba154b278ed92636004d7351150c0b3ee4a650b332b9c7682d8f6ad21037e8ec75ccf0545e0c1ab94e0ccb8fc977294eebfb4d753e90a407e8a45941fecac",
+    "input_index": 0,
+    "hash_type": 193,
+    "expected_hash": "7d34c7d303a2aa8c02d1c8ea36907a19099b4963215949587df7a8393d732625",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00007:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "21037e8ec75ccf0545e0c1ab94e0ccb8fc977294eebfb4d753e90a407e8a45941fecac",
+    "sdk_hash": "0546e3832e6a4235d05e8849010febf3abe76c3cba129c19016864df9fbf178c",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1596956,
+    "hash_at_amount": "15cc677c9c0a37230de0f1e80d9c784527e3147342cc982583c185e3ee5ca4d0",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00007 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001977ab3471e9ca811da04456571561ff7d7bdfb624dcaa07aaf1dc595dd6b19a40000000000ffffffff018c1e3800000000001976a914b43effa5cf38cf309360d4592f8bf3d32d8b3a6988ac00000000",
+    "script": "2102c9ed182dfa5f4063a0187271fb4ac1b394337bce16973fee596cb33c2eee12d6ad21032335a5c15ee50426a5d7977a2e4a1adecf3af24b68769f6a0da6a3822cc33459ac",
+    "input_index": 0,
+    "hash_type": 194,
+    "expected_hash": "5311ae4bad4d1997ea3c846c78eb672d2e59e9da954c12222aa0d64f6aea240e",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00009:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "21032335a5c15ee50426a5d7977a2e4a1adecf3af24b68769f6a0da6a3822cc33459ac",
+    "sdk_hash": "4a813481c8aed6d081e258616e9bea911475e81b061ee48c6e6ebf9306d26753",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3680836,
+    "hash_at_amount": "228b0de00f086317fb0f552f1c8ebf0c108dba04eb40912afbd6704f089cd446",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00009 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000016138e3cc782dcd2a9a1ff9a1fe718398be7ecae0c2648e0dbe58fb387a1b44610000000000ffffffff01bf8e2c00000000001976a914ce591d94d1364c085f892884be7b92ed803513cc88ac00000000",
+    "script": "21026368a5926aabf8d4f956e9dd4fa206cf8c6565dfa68ec0f354def4d734a379c0ad210214fe38e73a2e44c989340a149604fe5e4b3f17b0e309c9f2d8c2a3bf4ee8339eac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "dd31d4c531fd70ce2180c49135978f7cab808861e6b5adcddfa55d2435ec85b1",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00011:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "210214fe38e73a2e44c989340a149604fe5e4b3f17b0e309c9f2d8c2a3bf4ee8339eac",
+    "sdk_hash": "7773b6b48426784375238afa4ae98313f49c7e774c10acb65899942aea1ff105",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2923127,
+    "hash_at_amount": "a91b75e18b10aaa34ca368caf1d1bf764769a88894dc59748a3b25ddac79f265",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00011 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002972fdb0c71f7be178c8ae024d0b79bc074005f1bddbd7ab79e7ff9d59fb62f150300000000ffffffff2c0d1829e52a4a7e63822390560c127a062c63c5abb402221e8b935f6ea094bd0200000000ffffffff016d084000000000001976a9142c398b940ce0d65df42266057c4f1b6ce73e6db288ac00000000",
+    "script": "2103f780f7d4e30035d1162220474a7c0fae4cbf6a8fab6b7adf1edf2258a521a7cead21021fdfc6cc3fc78411ca484bdcf6237f606e34e0f901837d6e05f2e991aa18e1d7ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "10a07aa0fcd01d1bc802a5acf803ca91f2ab7aa345876f7d76f39032e1ca4ff0",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00025:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "21021fdfc6cc3fc78411ca484bdcf6237f606e34e0f901837d6e05f2e991aa18e1d7ac",
+    "sdk_hash": "eac257ba0dccb8d84fc0b45de8a7adc9e297795d95e32c85004eb60ecc332b23",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1530122,
+    "hash_at_amount": "25ff58e007f7a3a38fbb1a357b14877471f1ec9fae0e3da9c37f272138f85595",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00025 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002972fdb0c71f7be178c8ae024d0b79bc074005f1bddbd7ab79e7ff9d59fb62f150300000000ffffffff2c0d1829e52a4a7e63822390560c127a062c63c5abb402221e8b935f6ea094bd0200000000ffffffff016d084000000000001976a9142c398b940ce0d65df42266057c4f1b6ce73e6db288ac00000000",
+    "script": "210369f330d9158387944b6cf31a5a188058343ce1de66175d829275d86af3ed9f95ad210298bf084a5bea6df566fbd52ec043cac48af29c5a16f8a45b23a8fdad83af1b93ac",
+    "input_index": 1,
+    "hash_type": 67,
+    "expected_hash": "7523e96fc0b972be6c52f2985400aa9dd865c1bea705f6672d7f676adbf7cf6b",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00025:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "210298bf084a5bea6df566fbd52ec043cac48af29c5a16f8a45b23a8fdad83af1b93ac",
+    "sdk_hash": "ca9ee50f6621cac9c5f66b41a97520ed6e84b9e813058f188b58e9fc57184175",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2671339,
+    "hash_at_amount": "8d23ab0bc49cb9df044483066f6e4038dfdd8e28b843de889847c97b7ebd04df",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00025 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002917c7b5fd1a636af94c06b83488d642cd502d70ede3c28a77200a0d433b34b0d0100000000ffffffff15097da9c8582c8aa1a32a8430c9f581f05b37d64848ea23ce8d3d34bc81fdc70300000000ffffffff02b43d0f00000000001976a914b048ba1eaf20bb1b9c2342cb0aa055436e8f20f788acb53d0f00000000001976a9140e2718ef596d64363a80eb33a5514748110c717d88ac00000000",
+    "script": "2102820de936b053bc13aad92965f367c72ccd525da9a86e022696238d96b6c0d45dad2103be35e1037142f36be2f924eff3dc375d75eed9b82beb8f1f1737af1123443da8ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "959dea11b17781120dc572bd42d34c1813b565fb9d54cbc1a5031fd534198c54",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00027:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "2103be35e1037142f36be2f924eff3dc375d75eed9b82beb8f1f1737af1123443da8ac",
+    "sdk_hash": "2e18a35c48d8dd9b38a8d8a4333357a93f74f1851c10cb18f2a3b11ae64d2d8a",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1590786,
+    "hash_at_amount": "3a5d18b2c87b350f78ae14829cf9d53188f326b17a94c546983398a7992dc76e",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00027 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002917c7b5fd1a636af94c06b83488d642cd502d70ede3c28a77200a0d433b34b0d0100000000ffffffff15097da9c8582c8aa1a32a8430c9f581f05b37d64848ea23ce8d3d34bc81fdc70300000000ffffffff02b43d0f00000000001976a914b048ba1eaf20bb1b9c2342cb0aa055436e8f20f788acb53d0f00000000001976a9140e2718ef596d64363a80eb33a5514748110c717d88ac00000000",
+    "script": "210315a9ca185b0969fae6bcfbc58b596dca8b675bf02138dc77b541bf8686e47e51ad2102a0bd65104ee3689f5d20af5140c0ec84c9f30a300a0b2008b93c82a71b805237ac",
+    "input_index": 1,
+    "hash_type": 194,
+    "expected_hash": "68596f1fb22bc1be8b4e13f677d6bd4b0c1c5567d60cff886b91380751a9ef9d",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00027:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "2102a0bd65104ee3689f5d20af5140c0ec84c9f30a300a0b2008b93c82a71b805237ac",
+    "sdk_hash": "5c91ba6050ef7efb1a03a9910e64a438ea3f12a31746916ea97cd9292e0ef4ff",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 411887,
+    "hash_at_amount": "a6998b3d681350a090fac3fd1198b15f1544d8d73d1bbc8e406184d4a20ce128",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00027 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000015b85ff006497b643ae7d29fcbe8f3aa957e175f17938e73b15548d9bf65138380000000000ffffffff0131412d00000000001976a914484c00ebdd4dc345800468401cef9c16368d473588ac00000000",
+    "script": "210242a87bb6f8f17ef6ec015c290106d44cd6933e894da3d661ddb4697c95a98b6fad",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "33b38c8d85ac31e380e19361c5fc69ce180b8efaa33a2161e00c22443a872622",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00029:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "2102444620bab77c53264cb7554f9d76fc0f52f6da1ef34d434bd5328f4ea16938b1ac",
+    "sdk_hash": "5d61b9e46dd722fe175c27b8e9622aeaa039a3a346a8bdb51dd4044ba7db8dab",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2968809,
+    "hash_at_amount": "345b4a928454ec69ed95750797a3ed772cf76ccd86d2de6af7a7fbe1b6d4cb6e",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00029 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002a4e5f764fe4aff76d482e831d30bbdb62853dacf1f0a34f523182777363001f600000000001000008036eea9e7168eae1998eea1984200d20a274ca60230143e3d12ed64824365f2400300000000feffffff02109b0c00000000001976a914ff4ed292063b46c495478dbe5a466de61c55f43188ac109b0c00000000001976a9141ae1a14f063ab3164a72271a251af7f113b91de188ac00000000",
+    "script": "21029235d824a0aacf42714a0ae1994c75a951e4cda1481625262d0744eb23340d55ad2102fb38ab08abe3ec36e740faa2fd3ef456d00f68013e7fabdade7e0c7cb9dab6b7ac",
+    "input_index": 1,
+    "hash_type": 195,
+    "expected_hash": "00a3790619d004f3bd612d29673203e9d3c193e24779f07d619eb50b081c8c79",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00031:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "2102fb38ab08abe3ec36e740faa2fd3ef456d00f68013e7fabdade7e0c7cb9dab6b7ac",
+    "sdk_hash": "7985d81df369126b47224e2e8d8dcd619515cbecf16eb479e5eb7ea34aa620a5",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1428060,
+    "hash_at_amount": "61d6c008f3aa510e4a5eff6547d06a1b8505afc18876d746f433d55d603d9472",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00031 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000025b68f38abf1dff9f904be61f3cceb4bc93cfe8f289fd0dec0e0d1820bb53ea590100000000100000800c9e1b285fbf807f15eae4d4d67aeba9347137c7292d8476984eb83329a0c25403000000001000008003366a0600000000001976a91415987257bda0e9fa8c5ad635fa3d3ff0692ed91088ac366a0600000000001976a9144cf80dfa0300173ee710f0269e5cc1bc29e89b5888ac376a0600000000001976a9149f543ddf05adea72f6c5a748bb3190b324b96a4388ac00000000",
+    "script": "21022092d48190dd25285272a24508ec5ab69ab9f52ca3610a5d29b9aa39129e6c50ad210320d129b3402f54bc0ecaa7a9fa47a4485abbe4d89bf2c629a7230f0b48e13c2cac",
+    "input_index": 0,
+    "hash_type": 194,
+    "expected_hash": "0c4d067220c1abf0f7a364de0a53587fa27156cf73f80447b6f11423c83496c6",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00037:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "210320d129b3402f54bc0ecaa7a9fa47a4485abbe4d89bf2c629a7230f0b48e13c2cac",
+    "sdk_hash": "3cd7a1c1d7738c7ffccdce4d41727a9e20f2e7b5d3191604c083fba65bca9126",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 489470,
+    "hash_at_amount": "8823614c36eeb6a0a5a94416e9f38e64ca622782efc1aaa89e62e98cde5314e1",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00037 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002fd4c9559abecc646d8f827cf249cf7db058a13c0dafca8a6ae7d0505d09b38850300000000ffffffff3a77c454d6226cac7ff9ec70982d00363279baf04a3aabf62a3260e40badc460000000000000000000020e192b00000000001976a9143f539c78f696e220de9515aa2deb99bc336f1c3388ac0f192b00000000001976a91497f4c455750d4a6b0e8b6b1dec2b1f83da12409588ac00000000",
+    "script": "2103a168f72b536fc0f1c7404bb57fab09b9c200554a1ae0ec92d600da175a4c8d97ad210237ca96da5b78e90d6ae5123b8e32de2bea20a1f9795a9ac293057c5197b1c5d7ac",
+    "input_index": 1,
+    "hash_type": 67,
+    "expected_hash": "647df3fc6de40338867b3cc970c19a801933cedb7ed2c9db389ac4ff5a9a75e7",
+    "id": "bsl:signer:signer-checksig-in-unlock-a-00039:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "210237ca96da5b78e90d6ae5123b8e32de2bea20a1f9795a9ac293057c5197b1c5d7ac",
+    "sdk_hash": "42a0c81929cc564fae164035e28b771cf0511068013a2645e93871d66ba7994c",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4301985,
+    "hash_at_amount": "97300e1e1fc82b4009794102f22e6e19d602115f7dd159df1b2eb409ce25f5f6",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-a.jsonl signer-checksig-in-unlock-a-00039 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000011e500a5da357585fca30a054e2b9ea73b8aa080ca4fa535fe2fd15cdfcf8dcbc0300000000ffffffff01336b3000000000001976a91442ec4fc550246d9c7c24cf93233eb04a054fe80588ac00000000",
+    "script": "ad6876a91441f5c8231a66408ad270656ce1647d53d60ac52288ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "e49f2c6a351822a3ca016d013d5b4b9b8184d97e48efd172ea06aac24f53f4af",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00001:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a91441f5c8231a66408ad270656ce1647d53d60ac52288ac",
+    "sdk_hash": "8d0b00e969c218c58ff99d4aa8c1f30dd23c2dbf819fb61d5b2aa574294f8c2b",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3176171,
+    "hash_at_amount": "b94d1c2640ce803d8dd72d557216a4c367da57b53419c7f980e8b327ce53d75d",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00001 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000011f960a5780d48620029c916f5506a1eb62d8b835874c07440bd9c4e1d4872bbf0100000000ffffffff0169ed2000000000001976a91477d7a9609980816833a0eba8e5c4e5b065d1b60e88ac00000000",
+    "script": "ad6876a9143bed4ea8c2fbcef554f39a90070248e5b6c67d0188ac",
+    "input_index": 0,
+    "hash_type": 66,
+    "expected_hash": "35c9de014ddcdf691d0105f26eabaaa455aa73b83febaded6d8afeff43b910b3",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00003:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9143bed4ea8c2fbcef554f39a90070248e5b6c67d0188ac",
+    "sdk_hash": "db63333b5cca9007e4c24a92297a71541c456e33575ab85412f0764a2e3a7469",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2160929,
+    "hash_at_amount": "88ae3fb29e724ad707a1d67e13dfcac7a53b0a2f624f5aeb92391b4e9ac60da5",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00003 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000016046007b0198203f203fb8862bc27086fdd28fe0a1dd89484c043af26df947d80200000000ffffffff0195461300000000001976a9149778a72c88f8fa49e99b27e1cf00e2ddc52ab3f088ac00000000",
+    "script": "ad6876a9141f8d1d0c9c12aa91909977b2c0b431946aa2322088ac",
+    "input_index": 0,
+    "hash_type": 67,
+    "expected_hash": "71dd1a5d02cd9a9aa0b729b901ecc22db708616d2cea451680e88af5acedb1d1",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00005:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9141f8d1d0c9c12aa91909977b2c0b431946aa2322088ac",
+    "sdk_hash": "d77f5255fe4164da1a4c50096e4b3d9b3a801d83c0530899704bca1db266534b",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1266253,
+    "hash_at_amount": "1641f653b5ebd28dd06389243338b2d356443418b64ae9337a6d0b2485e092da",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00005 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001b89dc6961afc40824b3bc322ddd88cb3954c1f406282cb2298d09f8f2283ba0c0100000000ffffffff019bee1700000000001976a9145ee844ecab700c0fc5e1495ccc74f0deff6c796c88ac00000000",
+    "script": "ad6876a914c275a2665ed776574285f27e176974dae2e6e2cb88ac",
+    "input_index": 0,
+    "hash_type": 193,
+    "expected_hash": "4b526639b32d354daa31aa604c94bd8d3279f9f5fc42d190f7dbabf0f05bbff9",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00007:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914c275a2665ed776574285f27e176974dae2e6e2cb88ac",
+    "sdk_hash": "6088e3d0becb923361d5b9e8ef5b58626cf088e4ab353eebe1f4deb31395d411",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1571411,
+    "hash_at_amount": "3b1158fbe980e4c7f58ba5cd180f15c6a79fe55618e73926869759a581d8cd5e",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00007 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000011334ff78c9c9ad66ae5c7aed16b7ac7d03e2d84ba1067fceecf49daf7aa73c7f0300000000ffffffff01fc433600000000001976a9145d85ada765aeec82894bcd2db1dca9209d8dfd9a88ac00000000",
+    "script": "ad6876a91435cdc2c037cab72f38d50f638b2b4daac07a817988ac",
+    "input_index": 0,
+    "hash_type": 194,
+    "expected_hash": "e0375578e86614cd63dd57a08139ea90c5b4d75ad18444e9276105e46e2790b8",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00009:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a91435cdc2c037cab72f38d50f638b2b4daac07a817988ac",
+    "sdk_hash": "95b79cbab2273d86b55501a1da4f22785591975dc38cc1ff8929e96493b4a7c7",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3559348,
+    "hash_at_amount": "04751635cadb0f437a1970e58ac31c3688cbc0362b3830dc260c33410d33ff18",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00009 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001eceddbd11f2be4f1ee18428f3d837cdec92050cc2bc482ddda7da01d519dd19b0300000000ffffffff0155242800000000001976a914ccc4b8c5a4a5d3f4a94ebb4c8983fcde35e2906c88ac00000000",
+    "script": "ad6876a914c10d4bac8389a78b5ba586fbc7206878ee2073ec88ac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "aa1f85fbd8086f730caec0c2d399edfe35cc665b93c84e4e654a5abc2d52be89",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00011:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914c10d4bac8389a78b5ba586fbc7206878ee2073ec88ac",
+    "sdk_hash": "535e258d47e9f2fe1a47082f3f0f14d1f936a85573ad32929c3ae2820f9ad7ef",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2633741,
+    "hash_at_amount": "b89a191e0cc94590abbc8bb2441dc06b3d70c26de2c5cbea852c505b7e549c57",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00011 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000028912f84a6fbec1791ff4d5420972df047304a70e7d8af3865d93264a077a773a0200000000ffffffffb6bdf2c879e53174765df221e748d91df21215c46f13da22cf78d78a58502bb30300000000ffffffff01709e6500000000001976a9148c5bcbcbf68ba6e3019a073daf4035eb778abe0988ac00000000",
+    "script": "ad6876a914c3a16a7277ae50df1dec10f2632e467cbe45a48288ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "9c8e5f9d3435dd0ce37935789a85365547f1ebef10066647b0b806290b196314",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00013:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914c3a16a7277ae50df1dec10f2632e467cbe45a48288ac",
+    "sdk_hash": "d82aebfcc6b4ac9d6266b3d6d9201fc68b3f69249f4b44e233df416c46ffbcea",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3070138,
+    "hash_at_amount": "15c398bc6e21f1429ff89c3a72a5098e1b6016bcdf60ed40955623f9240423b6",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00013 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000028912f84a6fbec1791ff4d5420972df047304a70e7d8af3865d93264a077a773a0200000000ffffffffb6bdf2c879e53174765df221e748d91df21215c46f13da22cf78d78a58502bb30300000000ffffffff01709e6500000000001976a9148c5bcbcbf68ba6e3019a073daf4035eb778abe0988ac00000000",
+    "script": "ad6876a91493d369aa74a3762f9b0fd4c0dfa9c2dd4de42f9f88ac",
+    "input_index": 1,
+    "hash_type": 67,
+    "expected_hash": "c573d49578bb6c45e61ef4d8bd1732cf2b4611b11f064ee1dee9797b1883f129",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00013:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a91493d369aa74a3762f9b0fd4c0dfa9c2dd4de42f9f88ac",
+    "sdk_hash": "558e2cad6155349ac51ecd7beb1f40850aa284dc96b1c27b177118a00828b38e",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3594558,
+    "hash_at_amount": "c6ee19a78e042d5235fdd4358d1dedad1cf650e847912adfd03490b0caccc0bd",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00013 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002ddf96d7656d818dde2743bd8893e74950122839820d895922f491a96405408370200000000ffffffff56af6babfb601ad55c60307719dce387c092f05d8d4f812925309ffdfcef2a9b0000000000ffffffff02cc520f00000000001976a91446d6dfa1b91ef22e45737f99153e42576ac3770c88accd520f00000000001976a9141e6be119855ce7aa305c82994239606c51d6a1be88ac00000000",
+    "script": "ad6876a914a2f03107ad2af019e54967e85f14967c05d55eb388ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "17f8be36143fd22607bc4397703c844a845e1cffd92a9e4b081baadf83ac25e9",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00015:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914a2f03107ad2af019e54967e85f14967c05d55eb388ac",
+    "sdk_hash": "ac1f29af9f348a0e6c59636124a0fc140932ee822d2fa670d82fb45519e7e3ff",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1039047,
+    "hash_at_amount": "e266c5e3d3b02200d56214cd76df8f02373a501b27d0be318b909c67032fa88c",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00015 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002ddf96d7656d818dde2743bd8893e74950122839820d895922f491a96405408370200000000ffffffff56af6babfb601ad55c60307719dce387c092f05d8d4f812925309ffdfcef2a9b0000000000ffffffff02cc520f00000000001976a91446d6dfa1b91ef22e45737f99153e42576ac3770c88accd520f00000000001976a9141e6be119855ce7aa305c82994239606c51d6a1be88ac00000000",
+    "script": "ad6876a914af4ff87408a30420b5e3dc6edf6e5404b31fb3c488ac",
+    "input_index": 1,
+    "hash_type": 194,
+    "expected_hash": "3b40e8ce34a34356b0be6fad0d6403c4cefbbe9243dab10126635c6f53f7e4fe",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00015:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914af4ff87408a30420b5e3dc6edf6e5404b31fb3c488ac",
+    "sdk_hash": "87b7ae04d2d2b10f98f32e6c7da52e9e5e4acc736abf03df759d254ea156169e",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 974426,
+    "hash_at_amount": "02a187727c03e5e0c1a6896e69ea135337ca6a9928e5930002ba50b2df2a1fdb",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00015 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001cf4fb29013e892d4106d9fc34f704390805c2f495b1b231b06c2738cde5d94170200000000feffffff0163140600000000001976a914e7c234ebbc69f8a50b9b1c17f2ababc08adb645e88ac64000000",
+    "script": "ad6876a914b2f854edbe65a4edcdb2958f68aa31caec99913088ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "20689282b91352db5423886337bfd2494cdcabdda6fedf6bbf12c88b3f19cd34",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00018:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914b2f854edbe65a4edcdb2958f68aa31caec99913088ac",
+    "sdk_hash": "ddc27000a0f88cd50f4ca0af461870fbae375002d08f0ce7b0d83af8a16cfd7b",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 401435,
+    "hash_at_amount": "fe53e9ee66c0309e683ec8577e4a915d3606a1ff9e3a6a2e83bd1cca24757edd",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00018 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001e0d636c17c3a096c57f4ba15b24c6c67654120674c795bc8cdd3b333d52c250000000000000000000001b6633900000000001976a9141aabf753b53923714e9e3b84e0c8e2f2da7287c988ac00000000",
+    "script": "ad6876a91442dbb855f109ae33d56e561a4a3e86d7d9cd7ef288ac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "c9ca6bcdf2cbdf741f01d8cc096d303357a1f12f5d2ae5e5be807a1f0363df4c",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00020:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a91442dbb855f109ae33d56e561a4a3e86d7d9cd7ef288ac",
+    "sdk_hash": "5f66ac62b77612eb006298c06a474b3cfaab105fbe009dec8e37b16a7dbe071c",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3764078,
+    "hash_at_amount": "049c43690931a5c938dcdcf5900f0662a0d00499e740b9325a17907a12df54b3",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00020 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000022b85e4ff52a84df02c437e649874ac0b4aa35a5e031ff6ce65093d49654602af0300000000100000808dae0b2b28e3ec8216f6d4b58687b9c6b9819971e602d8c16675c3c136dd7f7c02000000000000000003a69f1a00000000001976a9141a3294642c98544bb44aed488ce2372a3bed5ed888aca69f1a00000000001976a9143ff266327696ccdb4414f78cb1e3163bfd9bec1688aca89f1a00000000001976a914163d8efe7e90d64df46c96109e131382fd94c2f788ac00000000",
+    "script": "ad6876a9146f475479bc2592770e36bea7de9f4915080ba96f88ac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "ea7ad49d9d92ff32e1cdf00631647d04ccc7b16b1e482f4c2b3353f3a016e3d8",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00022:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9146f475479bc2592770e36bea7de9f4915080ba96f88ac",
+    "sdk_hash": "1a59d51b438447cbc075183a37d33f57d9b22ca0d9d6cd23c3bb5bac08dc311f",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1228910,
+    "hash_at_amount": "d11e2c735ec5d352852d7c1d28224f41d27d2176241a062a442de5d89db2846b",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00022 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000022b85e4ff52a84df02c437e649874ac0b4aa35a5e031ff6ce65093d49654602af0300000000100000808dae0b2b28e3ec8216f6d4b58687b9c6b9819971e602d8c16675c3c136dd7f7c02000000000000000003a69f1a00000000001976a9141a3294642c98544bb44aed488ce2372a3bed5ed888aca69f1a00000000001976a9143ff266327696ccdb4414f78cb1e3163bfd9bec1688aca89f1a00000000001976a914163d8efe7e90d64df46c96109e131382fd94c2f788ac00000000",
+    "script": "ad6876a9148fec677afb83d977fe318797e331d04bc63de57088ac",
+    "input_index": 1,
+    "hash_type": 194,
+    "expected_hash": "564ea893fa85b8a905c54e3e3df76f1683198de79531fed142ef9cdea6eda92c",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00022:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9148fec677afb83d977fe318797e331d04bc63de57088ac",
+    "sdk_hash": "8c55c1b66f35bf1bdc0490e19397ddc877d1d0d567200ef31a02e29264001321",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4010510,
+    "hash_at_amount": "506c1e35b9b4f91d22576448ee04389a0ca196ddb904a263e3d0948a9ec2c1af",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00022 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "02000000012805e869315501a896191f17430ddf81108135c2dff24151593736f047adf8520000000000000000000218c40b00000000001976a91420a88e678d98964b78dab2936088300c5853a69c88ac18c40b00000000001976a914c021a38da0138d839a1d55f4e71ae9edf878c43d88ac00000000",
+    "script": "ad6876a9148608a9c94e2978304c885a24bb594d11841b432888ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "94f08f793856bde7a5fa897dd1299bc0c0e7a73fd8cd5c6141baf06f1c696e5b",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00024:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9148608a9c94e2978304c885a24bb594d11841b432888ac",
+    "sdk_hash": "85090678eb4eec23cc806947d2df4c48ba40eb645dc716fd6420d4cb1ad43d25",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1545192,
+    "hash_at_amount": "0a44790d76a54520c277d5583199afe67d9234656afd55882c0fd65bcf076cec",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00024 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001d9e7ba3ff2aa740283c996db7a1e90ddb1687e06b73cd497fbbb38ee236d41870300000000ffffffff03d7a50d00000000001976a91444f19fd0d2daab1535becb75a0b42f56b373d8f488acd7a50d00000000001976a914c47cf548aaff117a5fa40e9e1e22ef979b65104e88acd7a50d00000000001976a91495ad53f66d8c9491eddc7342d722ed132ed1b66588ac00000000",
+    "script": "ad6876a914e9044c8248fa4036af121777ee2a74e86fbe677288ac",
+    "input_index": 0,
+    "hash_type": 194,
+    "expected_hash": "ab7aec65d29ad54c9b2f8bfe0ccd856fc0f53166880e1df69c87aa1be4fe4e5b",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00026:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914e9044c8248fa4036af121777ee2a74e86fbe677288ac",
+    "sdk_hash": "3e9d2ea87af8d58bea31284db1297ddd4fab08ca46224ff33329bf3005bb8c4c",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2686269,
+    "hash_at_amount": "4ad068869693831b7ea2330d250247320832de951355b6e1446f38bc3392281a",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00026 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000001b016988666ace8e75b44b8d7f04687cd0fb752197046ea74630712dc2b3d716100000000000000000003fddb1600000000001976a914fd910515ae076af1fdb733c8b02bf941f2fa369d88acfddb1600000000001976a914435565e9775785e2bd46246c0631d299e410d79588acfddb1600000000001976a91469c7be85b6ca4b18b996467f96a6388f87680e7188ac00000000",
+    "script": "ad6876a914274e07061de7f3603f4002df3ffbf487a743906f88ac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "064f82b611f2f65d10569efb6edf8d49a19aff94ebca600f70c5a25f1e8cd651",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00028:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914274e07061de7f3603f4002df3ffbf487a743906f88ac",
+    "sdk_hash": "8cba67079c7e88098a9a11871030b5214f84352c00f25f29824e988358548505",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4497327,
+    "hash_at_amount": "0bc4fc8865201c01947044dd23e0e768e2ad13b165bd27b524058aefb22a558e",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00028 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002b76c0f0fccdc30afd5d9a50c063e95c43db9e3816fc100838777d88eb2301f32010000000000000000f2be2be0761ecebe3c45e7a3e5ec95eee168460df079ef2c799d2faee9c16f2d0000000000000000000331d41400000000001976a9142f7751c37fcb4df6fd09713a742fb299aca6b10e88ac31d41400000000001976a914a25fb5aedb7d0c38001284002257e9662523ca1288ac31d41400000000001976a9143fd6216e87997cc36bd8cf0e9009d948233d260e88ac00000000",
+    "script": "ad6876a914cf3a7f40d158e6010c57670383b34a616dd382b488ac",
+    "input_index": 0,
+    "hash_type": 193,
+    "expected_hash": "5a520d1c628541896d72f790585ced449fcef18cca25c473735b4bb038702ec7",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00030:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914cf3a7f40d158e6010c57670383b34a616dd382b488ac",
+    "sdk_hash": "66566f38b006ee1a7bea43e7463859a9f6ce0e132cb4f13d3c1030bbdae3baba",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1171371,
+    "hash_at_amount": "f79479ee7a71892619b9e0d79521559119b1b4e9a5bf2a08f828d7a983ba3bf2",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00030 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002b76c0f0fccdc30afd5d9a50c063e95c43db9e3816fc100838777d88eb2301f32010000000000000000f2be2be0761ecebe3c45e7a3e5ec95eee168460df079ef2c799d2faee9c16f2d0000000000000000000331d41400000000001976a9142f7751c37fcb4df6fd09713a742fb299aca6b10e88ac31d41400000000001976a914a25fb5aedb7d0c38001284002257e9662523ca1288ac31d41400000000001976a9143fd6216e87997cc36bd8cf0e9009d948233d260e88ac00000000",
+    "script": "ad6876a914d1743e63f329316788e90592a55b7bbf541b03a988ac",
+    "input_index": 1,
+    "hash_type": 195,
+    "expected_hash": "c4400ce1a8be5e3ddcfa61e1d62a1752c1de42a1d2491591ce3babb927871c74",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00030:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914d1743e63f329316788e90592a55b7bbf541b03a988ac",
+    "sdk_hash": "8625e4f3c63cd1730b5c7425dc78f45ed41518eb7c10244aebd0361110fcb213",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2928752,
+    "hash_at_amount": "52886e94f4ff666b2ff6e15d2a4ab60be446b66661832b484b729af7c6acb414",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00030 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "020000000242be29a363879c065ab11ca5c4ba3eef2c0704463b2458b656a4158d68efcb300100000000feffffffa3a825e39ae62baa7d7863bd8c480ccdf930b4f7fd6c560aa11711fb77c7bedb0100000000ffffffff02b5923e00000000001976a914c73dddc3ca167d61f025feb842aa761f244c393c88acb6923e00000000001976a91466c2e288fc27e31e15b2e057a403840a2ee9077488ac00000000",
+    "script": "ad6876a914a3b4347ccb7a5edc42ca6c50a84c8f35564bde8d88ac",
+    "input_index": 0,
+    "hash_type": 65,
+    "expected_hash": "369c8d33cf6d890a47b37c6c04cbf19306d4350628e712fef55a132126c92799",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00032:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914a3b4347ccb7a5edc42ca6c50a84c8f35564bde8d88ac",
+    "sdk_hash": "09880dbc7d0fccd7be02311339d5c24099c04e8e0ec81366876c2267f29c63eb",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4429627,
+    "hash_at_amount": "1ee7790211a2a3fcdfbd299f36f3c58ac97a7c7449b7c2673db3b475c98796be",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00032 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "020000000242be29a363879c065ab11ca5c4ba3eef2c0704463b2458b656a4158d68efcb300100000000feffffffa3a825e39ae62baa7d7863bd8c480ccdf930b4f7fd6c560aa11711fb77c7bedb0100000000ffffffff02b5923e00000000001976a914c73dddc3ca167d61f025feb842aa761f244c393c88acb6923e00000000001976a91466c2e288fc27e31e15b2e057a403840a2ee9077488ac00000000",
+    "script": "ad6876a9146db3b886334a77dbec926617aa7a91a2acd3130b88ac",
+    "input_index": 1,
+    "hash_type": 67,
+    "expected_hash": "de19c0dab09e53f302ed3e15b275368daa6ef633640b1490ff3c341b438e3182",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00032:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9146db3b886334a77dbec926617aa7a91a2acd3130b88ac",
+    "sdk_hash": "4cbeb5ae6af4e9375379c4f28bf86568a72a75109c7a5b676e3846c5514cd142",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3776952,
+    "hash_at_amount": "c8dd74e056eee9ef35442ba0f63659d78db4e482ba0a05b5230d5ac7d29679ee",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00032 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002a072e76fc9c5037e9de344a9160b08134bdb7de4936b0fb6c7a7d63b158e0bbb0000000000000040006b7ac853487d083368bfb782e66da978febb4fafd834b2213ce6d1c16aea7ab00200000000feffffff03abd21700000000001976a91413bca83f2676e92a3e121becf1cf15f9339ede1b88acabd21700000000001976a9142cea61ee41d1c39eb73ab97c564b1e4c866de99288acabd21700000000001976a9144213410baf6d93b958b38b88f7631de1af6ff52388ac00000000",
+    "script": "ad6876a914ac1dd807f276cbbc809775b626c2f44452c1b4e988ac",
+    "input_index": 0,
+    "hash_type": 193,
+    "expected_hash": "6915dd898918d192ef155e3d472deea1d9df8e256626d7dc7f2027a8f5b0c16f",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00034:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914ac1dd807f276cbbc809775b626c2f44452c1b4e988ac",
+    "sdk_hash": "82ba3e98c7c9a612dbc23694e132da3e1fb7ceb68a7745f31c83389c83ef7fe4",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4191569,
+    "hash_at_amount": "9cf8e67e3108f169e51a99013a1d02666ce3e9ccc93e569085c71775c09c8581",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00034 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002a072e76fc9c5037e9de344a9160b08134bdb7de4936b0fb6c7a7d63b158e0bbb0000000000000040006b7ac853487d083368bfb782e66da978febb4fafd834b2213ce6d1c16aea7ab00200000000feffffff03abd21700000000001976a91413bca83f2676e92a3e121becf1cf15f9339ede1b88acabd21700000000001976a9142cea61ee41d1c39eb73ab97c564b1e4c866de99288acabd21700000000001976a9144213410baf6d93b958b38b88f7631de1af6ff52388ac00000000",
+    "script": "ad6876a9140730b2670624ced31b8212721c1037a7e094fc5788ac",
+    "input_index": 1,
+    "hash_type": 194,
+    "expected_hash": "8956f80d45d70a886cf135ebb09c118cab55fb8a0077770a465ac4747f886019",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00034:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9140730b2670624ced31b8212721c1037a7e094fc5788ac",
+    "sdk_hash": "77ffb1d9858ef9b2c9c85c969d8a8df48187558e6df1bfa194a5efa4b2a66d9c",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 497208,
+    "hash_at_amount": "5c5319d6c04f1aa3de874cd09bd5e6d7deccebc14b61269896b943220da67045",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00034 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002a9f8b5380f5084f7dc9bfd5efdd8443ac938df74e3b596d92fd372160257c86f000000000000004000a95b7d0cb10033622b90ffbdb56f53c8e0202f213a7ec4eb3dbd7b244f26ece400000000000000400001e6c47700000000001976a9148b9f7eb950edf0b2aaa8a7ff4b9551614026598f88ac00000000",
+    "script": "ad6876a914894603a68e81dfc236e593d83596c5090031b0bc88ac",
+    "input_index": 0,
+    "hash_type": 195,
+    "expected_hash": "9e870cd4b0c1d263b6156674a3f38474b6ef959e244d4c2c4bada831f1878e33",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00036:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914894603a68e81dfc236e593d83596c5090031b0bc88ac",
+    "sdk_hash": "5c51f25b1d74dfedc6bb86616a763d2419fee6fca5a54bd86662320a55df578e",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3459669,
+    "hash_at_amount": "d658ef6dff9ba0233bb2e5e9e3a536ca45fd5b76e0936e5b42bdbee9e0c8a124",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00036 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002a9f8b5380f5084f7dc9bfd5efdd8443ac938df74e3b596d92fd372160257c86f000000000000004000a95b7d0cb10033622b90ffbdb56f53c8e0202f213a7ec4eb3dbd7b244f26ece400000000000000400001e6c47700000000001976a9148b9f7eb950edf0b2aaa8a7ff4b9551614026598f88ac00000000",
+    "script": "ad6876a9144bcce519930ae44db120608631d4ddfdf1186a1688ac",
+    "input_index": 1,
+    "hash_type": 66,
+    "expected_hash": "8de1c940c6a5b4e82eeb3d5c8d3081fc1f59a51069655ed84148f243d89ae333",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00036:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9144bcce519930ae44db120608631d4ddfdf1186a1688ac",
+    "sdk_hash": "ae85ac649527d983e903e0d9499303b9958f8bf5e53a7aee3fad41ddfe7a8593",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 4394521,
+    "hash_at_amount": "3759bf9d5f1a8de23cdb14f83cc1226f8a5634c929463f0c6fbcf6753bfceb07",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00036 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002f3ce34d3fb53d0d09aebd30ef1597dd81b552781fa25bca81faced976855a116010000000000000000a1fcc7fe6b7a00ad125ab2ddb50716a4a78b131a24e1578d6a909eee5868330501000000000000400003e3c51e00000000001976a9146d1a03602c8134ff9ff1b3328b93bf78dd74551888ace3c51e00000000001976a914926486013dce1a20aa2d7554d4d3ad0229d0ebdc88ace4c51e00000000001976a914270f01801a570aae22a1b5e01e17307f3db8f66188ac00000000",
+    "script": "ad6876a9145cf9965be9376ab58c5bddcbb058345c65144d9088ac",
+    "input_index": 0,
+    "hash_type": 193,
+    "expected_hash": "ca708e8bb4a20d531befb4d07442c73e580c263fd24163ed83e2ea0fa1711bb3",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00038:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a9145cf9965be9376ab58c5bddcbb058345c65144d9088ac",
+    "sdk_hash": "173e0b65474dedec8b75bab8a75a671a804f9e81b9845c18a451b5eee6a8985d",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 3879928,
+    "hash_at_amount": "fdaae4873b1c91f95d68817613be4e6db9013a69f80895ff8ff1f128dfc9580b",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00038 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002f3ce34d3fb53d0d09aebd30ef1597dd81b552781fa25bca81faced976855a116010000000000000000a1fcc7fe6b7a00ad125ab2ddb50716a4a78b131a24e1578d6a909eee5868330501000000000000400003e3c51e00000000001976a9146d1a03602c8134ff9ff1b3328b93bf78dd74551888ace3c51e00000000001976a914926486013dce1a20aa2d7554d4d3ad0229d0ebdc88ace4c51e00000000001976a914270f01801a570aae22a1b5e01e17307f3db8f66188ac00000000",
+    "script": "ad6876a914eaf06922dc15d669fb63a3c7f49989b40e5fb02688ac",
+    "input_index": 1,
+    "hash_type": 193,
+    "expected_hash": "0f89af4c1ca06992416ce89c7749a56d9d6b952b4cb8463e3ba1a976fc7a0125",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00038:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914eaf06922dc15d669fb63a3c7f49989b40e5fb02688ac",
+    "sdk_hash": "09d62094d159c761bc3a96c7e21c6d26e09bdcf6653bdea5d53e6db6de6599b6",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2175290,
+    "hash_at_amount": "53473574fb5884f0225cbef79619f36d95c35b2bb03d7452207a78a84ea4e248",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00038 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002d087cd55bc9bc8970f91abd61a88a2de504c32ea40a54d7899fd2f518740c8a6010000000010000080d649473382b6ea8f53573fc7fadc18e4d973396b0549b905ebee3e190ed7a0f2020000000000000000027ddc1900000000001976a91408d1269c90aef077cd4f7382ae9ef070d3bb697f88ac7ddc1900000000001976a9140fb751a48ff523cb611121f9bac6049dfe524ca588ac00000000",
+    "script": "ad6876a914686abbe26d587fb8f20939209c6cdebd4778a77988ac",
+    "input_index": 0,
+    "hash_type": 67,
+    "expected_hash": "a51cc2d648a289eb3193d3afd47fcb9f94165f5dbbee08eb2d7edbc286c842b8",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00040:0:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914686abbe26d587fb8f20939209c6cdebd4778a77988ac",
+    "sdk_hash": "0e023bd435907f45f9de963bf8dc3cef2b95b381a28b74659dac9cc4a43a1c56",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 2393498,
+    "hash_at_amount": "701b11d9c1e52660f69be05e4fd873ccc075a4da6102d66996246273a6d748b9",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00040 input 0 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  },
+  {
+    "raw_tx": "0200000002d087cd55bc9bc8970f91abd61a88a2de504c32ea40a54d7899fd2f518740c8a6010000000010000080d649473382b6ea8f53573fc7fadc18e4d973396b0549b905ebee3e190ed7a0f2020000000000000000027ddc1900000000001976a91408d1269c90aef077cd4f7382ae9ef070d3bb697f88ac7ddc1900000000001976a9140fb751a48ff523cb611121f9bac6049dfe524ca588ac00000000",
+    "script": "ad6876a914ba74d8e8b76e0968f4822bdbcdf1eb4b0965d99d88ac",
+    "input_index": 1,
+    "hash_type": 66,
+    "expected_hash": "2c70c4de3497f5fb723df38af33d872a4682161076ae42afffe5d6fd0b72250a",
+    "id": "bsl:signer:signer-checksig-in-unlock-b-00040:1:0",
+    "class": "sighash.scriptcode.in-unlock.lock-only",
+    "design": "[SRC] bsv-rs v0.7.0 src/script/template.rs:142 signs over script_code.unwrap_or(locking_script), the default None (:103), and the public override SigningContext::with_script_code (:114-117) takes the execution-site scriptCode: the class is the caller supplying the scriptCode by design (harness/rules/bsv-rs-signer.json ruling caller-scriptcode-required), not a bug of bsv-rs; the node selects the scriptCode at bitcoin-sv v1.2.3 interpreter.cpp:1471-1481",
+    "sdk_script": "76a914ba74d8e8b76e0968f4822bdbcdf1eb4b0965d99d88ac",
+    "sdk_hash": "d2f7535fb8d2c9041e41f133b80a9e99218abb54b867951a437c62e7633f6a97",
+    "engines": [
+      "bsv-rs api-default",
+      "go-sdk api-default",
+      "ts-sdk api-default"
+    ],
+    "amount_satoshis": 1001192,
+    "hash_at_amount": "31709985e9d5db9d1239c15a0606c8eb65424374008d2b1312a0805e077ef8c4",
+    "source": "bsv-script-lean corpus/signer/checksig-in-unlock-b.jsonl signer-checksig-in-unlock-b-00040 input 1 CHECKSIG site 0: the node's scriptCode (corpus/signer/README.md), its signature judged by bitcoin-sv v1.2.3 (6504a3af) verifyscript in docs/records/20261016-203024-s3-145d-signer-column-go-sdk-s3.json, docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json, docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json"
+  }
+]

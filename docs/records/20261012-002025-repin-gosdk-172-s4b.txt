@@ -1,0 +1,381 @@
+[export: 127 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+#99 continuation foreground receipts [X]
+tested source: 764dab8b2a7d45c5917214bc4589d5ae2d6f1910
+measured data commit: 85026f9d512ead74a8aebe6a68f8d47c992c5abf
+runner sha256: 1df5a81ffe032cb71699c2682b182db1d27d3f257e96f843ae0e75c2005a91d4
+Commands ran sequentially in the foreground. Each start was gated at load1 < 20.
+Driver class explanations are omitted here; unchanged classifier data stays in harness/rules/.
+
+[X] cargo-build: CARGO_BUILD_JOBS=4 cargo build --release --locked
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:33:27.255845+00:00 -> 2026-10-12T00:33:45.985809+00:00; exit 0; wall 18.726 s
+load: 20:33  up 9 days, 27 mins, 3 users, load averages: 1.99 4.43 5.35
+
+[X] go-build: GOFLAGS=-mod=mod go build -p 4 -o ../../target/engines/gosdk-runner .
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:33:45.986108+00:00 -> 2026-10-12T00:33:46.585603+00:00; exit 0; wall 0.595 s
+load: 20:33  up 9 days, 27 mins, 3 users, load averages: 3.29 4.56 5.38
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:47.988092+00:00 -> 2026-10-12T00:35:48.248503+00:00; exit 0; wall 0.257 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:48.248858+00:00 -> 2026-10-12T00:35:49.015882+00:00; exit 0; wall 0.763 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.017048+00:00 -> 2026-10-12T00:35:49.027892+00:00; exit 0; wall 0.006 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.028080+00:00 -> 2026-10-12T00:35:49.080786+00:00; exit 0; wall 0.049 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.096542+00:00 -> 2026-10-12T00:35:49.105341+00:00; exit 0; wall 0.005 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.105548+00:00 -> 2026-10-12T00:35:49.152104+00:00; exit 0; wall 0.043 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.165331+00:00 -> 2026-10-12T00:35:49.173277+00:00; exit 0; wall 0.004 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.173455+00:00 -> 2026-10-12T00:35:49.222493+00:00; exit 0; wall 0.045 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.226770+00:00 -> 2026-10-12T00:35:49.234380+00:00; exit 0; wall 0.003 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.234560+00:00 -> 2026-10-12T00:35:49.271204+00:00; exit 0; wall 0.033 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.276415+00:00 -> 2026-10-12T00:35:49.289161+00:00; exit 0; wall 0.008 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.289363+00:00 -> 2026-10-12T00:35:49.353940+00:00; exit 0; wall 0.060 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.379895+00:00 -> 2026-10-12T00:35:49.393385+00:00; exit 0; wall 0.009 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.393567+00:00 -> 2026-10-12T00:35:49.603251+00:00; exit 1; wall 0.206 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.652110+00:00 -> 2026-10-12T00:35:49.707487+00:00; exit 0; wall 0.051 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:49.707699+00:00 -> 2026-10-12T00:35:50.356268+00:00; exit 0; wall 0.644 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:50.630608+00:00 -> 2026-10-12T00:35:50.640729+00:00; exit 0; wall 0.005 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:50.640963+00:00 -> 2026-10-12T00:35:50.692303+00:00; exit 0; wall 0.047 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:50.708017+00:00 -> 2026-10-12T00:35:50.723202+00:00; exit 0; wall 0.010 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:35:50.723439+00:00 -> 2026-10-12T00:35:50.771557+00:00; exit 2; wall 0.044 s
+load: 20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.482090+00:00 -> 2026-10-12T00:37:11.495316+00:00; exit 0; wall 0.009 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.495561+00:00 -> 2026-10-12T00:37:11.721655+00:00; exit 0; wall 0.222 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.817585+00:00 -> 2026-10-12T00:37:11.827994+00:00; exit 0; wall 0.004 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.828209+00:00 -> 2026-10-12T00:37:11.873686+00:00; exit 0; wall 0.042 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.880496+00:00 -> 2026-10-12T00:37:11.889177+00:00; exit 0; wall 0.004 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.889374+00:00 -> 2026-10-12T00:37:11.988105+00:00; exit 0; wall 0.095 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:11.991482+00:00 -> 2026-10-12T00:37:12.001141+00:00; exit 0; wall 0.004 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:12.001371+00:00 -> 2026-10-12T00:37:12.044000+00:00; exit 0; wall 0.038 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:12.356998+00:00 -> 2026-10-12T00:37:12.887204+00:00; exit 0; wall 0.525 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:12.887466+00:00 -> 2026-10-12T00:37:18.723360+00:00; exit 0; wall 5.832 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:23.621806+00:00 -> 2026-10-12T00:37:23.879659+00:00; exit 0; wall 0.253 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.12 3.73 4.81
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:23.879951+00:00 -> 2026-10-12T00:37:25.944647+00:00; exit 0; wall 2.060 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.12 3.73 4.81
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.562660+00:00 -> 2026-10-12T00:37:27.571521+00:00; exit 0; wall 0.004 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.571704+00:00 -> 2026-10-12T00:37:27.605226+00:00; exit 0; wall 0.030 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.608724+00:00 -> 2026-10-12T00:37:27.615874+00:00; exit 0; wall 0.003 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.616058+00:00 -> 2026-10-12T00:37:27.657215+00:00; exit 0; wall 0.038 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.659417+00:00 -> 2026-10-12T00:37:27.666953+00:00; exit 0; wall 0.004 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.667111+00:00 -> 2026-10-12T00:37:27.724979+00:00; exit 0; wall 0.054 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.730878+00:00 -> 2026-10-12T00:37:27.742221+00:00; exit 0; wall 0.007 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:27.742415+00:00 -> 2026-10-12T00:37:28.041915+00:00; exit 0; wall 0.295 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:28.072051+00:00 -> 2026-10-12T00:37:28.087033+00:00; exit 0; wall 0.011 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:28.087217+00:00 -> 2026-10-12T00:37:28.648326+00:00; exit 0; wall 0.557 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:28.716646+00:00 -> 2026-10-12T00:37:28.739975+00:00; exit 0; wall 0.019 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:28.740196+00:00 -> 2026-10-12T00:37:29.857083+00:00; exit 0; wall 1.113 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:29.980935+00:00 -> 2026-10-12T00:37:30.003252+00:00; exit 0; wall 0.017 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:30.003434+00:00 -> 2026-10-12T00:37:30.292339+00:00; exit 0; wall 0.285 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:30.414911+00:00 -> 2026-10-12T00:37:30.451911+00:00; exit 0; wall 0.032 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:30.452100+00:00 -> 2026-10-12T00:37:31.006261+00:00; exit 0; wall 0.550 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:31.228575+00:00 -> 2026-10-12T00:37:31.236288+00:00; exit 0; wall 0.003 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:31.236455+00:00 -> 2026-10-12T00:37:31.265417+00:00; exit 0; wall 0.025 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:31.288318+00:00 -> 2026-10-12T00:37:31.354106+00:00; exit 0; wall 0.061 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:31.354318+00:00 -> 2026-10-12T00:37:34.098065+00:00; exit 0; wall 2.739 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:34.581290+00:00 -> 2026-10-12T00:37:34.588921+00:00; exit 0; wall 0.003 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:34.589116+00:00 -> 2026-10-12T00:37:34.618063+00:00; exit 1; wall 0.025 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:34.629120+00:00 -> 2026-10-12T00:37:34.682145+00:00; exit 0; wall 0.049 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:37:34.682338+00:00 -> 2026-10-12T00:37:34.758658+00:00; exit 101; wall 0.072 s
+load: 20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:39:52.341235+00:00 -> 2026-10-12T00:39:52.430855+00:00; exit 0; wall 0.085 s
+load: 20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:39:52.431022+00:00 -> 2026-10-12T00:39:52.510889+00:00; exit 0; wall 0.076 s
+load: 20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:08.542117+00:00 -> 2026-10-12T00:40:08.602622+00:00; exit 0; wall 0.056 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 4.23 3.76 4.61
+
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:08.603120+00:00 -> 2026-10-12T00:40:09.441770+00:00; exit 1; wall 0.834 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 4.23 3.76 4.61
+
+[X] rust-lib-tests: CARGO_BUILD_JOBS=4 cargo test --release --locked --lib
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:48.141928+00:00 -> 2026-10-12T00:40:50.286117+00:00; exit 0; wall 2.139 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79
+test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+[X] conformance: CARGO_BUILD_JOBS=4 python3 tools/conformance.py --out docs/CONFORMANCE-2026-09-27.md --date 2026-09-27
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:50.286415+00:00 -> 2026-10-12T00:40:50.321238+00:00; exit 1; wall 0.029 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79
+conformance: REFUSED (nothing written):
+  go-sdk/gen: class `unexplained` is not in `harness/rules/go-sdk.json`
+  go-sdk/gen: class `unexplained` is not in `harness/rules/go-sdk.json`
+  go-sdk/million: class `unexplained` is not in `harness/rules/go-sdk.json`
+  go-sdk/road: class `unexplained` is not in `harness/rules/go-sdk.json`
+  go-sdk/road: class `unexplained` is not in `harness/rules/go-sdk.json`
+
+[X] check-pins: CARGO_BUILD_JOBS=4 make check-pins
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:50.321491+00:00 -> 2026-10-12T00:40:50.799961+00:00; exit 0; wall 0.474 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79
+check-pins: GREEN (76 sites agree with docs/PROVENANCE.md §1a; 9 skipped by name: the reference clone, GoBDK's embedded reference clone, the Teranode clone, the built gobdk-runner, the go-chaincfg clone, the GoBDK clone, the ts-stack clone, the predecessor-harness clone, the predecessor-lean clone)
+
+[X] citecheck: CARGO_BUILD_JOBS=4 make citecheck
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:40:50.800335+00:00 -> 2026-10-12T00:40:51.288974+00:00; exit 2; wall 0.482 s
+load: 20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79
+cite_check: 2555 citations found in lean/ and docs/ (2546 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 7, MOVED 3; not anchored (reported, never RED): unanchored 53, beyond-eof 1, unresolved 0, ambiguous 2, unpinned 0, other-version 74, self 222, history 0, absent 965, orphan rows 489; skipped 1228 (bitcoin-sv SKIPPED BY NAME (clone absent: ~/bsv/bitcoin-sv), 1070 rows; gobdk SKIPPED BY NAME (clone absent: ~/bsv/bdk), 58 rows; teranode SKIPPED BY NAME (clone absent: ~/bsv/teranode), 68 rows; go-chaincfg SKIPPED BY NAME (clone absent: ~/bsv/go-chaincfg), 26 rows; ts-sdk SKIPPED BY NAME (clone absent: ~/bsv/ts-stack), 6 rows); sources absent here: bitcoin-sv: clone absent: ~/bsv/bitcoin-sv; teranode: clone absent: ~/bsv/teranode; gobdk: clone absent: ~/bsv/bdk; ts-sdk: clone absent: ~/bsv/ts-stack; go-chaincfg: clone absent: ~/bsv/go-chaincfg; predecessor-harness: clone absent: $PREDECESSOR_HARNESS_CLONE; predecessor-lean: clone absent: $PREDECESSOR_LEAN_CLONE
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+
+[X] citecheck-final: make citecheck
+[withheld at export: a sibling tree's line]
+UTC: 2026-10-12T00:49:30.941276+00:00 -> 2026-10-12T00:49:31.398173+00:00; exit 0; wall 0.452 s
+load: 20:49  up 9 days, 43 mins, 3 users, load averages: 5.84 5.49 5.20
+cite_check: 2555 citations found in lean/ and docs/ (2546 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 7, MOVED 0; not anchored (reported, never RED): unanchored 53, beyond-eof 1, unresolved 0, ambiguous 2, unpinned 0, other-version 77, self 222, history 0, absent 965, orphan rows 492; skipped 1228 (bitcoin-sv SKIPPED BY NAME (clone absent: ~/bsv/bitcoin-sv), 1070 rows; gobdk SKIPPED BY NAME (clone absent: ~/bsv/bdk), 58 rows; teranode SKIPPED BY NAME (clone absent: ~/bsv/teranode), 68 rows; go-chaincfg SKIPPED BY NAME (clone absent: ~/bsv/go-chaincfg), 26 rows; ts-sdk SKIPPED BY NAME (clone absent: ~/bsv/ts-stack), 6 rows); sources absent here: bitcoin-sv: clone absent: ~/bsv/bitcoin-sv; teranode: clone absent: ~/bsv/teranode; gobdk: clone absent: ~/bsv/bdk; ts-sdk: clone absent: ~/bsv/ts-stack; go-chaincfg: clone absent: ~/bsv/go-chaincfg; predecessor-harness: clone absent: $PREDECESSOR_HARNESS_CLONE; predecessor-lean: clone absent: $PREDECESSOR_LEAN_CLONE
+cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)
+
+[X] arith: 692 entries; agree {'spec': 692, 'spec-mempool': 692}; exit 0; non-go-sdk fields equal
+[X] bytes: 512 entries; agree {'spec': 512, 'spec-mempool': 512}; exit 0; non-go-sdk fields equal
+[X] crypto: 84 entries; agree {'spec': 84, 'spec-mempool': 84}; exit 0; non-go-sdk fields equal
+[X] eras: 74 entries; agree {'spec': 74, 'spec-mempool': 73}; exit 0; non-go-sdk fields equal
+[X] flow: 1094 entries; agree {'spec': 1094, 'spec-mempool': 1094}; exit 0; non-go-sdk fields equal
+[X] gen: 1157 entries; agree {'spec': 1099, 'spec-mempool': 1090}; exit 1; non-go-sdk fields equal
+[X] seed: 10000 entries; agree {'spec': 10000, 'spec-mempool': 10000}; exit 0; non-go-sdk fields equal
+[X] stack: 262 entries; agree {'spec': 262, 'spec-mempool': 262}; exit 0; non-go-sdk fields equal
+[X] tx: 40 entries; agree {'spec': 40, 'spec-mempool': 40}; exit 0; non-go-sdk fields equal
+[X] cpp-bn_op: 170 entries; agree {'spec': 170, 'spec-mempool': 170}; exit 0; non-go-sdk fields equal
+[X] cpp-lrshiftnum: 36 entries; agree {'spec': 36, 'spec-mempool': 35}; exit 0; non-go-sdk fields equal
+[X] cpp-multisig: 30 entries; agree {'spec': 30, 'spec-mempool': 30}; exit 0; non-go-sdk fields equal
+[X] cpp-opcode: 144324 entries; agree {'spec': 144324, 'spec-mempool': 144324}; exit 0; non-go-sdk fields equal
+[X] cpp-script: 67991 entries; agree {'spec': 67991, 'spec-mempool': 67991}; exit 0; non-go-sdk fields equal
+[X] cpp-script_P2SH: 64 entries; agree {'spec': 64, 'spec-mempool': 64}; exit 0; non-go-sdk fields equal
+[X] cpp-sigopcount: 6 entries; agree {'spec': 6, 'spec-mempool': 6}; exit 0; non-go-sdk fields equal
+[X] cpp-transaction: 167 entries; agree {'spec': 167, 'spec-mempool': 167}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t100-g1-c1: 1024 entries; agree {'spec': 1024, 'spec-mempool': 1024}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t100-g1-c102: 2048 entries; agree {'spec': 2048, 'spec-mempool': 2048}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t100-g102-c102: 4097 entries; agree {'spec': 4097, 'spec-mempool': 4097}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t101-g1-c1: 4096 entries; agree {'spec': 4096, 'spec-mempool': 4096}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t101-g1-c103: 8192 entries; agree {'spec': 8192, 'spec-mempool': 8192}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t101-g102-c1: 3 entries; agree {'spec': 3, 'spec-mempool': 3}; exit 0; non-go-sdk fields equal
+[X] cpp-txvalidationcache-t101-g103-c103: 16384 entries; agree {'spec': 16384, 'spec-mempool': 16384}; exit 0; non-go-sdk fields equal
+[X] million: 4 entries; agree {'spec': 3, 'spec-mempool': 4}; exit 1; non-go-sdk fields equal
+[X] road: 13512 entries; agree {'spec': 13510, 'spec-mempool': 13504}; exit 1; non-go-sdk fields equal

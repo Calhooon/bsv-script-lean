@@ -1,0 +1,11 @@
+S4b's landing record for its lens's corrections, set 4 sitting 6, 20260929-171538 UTC (the landing rule, P9 through P3)
+
+the commit: bedc6418d59243a0b669fe17fa1f5d683f852ae4 (docs only: the lens report, the END BLOCK's three load-bearing corrections in place, the counts record, two indexes), over c81b822 on main
+the legs: pins, cite and spec (the legs that read docs/) re-ran LOCAL at bedc641 on the Studio, every clone present:
+  check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite_check: 6928 citations found in lean/ and docs/ (6851 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 2, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 169, history 4612, absent 0, orphan rows 0; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  specgen --check: OK (117 files up to date; 0 rules flagged)
+the eighteen others stand on S1's GREEN box leg at 7186987 (docs/records/20260929-155509-make-check-box.txt):
+  git diff --quiet 7186987 bedc641 -- . ':(exclude)docs' ':(exclude)tools/cite_check.py' ':(exclude)harness/engines/gobdk' ':(exclude)HANDOFF.md'  -> exit 0
+the load: 13:15  up 6 days, 20:17, 10 users, load averages: 3.05 3.94 5.12

@@ -1,0 +1,69 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+cite_check record (tools/cite_check.py, the citation leg, the twenty-first leg of make check since f84a62a; #43; S4b, set 4)
+commit: 9ef9e09 (the table refreshed over the tip: 884 rows; on main); 0 uncommitted paths at the run
+started: 2026-09-27 02:10:43 UTC; about 3 s
+[withheld at export: a sibling tree's line]
+command: tools/cite_check.py; tools/cite_check.py --list; tools/cite_check.py --propose (a dry run: nothing written)
+
+== the leg ==
+cite_check: 1373 citations found in lean/ and docs/ (1358 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1061, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 5, other-version 2, self 131, history 170, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit status: 0
+
+== the citations no row anchors, by class (--list; never RED) ==
+  unpinned   lean/BsvScript/Params.lean:275 params.go:276–277
+  unpinned   docs/PARAMETERS.md:127 params.go:276–277
+  unpinned   docs/PARAMETERS.md:143 params.go:276
+  ambiguous  docs/PARAMETERS.md:144 params.go:277
+  unpinned   docs/PARAMETERS.md:147 params.go:265–274
+  unpinned   docs/PARAMETERS.md:155 ScriptVerifierGoBDK.go:158–165
+  other-version docs/PROVENANCE.md:134 doc/release-notes.md:1–8
+  other-version docs/PROVENANCE.md:137 doc/release-notes.md:24–37
+  unresolved docs/audit/2026-09-27-lens-S1-by-S3.md:51 WINDOWS.md:1344–1375
+  ambiguous  docs/audit/2026-09-27-lens-S2-by-S3.md:11 PROVENANCE.md:14
+  unresolved docs/lanes/harness.md:160 HOSTS.md:24
+  and 131 citations into this repository's own files (self), 170 in docs/records/ (history)
+
+== the proposal's dry run: nothing to anchor, nothing orphaned; its heuristic leads (UNVERIFIED; a lead is not a finding) ==
+cite_check --propose: 0 rows proposed (Counter()), 0 orphan rows dropped, 884 rows after
+  near-miss: docs/DESIGN.md:122 cites conditional_tracker.cpp:46–49 beside `op_else`, which is not in src/script/conditional_tracker.cpp:46–49 at the pin but is at line(s) 51
+  near-miss: docs/DESIGN.md:139 cites interpreter.h:52 beside `CheckSig`, which is not in src/script/interpreter.h:52–52 at the pin but is at line(s) 54
+  near-miss: docs/PARAMETERS.md:125 cites txvalidator.cpp:583 beside `GetConsensus`, which is not in core/txvalidator.cpp:583–583 at the pin but is at line(s) 584
+  near-miss: docs/PARAMETERS.md:147 cites ScriptVerifierGoBDK.go:124–137 beside `GoBDK`, which is not in services/validator/ScriptVerifierGoBDK.go:124–137 at the pin but is at line(s) 139
+  near-miss: docs/PARAMETERS.md:148 cites configscriptpolicy.cpp:60 beside `requireStandard`, which is not in src/configscriptpolicy.cpp:60–60 at the pin but is at line(s) 61
+  near-miss: docs/PARAMETERS.md:173 cites bdk/core/txvalidator.cpp:864 beside `blockHeight`, which is not in core/txvalidator.cpp:864–864 at the pin but is at line(s) 858, 865, 869
+  near-miss: docs/PARAMETERS.md:199 cites script_flags.h:13–115 beside `uint32_t`, which is not in src/script/script_flags.h:13–115 at the pin but is at line(s) 117
+  near-miss: docs/PARAMETERS.md:35 cites consensus.h:40 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:40–40 at the pin but is at line(s) 43
+  near-miss: docs/PARAMETERS.md:37 cites consensus.h:58 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:58–58 at the pin but is at line(s) 55, 60
+  near-miss: docs/PARAMETERS.md:38 cites consensus.h:50 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:50–50 at the pin but is at line(s) 55
+  near-miss: docs/PARAMETERS.md:98 cites policy.h:227–230 beside `SCRIPT_VERIFY_SIGPUSHONLY`, which is not in src/policy/policy.h:227–230 at the pin but is at line(s) 232
+  near-miss: docs/STATE-OF-THE-WORLD.md:42 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: docs/audit/2026-09-27-lens-S1-by-S3.md:76 cites interpreter.cpp:694–699 beside `OP_LSHIFTNUM`, which is not in src/script/interpreter.cpp:694–699 at the pin but is at line(s) 692
+  near-miss: docs/audit/2026-09-27-lens-S1-by-S3.md:88 cites interpreter.cpp:1786–1790 beside `OP_BIN2NUM`, which is not in src/script/interpreter.cpp:1786–1790 at the pin but is at line(s) 1780
+  near-miss: docs/audit/2026-09-27-lens-S2-by-S3.md:11 cites validation.cpp:527-536/572-593/601-603 beside `CheckTransactionCommon`, which is not in src/validation.cpp:601–603 at the pin but is at line(s) 605, 606
+  near-miss: docs/lanes/lean.md:45 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: lean/BsvScript/Numbers.lean:153 cites interpreter.cpp:1810–1813 beside `SCRIPT_ERR_SCRIPTNUM_OVERFLOW`, which is not in src/script/interpreter.cpp:1810–1813 at the pin but is at line(s) 1809
+  near-miss: lean/BsvScript/Numbers.lean:428 cites script_num.h:57 beside `INT64_SERIALIZED_SIZE`, which is not in src/script/script_num.h:57–57 at the pin but is at line(s) 55
+  near-miss: lean/BsvScript/Ops/Arith.lean:54 cites script_num.h:66–70 beside `int64`, which is not in src/script/script_num.h:66–70 at the pin but is at line(s) 65, 74
+  near-miss: lean/BsvScript/Ops/Arith.lean:75 cites script_num.h:66–70 beside `int64`, which is not in src/script/script_num.h:66–70 at the pin but is at line(s) 65, 74
+  near-miss: lean/BsvScript/Ops/Crypto.lean:13 cites interpreter.cpp:1402–1443 beside `OP_CODESEPARATOR`, which is not in src/script/interpreter.cpp:1402–1443 at the pin but is at line(s) 1445
+  near-miss: lean/BsvScript/Ops/Expansion.lean:17 cites script_num.h:60–63 beside `int64`, which is not in src/script/script_num.h:60–63 at the pin but is at line(s) 58, 65
+  near-miss: lean/BsvScript/Ops/Splice.lean:8 cites interpreter.cpp:1687–1706 beside `OP_SPLIT`, which is not in src/script/interpreter.cpp:1687–1706 at the pin but is at line(s) 1708
+  near-miss: lean/BsvScript/Ops/Stack.lean:7 cites interpreter.cpp:876–1055 beside `OP_SIZE`, which is not in src/script/interpreter.cpp:876–1055 at the pin but is at line(s) 1057
+  near-miss: lean/BsvScript/Params.lean:42 cites interpreter.cpp:285 beside `SCRIPT_VERIFY_LOW_S`, which is not in src/script/interpreter.cpp:285–285 at the pin but is at line(s) 282
+  near-miss: lean/BsvScript/Params.lean:70 cites interpreter.cpp:40–44 beside `SCRIPT_CHRONICLE`, which is not in src/script/interpreter.cpp:40–44 at the pin but is at line(s) 48, 49
+  near-miss: lean/BsvScript/Properties/Eras.lean:239 cites policy.h:217–221 beside `CHRONICLE`, which is not in src/policy/policy.h:217–221 at the pin but is at line(s) 211, 214
+  near-miss: lean/BsvScript/Properties/Eras.lean:239 cites verify_script_flags.cpp:71–75 beside `CHRONICLE`, which is not in src/verify_script_flags.cpp:71–75 at the pin but is at line(s) 78
+  near-miss: lean/BsvScript/Properties/Eras.lean:521 cites conditional_tracker.cpp:57–65 beside `has_op_else`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 51
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:214 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:285 cites script_tests.cpp:282–283 beside `CLEANSTACK`, which is not in src/test/script_tests.cpp:282–283 at the pin but is at line(s) 281
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:386 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Sighash.lean:286 cites script.h:205–219 beside `FindAndDelete`, which is not in src/script/script.h:205–219 at the pin but is at line(s) 200
+  near-miss: lean/BsvScript/Sighash.lean:536 cites script.h:169–188 beside `GetOp2`, which is not in src/script/script.h:169–188 at the pin but is at line(s) 163
+  near-miss: lean/BsvScript/TxRules.lean:175 cites validation.cpp:601–603 beside `CheckRegularTransaction`, which is not in src/validation.cpp:601–603 at the pin but is at line(s) 595
+  near-miss: lean/Bsvs/Run.lean:34 cites consensus.h:27 beside `MAX_TX_SIZE_CONSENSUS_AFTER_GENESIS`, which is not in src/consensus/consensus.h:27–27 at the pin but is at line(s) 29
+  near-miss: lean/Test/ErasCheck.lean:186 cites configscriptpolicy.cpp:67–70 beside `MaxOpsPerScript`, which is not in src/configscriptpolicy.cpp:67–70 at the pin but is at line(s) 65
+  near-miss: lean/Test/ErasCheck.lean:215 cites conditional_tracker.cpp:57–65 beside `OP_ELSE`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 53
+  near-miss: lean/Test/ErasCheck.lean:276 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:319 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:360 cites verify_script_flags.cpp:43 beside `DERSIG`, which is not in src/verify_script_flags.cpp:43–43 at the pin but is at line(s) 42, 44

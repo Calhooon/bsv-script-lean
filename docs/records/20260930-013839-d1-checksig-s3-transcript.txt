@@ -1,0 +1,55 @@
+mini lock (01:24:51Z): TAKEN by S3-c57-D1-corrected pid 2421 after 0 s of waiting
+{
+  "timestamp [M]": "2026-09-30T01:24:51.602983+00:00",
+  "model [LIT]": "Codex GPT-6.1-Sol",
+  "reference_pin [SRC]": "879fc8b42",
+  "binary_version [X]": "Bitcoin SV version v1.2.2.0-g879fc8b42-dev",
+  "chain [X]": "regtest",
+  "peers [X]": 0,
+  "source_entry [LIT]": "crypto-00008 (transaction shape only; newly signed public fixture)",
+  "source_file_sha256 [D]": "62c1c3ac4ecd4269a074d2f5166599296d30d4f3a6f334c47c5fce114e3f06c5",
+  "original_vector_sha256 [D]": "bc9f8cda4203710c1ab97ad129eecdd36459c30efec33d925e2848cd7eb50be9",
+  "same_signature_as_digest_only_vector [D]": false,
+  "requested_word [LIT]": 3932160,
+  "encoding_flags_mask [LIT]": 14,
+  "cases [X]": [
+    {
+      "case [LIT]": "baseline",
+      "signature_bytes [D]": 72,
+      "expected [LIT]": "ok",
+      "result [X]": "ok",
+      "description [X]": "",
+      "applied_word [X]": 3932160,
+      "wall_seconds [M]": 0.008851
+    },
+    {
+      "case [LIT]": "sequence-length-88",
+      "signature_bytes [D]": 80,
+      "expected [LIT]": "ok",
+      "result [X]": "ok",
+      "description [X]": "",
+      "applied_word [X]": 3932160,
+      "wall_seconds [M]": 0.007805
+    },
+    {
+      "case [LIT]": "sequence-length-87",
+      "signature_bytes [D]": 79,
+      "expected [LIT]": "ok",
+      "result [X]": "ok",
+      "description [X]": "",
+      "applied_word [X]": 3932160,
+      "wall_seconds [M]": 0.007782
+    },
+    {
+      "case [LIT]": "length-of-length-over-remaining",
+      "signature_bytes [D]": 72,
+      "expected [LIT]": "error",
+      "result [X]": "error",
+      "description [X]": "Script evaluated without error but finished with a false/empty top stack element",
+      "applied_word [X]": 3932160,
+      "wall_seconds [M]": 0.00768
+    }
+  ],
+  "expected_results_agree [D]": true
+}
+mini lock (01:24:51Z): RELEASED by S3-c57-D1-corrected pid 2421

@@ -1,0 +1,125 @@
+module	decls	named	useAll	useNamed	consts	stxNodes	stxKinds	idents	identConsts	parseErr	direct
+BsvScript	0	0	0	0	0	0	0	0	0	0	0
+BsvScript.Crypto.Secp256k1	49	29	3	1	7	0	0	1	1	0	0
+BsvScript.Eval	3	3	0	0	0	0	0	0	0	0	0
+BsvScript.Flags	290	119	5	4	38	0	0	0	0	0	0
+BsvScript.Gadget	145	31	2	2	32	4	1	0	0	0	0
+BsvScript.Hash.Ripemd160	60	31	5	5	39	0	0	1	1	0	0
+BsvScript.Hash.Sha1	41	13	3	3	36	0	0	1	1	0	0
+BsvScript.Hash.Sha256	59	25	5	5	39	0	0	1	1	0	0
+BsvScript.Machine	435	180	8	8	84	1	1	0	0	0	0
+BsvScript.Numbers	350	141	79	49	175	40	7	25	11	0	74
+BsvScript.Opcodes	275	219	0	0	0	0	0	0	0	0	0
+BsvScript.Ops.Arith	39	22	0	0	0	0	0	0	0	0	0
+BsvScript.Ops.Bitwise	38	22	1	1	6	0	0	0	0	0	0
+BsvScript.Ops.Crypto	32	15	2	1	34	0	0	0	0	0	0
+BsvScript.Ops.Expansion	42	21	7	7	3	1	1	0	0	0	0
+BsvScript.Ops.Splice	8	6	0	0	0	0	0	0	0	0	0
+BsvScript.Ops.Stack	27	17	1	1	6	0	0	0	0	0	0
+BsvScript.Params	268	149	0	0	0	0	0	0	0	0	0
+BsvScript.Properties.Basic	62	6	1	1	21	0	0	0	0	0	0
+BsvScript.Properties.Coverage	88	20	5	5	17	8	2	1	1	0	0
+BsvScript.Properties.Eras	165	95	28	18	56	9	1	0	0	0	0
+BsvScript.Properties.Hooks	119	60	12	9	43	4	1	49	4	0	0
+BsvScript.Properties.KernelSample	179	75	2	2	10	0	0	0	0	0	0
+BsvScript.Properties.P2SH	25	14	3	3	32	2	1	0	0	0	0
+BsvScript.Properties.Resources	112	44	36	20	56	2	1	0	0	0	0
+BsvScript.Properties.VersionGate	42	22	1	1	5	0	0	0	0	0	0
+BsvScript.Properties.Widths	52	12	14	7	72	5	2	4	3	0	0
+BsvScript.SigOps	110	29	8	6	75	10	2	0	0	0	0
+BsvScript.Sighash	231	129	30	23	94	6	2	4	4	0	0
+BsvScript.Standard	155	81	2	2	14	0	0	0	0	0	0
+BsvScript.Tx	113	64	1	1	4	2	1	0	0	0	0
+BsvScript.TxContext	11	10	5	4	4	0	0	0	0	0	0
+BsvScript.TxPolicy	153	74	7	7	18	5	2	0	0	0	0
+BsvScript.TxRules	221	90	50	28	50	8	2	1	1	0	0
+TOTAL (34 modules)	3999	1868	326	224	(per-module sums)	107	(per-module sums)	88	(per-module sums)	0	74
+DISTINCT Mathlib-side constants used by the library: 247; syntax kinds: 8; named in the source by identifier: 18
+DETAIL BsvScript.Crypto.Secp256k1 consts: [LinearOrder.toPartialOrder×5, PartialOrder.toPreorder×5, Preorder.toLE×5, Nat.instLinearOrder×3, LinearOrder×2, Preorder.toLT×2, not_lt×1]
+DETAIL BsvScript.Crypto.Secp256k1 kinds: []
+DETAIL BsvScript.Crypto.Secp256k1 idents: [not_lt×1]
+DETAIL BsvScript.Flags consts: [Monoid.toNPow×5, NPow.toPow×5, Nat.instMonoid×5, MulZeroClass.toZero×2, Nat.instAddMonoidWithOne×2, Nat.instAtLeastTwoHAddOfNat×2, Nat.instCharZero×2, Nat.instMulZeroClass×2, Nat.instOne×2, OfNat.ofNat_ne_one._simp_1×2, OfNat.ofNat_ne_zero._simp_1×2, OfNat.one_ne_ofNat._simp_1×2]
+DETAIL BsvScript.Flags kinds: []
+DETAIL BsvScript.Flags idents: []
+DETAIL BsvScript.Gadget consts: [AddMonoid.toAddZeroClass×2, AddZero.toAdd×2, AddZero.toZero×2, AddZeroClass.toAddZero×2, DistribLattice.toLattice×2, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×2, IsOrderedAddMonoid.toAddLeftMono×2, IsOrderedCancelAddMonoid.toAddLeftReflectLE×2, Lattice.toSemilatticeInf×2, LinearOrderedCommMonoidWithZero.toIsBotZeroClass×2, Nat.instAddCommMonoid×2, Nat.instAddMonoid×2]
+DETAIL BsvScript.Gadget kinds: [Mathlib.Tactic.splitIfs×4]
+DETAIL BsvScript.Gadget idents: []
+DETAIL BsvScript.Hash.Ripemd160 consts: [AddMonoid.toAddZeroClass×4, Nat.instAddMonoid×4, zero_add×3, AddZero.toAdd×2, AddZero.toZero×2, AddZeroClass.toAddZero×2, AddMonoid.toNSMul×1, DistribLattice.toLattice×1, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×1, IsOrderedAddMonoid.toAddLeftMono×1, IsOrderedCancelAddMonoid.toAddLeftReflectLE×1, Lattice.toSemilatticeInf×1]
+DETAIL BsvScript.Hash.Ripemd160 kinds: []
+DETAIL BsvScript.Hash.Ripemd160 idents: [List.sum_replicate×1]
+DETAIL BsvScript.Hash.Sha1 consts: [AddMonoid.toAddZeroClass×3, Nat.instAddMonoid×3, AddZero.toAdd×2, AddZero.toZero×2, AddZeroClass.toAddZero×2, zero_add×2, AddMonoid.toNSMul×1, DistribLattice.toLattice×1, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×1, IsOrderedAddMonoid.toAddLeftMono×1, IsOrderedCancelAddMonoid.toAddLeftReflectLE×1, Lattice.toSemilatticeInf×1]
+DETAIL BsvScript.Hash.Sha1 kinds: []
+DETAIL BsvScript.Hash.Sha1 idents: [List.sum_replicate×1]
+DETAIL BsvScript.Hash.Sha256 consts: [AddMonoid.toAddZeroClass×4, Nat.instAddMonoid×4, zero_add×3, AddZero.toAdd×2, AddZero.toZero×2, AddZeroClass.toAddZero×2, AddMonoid.toNSMul×1, DistribLattice.toLattice×1, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×1, IsOrderedAddMonoid.toAddLeftMono×1, IsOrderedCancelAddMonoid.toAddLeftReflectLE×1, Lattice.toSemilatticeInf×1]
+DETAIL BsvScript.Hash.Sha256 kinds: []
+DETAIL BsvScript.Hash.Sha256 idents: [List.sum_replicate×1]
+DETAIL BsvScript.Machine consts: [LinearOrderedCommMonoidWithZero.toIsBotZeroClass×7, Nat.instAddCommMonoid×7, Nat.instLinearOrder×7, Nat.instLinearOrderedCommMonoidWithZero×7, Nat.instPartialOrder×7, Nat.instPreorder×7, PartialOrder.toPreorder×7, Preorder.toLE×7, AddMonoid.toAddZeroClass×6, AddZero.toZero×6, AddZeroClass.toAddZero×6, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×6]
+DETAIL BsvScript.Machine kinds: [Mathlib.Tactic.splitIfs×1]
+DETAIL BsvScript.Machine idents: []
+DETAIL BsvScript.Numbers consts: [Monoid.toNPow×94, NPow.toPow×94, Nat.instMonoid×82, AddMonoid.toAddZeroClass×20, Nat.instAddMonoidWithOne×18, PartialOrder.toPreorder×16, Nat.instAddMonoid×15, Nat.instLinearOrder×15, Mathlib.Meta.NormNum.isNat_ofNat×14, MulZeroClass.toZero×13, Nat.instCommSemiring×13, Nat.instPartialOrder×13]
+DETAIL BsvScript.Numbers kinds: [Mathlib.Tactic.normNum×14, Mathlib.Linter.Style.show×9, Mathlib.Tactic.RingNF.ring×7, Mathlib.Tactic.splitIfs×5, Batteries.Tactic.byContra×2, Mathlib.Tactic.Positivity.positivity×2, Mathlib.Tactic.Conv.convLHS×1]
+DETAIL BsvScript.Numbers idents: [le_rfl×5, pow_succ'×4, pow_succ×3, symm×3, zero_add×3, add_zero×2, abs_of_neg×1, abs_of_nonneg×1, dvd_pow_self×1, pow_add×1, pow_mul×1]
+DETAIL BsvScript.Ops.Bitwise consts: [Nat.instNoMaxOrder×1, Nat.instOne×1, Nat.instPreorder×1, Nat.instSuccAddOrder×1, Order.add_one_le_iff._simp_1×1, Preorder.toLT×1]
+DETAIL BsvScript.Ops.Bitwise kinds: []
+DETAIL BsvScript.Ops.Bitwise idents: []
+DETAIL BsvScript.Ops.Crypto consts: [AddCommMagma.toAdd×2, AddCommMonoid.toAddCommSemigroup×2, AddCommMonoid.toAddMonoid×2, AddCommSemigroup.toAddCommMagma×2, AddMonoid.toAddZeroClass×2, AddMonoidWithOne.toAddMonoid×2, AddMonoidWithOne.toOne×2, AddZero.toZero×2, AddZeroClass.toAddZero×2, DistribLattice.toLattice×2, IsLeftCancelAdd.addLeftReflectLE_of_addLeftReflectLT×2, IsOrderedAddMonoid.toAddLeftMono×2]
+DETAIL BsvScript.Ops.Crypto kinds: []
+DETAIL BsvScript.Ops.Crypto idents: []
+DETAIL BsvScript.Ops.Expansion consts: [Int.instMonoid×7, Monoid.toNPow×7, NPow.toPow×7]
+DETAIL BsvScript.Ops.Expansion kinds: [Mathlib.Tactic.splitIfs×1]
+DETAIL BsvScript.Ops.Expansion idents: []
+DETAIL BsvScript.Ops.Stack consts: [LinearOrder.toPartialOrder×1, Nat.instLinearOrder×1, PartialOrder.toPreorder×1, Preorder.toLE×1, Preorder.toLT×1, not_lt._simp_1×1]
+DETAIL BsvScript.Ops.Stack kinds: []
+DETAIL BsvScript.Ops.Stack idents: []
+DETAIL BsvScript.Properties.Basic consts: [DistribLattice.toLattice×1, Lattice.toSemilatticeInf×1, LinearOrder.toPartialOrder×1, LinearOrderedCommMonoidWithZero.toIsBotZeroClass×1, MulZeroClass.toZero×1, Nat.instLinearOrder×1, Nat.instLinearOrderedCommMonoidWithZero×1, Nat.instMulZeroClass×1, Nat.instNoMaxOrder×1, Nat.instOne×1, Nat.instPreorder×1, Nat.instSuccAddOrder×1]
+DETAIL BsvScript.Properties.Basic kinds: []
+DETAIL BsvScript.Properties.Basic idents: []
+DETAIL BsvScript.Properties.Coverage consts: [PartialOrder.toPreorder×4, Preorder.toLE×4, LinearOrder.toPartialOrder×3, Nat.instLinearOrder×3, Preorder.toLT×3, not_le._simp_1×3, Nat.instPreorder×2, LinearOrderedCommMonoidWithZero.toIsBotZeroClass×1, MulZeroClass.toZero×1, Nat.instLinearOrderedCommMonoidWithZero×1, Nat.instMulZeroClass×1, Nat.instOne×1]
+DETAIL BsvScript.Properties.Coverage kinds: [Mathlib.Tactic.splitIfs×6, Mathlib.Tactic.Tauto.tauto×2]
+DETAIL BsvScript.Properties.Coverage idents: [le_rfl×1]
+DETAIL BsvScript.Properties.Eras consts: [Preorder.toLT×27, Nat.instPreorder×21, PartialOrder.toPreorder×20, LinearOrder.toPartialOrder×19, Preorder.toLE×17, Nat.instLinearOrder×16, Int.instLinearOrder×6, Nat.instNoMaxOrder×6, Nat.instSuccAddOrder×6, Nat.instOne×5, Order.add_one_le_iff._simp_1×5, not_lt._simp_1×5]
+DETAIL BsvScript.Properties.Eras kinds: [Mathlib.Tactic.splitIfs×9]
+DETAIL BsvScript.Properties.Eras idents: []
+DETAIL BsvScript.Properties.Hooks consts: [LinearOrder.toPartialOrder×8, PartialOrder.toPreorder×8, Preorder.toLE×8, Preorder.toLT×8, LinearOrder×4, AddMonoid.toAddZeroClass×3, Int.instLinearOrder×3, Nat.instLinearOrder×3, Nat.instPreorder×3, AddZero.toZero×2, AddZeroClass.toAddZero×2, Int.instMonoid×2]
+DETAIL BsvScript.Properties.Hooks kinds: [Mathlib.Tactic.splitIfs×4]
+DETAIL BsvScript.Properties.Hooks idents: [trans×45, le_rfl×2, not_le×1, not_lt×1]
+DETAIL BsvScript.Properties.KernelSample consts: [LinearOrderedCommMonoidWithZero.toIsBotZeroClass×2, MulZeroClass.toZero×2, Nat.instLinearOrderedCommMonoidWithZero×2, Nat.instMulZeroClass×2, Nat.instOne×2, Nat.instPartialOrder×2, PartialOrder.toPreorder×2, Preorder.toLE×2, nonpos_iff_eq_zero._simp_1×2, one_ne_zero._simp_1×2]
+DETAIL BsvScript.Properties.KernelSample kinds: []
+DETAIL BsvScript.Properties.KernelSample idents: []
+DETAIL BsvScript.Properties.P2SH consts: [LinearOrder.toPartialOrder×3, Nat.instLinearOrder×3, PartialOrder.toPreorder×3, Preorder.toLT×3, Nat.instPreorder×2, not_le._simp_1×2, AddCommMonoid.toAddMonoid×1, AddMonoid.toAddZeroClass×1, AddZero.toZero×1, AddZeroClass.toAddZero×1, IsOrderedAddMonoid.toAddLeftMono×1, Nat.instAddCommMonoid×1]
+DETAIL BsvScript.Properties.P2SH kinds: [Mathlib.Tactic.splitIfs×2]
+DETAIL BsvScript.Properties.P2SH idents: []
+DETAIL BsvScript.Properties.Resources consts: [MulZeroClass.toZero×51, Nat.instMulZeroClass×51, PartialOrder.toPreorder×13, Nat.instLinearOrder×10, Nat.instOne×10, Preorder.toLE×10, Preorder.toLT×10, Nat.instPreorder×8, Nat.instSuccAddOrder×8, DistribLattice.toLattice×7, Lattice.toSemilatticeInf×7, LinearOrderedCommMonoidWithZero.toIsBotZeroClass×7]
+DETAIL BsvScript.Properties.Resources kinds: [Mathlib.Linter.Style.show×2]
+DETAIL BsvScript.Properties.Resources idents: []
+DETAIL BsvScript.Properties.VersionGate consts: [Int.instLinearOrder×1, LinearOrder.toPartialOrder×1, PartialOrder.toPreorder×1, Preorder.toLE×1, not_lt._simp_1×1]
+DETAIL BsvScript.Properties.VersionGate kinds: []
+DETAIL BsvScript.Properties.VersionGate idents: []
+DETAIL BsvScript.Properties.Widths consts: [PartialOrder.toPreorder×13, Preorder.toLE×13, LinearOrder.toPartialOrder×10, Monoid.toNPow×8, NPow.toPow×8, Preorder.toLT×8, Int.instMonoid×7, Int.instLinearOrder×6, AddMonoid.toAddZeroClass×4, AddZero.toZero×4, AddZeroClass.toAddZero×4, LinearOrder×4]
+DETAIL BsvScript.Properties.Widths kinds: [Mathlib.Tactic.splitIfs×4, Batteries.Tactic.byContra×1]
+DETAIL BsvScript.Properties.Widths idents: [not_lt×2, le_rfl×1, lt_of_le_of_lt×1]
+DETAIL BsvScript.SigOps consts: [Monoid.toNPow×5, NPow.toPow×5, Nat.instMonoid×5, AddMonoid.toAddZeroClass×4, AddZero.toZero×3, AddZeroClass.toAddZero×3, Nat.instAddMonoid×3, AddGroupWithOne.toAddMonoidWithOne×2, AddZero.toAdd×2, Int.instPartialOrder×2, Int.instRing×2, Int.instSemiring×2]
+DETAIL BsvScript.SigOps kinds: [Mathlib.Tactic.splitIfs×9, Mathlib.Tactic.normNum×1]
+DETAIL BsvScript.SigOps idents: []
+DETAIL BsvScript.Sighash consts: [Preorder.toLT×20, Nat.instPreorder×19, AddMonoid.toAddZeroClass×17, Nat.instAddMonoid×15, Nat.instAddCommMonoid×11, Nat.instLinearOrder×10, Nat.instPartialOrder×10, PartialOrder.toPreorder×10, AddZero.toZero×9, AddZeroClass.toAddZero×9, zero_add×9, DistribLattice.toLattice×8]
+DETAIL BsvScript.Sighash kinds: [Mathlib.Tactic.splitIfs×5, Mathlib.Tactic.Conv.convLHS×1]
+DETAIL BsvScript.Sighash idents: [le_refl×1, le_rfl×1, le_trans×1, trans×1]
+DETAIL BsvScript.Standard consts: [LinearOrderedCommMonoidWithZero.toIsBotZeroClass×2, MulZeroClass.toZero×2, Nat.instLinearOrderedCommMonoidWithZero×2, Nat.instMulZeroClass×2, Nat.instPreorder×2, not_lt_zero._simp_1×2, AddMonoid.toAddZeroClass×1, AddMonoidWithOne.toAddMonoid×1, AddZero.toZero×1, AddZeroClass.toAddZero×1, Nat.instAddMonoidWithOne×1, Nat.instLinearOrder×1]
+DETAIL BsvScript.Standard kinds: []
+DETAIL BsvScript.Standard idents: []
+DETAIL BsvScript.Tx consts: [Int.instMonoid×1, Monoid.toNPow×1, NPow.toPow×1, Nat.instMonoid×1]
+DETAIL BsvScript.Tx kinds: [Mathlib.Tactic.splitIfs×2]
+DETAIL BsvScript.Tx idents: []
+DETAIL BsvScript.TxContext consts: [Monoid.toNPow×6, NPow.toPow×6, Int.instMonoid×4, Nat.instMonoid×2]
+DETAIL BsvScript.TxContext kinds: []
+DETAIL BsvScript.TxContext idents: []
+DETAIL BsvScript.TxPolicy consts: [MulZeroClass.toZero×3, Nat.instMulZeroClass×3, AddMonoid.toAddZeroClass×2, LinearOrder.toPartialOrder×2, Nat.instAddMonoid×2, Nat.instLinearOrder×2, PartialOrder.toPreorder×2, Preorder.toLE×2, IsEmpty.forall_iff._simp_1×1, Monoid.toNPow×1, NPow.toPow×1, Nat.instMonoid×1]
+DETAIL BsvScript.TxPolicy kinds: [Batteries.Tactic.byContra×3, Mathlib.Tactic.splitIfs×2]
+DETAIL BsvScript.TxPolicy idents: []
+DETAIL BsvScript.TxRules consts: [MulZeroClass.toZero×49, Nat.instMulZeroClass×49, Monoid.toNPow×27, NPow.toPow×27, Nat.instMonoid×27, AddMonoid.toAddZeroClass×12, Nat.instAddMonoid×12, zero_add×9, Nat.instLinearOrder×6, PartialOrder.toPreorder×6, Preorder.toLE×6, DistribLattice.toLattice×5]
+DETAIL BsvScript.TxRules kinds: [Mathlib.Tactic.splitIfs×6, Mathlib.Linter.Style.show×2]
+DETAIL BsvScript.TxRules idents: [symm×1]
+CLOSURE of `import BsvScript`: 2501 modules, 980 Mathlib-side (Mathlib 723, Batteries 74, Aesop 132, Qq 14, Plausible 13, ProofWidgets 10, ImportGraph 10, LeanSearchClient 4, Cli 0)
+NEEDED (Mathlib-side modules declaring a used constant or kind): 73 (Mathlib 71, Batteries 2, Aesop 0, Qq 0, Plausible 0, ProofWidgets 0, ImportGraph 0, LeanSearchClient 0, Cli 0)
+NEEDED's import closure: 2459 modules, 972 Mathlib-side (Mathlib 715, Batteries 74, Aesop 132, Qq 14, Plausible 13, ProofWidgets 10, ImportGraph 10, LeanSearchClient 4, Cli 0)
+NEEDED list: [Batteries.Classes.Order, Batteries.Tactic.Init, Mathlib.Algebra.BigOperators.Group.List.Defs, Mathlib.Algebra.CharP.Defs, Mathlib.Algebra.CharZero.Defs, Mathlib.Algebra.Divisibility.Basic, Mathlib.Algebra.Group.Basic, Mathlib.Algebra.Group.Defs, Mathlib.Algebra.Group.DivInvMonoid, Mathlib.Algebra.Group.Int.Defs, Mathlib.Algebra.Group.Monoid, Mathlib.Algebra.Group.Nat.Defs, Mathlib.Algebra.Group.Semigroup, Mathlib.Algebra.GroupWithZero.Defs, Mathlib.Algebra.GroupWithZero.Nat, Mathlib.Algebra.NeZero, Mathlib.Algebra.Order.Group.Nat, Mathlib.Algebra.Order.Group.Unbundled.Abs, Mathlib.Algebra.Order.GroupWithZero.Basic, Mathlib.Algebra.Order.GroupWithZero.Canonical, Mathlib.Algebra.Order.GroupWithZero.Defs, Mathlib.Algebra.Order.IsBotOne, Mathlib.Algebra.Order.Monoid.Canonical.Defs, Mathlib.Algebra.Order.Monoid.Defs, Mathlib.Algebra.Order.Monoid.Unbundled.Basic, Mathlib.Algebra.Order.Monoid.Unbundled.Defs, Mathlib.Algebra.Order.Ring.Defs, Mathlib.Algebra.Order.Ring.Int, Mathlib.Algebra.Order.Ring.Nat, Mathlib.Algebra.Order.Ring.Star, Mathlib.Algebra.Order.Star.Basic, Mathlib.Algebra.Order.Sub.Basic, Mathlib.Algebra.Order.Sub.Defs, Mathlib.Algebra.Order.SuccPred, Mathlib.Algebra.Order.ZeroLEOne, Mathlib.Algebra.Ring.Defs, Mathlib.Algebra.Ring.Int.Defs, Mathlib.Algebra.Ring.Nat, Mathlib.Algebra.Star.Basic, Mathlib.Basic.IsEmpty.Basic, Mathlib.Basic.IsEmpty.Defs, Mathlib.Data.Int.Cast.Basic, Mathlib.Data.Int.Cast.Defs, Mathlib.Data.Int.Order.Basic, Mathlib.Data.Int.Star, Mathlib.Data.Nat.Basic, Mathlib.Data.Nat.Cast.Defs, Mathlib.Data.Nat.Cast.Order.Basic, Mathlib.Data.Nat.Cast.Order.Ring, Mathlib.Data.Nat.Init, Mathlib.Data.Nat.SuccPred, Mathlib.Data.Option.Basic, Mathlib.Logic.Function.Defs, Mathlib.Order.Basic, Mathlib.Order.Defs.LinearOrder, Mathlib.Order.Defs.PartialOrder, Mathlib.Order.Lattice, Mathlib.Order.Lattice.Nat, Mathlib.Order.Nat, Mathlib.Order.RelClasses, Mathlib.Tactic.Conv, Mathlib.Tactic.Linter.Style, Mathlib.Tactic.NormNum.Basic, Mathlib.Tactic.NormNum.Core, Mathlib.Tactic.NormNum.Ineq, Mathlib.Tactic.NormNum.Pow, Mathlib.Tactic.NormNum.Result, Mathlib.Tactic.Positivity.Core, Mathlib.Tactic.Ring.Basic, Mathlib.Tactic.Ring.Common, Mathlib.Tactic.Ring.RingNF, Mathlib.Tactic.SplitIfs, Mathlib.Tactic.Tauto]

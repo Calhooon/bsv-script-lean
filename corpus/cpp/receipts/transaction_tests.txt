@@ -1,0 +1,19 @@
+suite: transaction_tests
+source: src/test/transaction_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/transaction_tests.jsonl
+status: passed
+test_cases_passed: 16
+assertions_passed: 5147
+cases_with_entries: 14
+entries: 273
+sha256: 4b71d02ea99ec94e079698cfe47a8349278fcd971e839248acd5c690ba9e8282
+sha256_keys_masked: 02d4d563f8be5c54e5ef09bb65a8cc0d8dd366de5a5cfee2a7dde47d5721d247
+entries_masked: 234
+sha256_of_the_run: 48ae5811cbce88ec0e3bb671342bba38d0228dcac88d65e019105dd173c489b0
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=transaction_tests

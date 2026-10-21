@@ -1,0 +1,37 @@
+The landing of S4b's sitting-5 commits on a moving main (S4b, set 4 sitting 5; written 2026-09-29 06:27 UTC, re-cut 06:29 UTC before its push for the rebase onto f155f43; the landing rule of RULES-SUB, as in docs/records/20260927-134936-cite-landing-s4b.txt)
+
+THE COMMITS (branch harness-b-recon, rebased onto origin/main f155f43 at 06:28 UTC):
+  590c386  #39: the recon log docs/recon.md, entry 1, and its record (8c1c2ab, then 173e9c0, then ea58334 before the three rebases)
+  1df66f0  D135: the advisories' state record (f645881, df50b6d, 652c2cf)
+  58b2215  the leg of record's file, docs/records/20260929-061245-make-check-box.txt (cb835ed, 1563606)
+  + this record's commit, docs/records only
+
+WHAT THE LANDING TOUCHES: docs/recon.md (new), docs/records/ (four records and their rows), docs/PROVENANCE.md (section 6, 15 lines added), docs/STATE-OF-THE-WORLD.md (one row added), tools/cite_check.py (S4b's; HISTORY_PREFIX gains docs/recon.md, and its docstring says so). No lean/ path, so the Lean landing lock (D151) is not taken.
+
+THE LEGS, EACH ON THE TREE IT READS:
+1. The leg of record, make check-box (D156) at df50b6d, the tip of these commits before the rebases of 06:25 and 06:28 UTC: the twenty-one legs GREEN on the box in 689 s (docs/records/20260929-061245-make-check-box.txt; the box leg lock taken 06:12:45Z after 718 s in its FIFO queue).
+2. main moved under it:
+   - S2's 892eaff (docs/DESIGN.md, docs/audit/);
+   - S1's #35 landing a210516 d3a73e0 1630e42 8e2e6ba (lean/, spec/, docs/records/);
+   - W0's 95356ae (tools/hooks/git/pre-push);
+   - S3's f155f43 (HANDOFF.md, corpus/INDEX.md, docs/PARAMETERS.md, docs/lanes/harness.md).
+   So the Lean legs' inputs differ between df50b6d and 58b2215, and df50b6d's run cannot stand for them.
+3. Eighteen legs, by the landing rule on S1's leg of record: make check-box GREEN on the box at f3ded51 (the pre-rebase twin of S1's #35 landing), docs/records/20260929-060950-make-check-box.txt.
+     git diff --quiet f3ded51 2baa048 -- . ':(exclude)docs' ':(exclude)tools/cite_check.py' ':(exclude)tools/hooks' ':(exclude)corpus/INDEX.md' ':(exclude)HANDOFF.md'   -> exit 0
+   (2baa048 is 58b2215 with this record's first cut; the two differ only in docs/records/.)
+   These eighteen legs read none of the excluded paths: lean, axioms, numbers, flow, sighash, arith, stack, crypto, seed, scripttests, txtests, flags, bytes, versiongate, eras, witnesses, eval and harness. No leg reads tools/hooks/ or HANDOFF.md.
+4. The three legs whose inputs include a changed path, re-run LOCAL on the Studio at 2baa048 [X local] (the Studio holds every pinned clone, so nothing is skipped by name). Spec opens corpus/INDEX.md; pins reads docs/PROVENANCE.md §1a; cite reads docs/ and lean/.
+     specgen --check: OK (117 files up to date; 0 rules flagged)
+     check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+     cite_check: 4399 citations found in lean/ and docs/ (4339 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1731, MOVED 0; not anchored (reported, never RED): unanchored 87, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 162, history 2344, absent 0, orphan rows 4; skipped 0
+     cite_check: GREEN (every anchored citation holds at the pin)
+   The same two docs legs read GREEN at 1563606, the tip before the rebase onto f155f43: check-pins 75 sites; cite 1,732 anchored, MOVED 0, orphan rows 3.
+5. This landing's own paths are byte-identical between the checked df50b6d and 58b2215:
+     git diff --quiet df50b6d 1563606 -- docs/recon.md docs/PROVENANCE.md docs/STATE-OF-THE-WORLD.md tools/cite_check.py docs/records/20260929-054539-recon-1-s4b.md docs/records/20260929-055242-d135-ghsa-state-s4b.md   -> exit 0
+     git diff --quiet 1563606 2baa048 -- . ':(exclude)docs/records' ':(exclude)HANDOFF.md' ':(exclude)corpus/INDEX.md' ':(exclude)docs/PARAMETERS.md' ':(exclude)docs/lanes/harness.md'   -> exit 0
+   f155f43 moved none of this landing's paths.
+6. The three patches of the recon record's §5 still apply at 2baa048: git apply --check exit 0 for each. S3's f155f43 re-cut two §5 findings of docs/PARAMETERS.md, and the patch's hunks do not reach them.
+
+THE SAMPLER (the Studio, `uptime`, the 1-minute load): 6.38 at 06:26 UTC and 4.37 at 06:28 UTC, before each pair of local legs. No build ran on the Studio.
+
+THE HOST AND THE MONEY: the box (the leg of record) and the Studio (the local legs, no build); no Modal, no mini; $0.

@@ -1,0 +1,39 @@
+{
+  "source_commit": "5e7cda8",
+  "source_page": "docs/CONFORMANCE-2026-09-27.md",
+  "scope": "The published withholding rows are frozen byte for byte as historical text by the repin-123-join instruction. Current full comparison counts are the active engine manifests.",
+  "rows_by_engine": {
+    "go-sdk": [
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `arith` · `spec-mempool` | 8 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `bytes` · `spec-mempool` | 149 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `crypto` · `spec` | 6 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `crypto` · `spec-mempool` | 9 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `eras` · `spec` | 2 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `eras` · `spec-mempool` | 4 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `flow` · `spec` | 5 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `flow` · `spec-mempool` | 302 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 17 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `seed` · `spec` | 12 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `seed` · `spec-mempool` | 990 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `stack` · `spec-mempool` | 4 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 2 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `eras` · `spec` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 3 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 6 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 6 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `eras` · `spec` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `eras` · `spec-mempool` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 1 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec` | 57 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `gen` · `spec-mempool` | 47 | (withheld until the advisory publishes) | (withheld) |"
+    ],
+    "ts-sdk": [
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `tx` · `default/spec` | 10 | (withheld until the advisory publishes) | (withheld) |",
+      "| (a class under a still-private advisory: withheld, D135) | IMPLEMENTATION-WRONG | impl-wrong | `tx` · `default/spec-mempool` | 10 | (withheld until the advisory publishes) | (withheld) |"
+    ]
+  }
+}

@@ -1,0 +1,3183 @@
+[export: 175 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "base": "7ca5e77a721a0c5e7ff6decfc42720257c077d04",
+  "branch": "lane/bump-045",
+[withheld at export: a sibling tree's line]
+  "record": "docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3",
+  "opened_at": "2026-10-12T02:11:30.924854+00:00",
+  "commands": [
+    {
+      "command": "gh api 'repos/Calhooon/bsv-rs/contents/CHANGELOG.md?ref=v0.4.5'",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:12:04.306486+00:00",
+      "end": "2026-10-12T02:12:04.820132+00:00",
+      "load1": 17.47607421875,
+      "seconds": 0.513,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "0631ebd4dd5bd99535f2e2b6fc720a8d861329499223e18c2de7475199887e55"
+    },
+    {
+      "command": "curl --fail --silent --show-error https://crates.io/api/v1/crates/bsv-rs/0.4.5",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:12:04.823306+00:00",
+      "end": "2026-10-12T02:12:04.939975+00:00",
+      "load1": 17.47607421875,
+      "seconds": 0.116,
+      "exit": 56,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 -c 'import urllib.request,sys; r=urllib.request.Request(\"https://crates.io/api/v1/crates/bsv-rs/0.4.5\",headers={\"User-Agent\":\"bsv-script-lean-pin-audit/0.4.5\"}); sys.stdout.buffer.write(urllib.request.urlopen(r,timeout=30).read())'",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:12:25.684743+00:00",
+      "end": "2026-10-12T02:12:25.904589+00:00",
+      "load1": 14.1552734375,
+      "seconds": 0.219,
+      "exit": 0,
+      "output": "harness/target/bump-045/crate.json",
+      "output_sha256": "c0e308a381c8ddf8eaf94ee8e06484dda96232505a6138e3b0be444231a45535"
+    },
+    {
+      "command": "gh api repos/Calhooon/bsv-rs/git/ref/tags/v0.4.5",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:12:25.684743+00:00",
+      "end": "2026-10-12T02:12:26.025855+00:00",
+      "load1": 14.1552734375,
+      "seconds": 0.341,
+      "exit": 0,
+      "output": "harness/target/bump-045/tag.json",
+      "output_sha256": "1d39de23c58dd7ccd77352770085bca5eec5a3993e15676e194bda74448c09b3"
+    },
+    {
+      "command": "cargo update -p bsv-rs --precise 0.4.5",
+      "cwd": "harness",
+      "start": "2026-10-12T02:12:56.644916+00:00",
+      "end": "2026-10-12T02:12:57.641253+00:00",
+      "load1": 10.72509765625,
+      "seconds": 0.996,
+      "exit": 0
+    },
+    {
+      "command": "cargo fetch --locked",
+      "cwd": "harness",
+      "start": "2026-10-12T02:13:00.458016+00:00",
+      "end": "2026-10-12T02:13:00.550821+00:00",
+      "load1": 10.2666015625,
+      "seconds": 0.092,
+      "exit": 0
+    },
+    {
+      "command": "cargo build --release --locked",
+      "cwd": "harness",
+      "start": "2026-10-12T02:13:08.851585+00:00",
+      "end": "2026-10-12T02:13:29.544005+00:00",
+      "load1": 9.29638671875,
+      "seconds": 20.692,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:15.220497+00:00",
+      "end": "2026-10-12T02:15:15.483943+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.263,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/seed --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:15.484335+00:00",
+      "end": "2026-10-12T02:15:15.860797+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.376,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:15.861182+00:00",
+      "end": "2026-10-12T02:15:16.262032+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.401,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/seed --smoke",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.520111+00:00",
+      "end": "2026-10-12T02:15:16.673855+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.154,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.693224+00:00",
+      "end": "2026-10-12T02:15:16.700689+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/arith --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.701055+00:00",
+      "end": "2026-10-12T02:15:16.715896+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.716352+00:00",
+      "end": "2026-10-12T02:15:16.733237+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.017,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.767342+00:00",
+      "end": "2026-10-12T02:15:16.774520+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/bytes --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.774989+00:00",
+      "end": "2026-10-12T02:15:16.789260+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.014,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.789672+00:00",
+      "end": "2026-10-12T02:15:16.805335+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.837394+00:00",
+      "end": "2026-10-12T02:15:16.842871+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-bn_op --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.843316+00:00",
+      "end": "2026-10-12T02:15:16.851599+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.008,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.851991+00:00",
+      "end": "2026-10-12T02:15:16.860905+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.009,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.881997+00:00",
+      "end": "2026-10-12T02:15:16.886406+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-lrshiftnum --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.886920+00:00",
+      "end": "2026-10-12T02:15:16.891538+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.892017+00:00",
+      "end": "2026-10-12T02:15:16.898312+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.006,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.916868+00:00",
+      "end": "2026-10-12T02:15:16.921640+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-multisig --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.922112+00:00",
+      "end": "2026-10-12T02:15:16.926848+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:16.927308+00:00",
+      "end": "2026-10-12T02:15:16.932887+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:17.177140+00:00",
+      "end": "2026-10-12T02:15:17.760780+00:00",
+      "load1": 4.20556640625,
+      "seconds": 0.583,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-opcode --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:17.761439+00:00",
+      "end": "2026-10-12T02:15:20.810826+00:00",
+      "load1": 4.20556640625,
+      "seconds": 3.049,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:20.811535+00:00",
+      "end": "2026-10-12T02:15:24.208678+00:00",
+      "load1": 4.18896484375,
+      "seconds": 3.397,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:29.421412+00:00",
+      "end": "2026-10-12T02:15:29.683798+00:00",
+      "load1": 4.15966796875,
+      "seconds": 0.262,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-script --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:29.684456+00:00",
+      "end": "2026-10-12T02:15:30.756572+00:00",
+      "load1": 4.15966796875,
+      "seconds": 1.072,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:30.757302+00:00",
+      "end": "2026-10-12T02:15:31.962955+00:00",
+      "load1": 4.15966796875,
+      "seconds": 1.205,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.870253+00:00",
+      "end": "2026-10-12T02:15:33.875591+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-script_P2SH --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.876320+00:00",
+      "end": "2026-10-12T02:15:33.882604+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.006,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.883375+00:00",
+      "end": "2026-10-12T02:15:33.890214+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.909235+00:00",
+      "end": "2026-10-12T02:15:33.913386+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-sigopcount --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.914076+00:00",
+      "end": "2026-10-12T02:15:33.918422+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.004,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.919116+00:00",
+      "end": "2026-10-12T02:15:33.924095+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.944948+00:00",
+      "end": "2026-10-12T02:15:33.950440+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-transaction --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.951160+00:00",
+      "end": "2026-10-12T02:15:33.966061+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:33.966797+00:00",
+      "end": "2026-10-12T02:15:33.982410+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.005206+00:00",
+      "end": "2026-10-12T02:15:34.015071+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.009,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.015838+00:00",
+      "end": "2026-10-12T02:15:34.142188+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.126,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.143021+00:00",
+      "end": "2026-10-12T02:15:34.272645+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.129,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.323007+00:00",
+      "end": "2026-10-12T02:15:34.336580+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.013,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.337380+00:00",
+      "end": "2026-10-12T02:15:34.584713+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.247,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.585581+00:00",
+      "end": "2026-10-12T02:15:34.853473+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.268,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.954134+00:00",
+      "end": "2026-10-12T02:15:34.976934+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.022,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:34.977698+00:00",
+      "end": "2026-10-12T02:15:35.569352+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.591,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:35.570239+00:00",
+      "end": "2026-10-12T02:15:35.949909+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.379,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.127876+00:00",
+      "end": "2026-10-12T02:15:36.152172+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.024,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.153062+00:00",
+      "end": "2026-10-12T02:15:36.251119+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.098,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.252291+00:00",
+      "end": "2026-10-12T02:15:36.420700+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.168,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.604914+00:00",
+      "end": "2026-10-12T02:15:36.649276+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.044,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.650248+00:00",
+      "end": "2026-10-12T02:15:36.827928+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.177,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:36.829092+00:00",
+      "end": "2026-10-12T02:15:37.166438+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.337,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:37.498627+00:00",
+      "end": "2026-10-12T02:15:37.507089+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.008,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:37.508252+00:00",
+      "end": "2026-10-12T02:15:37.521661+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.013,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:37.522818+00:00",
+      "end": "2026-10-12T02:15:37.529784+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:37.576876+00:00",
+      "end": "2026-10-12T02:15:37.656997+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.08,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103 --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:37.658195+00:00",
+      "end": "2026-10-12T02:15:38.045411+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.387,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:38.046753+00:00",
+      "end": "2026-10-12T02:15:38.498003+00:00",
+      "load1": 4.146484375,
+      "seconds": 0.451,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.168110+00:00",
+      "end": "2026-10-12T02:15:39.177429+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.009,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/crypto --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.178394+00:00",
+      "end": "2026-10-12T02:15:39.198516+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.02,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.199950+00:00",
+      "end": "2026-10-12T02:15:39.224632+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.024,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.255218+00:00",
+      "end": "2026-10-12T02:15:39.263041+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/eras --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.264060+00:00",
+      "end": "2026-10-12T02:15:39.277257+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.013,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.278646+00:00",
+      "end": "2026-10-12T02:15:39.293138+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.014,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.336872+00:00",
+      "end": "2026-10-12T02:15:39.351190+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.014,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/flow --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.352608+00:00",
+      "end": "2026-10-12T02:15:39.391372+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.038,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.392813+00:00",
+      "end": "2026-10-12T02:15:39.427709+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.035,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.488516+00:00",
+      "end": "2026-10-12T02:15:39.504091+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/gen --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.505107+00:00",
+      "end": "2026-10-12T02:15:39.615185+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.11,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.616763+00:00",
+      "end": "2026-10-12T02:15:39.742193+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.125,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.808883+00:00",
+      "end": "2026-10-12T02:15:39.815428+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.006,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/million --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.816382+00:00",
+      "end": "2026-10-12T02:15:39.822022+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.823540+00:00",
+      "end": "2026-10-12T02:15:39.830691+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.007,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.904050+00:00",
+      "end": "2026-10-12T02:15:39.970969+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.066,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/road --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:39.972223+00:00",
+      "end": "2026-10-12T02:15:40.288207+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.316,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:40.289308+00:00",
+      "end": "2026-10-12T02:15:40.688460+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.399,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.090931+00:00",
+      "end": "2026-10-12T02:15:41.102985+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.011,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/stack --manifest cases-manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.104447+00:00",
+      "end": "2026-10-12T02:15:41.127384+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.023,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.128842+00:00",
+      "end": "2026-10-12T02:15:41.149556+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.02,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.216170+00:00",
+      "end": "2026-10-12T02:15:41.233710+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.017,
+      "exit": 0
+    },
+    {
+      "command": "target/release/run_bsvrs --corpus ../corpus/tx --manifest manifest.json --record",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.234900+00:00",
+      "end": "2026-10-12T02:15:41.402501+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.167,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:15:41.403981+00:00",
+      "end": "2026-10-12T02:15:41.589894+00:00",
+      "load1": 5.09521484375,
+      "seconds": 0.186,
+      "exit": 0
+    },
+    {
+      "command": "target/release/num_vectors --count 1000",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.129733+00:00",
+      "end": "2026-10-12T02:17:56.343111+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.212,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515"
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.345891+00:00",
+      "end": "2026-10-12T02:17:56.357537+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.011,
+      "exit": 0
+    },
+    {
+      "command": "target/release/sighash_vectors --count 500",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.360482+00:00",
+      "end": "2026-10-12T02:17:56.476322+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.115,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a"
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.479036+00:00",
+      "end": "2026-10-12T02:17:56.485878+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.006,
+      "exit": 0
+    },
+    {
+      "command": "target/release/arith_vectors --count 10000",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.488131+00:00",
+      "end": "2026-10-12T02:17:56.690494+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.202,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba"
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.694573+00:00",
+      "end": "2026-10-12T02:17:56.709195+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.014,
+      "exit": 0
+    },
+    {
+      "command": "target/release/ecdsa_vectors --count 200",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.716729+00:00",
+      "end": "2026-10-12T02:17:56.835316+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.118,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb"
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:17:56.836623+00:00",
+      "end": "2026-10-12T02:17:56.841566+00:00",
+      "load1": 14.84521484375,
+      "seconds": 0.005,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:18:35.125668+00:00",
+      "end": "2026-10-12T02:18:35.167634+00:00",
+      "load1": 8.875,
+      "seconds": 0.041,
+      "exit": 0
+    },
+    {
+      "command": "lake build numcheck sighashcheck arithcheck cryptocheck",
+      "cwd": "lean",
+      "start": "2026-10-12T02:18:35.194316+00:00",
+      "end": "2026-10-12T02:18:58.450391+00:00",
+      "load1": 8.875,
+      "seconds": 23.255,
+      "exit": 0
+    },
+    {
+      "command": "make numcheck",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:18:58.477203+00:00",
+      "end": "2026-10-12T02:18:59.981773+00:00",
+      "load1": 7.869140625,
+      "seconds": 1.504,
+      "exit": 0
+    },
+    {
+      "command": "make sighashcheck",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:19:00.009090+00:00",
+      "end": "2026-10-12T02:19:01.733909+00:00",
+      "load1": 7.55908203125,
+      "seconds": 1.724,
+      "exit": 0
+    },
+    {
+      "command": "make arithcheck",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:19:01.759721+00:00",
+      "end": "2026-10-12T02:19:03.404257+00:00",
+      "load1": 7.55908203125,
+      "seconds": 1.644,
+      "exit": 0
+    },
+    {
+      "command": "make cryptocheck",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:19:03.430816+00:00",
+      "end": "2026-10-12T02:19:07.492377+00:00",
+      "load1": 7.55908203125,
+      "seconds": 4.061,
+      "exit": 0
+    },
+    {
+      "command": "/usr/bin/env -u BASH_ENV /bin/bash --noprofile --norc harness/target/bump-045/lean-legs.sh",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:18:35.046377+00:00",
+      "end": "2026-10-12T02:19:07.503394+00:00",
+      "load1": 8.875,
+      "seconds": 32.456,
+      "exit": 0
+    },
+    {
+      "command": "cargo test --release --locked",
+      "cwd": "harness",
+      "start": "2026-10-12T02:19:46.448531+00:00",
+      "end": "2026-10-12T02:19:52.459459+00:00",
+      "load1": 5.16552734375,
+      "seconds": 6.01,
+      "exit": 0
+    },
+    {
+      "command": "harness/target/release/rules_check",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:21:39.958458+00:00",
+      "end": "2026-10-12T02:21:45.880699+00:00",
+      "load1": 3.12255859375,
+      "seconds": 5.922,
+      "exit": 0
+    },
+    {
+      "command": "python3 tools/conformance.py --out docs/CONFORMANCE-2026-09-27.md --date 2026-09-27",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:21:45.881910+00:00",
+      "end": "2026-10-12T02:21:45.937634+00:00",
+      "load1": 3.1123046875,
+      "seconds": 0.055,
+      "exit": 0
+    },
+    {
+      "command": "python3 tools/specgen.py",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:21:45.938662+00:00",
+      "end": "2026-10-12T02:21:46.843724+00:00",
+      "load1": 3.1123046875,
+      "seconds": 0.905,
+      "exit": 0
+    },
+    {
+      "command": "make check-pins",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:21:46.844899+00:00",
+      "end": "2026-10-12T02:21:47.231520+00:00",
+      "load1": 3.1123046875,
+      "seconds": 0.386,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:21:47.232582+00:00",
+      "end": "2026-10-12T02:21:47.757098+00:00",
+      "load1": 3.1123046875,
+      "seconds": 0.524,
+      "exit": 0
+    },
+    {
+      "command": "python3 docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3-audit.py",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:22:52.423525+00:00",
+      "end": "2026-10-12T02:22:59.312992+00:00",
+      "load1": 2.4501953125,
+      "seconds": 6.889,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+      "output_sha256": "fcae5ce8d051d1be1afb1a75214bae60b75d5f76dae62a2bbded949992c4e8db"
+    },
+    {
+      "command": "python3 tools/specgen.py --check",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:22:59.315157+00:00",
+      "end": "2026-10-12T02:23:00.235385+00:00",
+      "load1": 2.4140625,
+      "seconds": 0.92,
+      "exit": 0
+    },
+    {
+      "command": "git diff --check",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:23:00.236521+00:00",
+      "end": "2026-10-12T02:23:00.588872+00:00",
+      "load1": 2.380859375,
+      "seconds": 0.352,
+      "exit": 0
+    },
+    {
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:27:41.406390+00:00",
+      "end": "2026-10-12T02:27:41.944493+00:00",
+      "load1": 13.3984375,
+      "seconds": 0.537,
+      "exit": 0
+    },
+    {
+      "command": "git diff --check",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:27:41.946110+00:00",
+      "end": "2026-10-12T02:27:42.314626+00:00",
+      "load1": 12.9658203125,
+      "seconds": 0.368,
+      "exit": 0
+    },
+    {
+      "command": "python3 tools/conformance.py --out docs/CONFORMANCE-2026-09-27.md --date 2026-09-27",
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T02:29:49.961467+00:00",
+      "end": "2026-10-12T02:29:50.015897+00:00",
+      "load1": 2.6416015625,
+      "seconds": 0.054,
+      "exit": 0
+    }
+  ],
+  "network_reads": [
+    {
+      "url": "https://api.github.com/repos/Calhooon/bsv-rs/contents/CHANGELOG.md?ref=v0.4.5",
+      "read_at": "2026-10-12T02:12:04.306486+00:00",
+      "sha256": "0631ebd4dd5bd99535f2e2b6fc720a8d861329499223e18c2de7475199887e55"
+    },
+    {
+      "url": "https://crates.io/api/v1/crates/bsv-rs/0.4.5",
+      "read_at": "2026-10-12T02:12:25.684743+00:00",
+      "sha256": "c0e308a381c8ddf8eaf94ee8e06484dda96232505a6138e3b0be444231a45535"
+    },
+    {
+      "url": "https://api.github.com/repos/Calhooon/bsv-rs/git/ref/tags/v0.4.5",
+      "read_at": "2026-10-12T02:12:25.684743+00:00",
+      "sha256": "1d39de23c58dd7ccd77352770085bca5eec5a3993e15676e194bda74448c09b3"
+    }
+  ],
+  "load_waits": [
+    {
+      "load1": 39.18359375,
+      "step": "initial public reads refused before launch"
+    },
+    {
+      "at": "2026-10-12T02:16:26.103946+00:00",
+      "load1": 31.66943359375,
+      "step": "target/release/num_vectors --count 1000"
+    },
+    {
+      "at": "2026-10-12T02:16:56.111943+00:00",
+      "load1": 30.4638671875,
+      "step": "target/release/num_vectors --count 1000"
+    },
+    {
+      "at": "2026-10-12T02:17:26.117633+00:00",
+      "load1": 21.53515625,
+      "step": "target/release/num_vectors --count 1000"
+    }
+  ],
+  "upstream": {
+    "num": "0.4.5",
+    "created_at": "2026-10-12T01:36:14.486995Z",
+    "checksum": "3e0abc5bc3001271236a5da213ece6412e86612353aaa53b9adf2ecee1425c2a",
+    "yanked": false,
+    "tag_object": {
+      "sha": "77b56dcd985004630867cd06df9e9d1803dce116",
+      "type": "commit",
+      "url": "https://api.github.com/repos/Calhooon/bsv-rs/git/commits/77b56dcd985004630867cd06df9e9d1803dce116"
+    }
+  },
+  "corpora": [
+    {
+      "corpus": "seed",
+      "file": "corpus/seed/seed.jsonl",
+      "manifest": "corpus/seed/manifest.json",
+      "entries": 10000,
+      "old_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "new_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "1ee4bd67b78e2a927c373d15e9def783b14182a5eb3c3b3c60eb988da2d2e0a6",
+      "after_sha256": "c78e11ef2624441179593ebed2243089cb6933d5851f58b8731f769fe70a726e",
+      "stored_sha256": "c78e11ef2624441179593ebed2243089cb6933d5851f58b8731f769fe70a726e",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 20000,
+      "go_sdk_before_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+      "go_sdk_after_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "arith",
+      "file": "corpus/arith/cases.jsonl",
+      "manifest": "corpus/arith/cases-manifest.json",
+      "entries": 692,
+      "old_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "new_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "3e278dd179c88fa4404bdb8c4921b7cbfd129b84db563a042de0e92b9491a261",
+      "after_sha256": "b51c7076bcd829ff43ecd72bd172b43c8422f6cc56e5373ed7c8e13d65b084d0",
+      "stored_sha256": "b51c7076bcd829ff43ecd72bd172b43c8422f6cc56e5373ed7c8e13d65b084d0",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 1384,
+      "go_sdk_before_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+      "go_sdk_after_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "bytes",
+      "file": "corpus/bytes/cases.jsonl",
+      "manifest": "corpus/bytes/cases-manifest.json",
+      "entries": 512,
+      "old_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "new_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "8b541227ca9d30b311230173b7acdc0e31f5a2946f9c44454ff536bd8974c540",
+      "after_sha256": "133694be38bd951cddcd4e3e944e18a99862c21f5aa309f31a166045dc8db495",
+      "stored_sha256": "133694be38bd951cddcd4e3e944e18a99862c21f5aa309f31a166045dc8db495",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 1024,
+      "go_sdk_before_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+      "go_sdk_after_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-bn_op",
+      "file": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-bn_op/cases-manifest.json",
+      "entries": 170,
+      "old_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      },
+      "new_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 95,
+          "from": "cpp-bn_op-00001",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-bn_op-spec-engine.word-out-of-scope-cpp-bn_op-00001"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 95,
+          "from": "cpp-bn_op-00001",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-bn_op-spec-engine.word-out-of-scope-cpp-bn_op-00001"
+        }
+      ],
+      "before_sha256": "46a2ff8dd682ad579520aec789dd71078d5649993b9429f0db73d3b1a98d034d",
+      "after_sha256": "d77769ce8d862f2a9093fd56b0e81efc00d1ac52a4a56d7edb1f1a2b13c335cd",
+      "stored_sha256": "d77769ce8d862f2a9093fd56b0e81efc00d1ac52a4a56d7edb1f1a2b13c335cd",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 340,
+      "go_sdk_before_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+      "go_sdk_after_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "file": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json",
+      "entries": 36,
+      "old_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      },
+      "new_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 23,
+          "from": "cpp-lrshiftnum-00001",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-lrshiftnum-spec-engine.word-out-of-scope-cpp-lrshiftnum-00001"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 23,
+          "from": "cpp-lrshiftnum-00001",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-lrshiftnum-spec-engine.word-out-of-scope-cpp-lrshiftnum-00001"
+        }
+      ],
+      "before_sha256": "aceb7edd461d6b051e7a55b73c432b93f8eade5a2a39ed7e1d3a651844df9800",
+      "after_sha256": "ca0028c80fe0643b997146340a50b897bf8b2661edfb4688a54c849a6b009c82",
+      "stored_sha256": "ca0028c80fe0643b997146340a50b897bf8b2661edfb4688a54c849a6b009c82",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 72,
+      "go_sdk_before_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+      "go_sdk_after_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-multisig",
+      "file": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-multisig/cases-manifest.json",
+      "entries": 30,
+      "old_verdicts": {
+        "invalid": 30
+      },
+      "new_verdicts": {
+        "invalid": 30
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 6,
+          "from": "cpp-multisig-00011",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-multisig-spec-engine.word-out-of-scope-cpp-multisig-00011"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 6,
+          "from": "cpp-multisig-00011",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-multisig-spec-engine.word-out-of-scope-cpp-multisig-00011"
+        }
+      ],
+      "before_sha256": "0ec2e48737469f563fa64740b91698ab9db4141b48adeafe18ae99cecb9c4be3",
+      "after_sha256": "673ef7b6d4eb93a22a40ec77879d65f9cfe064fda4e13292df04852629afa8ed",
+      "stored_sha256": "673ef7b6d4eb93a22a40ec77879d65f9cfe064fda4e13292df04852629afa8ed",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 60,
+      "go_sdk_before_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+      "go_sdk_after_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-opcode",
+      "file": "corpus/cpp/replay/cpp-opcode/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-opcode/cases-manifest.json",
+      "entries": 144324,
+      "old_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      },
+      "new_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 77263,
+          "from": "cpp-opcode-144216",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-opcode-spec-engine.word-out-of-scope-cpp-opcode-144216"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 77263,
+          "from": "cpp-opcode-144216",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-opcode-spec-engine.word-out-of-scope-cpp-opcode-144216"
+        }
+      ],
+      "before_sha256": "653762870fd6616ddb9f9fcc5932fd35d02e74c92ced9e7dfc4e22a40c3773de",
+      "after_sha256": "d8a20045482e63a842ff99095f3388f01eecc746446e4999d0efd26f795bb775",
+      "stored_sha256": "94a212649e510a7c899a7a49dff2d47078d184bbd4c32737dcf980296c696a81",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 288648,
+      "go_sdk_before_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+      "go_sdk_after_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-script",
+      "file": "corpus/cpp/replay/cpp-script/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-script/cases-manifest.json",
+      "entries": 67991,
+      "old_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      },
+      "new_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 67634,
+          "from": "cpp-script-00128",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-script-spec-engine.word-out-of-scope-cpp-script-00128"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 67634,
+          "from": "cpp-script-00128",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-script-spec-engine.word-out-of-scope-cpp-script-00128"
+        }
+      ],
+      "before_sha256": "e16fc8c477cf16bebbb8b0c4f8d87f6da726894844e2d46a098d04e02c64fec9",
+      "after_sha256": "379698be9aed7a7e1b9d753ee5d2a08b66198d6de151a6e64f446890993f485a",
+      "stored_sha256": "aa7a17d1169bf489c974d397e0f681333831b7445693f12bb48fcae3a78746e5",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 135982,
+      "go_sdk_before_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+      "go_sdk_after_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-script_P2SH",
+      "file": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json",
+      "entries": 64,
+      "old_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      },
+      "new_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 8,
+          "from": "cpp-script_P2SH-00063",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-script_P2SH-spec-engine.word-out-of-scope-cpp-script_P2SH-00063"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 8,
+          "from": "cpp-script_P2SH-00063",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-script_P2SH-spec-engine.word-out-of-scope-cpp-script_P2SH-00063"
+        }
+      ],
+      "before_sha256": "fb61a6b6b2d12228f0de3eeca9236ad0a5598baa35c48454d9c0bab69394a94b",
+      "after_sha256": "93bd7a3f48d85f8356781e693e1b5b20df3cf0cedc0177e113c9b706f18c07e0",
+      "stored_sha256": "93bd7a3f48d85f8356781e693e1b5b20df3cf0cedc0177e113c9b706f18c07e0",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 128,
+      "go_sdk_before_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+      "go_sdk_after_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-sigopcount",
+      "file": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-sigopcount/cases-manifest.json",
+      "entries": 6,
+      "old_verdicts": {
+        "invalid": 6
+      },
+      "new_verdicts": {
+        "invalid": 6
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "79afca2e46271c1dee084df77045e7fd1449f6d727a9d25769097e6461b9e73b",
+      "after_sha256": "a7e15069dbe70d1d9232fe39dfd8a18b5357a17923c83c0d4d41de7e081e1f8a",
+      "stored_sha256": "a7e15069dbe70d1d9232fe39dfd8a18b5357a17923c83c0d4d41de7e081e1f8a",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 12,
+      "go_sdk_before_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+      "go_sdk_after_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-transaction",
+      "file": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-transaction/cases-manifest.json",
+      "entries": 167,
+      "old_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      },
+      "new_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 59,
+          "from": "cpp-transaction-00044",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-transaction-spec-engine.word-out-of-scope-cpp-transaction-00044"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 59,
+          "from": "cpp-transaction-00044",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-transaction-spec-engine.word-out-of-scope-cpp-transaction-00044"
+        }
+      ],
+      "before_sha256": "118f3b1144c8d6433078b3deec41da6c6ecbe64f90ed4685b69b01d2206db12f",
+      "after_sha256": "232f68cd968475f2b68cfc549452c0a3f9be3cf6764b12d5e95571ecc936fa27",
+      "stored_sha256": "232f68cd968475f2b68cfc549452c0a3f9be3cf6764b12d5e95571ecc936fa27",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 334,
+      "go_sdk_before_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+      "go_sdk_after_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json",
+      "entries": 1024,
+      "old_verdicts": {
+        "invalid": 1024
+      },
+      "new_verdicts": {
+        "invalid": 1024
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "9abd56367742f2df0a96d9d50d7a93e288c008a6ac665185b7a4d81eac832a11",
+      "after_sha256": "192ecb2bf5fbacf9e6d4ba364a5f4d6f8fe370111558405755b7915e49edaa1f",
+      "stored_sha256": "192ecb2bf5fbacf9e6d4ba364a5f4d6f8fe370111558405755b7915e49edaa1f",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 2048,
+      "go_sdk_before_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+      "go_sdk_after_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c102",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json",
+      "entries": 2048,
+      "old_verdicts": {
+        "invalid": 2048
+      },
+      "new_verdicts": {
+        "invalid": 2048
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "3d439c336021647f762e806d8067f1a56f17797605b9964f89c67a6563d61b4c",
+      "after_sha256": "ddfa50c99fd29974287f0e25e5a3f0e2abace23529fd4060bb808d1d92da27c4",
+      "stored_sha256": "263e7ce3f28f784e3cda1484b24c446a77e29ea5d79f508c808756014bdcbf52",
+      "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 4096,
+      "go_sdk_before_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+      "go_sdk_after_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g102-c102",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json",
+      "entries": 4097,
+      "old_verdicts": {
+        "invalid": 4097
+      },
+      "new_verdicts": {
+        "invalid": 4097
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 2048,
+          "from": "cpp-txvalidationcache-00005",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t100-g102-c102-spec-engine.word-out-of-scope-cpp-txvalidationcache-00005"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 2048,
+          "from": "cpp-txvalidationcache-00005",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t100-g102-c102-spec-engine.word-out-of-scope-cpp-txvalidationcache-00005"
+        }
+      ],
+      "before_sha256": "eb86bda030c26ecb80dd87bc11cc0c0a3ba609d42a3a929bd7cad730dacd3b4f",
+      "after_sha256": "419d36b40fc0d48e00f907e646af795a4d97a4ab506c16c761bf192199659bc6",
+      "stored_sha256": "4cfe7e3cea05a10e7ed78b0f7bc30a0e38d9e2ff9ef344083d61b7d1bacb82c3",
+      "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 8194,
+      "go_sdk_before_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+      "go_sdk_after_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json",
+      "entries": 4096,
+      "old_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      },
+      "new_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "e3c10929ec86d39cff4611e892e41564da22808e38bacc2b2a70561b0d53ae9a",
+      "after_sha256": "2b34139e52ab3dabec663e6752a7804040efd49dee2b60da17babd3f3a3611ea",
+      "stored_sha256": "89faa2649d6e40b19cfbc3d763960b53b610af0946a47160c843da66571c7482",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 8192,
+      "go_sdk_before_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+      "go_sdk_after_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c103",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json",
+      "entries": 8192,
+      "old_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      },
+      "new_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "a1265c036249a510d203ddd067545fc45cfeb362cfe7bea44dd5bf74e71a9300",
+      "after_sha256": "49cf0a53ccc4d6b898c3a2f3756bee914c3984ed33919be8e67533f2d074a1a2",
+      "stored_sha256": "8af1ce6a25718f4c213206208bfa0f11b555065fdeb5b571f1e36d394358f9df",
+      "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 16384,
+      "go_sdk_before_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+      "go_sdk_after_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g102-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json",
+      "entries": 3,
+      "old_verdicts": {
+        "invalid": 3
+      },
+      "new_verdicts": {
+        "invalid": 3
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 2,
+          "from": "cpp-txvalidationcache-172037",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t101-g102-c1-spec-engine.word-out-of-scope-cpp-txvalidationcache-172037"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 2,
+          "from": "cpp-txvalidationcache-172037",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t101-g102-c1-spec-engine.word-out-of-scope-cpp-txvalidationcache-172037"
+        }
+      ],
+      "before_sha256": "3f9233f719643f89b2edab222e20f689abae82ddd363d3cb2c7a1d7828ebce3c",
+      "after_sha256": "76015de1aaa0ddf2b850e7ef99948293c4a1b26bb534fcc31cbaa3432e1fd831",
+      "stored_sha256": "76015de1aaa0ddf2b850e7ef99948293c4a1b26bb534fcc31cbaa3432e1fd831",
+      "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 6,
+      "go_sdk_before_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+      "go_sdk_after_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g103-c103",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json",
+      "entries": 16384,
+      "old_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      },
+      "new_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 6144,
+          "from": "cpp-txvalidationcache-114693",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t101-g103-c103-spec-engine.word-out-of-scope-cpp-txvalidationcache-114693"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "bsv-rs 0.3.33 flags.rs:500\u2013519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523\u2013529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259\u20132262, 2312\u20132313, and CLEANSTACK without P2SH, 2435\u20132436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255\u2013263; docs/PARAMETERS.md section 2)",
+          "entries": 6144,
+          "from": "cpp-txvalidationcache-114693",
+          "rule": "engine.word-out-of-scope",
+          "ruling": "open",
+          "witness": "witness-cpp-txvalidationcache-t101-g103-c103-spec-engine.word-out-of-scope-cpp-txvalidationcache-114693"
+        }
+      ],
+      "before_sha256": "10d182599b822acfd95b21fce1c3f63b4755a91c1f7f47f5f776c7592bc29af5",
+      "after_sha256": "1286e353c04795380469d31d4fd0b307424c5e43be90e9507f206e6633aae292",
+      "stored_sha256": "e1a7338bd3f2d6d997be143272c79a6e3c54b88767fd99c40ac8f17ce0e5a52a",
+      "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 32768,
+      "go_sdk_before_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+      "go_sdk_after_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "crypto",
+      "file": "corpus/crypto/cases.jsonl",
+      "manifest": "corpus/crypto/cases-manifest.json",
+      "entries": 84,
+      "old_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "new_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "13095a9bb4eca5ffb5d5d8e7a9a0dc029f76b08c565e6a4ae17a1816e8eb142b",
+      "after_sha256": "826fd2813c0d4da7ad5ff02b570bfd262ff45eaee88e67b78dedd14c54c9506b",
+      "stored_sha256": "826fd2813c0d4da7ad5ff02b570bfd262ff45eaee88e67b78dedd14c54c9506b",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 168,
+      "go_sdk_before_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+      "go_sdk_after_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "eras",
+      "file": "corpus/eras/eras.jsonl",
+      "manifest": "corpus/eras/manifest.json",
+      "entries": 74,
+      "old_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "new_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "57276264872c42e71b26ba749b4ded9f58e6f5065435ecfbc996c57456712b69",
+      "after_sha256": "a609d6aba121c24a3f1c0b913c542ab6ca0c754c198baf88bfbe495a4572372f",
+      "stored_sha256": "a609d6aba121c24a3f1c0b913c542ab6ca0c754c198baf88bfbe495a4572372f",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 148,
+      "go_sdk_before_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+      "go_sdk_after_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "flow",
+      "file": "corpus/flow/flow.jsonl",
+      "manifest": "corpus/flow/manifest.json",
+      "entries": 1094,
+      "old_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "new_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "3dec346665c7a0a5abdf3b4f086e578f5e5096ce8d43dd0d788529b26365043e",
+      "after_sha256": "5cf56c918997345fdda6d8bca88dd63fbf718f3ecb7686bc99b8048f42940bce",
+      "stored_sha256": "5cf56c918997345fdda6d8bca88dd63fbf718f3ecb7686bc99b8048f42940bce",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 2188,
+      "go_sdk_before_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+      "go_sdk_after_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "gen",
+      "file": "corpus/gen/gen.jsonl",
+      "manifest": "corpus/gen/manifest.json",
+      "entries": 1157,
+      "old_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      },
+      "new_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "8e518649e5ed73d58199d9ea27706761c68b16e42ce7ccc83d8a8f94d97e785e",
+      "after_sha256": "80b07e486525434ccac584ccdd636b65f7fa6500ecc26887333579f9957fc5bb",
+      "stored_sha256": "80b07e486525434ccac584ccdd636b65f7fa6500ecc26887333579f9957fc5bb",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 2314,
+      "go_sdk_before_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+      "go_sdk_after_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "million",
+      "file": "corpus/million/witnesses.jsonl",
+      "manifest": "corpus/million/manifest.json",
+      "entries": 4,
+      "old_verdicts": {
+        "invalid": 4
+      },
+      "new_verdicts": {
+        "invalid": 4
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "decided_by": "the reference decides the input (its verdict recorded in the entry as sv-node@v1.2.2 on both instances, corpus/INDEX.md \u00a74c; the spec's verdict in the witness); bsv-rs 0.3.33 spend.rs:467\u2013473 (the LOCAL budget in force, memory_limit(): with memory_limit None, as engine.rs runs the crate, under a word WORD_MEMORY_LIMIT, 110\u2013118, the node's POLICY default 100,000,000 on the block path as on the mempool path; in the default mode DEFAULT_MEMORY_LIMIT 32,000,000, 108), charged before any growth by check_node_budget 2415\u20132430 (the policy's verdict first, 2416\u20132422; then the local budget as a resource_error, 2423\u20132428, 2451\u20132463) and at OP_NUM2BIN's element check before the allocation (1190\u20131191); the reference bounds an element after Genesis by the stack memory budget alone (limitedstack; configscriptpolicy.cpp:139\u2013154; the consensus budget is the operator's MANDATORY -maxstackmemoryusageconsensus, bitcoind.cpp:140\u2013157, 0 meaning INT64_MAX, configscriptpolicy.cpp:280\u2013283 and consensus.h:82, and the spec's oracle sets 0, harness/oracle/bitcoin.conf:40; OP_NUM2BIN's own bound INT32_MAX at interpreter.cpp:1749\u20131752) and a number by its length at the read (script_num.cpp:62 \u2192 interpreter.cpp:1807\u20131810) or at the shift's result (script_num.cpp:303\u2013317 at v1.2.3); through 0.3.29 the default mode's budget applied in every mode (spend.rs:73 at 0.3.29, spend.rs:72 at 0.3.28): the Finding on #47 (5860579463) is the block path's budget at 0.3.30; the class stays for the seeded run's six (T3's call and the parent's decision, 2026-09-28): under memory_limit Some(usize::MAX), the oracle's budget, each of the four witness lines gives the spec's verdict ([X-local] in T3's window, its sitting-4 END BLOCK, 2026-09-28T13:23:23Z)",
+          "entries": 4,
+          "from": "million-seed-969309",
+          "rule": "engine.resource-abort",
+          "ruling": "impl-wrong",
+          "witness": "witness-million-spec-engine.resource-abort-million-seed-969309"
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "decided_by": "the reference decides the input (its verdict recorded in the entry as sv-node@v1.2.2 on both instances, corpus/INDEX.md \u00a74c; the spec's verdict in the witness); bsv-rs 0.3.33 spend.rs:467\u2013473 (the LOCAL budget in force, memory_limit(): with memory_limit None, as engine.rs runs the crate, under a word WORD_MEMORY_LIMIT, 110\u2013118, the node's POLICY default 100,000,000 on the block path as on the mempool path; in the default mode DEFAULT_MEMORY_LIMIT 32,000,000, 108), charged before any growth by check_node_budget 2415\u20132430 (the policy's verdict first, 2416\u20132422; then the local budget as a resource_error, 2423\u20132428, 2451\u20132463) and at OP_NUM2BIN's element check before the allocation (1190\u20131191); the reference bounds an element after Genesis by the stack memory budget alone (limitedstack; configscriptpolicy.cpp:139\u2013154; the consensus budget is the operator's MANDATORY -maxstackmemoryusageconsensus, bitcoind.cpp:140\u2013157, 0 meaning INT64_MAX, configscriptpolicy.cpp:280\u2013283 and consensus.h:82, and the spec's oracle sets 0, harness/oracle/bitcoin.conf:40; OP_NUM2BIN's own bound INT32_MAX at interpreter.cpp:1749\u20131752) and a number by its length at the read (script_num.cpp:62 \u2192 interpreter.cpp:1807\u20131810) or at the shift's result (script_num.cpp:303\u2013317 at v1.2.3); through 0.3.29 the default mode's budget applied in every mode (spend.rs:73 at 0.3.29, spend.rs:72 at 0.3.28): the Finding on #47 (5860579463) is the block path's budget at 0.3.30; the class stays for the seeded run's six (T3's call and the parent's decision, 2026-09-28): under memory_limit Some(usize::MAX), the oracle's budget, each of the four witness lines gives the spec's verdict ([X-local] in T3's window, its sitting-4 END BLOCK, 2026-09-28T13:23:23Z)",
+          "entries": 4,
+          "from": "million-seed-969309",
+          "rule": "engine.resource-abort",
+          "ruling": "impl-wrong",
+          "witness": "witness-million-spec-engine.resource-abort-million-seed-969309"
+        }
+      ],
+      "before_sha256": "e58d2e34af48ccba7470917a85567bd2080e2fa31b5036906bdce0b0116b16e8",
+      "after_sha256": "cbeb5b1d379b5691d2c98c3252d3175b3d751bb0fa234ba26909627b72bed549",
+      "stored_sha256": "cbeb5b1d379b5691d2c98c3252d3175b3d751bb0fa234ba26909627b72bed549",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 8,
+      "go_sdk_before_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+      "go_sdk_after_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "road",
+      "file": "corpus/road/road.jsonl",
+      "manifest": "corpus/road/manifest.json",
+      "entries": 13512,
+      "old_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      },
+      "new_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "161aa6f6ab8f9f1c9d35eaf80f6e65a344930b794630d7d1d4bb66e33ad6891d",
+      "after_sha256": "3d7ee4a96a454431501b25ee1043cb07a077494338264c9658d3f72766390ee0",
+      "stored_sha256": "3d7ee4a96a454431501b25ee1043cb07a077494338264c9658d3f72766390ee0",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 27024,
+      "go_sdk_before_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+      "go_sdk_after_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "stack",
+      "file": "corpus/stack/cases.jsonl",
+      "manifest": "corpus/stack/cases-manifest.json",
+      "entries": 262,
+      "old_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "new_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "742b9b7510278a08ff1c19e0c047a94e253979a2dba8c3e3b18aef98d3fbb616",
+      "after_sha256": "302a6218721345d379f585a937d7ec5c0f488b9e72a4abc4cf78a51dcb07e4f8",
+      "stored_sha256": "302a6218721345d379f585a937d7ec5c0f488b9e72a4abc4cf78a51dcb07e4f8",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 524,
+      "go_sdk_before_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+      "go_sdk_after_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    },
+    {
+      "corpus": "tx",
+      "file": "corpus/tx/tx.jsonl",
+      "manifest": "corpus/tx/manifest.json",
+      "entries": 40,
+      "old_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "new_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "before_sha256": "0c1b766dc1ae0c828d08aa31311fab01feeaa0bd34e0df8d4c3646a75fa999f9",
+      "after_sha256": "e5a82d8c54694c06c1748a8b879259cad13ad7b5597ffa32f0279be90bbb569d",
+      "stored_sha256": "e5a82d8c54694c06c1748a8b879259cad13ad7b5597ffa32f0279be90bbb569d",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0,
+      "unexplained_witnesses": [],
+      "go_sdk_objects": 80,
+      "go_sdk_before_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+      "go_sdk_after_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+      "changed_go_sdk_objects": 0,
+      "changed_other_fields": 0
+    }
+  ],
+  "columns_before": {
+    "bsv-rs@0.4.4": {
+      "spec": {
+        "entries": 276063,
+        "agree": 122704,
+        "classified_runs": 153286,
+        "class_rows": 11,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 27885,
+        "classified_runs": 0,
+        "class_rows": 0,
+        "unexplained": 0
+      }
+    },
+    "go-sdk": {
+      "spec": {
+        "entries": 276063,
+        "agree": 276002,
+        "classified_runs": 61,
+        "class_rows": 5,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 275986,
+        "classified_runs": 77,
+        "class_rows": 8,
+        "unexplained": 0
+      }
+    },
+    "ts-sdk": {
+      "default/spec": {
+        "entries": 13915,
+        "agree": 13161,
+        "classified_runs": 754,
+        "class_rows": 17,
+        "unexplained": 0
+      },
+      "default/spec-mempool": {
+        "entries": 13915,
+        "agree": 13768,
+        "classified_runs": 147,
+        "class_rows": 19,
+        "unexplained": 0
+      },
+      "spec": {
+        "entries": 13915,
+        "agree": 13896,
+        "classified_runs": 19,
+        "class_rows": 3,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 13915,
+        "agree": 13886,
+        "classified_runs": 29,
+        "class_rows": 5,
+        "unexplained": 0
+      }
+    },
+    "gobdk": {
+      "spec": {
+        "entries": 13915,
+        "agree": 13857,
+        "classified_runs": 58,
+        "class_rows": 1,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 13915,
+        "agree": 13857,
+        "classified_runs": 58,
+        "class_rows": 1,
+        "unexplained": 0
+      }
+    },
+    "sv-node": {
+      "spec": {
+        "entries": 276063,
+        "agree": 276059,
+        "classified_runs": 2,
+        "class_rows": 1,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 276059,
+        "classified_runs": 0,
+        "class_rows": 0,
+        "unexplained": 0
+      }
+    }
+  },
+  "columns_after": {
+    "bsv-rs@0.4.5": {
+      "spec": {
+        "entries": 276063,
+        "agree": 122704,
+        "classified_runs": 153286,
+        "class_rows": 11,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 27885,
+        "classified_runs": 0,
+        "class_rows": 0,
+        "unexplained": 0
+      }
+    },
+    "go-sdk": {
+      "spec": {
+        "entries": 276063,
+        "agree": 276002,
+        "classified_runs": 61,
+        "class_rows": 5,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 275986,
+        "classified_runs": 77,
+        "class_rows": 8,
+        "unexplained": 0
+      }
+    },
+    "ts-sdk": {
+      "default/spec": {
+        "entries": 13915,
+        "agree": 13161,
+        "classified_runs": 754,
+        "class_rows": 17,
+        "unexplained": 0
+      },
+      "default/spec-mempool": {
+        "entries": 13915,
+        "agree": 13768,
+        "classified_runs": 147,
+        "class_rows": 19,
+        "unexplained": 0
+      },
+      "spec": {
+        "entries": 13915,
+        "agree": 13896,
+        "classified_runs": 19,
+        "class_rows": 3,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 13915,
+        "agree": 13886,
+        "classified_runs": 29,
+        "class_rows": 5,
+        "unexplained": 0
+      }
+    },
+    "gobdk": {
+      "spec": {
+        "entries": 13915,
+        "agree": 13857,
+        "classified_runs": 58,
+        "class_rows": 1,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 13915,
+        "agree": 13857,
+        "classified_runs": 58,
+        "class_rows": 1,
+        "unexplained": 0
+      }
+    },
+    "sv-node": {
+      "spec": {
+        "entries": 276063,
+        "agree": 276059,
+        "classified_runs": 2,
+        "class_rows": 1,
+        "unexplained": 0
+      },
+      "spec-mempool": {
+        "entries": 276063,
+        "agree": 276059,
+        "classified_runs": 0,
+        "class_rows": 0,
+        "unexplained": 0
+      }
+    }
+  },
+  "classifier_changes": [],
+  "unexplained_witness_ids": [],
+  "audit": {
+    "entries": 276063,
+    "go_sdk_objects": 552126,
+    "changed_go_sdk_objects": 0,
+    "non_bsv_rs_entry_fields_unchanged": true,
+    "non_bsv_rs_implementation_rows_unchanged": true,
+    "protected_files_unchanged": 81,
+    "lean_sources_unchanged": true,
+    "native_verdict_changes": 0,
+    "class_rows_moved": 0,
+    "classifiers_unchanged": true
+  },
+  "retally_status": "GREEN",
+  "vectors": [
+    {
+      "file": "corpus/numbers/bsv-rs-0.4.5.jsonl",
+      "before_file": "corpus/numbers/bsv-rs-0.4.4.jsonl",
+      "command": "num_vectors --count 1000",
+      "count": 1000,
+      "lines": 1000,
+      "sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515",
+      "identical_to_0_4_4": true
+    },
+    {
+      "file": "corpus/sighash/bsv-rs-0.4.5.jsonl",
+      "before_file": "corpus/sighash/bsv-rs-0.4.4.jsonl",
+      "command": "sighash_vectors --count 500",
+      "count": 500,
+      "lines": 500,
+      "sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a",
+      "identical_to_0_4_4": true
+    },
+    {
+      "file": "corpus/arith/bsv-rs-0.4.5.jsonl",
+      "before_file": "corpus/arith/bsv-rs-0.4.4.jsonl",
+      "command": "arith_vectors --count 10000",
+      "count": 10000,
+      "lines": 10000,
+      "sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba",
+      "identical_to_0_4_4": true
+    },
+    {
+      "file": "corpus/crypto/ecdsa-bsv-rs-0.4.5.jsonl",
+      "before_file": "corpus/crypto/ecdsa-bsv-rs-0.4.4.jsonl",
+      "command": "ecdsa_vectors --count 200",
+      "count": 200,
+      "lines": 1340,
+      "sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb",
+      "identical_to_0_4_4": true
+    }
+  ],
+  "upstream_audit": {
+    "load1": 11.40185546875,
+    "registry_vcs": {
+      "git": {
+        "sha1": "77b56dcd985004630867cd06df9e9d1803dce116"
+      },
+      "path_in_vcs": ""
+    },
+    "archive_checksum_matches": true,
+    "used_sources": [
+      {
+        "file": "src/primitives/bignum.rs",
+        "sha256": "754e954a848b70ddd3d6db6099b85f27bb1930885fa165fabbaadfa796eec625",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/bsv/sighash.rs",
+        "sha256": "03d9f3557e31d1b6ae4070249e136c6682f525bca134f120caeb45ba95f3de29",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": false
+      },
+      {
+        "file": "src/primitives/ec/ecdsa.rs",
+        "sha256": "745f15877a9dd48116cc761d9ed8cb9f7178855585e050da1e7f61938e388552",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/ec/mod.rs",
+        "sha256": "baf9efdc432eda07ba71cd4dff0908ea8dc85ff982e861a9effa36b0bd61eeb3",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/ec/private_key.rs",
+        "sha256": "0a237c623e27d4137bd38c642263687d774d1e58e95d8acfce9a7b1e779f53ea",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/ec/public_key.rs",
+        "sha256": "07b7c6d66b7b05487a455bd54cd953c6f1f9b8958a845fd8e01875633b552012",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/ec/signature.rs",
+        "sha256": "f8c1ac298a92adec4bd48e2bc4f2276bbc35246558eaecf0d3d08449993e0336",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/primitives/hash.rs",
+        "sha256": "4ee0bb1d3d6787fdca9700947157618ebc57f5ad8d445ccbcff0469d4b555a0a",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/script/evaluation_error.rs",
+        "sha256": "7814bbceb5a1346334b29801db55f3663b10268d9b3744f625bad0deff080319",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": false
+      },
+      {
+        "file": "src/script/flags.rs",
+        "sha256": "9a7c93c9847fc843887d785be6c6f41530308fd177a177bd63863fc379458c1b",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/script/script_num.rs",
+        "sha256": "5b2152713109493877c69e8530d0928e55f8062dd489339fb9435d12bb35d27f",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": true
+      },
+      {
+        "file": "src/script/spend.rs",
+        "sha256": "0411b6dab7dfd9c9d96d73aecd9f15e1948785a62286f0ef6c042e0d7d6b40af",
+        "tag_identical": true,
+        "unchanged_from_0_4_4": false
+      }
+    ]
+  },
+  "independent_audit": {
+    "base": "7ca5e77a721a0c5e7ff6decfc42720257c077d04",
+    "load1": 2.4501953125,
+    "status": "GREEN",
+    "totals": {
+      "entries": 276063,
+      "go_sdk_objects": 552126,
+      "bsv_rs_block_agree": 122704,
+      "bsv_rs_mempool_agree": 27885,
+      "go_sdk_block_agree": 276002,
+      "go_sdk_mempool_agree": 275986
+    },
+    "corpora": [
+      {
+        "corpus": "seed",
+        "entries": 10000,
+        "go_sdk_objects": 20000,
+        "go_sdk_before_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+        "go_sdk_after_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "c78e11ef2624441179593ebed2243089cb6933d5851f58b8731f769fe70a726e",
+        "stored_sha256": "c78e11ef2624441179593ebed2243089cb6933d5851f58b8731f769fe70a726e",
+        "agree_block": 10000,
+        "agree_mempool": 10000
+      },
+      {
+        "corpus": "arith",
+        "entries": 692,
+        "go_sdk_objects": 1384,
+        "go_sdk_before_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+        "go_sdk_after_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "b51c7076bcd829ff43ecd72bd172b43c8422f6cc56e5373ed7c8e13d65b084d0",
+        "stored_sha256": "b51c7076bcd829ff43ecd72bd172b43c8422f6cc56e5373ed7c8e13d65b084d0",
+        "agree_block": 692,
+        "agree_mempool": 692
+      },
+      {
+        "corpus": "bytes",
+        "entries": 512,
+        "go_sdk_objects": 1024,
+        "go_sdk_before_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+        "go_sdk_after_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "133694be38bd951cddcd4e3e944e18a99862c21f5aa309f31a166045dc8db495",
+        "stored_sha256": "133694be38bd951cddcd4e3e944e18a99862c21f5aa309f31a166045dc8db495",
+        "agree_block": 512,
+        "agree_mempool": 512
+      },
+      {
+        "corpus": "cpp-bn_op",
+        "entries": 170,
+        "go_sdk_objects": 340,
+        "go_sdk_before_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+        "go_sdk_after_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "d77769ce8d862f2a9093fd56b0e81efc00d1ac52a4a56d7edb1f1a2b13c335cd",
+        "stored_sha256": "d77769ce8d862f2a9093fd56b0e81efc00d1ac52a4a56d7edb1f1a2b13c335cd",
+        "agree_block": 75,
+        "agree_mempool": 170
+      },
+      {
+        "corpus": "cpp-lrshiftnum",
+        "entries": 36,
+        "go_sdk_objects": 72,
+        "go_sdk_before_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+        "go_sdk_after_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "ca0028c80fe0643b997146340a50b897bf8b2661edfb4688a54c849a6b009c82",
+        "stored_sha256": "ca0028c80fe0643b997146340a50b897bf8b2661edfb4688a54c849a6b009c82",
+        "agree_block": 13,
+        "agree_mempool": 32
+      },
+      {
+        "corpus": "cpp-multisig",
+        "entries": 30,
+        "go_sdk_objects": 60,
+        "go_sdk_before_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+        "go_sdk_after_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "673ef7b6d4eb93a22a40ec77879d65f9cfe064fda4e13292df04852629afa8ed",
+        "stored_sha256": "673ef7b6d4eb93a22a40ec77879d65f9cfe064fda4e13292df04852629afa8ed",
+        "agree_block": 24,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-opcode",
+        "entries": 144324,
+        "go_sdk_objects": 288648,
+        "go_sdk_before_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+        "go_sdk_after_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "d8a20045482e63a842ff99095f3388f01eecc746446e4999d0efd26f795bb775",
+        "stored_sha256": "94a212649e510a7c899a7a49dff2d47078d184bbd4c32737dcf980296c696a81",
+        "agree_block": 67061,
+        "agree_mempool": 123
+      },
+      {
+        "corpus": "cpp-script",
+        "entries": 67991,
+        "go_sdk_objects": 135982,
+        "go_sdk_before_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+        "go_sdk_after_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "379698be9aed7a7e1b9d753ee5d2a08b66198d6de151a6e64f446890993f485a",
+        "stored_sha256": "aa7a17d1169bf489c974d397e0f681333831b7445693f12bb48fcae3a78746e5",
+        "agree_block": 357,
+        "agree_mempool": 134
+      },
+      {
+        "corpus": "cpp-script_P2SH",
+        "entries": 64,
+        "go_sdk_objects": 128,
+        "go_sdk_before_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+        "go_sdk_after_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "93bd7a3f48d85f8356781e693e1b5b20df3cf0cedc0177e113c9b706f18c07e0",
+        "stored_sha256": "93bd7a3f48d85f8356781e693e1b5b20df3cf0cedc0177e113c9b706f18c07e0",
+        "agree_block": 56,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-sigopcount",
+        "entries": 6,
+        "go_sdk_objects": 12,
+        "go_sdk_before_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+        "go_sdk_after_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "a7e15069dbe70d1d9232fe39dfd8a18b5357a17923c83c0d4d41de7e081e1f8a",
+        "stored_sha256": "a7e15069dbe70d1d9232fe39dfd8a18b5357a17923c83c0d4d41de7e081e1f8a",
+        "agree_block": 6,
+        "agree_mempool": 2
+      },
+      {
+        "corpus": "cpp-transaction",
+        "entries": 167,
+        "go_sdk_objects": 334,
+        "go_sdk_before_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+        "go_sdk_after_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "232f68cd968475f2b68cfc549452c0a3f9be3cf6764b12d5e95571ecc936fa27",
+        "stored_sha256": "232f68cd968475f2b68cfc549452c0a3f9be3cf6764b12d5e95571ecc936fa27",
+        "agree_block": 108,
+        "agree_mempool": 66
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g1-c1",
+        "entries": 1024,
+        "go_sdk_objects": 2048,
+        "go_sdk_before_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+        "go_sdk_after_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "192ecb2bf5fbacf9e6d4ba364a5f4d6f8fe370111558405755b7915e49edaa1f",
+        "stored_sha256": "192ecb2bf5fbacf9e6d4ba364a5f4d6f8fe370111558405755b7915e49edaa1f",
+        "agree_block": 1024,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g1-c102",
+        "entries": 2048,
+        "go_sdk_objects": 4096,
+        "go_sdk_before_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+        "go_sdk_after_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "ddfa50c99fd29974287f0e25e5a3f0e2abace23529fd4060bb808d1d92da27c4",
+        "stored_sha256": "263e7ce3f28f784e3cda1484b24c446a77e29ea5d79f508c808756014bdcbf52",
+        "agree_block": 2048,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g102-c102",
+        "entries": 4097,
+        "go_sdk_objects": 8194,
+        "go_sdk_before_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+        "go_sdk_after_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "419d36b40fc0d48e00f907e646af795a4d97a4ab506c16c761bf192199659bc6",
+        "stored_sha256": "4cfe7e3cea05a10e7ed78b0f7bc30a0e38d9e2ff9ef344083d61b7d1bacb82c3",
+        "agree_block": 2049,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g1-c1",
+        "entries": 4096,
+        "go_sdk_objects": 8192,
+        "go_sdk_before_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+        "go_sdk_after_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "2b34139e52ab3dabec663e6752a7804040efd49dee2b60da17babd3f3a3611ea",
+        "stored_sha256": "89faa2649d6e40b19cfbc3d763960b53b610af0946a47160c843da66571c7482",
+        "agree_block": 4096,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g1-c103",
+        "entries": 8192,
+        "go_sdk_objects": 16384,
+        "go_sdk_before_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+        "go_sdk_after_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "49cf0a53ccc4d6b898c3a2f3756bee914c3984ed33919be8e67533f2d074a1a2",
+        "stored_sha256": "8af1ce6a25718f4c213206208bfa0f11b555065fdeb5b571f1e36d394358f9df",
+        "agree_block": 8192,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g102-c1",
+        "entries": 3,
+        "go_sdk_objects": 6,
+        "go_sdk_before_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+        "go_sdk_after_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "76015de1aaa0ddf2b850e7ef99948293c4a1b26bb534fcc31cbaa3432e1fd831",
+        "stored_sha256": "76015de1aaa0ddf2b850e7ef99948293c4a1b26bb534fcc31cbaa3432e1fd831",
+        "agree_block": 1,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g103-c103",
+        "entries": 16384,
+        "go_sdk_objects": 32768,
+        "go_sdk_before_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+        "go_sdk_after_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "1286e353c04795380469d31d4fd0b307424c5e43be90e9507f206e6633aae292",
+        "stored_sha256": "e1a7338bd3f2d6d997be143272c79a6e3c54b88767fd99c40ac8f17ce0e5a52a",
+        "agree_block": 10240,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "crypto",
+        "entries": 84,
+        "go_sdk_objects": 168,
+        "go_sdk_before_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+        "go_sdk_after_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "826fd2813c0d4da7ad5ff02b570bfd262ff45eaee88e67b78dedd14c54c9506b",
+        "stored_sha256": "826fd2813c0d4da7ad5ff02b570bfd262ff45eaee88e67b78dedd14c54c9506b",
+        "agree_block": 84,
+        "agree_mempool": 84
+      },
+      {
+        "corpus": "eras",
+        "entries": 74,
+        "go_sdk_objects": 148,
+        "go_sdk_before_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+        "go_sdk_after_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "a609d6aba121c24a3f1c0b913c542ab6ca0c754c198baf88bfbe495a4572372f",
+        "stored_sha256": "a609d6aba121c24a3f1c0b913c542ab6ca0c754c198baf88bfbe495a4572372f",
+        "agree_block": 32,
+        "agree_mempool": 32
+      },
+      {
+        "corpus": "flow",
+        "entries": 1094,
+        "go_sdk_objects": 2188,
+        "go_sdk_before_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+        "go_sdk_after_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "5cf56c918997345fdda6d8bca88dd63fbf718f3ecb7686bc99b8048f42940bce",
+        "stored_sha256": "5cf56c918997345fdda6d8bca88dd63fbf718f3ecb7686bc99b8048f42940bce",
+        "agree_block": 1094,
+        "agree_mempool": 1094
+      },
+      {
+        "corpus": "gen",
+        "entries": 1157,
+        "go_sdk_objects": 2314,
+        "go_sdk_before_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+        "go_sdk_after_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "80b07e486525434ccac584ccdd636b65f7fa6500ecc26887333579f9957fc5bb",
+        "stored_sha256": "80b07e486525434ccac584ccdd636b65f7fa6500ecc26887333579f9957fc5bb",
+        "agree_block": 1152,
+        "agree_mempool": 1152
+      },
+      {
+        "corpus": "million",
+        "entries": 4,
+        "go_sdk_objects": 8,
+        "go_sdk_before_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+        "go_sdk_after_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "cbeb5b1d379b5691d2c98c3252d3175b3d751bb0fa234ba26909627b72bed549",
+        "stored_sha256": "cbeb5b1d379b5691d2c98c3252d3175b3d751bb0fa234ba26909627b72bed549",
+        "agree_block": 0,
+        "agree_mempool": 4
+      },
+      {
+        "corpus": "road",
+        "entries": 13512,
+        "go_sdk_objects": 27024,
+        "go_sdk_before_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+        "go_sdk_after_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "3d7ee4a96a454431501b25ee1043cb07a077494338264c9658d3f72766390ee0",
+        "stored_sha256": "3d7ee4a96a454431501b25ee1043cb07a077494338264c9658d3f72766390ee0",
+        "agree_block": 13512,
+        "agree_mempool": 13512
+      },
+      {
+        "corpus": "stack",
+        "entries": 262,
+        "go_sdk_objects": 524,
+        "go_sdk_before_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+        "go_sdk_after_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "302a6218721345d379f585a937d7ec5c0f488b9e72a4abc4cf78a51dcb07e4f8",
+        "stored_sha256": "302a6218721345d379f585a937d7ec5c0f488b9e72a4abc4cf78a51dcb07e4f8",
+        "agree_block": 262,
+        "agree_mempool": 262
+      },
+      {
+        "corpus": "tx",
+        "entries": 40,
+        "go_sdk_objects": 80,
+        "go_sdk_before_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+        "go_sdk_after_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "e5a82d8c54694c06c1748a8b879259cad13ad7b5597ffa32f0279be90bbb569d",
+        "stored_sha256": "e5a82d8c54694c06c1748a8b879259cad13ad7b5597ffa32f0279be90bbb569d",
+        "agree_block": 14,
+        "agree_mempool": 14
+      }
+    ],
+    "class_rows_moved": 0,
+    "unexplained": 0,
+    "protected_files_unchanged": 81,
+    "vectors_identical": 4,
+    "tracked_lean_unchanged": true
+  },
+  "checked_harness_files": {
+    "Makefile": "9286f319bae3e3bacffe6b20a4829b07d1157791bd8af605b7251205457017f1",
+    "harness/Cargo.lock": "d47bc1e19e22249990fbf52708f38420d3af89d684c27990c88a32ef356255b2",
+    "harness/Cargo.toml": "42448a836943b39bde94f0a6d7738299c7b763637fb73fdd7a024d4622a0b245",
+    "harness/rules/bsv-rs.json": "52715d6d5edde87488cdb9003d1e2f8dff6c2a670c70bf19c2916577a2b599a2",
+    "harness/rules/go-sdk.json": "00477d18b594e435aad334f78d6f010b6f763b6d90acb7712690709cb7987dbc",
+    "harness/rules/gobdk.json": "3433979f5c55ca967ac84b8bb6223c2a196babe01275fa413f99e88b26363c8e",
+    "harness/rules/sv-node.json": "bd30ab75c33cb5712d8f5c07085918bdd18b085c93d38d3ae5825012fe98b380",
+    "harness/rules/ts-sdk.json": "b69f8ab2e404c3dbc5a8afb9b00c339dff1ce12b28306b5b84a09911e3282a95",
+    "harness/rust-toolchain.toml": "9f80dcfe209d88ca8160da5d6df049498f71eee00a05100e8bf38a59fb6caece",
+    "harness/src/bin/arith_cases.rs": "d23275f0977c2f044323cb17b35d6ffaed85ed4de07e45a4fcea16528b52cd25",
+    "harness/src/bin/arith_vectors.rs": "78a80b870da798ae84f2a99205bbc68efccaf98298c09fd44ed9da2e5f1cbd18",
+    "harness/src/bin/bytes_cases.rs": "d3d387037b9c706cae905dd1234e8d612524690ad6f782940646f03774e141b5",
+    "harness/src/bin/crypto_cases.rs": "8c917975f09c1f2f8b5aeed39dcc071016f1997de8ded3d58b12a9c850fa67fb",
+    "harness/src/bin/ecdsa_vectors.rs": "31ca01af804e4b06ecbe520b4e27c141895e74dac970386d62d20310e210a3f8",
+    "harness/src/bin/flow_cases.rs": "8f6d4e18cbd7458c61c5114a9e192f2bfb56f070e32bce46622a520296b11690",
+    "harness/src/bin/gen.rs": "ad5cd90a96715996e43520dfbd3088fc04986b8909af8ec6ab7fab8dbb271c5c",
+    "harness/src/bin/num_vectors.rs": "27d3d2b10d87e651245fda3e28f4af68f94c55db0f175b2db8eb6e32056eda6f",
+    "harness/src/bin/oracle_chain.rs": "183b1b64a46bdef1b3dfc56e15cfb600d4d5d19e54b599c152f87c85160942bb",
+    "harness/src/bin/policy_witnesses.rs": "c6d76acbbdac7a092070731519341780b170ce1a09b6adf315731677d4df77b3",
+    "harness/src/bin/rules_check.rs": "635bad911dc82b86f02af12baaba1f3b656b25cdb229df349bdda4da4a2c5218",
+    "harness/src/bin/run_bsvrs.rs": "bc5ae7712f57d5766428f72bb658cba71c93f593e9f77a100de992f9e7f91276",
+    "harness/src/bin/run_diff.rs": "8e95a83bdae566e9a335ea29f9c9a639933e95babc8fe971b9df19e9bcde29c6",
+    "harness/src/bin/run_engine.rs": "be4a908d1b376575f0006c2ff8c0f87b8350d8b61a7449c0036d54944d0f9623",
+    "harness/src/bin/run_svnode.rs": "20a8ba952a48a5a8f740d3d2a16607be6ccbb3e6f456a498ff5b062ab5207746",
+    "harness/src/bin/run_teranode.rs": "154462f0bf36bd02399e74a253bde3eba86c50c340e77b9f07eb5670edc666b9",
+    "harness/src/bin/seed_gen.rs": "f9b4b61fc506a5e03d42be79c280b5386719aa9083d5de16b99f3e8f6bf03ee2",
+    "harness/src/bin/sighash_vectors.rs": "69d209d661748f52ce61c6a24a202a81c8d5681108bb8c286fae3fe396cb9c1e",
+    "harness/src/bin/sighash_verify.rs": "c7b35e5bd488f522dfb9a525c6d9cb1a0aa36c87f1d048145f29357836641897",
+    "harness/src/bin/spec_recorded.rs": "2eafb71cbc98aea38c0a188616a7450bbf7c6946d0f1bc9eddcc431053e8c60e",
+    "harness/src/bin/stack_cases.rs": "ab32690df5db9b8b1aee1f04ec0c79cebeb775860c0b3a6e7688683bfca35471",
+    "harness/src/block.rs": "4d23c8585e43bacc72fd174a0dbf17ceea603ad084278aa22225ef878d40f57c",
+    "harness/src/bsvrs_codes.rs": "2c5e005e1f3a4132f54f1f04410bc4e9d60ebaf81aaad36ee1c43831e5cdc008",
+    "harness/src/corpus.rs": "0804f10c42525496e57fc77c16bb56a65d96009b477947bc8859e59db6166b97",
+    "harness/src/differential.rs": "5dec23cdfe4efb7be576f4039f865e4dc9b9787410c5a7cc8fd4a22ae0bb6be3",
+    "harness/src/engine.rs": "5f1f0d78c0bbdb059850c79dd70674d0994df2574cb2ffc7ded05d66b38cdc61",
+    "harness/src/engines.rs": "8002a8e1eb29b7e246e990e28297d267481ad1f79d91f7583db021277aee0233",
+    "harness/src/flags_oracle.rs": "e75c544b5d7634442b5325cc850abd1f63f40f838fca4f241391fbdb76475d62",
+    "harness/src/gen.rs": "33429373b11f7ea2ac4e2332e703bdac9162926db2409ba389c9ff86583f3b90",
+    "harness/src/gosdk_codes.rs": "e8d4b5734ff323b7f6571baa53d5875c2161d5c677022f97a7564da987c9c2ac",
+    "harness/src/lib.rs": "088805c878a855276b385488cbfea082a1f6f779662b6f86d052cf985aae81f9",
+    "harness/src/rpc.rs": "740acac4f05c10518672b576f6269ee74ff6dc281048c0fe10c30c75107035ea",
+    "harness/src/rules.rs": "8d0b9a64eb4bd50be79eec17a036ce7ac7f379576cf9f71af7ec178487474fca",
+    "harness/src/stamp.rs": "332343316832f33e6c50a0a725c89af68fde5ede1f7a14dc32b0f7379c731b13",
+    "harness/src/svnode_codes.rs": "9d7d6bd6f630ba47176b023dc34907b8f859ba2c6640ab502fc40e304f2adf57",
+    "harness/src/tssdk_codes.rs": "3f400153c27c59914a1c32a04bd03c59dfcd5376ffd1c5209a1c9f7813b57db4",
+    "harness/src/txraw.rs": "06ceccf7cb9e92ce5448913b9ef7f3895d0798de92f5ee184a75cdbb6d32bb2b",
+    "harness/src/txroad.rs": "ba99fbddd9700131c8200be884c0cffb06095c4cf7324f61d47b3c222a9c4c39",
+    "harness/tests/crate_pins.rs": "333d1799feadd87a01f567ac7286ac817a081fb91d70f952e3cc8130731c1f12",
+    "harness/tests/recorded_inputs.rs": "54a5c0e6e02da96fc8e41cc7c8bd04e3db3ab2bb3a540eb416ccbdaafdf9a716",
+    "harness/tests/stamp_gate.rs": "3dcbe981d18d10314f9a5701928d6752555319d2469c28d14a5cc2ff660f0f9a",
+    "tools/check.sh": "60802b2eaa7df7035ef3f8201c01ba438755e6def0a00d94e24a4f3fa47118da"
+  },
+  "completed_at": "2026-10-12T02:29:50.018064+00:00",
+  "api_migration_required": true,
+  "migration": "SpendParams.work_limit = None",
+  "status": "done",
+  "report": {
+    "class_rows": 71,
+    "witnesses": 71,
+    "unexplained": 0,
+    "source_commit": "c149746"
+  },
+  "tested_source_commit": "c1497467e05edb0ce2474af5fb6e44952befc126",
+  "commits": [
+    {
+      "sha": "c1497467e05edb0ce2474af5fb6e44952befc126",
+      "subject": "Measure bsv-rs 0.4.5 engine column (S3, lane bump-045, GPT-6, [M] 20261012-022822Z)",
+      "pushed_to": "refs/heads/lane/bump-045"
+    }
+  ],
+  "committed_files_match_checked_bytes": 82
+}

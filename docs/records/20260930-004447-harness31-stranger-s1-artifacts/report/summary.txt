@@ -1,0 +1,4 @@
+harness/run 2026-09-30 00:44:58 UTC: --impl bsv-rs --spec recorded
+the tree: e39ba46
+GREEN seed: (every divergence explained by a rule with its citation)
+harness/run: 1 GREEN, 0 RED, 0 skipped; the report in /private/tmp/codex-s1-c56/report (summary.txt)

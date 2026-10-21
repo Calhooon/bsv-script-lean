@@ -1,0 +1,696 @@
+{
+  "base_commit": "d71c05408ccfec50469b8f0a2d7ba71d6e81303b",
+  "calls": 1653,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 22,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 22,
+      "no-verdict": 2,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 24,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [],
+    "finality": [],
+    "mempool": [],
+    "oracle": [],
+    "utxo": [
+      {
+        "id": "availability/missing",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000909875,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "availability/spent",
+        "label": "[X]",
+        "observed": {
+          "durability": "withdrawn",
+          "height": 1353,
+          "send": true,
+          "status": "rejected",
+          "wire": "withdrawn"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "availability/precedes-frozen",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-missingorspent\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "coinbase/depth-99",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000930292,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-premature-spend-of-coinbase\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "coinbase/depth-100",
+        "label": "[X]",
+        "observed": {
+          "height": 1553,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "coinbase/depth-101",
+        "label": "[X]",
+        "observed": {
+          "height": 1655,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "frozen/block",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-frozen\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "value/input-0",
+        "label": "[X]",
+        "observed": {
+          "height": 1658,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":0,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "value/input-1",
+        "label": "[X]",
+        "observed": {
+          "height": 1660,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "value/below-output",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.00106,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/output-2100000000000001",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000613125,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-toolarge\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/output-18446744073709551615",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000982625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-negative\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "structure/duplicate-input",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.00100325,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-inputs-duplicate\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/zero",
+        "label": "[X]",
+        "observed": {
+          "height": 1666,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":0,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/one",
+        "label": "[X]",
+        "observed": {
+          "height": 1668,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":0,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/below-out",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000602667,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-in-belowout\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "fee-stage/subtract",
+        "label": "[X]",
+        "observed": {
+          "height": 1671,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":100,\"script\":\"51\"},\"fee\":23,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/true",
+        "label": "[X]",
+        "observed": {
+          "height": 1673,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/false",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000936666,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/number-equal",
+        "label": "[X]",
+        "observed": {
+          "height": 1676,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/number-unequal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000569625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: rejected blk-bad-inputs (detail not surfaced by submitblock: src/validation.cpp:3690-3715) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/return-coin-height-10",
+        "label": "[X]",
+        "observed": {
+          "height": 1679,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/return-coin-height-20",
+        "label": "[X]",
+        "observed": {
+          "height": 1681,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "scripts/resource-selector-True",
+        "label": "[X]",
+        "observed": {
+          "height": 1683,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"created\":{\"coinbase\":false,\"satoshis\":9,\"script\":\"51\"},\"fee\":1,\"removed\":true,\"restored\":true,\"spent\":true,\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "full_receipt": {
+    "bytes": 4167996,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-173407Z/receipt.json",
+    "sha256": "67e3e45fa5a827eebfa20682b23311622e7a4f6d1b1edbe6f194542020cea3b2"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "7348efc3f1cef9cf7c3e8f9af72622521a6be1d292a41aaa1de627e6ebb23071",
+      "height": 1683
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261015-173407-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 10,
+    "ends": 10,
+    "events": 620,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "availability/missing",
+        "verdict": "agree"
+      },
+      {
+        "row": "availability/spent",
+        "verdict": "agree"
+      },
+      {
+        "row": "availability/precedes-frozen",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "coinbase/depth-99",
+        "verdict": "agree"
+      },
+      {
+        "row": "coinbase/depth-100",
+        "verdict": "agree"
+      },
+      {
+        "row": "coinbase/depth-101",
+        "verdict": "agree"
+      },
+      {
+        "row": "frozen/block",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "value/input-0",
+        "verdict": "agree"
+      },
+      {
+        "row": "value/input-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "value/below-output",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/output-2100000000000001",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/output-18446744073709551615",
+        "verdict": "agree"
+      },
+      {
+        "row": "structure/duplicate-input",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/zero",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/one",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/below-out",
+        "verdict": "agree"
+      },
+      {
+        "row": "fee-stage/subtract",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/true",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/false",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/number-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/number-unequal",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/return-coin-height-10",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/return-coin-height-20",
+        "verdict": "agree"
+      },
+      {
+        "row": "scripts/resource-selector-True",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "availability/missing",
+    "availability/precedes-frozen",
+    "availability/spent",
+    "coinbase/depth-100",
+    "coinbase/depth-101",
+    "coinbase/depth-99",
+    "fee-stage/below-out",
+    "fee-stage/one",
+    "fee-stage/subtract",
+    "fee-stage/zero",
+    "frozen/block",
+    "scripts/false",
+    "scripts/number-equal",
+    "scripts/number-unequal",
+    "scripts/resource-selector-True",
+    "scripts/return-coin-height-10",
+    "scripts/return-coin-height-20",
+    "scripts/true",
+    "structure/duplicate-input",
+    "structure/output-18446744073709551615",
+    "structure/output-2100000000000001",
+    "value/below-output",
+    "value/input-0",
+    "value/input-1"
+  ],
+  "run_id": "cut2-66q5-20261015-173407",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-15T17:34:07Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 22,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 22,
+    "no-verdict": 2,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 238.4851805
+  }
+}

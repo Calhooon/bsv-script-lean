@@ -1,0 +1,73 @@
+bsv-script-lean
+Copyright (c) 2026 John Calhoun
+
+This repository carries two licenses, by path. The owner's ruling of 2026-10-05
+treats the specification as derived from its reference, bitcoin-sv v1.2.3 at
+commit 6504a3aff65ba97c0f6c80962b033e35ecbfed4b (docs/PROVENANCE.md section 1;
+the pin moved there from v1.2.2 at 879fc8b on 2026-10-06, as that section
+records), whose own license is the Open BSV License Version 5 (the file
+LICENSE at that commit).
+
+1. Under the Open BSV License Version 5 (the file LICENSE), as material derived
+   from the bitcoin-sv reference at the pinned commit (6504a3a; 879fc8b before
+   2026-10-06):
+
+     lean/                 the Lean semantics, its properties and its tests
+     eval/                 the evaluator built from the Lean semantics
+     spec/                 the specification document generated from lean/
+     corpus/               the corpora, the reference's own vectors, the witnesses
+     docs/DESIGN.md        the pages that transcribe the reference
+     docs/PARAMETERS.md
+     docs/PROVENANCE.md
+     docs/records/         the records
+     docs/audit/
+
+   and every path not named in part 2.
+
+   The notice the license's condition 1 asks for, for this material:
+
+     © BSV Association,
+
+   The license's condition of use, in its own words:
+
+     "2 - The Software, and any software that is derived from the Software or
+     parts thereof, must only be used on the BSV Blockchains."
+
+   "BSV Blockchains" is defined in LICENSE.
+
+2. Under the Apache License, Version 2.0 (the file LICENSE-APACHE), as the
+   separable tooling:
+
+     tools/                the checks, the generators, the export
+     harness/              the conformance harness (its vendored files of
+                           part 3 included, except the parts copied from a
+                           third party, which keep their source's license)
+     Makefile
+
+3. Files carrying their own provenance header. A file whose header reads
+   "VENDORED" or "Transcribed from" names, in that header, where its pattern or
+   text came from and when, and that header is its notice. The header changes
+   no license: a vendored tooling file stays under part 2 (Apache-2.0) and a
+   transcribed Lean file under part 1. The one exception is a part copied
+   from a third party, which keeps its source's license; the list names it.
+   At this commit:
+
+     harness/src/engine.rs                   VENDORED (a pattern, mechanism-free); part 2
+     harness/src/gen.rs                      VENDORED (a pattern, mechanism-free); part 2
+     tools/mini_lock.sh                      VENDORED (a pattern, mechanism-free); part 2
+     harness/engines/go/fixtures/main.go     copied from go-sdk v1.7.2
+         (2ca481c5): the function from line 91 (VENDORED) and the types,
+         tables and loading steps its header and its comments at lines 49,
+         67, 78, 368 and 384 cite; those parts stay under go-sdk's license,
+         the Open BSV License Version 5
+     lean/BsvScript/Hash/Ripemd160.lean      Transcribed from the reference; part 1
+
+   The eight files under corpus/reference/ and corpus/sighash/ named
+   bitcoin-sv-v1.2.2-*.json and bitcoin-sv-v1.2.3-*.json are the reference's own
+   test vectors, each copied at the pin its name carries (879fc8b, then
+   6504a3a), and stay under the reference's license as part 1 says.
+
+   docs/img/cover.jpg is a generated image (Google's Nano Banana 2.1 model,
+   2026-10-21, the prompt in docs/img/README.md), chosen by the maintainers as
+   the cover; it is decoration, contains no third-party material, and the
+   maintainers make no claim on it beyond part 1's default for docs/.

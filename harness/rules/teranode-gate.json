@@ -1,0 +1,104 @@
+{
+  "_header": [
+    "harness/rules/teranode-gate.json: the data of #95's per-release gate (tools/teranode_gate.py, `make teranode-gate`), S3, lane gate-95, [D] 2026-10-17.",
+    "`scenario_rows` indexes every row of the scenario column (#66, the six families of harness/src/scenarios/) to one row of #88's obligation list (corpus/teranode/obligations.json, the 54 ids of #87's map): per family an ordered list of rules, a rule matching a row by `id_in` (exact ids) or `prefix`; a row takes the earliest rule that matches it, and a family's last rule is its default. The index is the lane's reading of each row's subject [D], never a ruling: it says which obligation a measured verdict bears on, and the gate refuses a row no rule matches.",
+    "`class_divergence` names, per class of harness/rules/second-oracle-scenarios.json, the divergence of the obligation list (its `divergences[].id`) the class is the same difference as; an empty map means no scenario class is yet identified with a ruled divergence, so every scenario divergence is reported `open` (CLAUDE.md rule 15: the owner rules, the report cites).",
+    "`rulings` names, per divergence id of the obligation list, where its ruling stands (the decisions log entry or the card); the gate quotes it and never writes one. `ledger_ruling` and `scenario_ruling` name the same for the absence ledger's rows and the scenario column's classes."
+  ],
+  "scenario_rows": {
+    "block": [
+      {"id_in": ["header/time-at-median", "header/time-above-median"], "row": "median-time-past"},
+      {"id_in": ["header/difficulty-before-time"], "row": "difficulty"},
+      {"prefix": "header/", "row": "header-context"},
+      {"prefix": "pow/", "row": "header-pow"},
+      {"prefix": "compact/", "row": "header-pow"},
+      {"prefix": "next/", "row": "difficulty"},
+      {"prefix": "subsidy/", "row": "coinbase-amount"},
+      {"prefix": "reward/", "row": "coinbase-amount"},
+      {"prefix": "context/bip34-", "row": "coinbase-height"},
+      {"prefix": "context/height-push-", "row": "coinbase-height"},
+      {"prefix": "context/size-", "row": "block-size"},
+      {"prefix": "context/launchable-", "row": "block-size"},
+      {"prefix": "block/launchable-", "row": "block-size"},
+      {"prefix": "block/size-", "row": "block-size"},
+      {"prefix": "context/", "row": "finality"},
+      {"prefix": "ttor/", "row": "block-order"},
+      {"prefix": "", "row": "block-check"}
+    ],
+    "finality": [
+      {"prefix": "finality/", "row": "finality"},
+      {"prefix": "median/", "row": "median-time-past"},
+      {"prefix": "sequence/", "row": "sequence-locks"},
+      {"prefix": "block/csv-", "row": "sequence-locks"},
+      {"prefix": "block/before-csv-", "row": "sequence-locks"},
+      {"prefix": "block/absent-csv-", "row": "sequence-locks"},
+      {"id_in": ["block/no-parent-zero-lock", "block/configured-span", "block/postgenesis-still-rejected"], "row": "sequence-locks"},
+      {"prefix": "tip/flags-", "row": "tx-gate"},
+      {"prefix": "flags/", "row": "tx-gate"},
+      {"prefix": "fee/", "row": "tx-gate"},
+      {"prefix": "expiry/", "row": "unmined-lifetime"},
+      {"prefix": "mempool/signed-mtp-", "row": "finality"},
+      {"prefix": "mempool/", "row": "non-final-hold"},
+      {"prefix": "", "row": "finality"}
+    ],
+    "utxo": [
+      {"prefix": "availability/", "row": "utxo-spend"},
+      {"prefix": "outputs/", "row": "utxo-spend"},
+      {"prefix": "coinbase-add/", "row": "bip30"},
+      {"prefix": "overwrite/", "row": "bip30"},
+      {"prefix": "coinbase/", "row": "coinbase-maturity"},
+      {"prefix": "confiscation", "row": "freeze-confiscation"},
+      {"prefix": "frozen/", "row": "freeze-confiscation"},
+      {"prefix": "scripts/", "row": "script-verdict"},
+      {"prefix": "", "row": "tx-gate"}
+    ],
+    "chain": [
+      {"prefix": "chain-soft-", "row": "soft-freeze"},
+      {"prefix": "chain-invalid", "row": "invalidation"},
+      {"prefix": "chain-precious", "row": "invalidation"},
+      {"prefix": "chain-reorg-", "row": "reorg"},
+      {"prefix": "chain-disconnect", "row": "reorg"},
+      {"prefix": "chain-partial-disconnect-", "row": "reorg"},
+      {"prefix": "chain-undo-", "row": "reorg"},
+      {"prefix": "chain-retained-", "row": "reorg"},
+      {"prefix": "chain-era-clear-", "row": "reorg"},
+      {"prefix": "chain-coinbase-overwrite-", "row": "reorg"},
+      {"prefix": "chain-equal-work-", "row": "chain-selection"},
+      {"prefix": "chain-unrequested-", "row": "chain-selection"},
+      {"id_in": ["chain-parent-tip", "chain-missing-body-ancestry"], "row": "chain-selection"},
+      {"prefix": "", "row": "block-connect"}
+    ],
+    "mempool": [
+      {"prefix": "orphan-", "row": "orphans"},
+      {"prefix": "nonfinal-", "row": "non-final-hold"},
+      {"prefix": "held-", "row": "non-final-hold"},
+      {"prefix": "promotion-", "row": "non-final-hold"},
+      {"prefix": "trim-", "row": "pool-size"},
+      {"prefix": "limit-", "row": "pool-size"},
+      {"prefix": "rolling-", "row": "pool-size"},
+      {"prefix": "ancestor-", "row": "pool-size"},
+      {"prefix": "expiry-", "row": "unmined-lifetime"},
+      {"prefix": "reject-", "row": "reject-filter"},
+      {"prefix": "rejects-", "row": "reject-filter"},
+      {"prefix": "", "row": "tx-receive"}
+    ],
+    "oracle": [
+      {"prefix": "", "row": "observation-rpc"}
+    ]
+  },
+  "class_divergence": {},
+  "rulings": {
+    "soft-freeze-hold-lapse": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): the chain-split row, issue #153",
+    "alert-invalidate": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): a design row, issue #154",
+    "alert-ban": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): a design row, issue #154",
+    "reconsider-descendant": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z9, `93: finding`): a design row, issue #155",
+    "tips-listing": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z9, `93: finding`): a design row, issue #155",
+    "alert-reassign": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, the same entry: classified design by lane close-88 under card Z8's framing rule, the class the owner's to confirm at #88's close",
+    "unmined-expiry": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, the same entry: classified design by lane close-88 under card Z8's framing rule, the class the owner's to confirm at #88's close",
+    "pool-eviction": "the absence ledger's `tl.pool-size`, ruled `gap` by the owner's rule of 2026-10-15 (card W2; `ruling_rule` in corpus/teranode/absences.json)",
+    "premature-block-parked": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, #92's premature-block row ruled 2026-10-17 23:5xZ (card Z10, `92: design`): a design row, the hold policy, the maturity rule consensus"
+  },
+  "ledger_ruling": "corpus/teranode/absences.json, each row's `ruling.owner`: the owner's rule of 2026-10-15 (card W2, `ruling_rule`)",
+  "scenario_ruling": "harness/rules/second-oracle-scenarios.json, the class's `ruling` (the owner's under CLAUDE.md rule 15)",
+  "open_ruling": {}
+}

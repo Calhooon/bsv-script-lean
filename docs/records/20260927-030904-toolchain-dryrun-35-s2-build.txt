@@ -1,0 +1,253 @@
+✔ [4779/4903] Built BsvScript.Params (4.4s)
+✔ [8923/8956] Built BsvScript.Opcodes (2.1s)
+✔ [8924/8956] Built Test.OpNames (1.5s)
+✔ [8925/8956] Built Mathlib.Probability.Kernel.Invariance (6.1s)
+✔ [8926/8956] Built Mathlib (7.6s)
+⚠ [8927/8956] Built BsvScript.Numbers (13s)
+warning: BsvScript/Numbers.lean:329:33: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:344:18: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:350:18: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:340:68: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BsvScript/Numbers.lean:366:27: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:383:20: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:389:20: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:412:27: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:414:20: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:416:20: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:527:47: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:609:16: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h3, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:615:20: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h1, h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:687:26: This simp argument is unused:
+  hlt
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [signTopRev, hmod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:687:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BsvScript/Numbers.lean:728:60: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:737:25: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:741:25: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:773:22: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:816:28: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:849:25: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:859:25: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:880:25: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Numbers.lean:894:25: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Numbers.lean:963:41: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [decode, List.reverse_append, List.reverse_replicate, List.reverse_reverse, List.reverse_cons,
+    List.reverse_nil, List.nil_append, List.cons_append, List.append_assoc, decodeRev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:988:47: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [deserializeInt64, decode, decodeRev, h8]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:1048:32: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BsvScript/Numbers.lean:1050:19: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: BsvScript/Numbers.lean:1112:36: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BsvScript/Numbers.lean:1114:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: BsvScript/Numbers.lean:1152:5: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BsvScript/Numbers.lean:1162:35: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: BsvScript/Numbers.lean:1164:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+⚠ [8928/8956] Built BsvScript.Crypto.Secp256k1 (24s)
+warning: BsvScript/Crypto/Secp256k1.lean:257:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/Crypto/Secp256k1.lean:263:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [8929/8956] Built BsvScript.Tx (25s)
+warning: BsvScript/Tx.lean:33:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.inputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:35:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.lockTime`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:32:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.version`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:34:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.outputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:118:2: `String.mk` has been deprecated: Use `String.ofList` instead
+✔ [8930/8956] Built BsvScript.Hash.Sha256 (25s)
+⚠ [8931/8956] Built BsvScript.Machine (27s)
+warning: BsvScript/Machine.lean:542:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/Machine.lean:542:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/Machine.lean:543:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Machine.lean:543:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+✔ [8932/8956] Built Bsvs.Corpus (24s)
+✔ [8933/8956] Built BsvScript.Hash.Sha1 (26s)
+✔ [8934/8956] Built BsvScript.Hash.Ripemd160 (26s)
+✔ [8935/8956] Built BsvScript.Ops.Arith (25s)
+⚠ [8936/8956] Built BsvScript.Sighash (28s)
+warning: BsvScript/Sighash.lean:667:18: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Sighash.lean:744:17: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Sighash.lean:749:19: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Sighash.lean:774:17: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Sighash.lean:792:17: `if_false` has been deprecated: Use `ite_false` instead
+✔ [8937/8956] Built BsvScript.Ops.Stack (18s)
+⚠ [8938/8956] Built BsvScript.Ops.Bitwise (18s)
+warning: BsvScript/Ops/Bitwise.lean:126:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [8939/8956] Built BsvScript.TxRules (18s)
+warning: BsvScript/TxRules.lean:276:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:276:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:277:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:277:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:279:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:279:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:280:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:280:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:282:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:282:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:283:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:283:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:305:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:307:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:309:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:311:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:313:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:316:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:335:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:335:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:335:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:344:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:352:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:352:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:365:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:365:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:365:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:425:43: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/TxRules.lean:479:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:479:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:480:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:480:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:487:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:487:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:488:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:488:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:541:43: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/TxRules.lean:559:49: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/TxRules.lean:573:49: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/TxRules.lean:582:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/TxRules.lean:582:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: BsvScript/TxRules.lean:596:39: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/TxRules.lean:605:40: `if_false` has been deprecated: Use `ite_false` instead
+✔ [8940/8956] Built BsvScript.Ops.Expansion (18s)
+✔ [8941/8956] Built BsvScript.Ops.Splice (18s)
+⚠ [8942/8956] Built BsvScript.Ops.Crypto (19s)
+warning: BsvScript/Ops/Crypto.lean:259:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+✔ [8943/8956] Built BsvScript.Eval (15s)
+✔ [8944/8956] Built BsvScript.TxContext (15s)
+✔ [8945/8956] Built BsvScript.Properties.Basic (20s)
+✔ [8946/8956] Built Bsvs.Trace (22s)
+⚠ [8947/8956] Built BsvScript.Properties.Coverage (26s)
+warning: BsvScript/Properties/Coverage.lean:139:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:24: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:35: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:46: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:57: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:68: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:79: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:139:90: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:140:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:140:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:140:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:140:40: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: BsvScript/Properties/Coverage.lean:165:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [8948/8956] Built BsvScript.Properties.VersionGate (16s)
+warning: BsvScript/Properties/VersionGate.lean:229:55: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/VersionGate.lean:264:56: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/VersionGate.lean:264:112: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/VersionGate.lean:277:16: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/VersionGate.lean:327:89: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/VersionGate.lean:327:99: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [8949/8956] Built BsvScript.Flags (19s)
+warning: BsvScript/Flags.lean:607:33: `if_true` has been deprecated: Use `ite_true` instead
+✔ [8950/8956] Built Bsvs.Run (16s)
+⚠ [8951/8956] Built BsvScript.Properties.Eras (20s)
+warning: BsvScript/Properties/Eras.lean:590:49: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:603:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:603:84: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/Eras.lean:616:4: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:616:14: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/Eras.lean:633:4: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:633:14: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/Eras.lean:650:20: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:650:30: `if_true` has been deprecated: Use `ite_true` instead
+warning: BsvScript/Properties/Eras.lean:664:76: `if_false` has been deprecated: Use `ite_false` instead
+warning: BsvScript/Properties/Eras.lean:709:16: `if_true` has been deprecated: Use `ite_true` instead
+✔ [8952/8956] Built Bsvs.SelfTest (12s)
+⚠ [8954/8956] Built BsvScript.Properties.P2SH (13s)
+warning: BsvScript/Properties/P2SH.lean:49:20: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [isP2SH, hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Properties/P2SH.lean:96:19: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8955/8956] Built BsvScript (9.0s)
+Build completed successfully (8956 jobs).
+	Command being timed: "lake build"
+	User time (seconds): 576.43
+	System time (seconds): 137.12
+	Percent of CPU this job got: 312%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:48.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8381268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 0
+	Voluntary context switches: 2960
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

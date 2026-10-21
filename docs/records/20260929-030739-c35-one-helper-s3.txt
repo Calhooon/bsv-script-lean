@@ -1,0 +1,146 @@
+[export: 11 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+(S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE CHANGE, 994d280 (origin/s3-c35): tools/check_box.sh's remote part runs under /bin/zsh -f (the helper is zsh only) and
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  - sets ONE exit trap at the script's level, `trap 'box_leg_release; lean_lock_release' EXIT`, after sourcing both helpers
+    (why one: the section of THE TESTS on zsh's EXIT trap);
+  - takes a Lean slot and, under it alone, shares or fetches the Lean packages and installs the ts-sdk's; gives the slot back
+    while another lane's leg holds the leg lock (a read of the path, never a take) and takes it again once the path is free;
+  - calls box_leg_take at the script's level (the helper's own wait, an hour then RED, covers the race between the read and the
+    take) and box_leg_release at the leg's end, right after make check-local;
+  - retires its own taker (take_leg, release_leg, holder: the spec's second implementation of the protocol, 5f2b3b8 landed as
+    f7ad524) in the same commit.
+AND, 1560b0a (origin/s3-c35), from what the run at 994d280 found (THE TESTS' last section): a box worktree per caller,
+  ~/bsv/worktrees/spec-box-<caller> (the Studio worktree's name without its spec-), the tag check-box:<caller> on the Lean slot and
+  the box leg lock, the worktree re-checked at the caller's commit and clean under both locks, and the Studio side RED when the
+  record's commit line is not the caller's HEAD. The old shared ~/bsv/worktrees/spec-box is left as it was (main's script
+  before this landing still names it); nothing of this change removes it.
+  The Studio's side is otherwise unchanged: the record comes home as <stamp>-make-check-box.txt, and rc 0 counts only with the
+  box's own GREEN (RULES-TREE (28)).
+
+THE TESTS:
+On the box, 2026-09-29 from 01:28 UTC, each in its own `/bin/zsh -f` sourcing the helper as tools/check_box.sh now does, the lock
+path a scratch one (BOX_LEG_LOCK=~/bsv/box-leg.lock.test-s3, removed before and after; the lanes' lock ~/bsv/box-leg.lock never
+touched). The helper's own lines are the ones with a bracketed letter; the rest are the test's.
+
+1. the take, the read-back and the explicit release, under set -u:
+[withheld at export: a sibling tree's line]
+   the holder: tag check-box:S3-test, pid 88018 (this shell 88018)
+   [a] the box leg lock RELEASED by pid 88018 (01:28:05Z)
+   released, the path free
+   (the EXIT trap `box_leg_release` ran again at the shell's exit and printed nothing: a second release is a no-op)
+
+2. the take, then the shell stopped by a signal while it waits (the helper's TRAPTERM, set at the take):
+[withheld at export: a sibling tree's line]
+   the shell then waited in lean_lock_take (both of the box's Lean slots held by two other lanes, from 01:22:16Z and 01:28:42Z);
+   01:30:22Z  TERM to pid 88030
+   01:30:25Z  the scratch lock STILL THERE (tag=check-box:S3-test pid=88030 ...); no Lean slot of the test held
+   01:30:36Z  pid 88030 alive, its foreground child lean_lock_take's `sleep 15`: zsh runs a trapped signal's function when the
+              foreground command returns
+   01:31:27Z  pid 88030 gone; the scratch lock released, the path free; no Lean slot of the test held
+
+3. the take, then exit 0 with no explicit release (the one EXIT trap at the script's level, `box_leg_release; lean_lock_release`):
+[withheld at export: a sibling tree's line]
+   [c] the box leg lock RELEASED by pid 7406 (01:31:45Z)
+   the inner shell exited 0
+   released by the EXIT trap, the path free
+   (no renamed leftover of the scratch path: `ls -d $BOX_LEG_LOCK.*` matched nothing)
+
+WHY ONE TRAP NAMES BOTH (zsh 5.9, the Studio's and the box's; [M] on the Studio, 2026-09-29 01:36 UTC):
+   /bin/zsh -f -c 'trap "echo the trap EXIT ran" EXIT; TRAPEXIT() { echo the TRAPEXIT function ran; }; exit 0'
+     -> the TRAPEXIT function ran
+   /bin/zsh -f -c 'TRAPEXIT() { echo the TRAPEXIT function ran; }; trap "echo the trap EXIT ran" EXIT; exit 0'
+     -> the trap EXIT ran        (and `functions TRAPEXIT` finds it gone)
+   zsh's `trap ... EXIT` and a TRAPEXIT function are ONE trap: the last one set replaces the other. The plan's tools/lean_lock.sh
+   (59ca01f4) defines TRAPEXIT at its top level when sourced under zsh (its line 60), and the helper's usage is `trap
+   box_leg_release EXIT` at the caller's script level (its line 50): a zsh script that sources lean_lock.sh and then sets that trap
+   loses the Lean slot's release at exit, and one that sets the trap and then sources lean_lock.sh loses the leg lock's.
+
+THE COLLISION THE RUN FOUND (the box worktree's reflog, the two records; 2026-09-29):
+   01:25:24Z  S2's make check-box (for b3406bf) checks out b3406bf in ~/bsv/worktrees/spec-box, then waits for a Lean slot
+   01:35:07Z  S3's run (for 994d280) checks out 994d280 in the SAME worktree, then waits for a Lean slot
+   01:53:44Z  S2's make check-local starts, on 994d280 (the Lean lock showed "S3 pid 70540": the tag was S3's for every caller)
+   01:57:22Z  S2's run ends; its record 20260929-015344-make-check-box.txt says "commit: 994d280" (b3406bf plus tools/check_box.sh)
+   01:57:25Z  S3's make check-local starts, on 994d280; its record 20260929-015725-make-check-box.txt says "commit: 994d280"
+   The locks serialized the two make check-local runs (neither ran on a moving tree), but S2's run tested S3's commit. A Finding on
+   #35 (5882258722). The fix, 1560b0a: a box worktree per caller (~/bsv/worktrees/spec-box-<caller>), the tag check-box:<caller>
+   on both locks, the worktree re-checked at the caller's commit and clean under both locks, and the Studio side RED when the
+   record's commit line is not the caller's HEAD. That last check, run alone on three records:
+     record commit 994d280, caller 994d280: RC=0
+     check_box: RED: the record names 994d280, not the caller's HEAD b3406bf: the legs ran another tree  (RC=1: S2's case)
+     check_box: RED: the record names no commit  (RC=1)
+
+THE TRIPWIRE AT 994d280, on the box (make check-box): docs/records/20260929-015725-make-check-box.txt, twenty-one legs GREEN in 227 s, every leg's own
+verdict line present (RULES-TREE (28)), the axiom check 545, a 1-minute load of 10.96 there at its start; it waited 22 min 18 s from its first line to make check-local, 0 s of it in box_leg_take.
+Its own lines (the box's `say`, the helper's among them, and the Lean lock's):
+  check: BOX (the caller's HEAD 994d280, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 01:35:07Z load1 28.06] the toolchains: go1.27.0, node v22.18.0
+  [box 01:35:07Z load1 28.06] the box shell's pid is 28433: to stop this run, kill it on the box (the helper's TERM trap releases the leg lock and the EXIT trap the Lean slot once the current foreground command ends, a minute or two)
+  lean_lock: every slot held (slot1: P9 pid 65109 pgid 65101 at 2026-09-29T01:30:53Z on box;slot2: T9c pid 63166 pgid 63138 at 2026-09-29T01:34:13Z on box;); S3 waits (01:35:07Z)
+  lean_lock: every slot held (slot1: P9 pid 65109 pgid 65101 at 2026-09-29T01:30:53Z on box;slot2: T9c pid 63166 pgid 63138 at 2026-09-29T01:34:13Z on box;); S3 waits (01:40:08Z)
+  lean_lock: every slot held (slot1: P9 pid 65109 pgid 65101 at 2026-09-29T01:30:53Z on box;slot2: T9c pid 63166 pgid 63138 at 2026-09-29T01:34:13Z on box;); S3 waits (01:45:08Z)
+  lean_lock: every slot held (slot1: P9 pid 65109 pgid 65101 at 2026-09-29T01:30:53Z on box;slot2: T9c pid 63166 pgid 63138 at 2026-09-29T01:34:13Z on box;); S3 waits (01:50:09Z)
+  lean_lock: every slot held (slot1: S3 pid 70540 pgid 70540 at 2026-09-29T01:53:44Z on box;slot2: T7 pid 16680 pgid 16670 at 2026-09-29T01:51:09Z on box;); S3 waits (01:55:10Z)
+  lean_lock: slot1 held by a dead pid and no live process group (P9 pid 4002 pgid  at 2026-09-29T01:57:25Z on box): broken
+  lean_lock: S3 took slot1 (01:57:25Z)
+[withheld at export: a sibling tree's line]
+  [box 01:57:25Z load1 10.96] the Lean slot and the box leg lock taken
+  [box 01:57:25Z load1 10.96] make check-local
+  [box 02:01:12Z load1 8.89] the box leg lock RELEASED by pid 28433 (02:01:12Z)
+  [box 02:01:12Z load1 8.89] make check-local rc 0
+  lean_lock: released slot1 (02:01:12Z)
+  the record docs/records/20260929-015725-make-check-box.txt (written by tools/check.sh on the box, brought home unchanged; commit it with the run's page line)
+
+THE TRIPWIRE AT 1560b0a, on the box (make check-box; the caller harness-land's own box worktree, made by this run): docs/records/20260929-025512-make-check-box.txt,
+twenty-one legs GREEN in 646 s, every leg's own verdict line present, the axiom check 545, a 1-minute load of 7.78 there
+at its start; it waited 47 min 5 s from its first line to make check-local, 871 s of it in box_leg_take. Owed by the parent (seen in that run): its Lean slot, re-taken once the leg lock's path read free, stood idle 871 s in `box_leg_take` because another lane took the leg lock between the read and the take; the route should read the path again after the slot is taken and give the slot back if the path is held. Its own lines:
+  check: BOX (the caller's HEAD 1560b0a, for harness-land, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 02:08:07Z load1 8.50] the toolchains: go1.27.0, node v22.18.0
+  [box 02:08:07Z load1 8.50] the box shell's pid is 79403: to stop this run, kill it on the box (the helper's TERM trap releases the leg lock and the EXIT trap the Lean slot once the current foreground command ends, a minute or two)
+  lean_lock: every slot held (slot1: S1 pid 54883 pgid 54883 at 2026-09-29T02:05:41Z on box;slot2: T9b pid 17905 pgid 17892 at 2026-09-29T02:07:48Z on box;); check-box:harness-land waits (02:08:07Z)
+  lean_lock: every slot held (slot1: S1 pid 54883 pgid 54883 at 2026-09-29T02:05:41Z on box;slot2: T10 pid 82995 pgid 82631 at 2026-09-29T02:12:46Z on box;); check-box:harness-land waits (02:13:07Z)
+  lean_lock: every slot held (slot1: T10 pid 3637 pgid 3628 at 2026-09-29T02:17:15Z on box;slot2: T4b pid 97100 pgid 97090 at 2026-09-29T02:15:57Z on box;); check-box:harness-land waits (02:18:08Z)
+  lean_lock: every slot held (slot1: T4 pid 87560 pgid 87550 at 2026-09-29T02:21:21Z on box;slot2: T1 pid 63741 pgid 63719 at 2026-09-29T02:22:37Z on box;); check-box:harness-land waits (02:23:09Z)
+  lean_lock: every slot held (slot1: T5c pid 30474 pgid 30459 at 2026-09-29T02:28:02Z on box;slot2: T1 pid 63741 pgid 63719 at 2026-09-29T02:22:37Z on box;); check-box:harness-land waits (02:28:10Z)
+  lean_lock: check-box:harness-land took slot2 (02:31:10Z)
+  [box 02:31:10Z load1 12.72] make tssdk-install
+  lean_lock: released slot2 (02:31:11Z)
+  [box 02:31:11Z load1 12.67] the box leg lock is held (tag p1c-3k-b2, pid 58181); check-box:harness-land waits without a Lean slot
+  [box 02:36:11Z load1 11.03] the box leg lock is held (tag check-verifier:P1b, pid 36538); check-box:harness-land waits without a Lean slot
+  lean_lock: every slot held (slot1: T4 pid 98228 pgid 98147 at 2026-09-29T02:39:41Z on box;slot2: P9 pid 7241 pgid 7229 at 2026-09-29T02:40:09Z on box;); check-box:harness-land waits (02:40:11Z)
+  lean_lock: check-box:harness-land took slot2 (02:40:41Z)
+[withheld at export: a sibling tree's line]
+  [box 02:55:12Z load1 7.78] the Lean slot and the box leg lock taken; the worktree at 1560b0a, clean
+  [box 02:55:12Z load1 7.78] make check-local
+  [box 03:05:58Z load1 3.12] the box leg lock RELEASED by pid 79403 (03:05:58Z)
+  [box 03:05:58Z load1 3.12] make check-local rc 0
+  lean_lock: released slot2 (03:05:58Z)
+  the record docs/records/20260929-025512-make-check-box.txt (written by tools/check.sh on the box, brought home unchanged; commit it with the run's page line)
+
+THE LANDING: 994d280 and 1560b0a (origin/s3-c35) cherry-picked with their committer dates onto main at be94993 (S2's #35 35a landings, its END BLOCK and its own lens: docs/DESIGN.md, docs/lanes/lean.md, two docs/audit paths and eighteen docs/records paths) as de0ebfd and e52f706; git diff --quiet 1560b0a e52f706 outside the 22 paths main moved since b3406bf: exit 0; the legs that read those pages, live at e52f706 under the gate:
+  pins (03:07:14Z, started at a 1-minute load of 4.52): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite (03:07:18Z, started at a 1-minute load of 4.52): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (03:07:19Z, started at a 1-minute load of 4.40): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+  at e52f706
+  (Main moved twice before this landing, and the same two commits were rebuilt each time. Onto 1d436d7 as 0bb6d5e and b14a224:
+  the three legs there first STARTED AT A STUDIO 1-MINUTE LOAD OF 51.26, above the gate of 20 (S3's slip), with the same verdicts:
+    pins (02:10:33Z): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+    cite (02:10:37Z): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+    spec (02:10:38Z): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+  then under the gate:
+    pins (02:11:58Z, started at a 1-minute load of 17.21): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+    cite (02:12:02Z, started at a 1-minute load of 16.95): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+    spec (02:12:04Z, started at a 1-minute load of 16.95): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+    at b14a224
+  Onto c930ff2 as ec98291 and 135e029, under the gate:
+    pins (02:18:55Z, started at a 1-minute load of 5.39): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+    cite (02:18:59Z, started at a 1-minute load of 5.39): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+    spec (02:19:00Z, started at a 1-minute load of 5.11): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+    at 135e029
+  The lines under THE LANDING are the run at the landed tree, under the gate.)

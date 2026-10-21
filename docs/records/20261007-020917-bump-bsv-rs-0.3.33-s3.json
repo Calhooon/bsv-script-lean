@@ -1,0 +1,964 @@
+{
+  "base": "4222d12e67345b4fbe3836e97f3291cb4bfdc94b",
+  "bsv_rs_version": "0.3.33",
+  "checksum": "dcb878969c663f4aad400775420e1308239af7f253b714748b03f988d8832efb",
+  "upstream_commit": "a395c72fe5a7e5ca7a625b1c1bebfe755435620d",
+  "corpora": [
+    {
+      "corpus": "seed",
+      "entries": 10000,
+      "old_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "new_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "arith",
+      "entries": 692,
+      "old_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "new_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "bytes",
+      "entries": 512,
+      "old_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "new_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-bn_op",
+      "entries": 170,
+      "old_verdicts": {
+        "not-recorded": 170
+      },
+      "new_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      },
+      "changes": {
+        "added": 170
+      },
+      "before": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 95
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 95
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "entries": 36,
+      "old_verdicts": {
+        "not-recorded": 36
+      },
+      "new_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      },
+      "changes": {
+        "added": 36
+      },
+      "before": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 23
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 23
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-multisig",
+      "entries": 30,
+      "old_verdicts": {
+        "not-recorded": 30
+      },
+      "new_verdicts": {
+        "invalid": 30
+      },
+      "changes": {
+        "added": 30
+      },
+      "before": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-opcode",
+      "entries": 144324,
+      "old_verdicts": {
+        "not-recorded": 144324
+      },
+      "new_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      },
+      "changes": {
+        "added": 144324
+      },
+      "before": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 77263
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 77263
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-script",
+      "entries": 67991,
+      "old_verdicts": {
+        "not-recorded": 67991
+      },
+      "new_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      },
+      "changes": {
+        "added": 67991
+      },
+      "before": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 67634
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 67634
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-script_P2SH",
+      "entries": 64,
+      "old_verdicts": {
+        "not-recorded": 64
+      },
+      "new_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      },
+      "changes": {
+        "added": 64
+      },
+      "before": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 8
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 8
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-sigopcount",
+      "entries": 6,
+      "old_verdicts": {
+        "not-recorded": 6
+      },
+      "new_verdicts": {
+        "invalid": 6
+      },
+      "changes": {
+        "added": 6
+      },
+      "before": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-transaction",
+      "entries": 167,
+      "old_verdicts": {
+        "not-recorded": 167
+      },
+      "new_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      },
+      "changes": {
+        "added": 167
+      },
+      "before": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 59
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 59
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c1",
+      "entries": 1024,
+      "old_verdicts": {
+        "not-recorded": 1024
+      },
+      "new_verdicts": {
+        "invalid": 1024
+      },
+      "changes": {
+        "added": 1024
+      },
+      "before": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c102",
+      "entries": 2048,
+      "old_verdicts": {
+        "not-recorded": 2048
+      },
+      "new_verdicts": {
+        "invalid": 2048
+      },
+      "changes": {
+        "added": 2048
+      },
+      "before": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g102-c102",
+      "entries": 4097,
+      "old_verdicts": {
+        "not-recorded": 4097
+      },
+      "new_verdicts": {
+        "invalid": 4097
+      },
+      "changes": {
+        "added": 4097
+      },
+      "before": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2048
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2048
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c1",
+      "entries": 4096,
+      "old_verdicts": {
+        "not-recorded": 4096
+      },
+      "new_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      },
+      "changes": {
+        "added": 4096
+      },
+      "before": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c103",
+      "entries": 8192,
+      "old_verdicts": {
+        "not-recorded": 8192
+      },
+      "new_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      },
+      "changes": {
+        "added": 8192
+      },
+      "before": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g102-c1",
+      "entries": 3,
+      "old_verdicts": {
+        "not-recorded": 3
+      },
+      "new_verdicts": {
+        "invalid": 3
+      },
+      "changes": {
+        "added": 3
+      },
+      "before": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g103-c103",
+      "entries": 16384,
+      "old_verdicts": {
+        "not-recorded": 16384
+      },
+      "new_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      },
+      "changes": {
+        "added": 16384
+      },
+      "before": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6144
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6144
+        }
+      ]
+    },
+    {
+      "corpus": "crypto",
+      "entries": 84,
+      "old_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "new_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "eras",
+      "entries": 74,
+      "old_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "new_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "flow",
+      "entries": 1094,
+      "old_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "new_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "gen",
+      "entries": 1157,
+      "old_verdicts": {
+        "undecided": 5,
+        "valid": 589,
+        "invalid": 563
+      },
+      "new_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      },
+      "changes": {
+        "verdict_object": 73,
+        "verdict": 58,
+        "reason": 73,
+        "input": 58
+      },
+      "before": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 5,
+        "witnesses": 2
+      },
+      "after": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "splice.substr.int64-reader",
+          "entries": 58
+        },
+        {
+          "column": "spec-mempool",
+          "rule": "splice.substr.int64-reader",
+          "entries": 58
+        }
+      ],
+      "rules_after": []
+    },
+    {
+      "corpus": "million",
+      "entries": 4,
+      "old_verdicts": {
+        "invalid": 4
+      },
+      "new_verdicts": {
+        "invalid": 4
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.resource-abort",
+          "entries": 4
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.resource-abort",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "corpus": "road",
+      "entries": 13512,
+      "old_verdicts": {
+        "not-recorded": 13512
+      },
+      "new_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      },
+      "changes": {
+        "added": 13512
+      },
+      "before": {
+        "agree_block": 13510,
+        "agree_mempool": 13510,
+        "undecided": 0,
+        "witnesses": 2
+      },
+      "after": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "splice.substr.int64-reader",
+          "entries": 2
+        },
+        {
+          "column": "spec-mempool",
+          "rule": "splice.substr.int64-reader",
+          "entries": 2
+        }
+      ],
+      "rules_after": []
+    },
+    {
+      "corpus": "stack",
+      "entries": 262,
+      "old_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "new_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    },
+    {
+      "corpus": "tx",
+      "entries": 40,
+      "old_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "new_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "changes": {},
+      "before": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": []
+    }
+  ],
+  "vectors": [
+    {
+      "file": "corpus/numbers/bsv-rs-0.3.33.jsonl",
+      "count": 1000,
+      "lines": 1000,
+      "sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515",
+      "identical": true
+    },
+    {
+      "file": "corpus/sighash/bsv-rs-0.3.33.jsonl",
+      "count": 500,
+      "lines": 500,
+      "sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a",
+      "identical": true
+    },
+    {
+      "file": "corpus/arith/bsv-rs-0.3.33.jsonl",
+      "count": 10000,
+      "lines": 10000,
+      "sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba",
+      "identical": true
+    },
+    {
+      "file": "corpus/crypto/ecdsa-bsv-rs-0.3.33.jsonl",
+      "count": 200,
+      "lines": 1340,
+      "sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb",
+      "identical": true
+    }
+  ],
+  "checked_harness_files": {
+    "Makefile": "120dacccc474b1f4ac106fd7aa5482530b133715defa6e83f525cabd8e8ee002",
+    "harness/Cargo.lock": "3fbf27a083bd3560707da9fd2b335631f64983900962068141ba5e141f259289",
+    "harness/Cargo.toml": "6ac4412cceb47c64cebd4de180831ef0475614512d359caa53df5956dd805d33",
+    "harness/rules/bsv-rs.json": "52715d6d5edde87488cdb9003d1e2f8dff6c2a670c70bf19c2916577a2b599a2",
+    "harness/rules/go-sdk.json": "b4f30e3c2925c56a38bea99c80028718d5495ea4c9e38dc1fafd74a5211f1e53",
+    "harness/rules/gobdk.json": "3433979f5c55ca967ac84b8bb6223c2a196babe01275fa413f99e88b26363c8e",
+    "harness/rules/sv-node.json": "bd30ab75c33cb5712d8f5c07085918bdd18b085c93d38d3ae5825012fe98b380",
+    "harness/rules/ts-sdk.json": "b69f8ab2e404c3dbc5a8afb9b00c339dff1ce12b28306b5b84a09911e3282a95",
+    "harness/rust-toolchain.toml": "9f80dcfe209d88ca8160da5d6df049498f71eee00a05100e8bf38a59fb6caece",
+    "harness/src/bin/arith_cases.rs": "13b9dd06b8400c7de5e46031e5749b5b4f795f8bca67abd475f669308c6add89",
+    "harness/src/bin/arith_vectors.rs": "e3eb27e0f5b91fb4a3d10fd75580217008787b94a9b0893cb22594f9bd82d578",
+    "harness/src/bin/bytes_cases.rs": "52c89a2ce03cc24181e8784f3cb19548bb0ff14131b7b5816c029fe91af439e0",
+    "harness/src/bin/crypto_cases.rs": "59abea4841a1dad96c7656c141ac513b2c4a6041b2134f90d0e5f1b8f7fdc66b",
+    "harness/src/bin/ecdsa_vectors.rs": "14b8c298eb8f6bcadd76b4c160ea2c0986ab95c229d2f70cb5fa9fdc8d0d44fa",
+    "harness/src/bin/flow_cases.rs": "8c3dd6f4eda65aa0f2b7f0ab7fbe091aff5f7ad53bff2879abde69eaaa68eab4",
+    "harness/src/bin/gen.rs": "ad5cd90a96715996e43520dfbd3088fc04986b8909af8ec6ab7fab8dbb271c5c",
+    "harness/src/bin/num_vectors.rs": "eb523cf1bc948f5e116f7bfff4c6d5cbf5397290ac757062d4110ae23d019213",
+    "harness/src/bin/oracle_chain.rs": "183b1b64a46bdef1b3dfc56e15cfb600d4d5d19e54b599c152f87c85160942bb",
+    "harness/src/bin/policy_witnesses.rs": "28651cc202c00318bd767322878f0f5bf8e44e8fffe6222a0743d679ca59f57e",
+    "harness/src/bin/rules_check.rs": "635bad911dc82b86f02af12baaba1f3b656b25cdb229df349bdda4da4a2c5218",
+    "harness/src/bin/run_bsvrs.rs": "01697085312ce836f6ed3dc4cc8df784e044ed99171aaf8fc04238d6e42cdf95",
+    "harness/src/bin/run_diff.rs": "8e95a83bdae566e9a335ea29f9c9a639933e95babc8fe971b9df19e9bcde29c6",
+    "harness/src/bin/run_engine.rs": "be4a908d1b376575f0006c2ff8c0f87b8350d8b61a7449c0036d54944d0f9623",
+    "harness/src/bin/run_svnode.rs": "20a8ba952a48a5a8f740d3d2a16607be6ccbb3e6f456a498ff5b062ab5207746",
+    "harness/src/bin/run_teranode.rs": "154462f0bf36bd02399e74a253bde3eba86c50c340e77b9f07eb5670edc666b9",
+    "harness/src/bin/seed_gen.rs": "f9b4b61fc506a5e03d42be79c280b5386719aa9083d5de16b99f3e8f6bf03ee2",
+    "harness/src/bin/sighash_vectors.rs": "dd3709d9db13ee28da869aedcaa82d95a22c4e4a344d21cd2f2a16364be00bce",
+    "harness/src/bin/sighash_verify.rs": "3ea0ac6f87ec7811de9b5bade79d8573f5873e41e3943c78f9ba8c6126bdd5f1",
+    "harness/src/bin/spec_recorded.rs": "2eafb71cbc98aea38c0a188616a7450bbf7c6946d0f1bc9eddcc431053e8c60e",
+    "harness/src/bin/stack_cases.rs": "873efffadfbc823415223a70bb8d8ac8349d54ef5480dad51c6e606bd6cce4b4",
+    "harness/src/block.rs": "4d23c8585e43bacc72fd174a0dbf17ceea603ad084278aa22225ef878d40f57c",
+    "harness/src/bsvrs_codes.rs": "0883e8cea79b6301d0b4efedd6eff9220c2a4478318d2ebb6a0e21cb681a61ce",
+    "harness/src/corpus.rs": "0804f10c42525496e57fc77c16bb56a65d96009b477947bc8859e59db6166b97",
+    "harness/src/differential.rs": "5dec23cdfe4efb7be576f4039f865e4dc9b9787410c5a7cc8fd4a22ae0bb6be3",
+    "harness/src/engine.rs": "9c1af1cc370000b290d234d7a6f7ed71d8f70b2381d0449d01740a60f4fbd6d2",
+    "harness/src/engines.rs": "6d24d7b57c0879348144117caac13a9c6b2f35b6c4897a25b6cd797af7e7800f",
+    "harness/src/flags_oracle.rs": "e75c544b5d7634442b5325cc850abd1f63f40f838fca4f241391fbdb76475d62",
+    "harness/src/gen.rs": "33429373b11f7ea2ac4e2332e703bdac9162926db2409ba389c9ff86583f3b90",
+    "harness/src/gosdk_codes.rs": "d14f632e37a87cc71ce8bc4796ec4d37a95ed49a7306205e5b952e0c8443b1a4",
+    "harness/src/lib.rs": "490042dba56a1dd0462295dc807166d73f449bd5d74c0f87f1b27d4ac01af655",
+    "harness/src/rpc.rs": "740acac4f05c10518672b576f6269ee74ff6dc281048c0fe10c30c75107035ea",
+    "harness/src/rules.rs": "8d0b9a64eb4bd50be79eec17a036ce7ac7f379576cf9f71af7ec178487474fca",
+    "harness/src/stamp.rs": "332343316832f33e6c50a0a725c89af68fde5ede1f7a14dc32b0f7379c731b13",
+    "harness/src/svnode_codes.rs": "9d7d6bd6f630ba47176b023dc34907b8f859ba2c6640ab502fc40e304f2adf57",
+    "harness/src/tssdk_codes.rs": "3f400153c27c59914a1c32a04bd03c59dfcd5376ffd1c5209a1c9f7813b57db4",
+    "harness/src/txraw.rs": "06ceccf7cb9e92ce5448913b9ef7f3895d0798de92f5ee184a75cdbb6d32bb2b",
+    "harness/src/txroad.rs": "ba99fbddd9700131c8200be884c0cffb06095c4cf7324f61d47b3c222a9c4c39",
+    "harness/tests/crate_pins.rs": "9a76841ee8d6758865a3da4cddc625421c1a77370eb7132fc0fcc06cf46b40c7",
+    "harness/tests/recorded_inputs.rs": "54a5c0e6e02da96fc8e41cc7c8bd04e3db3ab2bb3a540eb416ccbdaafdf9a716",
+    "harness/tests/stamp_gate.rs": "3dcbe981d18d10314f9a5701928d6752555319d2469c28d14a5cc2ff660f0f9a",
+    "tools/check.sh": "7981022ab923c61f22ca77efa3a3307ed122ccf2b324076c080095a55196974d"
+  }
+}

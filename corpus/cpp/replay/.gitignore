@@ -1,0 +1,8 @@
+# the plain form of a corpus committed gzipped (tools/cpp_replay_run.sh runs on it; rules_check reads the .gz)
+cpp-opcode/cases.jsonl
+cpp-script/cases.jsonl
+cpp-txvalidationcache-t100-g1-c102/cases.jsonl
+cpp-txvalidationcache-t100-g102-c102/cases.jsonl
+cpp-txvalidationcache-t101-g1-c1/cases.jsonl
+cpp-txvalidationcache-t101-g1-c103/cases.jsonl
+cpp-txvalidationcache-t101-g103-c103/cases.jsonl

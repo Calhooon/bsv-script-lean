@@ -1,0 +1,359 @@
+{
+  "base_commit": "d71c05408ccfec50469b8f0a2d7ba71d6e81303b",
+  "calls": 2190,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 3,
+      "diverge": 1,
+      "label": "[M]",
+      "measured": 4,
+      "no-verdict": 5,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 9,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [
+      {
+        "id": "chain-reorg-depth-1",
+        "label": "[X]",
+        "observed": {
+          "automaticAgrees": true,
+          "disconnects": 1
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":1,\"final\":{\"coins\":[\"K\"],\"height\":103,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reorg-depth-2",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":2,\"final\":{\"coins\":[\"K\"],\"height\":104,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":103,\"outpoint\":\"T2\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T2\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":104}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-reorg-depth-3",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"automaticAgrees\":true,\"disconnects\":3,\"final\":{\"coins\":[\"K\"],\"height\":105,\"held\":[],\"pool\":[]},\"views\":[{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":104,\"outpoint\":\"T3\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":97000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"A3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T3\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":103,\"outpoint\":\"T2\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"A2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T2\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"T1\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":99000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"A1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"T1\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":101,\"outpoint\":\"F\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":100000}],\"view\":{\"coins\":[\"F\"],\"height\":101}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":102}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":103}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":104}},{\"utxo\":[{\"coinbase\":false,\"confiscation\":false,\"height\":102,\"outpoint\":\"K\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":98000},{\"coinbase\":true,\"confiscation\":false,\"height\":102,\"outpoint\":\"B1:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":103,\"outpoint\":\"B2:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":104,\"outpoint\":\"B3:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000},{\"coinbase\":true,\"confiscation\":false,\"height\":105,\"outpoint\":\"B4:coinbase\",\"script\":\"76a914f09581d66893f0fddad00184dea48c588317975488ac\",\"value\":5000000000}],\"view\":{\"coins\":[\"K\"],\"height\":105}}]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-disconnected-now-nonfinal",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-disconnected-now-immature",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[]} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "id": "chain-equal-work-completion",
+        "label": "[X]",
+        "observed": {
+          "equalWork": true
+        },
+        "reference_token": "measured agree: {\"equalWork\":true,\"selected\":\"B\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-equal-work-sequence",
+        "label": "[X]",
+        "observed": {
+          "equalWork": true
+        },
+        "reference_token": "measured agree: {\"equalWork\":true,\"selected\":\"B\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-invalid-retry",
+        "label": "[X]",
+        "observed": {
+          "status": "no-verdict"
+        },
+        "reference_token": "measured agree: {\"badFailed\":true,\"childFailedParent\":true,\"childNotFailedSelf\":true,\"selectedGood\":true,\"view\":{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "no-verdict"
+      },
+      {
+        "adjudication": {
+          "class": "scenario.unrequested-body.regtest-bridge-admits",
+          "ruling": "open"
+        },
+        "diverging_fields": [
+          "bodyAbsent",
+          "ignored"
+        ],
+        "id": "chain-unrequested-equal-work",
+        "label": "[X]",
+        "observed": {
+          "bodyAbsent": false,
+          "equalWork": true,
+          "ignored": false,
+          "notFailed": true
+        },
+        "reference_token": "measured agree: {\"bodyAbsent\":true,\"equalWork\":true,\"ignored\":true,\"notFailed\":true} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "branch",
+        "verdict": "diverge"
+      }
+    ],
+    "finality": [],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 5519724,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-175301Z/receipt.json",
+    "sha256": "c5592e425cdcc5c93621688e62a5dfb3116d6d69a50043fd5fe3c164c679c2e1"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "09d505a199d26a4dc199bc9b690ae9cd4bf92559cbd54d8cde110950f70e8b00",
+      "height": 1475
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261015-175301-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 2,
+    "ends": 2,
+    "events": 562,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "chain-reorg-depth-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reorg-depth-2",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-reorg-depth-3",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-disconnected-now-nonfinal",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-disconnected-now-immature",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-equal-work-completion",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-equal-work-sequence",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-invalid-retry",
+        "verdict": "no-verdict"
+      },
+      {
+        "row": "chain-unrequested-equal-work",
+        "verdict": "diverge"
+      }
+    ]
+  },
+  "rows_selected": [
+    "chain-disconnected-now-immature",
+    "chain-disconnected-now-nonfinal",
+    "chain-equal-work-completion",
+    "chain-equal-work-sequence",
+    "chain-invalid-retry",
+    "chain-reorg-depth-1",
+    "chain-reorg-depth-2",
+    "chain-reorg-depth-3",
+    "chain-unrequested-equal-work"
+  ],
+  "run_id": "cut2-66q5-20261015-175301",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-15T17:53:01Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 3,
+    "diverge": 1,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 4,
+    "no-verdict": 5,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 466.489909542
+  }
+}

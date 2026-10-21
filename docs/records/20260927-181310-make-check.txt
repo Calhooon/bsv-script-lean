@@ -1,0 +1,14 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: c7e1f05 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260927-181310 UTC; wall: 21s (0 min 21 s)
+[withheld at export: a sibling tree's line]
+status: RED (exit 1)
+legs (the verdict lines, in order):
+  check-pins: GREEN (71 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+  cite_check: 2589 citations found in lean/ and docs/ (2529 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1665, MOVED 9; not anchored (reported, never RED): unanchored 68, beyond-eof 1, unresolved 27, ambiguous 7, unpinned 0, other-version 68, self 491, history 253, absent 0, orphan rows 60; skipped 0
+  cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+[withheld at export: a sibling tree's line]
+  sample 18:13:10 UTC: load1 3.71; over 5% cpu: other programs: 3 processes, 129% cpu; 
+  sample 18:13:20 UTC: load1 4.21; over 5% cpu: rustc 93% 0.2GB; rustc 57% 0.2GB; other programs: 9 processes, 170% cpu; 
+  sample 18:13:30 UTC: load1 5.67; over 5% cpu: other programs: 19 processes, 284% cpu; 

@@ -1,0 +1,1046 @@
+{
+  "base_commit": "79955c617dca2db854cb6983564d65853b1ec4fe",
+  "binary": {
+    "banner": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev",
+    "path": "~/bsv/targets/sv-v1.2.3/bin/bitcoind",
+    "sha256": "ea73a708d277d88487a5d8ffc97e2b859937b8428387fc117b07f4add88b1421",
+    "source": "docs/PROVENANCE.md 1a reference.binary"
+  },
+  "frames": [
+    {
+      "command": "version",
+      "hex": "dab5bffa76657273696f6e00000000007a000000532eab2a801101002100000000000000f0c9536500000000000000000000000000000000000000000000000000000000000021000000000000000000000000000000000000000000000000003ffd9797f99c2d30122f426974636f696e2053563a312e322e332f00000000011100a9c8893678204a71b14f88729e49bf6d",
+      "source": "B>probe"
+    },
+    {
+      "command": "verack",
+      "hex": "dab5bffa76657261636b000000000000000000005df6e0e2",
+      "source": "B>probe"
+    },
+    {
+      "command": "protoconf",
+      "hex": "dab5bffa70726f746f636f6e660000001b00000030d5edd0020000200015426c6f636b5072696f726974792c44656661756c74",
+      "source": "B>probe"
+    },
+    {
+      "command": "authch",
+      "hex": "dab5bffa61757468636800000000000028000000c3f3fa5c010000002000000028ae3da822980f94b1e6ae2241bfb7081869f1c798cee539480b400620675c00",
+      "source": "B>probe"
+    },
+    {
+      "command": "sendheaders",
+      "hex": "dab5bffa73656e646865616465727300000000005df6e0e2",
+      "source": "B>probe"
+    },
+    {
+      "command": "sendcmpct",
+      "hex": "dab5bffa73656e64636d70637400000009000000ccfe104a000100000000000000",
+      "source": "B>probe"
+    },
+    {
+      "command": "ping",
+      "hex": "dab5bffa70696e670000000000000000080000004641e8a56f2fa12f24b30a29",
+      "source": "B>probe"
+    },
+    {
+      "command": "getheaders",
+      "hex": "dab5bffa6765746865616465727300004500000070e012a4801101000106226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0000000000000000000000000000000000000000000000000000000000000000",
+      "source": "B>probe"
+    },
+    {
+      "command": "feefilter",
+      "hex": "dab5bffa66656566696c746572000000080000007ff7c272a723920000000000",
+      "source": "B>probe"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+      "source": "B>probe"
+    },
+    {
+      "command": "version",
+      "hex": "dab5bffa76657273696f6e00000000007a0000006245ef6e801101002100000000000000fff053650000000000000000000000000000000000000000000000000000000000002100000000000000000000000000000000000000000000000000403bb98bfe6457c9122f426974636f696e2053563a312e322e332f65000000011100744c3827885a41bb97e13a7b3a974ad1",
+      "source": "B>PB"
+    },
+    {
+      "command": "verack",
+      "hex": "dab5bffa76657261636b000000000000000000005df6e0e2",
+      "source": "B>PB"
+    },
+    {
+      "command": "protoconf",
+      "hex": "dab5bffa70726f746f636f6e660000001b00000030d5edd0020000200015426c6f636b5072696f726974792c44656661756c74",
+      "source": "B>PB"
+    },
+    {
+      "command": "authch",
+      "hex": "dab5bffa61757468636800000000000028000000fe81eee60100000020000000cb831a30dbba861a4447ac8c7bbba39ec2d0edbc00200b1c129d6308b67dd380",
+      "source": "B>PB"
+    },
+    {
+      "command": "sendheaders",
+      "hex": "dab5bffa73656e646865616465727300000000005df6e0e2",
+      "source": "B>PB"
+    },
+    {
+      "command": "sendcmpct",
+      "hex": "dab5bffa73656e64636d70637400000009000000ccfe104a000100000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "ping",
+      "hex": "dab5bffa70696e67000000000000000008000000fb0ddef4605cd044c75b32dd",
+      "source": "B>PB"
+    },
+    {
+      "command": "getheaders",
+      "hex": "dab5bffa67657468656164657273000065020000b3345d1a80110100128361bf095785be127bc496f5e88905ac3ce6ba203f1068871e6b439387af6c0a5652072d00017a9b56c7b4ced6d6e576b333d639e55a56859b07c8731068547fec5c9881626ee0e3625009dcd508e8adc4b7894a21610b8a1c03cae8a4bde27fdc77e8878f56d04b1c9a8fdd6d635b8a83cccfe0ce5b762f64a2316677623d6bc1f0ba0e1c28bd04c57e7b4520f93967d33c645e43dbdc543baefc787a5b314800064c22465862d4265e9070a1d7340f129fc951b8e497e4d62ad2208db25b111938f4e2e6045cda51c80d82ce30359baf1a13e266f69483b0c0b03f04a5fe0637928de25378743f351bb25252df28b1209632a04fb90e06cad1e4c6dbbb4d0704752d6069d2d31e365948d6881a481a3886be6483c1878f54281613548b7d04f5e970a00918d347a490019aaa19805ab9f0082633555f6a863ff54501159e2ccde9e236eb1c5bcaa08ee8ad186f89ac08a6f2996a89b7f1535fc3653398d67c66d8c4d6a701ca4ccd15f9b6c0583bcb9d15a5944bf4356f7aea3dbd1b83f7226eef6bc7feb41e6aedbd8a268fcfc2a6e5c878f93f5f5d196899182aeade5f0a284a29b37b5885442a2d4ed1c34dccdcc7ad1e42c203b317194106aa3ce2417f2d04ed0f980b7325ad7a17c941a124cb53253ca789bb2aa9aadd984dd9eb221956c52e6e9204264e9c075af2d074ba4c16bb4126098a95d0037b977be1188a2556a08db860442bc890507a7c2fb02835d10e7997e6eb955451d1276accf0cb3506226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0000000000000000000000000000000000000000000000000000000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "getdata",
+      "hex": "dab5bffa676574646174610000000000250000008967fefd0101000000a09b900b24c2316d6fbaefc923f24f874203ac2c9217f70c010fed52c9a23645",
+      "source": "B>PB"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "inv",
+      "hex": "dab5bffa696e76000000000000000000250000007f22e46b010100000032941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c",
+      "source": "B>PB"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e670000000000000000080000003fe664720200000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "getdata",
+      "hex": "dab5bffa67657464617461000000000025000000e0e8d06501010000008bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295",
+      "source": "B>PB"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e67000000000000000008000000f05d0d220300000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e670000000000000000080000000e14e6240400000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "pong",
+      "hex": "dab5bffa706f6e6700000000000000000800000003b44ddf0500000000000000",
+      "source": "B>PB"
+    },
+    {
+      "command": "reject",
+      "hex": "dab5bffa72656a6563740000000000003e00000074c0ddef02747810196261642d74786e732d696e707574732d6475706c6963617465909323bacf1e3fd73cf32534e6ae9e9a9b299c4e59b4e676dab1b5531d7717d7",
+      "source": "B>PB"
+    },
+    {
+      "command": "version",
+      "hex": "dab5bffa76657273696f6e00000000007a00000045c8ffcd801101002100000000000000fff0536500000000000000000000000000000000000000000000000000000000000021000000000000000000000000000000000000000000000000000e65bafb35bebcce122f426974636f696e2053563a312e322e332f65000000011100b2759cafd0f045918989646a7839f11e",
+      "source": "A>PA"
+    },
+    {
+      "command": "verack",
+      "hex": "dab5bffa76657261636b000000000000000000005df6e0e2",
+      "source": "A>PA"
+    },
+    {
+      "command": "protoconf",
+      "hex": "dab5bffa70726f746f636f6e660000001b00000030d5edd0020000200015426c6f636b5072696f726974792c44656661756c74",
+      "source": "A>PA"
+    },
+    {
+      "command": "authch",
+      "hex": "dab5bffa617574686368000000000000280000007b612481010000002000000034ccf6d048146964174b756fb206ecaccc5d0f5682d72ee53c4d8f2a1f94873d",
+      "source": "A>PA"
+    },
+    {
+      "command": "sendheaders",
+      "hex": "dab5bffa73656e646865616465727300000000005df6e0e2",
+      "source": "A>PA"
+    },
+    {
+      "command": "sendcmpct",
+      "hex": "dab5bffa73656e64636d70637400000009000000ccfe104a000100000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "ping",
+      "hex": "dab5bffa70696e67000000000000000008000000343a1169c83d417def61544e",
+      "source": "A>PA"
+    },
+    {
+      "command": "getheaders",
+      "hex": "dab5bffa67657468656164657273000065020000b3345d1a80110100128361bf095785be127bc496f5e88905ac3ce6ba203f1068871e6b439387af6c0a5652072d00017a9b56c7b4ced6d6e576b333d639e55a56859b07c8731068547fec5c9881626ee0e3625009dcd508e8adc4b7894a21610b8a1c03cae8a4bde27fdc77e8878f56d04b1c9a8fdd6d635b8a83cccfe0ce5b762f64a2316677623d6bc1f0ba0e1c28bd04c57e7b4520f93967d33c645e43dbdc543baefc787a5b314800064c22465862d4265e9070a1d7340f129fc951b8e497e4d62ad2208db25b111938f4e2e6045cda51c80d82ce30359baf1a13e266f69483b0c0b03f04a5fe0637928de25378743f351bb25252df28b1209632a04fb90e06cad1e4c6dbbb4d0704752d6069d2d31e365948d6881a481a3886be6483c1878f54281613548b7d04f5e970a00918d347a490019aaa19805ab9f0082633555f6a863ff54501159e2ccde9e236eb1c5bcaa08ee8ad186f89ac08a6f2996a89b7f1535fc3653398d67c66d8c4d6a701ca4ccd15f9b6c0583bcb9d15a5944bf4356f7aea3dbd1b83f7226eef6bc7feb41e6aedbd8a268fcfc2a6e5c878f93f5f5d196899182aeade5f0a284a29b37b5885442a2d4ed1c34dccdcc7ad1e42c203b317194106aa3ce2417f2d04ed0f980b7325ad7a17c941a124cb53253ca789bb2aa9aadd984dd9eb221956c52e6e9204264e9c075af2d074ba4c16bb4126098a95d0037b977be1188a2556a08db860442bc890507a7c2fb02835d10e7997e6eb955451d1276accf0cb3506226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0000000000000000000000000000000000000000000000000000000000000000",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hex": "dab5bffa696e76000000000000000000250000007f22e46b010100000032941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c",
+      "source": "A>PA"
+    },
+    {
+      "command": "inv",
+      "hex": "dab5bffa696e7600000000000000000049000000207e9add02010000008bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb18929501000000801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036",
+      "source": "A>PA"
+    }
+  ],
+  "full_receipt": {
+    "bytes": 427749,
+    "label": "[M]",
+    "path": "relay-78-20261015-135113/receipt.json",
+    "sha256": "2b75fc2fad88b496c2b3196ebc5fe8ffe0c787275d486c19a3dbbef7764287e8"
+  },
+  "instances": {
+    "a": "relay-78-20261015-135113/relay-a-0",
+    "b": "relay-78-20261015-135113/relay-b-0"
+  },
+  "names": {
+    "transactions": {
+      "C": {
+        "bytes": 191,
+        "hex": "01000000018bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295000000006a47304402207afbc0a6c25409ef841d1c444847cf195e41373095abae0310423f0a8e9e32ba022075724adead87eca446e925c4bf32864a10c6854b0b8c5d5760a3a52da31b4208412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01e87a0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980"
+      },
+      "D": {
+        "bytes": 128,
+        "hex": "010000000232941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000000151ffffffff32941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000000151ffffffff01e8030000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "d717771d53b5b1da76e6b4594e9c299b9a9eaee63425f33cd73f1ecfba239390"
+      },
+      "F": {
+        "bytes": 192,
+        "hex": "010000000187416f6e1c94be63770af8f30b05b87dfe8c51ba7253fe475f9fe7a562a952b6000000006b483045022100c453d18fdf61d5bd3f26abe630aaeca8fd32aa947096255fa0901254f0e0bec402202a93edf060ea38632483033171407220247ca6cef61bc0d1b66b6386e453dc15412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a0860100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "8451e32abb863b1303a1a8de88ff33dfc4a62768768b81efb382d94d4b5e05dc"
+      },
+      "K": {
+        "bytes": 191,
+        "hex": "0100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a47304402204006dd6fa19f0202a9add3aecdbc5b136b908ebcc52b907acbe27b1b55f59222022059d5da8695e0a6a951552804792f3362c941fe695916b6d0a80aed7f7b360938412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01c4800100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "a489582759709a80b026c35b435b35363b5b6a4e6ac20fb9804f8311b626fe7d"
+      },
+      "P": {
+        "bytes": 191,
+        "hex": "010000000132941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c000000006a473044022008b21406c9a53fecb250624e8db06f0ebcad0d3d0ab06dd62489922a824d1b2d0220063722402518c79b7bbb7bd5021e0c642c3b6671546b4f8d651b5496b02e9eef412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01d07e0100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+      },
+      "T": {
+        "bytes": 191,
+        "hex": "0100000001dc055e4b4dd982b3ef818b766827a6c4df33ff88dea8a103133b86bb2ae35184000000006a4730440220391e84bf05c7cc919a0925bb0ff226fcd5f08c4358d226f8dc0c9d4712e139b6022025c5ec6dd9bc0e6d5b6d33e1e7b8c85bb3015388df182720abe7a92e7b7ed31c412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01b8820100000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "txid": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+      }
+    },
+    "x": "9633300bf35318fc1c12bd1a815a3c438ff5a6984e6c0ffab07da733ba73e395",
+    "y": "4536a2c952ed0f010cf717922cac0342874ff223c9efba6f6d31c2240b909ba0"
+  },
+  "ports": {
+    "a": {
+      "p2p": 18572,
+      "rpc": 18571
+    },
+    "b": {
+      "p2p": 18574,
+      "rpc": 18573
+    }
+  },
+  "record": "docs/records/20261015-135113-s7-78-p2p-machine-s1.md",
+  "run_id": "relay-78-20261015-135113",
+  "scenario": "corpus/scenarios/2026-10-15-p2p-relay-two-node.md",
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "started_utc": "2026-10-15T13:51:13Z",
+  "steps": [
+    {
+      "b_height": 0,
+      "b_peers": [
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:50571",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "verack": 24,
+            "version": 158
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "feefilter": 32,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 0,
+          "inbound": true,
+          "relaytxes": true,
+          "subver": "/python-mininode-tester:0.0.3/",
+          "whitelisted": false
+        }
+      ],
+      "b_tip": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
+      "id": "s1-ibd-gate",
+      "probe_expect_none": true,
+      "probe_received": [
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+          "hash": null,
+          "index": 19,
+          "inventory": null,
+          "reason": null
+        }
+      ]
+    },
+    {
+      "a_peers": [
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:50580",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5761,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 0,
+          "inbound": true,
+          "relaytxes": true,
+          "subver": "/Bitcoin SV:1.2.3/",
+          "whitelisted": false
+        }
+      ],
+      "a_tip": "1c3ed26eaef4cf2c0d1b9761c14ae56fe13ec01e18ec120dcb2d6114d08729de",
+      "b_height": 101,
+      "b_peers": [
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:18572",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5761,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 1,
+          "inbound": false,
+          "relaytxes": true,
+          "subver": "/Bitcoin SV:1.2.3/",
+          "whitelisted": false
+        },
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:50585",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "pong": 32,
+            "protoconf": 51,
+            "verack": 24,
+            "version": 158
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "getheaders": 637,
+            "ping": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 3,
+          "inbound": true,
+          "relaytxes": true,
+          "subver": "/python-mininode-tester:0.0.3/",
+          "whitelisted": false
+        }
+      ],
+      "funding_block": "1c3ed26eaef4cf2c0d1b9761c14ae56fe13ec01e18ec120dcb2d6114d08729de",
+      "id": "s2-connect-sync"
+    },
+    {
+      "id": "s3-ibd-lifted",
+      "pb_expect_getdata": true,
+      "pb_received": [
+        {
+          "code": null,
+          "command": "getdata",
+          "frame": "dab5bffa676574646174610000000000250000008967fefd0101000000a09b900b24c2316d6fbaefc923f24f874203ac2c9217f70c010fed52c9a23645",
+          "hash": null,
+          "index": 18,
+          "inventory": [
+            {
+              "hash": "4536a2c952ed0f010cf717922cac0342874ff223c9efba6f6d31c2240b909ba0",
+              "kind": 1
+            }
+          ],
+          "reason": null
+        },
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+          "hash": null,
+          "index": 19,
+          "inventory": null,
+          "reason": null
+        }
+      ]
+    },
+    {
+      "b_pool_has_t": true,
+      "counters_after": {
+        "a": {
+          "recv": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          }
+        },
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "a": {
+          "recv": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5761,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          }
+        },
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5761,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "id": "s4-relay",
+      "pa_expect_inv": true,
+      "pa_received": [
+        {
+          "code": null,
+          "command": "inv",
+          "frame": "dab5bffa696e76000000000000000000250000007f22e46b010100000032941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c",
+          "hash": null,
+          "index": 16,
+          "inventory": [
+            {
+              "hash": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432",
+              "kind": 1
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "pb_expect_inv": true,
+      "pb_received": [
+        {
+          "code": null,
+          "command": "inv",
+          "frame": "dab5bffa696e76000000000000000000250000007f22e46b010100000032941c7a45ba27157c38e998dab90fb300cdf9d346a8dc1b129904163e0a378c",
+          "hash": null,
+          "index": 24,
+          "inventory": [
+            {
+              "hash": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432",
+              "kind": 1
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "pool": {
+        "a": [
+          "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+        ],
+        "b": [
+          "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+        ]
+      },
+      "rpc": {
+        "result": "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432"
+      }
+    },
+    {
+      "a_pool_has_p_c": true,
+      "counters_after": {
+        "a": {
+          "recv": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "block": 19773,
+            "getdata": 97,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          }
+        },
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "getdata": 97,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "counters_before": {
+        "a": {
+          "recv": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          }
+        },
+        "b": {
+          "recv": {
+            "authch": 64,
+            "block": 19773,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          },
+          "sent": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          }
+        }
+      },
+      "id": "s5-orphan-fetch",
+      "pa_received": [
+        {
+          "code": null,
+          "command": "inv",
+          "frame": "dab5bffa696e7600000000000000000049000000207e9add02010000008bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb18929501000000801938f05f36550a47f6623cd2dd02767223c78601e836a1580a576d609cc036",
+          "hash": null,
+          "index": 18,
+          "inventory": [
+            {
+              "hash": "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b",
+              "kind": 1
+            },
+            {
+              "hash": "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980",
+              "kind": 1
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "pb_expect_getdata_parent": true,
+      "pb_received": [
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e670000000000000000080000003fe664720200000000000000",
+          "hash": null,
+          "index": 29,
+          "inventory": null,
+          "reason": null
+        },
+        {
+          "code": null,
+          "command": "getdata",
+          "frame": "dab5bffa67657464617461000000000025000000e0e8d06501010000008bdcb7a899f2da52a7c4b805b766b5994a49bb37186dc6b48c93ba62eb189295",
+          "hash": null,
+          "index": 32,
+          "inventory": [
+            {
+              "hash": "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b",
+              "kind": 1
+            }
+          ],
+          "reason": null
+        },
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e67000000000000000008000000f05d0d220300000000000000",
+          "hash": null,
+          "index": 37,
+          "inventory": null,
+          "reason": null
+        }
+      ],
+      "pool": {
+        "a": [
+          "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980",
+          "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432",
+          "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+        ],
+        "b": [
+          "36c09c606d570a58a136e80186c723727602ddd23c62f6470a55365ff0381980",
+          "8c370a3e160499121bdca846d3f9cd00b30fb9da98e9387c1527ba457a1c9432",
+          "959218eb62ba938cb4c66d1837bb494a99b566b705b8c4a752daf299a8b7dc8b"
+        ]
+      }
+    },
+    {
+      "b_console": [],
+      "b_pb_banscore": 0,
+      "id": "s6-internal-code-silent",
+      "pb_expect_none": true,
+      "pb_received": [
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e670000000000000000080000000e14e6240400000000000000",
+          "hash": null,
+          "index": 42,
+          "inventory": null,
+          "reason": null
+        }
+      ]
+    },
+    {
+      "b_banned": [],
+      "b_console": [
+        "2023-11-14 22:13:19 [worker5-H-TxnValidatorPool] Misbehaving: 127.0.0.1:50585 peer=3 (0 -> 100) reason: bad-txns-inputs-duplicate BAN THRESHOLD EXCEEDED",
+        "2023-11-14 22:13:19 [msghand] Warning: not banning local peer 127.0.0.1:50585!"
+      ],
+      "b_peers": [
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:18572",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "authch": 64,
+            "block": 19773,
+            "getdata": 97,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 1,
+          "inbound": false,
+          "relaytxes": true,
+          "subver": "/Bitcoin SV:1.2.3/",
+          "whitelisted": false
+        }
+      ],
+      "id": "s7-reject-score",
+      "pb_received": [
+        {
+          "code": null,
+          "command": "pong",
+          "frame": "dab5bffa706f6e6700000000000000000800000003b44ddf0500000000000000",
+          "hash": null,
+          "index": 49,
+          "inventory": null,
+          "reason": null
+        },
+        {
+          "code": 16,
+          "command": "reject",
+          "frame": "dab5bffa72656a6563740000000000003e00000074c0ddef02747810196261642d74786e732d696e707574732d6475706c6963617465909323bacf1e3fd73cf32534e6ae9e9a9b299c4e59b4e676dab1b5531d7717d7",
+          "hash": "d717771d53b5b1da76e6b4594e9c299b9a9eaee63425f33cd73f1ecfba239390",
+          "index": 50,
+          "inventory": null,
+          "reason": "bad-txns-inputs-duplicate"
+        }
+      ],
+      "send": {
+        "ok": true
+      }
+    },
+    {
+      "a_banned": [
+        {
+          "address": "127.0.0.1/32",
+          "ban_created": 1699999999,
+          "ban_reason": "node misbehaving",
+          "banned_until": 1700086399
+        }
+      ],
+      "a_console": [
+        "2023-11-14 22:13:19 [net] Fatal error servicing streams: Bad header format: Oversized header detected, banning peer=3"
+      ],
+      "a_peers_after": [],
+      "a_peers_before": [
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:50580",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "authch": 64,
+            "createstrm": 57,
+            "feefilter": 64,
+            "getaddr": 24,
+            "getdata": 5822,
+            "getheaders": 93,
+            "inv": 97,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "tx": 430,
+            "verack": 24,
+            "version": 146
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "block": 19773,
+            "getdata": 97,
+            "getheaders": 637,
+            "headers": 8206,
+            "inv": 61,
+            "ping": 32,
+            "pong": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "streamack": 43,
+            "tx": 215,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 0,
+          "inbound": true,
+          "relaytxes": true,
+          "subver": "/Bitcoin SV:1.2.3/",
+          "whitelisted": false
+        },
+        {
+          "addnode": false,
+          "addr": "127.0.0.1:50591",
+          "banscore": 0,
+          "bytesrecv_per_msg": {
+            "pong": 32,
+            "protoconf": 51,
+            "verack": 24,
+            "version": 158
+          },
+          "bytessent_per_msg": {
+            "authch": 64,
+            "getheaders": 637,
+            "inv": 158,
+            "ping": 32,
+            "protoconf": 51,
+            "sendcmpct": 33,
+            "sendheaders": 24,
+            "verack": 24,
+            "version": 146
+          },
+          "id": 2,
+          "inbound": true,
+          "relaytxes": true,
+          "subver": "/python-mininode-tester:0.0.3/",
+          "whitelisted": false
+        }
+      ],
+      "b_peers": [],
+      "id": "s8-direct-ban",
+      "raw": {
+        "ending": "closed by the node",
+        "received_bytes": 0,
+        "sent": "dab5bffa70696e6700000000000000000100200000000000"
+      }
+    }
+  ],
+  "test_peer": {
+    "mininode": {
+      "path": "~/bsv/bitcoin-sv/test/functional/test_framework/mininode.py",
+      "pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+      "sha256": "2501f6ec4cacc7634826222047f126aa821cce0486859d8a47e5b8c1221ac0cf"
+    },
+    "path": "harness/peer/peer.py",
+    "sha256": "3065edbc0782b7a9c982533ae92d0d39959f5d798650e0f324bc208b32ac241d"
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 19.148774291
+  }
+}

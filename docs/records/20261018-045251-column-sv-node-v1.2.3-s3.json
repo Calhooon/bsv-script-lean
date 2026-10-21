@@ -1,0 +1,32 @@
+{
+ "adapter": "",
+ "branch": "lane/hz-95",
+ "command": "make column IMPL=sv-node PIN=v1.2.3 CORPUS=cpp-txvalidationcache-t100-g1-c1",
+ "corpora": [],
+ "differing": [],
+ "ended": "2026-10-18T04:52:51Z",
+ "host": "box",
+ "load1_end": 5.22,
+ "load1_start": 5.22,
+ "mode": "dry run on the current pin",
+ "moved_rows": [],
+ "pin": {
+  "reference.commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "reference.tag": "v1.2.3",
+  "reference.version_string": "v1.2.3.0-g6504a3aff-dev"
+ },
+ "red": [],
+ "scratch": "harness/target/column/20261018-045251-sv-node",
+ "sites_moved": [],
+ "skipped": [
+  {
+   "corpus": "cpp-txvalidationcache-t100-g1-c1",
+   "why": "its spec column is sv-regtest(genesis=1,chronicle=1): the instances of the test's own chain (tools/cpp_era_run.sh), not the standing pair"
+  }
+ ],
+ "started": "2026-10-18T04:52:51Z",
+ "tree": "662bae70441524557130787172ab521ca33e0429",
+ "uncommitted_paths_at_start": 51,
+ "verdict": "column: sv-node v1.2.3 (dry run on the current pin): 0 corpora, 0 entries; agree ; corpora differing 0; moved rows 0; RED 0; unexplained 0; skipped by name 1; wall 0 s: REPRODUCED",
+ "wall_s": 0
+}

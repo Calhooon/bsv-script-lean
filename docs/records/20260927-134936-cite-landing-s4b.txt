@@ -1,0 +1,21 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+landing record (S4b, set 4 sitting 3): the merge of S4b's six commits of this sitting onto main, under THE LANDING RULE ON A MOVING MAIN and THE LEG-BEFORE-LANDING RULE (the landing touches the cite leg's code, tools/cite_check.py)
+the rebased tip T: e508cf0 (0 uncommitted paths), on origin/main e40d3c4 (fetched 13:49 UTC); S4b's commits dbfb798 (the leg's go-chaincfg source and the resolver's self rule, with the table's refresh at 62c30da), 684c85e (the refresh after S1's 3eb9885), c9f2585 (the records 20260927-125104-make-check.txt and 20260927-130752-cite-check-s4b.txt), d483958 (the END BLOCK), 4dfdbd5 (the lens report filed and its five corrections), e508cf0 (the table refreshed before the merge: 1,207 rows)
+[withheld at export: a sibling tree's line]
+
+== THE CITE LEG at T (the leg whose code this landing changes), live on the Studio where the clones are ==
+cite_check: 2676 citations found in lean/ and docs/ (2611 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1992, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 1, unresolved 18, ambiguous 7, unpinned 0, other-version 15, self 427, history 216, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit status: 0
+
+== THE TWENTY OTHER LEGS: GREEN at a checked tip whose tree they depend on is byte-identical to T ==
+the checked tip: d9dac35, S2's record docs/records/20260927-130904-make-check.txt (twenty-one legs GREEN in 558 s, 0 uncommitted paths at either end; S2's 6687c74 committed it for ad3e569)
+  git diff --quiet d9dac35 e508cf0 -- ':!tools/cite_check.py' ':!tools/conformance.py' ':!HANDOFF.md' ':!docs'   -> exit 0
+  git diff --quiet d9dac35 e508cf0 -- docs/DESIGN.md docs/PROVENANCE.md                                          -> exit 0
+what the excluded paths are: tools/cite_check.py is the cite leg's own code (re-run above); tools/conformance.py (the report's generator, S3's d2f58c1), HANDOFF.md and every docs page but docs/PROVENANCE.md (read by the pins leg) and docs/DESIGN.md (§3's case-label map, read by the spec leg, tools/specgen.py) are read by none of the twenty legs (grep over tools/check.sh, tools/check_pins.py, tools/specgen.py, tools/axiom_check.py, harness/src and lean/Test: no read of HANDOFF.md, conformance.py or another docs page; one comment in harness/src/bin/gen.rs names docs/STATE-OF-THE-WORLD.md and reads nothing)
+
+== the landed commit = T + this record and its row in docs/records/README.md ==
+the cite leg's inputs (lean/, docs/ outside docs/records/, tools/cite_check.py) are the same in both: docs/records/ is the leg's `history` class (its citations are never anchored and never RED) and this record is a .txt, which the leg does not scan; the landed commit's sha is the one `git push origin HEAD:main` reports, named in S4b's one line to the parent
+
+== history, never a stamp ==
+S4b's own full run docs/records/20260927-125104-make-check.txt at 0310ec4 (twenty-one legs GREEN, LOCAL): 0310ec4 is the pre-rebase twin of dbfb798; it shows the leg's code change GREEN beside every leg on that tree, not on this one

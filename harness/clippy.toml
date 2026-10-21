@@ -1,0 +1,6 @@
+# #132 (2026-10-14, lane gate-132): the lint table's exemption for tests (harness/Cargo.toml `[workspace.lints.clippy]`
+# denies unwrap_used, expect_used and panic). A test's unwrap, expect or panic is its assertion; #[test] functions and
+# #[cfg(test)] modules are exempt, every other site is denied or carries an #[allow] with its reason.
+allow-unwrap-in-tests = true
+allow-expect-in-tests = true
+allow-panic-in-tests = true

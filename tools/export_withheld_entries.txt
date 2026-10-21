@@ -1,0 +1,246 @@
+# tools/export_withheld_entries.txt: the public edition's named entry withholding (D7).
+# Read by tools/export_public.py: path<TAB>id[<TAB>comma-separated fields].
+# Without column 3 the selected fields are tx and prevouts; disjoint fields may use different groups.
+# A line `## <group>: <ruling>` opens a group, as in tools/export_withheld.txt.
+# Sixty distinct spends are named below; four witness rows repeat named spends.
+# The private corpus bytes stay intact; the public reader is stated at v1.2.3.
+
+## d7-node-team-split: 2026-10-06, D7
+# Named spend material is withheld at the maintainers' request until their word or 2027-01-04.
+corpus/gen/gen.jsonl	withheld-cf03083512c519ee77ec
+corpus/gen/gen.jsonl	gen-00796
+corpus/gen/gen.jsonl	gen-01018
+corpus/gen/gen.jsonl	gen-01020
+corpus/gen/gen.jsonl	gen-01024
+corpus/gen/gen.jsonl	gen-01026
+corpus/gen/gen.jsonl	gen-01028
+corpus/gen/gen.jsonl	gen-01030
+corpus/gen/gen.jsonl	gen-01032
+corpus/gen/gen.jsonl	gen-01034
+corpus/gen/gen.jsonl	gen-01036
+corpus/gen/gen.jsonl	gen-01038
+corpus/gen/gen.jsonl	gen-01040
+corpus/gen/gen.jsonl	gen-01042
+corpus/gen/gen.jsonl	gen-01044
+corpus/gen/gen.jsonl	gen-01046
+corpus/gen/gen.jsonl	gen-01050
+corpus/gen/gen.jsonl	gen-01052
+corpus/gen/gen.jsonl	gen-01054
+corpus/gen/gen.jsonl	gen-01056
+corpus/gen/gen.jsonl	gen-01058
+corpus/gen/gen.jsonl	gen-01062
+corpus/gen/gen.jsonl	gen-01064
+corpus/gen/gen.jsonl	gen-01066
+corpus/gen/gen.jsonl	gen-01068
+corpus/gen/gen.jsonl	gen-01070
+corpus/gen/gen.jsonl	gen-01074
+corpus/gen/gen.jsonl	gen-01076
+corpus/gen/gen.jsonl	gen-01078
+corpus/gen/gen.jsonl	gen-01080
+corpus/gen/gen.jsonl	gen-01082
+corpus/gen/gen.jsonl	gen-01086
+corpus/gen/gen.jsonl	gen-01088
+corpus/gen/gen.jsonl	gen-01090
+corpus/gen/gen.jsonl	gen-01092
+corpus/gen/gen.jsonl	gen-01094
+corpus/gen/gen.jsonl	gen-01096
+corpus/gen/gen.jsonl	gen-01098
+corpus/gen/gen.jsonl	gen-01102
+corpus/gen/gen.jsonl	gen-01104
+corpus/gen/gen.jsonl	gen-01106
+corpus/gen/gen.jsonl	gen-01108
+corpus/gen/gen.jsonl	gen-01112
+corpus/gen/gen.jsonl	gen-01116
+corpus/gen/gen.jsonl	gen-01118
+corpus/gen/gen.jsonl	gen-01120
+corpus/gen/gen.jsonl	gen-01122
+corpus/gen/gen.jsonl	gen-01126
+corpus/gen/gen.jsonl	gen-01130
+corpus/gen/gen.jsonl	gen-01132
+corpus/gen/gen.jsonl	gen-01134
+corpus/gen/gen.jsonl	gen-01136
+corpus/gen/gen.jsonl	gen-01140
+corpus/gen/gen.jsonl	gen-01144
+corpus/gen/gen.jsonl	gen-01146
+corpus/gen/gen.jsonl	gen-01148
+corpus/gen/gen.jsonl	gen-01150
+corpus/gen/gen.jsonl	gen-01154
+corpus/road/road.jsonl	withheld-67da1c7db376a24fce0e
+corpus/road/road.jsonl	road-gen-00796
+corpus/witnesses/sv-node-v1.2.2/gen.jsonl	withheld-a7d36350b832c0a14c9d-withheld-cf03083512c519ee77ec
+corpus/witnesses/sv-node-v1.2.2/gen.jsonl	withheld-bf2ecf075bb09ae18070-withheld-cf03083512c519ee77ec
+corpus/witnesses/sv-node-v1.2.2/road.jsonl	withheld-f14441f0769a6abae1b4-withheld-67da1c7db376a24fce0e
+corpus/witnesses/sv-node-v1.2.2/road.jsonl	withheld-bf299a91c3c194e72dff-withheld-67da1c7db376a24fce0e
+
+## d8-node-team-discretion: 2026-10-06, earlier reader material withheld at the maintainers' request
+corpus/gen/gen.jsonl	gen-00793	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-00794	note,tx,prevouts
+corpus/gen/gen.jsonl	withheld-cf03083512c519ee77ec	note
+corpus/gen/gen.jsonl	gen-00796	note
+corpus/gen/gen.jsonl	gen-01012	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01013	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01014	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01015	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01016	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01017	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01018	note
+corpus/gen/gen.jsonl	gen-01019	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01020	note
+corpus/gen/gen.jsonl	gen-01021	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01022	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01023	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01024	note
+corpus/gen/gen.jsonl	gen-01025	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01026	note
+corpus/gen/gen.jsonl	gen-01027	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01028	note
+corpus/gen/gen.jsonl	gen-01029	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01030	note
+corpus/gen/gen.jsonl	gen-01031	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01032	note
+corpus/gen/gen.jsonl	gen-01033	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01034	note
+corpus/gen/gen.jsonl	gen-01035	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01036	note
+corpus/gen/gen.jsonl	gen-01037	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01038	note
+corpus/gen/gen.jsonl	gen-01039	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01040	note
+corpus/gen/gen.jsonl	gen-01041	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01042	note
+corpus/gen/gen.jsonl	gen-01043	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01044	note
+corpus/gen/gen.jsonl	gen-01045	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01046	note
+corpus/gen/gen.jsonl	gen-01047	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01048	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01049	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01050	note
+corpus/gen/gen.jsonl	gen-01051	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01052	note
+corpus/gen/gen.jsonl	gen-01053	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01054	note
+corpus/gen/gen.jsonl	gen-01055	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01056	note
+corpus/gen/gen.jsonl	gen-01057	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01058	note
+corpus/gen/gen.jsonl	gen-01059	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01060	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01061	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01062	note
+corpus/gen/gen.jsonl	gen-01063	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01064	note
+corpus/gen/gen.jsonl	gen-01065	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01066	note
+corpus/gen/gen.jsonl	gen-01067	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01068	note
+corpus/gen/gen.jsonl	gen-01069	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01070	note
+corpus/gen/gen.jsonl	gen-01071	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01072	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01073	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01074	note
+corpus/gen/gen.jsonl	gen-01075	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01076	note
+corpus/gen/gen.jsonl	gen-01077	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01078	note
+corpus/gen/gen.jsonl	gen-01079	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01080	note
+corpus/gen/gen.jsonl	gen-01081	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01082	note
+corpus/gen/gen.jsonl	gen-01083	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01084	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01085	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01086	note
+corpus/gen/gen.jsonl	gen-01087	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01088	note
+corpus/gen/gen.jsonl	gen-01089	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01090	note
+corpus/gen/gen.jsonl	gen-01091	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01092	note
+corpus/gen/gen.jsonl	gen-01093	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01094	note
+corpus/gen/gen.jsonl	gen-01095	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01096	note
+corpus/gen/gen.jsonl	gen-01097	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01098	note
+corpus/gen/gen.jsonl	gen-01099	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01100	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01101	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01102	note
+corpus/gen/gen.jsonl	gen-01103	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01104	note
+corpus/gen/gen.jsonl	gen-01105	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01106	note
+corpus/gen/gen.jsonl	gen-01107	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01108	note
+corpus/gen/gen.jsonl	gen-01109	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01110	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01111	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01112	note
+corpus/gen/gen.jsonl	gen-01113	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01114	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01115	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01116	note
+corpus/gen/gen.jsonl	gen-01117	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01118	note
+corpus/gen/gen.jsonl	gen-01119	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01120	note
+corpus/gen/gen.jsonl	gen-01121	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01122	note
+corpus/gen/gen.jsonl	gen-01123	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01124	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01125	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01126	note
+corpus/gen/gen.jsonl	gen-01127	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01128	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01129	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01130	note
+corpus/gen/gen.jsonl	gen-01131	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01132	note
+corpus/gen/gen.jsonl	gen-01133	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01134	note
+corpus/gen/gen.jsonl	gen-01135	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01136	note
+corpus/gen/gen.jsonl	gen-01137	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01138	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01139	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01140	note
+corpus/gen/gen.jsonl	gen-01141	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01142	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01143	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01144	note
+corpus/gen/gen.jsonl	gen-01145	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01146	note
+corpus/gen/gen.jsonl	gen-01147	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01148	note
+corpus/gen/gen.jsonl	gen-01149	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01150	note
+corpus/gen/gen.jsonl	gen-01151	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01152	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01153	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01154	note
+corpus/gen/gen.jsonl	gen-01155	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01156	note,tx,prevouts
+corpus/gen/gen.jsonl	gen-01157	note,tx,prevouts
+corpus/road/road.jsonl	road-gen-00793	note,tx,prevouts
+corpus/road/road.jsonl	road-gen-00794	note,tx,prevouts
+corpus/road/road.jsonl	withheld-67da1c7db376a24fce0e	note
+corpus/road/road.jsonl	road-gen-00796	note
+corpus/witnesses/gobdk/gen.jsonl	withheld-65ce5f628391a215ecb4-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+corpus/witnesses/gobdk/gen.jsonl	withheld-8eb2adb071bf18e62037-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+corpus/witnesses/sv-node-v1.2.2/gen.jsonl	withheld-a7d36350b832c0a14c9d-withheld-cf03083512c519ee77ec	note,divergence.decided_by,divergence.note
+corpus/witnesses/sv-node-v1.2.2/gen.jsonl	withheld-bf2ecf075bb09ae18070-withheld-cf03083512c519ee77ec	note,divergence.decided_by,divergence.note
+corpus/witnesses/sv-node-v1.2.2/road.jsonl	withheld-f14441f0769a6abae1b4-withheld-67da1c7db376a24fce0e	note,divergence.decided_by,divergence.note
+corpus/witnesses/sv-node-v1.2.2/road.jsonl	withheld-bf299a91c3c194e72dff-withheld-67da1c7db376a24fce0e	note,divergence.decided_by,divergence.note
+corpus/witnesses/ts-sdk/gen.jsonl	withheld-2bfb7b25aeb65a026c88-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+corpus/witnesses/ts-sdk/gen.jsonl	withheld-f4b17b8a7f7f2a6f7da9-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+corpus/witnesses/ts-sdk/gen.jsonl	withheld-d9fa232242a9903ea62f-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+corpus/witnesses/ts-sdk/gen.jsonl	withheld-4e6d781f0554014f939b-withheld-cf03083512c519ee77ec	note,tx,prevouts,divergence.decided_by,divergence.note
+
+## d9-gosdk-172-splice: 2026-10-12, #102
+# Release condition: tools/export_withheld_rules.txt. [M] D7 and D8 cover both source spends; D9 adds only their four go-sdk witness copies, with no duplicate field claim.
+corpus/witnesses/go-sdk/gen.jsonl	withheld-3766622cd12712ca3331-withheld-cf03083512c519ee77ec	tx,prevouts,note,divergence.decided_by,divergence.note
+corpus/witnesses/go-sdk/gen.jsonl	withheld-da9784e01b91c9e513d9-withheld-cf03083512c519ee77ec	tx,prevouts,note,divergence.decided_by,divergence.note
+corpus/witnesses/go-sdk/road.jsonl	withheld-072f2959ba7a2b3f93e1-withheld-67da1c7db376a24fce0e	tx,prevouts,note,divergence.decided_by,divergence.note
+corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c7db376a24fce0e	tx,prevouts,note,divergence.decided_by,divergence.note

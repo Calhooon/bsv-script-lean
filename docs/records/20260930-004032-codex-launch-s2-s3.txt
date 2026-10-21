@@ -1,0 +1,5 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+S2: sub of lane F on studio, tree ~/bsv/worktrees/spec-lean-b; model gpt-6-astra; parent S3; Claude pane OPEN
+closed S2
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]

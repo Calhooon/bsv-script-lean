@@ -1,0 +1,350 @@
+{
+  "base_commit": "fc93e50160a878408acfd4978fde69f2bc1760ed",
+  "calls": 536,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [],
+    "finality": [],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 1729457,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-160808Z/receipt.json",
+    "sha256": "5bff0195c7340765d286be39a63634d3c27f757a6fc7f6755ce9966318cb6b03"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "58d3629f0931e727550339085a7563611873f5926f42b406ad1a0a2ef16e337f",
+      "height": 112
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261015-160808-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 1,
+    "ends": 1,
+    "events": 64,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "2026-10-14-conflicting-spends-order/s1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-14-conflicting-spends-order/s2",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-14-conflicting-spends-order/c1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-14-conflicting-spends-order/r1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-14-conflicting-spends-order/r2",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-14-conflicting-spends-order/r3",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-15-sentinel-refusal-pair/b1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-15-sentinel-refusal-pair/p1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-15-sentinel-refusal-pair/p2",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "2026-10-15-sentinel-refusal-pair/s1",
+        "verdict": "agree"
+      },
+      {
+        "row": "2026-10-15-sentinel-refusal-pair/s2",
+        "verdict": "non-judging"
+      }
+    ]
+  },
+  "rows_selected": [
+    "scenario:2026-10-14-conflicting-spends-order",
+    "scenario:2026-10-15-sentinel-refusal-pair"
+  ],
+  "run_id": "cut2-66q4-20261015-160808",
+  "scenarios": [
+    {
+      "counts": {
+        "agree": 6,
+        "diverge": 0,
+        "label": "[M]",
+        "no-verdict": 0,
+        "non-judging": 0,
+        "steps": 6
+      },
+      "scenario": "2026-10-14-conflicting-spends-order",
+      "steps": [
+        {
+          "diverging_fields": [],
+          "id": "s1",
+          "trace": "primary",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "s2",
+          "trace": "primary",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "c1",
+          "trace": "concurrent",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "r1",
+          "trace": "reorg",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "r2",
+          "trace": "reorg",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "r3",
+          "trace": "reorg",
+          "verdict": "agree"
+        }
+      ]
+    },
+    {
+      "counts": {
+        "agree": 3,
+        "diverge": 0,
+        "label": "[M]",
+        "no-verdict": 0,
+        "non-judging": 2,
+        "steps": 5
+      },
+      "scenario": "2026-10-15-sentinel-refusal-pair",
+      "steps": [
+        {
+          "diverging_fields": [],
+          "id": "b1",
+          "trace": "primary",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "p1",
+          "trace": "promiscuous",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "p2",
+          "trace": "promiscuous",
+          "verdict": "non-judging"
+        },
+        {
+          "diverging_fields": [],
+          "id": "s1",
+          "trace": "standard",
+          "verdict": "agree"
+        },
+        {
+          "diverging_fields": [],
+          "id": "s2",
+          "trace": "standard",
+          "verdict": "non-judging"
+        }
+      ]
+    }
+  ],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-15T16:08:23Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 0,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 18.431804125
+  }
+}

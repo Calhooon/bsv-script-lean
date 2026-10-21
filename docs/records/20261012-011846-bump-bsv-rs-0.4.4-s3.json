@@ -1,0 +1,1223 @@
+{
+  "base": "e72d40193eba77dba9e1cb3131a25fd8e12dda86",
+  "bsv_rs_version": "0.4.4",
+  "checksum": "a1e259211cb7002ff74656c0b0347e6159209238df43760e2a24d87ce9da6621",
+  "upstream_commit": "5c15528e0742beb124555d33881393ffa56f8778",
+  "corpora": [
+    {
+      "corpus": "arith",
+      "entries": 692,
+      "old_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "new_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/arith/cases.jsonl",
+      "before_sha256": "6a4cb453d3ba601f3d832bbc0e831ed5369d03b0112d262827657a62164f8d14",
+      "after_sha256": "66fe10ba06d01d9c0b706788c76b044cb1c3f67ac82e606a7e1f7531e80c194d",
+      "stored_sha256": "66fe10ba06d01d9c0b706788c76b044cb1c3f67ac82e606a7e1f7531e80c194d",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "bytes",
+      "entries": 512,
+      "old_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "new_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/bytes/cases.jsonl",
+      "before_sha256": "4d2b28b1872bccbe449a0c8dbf53e7d6991b271c812467cee3f37408130072bc",
+      "after_sha256": "7a80f9294669955a58b469e1faacb2f6be29cceaa465ae5ce2b3c255f70458fd",
+      "stored_sha256": "7a80f9294669955a58b469e1faacb2f6be29cceaa465ae5ce2b3c255f70458fd",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-bn_op",
+      "entries": 170,
+      "old_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      },
+      "new_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 95
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 95
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+      "before_sha256": "f4f7852c9e7b02d039e50a8eab27bc4ade35b9101105a4f8ba47ea8811554d04",
+      "after_sha256": "43a24c91412b6e082ec211284e0d1fbb06dc3d9d25711a7e4d2dd2d100fd452a",
+      "stored_sha256": "43a24c91412b6e082ec211284e0d1fbb06dc3d9d25711a7e4d2dd2d100fd452a",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "entries": 36,
+      "old_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      },
+      "new_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 23
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 23
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+      "before_sha256": "351117041ca0909f74ee64ef6dd5ccf50fd68bd7bd7f2154a2320e44a3d89ade",
+      "after_sha256": "5ce1def9ffe89379dc4ba174b280349d98fa244567f3102cb3fc0183e365e512",
+      "stored_sha256": "5ce1def9ffe89379dc4ba174b280349d98fa244567f3102cb3fc0183e365e512",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-multisig",
+      "entries": 30,
+      "old_verdicts": {
+        "invalid": 30
+      },
+      "new_verdicts": {
+        "invalid": 30
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+      "before_sha256": "99efbaa88efa4f156cb8042dde749ca1e6d9ce3a191befd01e00548da50d233b",
+      "after_sha256": "50d74000bc61631fd34ccbf5c5d617b5fcabdaae6b318bf076bd1d96437552eb",
+      "stored_sha256": "50d74000bc61631fd34ccbf5c5d617b5fcabdaae6b318bf076bd1d96437552eb",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-opcode",
+      "entries": 144324,
+      "old_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      },
+      "new_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 77263
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 77263
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-opcode/cases.jsonl.gz",
+      "before_sha256": "82884199d098696515247ffe4a73b8740b1a38a3c0aab34b2c5cd45c7f785669",
+      "after_sha256": "5069cfe19f22b826c63137709c11ea1ddd6276f52a1caa24a15154986d52d746",
+      "stored_sha256": "ccb3ddbb46aeb55c4368068c297ea3422fffe62a149da26f3f6bcd9b2fd51d88",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-script",
+      "entries": 67991,
+      "old_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      },
+      "new_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 67634
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 67634
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-script/cases.jsonl.gz",
+      "before_sha256": "05aab314409c5995e86042699ba8c41474565b50d30998316db170346939f39a",
+      "after_sha256": "e39e345009633f4c81a56121ef58adf65deb80f456bb62a2978aef9c680ec1cb",
+      "stored_sha256": "504f0c0379682f8751a14880f1397190036fe3c924d00bde37af6649f1c7b450",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-script_P2SH",
+      "entries": 64,
+      "old_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      },
+      "new_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 8
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 8
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+      "before_sha256": "8ca2440e1cef299317c194b2a01c4333e11e936d7c476d93a1a1f129f320e321",
+      "after_sha256": "a65606235b9178b44b2071f00ede328ca5349a01c885ab8084755193d854c1e9",
+      "stored_sha256": "a65606235b9178b44b2071f00ede328ca5349a01c885ab8084755193d854c1e9",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-sigopcount",
+      "entries": 6,
+      "old_verdicts": {
+        "invalid": 6
+      },
+      "new_verdicts": {
+        "invalid": 6
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+      "before_sha256": "44190e13aa575c408ead99c73fffb7c3d09d98d2129f2c5dd4dc7138b0de8471",
+      "after_sha256": "6790144dc2dfebde876069f420174b08772005c956c6e7c13618247c087a4dd0",
+      "stored_sha256": "6790144dc2dfebde876069f420174b08772005c956c6e7c13618247c087a4dd0",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-transaction",
+      "entries": 167,
+      "old_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      },
+      "new_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 59
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 59
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+      "before_sha256": "268943b4f9d03a3194ea5f255631e2ee89e5e20cfa160a054f1b9ba6f956d9c4",
+      "after_sha256": "4bdd0d04492ab22c47e81301ba68da9d94a4f01128594b9f66b1c970de41d3e7",
+      "stored_sha256": "4bdd0d04492ab22c47e81301ba68da9d94a4f01128594b9f66b1c970de41d3e7",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c1",
+      "entries": 1024,
+      "old_verdicts": {
+        "invalid": 1024
+      },
+      "new_verdicts": {
+        "invalid": 1024
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+      "before_sha256": "ce6946898c714d0363fef15bdc89abd6305a29dabc1215330e6ef22f97d5a55e",
+      "after_sha256": "b2ad12c520514e9c062e182b9954e9a1abcb2af3586dbcc58fda36480c7e31e9",
+      "stored_sha256": "b2ad12c520514e9c062e182b9954e9a1abcb2af3586dbcc58fda36480c7e31e9",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c102",
+      "entries": 2048,
+      "old_verdicts": {
+        "invalid": 2048
+      },
+      "new_verdicts": {
+        "invalid": 2048
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz",
+      "before_sha256": "50dd49ad51819f8bc0f53e6b0269d094b3ffb8d9ed4f8ba3fe1d1178712a013c",
+      "after_sha256": "2f0e8e49bedcff8765206e3996a82343f18a580cc2b3479e887c11b41ae09964",
+      "stored_sha256": "f2442f9ee9389720ca3a68e65f1755880b890009e0c095bf89612726999c184b",
+      "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g102-c102",
+      "entries": 4097,
+      "old_verdicts": {
+        "invalid": 4097
+      },
+      "new_verdicts": {
+        "invalid": 4097
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2048
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2048
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz",
+      "before_sha256": "a461c635a448db6d78bb5d5dec8fba8a0364491bda9596b8993126fe062717a4",
+      "after_sha256": "fdf55917f3fa8881a1b68c3df3a7f59dde0b8d14c1d0489dc8f632575de48bf4",
+      "stored_sha256": "ad816ef9c84c538411efd07b64947c9ec3d89db809176b5ed5b4d1c50eceb557",
+      "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c1",
+      "entries": 4096,
+      "old_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      },
+      "new_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz",
+      "before_sha256": "5be125cea4b3d788dc0d9eee924011ac4b8881d702710bca339718d6044fb113",
+      "after_sha256": "bbf2ec7f470f068e9e76efd50bd08b770d2e0c22e2f9366294180c4aa2f3e573",
+      "stored_sha256": "710f43c2ea822eabb51d12f4ba0f21dc1ed74c198c605b3a73d5ecbd18199073",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c103",
+      "entries": 8192,
+      "old_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      },
+      "new_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz",
+      "before_sha256": "f1286ff53f1d298a63066b630cd53d4d6b49aa4460cfdec4e78b3c133476bc3a",
+      "after_sha256": "76d8f4928877fa4a93e3abd1260f915be6a172c27b9e504276991b4546dffe1d",
+      "stored_sha256": "ba3d2e24322fe022ee2ea91e41b24c3a541c52d1a0ab3e0951e652e0067f167a",
+      "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g102-c1",
+      "entries": 3,
+      "old_verdicts": {
+        "invalid": 3
+      },
+      "new_verdicts": {
+        "invalid": 3
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+      "before_sha256": "47aa1f88b042a5b8991d07079813f0fd14212c3cbd258e46f4c74e92c3bec18a",
+      "after_sha256": "23a333de9a44c9f22526c130ba7dba1775e56bf1e861c095ab22fb77f023f7c4",
+      "stored_sha256": "23a333de9a44c9f22526c130ba7dba1775e56bf1e861c095ab22fb77f023f7c4",
+      "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g103-c103",
+      "entries": 16384,
+      "old_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      },
+      "new_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6144
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6144
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz",
+      "before_sha256": "31acc0ccbef1a2580f92a2f8eb4c09bf6efaa6eedadb954fc3647ed511c189e3",
+      "after_sha256": "9c4b0bc3beeafcd6d8892d0e77696d98eb3d5e3317d13dadcb6c0a9a1932adbe",
+      "stored_sha256": "e92868b74b7fc188e3da1dfd20217d7cce0bb85efc457820e41566f15b0b5ac5",
+      "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "crypto",
+      "entries": 84,
+      "old_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "new_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/crypto/cases.jsonl",
+      "before_sha256": "863995a24722a492f19e4702ca0da2d7f6c21e534fbd75499ba21b89982ec661",
+      "after_sha256": "1b2e9a5fc6404b98d83a4ad9bf7ac178af97faa2530b8bfea650042dc8ec2789",
+      "stored_sha256": "1b2e9a5fc6404b98d83a4ad9bf7ac178af97faa2530b8bfea650042dc8ec2789",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "eras",
+      "entries": 74,
+      "old_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "new_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/eras/eras.jsonl",
+      "before_sha256": "de653ffec1307a4749b47e84dc4c13b2a4e61e58f14f1352e140ef8fc8a773c1",
+      "after_sha256": "ee7dd889640db8d2da65bb4e1ac0587be79eaaffffd9a2e1d5f0f90ea2ff6504",
+      "stored_sha256": "ee7dd889640db8d2da65bb4e1ac0587be79eaaffffd9a2e1d5f0f90ea2ff6504",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "flow",
+      "entries": 1094,
+      "old_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "new_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/flow/flow.jsonl",
+      "before_sha256": "da9b9fbd76e68a83fc146d2e2a1c4ea760b9b6089fd228edd4422461fef4006c",
+      "after_sha256": "1657f811e610cc732e58de1953c808c220a0f14d72e77b49074cb5991910dc1c",
+      "stored_sha256": "1657f811e610cc732e58de1953c808c220a0f14d72e77b49074cb5991910dc1c",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "gen",
+      "entries": 1157,
+      "old_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      },
+      "new_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/gen/gen.jsonl",
+      "before_sha256": "b34cf544591f937bc5043f57a2b6c44d607d7782ad04d9beb3686b5de47437a0",
+      "after_sha256": "7949e6c5897fa3a5adfcbdbd459b404985a7f005b8b4ae58df7f88fbb9b7a299",
+      "stored_sha256": "7949e6c5897fa3a5adfcbdbd459b404985a7f005b8b4ae58df7f88fbb9b7a299",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "million",
+      "entries": 4,
+      "old_verdicts": {
+        "invalid": 4
+      },
+      "new_verdicts": {
+        "invalid": 4
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.resource-abort",
+          "entries": 4
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "rule": "engine.resource-abort",
+          "entries": 4
+        }
+      ],
+      "unexplained_witnesses": [],
+      "file": "corpus/million/witnesses.jsonl",
+      "before_sha256": "89fd53d444f6cc76a469cb7a2bc729937d2cc9660f985cb00a490a3435d1b234",
+      "after_sha256": "29664efbf6d01d2179a1793d8d7a4615868ffa173f8d82f69aaccb7da0d70483",
+      "stored_sha256": "29664efbf6d01d2179a1793d8d7a4615868ffa173f8d82f69aaccb7da0d70483",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "road",
+      "entries": 13512,
+      "old_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      },
+      "new_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/road/road.jsonl",
+      "before_sha256": "2ed2a1726921fc6832a0a3578c2e9da6b64da74f3ce3200a7825a8aa5047b204",
+      "after_sha256": "ff359ca4bd4f818fc4f8683d599091e9fdcb11be2a6750d9529f7e6c3815cfab",
+      "stored_sha256": "ff359ca4bd4f818fc4f8683d599091e9fdcb11be2a6750d9529f7e6c3815cfab",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "seed",
+      "entries": 10000,
+      "old_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "new_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/seed/seed.jsonl",
+      "before_sha256": "4f0a6eacdbd3191ab2ba7e10ac32a95a23d8c30da680186cec7cfc59b2e59572",
+      "after_sha256": "61d5575b5dd821f930ec3e68741ef2e238cd78ab49c10e0de8e3c8a4b73b34be",
+      "stored_sha256": "61d5575b5dd821f930ec3e68741ef2e238cd78ab49c10e0de8e3c8a4b73b34be",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "stack",
+      "entries": 262,
+      "old_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "new_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/stack/cases.jsonl",
+      "before_sha256": "e4688372721b62b714cbee4d6ebb80ad7bc9df73cc70c8047b20b9803d6d27eb",
+      "after_sha256": "19e9895b7f340469f0a44ee126cd7e194983196202105a7733a53d8e517fe32e",
+      "stored_sha256": "19e9895b7f340469f0a44ee126cd7e194983196202105a7733a53d8e517fe32e",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    },
+    {
+      "corpus": "tx",
+      "entries": 40,
+      "old_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "new_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      },
+      "changes": {},
+      "changed_ids": [],
+      "before": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "unexplained_witnesses": [],
+      "file": "corpus/tx/tx.jsonl",
+      "before_sha256": "6f631662726b2007145b1154e6b4dabbfc12d0287bc1c5382bf4fb35f63cd1b4",
+      "after_sha256": "ff0eb5819f91ff5b60f63a69b17e15c0b5f3348bfd3a6407cc32a2e6093fee47",
+      "stored_sha256": "ff0eb5819f91ff5b60f63a69b17e15c0b5f3348bfd3a6407cc32a2e6093fee47",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "differential_exit": 0
+    }
+  ],
+  "vectors": [
+    {
+      "file": "corpus/numbers/bsv-rs-0.4.4.jsonl",
+      "command": "num_vectors --count 1000",
+      "lines": 1000,
+      "sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515",
+      "identical_to_0.3.33": true,
+      "count": 1000,
+      "identical": true
+    },
+    {
+      "file": "corpus/sighash/bsv-rs-0.4.4.jsonl",
+      "command": "sighash_vectors --count 500",
+      "lines": 500,
+      "sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a",
+      "identical_to_0.3.33": true,
+      "count": 500,
+      "identical": true
+    },
+    {
+      "file": "corpus/arith/bsv-rs-0.4.4.jsonl",
+      "command": "arith_vectors --count 10000",
+      "lines": 10000,
+      "sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba",
+      "identical_to_0.3.33": true,
+      "count": 10000,
+      "identical": true
+    },
+    {
+      "file": "corpus/crypto/ecdsa-bsv-rs-0.4.4.jsonl",
+      "command": "ecdsa_vectors --count 200",
+      "lines": 1340,
+      "sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb",
+      "identical_to_0.3.33": true,
+      "count": 200,
+      "identical": true
+    }
+  ],
+  "checked_harness_files": {
+    "Makefile": "1e47def898d5640e7220127f3a1088364bf7a57c0d63edce2fa8a8f2c346f917",
+    "harness/Cargo.lock": "99703db7016212ec1f1fa187f17f85b6c2312a311ebf2ec1cf455931095f0e9c",
+    "harness/Cargo.toml": "a0ffe41b21967548e41cba5ce1aeed34c4176e0e5073bc8c2405d2f87d23bcd3",
+    "harness/rules/bsv-rs.json": "52715d6d5edde87488cdb9003d1e2f8dff6c2a670c70bf19c2916577a2b599a2",
+    "harness/rules/go-sdk.json": "b4f30e3c2925c56a38bea99c80028718d5495ea4c9e38dc1fafd74a5211f1e53",
+    "harness/rules/gobdk.json": "3433979f5c55ca967ac84b8bb6223c2a196babe01275fa413f99e88b26363c8e",
+    "harness/rules/sv-node.json": "bd30ab75c33cb5712d8f5c07085918bdd18b085c93d38d3ae5825012fe98b380",
+    "harness/rules/ts-sdk.json": "b69f8ab2e404c3dbc5a8afb9b00c339dff1ce12b28306b5b84a09911e3282a95",
+    "harness/rust-toolchain.toml": "9f80dcfe209d88ca8160da5d6df049498f71eee00a05100e8bf38a59fb6caece",
+    "harness/src/bin/arith_cases.rs": "d23275f0977c2f044323cb17b35d6ffaed85ed4de07e45a4fcea16528b52cd25",
+    "harness/src/bin/arith_vectors.rs": "78a80b870da798ae84f2a99205bbc68efccaf98298c09fd44ed9da2e5f1cbd18",
+    "harness/src/bin/bytes_cases.rs": "d3d387037b9c706cae905dd1234e8d612524690ad6f782940646f03774e141b5",
+    "harness/src/bin/crypto_cases.rs": "8c917975f09c1f2f8b5aeed39dcc071016f1997de8ded3d58b12a9c850fa67fb",
+    "harness/src/bin/ecdsa_vectors.rs": "31ca01af804e4b06ecbe520b4e27c141895e74dac970386d62d20310e210a3f8",
+    "harness/src/bin/flow_cases.rs": "8f6d4e18cbd7458c61c5114a9e192f2bfb56f070e32bce46622a520296b11690",
+    "harness/src/bin/gen.rs": "ad5cd90a96715996e43520dfbd3088fc04986b8909af8ec6ab7fab8dbb271c5c",
+    "harness/src/bin/num_vectors.rs": "27d3d2b10d87e651245fda3e28f4af68f94c55db0f175b2db8eb6e32056eda6f",
+    "harness/src/bin/oracle_chain.rs": "183b1b64a46bdef1b3dfc56e15cfb600d4d5d19e54b599c152f87c85160942bb",
+    "harness/src/bin/policy_witnesses.rs": "c6d76acbbdac7a092070731519341780b170ce1a09b6adf315731677d4df77b3",
+    "harness/src/bin/rules_check.rs": "635bad911dc82b86f02af12baaba1f3b656b25cdb229df349bdda4da4a2c5218",
+    "harness/src/bin/run_bsvrs.rs": "bc5ae7712f57d5766428f72bb658cba71c93f593e9f77a100de992f9e7f91276",
+    "harness/src/bin/run_diff.rs": "8e95a83bdae566e9a335ea29f9c9a639933e95babc8fe971b9df19e9bcde29c6",
+    "harness/src/bin/run_engine.rs": "be4a908d1b376575f0006c2ff8c0f87b8350d8b61a7449c0036d54944d0f9623",
+    "harness/src/bin/run_svnode.rs": "20a8ba952a48a5a8f740d3d2a16607be6ccbb3e6f456a498ff5b062ab5207746",
+    "harness/src/bin/run_teranode.rs": "154462f0bf36bd02399e74a253bde3eba86c50c340e77b9f07eb5670edc666b9",
+    "harness/src/bin/seed_gen.rs": "f9b4b61fc506a5e03d42be79c280b5386719aa9083d5de16b99f3e8f6bf03ee2",
+    "harness/src/bin/sighash_vectors.rs": "69d209d661748f52ce61c6a24a202a81c8d5681108bb8c286fae3fe396cb9c1e",
+    "harness/src/bin/sighash_verify.rs": "c7b35e5bd488f522dfb9a525c6d9cb1a0aa36c87f1d048145f29357836641897",
+    "harness/src/bin/spec_recorded.rs": "2eafb71cbc98aea38c0a188616a7450bbf7c6946d0f1bc9eddcc431053e8c60e",
+    "harness/src/bin/stack_cases.rs": "ab32690df5db9b8b1aee1f04ec0c79cebeb775860c0b3a6e7688683bfca35471",
+    "harness/src/block.rs": "4d23c8585e43bacc72fd174a0dbf17ceea603ad084278aa22225ef878d40f57c",
+    "harness/src/bsvrs_codes.rs": "2c5e005e1f3a4132f54f1f04410bc4e9d60ebaf81aaad36ee1c43831e5cdc008",
+    "harness/src/corpus.rs": "0804f10c42525496e57fc77c16bb56a65d96009b477947bc8859e59db6166b97",
+    "harness/src/differential.rs": "5dec23cdfe4efb7be576f4039f865e4dc9b9787410c5a7cc8fd4a22ae0bb6be3",
+    "harness/src/engine.rs": "8dd09ef7a20c38eb852b3061722776ab708c70a0d5fa8591c41295439ae2d670",
+    "harness/src/engines.rs": "6d24d7b57c0879348144117caac13a9c6b2f35b6c4897a25b6cd797af7e7800f",
+    "harness/src/flags_oracle.rs": "e75c544b5d7634442b5325cc850abd1f63f40f838fca4f241391fbdb76475d62",
+    "harness/src/gen.rs": "33429373b11f7ea2ac4e2332e703bdac9162926db2409ba389c9ff86583f3b90",
+    "harness/src/gosdk_codes.rs": "d14f632e37a87cc71ce8bc4796ec4d37a95ed49a7306205e5b952e0c8443b1a4",
+    "harness/src/lib.rs": "11ece46b705ddba50fe1dded2a26568269b952655dc7f9e4841d3347e2b76407",
+    "harness/src/rpc.rs": "740acac4f05c10518672b576f6269ee74ff6dc281048c0fe10c30c75107035ea",
+    "harness/src/rules.rs": "8d0b9a64eb4bd50be79eec17a036ce7ac7f379576cf9f71af7ec178487474fca",
+    "harness/src/stamp.rs": "332343316832f33e6c50a0a725c89af68fde5ede1f7a14dc32b0f7379c731b13",
+    "harness/src/svnode_codes.rs": "9d7d6bd6f630ba47176b023dc34907b8f859ba2c6640ab502fc40e304f2adf57",
+    "harness/src/tssdk_codes.rs": "3f400153c27c59914a1c32a04bd03c59dfcd5376ffd1c5209a1c9f7813b57db4",
+    "harness/src/txraw.rs": "06ceccf7cb9e92ce5448913b9ef7f3895d0798de92f5ee184a75cdbb6d32bb2b",
+    "harness/src/txroad.rs": "ba99fbddd9700131c8200be884c0cffb06095c4cf7324f61d47b3c222a9c4c39",
+    "harness/tests/crate_pins.rs": "333d1799feadd87a01f567ac7286ac817a081fb91d70f952e3cc8130731c1f12",
+    "harness/tests/recorded_inputs.rs": "54a5c0e6e02da96fc8e41cc7c8bd04e3db3ab2bb3a540eb416ccbdaafdf9a716",
+    "harness/tests/stamp_gate.rs": "3dcbe981d18d10314f9a5701928d6752555319d2469c28d14a5cc2ff660f0f9a",
+    "tools/check.sh": "917a1217089fbfdbe42109cc71553012457340850679aefd003f56f982409b08"
+  },
+  "upstream_audit": {
+    "vcs": {
+      "git": {
+        "sha1": "5c15528e0742beb124555d33881393ffa56f8778"
+      },
+      "path_in_vcs": ""
+    },
+    "source_test_files": 303,
+    "mismatches": []
+  },
+  "network_reads": [
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.3.34/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:33.396811+00:00",
+      "sha256": "1d091a2ced53dea79485c0aab21a1a3973c9cff1db001b25285872c4fdd03b1e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.3.35/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:33.553896+00:00",
+      "sha256": "50f541bb2a104ff58b14c98cbdcd2a420f14aca24b724412dd68965e4f7acce0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.4.0/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:33.699471+00:00",
+      "sha256": "f93ed629067e24fbdecce5a5f96d63b206f001b192d0ff1ac229853951dcd55a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.4.1/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:33.854503+00:00",
+      "sha256": "e1a9acd85a0aafc0e120fab43f9a660865e6ab93fc2dc38a473c76bcbcba8d3c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.4.2/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:33.993628+00:00",
+      "sha256": "04e3272d7fe92fb3f12409060dd3db02705a5708c9404571253d7109b0204225"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.4.3/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:34.148913+00:00",
+      "sha256": "dda41b123ae8a53b59fb08ff1a76726405e5f474f4beb94ac54a8d5906dc052f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Calhooon/bsv-rs/v0.4.4/CHANGELOG.md",
+      "read_at": "2026-10-12T01:13:34.196912+00:00",
+      "sha256": "c35e2a418836cc139bf27e37a301f6b4994087475329e5c2fb3f8bd00c8e1fa4"
+    },
+    {
+      "url": "https://crates.io/api/v1/crates/bsv-rs/0.4.4",
+      "read_at": "2026-10-12T01:13:34.438142+00:00",
+      "sha256": "efb725e5df114d315637d9329b56d4ad2a9d77c2eb7ee9fd781a420637237433"
+    },
+    {
+      "url": "https://api.github.com/repos/Calhooon/bsv-rs/git/ref/tags/v0.4.4",
+      "read_at": "2026-10-12T01:13:34.675100+00:00",
+      "sha256": "33f169d9522313e4503d59b673345c3cfa32d46554df73dc122a3527c3c46e72"
+    }
+  ],
+  "classifier_changes": [],
+  "unexplained_witness_ids": [],
+  "classifiers_unchanged": true,
+  "native_verdict_changes": 0,
+  "non_bsv_rs_entry_fields_unchanged": true,
+  "non_bsv_rs_implementation_rows_unchanged": true,
+  "lean_sources_unchanged": true,
+  "api_migration_required": false,
+  "tested_source_commit": "b8f6f8573064a22d72c42a7848199c28d95f8453"
+}

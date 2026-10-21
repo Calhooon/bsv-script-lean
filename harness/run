@@ -1,0 +1,224 @@
+#!/usr/bin/env bash
+# harness/run: THE CONFORMANCE HARNESS IN ONE COMMAND (bsv-script-lean #31; S3, 2026-09-29). It runs one implementation of
+# Bitcoin SV's script rules against a corpus, compares every verdict with the specification's, and writes the report.
+# harness/README.md ("Run it") is the manual; this header is the summary.
+#
+#   harness/run --impl <go-sdk|ts-sdk|gobdk|bsv-rs|sv-node> --corpus <dir|file.jsonl|all> [--corpus …]
+#               [--spec recorded|live] [--out <dir>] [--limit N] [--no-build]
+#               [--rpc <url> --cookie <file> [--rpc-mempool <url> --cookie-mempool <file>]]      (sv-node only)
+#
+# --spec recorded (the default) needs NO Lean build: the spec's verdicts are the ones recorded in the corpus (each entry's
+#   `spec@<commit>` and `spec-mempool@<commit>` keys, written out by `spec_recorded`). The SDK and node drivers take the flag
+#   words recorded in corpus/witnesses/<impl>/manifest.json (`--words-from`); the bsv-rs driver (run_diff) derives its words
+#   locally through `engine::word_for`, and its report identifies that derivation. The report names the commit the verdicts
+#   were recorded at.
+# --spec live runs the spec's own evaluator (eval/bsvs, built from lean/ by Lake) for the verdicts and the words.
+# --out is where the report goes, default harness/target/run/<UTC stamp>; the committed corpus and corpus/witnesses/ are never
+#   written (the drivers' --record is the maintainers' step, not this command's).
+# --corpus takes a corpus directory (its manifest.json or cases-manifest.json names the file), one .jsonl file, or `all`
+#   (seed flow arith stack crypto bytes eras gen tx). In recorded mode a corpus that records no spec verdict (corpus/bytes)
+#   is SKIPPED by name, never passed.
+#
+# The report, under <out>: <impl>/<corpus>.jsonl (one witness per corpus × column × rule: the smallest entry that diverges
+# under that rule, with both verdicts and the rule's citation), <impl>/manifest.json (the counts per corpus), <corpus>.log
+# (the driver's own report), spec/<corpus>.jsonl (the spec verdicts used) and summary.txt (one line per corpus).
+# Exit status: 0 when at least one corpus ran and every one that ran is GREEN (every divergence explained by a cited rule);
+# 1 on any RED (an unexplained divergence, a code outside the cited tables, an adapter error) or when nothing ran; 2 a usage
+# or setup error. A SKIP is printed and counted, never GREEN. A missing prerequisite (a toolchain, the GoBDK clone, the node's
+# cookie or RPC) is a SETUP STOP, exit 2, naming the prerequisite and harness/README.md's "Prerequisites"; never a RED.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ALL=(seed flow arith stack crypto bytes eras gen tx)
+
+usage() { sed -n '2,8p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2; exit "${1:-2}"; }
+die() { echo "harness/run: $*" >&2; exit 2; }
+# a missing prerequisite: a setup stop (exit 2), never a verdict; $2 names the README's subsection
+prereq() { echo "harness/run: SETUP STOP (no verdict was reached): $1. See harness/README.md, \"Prerequisites\", $2." >&2; exit 2; }
+pin() { awk -v k="$1" '/^```pins/{on=1;next} /^```/{on=0} on && $1==k {print $3; exit}' "$ROOT/docs/PROVENANCE.md"; }
+
+impl=""; spec_mode="recorded"; out=""; limit=""; corpora=(); build=yes
+rpc=""; cookie=""; rpc_mp=""; cookie_mp=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --no-build) build=no; shift; continue ;;
+    -h|--help) usage 0 ;;
+  esac
+  [ $# -ge 2 ] && [ -n "$2" ] || die "$1 needs a value (harness/run --help)"
+  case "$1" in
+    --impl) impl="${2:-}"; shift 2 ;;
+    --corpus) corpora+=("${2:-}"); shift 2 ;;
+    --spec) spec_mode="${2:-}"; shift 2 ;;
+    --out) out="${2:-}"; shift 2 ;;
+    --limit) limit="${2:-}"; shift 2 ;;
+    --rpc) rpc="${2:-}"; shift 2 ;;
+    --cookie) cookie="${2:-}"; shift 2 ;;
+    --rpc-mempool) rpc_mp="${2:-}"; shift 2 ;;
+    --cookie-mempool) cookie_mp="${2:-}"; shift 2 ;;
+    *) die "unknown argument: $1 (harness/run --help)" ;;
+  esac
+done
+[ -n "$impl" ] || usage
+[ ${#corpora[@]} -gt 0 ] || usage
+case "$spec_mode" in recorded|live) ;; *) die "--spec is recorded or live, not '$spec_mode'" ;; esac
+[ "$build" = yes ] || [ "$spec_mode" = recorded ] || die "--no-build requires --spec recorded (the live evaluator manages its own build)"
+case "$impl" in
+  go-sdk|gosdk) impl=go-sdk; engine=gosdk; driver=run_engine ;;
+  ts-sdk|tssdk) impl=ts-sdk; engine=tssdk; driver=run_engine ;;
+  gobdk) engine=gobdk; driver=run_engine ;;
+  bsv-rs) driver=run_diff ;;
+  sv-node) driver=run_svnode ;;
+  *) die "--impl is one of go-sdk, ts-sdk, gobdk, bsv-rs, sv-node (harness/README.md: bringing another implementation)" ;;
+esac
+if [ -n "$limit" ]; then
+  [ "$driver" != run_diff ] || die "--limit is not offered for bsv-rs (run_diff runs the whole corpus)"
+  case "$limit" in *[!0-9]*|'') die "--limit takes a count" ;; esac
+  [[ "$limit" == *[1-9]* ]] || die "--limit must be positive"
+fi
+if [ "$driver" = run_svnode ]; then
+  [ -n "$rpc" ] && [ -n "$cookie" ] || die "--impl sv-node needs --rpc <url> and --cookie <file> (a regtest node of the pinned release; harness/oracle/README.md)"
+fi
+[ "$build" = no ] || command -v cargo >/dev/null || prereq "cargo is not on PATH (the crate's toolchain is harness/rust-toolchain.toml)" "every implementation"
+command -v python3 >/dev/null || prereq "python3 is not on PATH" "every implementation"
+
+# the implementation's own prerequisites, checked before anything builds
+case "$impl" in
+  go-sdk)
+    if [ ! -x "${GOSDK_RUNNER:-$ROOT/harness/target/engines/gosdk-runner}" ] && [ "$build" = yes ]; then
+      command -v go >/dev/null || prereq "go is not on PATH; the go-sdk adapter builds with Go $(pin go.major)" "go-sdk"
+    fi ;;
+  ts-sdk)
+    # the adapter's Node: tools/node_bin.sh's choice, checked against the pin and handed to the driver, so the run uses it
+    nb="$("$ROOT/tools/node_bin.sh" 2>/dev/null)" || prereq "no Node found (tools/node_bin.sh: \$NODE_BIN, the newest nvm v$(pin node.major), node on PATH); the ts-sdk adapter runs on Node $(pin node.major)" "ts-sdk"
+    nmajor="$("$nb" -p 'process.versions.node.split(".")[0]' 2>/dev/null)" || prereq "$nb does not run" "ts-sdk"
+    [ "$nmajor" = "$(pin node.major)" ] || prereq "$nb is Node $nmajor; the ts-sdk adapter runs on Node $(pin node.major) (docs/PROVENANCE.md §1a node.major; set NODE_BIN to a Node $(pin node.major))" "ts-sdk"
+    export NODE_BIN="$nb"
+    if [ ! -d "$ROOT/harness/engines/ts/node_modules/@bsv/sdk" ] && [ "$build" = yes ]; then
+      command -v npm >/dev/null || prereq "npm is not on PATH; the ts-sdk adapter installs with npm ci" "ts-sdk"
+    fi ;;
+  gobdk)
+    if [ ! -x "${GOBDK_RUNNER:-$ROOT/harness/target/engines/gobdk-runner}" ] && [ "$build" = yes ]; then
+      command -v go >/dev/null || prereq "go is not on PATH; the GoBDK shim builds with Go $(pin go.major) and cgo" "gobdk"
+      command -v cc >/dev/null || prereq "no C compiler (cc) on PATH; the GoBDK shim links its prebuilt library through cgo" "gobdk"
+      gclone="$(pin gobdk.clone)"; gclone="${GOBDK_CLONE:-${gclone/#\~/$HOME}}"
+      git -C "$gclone" rev-parse HEAD >/dev/null 2>&1 || prereq "no GoBDK clone at $gclone (github.com/bitcoin-sv/bdk at $(pin gobdk.commit); GOBDK_CLONE names another path)" "gobdk"
+    fi ;;
+  sv-node)
+    for pair in "$rpc|$cookie" ${rpc_mp:+"$rpc_mp|$cookie_mp"}; do
+      u="${pair%%|*}"; ck="${pair#*|}"
+      [ -n "$ck" ] || die "--rpc-mempool needs --cookie-mempool <file>"
+      [ -r "$ck" ] || prereq "no cookie at $ck: no node of the pinned release (bitcoin-sv $(pin reference.tag)) is running on that datadir (harness/oracle/spec-node.sh local start writes <datadir>/regtest/.cookie)" "sv-node"
+      # one authenticated call: anything but HTTP 200 with a null error (a stale cookie's 401 included) is a setup stop
+      command -v curl >/dev/null || prereq "curl is not on PATH; the setup check asks the node's RPC through it" "sv-node"
+      resp="$(curl -sS -m 10 -w '\n%{http_code}' --user "$(cat "$ck")" -H 'content-type: text/plain' \
+        --data-binary '{"jsonrpc":"1.0","id":"harness-run","method":"getblockcount","params":[]}' "$u" 2>/dev/null)" \
+        || prereq "no RPC answer at $u (is the node running, on that port?)" "sv-node"
+      code="${resp##*$'\n'}"
+      [ "$code" = 200 ] || prereq "the RPC at $u answered HTTP $code to the cookie $ck (401: a stale or wrong cookie; it changes at every start)" "sv-node"
+      rpcerr="$(printf '%s' "${resp%$'\n'*}" | python3 -c 'import json, sys
+try: r = json.load(sys.stdin)
+except Exception: print("the answer is not JSON-RPC"); sys.exit()
+e = r.get("error") if isinstance(r, dict) else "the answer is not a JSON-RPC object"
+if e is not None: print(e.get("message", e) if isinstance(e, dict) else e)')"
+      [ -z "$rpcerr" ] || prereq "the RPC at $u with the cookie $ck answered getblockcount with an error: $rpcerr" "sv-node"
+    done ;;
+esac
+
+# the corpora: a name of ALL, a directory (its manifest names the file) or a file
+resolve() {
+  local c="$1" d f m
+  if [ -f "$c" ]; then printf '%s\n' "$(cd "$(dirname "$c")" && pwd)/$(basename "$c")"; return; fi
+  if [ -d "$c" ]; then d="$(cd "$c" && pwd)"; elif [ -d "$ROOT/corpus/$c" ]; then d="$ROOT/corpus/$c"; else die "no corpus '$c' (a directory, a .jsonl file, or one of: ${ALL[*]})"; fi
+  for m in manifest.json cases-manifest.json; do
+    if [ -f "$d/$m" ]; then
+      f="$(python3 -c 'import json, sys; print(json.load(open(sys.argv[1])).get("file", ""))' "$d/$m")"
+      if [ -n "$f" ] && [ -f "$d/$f" ]; then printf '%s\n' "$d/$f"; return; fi
+    fi
+  done
+  die "$d: no manifest.json or cases-manifest.json naming its corpus file"
+}
+files=()
+for c in "${corpora[@]}"; do
+  if [ "$c" = all ]; then names=("${ALL[@]}"); else names=("$c"); fi
+  for a in "${names[@]}"; do p="$(resolve "$a")" || exit 2; files+=("$p"); done
+done
+
+[ -n "$out" ] || out="$ROOT/harness/target/run/$(date -u +%Y%m%d-%H%M%S)"
+out="$(python3 -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$out")"
+case "$out/" in "$(python3 -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$ROOT/corpus")/"*) die "--out may not be inside corpus/ (the committed record)";; esac
+mkdir -p "$out/spec"
+
+# the builds this run needs: the driver (and spec_recorded) through cargo, the adapter through the Makefile's target
+cd "$ROOT/harness"
+if [ "$build" = yes ]; then
+  export CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-4}"
+  bins=(--bin "$driver"); [ "$spec_mode" = recorded ] && bins+=(--bin spec_recorded)
+  echo "harness/run: building ${bins[*]} (cargo build --release --locked)"
+  cargo build --release --locked --quiet "${bins[@]}" || die "cargo build failed"
+  TARGET="$(cargo metadata --format-version 1 --no-deps --locked | python3 -c 'import json, sys; print(json.load(sys.stdin)["target_directory"])')"
+else
+  # Existing executables are selected explicitly; this mode never validates their source tree.
+  TARGET="${CARGO_TARGET_DIR:-$ROOT/harness/target}"
+  echo "harness/run: reusing executables in $TARGET/release (--no-build; sources unchecked)"
+fi
+BIN="$TARGET/release"
+[ -x "$BIN/$driver" ] || die "missing executable $BIN/$driver"
+if [ "$spec_mode" = recorded ]; then
+  [ -x "$BIN/spec_recorded" ] || die "missing executable $BIN/spec_recorded"
+fi
+if [ "$build" = no ]; then
+  case "${engine:-}" in
+    gosdk) [ -x "${GOSDK_RUNNER:-$ROOT/harness/target/engines/gosdk-runner}" ] || die "--no-build needs the go-sdk adapter already built" ;;
+    tssdk) [ -d "$ROOT/harness/engines/ts/node_modules/@bsv/sdk" ] || die "--no-build needs the ts-sdk package already installed" ;;
+    gobdk) [ -x "${GOBDK_RUNNER:-$ROOT/harness/target/engines/gobdk-runner}" ] || die "--no-build needs the GoBDK adapter already built" ;;
+  esac
+fi
+case "${engine:-}" in
+  gosdk) [ -x "${GOSDK_RUNNER:-$ROOT/harness/target/engines/gosdk-runner}" ] || make -C "$ROOT" gosdk-build || prereq "the go-sdk adapter did not build (make gosdk-build; its output is above)" "go-sdk" ;;
+  tssdk) [ -d "$ROOT/harness/engines/ts/node_modules/@bsv/sdk" ] || make -C "$ROOT" tssdk-install || prereq "the ts-sdk adapter did not install (make tssdk-install; its output is above)" "ts-sdk" ;;
+  gobdk) [ -x "${GOBDK_RUNNER:-$ROOT/harness/target/engines/gobdk-runner}" ] || make -C "$ROOT" gobdk-build || prereq "the GoBDK shim did not build (make gobdk-build; its output is above)" "gobdk" ;;
+esac
+
+summary="$out/summary.txt"
+{
+  echo "harness/run $(date -u '+%Y-%m-%d %H:%M:%S UTC'): --impl $impl --spec $spec_mode${limit:+ --limit $limit}"
+  echo "the tree: $(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo unknown)$(git -C "$ROOT" status --porcelain 2>/dev/null | grep -q . && echo ' (uncommitted changes)' || true)"
+  if [ "$build" = no ]; then echo "prebuilt executables: $BIN; sources unchecked (--no-build)"; fi
+} > "$summary"
+green=0; red=0; skipped=0
+for f in "${files[@]}"; do
+  name="$(basename "$(dirname "$f")")"
+  spec="$out/spec/$name.jsonl"
+  log="$out/$name.log"
+  if [ "$spec_mode" = recorded ]; then
+    if ! "$BIN/spec_recorded" --corpus "$f" --out "$spec" > "$log" 2>&1; then
+      if grep -q "none carrying a recorded spec verdict" "$log"; then
+        echo "SKIP $name: the corpus records no spec verdict; run it with --spec live" | tee -a "$summary"
+        skipped=$((skipped + 1))
+      else
+        echo "RED $name: spec_recorded refused the corpus: $(tail -1 "$log")" | tee -a "$summary"
+        red=$((red + 1))
+      fi
+      continue
+    fi
+  else
+    "$ROOT/eval/bsvs" corpus "$f" --out "$spec" > "$log" 2>&1 || { tail -3 "$log" >&2; die "eval/bsvs corpus $f failed (the live spec needs the Lean build: lean/README.md)"; }
+  fi
+  args=(--corpus "$f" --spec "$spec")
+  words="$ROOT/corpus/witnesses/$impl/manifest.json"
+  case "$driver" in
+    run_engine) args=(--engine "$engine" "${args[@]}" --witnesses "$out"); [ "$spec_mode" = recorded ] && args+=(--words-from "$words") ;;
+    run_diff) mkdir -p "$out/bsv-rs"; args+=(--witnesses "$out/bsv-rs") ;;
+    run_svnode) args+=(--witnesses "$out" --rpc "$rpc" --cookie "$cookie"); [ -n "$rpc_mp" ] && args+=(--rpc-mempool "$rpc_mp" --cookie-mempool "$cookie_mp")
+                [ "$spec_mode" = recorded ] && args+=(--words-from "$words") ;;
+  esac
+  [ -n "$limit" ] && args+=(--limit "$limit")
+  rc=0; "$BIN/$driver" "${args[@]}" >> "$log" 2>&1 || rc=$?
+  verdict="$(grep -E "^$driver: (GREEN|RED)" "$log" | tail -1 || true)"
+  case "$rc:$verdict" in
+    "0:$driver: GREEN"*) green=$((green + 1)); echo "GREEN $name: ${verdict#"$driver: GREEN "}" | tee -a "$summary" ;;
+    *) red=$((red + 1)); echo "RED $name (exit $rc): ${verdict:-no verdict line; see $log}" | tee -a "$summary" ;;
+  esac
+done
+echo "harness/run: $green GREEN, $red RED, $skipped skipped; the report in $out (summary.txt)" | tee -a "$summary"
+[ "$red" = 0 ] && [ "$green" -gt 0 ] || exit 1

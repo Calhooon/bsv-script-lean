@@ -1,0 +1,42 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s9-r5c (1f75430); never force-pushed):
+  507d44c -> 95a7702  the fourth re-lens filed verbatim (docs/audit/2026-09-29-lens32-trust-relens4-part{A,B,C,D}-by-S1.md)
+                     and S1's sites: the walk names an init constant and a hand-made _unsafe_rec; eval/bsvs refuses an unset it
+                     cannot do; the README; Machine.lean's and ladder48.py's wording
+  cf2005b -> b2db77e  the round's record docs/records/20260929-212842-trust32-relens4-fixes-s1.md, S2's v5 patch record (the
+                     delta over v4, which S2 applied at e089260) and S4b's v4, the tests of S1's and S2's parts, the near-miss
+                     record, the Corrections appended to eight records
+  1f75430 -> f8329a0  S4b's v4 companion re-cut by its proposer at cf2005b (main had moved under the first cut)
+  and this record's commit: the leg of record's record, the superseded leg's record, the rows and the state page's row 78.
+  The base: 7f57598 (main had moved to 7f57598; the round rebased onto it without conflict).
+
+THE CUT BEFORE CONTINUE 54 (not landed): the round was first cut as 61a4ef6 and cd7dc07 (origin/lean-a-s9-r5), then rebased
+  onto S2's landing as af5b731, 27cc380 and 8096b4b (origin/lean-a-s9-r5b), with version 5 of S1's patch for S3's files. The
+  parent's paste of 22:03 UTC (continue 54) holds every #32 record for the parent's files until the owner rules, so the round
+  was re-cut without them. S1's sites differ from 8096b4b only where lean/AxiomCheck.lean and eval/README.md pointed at the
+  held record. The box leg of 8096b4b (docs/records/20260929-220142-make-check-box.txt, 22:01:42 UTC, twenty-one legs GREEN
+  in 170 s) is committed here as that run's record, NOT the leg of record: its tree is not this one.
+
+THE LEG OF RECORD: docs/records/20260929-222028-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from S1's worktree at
+  1f75430, clean and pushed as origin/lean-a-s9-r5c, in S1's own box worktree ~/bsv/worktrees/spec-box-lean-a:
+  the legs started 22:20:28 UTC, when the box leg lock was taken after 0 s (a Lean slot waited from 22:18:57Z); twenty-one legs GREEN in 94 s; the axiom check OK, 760 theorems, on lean/AxiomCheck.lean with the round-5 walk; the versiongate leg 296 cells, 0 differ; `bsvs --self-test` GREEN.
+
+THE BYTE-IDENTITY (the landing rule; docs/ on the path list since the parent's ruling at 38cae0d):
+  git diff --quiet 1f75430 <this commit> -- lean eval harness corpus tools Makefile spec ':(exclude)tools/cite_check.py'  exits 0
+  git diff --quiet 1f75430 <this commit> -- tools/cite_check.py   exits 0
+  git diff --quiet 1f75430 <this commit> -- docs                  exits 1: this record, the two legs' records, the rows, the
+  state page's row 78; and main's commits since the leg: docs/audit/2026-09-29-lens-S2-sitting9-by-S2.md docs/audit/2026-09-29-lens-S4b-sitting7-by-S4b.md docs/audit/README.md docs/lanes/harness.md docs/lanes/lean.md docs/records/20260929-214540-consumer-v020-35-s2.md docs/records/README.md 
+  So the eighteen legs that read neither stand on the leg of record, and the pins, cite and spec legs re-ran LOCAL inside the
+  hold, on the rebased tip with every page of this commit in place but this record (under docs/records/, which the cite leg
+  does not read, tools/cite_check.py:59–61):
+  (at f8329a0 with this commit's pages in place, 22:22:32 UTC; load: 18:22  up 7 days,  1:24, 10 users, load averages: 2.84 3.65 4.22)
+  check-pins: GREEN (73 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)   exit 0
+  cite_check: 8303 citations found in lean/ and docs/ (8220 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 218, history 5925, absent 0, orphan rows 4; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)   exit 0
+  specgen --check: OK (117 files up to date; 0 rules flagged)   exit 0
+
+THE LANDING LOCK (D151): The take asked at 22:22:31 UTC and took the lock at 22:22:31 UTC after 0 s. Inside the hold: the final fetch, the identity above, the page edits, the three local
+  legs, this record's commit and the push. The release comes after the push, by the landing script's EXIT trap; its time is
+  on #32 and in S1's END BLOCK.

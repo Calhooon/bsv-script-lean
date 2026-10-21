@@ -1,0 +1,60 @@
+{
+  "entries": 46,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/big_int_tests.jsonl",
+  "undecided": {
+    "a predicate (bint comparisons, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator%, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator*, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator+, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator- (negation), layer consensus): the drivers judge spends, and none has a hook that runs it": 6,
+    "a predicate (bint operator-, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator/, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (bint operator<<=, layer consensus): the drivers judge spends, and none has a hook that runs it": 10,
+    "a predicate (bint operator== and operator!=, layer consensus): the drivers judge spends, and none has a hook that runs it": 4,
+    "a predicate (bint operator>>=, layer consensus): the drivers judge spends, and none has a hook that runs it": 10,
+    "a predicate (bsv::abs, layer consensus): the drivers judge spends, and none has a hook that runs it": 1,
+    "a predicate (bsv::is_negative, layer consensus): the drivers judge spends, and none has a hook that runs it": 3
+  },
+  "undecided_ids": {
+    "a predicate (bint comparisons, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00008..00009"
+    ],
+    "a predicate (bint operator%, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00018..00019"
+    ],
+    "a predicate (bint operator*, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00014..00015"
+    ],
+    "a predicate (bint operator+, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00010..00011"
+    ],
+    "a predicate (bint operator- (negation), layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00020..00025"
+    ],
+    "a predicate (bint operator-, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00012..00013"
+    ],
+    "a predicate (bint operator/, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00016..00017"
+    ],
+    "a predicate (bint operator<<=, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00026..00035"
+    ],
+    "a predicate (bint operator== and operator!=, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00004..00007"
+    ],
+    "a predicate (bint operator>>=, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00036..00045"
+    ],
+    "a predicate (bsv::abs, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00046"
+    ],
+    "a predicate (bsv::is_negative, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-big_int-00001..00003"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+suite: opcode_tests
+source: src/test/opcode_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/opcode_tests.jsonl.gz
+status: passed
+test_cases_passed: 38
+assertions_passed: 433234
+cases_with_entries: 37
+entries: 144381
+sha256: 88652c71c6f6d3ff85304edc89b3bce4f9911a2e775923bdc9795332bebd2a1e
+sha256_keys_masked: 6437c6eeb1e1b9973854da09bda592428daab47d35695e86378b338fdfad7b22
+entries_masked: 9
+sha256_of_the_run: e67e0bbca605bcb15988244fc398bec74190728cae7374ea0b50bb3c2e1af5b9
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=opcode_tests

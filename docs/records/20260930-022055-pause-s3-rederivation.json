@@ -1,0 +1,15 @@
+{
+  "source [SRC]": "retained stranger seed and gzip export; the earlier missing cases.jsonl lookup ran no evaluator and wrote no verdict",
+  "seed_rows [D]": 10000,
+  "seed_unique_ids [D]": 10000,
+  "export_rows [D]": 10000,
+  "export_unique_ids [D]": 10000,
+  "paired_cells [D]": 20000,
+  "ledger_commands [D]": 22,
+  "ledger_nonzero_exits [D]": 0,
+  "seed_sha256 [D]": "34b1dbbc9a3120253dbdddcae6d6e9b5e1555df2ddc09157e5792f6014d51f65",
+  "export_sha256 [D]": "1cc694d9446d17cedf784bd404d1727e54b225ac7a4d43ee4caec34070d26607",
+  "source_byte_identity_exit [X]": 0,
+  "tag_object [SRC]": "35674c31a327c65e2c7046390a809dd13f1d5933",
+  "tag_commit [SRC]": "21ae89e5ffd41be043515ed5e80f61591c1aed32"
+}

@@ -1,0 +1,18 @@
+suite: lrshiftnum_tests
+source: src/test/lrshiftnum_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/lrshiftnum_tests.jsonl
+status: passed
+test_cases_passed: 6
+assertions_passed: 158
+cases_with_entries: 6
+entries: 36
+sha256: 27e34949c6c2348f674ba1600f79720834c6d25dbfe7897e31b3d6b79a158075
+sha256_keys_masked: 27e34949c6c2348f674ba1600f79720834c6d25dbfe7897e31b3d6b79a158075
+entries_masked: 0
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=lrshiftnum_tests

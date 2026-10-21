@@ -1,0 +1,355 @@
+{
+ "engine": "go-sdk",
+ "pin": "v1.7.2",
+ "source": "transcribed 2026-09-26 (S3, set 4) from harness/src/bin/run_engine.rs explain()/rule_record() at e74a503, arm by arm in order; the classes' text verbatim; re-read at v1.7.0 for #51/#52 on 2026-10-05, lane harness-b-repin2; re-read at v1.7.1 for #55 on 2026-10-05, lane harness-b-55 | 2026-10-06 (lane r34-rules, S3): R4 on #32, the shared copies of the default-mode classes made equal to harness/rules/ts-sdk.json's (the go-sdk engine has no default mode: of this table's rows only (22) names one of them, sighash.default-mode.forkid-not-required under the default column, and it classifies no go-sdk run) | 2026-10-12 (S3, lane gosdk-99d, #99): add two source-cited classes for go-sdk@v1.7.2 at 2ca481c5931b987a0c8f48bb341c70b7477b6b07; historical classes retain their explicitly named releases; disposition in docs/records/20261012-002025-repin-gosdk-172-s4b.md section 3b. The existing limits.maxscriptnumlength.policy citation is re-anchored at v1.7.2; its predicate and ruling are unchanged.",
+ "classes": {
+  "bitwise.shift.bigint-limit": {
+   "decided_by": "interpreter.cpp:1121–1187 with the byte loops 65–117 (a shift count of at least eight times the width yields zeros; the width is preserved, nothing is allocated beyond it); for OP_LSHIFTNUM/OP_RSHIFTNUM 692–764 with script_num.cpp:301–315 (the size bound on the result, SCRIPT_ERR_SCRIPTNUM_OVERFLOW; ts-sdk 2.8.0 Spend.ts:947–978 computes value << bits as a BigInt first); ts-sdk 2.8.0 Spend.ts:1349–1380 (bn1.ushln(shiftBits) on a BigNumber: the count becomes a BigInt shift, which V8 refuses above its BigInt size limit with a RangeError, not a ScriptEvaluationError)",
+   "ruling": "impl-wrong",
+   "note": "the SDK throws a JavaScript RangeError for a large shift count the reference evaluates; an application sees an exception, never a verdict (an abort by D15: a witness, never an undecided run since 2026-09-24)"
+  },
+  "engine.timeout": {
+   "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+   "ruling": "impl-wrong",
+   "note": "the engine returned no verdict on an input the reference decides within the wall and its 10× re-run (D15: an engine that cannot return the verdict disagrees observably; D15a: an entry decided on the re-run carries the engine's verdict and no witness for time alone); a witness, never an undecided run; the entry names the engine's cost, never a semantics"
+  },
+  "eras.default-mode.no-era": {
+   "decided_by": "ts-sdk 2.8.0 Spend.ts:326–340 (without explicit flags #isAfterGenesis and #isAfterChronicle are #isRelaxed(), the transaction's version alone; no height enters the mode) against the reference's eras from the coin's height and the block's (policy.h:226–245, verify_script_flags.cpp:32–81)",
+   "ruling": "open",
+   "note": "the default mode has no height input, so the era-boundary rows (a coin or a spend before Genesis, at the Chronicle boundary, at the DERSIG/CLTV/CSV/UAHF/DAA heights, the grandfathered P2SH) are decided by the version heuristic and differ from consensus by construction; reported for the mode's users, never a consensus claim (the explicit-flags columns are the comparable ones)"
+  },
+  "eras.utxo.spend-bit-conflated": {
+   "decided_by": "interpreter.cpp:411 (utxo_after_genesis = flags & SCRIPT_UTXO_AFTER_GENESIS, the COIN's era bit; policy.h:233–238 sets it per input from the coin's height) against the spend's GENESIS bit (verify_script_flags.cpp:71–75, the block's era); the rules that hang on the coin's era: OP_RETURN 856–871, the 520-byte element 455–458, the 1,000 elements 1800–1803, the 500 ops 466–467, the 4-byte numbers (script_num.cpp:62 with configscriptpolicy.cpp:83–86), the 10,000-byte script 429–430, the 20 keys (consensus.h:50), the disabled opcodes in a dead branch 470–471, the second OP_ELSE 829–831; ts-sdk 2.8.0 Spend.ts:326–335 (#isAfterGenesis with explicit flags = GENESIS || UTXO_AFTER_GENESIS || UTXO_AFTER_CHRONICLE) read at 387–392 (the number width), 743–750 and 794–805 (the disabled opcodes), 1110–1114 (the single ELSE), 1142–1145 (OP_RETURN), 1642 (the key count) and the limits 23–27",
+   "ruling": "impl-wrong",
+   "note": "the engine reads the coin's era from the spend's GENESIS bit, so a coin created before Genesis and spent in any later block is judged under the post-Genesis rules in the explicit-flags mode: the pre-Genesis limits and rules the reference applies to that coin (the eras corpus's pre-genesis rows) are not applied, and the post-Genesis single-ELSE rule is applied where the reference allows the second OP_ELSE"
+  },
+  "expansion.rshiftnum.negative-rounding": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:340–352 (the int64 path: `-((-value) >> bit_shift)`, division by 2^count rounding toward zero) and the big-int path (the magnitude shifted, the sign kept: big_int.cpp:371–393); the spec's own SV-node instance agrees with the spec on gen-00829 (−3 OP_RSHIFTNUM 3 = 0; corpus/INDEX.md §4c); go-sdk v1.7.0 operations.go:2569–2575 (big.Int.Rsh on the signed value: an arithmetic shift, −3 >> 3 = −1); at v1.7.1 go-sdk operations.go:2584–2588 shifts the magnitude and restores the sign, as the reference does, and #55's run on corpus/gen has no witness of the class",
+   "ruling": "impl-wrong",
+   "note": "a negative number shifted right by the engine rounds toward negative infinity where the reference rounds toward zero: a spend the reference accepts (the result 0 compared by OP_EQUAL) fails on the engine"
+  },
+  "expansion.shift.count-bigint": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:708–711 and 744–747 (the count as CScriptNum{…, true}, the big-int path), big_int.cpp:359–369 and 383–393 (a bint count that does not fit an int throws big_int_error) → interpreter.cpp:1819–1821 SCRIPT_ERR_BIG_INT; the spec's own SV-node instance says SCRIPT_ERR_BIG_INT on gen-00835 (corpus/INDEX.md §4c); go-sdk v1.7.0 operations.go:2547–2575 (the count capped at MaxScriptNumberLengthAfterChronicle × 8 and shifted, never refused); at v1.7.1 go-sdk operations.go:2581–2583 refuses a right-shift count above INT_MAX (ErrNumberTooBig, read as SCRIPT_ERR_BIG_INT by harness/src/gosdk_codes.rs), and #55's run on corpus/gen has no witness of the class",
+   "ruling": "impl-wrong",
+   "note": "the engine shifts by a count the reference refuses as outside int (SCRIPT_ERR_BIG_INT): a right shift by 2^31 is 0 to the engine and a refusal on the reference"
+  },
+  "flags.default-mode.policy-only": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+   "ruling": "open",
+   "note": "A POLICY omission, kept apart from the four consensus classes of the default mode (the owner's ruling R4 on #32, 2026-10-05: the policy-only class stays open beside them): the entry is valid under the reference's block word at its spend height and refused only by the relay word (MUST_USE_FORKID below the UAHF height, NULLFAIL where only the relay word carries it); the default mode accepts it. A mode against a node's policy, never a consensus claim; scoped to @bsv/sdk 3.0.0 without verifyFlags, the default/spec-mempool column, the corpora of corpus/witnesses/ts-sdk/manifest.json and the pin."
+  },
+  "flags.discourage-upgradable-nops": {
+   "decided_by": "policy.h:186 (a standard-set, never-mandatory flag); interpreter.cpp:765–771; ts-sdk 2.8.0 Spend.ts:785, 821 (#hasFlag('DISCOURAGE_UPGRADABLE_NOPS') only)",
+   "ruling": "open",
+   "note": "a POLICY flag: the relay word refuses an executed upgradable NOP, the block word and the default mode accept it; not a consensus divergence"
+  },
+  "flags.policy-as-consensus": {
+   "decided_by": "policy.h:178–190 (MINIMALDATA, NULLDUMMY, CLEANSTACK are standard-set flags; verify_script_flags.cpp:32–81 never sets them in a block word; blockScriptFlags_policy_off); ts-sdk 2.8.0 Spend.ts:315–317 (#isRelaxed = version > 1) and 341–366 (without explicit flags every restriction follows !#isRelaxed)",
+   "ruling": "open",
+   "note": "the SDK's default mode judges a version-1 spend by the relay restrictions no block word carries: a mode, not a claim about consensus; an application that validates blocks with the default mode rejects consensus-valid version-1 spends"
+  },
+  "flags.version-gate.absent": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+   "ruling": "impl-wrong",
+   "note": "under a post-Chronicle word (CHRONICLE set) the reference turns MINIMALDATA, LOW_S, NULLFAIL, NULLDUMMY, MINIMALIF, CLEANSTACK and SIGPUSHONLY off for a transaction of version > 1; the engine applies each whenever its flag is set: a consensus-valid version-2 spend is refused under the node's own word (the block word carries LOW_S, NULLFAIL and SIGPUSHONLY; the relay word all seven)"
+  },
+  "flags.version-gate.nullfail": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+   "ruling": "impl-wrong",
+   "note": "the default mode accepts a version-1 spend with a failing non-empty signature that the reference's word refuses at the spend's height. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run. A row the block word accepts and only the relay word refuses is flags.default-mode.policy-only, never this class."
+  },
+  "flow.else": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+   "ruling": "impl-wrong",
+   "note": "the default mode (no explicit word) accepts a second OP_ELSE the reference refuses post-Genesis. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run."
+  },
+  "limits.maxscriptnumlength": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+   "ruling": "impl-wrong",
+   "note": "the engine reads a number the reference refuses at the width (ts-sdk: any length after Genesis; go-sdk: the post-Chronicle width 33,554,432 for 32,000,000); a spend the reference refuses as SCRIPT_ERR_SCRIPTNUM_OVERFLOW at 750,000 bytes (a post-Genesis coin) is valid to it under the node's block word (bsv-rs read any length until 0.3.27 and applies the reference's limits since 0.3.28, bsv-rs#17); a refusal by the policy width alone (the spec valid at consensus, refusing on the mempool path) is limits.maxscriptnumlength.policy, split on 2026-09-27"
+  },
+  "limits.maxscriptnumlength.policy": {
+   "decided_by": "[SRC] go-sdk@v1.7.2 (2ca481c5931b987a0c8f48bb341c70b7477b6b07) script/interpreter/config.go:22–31,96–102,132–134 (era widths 4, 750,000 and 32,000,000, without a separate policy width); CHANGELOG.md:86 (32,000,000-byte constant); harness/engines/go/main.go:164–167 (explicit WithFlags). The spec at bitcoin-sv v1.2.3 (6504a3af), spec/flags.md:121–151 and docs/PARAMETERS.md:37, cites configscriptpolicy.cpp:79–110 and policy.h:156: the configured policy width defaults to 10,000 bytes, while the block path uses the era width. This class requires a valid spec block verdict and an invalid policy verdict with the width error; it makes no consensus-divergence claim.",
+   "ruling": "open",
+   "note": "a POLICY width, never a consensus claim (CLAUDE.md rule 1): the node's mempool refuses a number longer than its policy width (10,000 bytes by default) that its block word accepts; go-sdk has no such setting, so under the relay word it accepts what a block accepts. Split from limits.maxscriptnumlength (impl-wrong: the consensus width) on 2026-09-27 (S3, set 4) by the spec's consensus verdict (`spec_consensus`), when #26's redesigned rows reached the width on the mempool path"
+  },
+  "limits.stackmemory.policy-default": {
+   "decided_by": "[SRC] go-sdk@v1.7.2 (2ca481c5931b987a0c8f48bb341c70b7477b6b07) script/interpreter/config.go:34–40, script/interpreter/thread.go:482–490, script/interpreter/options.go:176–194, script/interpreter/operations.go:1071–1079, script/interpreter/stack.go:35–63; CHANGELOG.md:70,90 (new stack accounting and the 100,000,000-byte default, configurable with WithMaxStackMemory). The spec at bitcoin-sv v1.2.3 (6504a3af), spec/opcodes/OP_NUM2BIN.md:11–24 and spec/flags.md:136–151, cites interpreter.cpp:1741–1778 and configscriptpolicy.cpp:139–154,280–283: padding is charged against the configured budget, whose block zero setting means INT64_MAX.",
+   "ruling": "open",
+   "note": "A POLICY/configuration difference, not a universal consensus cap: on corpus/million, million-seed-352758 is valid in the spec block run and refused by go-sdk@v1.7.2 with ErrStackOverflow / SCRIPT_ERR_STACK_SIZE. OP_NUM2BIN requests 2,147,483,647 bytes; its 32-byte element charge makes 2,147,483,679, over the SDK default 100,000,000. The adapter passes an explicit flag word without WithMaxStackMemory. Both mempool runs refuse. This is the new documented behavior predicted by #99 item stack memory accounted as LimitedStack and limited to 100,000,000 bytes after Genesis; million had no prior SDK corpus run. OPEN denotes the separately configured policy budget, as for the existing policy-width class; this is a decided cause, not an unexplained run."
+  },
+  "sighash.default-mode.forkid-not-required": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+   "ruling": "impl-wrong",
+   "note": "the default mode accepts a signature without the FORKID bit that the reference's block word refuses before verifying at every spend height from the UAHF on. Scope (the owner's ruling R4 on #32, 2026-10-05, road 1): implementation-wrong in the SDK's DEFAULT MODE only, @bsv/sdk 3.0.0 called without verifyFlags, in this harness's default/spec and default/spec-mempool columns on the corpora named in corpus/witnesses/ts-sdk/manifest.json at the reference pin bitcoin-sv v1.2.2 (879fc8b); the explicit-flags columns are judged by their own rows, and no claim is made of a mode or a version not run. A row the block word accepts and only the relay word refuses (a spend below the UAHF height) is flags.default-mode.policy-only, never this class."
+  },
+  "sighash.dispatch.forkid-bit-without-flag": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:2112–2124 (BIP143 requires the FORKID word and type bit, with Chronicle dispatch), verify_script_flags.cpp:32–59; go-sdk v1.7.1 transaction/signaturehash.go:26–30,64–75 (dispatch reads the type, no script flag), script/interpreter/operations.go:1995–2009 (the word affects scriptCode clean-up before that call).",
+   "ruling": "impl-wrong",
+   "note": "a pre-UAHF spend whose hash type carries the FORKID bit is hashed the original way by the reference and accepted; the engine hashes it as BIP143 and the signature fails: the flag has no part in its dispatch"
+  },
+  "sighash.must-use-forkid": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+   "ruling": "impl-wrong",
+   "note": "the reference refuses the spend before verifying the signature; the engine verifies it and judges the spend by the outcome (here a failing signature under OP_CHECKSIG OP_NOT: valid under the block word, NULLFAIL under the relay word); a consensus-invalid spend accepted under the node's own block word"
+  },
+  "sighash.original.truncated-push": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1862–1892 (SerializeScriptCode), script.h:163–196 (GetOp2), interpreter.cpp:856–871 (post-Genesis OP_RETURN); go-sdk v1.7.1 transaction/signaturehash.go:338–347 (RemoveCodeSeparators error propagated), script/script.go:444–458 (ParseOps), script/script_chunk.go:25–90 (ErrDataTooSmall), script/errors.go:8; harness/engines/go/main.go:175–180 (the plain Execute error returned as undecided)",
+   "ruling": "impl-wrong",
+   "note": "An SDK abort on a script the reference decides is a witness by D15. This class remains withheld on the report under D135."
+  },
+  "sighash.scriptcode.findanddelete": {
+   "decided_by": "interpreter.cpp:255–263 CleanupScriptCode (no FindAndDelete when FORKID is enabled and in the hash type), 1484; ts-sdk 2.8.0 Spend.ts:1604 (OP_CHECKSIG) and 1689 (OP_CHECKMULTISIG): subscript.findAndDelete(the signature) unconditionally",
+   "ruling": "impl-wrong",
+   "note": "the signature's own push is deleted from the scriptCode under FORKID, so a signature over the deleted scriptCode verifies where the reference hashes the push in and refuses the spend"
+  },
+  "sighash.type.chronicle-bit": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+   "ruling": "impl-wrong",
+   "note": "The spend-era flag has no SDK image. The SDK applies its coin-era condition to the CHRONICLE hash-type modifier, so a pre-Chronicle coin spent under a Chronicle word can still be refused."
+  },
+  "sighash.type.forkid-bit.pre-genesis": {
+   "decided_by": "interpreter.cpp:291 (the hash-type checks run under SCRIPT_VERIFY_STRICTENC alone), 302–303 (SCRIPT_ERR_ILLEGAL_FORKID: the FORKID bit without SCRIPT_ENABLE_SIGHASH_FORKID); the block word before the UAHF carries neither (verify_script_flags.cpp:32–59), so the reference verifies the signature over the original digest and accepts it (the node on gen-00995); ts-sdk 2.8.0 Spend.ts:509–515 (#enforceSignatureForkId: 'must not use SIGHASH_FORKID' when the FORKID flag is absent, the coin is pre-Genesis and the type has the bit) called from #checkSignatureEncoding's try (526–537) whenever DER signatures are enforced (DERSIG, LOW_S or STRICTENC), the refusal re-labelled 'The signature format is invalid' by its catch",
+   "ruling": "impl-wrong",
+   "note": "a pre-UAHF spend the reference accepts under its own block word (DERSIG on, STRICTENC off) is refused by the engine: a STRICTENC-gated check applied under DERSIG"
+  },
+  "splice.num2bin.memory": {
+   "decided_by": "interpreter.cpp:1749–1752 (OP_NUM2BIN refuses a size above INT32_MAX with SCRIPT_ERR_PUSH_SIZE before anything is built), 1771–1777 with configscriptpolicy.cpp:139–154 (the consensus memory budget INT64_MAX); ts-sdk 2.8.0 Spend.ts:391–395 (#maxPushSize is Number.POSITIVE_INFINITY after Genesis: no bound below 2^32), 1816–1836 (a size up to 0xffffffff reaches Array.from({length: size}); above it ScriptResourceLimitError)",
+   "ruling": "impl-wrong",
+   "note": "a width of 2^31 the reference refuses with PUSH_SIZE makes the SDK allocate the element and V8 abort the process (`FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory`, node 22, 1.7 GB resident, deterministic in a fresh process); a 40,000,000-byte element the reference builds within its budget is built by the SDK in a fresh process (about 0.8 GB resident) and has killed a long-lived adapter process once under batching (recovered by the harness's retry in a fresh process). A resource wall and a process death, never a verdict: an abort by D15, a witness (never an undecided run since 2026-09-24)"
+  },
+  "splice.substr.int64-reader": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`). [SRC] go-sdk v1.7.1 `operations.go:2427–2461` reads length and offset with PopInt and Int64; `operations.go:2466–2492` covers OP_LEFT/OP_RIGHT.",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  },
+  "tx.locktime.nop": {
+   "decided_by": "interpreter.cpp:519–560 (OP_CHECKLOCKTIMEVERIFY executes for a pre-Genesis UTXO: the checker's CheckLockTime 2166–2202; a NOP for a post-Genesis UTXO 520–526); go-sdk v1.7.1 operations.go:616–620 (opcodeCheckLockTimeVerify: a NOP when the CHECKLOCKTIMEVERIFY flag is off or the thread is after Genesis, :619; discouraged under DiscourageUpgradableNops, :620–621; the lock-time check itself :640–683, verifyLockTime against the transaction's lock time)",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin's CLTV lock is never enforced by the engine: a spend the reference refuses as SCRIPT_ERR_UNSATISFIED_LOCKTIME is valid to it under the node's own words"
+  },
+  "tx.sequence.check-absent": {
+   "decided_by": "interpreter.cpp:562–597 (OP_CHECKSEQUENCEVERIFY for a pre-Genesis UTXO: the checker's CheckSequence 2204–2250 compares the masked operand with the input's nSequence, the transaction's version and the disable bit); go-sdk v1.7.1 operations.go:686–690 (opcodeCheckSequenceVerify: a NOP when the CHECKSEQUENCEVERIFY flag is off or the thread is after Genesis, :689; the operand read as a 5-byte number :710, its sign :718–719, the disable bit :727–728, the version below 2 refused :733–734, then the masked comparison :737 on)",
+   "ruling": "impl-wrong",
+   "note": "a pre-Genesis coin's relative lock is never compared with the input's sequence by the engine: a spend the reference refuses as SCRIPT_ERR_UNSATISFIED_LOCKTIME is valid to it under the node's own words"
+  },
+  "tx.sequence.post-genesis-utxo": {
+   "decided_by": "interpreter.cpp:562–597 (OP_CHECKSEQUENCEVERIFY executes for a pre-Genesis UTXO only; for a post-Genesis UTXO 563–569: a NOP, discouraged under the policy flag); go-sdk v1.7.1 operations.go:686–690 (opcodeCheckSequenceVerify is a NOP after Genesis, :689, as the reference's post-Genesis branch is, 563–569; discouraged under DiscourageUpgradableNops :690–691; the pre-Genesis check :710–760)",
+   "ruling": "impl-wrong",
+   "note": "under a word carrying CHECKSEQUENCEVERIFY (every block and relay word since CSVHeight) a post-Genesis spend that leaves a number without the disable bit under OP_NOP3 is refused for a version-1 transaction where the reference treats the opcode as a NOP; OP_CHECKLOCKTIMEVERIFY is a NOP in every mode (Spend.ts:1016–1018): the pre-Genesis families of #26 exhibit that one"
+  }
+ },
+ "rows": [
+  {
+   "why": "The SDK returns a plain error from the original digest parser (D15).",
+   "when": {
+    "rule": "sighash.original.truncated-push",
+    "engine": "undecided",
+    "native_starts_with": "non-engine-error: not enough data"
+   },
+   "class": "sighash.original.truncated-push"
+  },
+  {
+   "why": "(20) the CHRONICLE bit refused: go-sdk has no image of it (SIG_HASHTYPE)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 32,
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(20) the CHRONICLE bit refused: ts-sdk gates it on the COIN's era (a format error)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 32,
+    "native_contains": "signature format is invalid"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(22) the default mode has no FORKID flag: MUST_USE_FORKID is never raised (R4 on #32: implementation-wrong in the default mode)",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "default",
+    "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+    "engine": "valid"
+   },
+   "class": "sighash.default-mode.forkid-not-required"
+  },
+  {
+   "why": "(23) go-sdk dispatches to BIP143 on the FORKID BIT alone; the reference needs the flag too: before the UAHF a FORKID-bit type is hashed the original way and go-sdk's signature check fails",
+   "when": {
+    "rule_prefix_any": [
+     "sighash."
+    ],
+    "column": "word",
+    "spec": "valid",
+    "engine": "not-valid",
+    "sig_type_bit_any": 64,
+    "spend_height_lt": 478559
+   },
+   "class": "sighash.dispatch.forkid-bit-without-flag"
+  },
+  {
+   "why": "an engine that gives no answer within the driver's wall on an input the reference decides (D15): a witness",
+   "when": {
+    "engine": "undecided",
+    "native_starts_with": "adapter-timeout"
+   },
+   "class": "engine.timeout"
+  },
+  {
+   "why": "any other undecided run is unexplained (the code returned None here before every later arm)",
+   "when": {
+    "engine": "undecided"
+   },
+   "class": "unexplained"
+  },
+  {
+   "why": "(1) the absent version gate: under a node's word (CHRONICLE set) a version-2 spend is judged by the seven gated restrictions the reference turns off for it",
+   "when": {
+    "column": "word",
+    "version": "v2+",
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code_in": [
+     "SCRIPT_ERR_MINIMALDATA",
+     "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+     "SCRIPT_ERR_CLEANSTACK",
+     "SCRIPT_ERR_SIG_PUSHONLY",
+     "SCRIPT_ERR_SIG_NULLFAIL",
+     "SCRIPT_ERR_SIG_HIGH_S",
+     "SCRIPT_ERR_SIG_NULLDUMMY",
+     "SCRIPT_ERR_MINIMALIF"
+    ]
+   },
+   "class": "flags.version-gate.absent"
+  },
+  {
+   "why": "(8) MUST_USE_FORKID never enforced (go-sdk; the eras corpus, 2026-09-24): the engine says anything but MUST_USE_FORKID where the reference refuses the type without the bit",
+   "when": {
+    "column": "word",
+    "spec_code": "SCRIPT_ERR_MUST_USE_FORKID",
+    "engine_code_not": "SCRIPT_ERR_MUST_USE_FORKID"
+   },
+   "class": "sighash.must-use-forkid"
+  },
+  {
+   "why": "(9) the CHRONICLE hash-type bit (0x20) has no image in go-sdk (the eras corpus, 2026-09-24): the family",
+   "when": {
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE",
+    "family_contains": "chronicle-bit"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(9) the CHRONICLE hash-type bit (0x20) has no image in go-sdk: the eras rule",
+   "when": {
+    "spec": "valid",
+    "engine": "not-valid",
+    "engine_code": "SCRIPT_ERR_SIG_HASHTYPE",
+    "rule": "eras.spend.chronicle"
+   },
+   "class": "sighash.type.chronicle-bit"
+  },
+  {
+   "why": "(14p) the POLICY width alone (S3, set 4, 2026-09-27): the spec valid at consensus and refusing on the mempool path with the width's code, the engine accepting: the node's policy setting, never a consensus claim",
+   "when": {
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength.policy"
+  },
+  {
+   "why": "(14p) the same through OP_BIN2NUM's result test, on the width rule (the code has other sources)",
+   "when": {
+    "rule": "limits.maxscriptnumlength",
+    "spec_consensus": "valid",
+    "spec": "invalid",
+    "spec_code": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength.policy"
+  },
+  {
+   "why": "(14) no script-number length limit after Genesis (ts-sdk, in every mode; bsv-rs had none until 0.3.28): the reference's 750,000 / 32,000,000 / 10,000",
+   "when": {
+    "spec_code": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength"
+  },
+  {
+   "why": "(14b) the consensus width reached through OP_BIN2NUM's result test (S3, set 4, 2026-09-27), on the width rule",
+   "when": {
+    "rule": "limits.maxscriptnumlength",
+    "spec_code": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+    "engine": "valid"
+   },
+   "class": "limits.maxscriptnumlength"
+  },
+  {
+   "why": "(17) the numeric shifts' count outside int: the reference's big-int shift refuses it (SCRIPT_ERR_BIG_INT); an engine that shifts by any count says valid",
+   "when": {
+    "rule_in": [
+     "expansion.lshiftnum",
+     "expansion.rshiftnum"
+    ],
+    "spec_code": "SCRIPT_ERR_BIG_INT",
+    "engine": "valid"
+   },
+   "class": "expansion.shift.count-bigint"
+  },
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "rule": "splice.substr.int64-reader",
+    "spec": "valid",
+    "engine": "not-valid"
+   },
+   "class": "splice.substr.int64-reader"
+  },
+  {
+   "why": "(18) the right shift of a negative number: the reference rounds toward zero; an engine that shifts arithmetically rounds toward negative infinity",
+   "when": {
+    "rule": "expansion.rshiftnum",
+    "family_contains": "negative",
+    "spec": "valid",
+    "engine": "not-valid"
+   },
+   "class": "expansion.rshiftnum.negative-rounding"
+  },
+  {
+   "why": "#99: OP_NUM2BIN reaches the documented SDK policy budget in a spec-valid block run; an explicit flag word does not override that budget.",
+   "when": {
+    "column": "spec",
+    "spec": "valid",
+    "engine": "invalid",
+    "engine_code": "SCRIPT_ERR_STACK_SIZE",
+    "native_starts_with": "ErrStackOverflow: stack memory usage",
+    "native_contains": "over the limit of 100000000",
+    "has_opcode_any": [
+     128
+    ]
+   },
+   "class": "limits.stackmemory.policy-default"
+  }
+ ]
+}

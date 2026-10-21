@@ -1,0 +1,37 @@
+[export: 6 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+Model: Codex GPT-6.1-Sol. [LIT] #31: documented recorded-mode command, offline build, permitted seed corpus only. No node RPC, full scanner, closed record or paid application.
+
+Command: ['git', 'rev-parse', 'HEAD']
+e39ba468c3c9bef42f6041509914767f81f34a79
+Exit [X] 0
+
+Command: ['git', 'diff', '--quiet', 'HEAD', '--', 'harness']
+Exit [X] 0
+Gate free [M] 84%; one-minute load [M] 2.4140625; cargo jobs [LIT] 4.
+
+Command: ['uptime']
+20:27  up 7 days,  3:29, 11 users, load averages: 2.41 2.83 3.37
+Exit [X] 0
+
+Command: ['sysctl', '-n', 'vm.swapusage']
+total = 4096.00M  used = 2423.25M  free = 1672.75M  (encrypted)
+Exit [X] 0
+Transcript below contains raw executed counters.
+
+[withheld at export: a sibling tree's line]
+harness/run: building --bin run_engine --bin spec_recorded (cargo build --release --locked)
+GREEN seed: (every divergence explained by a rule with its citation)
+[withheld at export: a sibling tree's line]
+Exit [X] 0
+
+[withheld at export: a sibling tree's line]
+harness/run: building --bin run_engine --bin spec_recorded (cargo build --release --locked)
+GREEN seed: (every divergence explained by a rule with its citation)
+[withheld at export: a sibling tree's line]
+Exit [X] 0
+
+[withheld at export: a sibling tree's line]
+harness/run: building --bin run_diff --bin spec_recorded (cargo build --release --locked)
+GREEN seed: (every divergence explained by a rule with its citation)
+[withheld at export: a sibling tree's line]
+Exit [X] 0

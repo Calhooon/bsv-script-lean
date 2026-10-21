@@ -1,0 +1,12 @@
+S3's landing record for LANE F's END BLOCK at the relaunch of 21:56 UTC (set 4 sitting 3 continued, on Opus 5.5; 20260929-220406 UTC)
+
+the commit: 1d9b57805c81d109d1037d20fe3820a1e929e688 (HANDOFF.md, docs/lanes/harness.md, docs/records/README.md, docs/records/20260929-220055-endblock-relaunch2-s3.md), over 4b68458 on main
+the legs that read its paths, run LOCAL on the Studio at that commit (tools/check.sh <leg> under /usr/bin/env -u BASH_ENV /bin/bash --noprofile --norc;
+the 1-minute load 4.96 at the start; pins 17 s, cite 5 s, spec 2 s):
+    specgen --check: OK (117 files up to date; 0 rules flagged)
+    cite_check: 7853 citations found in lean/ and docs/ (7772 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2069, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 211, history 5482, absent 0, orphan rows 4; skipped 0
+    cite_check: GREEN (every anchored citation holds at the pin)
+    check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+every other leg by the landing rule (D142): git diff --quiet 21ae89e 1d9b578 -- . ':(exclude)docs' ':(exclude)HANDOFF.md' exits 0;
+    the leg of record at 21ae89e is S2's make check-box, GREEN in 155 s (docs/records/20260929-214052-make-check-box.txt)
+the sitting's Modal leg of record (D142): the lane's one at its final landed tree, named in the sitting's closing heading

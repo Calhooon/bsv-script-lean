@@ -1,0 +1,240 @@
+=== before: the summary
+at 799751b (0 uncommitted) bsvs 2928b4b039cfeedf load { 14.75 13.46 11.98 }
+{"commit":"799751b","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+        1.80 real         0.03 user         0.04 sys
+            65044480  maximum resident set size
+corpus/tx lines 37
+--- before ff.out.jsonl
+{"commit":"799751b","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+--- before corpus-tx.out.jsonl
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00001","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00002","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00003","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00004","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00005","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00006","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00007","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00008","spec":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00009","spec":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00010","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00011","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00012","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00013","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00014","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00015","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00016","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00017","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00018","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00019","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00020","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00021","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00022","spec":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00023","spec":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00024","spec":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00025","spec":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00026","spec":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00027","spec":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00028","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00029","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00030","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00031","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00032","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00033","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00034","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00035","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-too-many-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00036","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"799751b","config":"sv-mainnet-default","id":"tx-00037","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+--- before corpus-tx.time.txt
+bsvs corpus: 37 entries of corpus/tx/tx.jsonl under sv-mainnet-default, keyed spec@799751b
+        0.29 real         0.23 user         0.02 sys
+           266780672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16720  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 417  involuntary context switches
+          3019980139  instructions retired
+           792107100  cycles elapsed
+           215892784  peak memory footprint
+--- before ff.time.txt
+bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@799751b
+        1.80 real         0.03 user         0.04 sys
+            65044480  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4404  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  42  involuntary context switches
+           526083687  instructions retired
+           246532947  cycles elapsed
+            14008920  peak memory footprint
+=== after: the summary
+at c15a735 (0 uncommitted) bsvs 7c074bb032827ada load { 25.55 22.42 16.74 }
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+corpus/tx lines 37
+--- after ff.out.jsonl
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+--- after corpus-tx.out.jsonl
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00001","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00002","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00003","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00004","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00005","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00006","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00007","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00008","spec":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00009","spec":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00010","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00011","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00012","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00013","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00014","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00015","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00016","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00017","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00018","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00019","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00020","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00021","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00022","spec":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00023","spec":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00024","spec":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00025","spec":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00026","spec":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00027","spec":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00028","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00029","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00030","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00031","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00032","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00033","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00034","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00035","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-too-many-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00036","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00037","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+--- after corpus-tx.time.txt
+bsvs corpus: 37 entries of corpus/tx/tx.jsonl under sv-mainnet-default, keyed spec@c15a735
+        0.29 real         0.23 user         0.03 sys
+           267599872  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16763  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 251  involuntary context switches
+          3029232778  instructions retired
+           816496138  cycles elapsed
+           216711960  peak memory footprint
+--- after ff.time.txt
+bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@c15a735
+        1.51 real         0.03 user         0.04 sys
+            66125824  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4466  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 108  involuntary context switches
+           528795610  instructions retired
+           256693703  cycles elapsed
+            15106648  peak memory footprint
+=== after2: the summary
+at c15a735 (0 uncommitted) bsvs 7c074bb032827ada load { 16.62 20.52 16.30 } 23:15:09 UTC
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+corpus/tx lines 37
+--- after2 ff.out.jsonl
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"ff-control","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+--- after2 corpus-tx.out.jsonl
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00001","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00002","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00003","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00004","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00005","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00006","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00007","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00008","spec":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_NEGATIVE_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00009","spec":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_SCRIPTNUM_OVERFLOW","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00010","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00011","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00012","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00013","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00014","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00015","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00016","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00017","spec":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"},"spec-mempool":{"code":"SCRIPT_ERR_UNSATISFIED_LOCKTIME","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00018","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00019","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00020","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":"SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS","gate":{"verdict":"valid"},"input":0,"verdict":"invalid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00021","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00022","spec":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-inputs-duplicate","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00023","spec":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-prevout-null","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00024","spec":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-p2sh","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00025","spec":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00026","spec":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-vout-negative","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00027","spec":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-txouttotal-toolarge","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00028","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00029","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00030","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00031","spec":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-cb-length","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00032","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00033","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00034","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00035","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-too-many-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00036","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+{"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00037","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+--- after2 ff.time.txt
+bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@c15a735
+        0.10 real         0.03 user         0.04 sys
+            66355200  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4487  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  82  involuntary context switches
+           520425612  instructions retired
+           251426888  cycles elapsed
+            15368840  peak memory footprint

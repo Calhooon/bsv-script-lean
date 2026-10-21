@@ -1,0 +1,53 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+Continue 28 answered on a moving main (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28; the landing rule on a moving
+main, as docs/records/20260928-140101-endblock-landing-s3.txt applied it)
+
+THE STAMP: docs/records/20260928-135003-make-check-modal.txt, the sitting's ONE Modal tripwire of record (D142), GREEN at 016fca5;
+the END BLOCK landed on it at ffffa4d (docs/records/20260928-140101-endblock-landing-s3.txt). MAIN MOVED since: ffffa4d ->
+0e875ac (W0b, 14:15 and 14:20 UTC: its lane page, docs/sealed/ and docs/security/README.md). This landing, b51c6e4 on 0e875ac,
+touches HANDOFF.md (the answer heading, D150) and docs/lanes/harness.md (S1's pending paste, item (5)); no lean/ path, so no
+Lean landing lock (D151).
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit 016fca5 and the landing tip b51c6e4, outside the paths no leg reads or that
+the live legs below re-check:
+  git diff --quiet 016fca5 b51c6e4 -- :!HANDOFF.md :!docs/audit :!docs/records :!docs/lanes/harness.md :!docs/lanes/w0b.md :!docs/sealed :!docs/security
+  exit 0
+  the excluded: HANDOFF.md (no leg reads it: grep over tools/check.sh and the legs' tools finds it nowhere); docs/audit, docs/records,
+  docs/security (the cite leg's history paths, HISTORY_PREFIX in tools/cite_check.py) and docs/lanes/harness.md, docs/lanes/w0b.md,
+  docs/sealed (the cite leg reads docs/): the cite leg re-runs live below
+  git diff --stat 016fca5 b51c6e4:
+     HANDOFF.md                                         |   40 +-
+     .../audit/2026-09-28-lens-S3-sitting3-end-by-S3.md |  220 ++++
+     docs/audit/README.md                               |    1 +
+     docs/lanes/harness.md                              |    8 +-
+     docs/lanes/w0b.md                                  |  221 ++++
+     docs/records/20260928-135003-make-check-modal.txt  |  174 ++++
+     .../20260928-140101-endblock-landing-s3.txt        |   53 +
+     docs/records/README.md                             |    4 +-
+     docs/sealed/sdk-divergences-2026-09-28-record.json |   65 ++
+     docs/sealed/sdk-divergences-2026-09-28-sealed.html |   17 +
+     docs/security/README.md                            |   12 +
+     ...DK-INTERPRETER-DIVERGENCES-2026-09-28-RECORD.md |  103 ++
+     .../SDK-INTERPRETER-DIVERGENCES-2026-09-28.md      | 1098 ++++++++++++++++++++
+     .../sdk-divergences-2026-09-28-reproducers.jsonl   |   35 +
+     14 files changed, 2029 insertions(+), 22 deletions(-)
+
+THE LEGS, LIVE AT THE TIP b51c6e4:
+load before: { 43.59 38.02 42.90 } (above rule 17's 20 from other windows' builds: three python legs of seconds, as the landing
+records of 2026-09-27 17:47 and 2026-09-28 13:14 ran them)
+== tools/check.sh pins (14:26:13Z)
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+    OK     the built SV-node's version string                                 v1.2.2.0-g879fc8b42-dev
+  check-pins: GREEN (72 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite (14:26:15Z)
+  == cite: tools/cite_check.py: every anchored file:line citation of lean/ and docs/ at the pin (#43) ==
+  cite_check: 3079 citations found in lean/ and docs/ (3019 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1727, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 150, history 1112, absent 0, orphan rows 0; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec (14:26:22Z)
+  == spec: tools/specgen.py --check: the generated specification document is byte-identical to a regeneration from the Lean sources, the corpora and the witnesses (#17) ==
+  specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 50.20 39.55 43.38 }

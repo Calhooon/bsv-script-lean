@@ -1,0 +1,53 @@
+{
+  "entries": 61,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 6,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 6,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 6,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 6,
+  "source": "corpus/cpp/sigopcount_tests.jsonl",
+  "undecided": {
+    "a predicate (CScript::GetSigOpCount (P2SH, from the unlocking script), layer both): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (CScript::GetSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": 37,
+    "a predicate (CheckRegularTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": 6,
+    "a predicate (GetTransactionSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": 10
+  },
+  "undecided_ids": {
+    "a predicate (CScript::GetSigOpCount (P2SH, from the unlocking script), layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-sigopcount-00011",
+      "cpp-sigopcount-00016"
+    ],
+    "a predicate (CScript::GetSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-sigopcount-00001..00010",
+      "cpp-sigopcount-00012..00015",
+      "cpp-sigopcount-00017..00039"
+    ],
+    "a predicate (CheckRegularTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-sigopcount-00056..00061"
+    ],
+    "a predicate (GetTransactionSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-sigopcount-00040..00041",
+      "cpp-sigopcount-00043..00044",
+      "cpp-sigopcount-00046",
+      "cpp-sigopcount-00048",
+      "cpp-sigopcount-00050..00051",
+      "cpp-sigopcount-00053..00054"
+    ]
+  }
+}

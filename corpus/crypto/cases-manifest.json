@@ -1,0 +1,263 @@
+{
+  "corpus": "crypto-cases",
+  "file": "cases.jsonl",
+  "generator": "bsv-script-harness crypto_cases 0.0.1 (real signatures by bsv-rs; #11)",
+  "seed": "the keys are sha256 of labels",
+  "count": 84,
+  "sha256": "1159327df5c9b01421e24d7436eb3a39cf2866021cffcf242238caf418729df6",
+  "families": {
+    "crypto/checksig-in-unlock": 1,
+    "crypto/checksig-in-unlock/v1": 1,
+    "crypto/checksigverify": 1,
+    "crypto/checksigverify/fail": 1,
+    "crypto/checksigverify/fail/v1": 1,
+    "crypto/checksigverify/v1": 1,
+    "crypto/codeseparator": 1,
+    "crypto/codeseparator/v1": 1,
+    "crypto/codeseparator/whole": 1,
+    "crypto/codeseparator/whole/v1": 1,
+    "crypto/findanddelete-forkid": 1,
+    "crypto/findanddelete-forkid/v1": 1,
+    "crypto/lows/high-s-not": 1,
+    "crypto/lows/high-s-not/v1": 1,
+    "crypto/lows/multisig-1of1-high-s": 1,
+    "crypto/lows/multisig-1of1-high-s/v1": 1,
+    "crypto/lows/r-n": 1,
+    "crypto/lows/r-n/v1": 1,
+    "crypto/lows/s-half-high": 1,
+    "crypto/lows/s-half-high/v1": 1,
+    "crypto/lows/s-half-low": 1,
+    "crypto/lows/s-half-low/v1": 1,
+    "crypto/lows/s-n": 1,
+    "crypto/lows/s-n-minus-1": 1,
+    "crypto/lows/s-n-minus-1/v1": 1,
+    "crypto/lows/s-n/v1": 1,
+    "crypto/lows/s-zero": 1,
+    "crypto/lows/s-zero/v1": 1,
+    "crypto/multisig/0of0": 1,
+    "crypto/multisig/0of0/v1": 1,
+    "crypto/multisig/1of2": 2,
+    "crypto/multisig/1of2/v1": 2,
+    "crypto/multisig/2of3": 1,
+    "crypto/multisig/2of3/order": 1,
+    "crypto/multisig/2of3/order/v1": 1,
+    "crypto/multisig/2of3/v1": 1,
+    "crypto/multisig/nkeys-nonminimal": 1,
+    "crypto/multisig/nkeys-nonminimal/v1": 1,
+    "crypto/multisig/nsigs-nonminimal": 1,
+    "crypto/multisig/nsigs-nonminimal/v1": 1,
+    "crypto/multisig/nulldummy": 1,
+    "crypto/multisig/nulldummy/v1": 1,
+    "crypto/multisig/nullfail": 1,
+    "crypto/multisig/nullfail/v1": 1,
+    "crypto/multisig/pubkey-count": 1,
+    "crypto/multisig/pubkey-count/v1": 1,
+    "crypto/multisig/sig-count": 1,
+    "crypto/multisig/sig-count/v1": 1,
+    "crypto/multisig/verify": 1,
+    "crypto/multisig/verify/v1": 1,
+    "crypto/p2pk": 2,
+    "crypto/p2pk/empty-sig": 1,
+    "crypto/p2pk/empty-sig/v1": 1,
+    "crypto/p2pk/hashtype": 5,
+    "crypto/p2pk/hashtype/v1": 5,
+    "crypto/p2pk/high-s": 1,
+    "crypto/p2pk/high-s/v1": 1,
+    "crypto/p2pk/hybrid-key": 1,
+    "crypto/p2pk/hybrid-key/v1": 1,
+    "crypto/p2pk/no-forkid": 1,
+    "crypto/p2pk/no-forkid/v1": 1,
+    "crypto/p2pk/non-der": 1,
+    "crypto/p2pk/non-der/v1": 1,
+    "crypto/p2pk/nullfail": 1,
+    "crypto/p2pk/nullfail/v1": 1,
+    "crypto/p2pk/v1": 2,
+    "crypto/p2pk/wrong-key": 1,
+    "crypto/p2pk/wrong-key/v1": 1,
+    "crypto/p2pkh": 1,
+    "crypto/p2pkh/v1": 1,
+    "crypto/p2pkh/wrong-key": 1,
+    "crypto/p2pkh/wrong-key/v1": 1
+  },
+  "rules": {
+    "crypto.checkmultisig": 16,
+    "crypto.checksig": 26,
+    "crypto.checksig.encoding": 6,
+    "crypto.checksig.unlock": 2,
+    "crypto.codeseparator": 4,
+    "flags.v1.lows": 16,
+    "flags.v1.minimaldata.number": 4,
+    "flags.version-gate": 8,
+    "sighash.scriptcode.findanddelete": 2
+  },
+  "verdicts": {
+    "invalid": 43,
+    "valid": 41
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "ts-sdk",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "ts-sdk-mempool",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "ts-sdk-default",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "the SDK's default mode: no explicit word, its own derivation from the transaction version (Spend.ts #isRelaxed = version > 1)"
+      }
+    },
+    {
+      "name": "spec-history",
+      "version": "8fde74b",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-history-mempool",
+      "version": "8fde74b",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "gobdk",
+      "version": "4eab3acd",
+      "config": {
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "gobdk-mempool",
+      "version": "4eab3acd",
+      "config": {
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "spec",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    }
+  ],
+  "engine_executions": 1260,
+  "generated": "2026-09-23",
+  "provenance": "signature-opcode cases with real bsv-rs signatures and bsv-rs 0.5.0's verdicts under the node's standard word; 84 comparable (every family since 0.3.27); synthetic outpoints = sha256 of the entry id"
+}

@@ -1,0 +1,34 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+The stacked landing on a moving main (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28; the landing rule on a moving main, as
+docs/records/20260927-134936-cite-landing-s4b.txt set it and docs/records/20260927-174745-landing-s1.txt applied it)
+
+THE STAMP: docs/records/20260928-115355-make-check.txt, twenty-one legs GREEN in 382 s at 3ff5327 (on S4b's f118fd8), LOCAL
+[withheld at export: a sibling tree's line]
+12:00 UTC: docs/OWNERS, the seat W0b, 2 lines). The stack was cherry-picked onto 5567e57 with every commit's committer date
+(the pre-push stamp hook), without conflict: 3ff5327 -> abab6a8, 227a516 -> febcd4e (the landed tip's parent is this record's).
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit 3ff5327 and its twin abab6a8, outside the one path main's commit changed:
+  git diff --quiet 3ff5327 abab6a8 -- ':!docs/OWNERS'
+  exit 0
+  git diff --stat 3ff5327 abab6a8:
+     docs/OWNERS | 2 ++
+     1 file changed, 2 insertions(+)
+
+THE LEGS THAT COULD READ THE CHANGED PATH (and the pins leg, cheap), LIVE AT THE TIP febcd4e:
+load before: { 15.99 12.19 9.36 }
+== tools/check.sh pins at febcd4e (12:03:05Z)
+[withheld at export: a sibling tree's line]
+  OK     the built SV-node's version string                                      v1.2.2.0-g879fc8b42-dev
+check-pins: GREEN (74 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+exit 0
+== tools/check.sh cite at febcd4e (12:03:24Z)
+cite_check: 2940 citations found in lean/ and docs/ (2880 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1728, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 146, history 976, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec at febcd4e (12:03:28Z)
+specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 13.53 11.92 9.35 }
+
+No leg reads docs/OWNERS (grep over tools/check.sh, tools/*.py, tools/*.sh and the Makefile finds none; only the commit hooks
+read it). The other eighteen legs read nothing that changed: the stamp stands for them at the landed tip.

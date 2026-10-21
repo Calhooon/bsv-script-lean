@@ -1,0 +1,64 @@
+{
+ "adapter": "",
+ "branch": "lane/hz-95",
+ "command": "make column IMPL=sv-node PIN=v1.2.3 CORPUS=arith",
+ "corpora": [
+  {
+   "config": "sv-mainnet-default",
+   "corpus": "arith",
+   "equal": true,
+   "file": "corpus/arith/cases.jsonl",
+   "moved": 0,
+   "recorded": {
+    "aborts_as_witnesses": null,
+    "agree": {
+     "spec": 692,
+     "spec-mempool": 692
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 692,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "run": {
+    "aborts_as_witnesses": null,
+    "agree": {
+     "spec": 692,
+     "spec-mempool": 692
+    },
+    "class_rows": 0,
+    "class_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "classified_runs": {},
+    "entries": 692,
+    "undecided": 0,
+    "unexplained_runs": {},
+    "witnesses": 0
+   },
+   "verdict": "run_svnode: GREEN (0 divergent runs filed under cited classes; every other decided entry agrees in both columns)"
+  }
+ ],
+ "differing": [],
+ "ended": "2026-10-18T04:32:06Z",
+ "host": "box",
+ "load1_end": 19.15,
+ "load1_start": 19.95,
+ "mode": "dry run on the current pin",
+ "moved_rows": [],
+ "pin": {
+  "reference.commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "reference.tag": "v1.2.3",
+  "reference.version_string": "v1.2.3.0-g6504a3aff-dev"
+ },
+ "red": [],
+ "scratch": "harness/target/column/20261018-043204-sv-node",
+ "sites_moved": [],
+ "skipped": [],
+ "started": "2026-10-18T04:32:04Z",
+ "tree": "662bae70441524557130787172ab521ca33e0429",
+ "uncommitted_paths_at_start": 21,
+ "verdict": "column: sv-node v1.2.3 (dry run on the current pin): 1 corpora, 692 entries; agree spec 692 (recorded 692); spec-mempool 692 (recorded 692); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 2 s: REPRODUCED",
+ "wall_s": 2
+}

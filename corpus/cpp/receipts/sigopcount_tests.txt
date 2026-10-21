@@ -1,0 +1,19 @@
+suite: sigopcount_tests
+source: src/test/sigopcount_tests.cpp
+pin: bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d)
+file: corpus/cpp/sigopcount_tests.jsonl
+status: passed
+test_cases_passed: 5
+assertions_passed: 121
+cases_with_entries: 4
+entries: 61
+sha256: da0a3c85150506d722e9929c3373a5384c5fd0837120d045197ee21eb26fa59c
+sha256_keys_masked: 4d9b437ad9d465c23f2df9afb3b6f4ea6d9aedff62deb33fefd2defb503cac74
+entries_masked: 22
+sha256_of_the_run: b42c67c199c112dc10b93b74d14f3d29b2402a63b5733994bdd34c6e7c310bf0
+random_seed: 879fc8b42168dd0e608dafd51b39c6dabad37d4d (TEST_BITCOIN_RANDOM_SEED, test_bitcoin.cpp:49-67)
+run_at: 2026-10-06T03:03:57Z
+instrument_patch_sha256: 07a6141996e07cda5665727e20cf8314d098f991f38aabba7bbe4386b2424205
+test_bitcoin_sha256: ce68a5cb39b151eb83213fdff3e0ccd62fa836dc149160cee59d3abf1f81d296
+raw_sha256: 5a47ff17685bfb60aa733035bba221f3c3a34e86432475d215135b4ebad775a4
+command: TEST_BITCOIN_RANDOM_SEED=<random_seed> CPPX_OUT=<dump> test_bitcoin --run_test=sigopcount_tests

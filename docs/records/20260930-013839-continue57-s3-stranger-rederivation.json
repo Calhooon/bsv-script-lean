@@ -1,0 +1,76 @@
+{
+  "cargo_lock_implementation_checksum": "83c0a8a54be45e3cf194bf1ed3a10a3722baec0c5057ae258bf3bc42f97fb404",
+  "cargo_lock_implementation_version": "0.3.30",
+  "cargo_manifest_implementation_pin": "=0.3.30",
+  "checks": {
+    "entry_and_agreement_counts_match": true,
+    "every_recorded_verdict_exported_unchanged": true,
+    "implementation_identity_matches_pins": true,
+    "seed_count_matches_manifest": true,
+    "seed_hash_matches_manifest": true,
+    "spec_identity_matches_exports": true,
+    "summary_and_driver_green": true,
+    "unique_and_complete_ids": true,
+    "witness_count_matches_manifest": true,
+    "witness_hash_matches_manifest": true
+  },
+  "log_agree_spec": 10000,
+  "log_agree_spec_mempool": 10000,
+  "missing_recorded_keys": 0,
+  "readme_sha256": "5befd578ed1fa4c658dccfcadf0d9f638e58fc6ed0788454c7c46a1de5da4189",
+  "receipt_verification": "GREEN",
+  "recorded_export_mismatches": 0,
+  "report_aborts_as_witnesses": 0,
+  "report_agree_spec": 10000,
+  "report_agree_spec_mempool": 10000,
+  "report_entries": 10000,
+  "report_files_sha256": {
+    "bsv-rs/manifest.json": "e696d29acde74840ef533c22c2edf5383f36d34e1f198ac76ab64a87933b03bf",
+    "bsv-rs/seed.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "seed.log": "ba466a71f0942e46a986aac81d5f15911ab6dd3f2b1215fe0c995259bc815e72",
+    "spec/seed.jsonl.gz": "da4b2951fadab24355e28c7fdfef17c80ac6e9582380b0121675cb640560a791",
+    "summary.txt": "cd60904a27c01a9e1af82a7bbb39a63f524a37b175781a7ef967d2d056931623"
+  },
+  "report_green_corpora": 1,
+  "report_red_corpora": 0,
+  "report_rule_rows": 0,
+  "report_skipped_corpora": 0,
+  "report_spec_configuration": "sv-mainnet-default",
+  "report_spec_identity": "spec@8fde74b",
+  "report_undecided": 0,
+  "report_unknown_messages": {},
+  "report_witnesses": 0,
+  "reported_implementation_version": "0.3.30",
+  "seed_manifest_count": 10000,
+  "seed_manifest_sha256": "34b1dbbc9a3120253dbdddcae6d6e9b5e1555df2ddc09157e5792f6014d51f65",
+  "seed_only_ids": 0,
+  "seed_rows": 10000,
+  "seed_sha256": "34b1dbbc9a3120253dbdddcae6d6e9b5e1555df2ddc09157e5792f6014d51f65",
+  "seed_unique_ids": 10000,
+  "source": "e39ba468c3c9bef42f6041509914767f81f34a79",
+  "spec_commit_stamps": [
+    "8fde74b"
+  ],
+  "spec_configs": [
+    "sv-mainnet-default"
+  ],
+  "spec_only_ids": 0,
+  "spec_output_bytes": 1991763,
+  "spec_output_sha256": "1cc694d9446d17cedf784bd404d1727e54b225ac7a4d43ee4caec34070d26607",
+  "spec_rows": 10000,
+  "spec_unique_ids": 10000,
+  "spec_verdict_cells": 20000,
+  "spec_verdict_counts": {
+    "spec": {
+      "invalid": 4498,
+      "valid": 5502
+    },
+    "spec-mempool": {
+      "invalid": 4658,
+      "valid": 5342
+    }
+  },
+  "witness_output_bytes": 0,
+  "witness_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "witness_rows": 0
+}

@@ -1,0 +1,302 @@
+{
+  "corpus": "flow",
+  "file": "flow.jsonl",
+  "generator": "bsv-script-harness flow_cases 0.0.1 (a hand-written table; #8)",
+  "seed": "none (hand-written)",
+  "count": 1094,
+  "sha256": "f84bdb9cf46441a3abb7cf82b5eea000438a2e3ca547fa83069cf29701762663",
+  "families": {
+    "flags/v1/cleanstack/alt-stack": 1,
+    "flags/v1/cleanstack/alt-stack/v1": 1,
+    "flags/v1/cleanstack/three": 1,
+    "flags/v1/cleanstack/three/v1": 1,
+    "flags/v1/cleanstack/unlock-leftover": 1,
+    "flags/v1/cleanstack/unlock-leftover/v1": 1,
+    "flags/v1/minimaldata/direct-for-1negate": 1,
+    "flags/v1/minimaldata/direct-for-1negate/v1": 1,
+    "flags/v1/minimaldata/direct-for-op5": 1,
+    "flags/v1/minimaldata/direct-for-op5/v1": 1,
+    "flags/v1/minimaldata/direct-zero-byte": 1,
+    "flags/v1/minimaldata/direct-zero-byte/v1": 1,
+    "flags/v1/minimaldata/push-after-return": 1,
+    "flags/v1/minimaldata/push-after-return/v1": 1,
+    "flags/v1/minimaldata/push-dead-branch": 1,
+    "flags/v1/minimaldata/push-dead-branch/v1": 1,
+    "flags/v1/minimaldata/push-in-lock": 1,
+    "flags/v1/minimaldata/push-in-lock/v1": 1,
+    "flags/v1/minimaldata/pushdata1-76": 1,
+    "flags/v1/minimaldata/pushdata1-76/v1": 1,
+    "flags/v1/minimaldata/pushdata1-empty": 1,
+    "flags/v1/minimaldata/pushdata1-empty/v1": 1,
+    "flags/v1/minimaldata/pushdata2-256": 1,
+    "flags/v1/minimaldata/pushdata2-256/v1": 1,
+    "flags/v1/minimaldata/pushdata2-for-76": 1,
+    "flags/v1/minimaldata/pushdata2-for-76/v1": 1,
+    "flags/v1/minimaldata/pushdata4-for-256": 1,
+    "flags/v1/minimaldata/pushdata4-for-256/v1": 1,
+    "flags/v1/sigpushonly/op16": 1,
+    "flags/v1/sigpushonly/op16/v1": 1,
+    "flags/v1/sigpushonly/reserved-in-unlock": 1,
+    "flags/v1/sigpushonly/reserved-in-unlock/v1": 1,
+    "flags/version-gate/minimaldata": 4,
+    "flags/version-gate/minimaldata/v1": 4,
+    "flow/chronicle-ver": 1,
+    "flow/chronicle-ver-dead": 1,
+    "flow/chronicle-ver-dead/v1": 1,
+    "flow/chronicle-ver/v1": 1,
+    "flow/chronicle-verif": 1,
+    "flow/chronicle-verif-size": 1,
+    "flow/chronicle-verif-size/v1": 1,
+    "flow/chronicle-verif/v1": 1,
+    "flow/chronicle-vernotif": 1,
+    "flow/chronicle-vernotif/v1": 1,
+    "flow/else-if-chain": 4,
+    "flow/else-if-chain/v1": 4,
+    "flow/if": 12,
+    "flow/if-no-else": 12,
+    "flow/if-no-else/v1": 12,
+    "flow/if/v1": 12,
+    "flow/nesting": 28,
+    "flow/nesting/v1": 28,
+    "flow/nonpush-unlock": 6,
+    "flow/nonpush-unlock/v1": 6,
+    "flow/nop": 2,
+    "flow/nop-upgradable": 3,
+    "flow/nop-upgradable/v1": 3,
+    "flow/nop/v1": 2,
+    "flow/notif": 12,
+    "flow/notif/v1": 12,
+    "flow/reserved": 4,
+    "flow/reserved/v1": 4,
+    "flow/return": 9,
+    "flow/return-junk": 3,
+    "flow/return-junk/v1": 3,
+    "flow/return-open-if": 2,
+    "flow/return-open-if/v1": 2,
+    "flow/return/v1": 9,
+    "flow/second-else": 2,
+    "flow/second-else/v1": 2,
+    "flow/truncated-push": 8,
+    "flow/truncated-push/v1": 8,
+    "flow/unbalanced": 8,
+    "flow/unbalanced/v1": 8,
+    "flow/undefined-opcode-executed": 5,
+    "flow/undefined-opcode-executed/v1": 5,
+    "flow/unknown-opcode-dead": 5,
+    "flow/unknown-opcode-dead/v1": 5,
+    "flow/verify": 16,
+    "flow/verify/v1": 16,
+    "push/constant": 17,
+    "push/constant/v1": 17,
+    "push/direct-for-1negate": 1,
+    "push/direct-for-1negate/v1": 1,
+    "push/direct-for-small-int": 16,
+    "push/direct-for-small-int/v1": 16,
+    "push/empty-op0": 1,
+    "push/empty-op0/v1": 1,
+    "push/minimal": 81,
+    "push/minimal-large": 9,
+    "push/minimal-large/v1": 9,
+    "push/minimal/v1": 81,
+    "push/pushdata1-nonminimal": 75,
+    "push/pushdata1-nonminimal/v1": 75,
+    "push/pushdata2-nonminimal": 83,
+    "push/pushdata2-nonminimal/v1": 83,
+    "push/pushdata4-nonminimal": 89,
+    "push/pushdata4-nonminimal/v1": 89,
+    "stack/final": 9,
+    "stack/final/v1": 9
+  },
+  "rules": {
+    "flags.sigpushonly": 12,
+    "flags.v1.cleanstack": 6,
+    "flags.v1.minimaldata.push": 22,
+    "flags.version-gate": 8,
+    "flow.else": 4,
+    "flow.if": 48,
+    "flow.nesting": 64,
+    "flow.nop": 10,
+    "flow.notif": 24,
+    "flow.reserved": 8,
+    "flow.return": 32,
+    "flow.unbalanced": 16,
+    "flow.unknown-opcode": 20,
+    "flow.ver": 4,
+    "flow.verif": 6,
+    "flow.verify": 32,
+    "push.constant": 34,
+    "push.minimal": 710,
+    "push.truncated": 16,
+    "stack.final": 18
+  },
+  "verdicts": {
+    "invalid": 444,
+    "valid": 650
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "ts-sdk",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "ts-sdk-mempool",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "ts-sdk-default",
+      "version": "3.0.0",
+      "config": {
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "mode": "the SDK's default mode: no explicit word, its own derivation from the transaction version (Spend.ts #isRelaxed = version > 1)"
+      }
+    },
+    {
+      "name": "spec-history",
+      "version": "8fde74b",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-history-mempool",
+      "version": "8fde74b",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "gobdk",
+      "version": "4eab3acd",
+      "config": {
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "gobdk-mempool",
+      "version": "4eab3acd",
+      "config": {
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "spec",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    }
+  ],
+  "engine_executions": 16410,
+  "generated": "2026-09-23",
+  "provenance": "hand-written flow cases with bsv-rs 0.7.0's verdicts under the node's standard word; 1094 comparable (every family since 0.3.27: the former flow-candidate/ and flow-policy/ families are comparable); synthetic outpoints = sha256 of the entry id"
+}

@@ -1,0 +1,543 @@
+[export: 80 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+bsv-rs 0.4.4 pin bump: foreground validation receipt
+base: e72d40193eba77dba9e1cb3131a25fd8e12dda86 plus the tested lane changes committed locally as b8f6f8573064a22d72c42a7848199c28d95f8453
+branch: lane/bump-044
+host: box
+upstream: 5c15528e0742beb124555d33881393ffa56f8778
+checksum: a1e259211cb7002ff74656c0b0347e6159209238df43760e2a24d87ce9da6621
+51 harness/source/test/rule/pin/tripwire file hashes: the JSON companion.
+The main checkout was not used for builds or edits. All commands completed in this worktree.
+
+BUILD: 2026-10-12T01:14:31Z, load1 8.7964; CARGO_BUILD_JOBS=4 cargo build --release --locked
+warning: field `unlock` is never read
+warning: `bsv-script-harness` (bin "crypto_cases") generated 1 warning
+    Finished `release` profile [optimized + debuginfo] target(s) in 24.11s
+
+LEAN BUILD: 2026-10-12T01:15:25Z, load1 9.3433; plan lean_lock.sh, bump-044, slot1; released 01:16:10Z.
+[withheld at export: a sibling tree's line]
+warning: BsvScript/Numbers.lean:445:68: Variable name `ht` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+warning: BsvScript/Numbers.lean:778:16: This simp argument is unused:
+warning: BsvScript/Numbers.lean:786:20: This simp argument is unused:
+warning: BsvScript/Numbers.lean:866:26: This simp argument is unused:
+warning: BsvScript/Numbers.lean:866:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+warning: BsvScript/Numbers.lean:1165:41: This simp argument is unused:
+warning: BsvScript/Numbers.lean:1219:39: This simp argument is unused:
+warning: BsvScript/Numbers.lean:1221:32: This simp argument is unused:
+warning: BsvScript/Numbers.lean:1264:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+warning: BsvScript/Tx.lean:33:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.inputs`.
+warning: BsvScript/Tx.lean:35:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.lockTime`.
+warning: BsvScript/Tx.lean:32:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.version`.
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.mk`.
+warning: BsvScript/Tx.lean:34:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.outputs`.
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx`.
+warning: Test/SighashCheck.lean:88:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/SighashCheck.lean:104:88: `String.mk` has been deprecated: Use `String.ofList` instead
+warning: Test/SighashCheck.lean:132:73: `String.mk` has been deprecated: Use `String.ofList` instead
+warning: Test/SighashCheck.lean:134:81: `String.mk` has been deprecated: Use `String.ofList` instead
+warning: Test/SighashCheck.lean:142:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+warning: Test/ArithCheck.lean:52:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/ArithCheck.lean:108:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/CryptoCheck.lean:83:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/CryptoCheck.lean:111:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/CryptoCheck.lean:154:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/CryptoCheck.lean:158:52: Variable name `lock` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+warning: Test/CryptoCheck.lean:219:66: `String.trim` has been deprecated: Use `String.trimAscii` instead
+warning: Test/NumbersCheck.lean:42:2: `String.mk` has been deprecated: Use `String.ofList` instead
+warning: Test/NumbersCheck.lean:102:12: `String.trim` has been deprecated: Use `String.trimAscii` instead
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+warning: BsvScript/TxPolicy.lean:274:83: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+ld64.lld: warning: directory not found for option -L/usr/local/lib
+Build completed successfully (2068 jobs).
+
+VECTORS: release generators at 0.4.4; all byte-identical to their 0.3.33 committed files.
+num_vectors --count 1000: 1000 lines; a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515
+sighash_vectors --count 500: 500 lines; 0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a
+arith_vectors --count 10000: 10000 lines; f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba
+ecdsa_vectors --count 200: 1340 lines; 494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb
+
+LEAN VECTOR LEGS (the plan lock; load checked separately before each leg):
+lean_lock: bump-044 took slot1 (01:17:20Z)
+2026-10-12T01:17:20.115243+00:00 numbers load1 10.3828125
+== numbers: lean/Test/NumbersCheck.lean against corpus/numbers ==
+Build completed successfully (2032 jobs).
+repin123check: 155 checks, 0 failures
+numcheck: 1000 vectors × 7 checks against bsv-rs 0.4.4: 0 mismatch(es)
+2026-10-12T01:17:22.455853+00:00 sighash load1 10.35205078125
+== sighash: lean/Test/SighashCheck.lean against corpus/sighash (bsv-rs vectors · the reference's sighash.json · mainnet signatures) ==
+Build completed successfully (1992 jobs).
+sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+sighash: bsv-rs 0.4.4 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+sighash: GREEN (the ECDSA leg follows)
+sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.4.4 ECDSA); 0 failures; the negative control (a bit-flipped digest) fails to verify on 8 of 8 entries
+2026-10-12T01:17:24.629825+00:00 arith load1 10.35205078125
+== arith: lean/Test/ArithCheck.lean against corpus/arith (bsv-rs value vectors · the engine cases) ==
+Build completed successfully (2030 jobs).
+arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.4.4 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+2026-10-12T01:17:26.558256+00:00 crypto load1 10.16357421875
+== crypto: lean/Test/CryptoCheck.lean (hash vectors · ECDSA vectors from bsv-rs · mainnet inputs through the evaluator · the signature cases) ==
+Build completed successfully (2030 jobs).
+crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+crypto: ECDSA vectors from bsv-rs 0.4.4: 1340 cases, 0 mismatches
+crypto: the curve's facts (2·G, n·G = O, (n−1)·G = −G) and the key-1 signature of RFC 6979's nonce procedure (two keys, a flipped digest bit): 0 mismatches
+crypto: the lax parser's sequence length (88 01×8, 87 01×7 verify; an overlong form fails): 0 mismatches
+crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+lean_lock: released slot1 (01:17:31Z)
+
+RUST TESTS: 2026-10-12T01:19:08Z, load1 14.6670; CARGO_BUILD_JOBS=4 cargo test --release --locked
+test block::tests::a_coinbase_script_is_between_two_and_a_hundred_bytes ... ok
+test block::tests::regtest_target_and_a_ground_header ... ok
+test gen::tests::enc_num_vectors ... ok
+test block::tests::merkle_of_one_and_two ... ok
+test gen::tests::rng_is_reproducible ... ok
+test gosdk_codes::tests::the_message_rows_narrow_before_the_bare_rows ... ok
+test gosdk_codes::tests::the_sdk_decode_refusal_is_not_the_adapters_failure ... ok
+test pin_tests::cargo_lock_pins_the_recorded_bsv_rs_version ... ok
+test bsvrs_codes::tests::every_seed_message_shape_has_a_row ... ok
+test engine::tests::the_words_are_the_reference_numbers ... ok
+test rules::tests::spec_consensus_tells_a_policy_refusal_and_never_holds_unsupplied ... ok
+test rules::tests::a_stop_row_explains_nothing_and_a_missing_class_is_refused ... ok
+test stamp::tests::every_other_stamp_is_refused_with_its_value ... ok
+test stamp::tests::the_forms_eval_bsvs_emits_are_read ... ok
+test svnode_codes::tests::the_descriptions_are_exact ... ok
+test svnode_codes::tests::the_tx_reasons_unwrap_and_split ... ok
+test tssdk_codes::tests::the_seed_message_shapes_have_rows ... ok
+test txraw::tests::non_canonical_compact_size_refused ... ok
+test txraw::tests::round_trip ... ok
+test txraw::tests::unparseable_scripts_still_frame ... ok
+test txroad::tests::bip34_split_of_a_coinbase ... ok
+test rules::tests::the_three_tables_load_and_every_named_class_exists ... ok
+test txroad::tests::limited_run_never_writes_the_committed_witnesses ... ok
+test stamp::tests::a_new_directory_under_corpus_counts ... ok
+test txroad::tests::manifests_agree_on_the_split ... ok
+test stamp::tests::a_column_reads_every_lines_commit ... ok
+test txroad::tests::recorded_tx_corpus_splits_two ... ok
+test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test tests::an_abort_on_a_decided_entry_is_a_witness ... ok
+test tests::a_stamp_in_no_emitted_form_is_named ... ok
+test tests::an_entry_without_a_spec_line_is_uncovered ... ok
+test tests::the_spec_column_honours_the_entry ... ok
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test tests::era_ranges_leave_the_spend_in_the_same_era ... ok
+test tests::pushed_opcode_bytes_do_not_exclude_independent_witnesses ... ok
+test tests::a_false_result_without_an_error_keeps_the_node_text ... ok
+test tests::error_envelopes_do_not_turn_operational_failures_into_verdicts ... ok
+test tests::rebinding_keeps_duplicate_and_null_outpoints ... ok
+test tests::an_engine_exception_at_funding_is_unfundable_with_its_text ... ok
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test block_and_standard_words_carry_both_utxo_markers_from_the_block_era ... ok
+test the_script_number_length_limit_is_the_reference_number_of_the_coin_era_and_the_path ... ok
+test protocol_era_is_none_below_genesis_and_named_above ... ok
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test recorded_words_require_coverage_and_do_not_call_the_live_evaluator ... ok
+test exported_columns_retain_ids_stamps_codes_and_input_indexes ... ok
+test incomplete_or_ambiguous_records_never_write_partial_output ... ok
+test corpus_checksum_is_checked_on_raw_bytes_before_parsing ... ok
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+test a_missing_column_gets_the_gates_report_before_the_corpus_is_read ... ok
+test a_column_stamped_with_no_commit_is_refused_its_value_named ... ok
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+FINAL BUILD: CARGO_BUILD_JOBS=4 cargo build --release --locked (same shell, after tests)
+warning: field `unlock` is never read
+warning: `bsv-script-harness` (bin "crypto_cases") generated 1 warning
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.04s
+
+FINAL RETALLY (after the source citation restamp; every step’s load and exit):
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:05.680881+00:00 load1=9.59 run_bsvrs --corpus ../corpus/arith --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus arith-cases (692 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 692 entries recorded as bsv-rs@0.4.4 into ../corpus/arith/cases.jsonl; new sha256 66fe10ba06d01d9c0b706788c76b044cb1c3f67ac82e606a7e1f7531e80c194d in ../corpus/arith/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: arith/cases.jsonl (692 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 692 (like-for-like, the standard word), spec 692 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT arith: 692 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:05.973602+00:00 load1=9.59 run_bsvrs --corpus ../corpus/bytes --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus bytes (512 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 512 entries recorded as bsv-rs@0.4.4 into ../corpus/bytes/cases.jsonl; new sha256 7a80f9294669955a58b469e1faacb2f6be29cceaa465ae5ce2b3c255f70458fd in ../corpus/bytes/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: bytes/cases.jsonl (512 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 512 (like-for-like, the standard word), spec 512 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT bytes: 512 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:06.042333+00:00 load1=9.59 run_bsvrs --corpus ../corpus/cpp/replay/cpp-bn_op --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-bn_op (170 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 170 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-bn_op/cases.jsonl; new sha256 43a24c91412b6e082ec211284e0d1fbb06dc3d9d25711a7e4d2dd2d100fd452a in ../corpus/cpp/replay/cpp-bn_op/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-bn_op/cases.jsonl (170 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 170 (like-for-like, the standard word), spec 75 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-bn_op: 170 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:06.088814+00:00 load1=9.59 run_bsvrs --corpus ../corpus/cpp/replay/cpp-lrshiftnum --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-lrshiftnum (36 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 36 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl; new sha256 5ce1def9ffe89379dc4ba174b280349d98fa244567f3102cb3fc0183e365e512 in ../corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-lrshiftnum/cases.jsonl (36 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 4); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 32 (like-for-like, the standard word), spec 13 (the entry's own params: the block word when consensus); bsv-rs undecided 4 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-lrshiftnum: 36 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:06.128866+00:00 load1=9.59 run_bsvrs --corpus ../corpus/cpp/replay/cpp-multisig --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-multisig (30 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 30 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-multisig/cases.jsonl; new sha256 50d74000bc61631fd34ccbf5c5d617b5fcabdaae6b318bf076bd1d96437552eb in ../corpus/cpp/replay/cpp-multisig/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-multisig/cases.jsonl (30 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 30); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 24 (the entry's own params: the block word when consensus); bsv-rs undecided 30 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-multisig: 30 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:07.094200+00:00 load1=10.10 run_bsvrs --corpus ../corpus/cpp/replay/cpp-opcode --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-opcode (144324 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 1.3s
+run_bsvrs --record: 144324 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-opcode/cases.jsonl; new sha256 5069cfe19f22b826c63137709c11ea1ddd6276f52a1caa24a15154986d52d746 in ../corpus/cpp/replay/cpp-opcode/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-opcode/cases.jsonl (144324 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 144201); the spec at spec@cb7e46e (sv-mainnet-default); 1.2s
+  agree: spec-mempool 123 (like-for-like, the standard word), spec 67061 (the entry's own params: the block word when consensus); bsv-rs undecided 144201 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-opcode: 144324 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:18.602388+00:00 load1=9.63 run_bsvrs --corpus ../corpus/cpp/replay/cpp-script --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-script (67991 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.4s
+run_bsvrs --record: 67991 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-script/cases.jsonl; new sha256 e39e345009633f4c81a56121ef58adf65deb80f456bb62a2978aef9c680ec1cb in ../corpus/cpp/replay/cpp-script/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-script/cases.jsonl (67991 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 67857); the spec at spec@cb7e46e (sv-mainnet-default); 0.4s
+  agree: spec-mempool 134 (like-for-like, the standard word), spec 357 (the entry's own params: the block word when consensus); bsv-rs undecided 67857 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-script: 67991 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:22.615853+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-script_P2SH --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-script_P2SH (64 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 64 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl; new sha256 a65606235b9178b44b2071f00ede328ca5349a01c885ab8084755193d854c1e9 in ../corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-script_P2SH/cases.jsonl (64 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 64); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 56 (the entry's own params: the block word when consensus); bsv-rs undecided 64 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-script_P2SH: 64 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:22.728016+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-sigopcount --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-sigopcount (6 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 6 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-sigopcount/cases.jsonl; new sha256 6790144dc2dfebde876069f420174b08772005c956c6e7c13618247c087a4dd0 in ../corpus/cpp/replay/cpp-sigopcount/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-sigopcount/cases.jsonl (6 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 4); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 2 (like-for-like, the standard word), spec 6 (the entry's own params: the block word when consensus); bsv-rs undecided 4 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-sigopcount: 6 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:22.841226+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-transaction --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-transaction (167 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 167 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-transaction/cases.jsonl; new sha256 4bdd0d04492ab22c47e81301ba68da9d94a4f01128594b9f66b1c970de41d3e7 in ../corpus/cpp/replay/cpp-transaction/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-transaction/cases.jsonl (167 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 101); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 66 (like-for-like, the standard word), spec 108 (the entry's own params: the block word when consensus); bsv-rs undecided 101 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-transaction: 167 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:22.987082+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t100-g1-c1 (1024 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 1024 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl; new sha256 b2ad12c520514e9c062e182b9954e9a1abcb2af3586dbcc58fda36480c7e31e9 in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t100-g1-c1/cases.jsonl (1024 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 1024); the spec at spec@cb7e46e (sv-regtest(genesis=1,chronicle=1)); 0.1s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 1024 (the entry's own params: the block word when consensus); bsv-rs undecided 1024 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t100-g1-c1: 1024 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:23.423438+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t100-g1-c102 (2048 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.2s
+run_bsvrs --record: 2048 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl; new sha256 2f0e8e49bedcff8765206e3996a82343f18a580cc2b3479e887c11b41ae09964 in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t100-g1-c102/cases.jsonl (2048 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 2048); the spec at spec@cb7e46e (sv-regtest(genesis=1,chronicle=102)); 0.3s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 2048 (the entry's own params: the block word when consensus); bsv-rs undecided 2048 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t100-g1-c102: 2048 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:24.185677+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t100-g102-c102 (4097 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.4s
+run_bsvrs --record: 4097 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl; new sha256 fdf55917f3fa8881a1b68c3df3a7f59dde0b8d14c1d0489dc8f632575de48bf4 in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t100-g102-c102/cases.jsonl (4097 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 4097); the spec at spec@cb7e46e (sv-regtest(genesis=102,chronicle=102)); 0.2s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 2049 (the entry's own params: the block word when consensus); bsv-rs undecided 4097 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t100-g102-c102: 4097 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:25.281431+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t101-g1-c1 (4096 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 4096 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl; new sha256 bbf2ec7f470f068e9e76efd50bd08b770d2e0c22e2f9366294180c4aa2f3e573 in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t101-g1-c1/cases.jsonl (4096 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 4096); the spec at spec@cb7e46e (sv-regtest(genesis=1,chronicle=1)); 0.1s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 4096 (the entry's own params: the block word when consensus); bsv-rs undecided 4096 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t101-g1-c1: 4096 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:25.758776+00:00 load1=9.25 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t101-g1-c103 (8192 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 8192 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl; new sha256 76d8f4928877fa4a93e3abd1260f915be6a172c27b9e504276991b4546dffe1d in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t101-g1-c103/cases.jsonl (8192 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 8192); the spec at spec@cb7e46e (sv-regtest(genesis=1,chronicle=103)); 0.2s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 8192 (the entry's own params: the block word when consensus); bsv-rs undecided 8192 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t101-g1-c103: 8192 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:26.500579+00:00 load1=8.91 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t101-g102-c1 (3 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 3 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl; new sha256 23a333de9a44c9f22526c130ba7dba1775e56bf1e861c095ab22fb77f023f7c4 in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t101-g102-c1/cases.jsonl (3 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 3); the spec at spec@cb7e46e (sv-regtest(genesis=102,chronicle=1)); 0.0s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 1 (the entry's own params: the block word when consensus); bsv-rs undecided 3 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t101-g102-c1: 3 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:26.697825+00:00 load1=8.91 run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103 --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus cpp-txvalidationcache-t101-g103-c103 (16384 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 16384 entries recorded as bsv-rs@0.4.4 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl; new sha256 9c4b0bc3beeafcd6d8892d0e77696d98eb3d5e3317d13dadcb6c0a9a1932adbe in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: cpp-txvalidationcache-t101-g103-c103/cases.jsonl (16384 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 16384); the spec at spec@cb7e46e (sv-regtest(genesis=103,chronicle=103)); 0.1s
+  agree: spec-mempool 0 (like-for-like, the standard word), spec 10240 (the entry's own params: the block word when consensus); bsv-rs undecided 16384 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT cpp-txvalidationcache-t101-g103-c103: 16384 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:27.909202+00:00 load1=8.91 run_bsvrs --corpus ../corpus/crypto --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus crypto-cases (84 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 84 entries recorded as bsv-rs@0.4.4 into ../corpus/crypto/cases.jsonl; new sha256 1b2e9a5fc6404b98d83a4ad9bf7ac178af97faa2530b8bfea650042dc8ec2789 in ../corpus/crypto/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: crypto/cases.jsonl (84 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 84 (like-for-like, the standard word), spec 84 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT crypto: 84 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:28.034992+00:00 load1=8.91 run_bsvrs --corpus ../corpus/eras --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus eras (74 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=42 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 74 entries recorded as bsv-rs@0.4.4 into ../corpus/eras/eras.jsonl; new sha256 ee7dd889640db8d2da65bb4e1ac0587be79eaaffffd9a2e1d5f0f90ea2ff6504 in ../corpus/eras/manifest.json; undecided: a resource wall 0, not applicable 42, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: eras/eras.jsonl (74 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 42); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 32 (like-for-like, the standard word), spec 32 (the entry's own params: the block word when consensus); bsv-rs undecided 42 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT eras: 74 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:28.157125+00:00 load1=8.91 run_bsvrs --corpus ../corpus/flow --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus flow (1094 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 1094 entries recorded as bsv-rs@0.4.4 into ../corpus/flow/flow.jsonl; new sha256 1657f811e610cc732e58de1953c808c220a0f14d72e77b49074cb5991910dc1c in ../corpus/flow/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: flow/flow.jsonl (1094 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 1094 (like-for-like, the standard word), spec 1094 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT flow: 1094 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:28.335184+00:00 load1=8.91 run_bsvrs --corpus ../corpus/gen --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus gen (1157 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=5 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 1157 entries recorded as bsv-rs@0.4.4 into ../corpus/gen/gen.jsonl; new sha256 7949e6c5897fa3a5adfcbdbd459b404985a7f005b8b4ae58df7f88fbb9b7a299 in ../corpus/gen/manifest.json; undecided: a resource wall 0, not applicable 5, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: gen/gen.jsonl (1157 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 5); the spec at spec@cb7e46e (sv-mainnet-default); 0.1s
+  agree: spec-mempool 1152 (like-for-like, the standard word), spec 1152 (the entry's own params: the block word when consensus); bsv-rs undecided 5 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT gen: 1157 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:28.665454+00:00 load1=8.91 run_bsvrs --corpus ../corpus/million --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus million (4 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 4 entries recorded as bsv-rs@0.4.4 into ../corpus/million/witnesses.jsonl; new sha256 29664efbf6d01d2179a1793d8d7a4615868ffa173f8d82f69aaccb7da0d70483 in ../corpus/million/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: million/witnesses.jsonl (4 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 4 (like-for-like, the standard word), spec 0 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 4; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT million: 4 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:28.861183+00:00 load1=8.91 run_bsvrs --corpus ../corpus/road --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus road (13512 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 13512 entries recorded as bsv-rs@0.4.4 into ../corpus/road/road.jsonl; new sha256 ff359ca4bd4f818fc4f8683d599091e9fdcb11be2a6750d9529f7e6c3815cfab in ../corpus/road/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: road/road.jsonl (13512 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.2s
+  agree: spec-mempool 13512 (like-for-like, the standard word), spec 13512 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT road: 13512 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:29.860151+00:00 load1=8.91 run_bsvrs --corpus ../corpus/seed --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 10000 entries recorded as bsv-rs@0.4.4 into ../corpus/seed/seed.jsonl; new sha256 61d5575b5dd821f930ec3e68741ef2e238cd78ab49c10e0de8e3c8a4b73b34be in ../corpus/seed/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.1s
+  agree: spec-mempool 10000 (like-for-like, the standard word), spec 10000 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT seed: 10000 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:30.744308+00:00 load1=8.91 run_bsvrs --corpus ../corpus/stack --manifest cases-manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus stack-cases (262 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.0s
+run_bsvrs --record: 262 entries recorded as bsv-rs@0.4.4 into ../corpus/stack/cases.jsonl; new sha256 19e9895b7f340469f0a44ee126cd7e194983196202105a7733a53d8e517fe32e in ../corpus/stack/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: stack/cases.jsonl (262 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@cb7e46e (sv-mainnet-default); 0.0s
+  agree: spec-mempool 262 (like-for-like, the standard word), spec 262 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT stack: 262 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+exit=0
+2026-10-12T01:20:30.902799+00:00 load1=8.91 run_bsvrs --corpus ../corpus/tx --manifest manifest.json --record
+run_bsvrs: the corpus records bsv-rs 0.3.33 but this runner links 0.4.4
+run_bsvrs: corpus tx (40 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }: agree=0 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=26 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --record: 40 entries recorded as bsv-rs@0.4.4 into ../corpus/tx/tx.jsonl; new sha256 ff0eb5819f91ff5b60f63a69b17e15c0b5f3348bfd3a6407cc32a2e6093fee47 in ../corpus/tx/manifest.json; undecided: a resource wall 0, not applicable 26, a panic 0
+exit=0
+[withheld at export: a sibling tree's line]
+run_diff: tx/tx.jsonl (40 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: None, per_input_words: true }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 26); the spec at spec@cb7e46e (sv-mainnet-default); 0.1s
+  agree: spec-mempool 14 (like-for-like, the standard word), spec 14 (the entry's own params: the block word when consensus); bsv-rs undecided 26 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+exit=0
+AUDIT tx: 40 entries; every non-bsv-rs field and implementation row unchanged; native changes {}; unexplained 0
+AUDIT COMPLETE: 26 corpora, 276063 entries
+
+HARNESS LEG: 2026-10-12T01:20:31Z, load1 8.7607; plan lean_lock.sh, bump-044, slot2; released 01:20:43Z.
+tools/check.sh harness; Go 1.27.0 and Node 22.18.0 from the box toolchain directory; npm ci at the pinned SDK.
+run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.4.4 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+run_bsvrs --smoke: GREEN (10000 of 10000 entries compared, every one agreeing with its recorded bsv-rs verdict; no panic, no nondeterminism)
+[withheld at export: a sibling tree's line]
+run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.4.4 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@e72d401 (sv-mainnet-default); 0.1s
+  agree: spec-mempool 10000 (like-for-like, the standard word), spec 10000 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+run_diff: GREEN (every divergence explained by a rule with its citation)
+run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.7.1 (gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)); the spec at spec@e72d401 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 0.8s
+  agree: spec 9988, spec-mempool 9010; engine aborts filed as witnesses (D15) 0 (decode refusals 0, R3; timeouts 0, of which 0 decided on the 10× re-run, D15a; process deaths 0, of which 0 recovered in a fresh process); undecided runs (the adapter's own codes or no spec verdict, never a witness) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; engine codes/messages outside the tables 0; adapter errors 0
+run_engine: GREEN (every divergence explained by a rule with its citation)
+run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@3.0.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@e72d401 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.3s
+  agree: default/spec 9840, default/spec-mempool 10000, spec 10000, spec-mempool 10000; engine aborts filed as witnesses (D15) 0 (decode refusals 0, R3; timeouts 0, of which 0 decided on the 10× re-run, D15a; process deaths 0, of which 0 recovered in a fresh process); undecided runs (the adapter's own codes or no spec verdict, never a witness) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; engine codes/messages outside the tables 0; adapter errors 0
+run_engine: GREEN (every divergence explained by a rule with its citation)
+rules_check: GREEN (the tables reproduce the classes, counts, smallest witnesses and rulings of the go-sdk, ts-sdk, gobdk, sv-node and bsv-rs manifests; policy-defaults has no classifier rows) (79 corpus × engine manifests, 593871 entries replayed, 155886 divergent runs classified; 4 s)
+
+conformance: wrote docs/CONFORMANCE-2026-09-27.md (85 class rows, 85 witnesses) at e72d401
+specgen --check: OK (117 files up to date; 1 rules flagged)
+git diff --check: exit 0
+Independent audit: error-code mappings and matching, runner/generator executable code, harness/rules/* and lean/* unchanged.
+Studio pins/citations and the captain’s complete landing tripwire: not run by this lane.
+
+REPORT SOURCE STAMP (after the source commit):
+conformance: wrote docs/CONFORMANCE-2026-09-27.md (85 class rows, 85 witnesses) at b8f6f85

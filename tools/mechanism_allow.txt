@@ -1,0 +1,16 @@
+# SHA-256(empty): FIPS 180-4 section 6.2, https://doi.org/10.6028/NIST.FIPS.180-4; [SRC] src/test/crypto_tests.cpp:315-316 at bitcoin-sv 879fc8b42168dd0e608dafd51b39c6dabad37d4d (owner C1, 2026-10-06).
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+# SHA-256(abc): FIPS 180-4 section 6.2, https://doi.org/10.6028/NIST.FIPS.180-4; [SRC] src/test/crypto_tests.cpp:317-319 at bitcoin-sv 879fc8b42168dd0e608dafd51b39c6dabad37d4d (owner C1, 2026-10-06).
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+# SHA-256(448-bit FIPS example): FIPS 180-4 section 6.2, https://doi.org/10.6028/NIST.FIPS.180-4; NIST SHA-256 Two Block Message Sample, pp. 3-6, https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHA256.pdf; [SRC] src/test/crypto_tests.cpp:329-331 at bitcoin-sv 879fc8b42168dd0e608dafd51b39c6dabad37d4d (owner C1 follow-up word, 2026-10-06, supplied locator "FIPS 180-4 Appendix B.2"; the current standard's Appendix B lists references).
+248d6a61d20638b8e5c026930c3e6039a33ce45964ff2167f6ecedd419db06c1
+# SHA-256(million a): RFC 6234 section 8.5, SHA256 test 3 (TEST3 = "a", repeated 1000000 times), p. 97, https://www.rfc-editor.org/rfc/rfc6234.html#section-8.5; [SRC] src/test/crypto_tests.cpp:342-344 at bitcoin-sv 879fc8b42168dd0e608dafd51b39c6dabad37d4d (owner C1 follow-up word allowing further cited standard vectors, 2026-10-06).
+cdc76e5c9914fb9281a1c7e284d73e67f1809a48a497200e046d39ccc7112cd0
+# Public chain headers: rule 10 public archive reads, recorded in corpus/INDEX.md and docs/records/20261012-164656-s6-63-block.md; every long hex value is a header or its block hash, with all 4233 row hashes verified by SHA256d in lane prep-fix4 on 2026-10-12.
+path corpus/chain/headers/*.jsonl
+# Mainnet block 1's header (80 bytes): rule 10 public read, https://api.whatsonchain.com/v1/bsv/main/block/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048/header at 2026-10-15T03:53:02Z (corpus/wire/reads.jsonl); its SHA256d equals the block hash the read names; carried by corpus/wire/tsc.jsonl row tsc-001 in header_hex (#107, lane gate-107, 2026-10-17).
+010000006fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000982051fd1e4ba744bbbe680e1fee14677ba1a3c3540bf7b1cdb606e857233e0e61bc6649ffff001d01e36299
+# The reference pin, bitcoin-sv tag v1.2.3's commit: docs/PROVENANCE.md section 1a (reference.commit), https://github.com/bitcoin-sv/bitcoin-sv/releases/tag/v1.2.3; the [SRC] citation every chain, oracle and sv-node witness row carries, and the pin the sibling programs' records cite when they read the same release (the flip gate of 2026-10-21, 11 corpus files, record 20261021-205040).
+6504a3aff65ba97c0f6c80962b033e35ecbfed4b
+# GoBDK's and the Association docs' reference tag, bitcoin-sv v1.2.2's commit: docs/PROVENANCE.md section 1a (gobdk.reference_commit, association-docs.reference_commit), https://github.com/bitcoin-sv/bitcoin-sv/releases/tag/v1.2.2; a public release commit the sibling programs' records cite beside v1.2.3 (2026-10-21, same record).
+879fc8b42168dd0e608dafd51b39c6dabad37d4d

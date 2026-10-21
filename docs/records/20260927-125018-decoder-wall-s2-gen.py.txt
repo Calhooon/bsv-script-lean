@@ -1,0 +1,25 @@
+# S2's ladder for the decoder wall (S1's ask 4 (a); set 4 sitting 3, 2026-09-27): rungs derived from corpus/tx's tx-00033
+# (tx/rules/pre-genesis/oversize: version 2, one input with an empty scriptSig spending an OP_1 coin, 30,000 identical outputs of
+# 34 bytes (value 0, a 25-byte script 0x51 then 24 x OP_NOP), lock time 0): the same version, input, output bytes and lock time,
+# with n outputs; the entry's prevouts and params are tx-00033's. Nothing else is synthesized; a rung is one JSON line, alone.
+import json, sys
+src, outdir = sys.argv[1], sys.argv[2]
+rungs = [int(x) for x in sys.argv[3].split(",")]
+e = next(json.loads(l) for l in open(src) if json.loads(l)["id"] == "tx-00033")
+b = bytes.fromhex(e["tx"])
+head = b[:46]; assert b[46] == 0xfd
+nout = b[47] | (b[48] << 8); out = b[49:49 + 34]; lock = b[49 + 34 * nout:]
+assert nout == 30000 and len(lock) == 4 and all(b[49 + 34 * k:49 + 34 * k + 34] == out for k in range(nout))
+def cs(n):
+    if n < 253: return bytes([n])
+    if n <= 0xffff: return b"\xfd" + n.to_bytes(2, "little")
+    if n <= 0xffffffff: return b"\xfe" + n.to_bytes(4, "little")
+    return b"\xff" + n.to_bytes(8, "little")
+for n in rungs:
+    tx = head + cs(n) + out * n + lock
+    if n == 30000: assert tx == b, "the 30,000 rung is tx-00033 itself"
+    r = {"id": "ladder-tx-%d" % n, "family": e["family"], "rule": e["rule"], "tx": tx.hex(), "prevouts": e["prevouts"],
+         "params": e["params"], "expect": {}, "note": "S2's decoder ladder: tx-00033 with %d outputs, %d bytes" % (n, len(tx))}
+    with open("%s/rung-%d.jsonl" % (outdir, n), "w") as f:
+        f.write(json.dumps(r) + "\n")
+    print(n, len(tx))

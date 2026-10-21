@@ -1,0 +1,133 @@
+{
+ "engine": "sv-node",
+ "pin": "v1.2.3",
+ "source": "written 2026-09-26 (S3, set 4) for the block road (harness/src/txroad.rs, D97): the reference's own divergences from the spec on the tx.* corpus; a row here is a ruled class with its citation, everything else is unexplained (CLAUDE.md rule 4: the spec is wrong until a human proves otherwise from source)",
+ "classes": {
+  "tx.finality.out-of-scope": {
+   "decided_by": "[SRC] bitcoin-sv v1.2.3 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: validation.cpp:227–247 (IsFinalTx), :5977–5993 (ContextualCheckTransaction: block bad-txns-nonfinal; after Genesis an off-block non-final transaction routes to the non-final pool, :912–926), :257–336 (CalculateSequenceLocks/EvaluateSequenceLocks), :3345–3348 (block BIP68 refusal), :1201–1203 (mempool non-BIP68-final); policy.h:247–255 (StandardNonFinalVerifyFlags: sequence locks before Genesis only). docs/DESIGN.md §5.5: block-level rules, the UTXO set, ordering and maturity are outside the transaction gate, #36.",
+   "ruling": "open",
+   "note": "the scripts and the transaction-level gate are satisfied and the spec says valid; the reference refuses the transaction for a rule outside the script verdict's scope (the transaction's own finality against the chain), which the spec does not model at S3 (#36, S5): recorded as a witness so the boundary is executed, never a spec bug and never an engine bug"
+  },
+  "tx.gate.policy-caps.unmodelled": {
+   "decided_by": "policy.h:81 (MAX_TX_SIGOPS_COUNT_POLICY_BEFORE_GENESIS = MAX_TX_SIGOPS_COUNT_BEFORE_GENESIS / 5 = 4,000), config.cpp:2349 (the policy's value before Genesis), validation.cpp:1245 (the mempool path refuses a transaction over the policy's sigop count as bad-txns-too-many-sigops, REJECT_NONSTANDARD); the transaction-level policy caps (-maxtxsigopscountspolicy, -maxtxsizepolicy: docs/PARAMETERS.md §5, §7) have no field in the spec's NodeConfig (lean/BsvScript/Params.lean, S1's) and the gate (Bsvs.Run.txGate) applies the consensus caps in both columns",
+   "ruling": "open",
+   "note": "the spec's spec-mempool column is SV-node's default policy, so its gate should refuse what the node's default policy caps refuse: a spec gap the road found on 2026-09-26 (the pre-Genesis sigops-at-limit row: 20,000 sigops, consensus-valid, over the mempool's 4,000); the fix is a policy path of the gate on two new NodeConfig fields (a paste to S1) and the flagged rule params.policy.maxtxsizepolicy's family beside it | NARROWED 2026-09-27 (the parent, S3; the road's re-run at 714fbd6, docs/records/20260927-120430-post-landing-s3.md): the sigop cap is in the spec's mempool gate since 4d3a833 (Bsvs.Run.txGate on the consensus = false path meets TxPolicy.txPolicyGateFor, S1's c6374f5: the pre-Genesis constant 4,000, policy.h:81, and the post-Genesis setting, config.cpp:2345-2353), so tx-00035's spec-mempool column reads bad-txns-too-many-sigops as the node's, and this row's `when` (the spec valid, the node invalid) matches no entry of corpus/tx from that re-run on; the class STAYS, never struck on the wiring alone (S1's Correction 5853116684): the post-Genesis sigop count path (script.cpp:79-113 with its error cases 55-63, 85-91, 98-111) and the P2SH part (validation.cpp:463-494) are owed with the corpus entries that exercise them (#26, S1), and the size cap refuses only under the standardness settings (validation.cpp:1081-1090, configscriptpolicy.cpp:468-471) where the spec's instances run acceptnonstdtxn=1 (harness/oracle/bitcoin.conf:55): which NodeConfig the spec-mempool column stands for at the size cap is the ruling A11 (the owner's) | NARROWED AGAIN 2026-09-27 (the parent, S3; D123's package at a849d05, docs/records/20260927-231608-d123-road-s3.md): S1's ask 1 wires TxPolicy.mempoolTxPolicy into the gate, the node's whole sigop count (the P2SH part, the post-Genesis multisig count, the count's errors; validation.cpp:496-518), and the size cap meets TxPolicy.standardnessEnforced's conditions: nothing of this class is owed; kept at 0 entries as the class of record"
+  },
+  "reference.v1.2.3.int64-overflow": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  }
+ },
+ "rows": [
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "id_in": [
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "gen-00796",
+     "gen-01018",
+     "gen-01020",
+     "gen-01024",
+     "gen-01026",
+     "gen-01028",
+     "gen-01030",
+     "gen-01032",
+     "gen-01034",
+     "gen-01036",
+     "gen-01038",
+     "gen-01040",
+     "gen-01042",
+     "gen-01044",
+     "gen-01046",
+     "gen-01050",
+     "gen-01052",
+     "gen-01054",
+     "gen-01056",
+     "gen-01058",
+     "gen-01062",
+     "gen-01064",
+     "gen-01066",
+     "gen-01068",
+     "gen-01070",
+     "gen-01074",
+     "gen-01076",
+     "gen-01078",
+     "gen-01080",
+     "gen-01082",
+     "gen-01086",
+     "gen-01088",
+     "gen-01090",
+     "gen-01092",
+     "gen-01094",
+     "gen-01096",
+     "gen-01098",
+     "gen-01102",
+     "gen-01104",
+     "gen-01106",
+     "gen-01108",
+     "gen-01112",
+     "gen-01116",
+     "gen-01118",
+     "gen-01120",
+     "gen-01122",
+     "gen-01126",
+     "gen-01130",
+     "gen-01132",
+     "gen-01134",
+     "gen-01136",
+     "gen-01140",
+     "gen-01144",
+     "gen-01146",
+     "gen-01148",
+     "gen-01150",
+     "gen-01154",
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "road-gen-00796"
+    ],
+    "spec": "invalid",
+    "engine": "valid",
+    "has_opcode_any": [
+     127,
+     179,
+     180,
+     181
+    ]
+   },
+   "class": "reference.v1.2.3.int64-overflow"
+  },
+  {
+   "why": "tx.locktime: the transaction's own finality (the family says so in its note)",
+   "when": {
+    "rule": "tx.locktime",
+    "family_contains": "nonfinal",
+    "spec": "valid",
+    "engine": "invalid",
+    "engine_code": "bad-txns-nonfinal"
+   },
+   "class": "tx.finality.out-of-scope"
+  },
+  {
+   "why": "tx.sequence before Genesis, the block: BIP68's age (the family says so in its note; the post-Genesis bip68-age row is valid on both roads, the lock not enforced)",
+   "when": {
+    "rule": "tx.sequence",
+    "family_contains": "bip68",
+    "spec": "valid",
+    "engine": "invalid",
+    "engine_code": "bad-txns-nonfinal"
+   },
+   "class": "tx.finality.out-of-scope"
+  },
+  {
+   "why": "tx.rules under the node's default policy: a transaction-level policy cap the spec's gate does not take",
+   "when": {
+    "rule": "tx.rules",
+    "column": "spec-mempool",
+    "spec": "valid",
+    "engine": "invalid",
+    "engine_code": "bad-txns-too-many-sigops"
+   },
+   "class": "tx.gate.policy-caps.unmodelled"
+  }
+ ]
+}

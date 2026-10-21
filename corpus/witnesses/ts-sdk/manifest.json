@@ -1,0 +1,3548 @@
+{
+  "arith": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 684,
+      "default/spec-mempool": 692,
+      "spec": 692,
+      "spec-mempool": 692
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/arith/cases.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 692,
+    "file": "arith.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 684,
+          "default/spec-mempool": 692,
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "code_notes": [],
+        "corpus": "../corpus/arith/cases.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 692,
+        "file": "arith.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 8,
+            "from": "arith-00352",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-arith-default-spec-flags.policy-as-consensus-arith-00352"
+          }
+        ],
+        "sha256": "df3682dc8474cbb85514c4c865bf6ab579e2b1764ce2a3924fbb451801238476",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 1384
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 8,
+        "from": "arith-00352",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-arith-default-spec-flags.policy-as-consensus-arith-00352"
+      }
+    ],
+    "sha256": "3d0a8b346e9350351789897a58d263276b0533076a171683b5ac1c9fa98345d2",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 1384
+    },
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "bytes": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 358,
+      "default/spec-mempool": 507,
+      "spec": 512,
+      "spec-mempool": 512
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 5,
+        "node": "SCRIPT_ERR_CLEANSTACK",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/bytes/cases.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 512,
+    "file": "bytes.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 358,
+          "default/spec-mempool": 507,
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          }
+        ],
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 512,
+        "file": "bytes.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 154,
+            "from": "bytes-00258",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-bytes-default-spec-flags.policy-as-consensus-bytes-00258"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+            "entries": 5,
+            "from": "bytes-00177",
+            "rule": "flags.discourage-upgradable-nops",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-bytes-default-spec-mempool-flags.discourage-upgradable-nops-bytes-00177"
+          }
+        ],
+        "sha256": "9c9f592d7aabde7bcf1f4ade41badf02e07f70a6f14e2589a92eea8cccdd7dbc",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 1024
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 154,
+        "from": "bytes-00258",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-bytes-default-spec-flags.policy-as-consensus-bytes-00258"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+        "entries": 5,
+        "from": "bytes-00177",
+        "rule": "flags.discourage-upgradable-nops",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-bytes-default-spec-mempool-flags.discourage-upgradable-nops-bytes-00177"
+      }
+    ],
+    "sha256": "e7eb6b7feb1a749896aaebf4d78ff2ab319d7efe629856798e088443515f65df",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 1024
+    },
+    "witnesses": 2,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "crypto": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 79,
+      "default/spec-mempool": 82,
+      "spec": 84,
+      "spec-mempool": 84
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 2,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 5,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "entries": 1,
+        "node": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 2,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 5,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "entries": 1,
+        "node": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 6,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 5,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 5,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/crypto/cases.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 84,
+    "file": "crypto.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 79,
+          "default/spec-mempool": 82,
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          }
+        ],
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 84,
+        "file": "crypto.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 3,
+            "from": "crypto-00081",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-crypto-default-spec-flags.policy-as-consensus-crypto-00081"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+            "entries": 2,
+            "from": "crypto-00054",
+            "rule": "flags.version-gate.nullfail",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-crypto-default-spec-flags.version-gate.nullfail-crypto-00054"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+            "entries": 2,
+            "from": "crypto-00054",
+            "rule": "flags.version-gate.nullfail",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-crypto-default-spec-mempool-flags.version-gate.nullfail-crypto-00054"
+          }
+        ],
+        "sha256": "307a145fb878fe36e12609dd9b84bbc0c370a444907ea0adf9034ad32711cc7c",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 168
+        },
+        "witnesses": 3,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 3,
+        "from": "crypto-00081",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-crypto-default-spec-flags.policy-as-consensus-crypto-00081"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+        "entries": 2,
+        "from": "crypto-00054",
+        "rule": "flags.version-gate.nullfail",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-crypto-default-spec-flags.version-gate.nullfail-crypto-00054"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+        "entries": 2,
+        "from": "crypto-00054",
+        "rule": "flags.version-gate.nullfail",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-crypto-default-spec-mempool-flags.version-gate.nullfail-crypto-00054"
+      }
+    ],
+    "sha256": "cc73f5875f5ff1c4161e01a66252d75f4ba46382455b0aab61dc743c2d68df45",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 168
+    },
+    "witnesses": 3,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "eras": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 39,
+      "default/spec-mempool": 32,
+      "spec": 74,
+      "spec-mempool": 73
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+        "entries": 1,
+        "node": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+        "spec": "SCRIPT_ERR_BAD_OPCODE"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+        "entries": 1,
+        "node": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+        "spec": "SCRIPT_ERR_BAD_OPCODE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_DISABLED_OPCODE",
+        "entries": 3,
+        "node": "SCRIPT_ERR_DISABLED_OPCODE",
+        "spec": "SCRIPT_ERR_BAD_OPCODE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_DISABLED_OPCODE",
+        "entries": 3,
+        "node": "SCRIPT_ERR_DISABLED_OPCODE",
+        "spec": "SCRIPT_ERR_BAD_OPCODE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 2,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/eras/eras.jsonl",
+    "decode_refusals": 0,
+    "engine": "ts-sdk@3.0.0",
+    "entries": 74,
+    "file": "eras.jsonl",
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 39,
+          "default/spec-mempool": 32,
+          "spec": 74,
+          "spec-mempool": 73
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_UNBALANCED_CONDITIONAL",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_DISABLED_OPCODE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_DISABLED_OPCODE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          }
+        ],
+        "corpus": "../corpus/eras/eras.jsonl",
+        "decode_refusals": 0,
+        "engine": "ts-sdk@3.0.0",
+        "entries": 74,
+        "file": "eras.jsonl",
+        "generated": "2026-10-06",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+            "entries": 34,
+            "from": "eras-00001",
+            "rule": "eras.default-mode.no-era",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-eras-default-spec-eras.default-mode.no-era-eras-00001"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+            "entries": 1,
+            "from": "eras-00062",
+            "rule": "flags.version-gate.nullfail",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-eras-default-spec-flags.version-gate.nullfail-eras-00062"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+            "entries": 34,
+            "from": "eras-00001",
+            "rule": "eras.default-mode.no-era",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-eras-default-spec-mempool-eras.default-mode.no-era-eras-00001"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+            "entries": 1,
+            "from": "eras-00061",
+            "rule": "flags.default-mode.policy-only",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.default-mode.policy-only-eras-00061"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+            "entries": 6,
+            "from": "eras-00016",
+            "rule": "flags.discourage-upgradable-nops",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.discourage-upgradable-nops-eras-00016"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+            "entries": 1,
+            "from": "eras-00062",
+            "rule": "flags.version-gate.nullfail",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.version-gate.nullfail-eras-00062"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+            "entries": 1,
+            "from": "eras-00042",
+            "rule": "limits.maxscriptnumlength.policy",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-eras-spec-mempool-limits.maxscriptnumlength.policy-eras-00042"
+          }
+        ],
+        "sha256": "c85df1a5429526330b00e4d793146d2ece8851d94645030b39bf7ff38e5f2238",
+        "spec": "spec@c7d9b81",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 112
+        },
+        "witnesses": 7,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 34,
+        "from": "eras-00001",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-eras-default-spec-eras.default-mode.no-era-eras-00001"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+        "entries": 1,
+        "from": "eras-00062",
+        "rule": "flags.version-gate.nullfail",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-eras-default-spec-flags.version-gate.nullfail-eras-00062"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 34,
+        "from": "eras-00001",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-eras-default-spec-mempool-eras.default-mode.no-era-eras-00001"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+        "entries": 1,
+        "from": "eras-00061",
+        "rule": "flags.default-mode.policy-only",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.default-mode.policy-only-eras-00061"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+        "entries": 6,
+        "from": "eras-00016",
+        "rule": "flags.discourage-upgradable-nops",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.discourage-upgradable-nops-eras-00016"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1491–1497,1641–1647; standard.h:62–68; @bsv/sdk 3.0.0 Spend.ts:1710–1715,1844–1849 (NULLFAIL requires an explicit flag name and the version gate); Spend.ts:327–329 (the default mode has no flag names).",
+        "entries": 1,
+        "from": "eras-00062",
+        "rule": "flags.version-gate.nullfail",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-eras-default-spec-mempool-flags.version-gate.nullfail-eras-00062"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+        "entries": 1,
+        "from": "eras-00042",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-eras-spec-mempool-limits.maxscriptnumlength.policy-eras-00042"
+      }
+    ],
+    "sha256": "9a0714ddc290e5cdb1da02fab31ba9af82978aab421c7e9c570335e7c036095e",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 112
+    },
+    "witnesses": 7,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 0
+      },
+      {
+        "consensus": false,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ]
+  },
+  "flow": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 796,
+      "default/spec-mempool": 1087,
+      "spec": 1094,
+      "spec-mempool": 1094
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_BAD_OPCODE",
+        "entries": 5,
+        "node": "SCRIPT_ERR_BAD_OPCODE",
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 1,
+        "node": "SCRIPT_ERR_CLEANSTACK",
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 2,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_BAD_OPCODE",
+        "entries": 5,
+        "node": "SCRIPT_ERR_BAD_OPCODE",
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 1,
+        "node": "SCRIPT_ERR_CLEANSTACK",
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 2,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_BAD_OPCODE",
+        "entries": 5,
+        "node": "SCRIPT_ERR_BAD_OPCODE",
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_BAD_OPCODE",
+        "entries": 5,
+        "node": "SCRIPT_ERR_BAD_OPCODE",
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/flow/flow.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 1094,
+    "file": "flow.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 796,
+          "default/spec-mempool": 1087,
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          }
+        ],
+        "corpus": "../corpus/flow/flow.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 1094,
+        "file": "flow.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 297,
+            "from": "flow-01006",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-flow-default-spec-flags.policy-as-consensus-flow-01006"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+            "entries": 1,
+            "from": "flow-01077",
+            "rule": "flow.else",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-flow-default-spec-flow.else-flow-01077"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+            "entries": 6,
+            "from": "flow-00971",
+            "rule": "flags.discourage-upgradable-nops",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-flow-default-spec-mempool-flags.discourage-upgradable-nops-flow-00971"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+            "entries": 1,
+            "from": "flow-01077",
+            "rule": "flow.else",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-flow-default-spec-mempool-flow.else-flow-01077"
+          }
+        ],
+        "sha256": "17dd265fb8e25a9e252ffc71b2cd938853a1fde9e07412c0715275fcbb7500e1",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 2188
+        },
+        "witnesses": 4,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 297,
+        "from": "flow-01006",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-flow-default-spec-flags.policy-as-consensus-flow-01006"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+        "entries": 1,
+        "from": "flow-01077",
+        "rule": "flow.else",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-flow-default-spec-flow.else-flow-01077"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+        "entries": 6,
+        "from": "flow-00971",
+        "rule": "flags.discourage-upgradable-nops",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-flow-default-spec-mempool-flags.discourage-upgradable-nops-flow-00971"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again).",
+        "entries": 1,
+        "from": "flow-01077",
+        "rule": "flow.else",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-flow-default-spec-mempool-flow.else-flow-01077"
+      }
+    ],
+    "sha256": "15fa8496baab0f1cd78d7ebabe3e7c6687211af900316d6ba259e45df76437a6",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 2188
+    },
+    "witnesses": 4,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "gen": {
+    "abort_messages": {
+      "RangeError: Maximum BigInt size exceeded": 2
+    },
+    "aborts_as_witnesses": 2,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 1078,
+      "default/spec-mempool": 1079,
+      "spec": 1139,
+      "spec-mempool": 1130
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_BIG_INT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_BIG_INT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 57,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 3,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_BIG_INT",
+        "entries": 2,
+        "node": "SCRIPT_ERR_BIG_INT",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 57,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "entries": 2,
+        "node": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_BIG_INT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_BIG_INT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 57,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 3,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_BIG_INT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_BIG_INT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 57,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 3,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 1,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 4,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_BIG_INT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_BIG_INT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 57,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_DER",
+        "entries": 3,
+        "node": "SCRIPT_ERR_SIG_DER",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/gen/gen.jsonl",
+    "decode_refusals": 0,
+    "engine": "ts-sdk@3.0.0",
+    "entries": 1157,
+    "file": "gen.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {
+          "RangeError: Maximum BigInt size exceeded": 2
+        },
+        "aborts_as_witnesses": 2,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 1024,
+          "default/spec-mempool": 1025,
+          "spec": 1085,
+          "spec-mempool": 1076
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 11,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_BIG_INT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_BIG_INT",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 57,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 11,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 11,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_BIG_INT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 11,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BIG_INT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 11,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BIG_INT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_DER",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          }
+        ],
+        "corpus": "../corpus/gen/gen.jsonl",
+        "decode_refusals": 0,
+        "engine": "ts-sdk@3.0.0",
+        "entries": 1157,
+        "file": "gen.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:692–764; script_num.cpp:301–315 (the numeric shift result width); [SRC] @bsv/sdk 3.0.0 Spend.ts:1048–1093 (numeric shifts, BigInt result at 1066), 1438–1469 (byte shifts preserve the input width).",
+            "entries": 2,
+            "from": "gen-00813",
+            "rule": "bitwise.shift.bigint-limit",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-bitwise.shift.bigint-limit-gen-00813"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+            "entries": 53,
+            "from": "gen-00756",
+            "rule": "eras.default-mode.no-era",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-eras.default-mode.no-era-gen-00756"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+            "entries": 7,
+            "from": "gen-00002",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-limits.maxscriptnumlength-gen-00002"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+            "entries": 1,
+            "from": "gen-00972",
+            "rule": "sighash.default-mode.forkid-not-required",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-sighash.default-mode.forkid-not-required-gen-00972"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 70,
+            "from": "gen-01018",
+            "rule": "splice.substr.int64-reader.first-8-bytes",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-splice.substr.int64-reader.first-8-bytes-gen-01018"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:692–764; script_num.cpp:301–315 (the numeric shift result width); [SRC] @bsv/sdk 3.0.0 Spend.ts:1048–1093 (numeric shifts, BigInt result at 1066), 1438–1469 (byte shifts preserve the input width).",
+            "entries": 2,
+            "from": "gen-00813",
+            "rule": "bitwise.shift.bigint-limit",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-bitwise.shift.bigint-limit-gen-00813"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+            "entries": 1,
+            "from": "gen-00973",
+            "rule": "eras.default-mode.no-era",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-eras.default-mode.no-era-gen-00973"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+            "entries": 2,
+            "from": "gen-00996",
+            "rule": "flags.default-mode.policy-only",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-flags.default-mode.policy-only-gen-00996"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+            "entries": 40,
+            "from": "gen-00754",
+            "rule": "flags.discourage-upgradable-nops",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-flags.discourage-upgradable-nops-gen-00754"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+            "entries": 7,
+            "from": "gen-00002",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-limits.maxscriptnumlength-gen-00002"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+            "entries": 9,
+            "from": "gen-00004",
+            "rule": "limits.maxscriptnumlength.policy",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-limits.maxscriptnumlength.policy-gen-00004"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+            "entries": 1,
+            "from": "gen-00972",
+            "rule": "sighash.default-mode.forkid-not-required",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-sighash.default-mode.forkid-not-required-gen-00972"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 70,
+            "from": "gen-01018",
+            "rule": "splice.substr.int64-reader.first-8-bytes",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-default-spec-mempool-splice.substr.int64-reader.first-8-bytes-gen-01018"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+            "entries": 2,
+            "from": "gen-00011",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-spec-limits.maxscriptnumlength-gen-00011"
+          },
+          {
+            "column": "spec",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 70,
+            "from": "gen-01018",
+            "rule": "splice.substr.int64-reader.first-8-bytes",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-spec-splice.substr.int64-reader.first-8-bytes-gen-01018"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+            "entries": 2,
+            "from": "gen-00011",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-00011"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+            "entries": 9,
+            "from": "gen-00004",
+            "rule": "limits.maxscriptnumlength.policy",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00004"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 70,
+            "from": "gen-01018",
+            "rule": "splice.substr.int64-reader.first-8-bytes",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-gen-spec-mempool-splice.substr.int64-reader.first-8-bytes-gen-01018"
+          }
+        ],
+        "sha256": "2edc667ff4fa23cb3077c708bcc007042d88354c7c2cdf1bd3f578c3815c4fcc",
+        "spec": "spec@be4897c",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 2308
+        },
+        "witnesses": 18,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:692–764; script_num.cpp:301–315 (the numeric shift result width); [SRC] @bsv/sdk 3.0.0 Spend.ts:1048–1093 (numeric shifts, BigInt result at 1066), 1438–1469 (byte shifts preserve the input width).",
+        "entries": 2,
+        "from": "gen-00813",
+        "rule": "bitwise.shift.bigint-limit",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-bitwise.shift.bigint-limit-gen-00813"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 53,
+        "from": "gen-00756",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-default-spec-eras.default-mode.no-era-gen-00756"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+        "entries": 22,
+        "from": "gen-00002",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-limits.maxscriptnumlength-gen-00002"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+        "entries": 1,
+        "from": "gen-00972",
+        "rule": "sighash.default-mode.forkid-not-required",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-sighash.default-mode.forkid-not-required-gen-00972"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3, 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: src/script/int_serialization.h:61–118 (checked sign-magnitude conversion; more than nine bytes, a malformed nine-byte sign or an out-of-range magnitude returns no value), script_num.cpp:80–87 (scriptnum_overflow_error), interpreter.cpp:1807–1809 (SCRIPT_ERR_SCRIPTNUM_OVERFLOW), :622–625, :655–656, :680–681 (OP_SUBSTR, OP_LEFT and OP_RIGHT fixed-width operands), :634 (the splice range refusal), :1716–1719 (OP_SPLIT bounds the position by INT32_MAX). [SRC] @bsv/sdk 3.0.0 Spend.ts:539–562 (#readSpliceOperand: above eight bytes read the lower eight, BigInt.asIntN(64), then clamp), :999–1000, :1018, :1036 (the splice reads).",
+        "entries": 1,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.first-8-bytes",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:692–764; script_num.cpp:301–315 (the numeric shift result width); [SRC] @bsv/sdk 3.0.0 Spend.ts:1048–1093 (numeric shifts, BigInt result at 1066), 1438–1469 (byte shifts preserve the input width).",
+        "entries": 2,
+        "from": "gen-00813",
+        "rule": "bitwise.shift.bigint-limit",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-bitwise.shift.bigint-limit-gen-00813"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 1,
+        "from": "gen-00973",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-eras.default-mode.no-era-gen-00973"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 verify_script_flags.cpp:32–81 (the block word by the spend height: SIGHASH_FORKID from the UAHF, 56–58), policy.h:178–190 and standard.h:62–68 (the relay word's standard flags at every height); interpreter.cpp:304–306, 1491–1497, 1641–1647 (MUST_USE_FORKID, NULLFAIL); [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603, 1710–1715, 1844–1849 (FORKID and NULLFAIL only under explicit flag names), 327–329 (no flag names in the default mode).",
+        "entries": 2,
+        "from": "gen-00996",
+        "rule": "flags.default-mode.policy-only",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-flags.default-mode.policy-only-gen-00996"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+        "entries": 40,
+        "from": "gen-00754",
+        "rule": "flags.discourage-upgradable-nops",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-flags.discourage-upgradable-nops-gen-00754"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+        "entries": 22,
+        "from": "gen-00002",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-limits.maxscriptnumlength-gen-00002"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+        "entries": 9,
+        "from": "gen-00004",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-limits.maxscriptnumlength.policy-gen-00004"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306; verify_script_flags.cpp:56–58; [SRC] @bsv/sdk 3.0.0 Spend.ts:595–603 (the default mode returns before enforcing FORKID).",
+        "entries": 1,
+        "from": "gen-00972",
+        "rule": "sighash.default-mode.forkid-not-required",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-default-spec-mempool-sighash.default-mode.forkid-not-required-gen-00972"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3, 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: src/script/int_serialization.h:61–118 (checked sign-magnitude conversion; more than nine bytes, a malformed nine-byte sign or an out-of-range magnitude returns no value), script_num.cpp:80–87 (scriptnum_overflow_error), interpreter.cpp:1807–1809 (SCRIPT_ERR_SCRIPTNUM_OVERFLOW), :622–625, :655–656, :680–681 (OP_SUBSTR, OP_LEFT and OP_RIGHT fixed-width operands), :634 (the splice range refusal), :1716–1719 (OP_SPLIT bounds the position by INT32_MAX). [SRC] @bsv/sdk 3.0.0 Spend.ts:539–562 (#readSpliceOperand: above eight bytes read the lower eight, BigInt.asIntN(64), then clamp), :999–1000, :1018, :1036 (the splice reads).",
+        "entries": 1,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.first-8-bytes",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+        "entries": 17,
+        "from": "gen-00011",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-spec-limits.maxscriptnumlength-gen-00011"
+      },
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3, 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: src/script/int_serialization.h:61–118 (checked sign-magnitude conversion; more than nine bytes, a malformed nine-byte sign or an out-of-range magnitude returns no value), script_num.cpp:80–87 (scriptnum_overflow_error), interpreter.cpp:1807–1809 (SCRIPT_ERR_SCRIPTNUM_OVERFLOW), :622–625, :655–656, :680–681 (OP_SUBSTR, OP_LEFT and OP_RIGHT fixed-width operands), :634 (the splice range refusal), :1716–1719 (OP_SPLIT bounds the position by INT32_MAX). [SRC] @bsv/sdk 3.0.0 Spend.ts:539–562 (#readSpliceOperand: above eight bytes read the lower eight, BigInt.asIntN(64), then clamp), :999–1000, :1018, :1036 (the splice reads).",
+        "entries": 1,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.first-8-bytes",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62; interpreter.cpp:1789–1790, 1807–1810; configscriptpolicy.cpp:79–110; consensus.h:62–66; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (explicit numeric reads: 4, 750000, 32000000 bytes; default unlimited), 1989–1997 (OP_BIN2NUM omits the size argument), 107–111 (helper default Number.MAX_SAFE_INTEGER).",
+        "entries": 17,
+        "from": "gen-00011",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-00011"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110; policy.h:156 (default policy width 10000 bytes); consensus.h:64, 66 (consensus widths); interpreter.cpp:1789–1790, 1807–1810; [SRC] @bsv/sdk 3.0.0 Spend.ts:395–403 (consensus widths on numeric reads, no policy input), 1989–1997 (OP_BIN2NUM result test has no width).",
+        "entries": 9,
+        "from": "gen-00004",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00004"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3, 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: src/script/int_serialization.h:61–118 (checked sign-magnitude conversion; more than nine bytes, a malformed nine-byte sign or an out-of-range magnitude returns no value), script_num.cpp:80–87 (scriptnum_overflow_error), interpreter.cpp:1807–1809 (SCRIPT_ERR_SCRIPTNUM_OVERFLOW), :622–625, :655–656, :680–681 (OP_SUBSTR, OP_LEFT and OP_RIGHT fixed-width operands), :634 (the splice range refusal), :1716–1719 (OP_SPLIT bounds the position by INT32_MAX). [SRC] @bsv/sdk 3.0.0 Spend.ts:539–562 (#readSpliceOperand: above eight bytes read the lower eight, BigInt.asIntN(64), then clamp), :999–1000, :1018, :1036 (the splice reads).",
+        "entries": 1,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.first-8-bytes",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      }
+    ],
+    "sha256": "c2a1bbb936b4dc7b9dfe5f54be47f193afa8996663eb00913e6194bc90c2fb2a",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 2308
+    },
+    "witnesses": 18,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ],
+    "sha256_private": "2eb30a22878742c37a5bab16641506e7ffa66473b6db5ba16709720a46a44788",
+    "withheld_entries": 4,
+    "withheld_groups": {
+      "d8-node-team-discretion": 4
+    },
+    "withheld_group": "d8-node-team-discretion"
+  },
+  "seed": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 9840,
+      "default/spec-mempool": 10000,
+      "spec": 10000,
+      "spec-mempool": 10000
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_BAD_OPCODE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_BAD_OPCODE",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+        "entries": 1,
+        "node": "SCRIPT_ERR_PUBKEY_COUNT",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/seed/seed.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 10000,
+    "file": "seed.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 9840,
+          "default/spec-mempool": 10000,
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "code_notes": [
+          {
+            "column": "default/spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "default/spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          }
+        ],
+        "corpus": "../corpus/seed/seed.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 10000,
+        "file": "seed.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 160,
+            "from": "seed-000296",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-seed-default-spec-flags.policy-as-consensus-seed-000296"
+          }
+        ],
+        "sha256": "661f30c315df95fb4dad7628c36abc7691c4c4498c58c44cc255649b54606cdd",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 20000
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 160,
+        "from": "seed-000296",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-seed-default-spec-flags.policy-as-consensus-seed-000296"
+      }
+    ],
+    "sha256": "5e281806a550886935af7e6f7093e2db5585fc29f6c9eaecc177fca4b40be5c2",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 20000
+    },
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "stack": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 258,
+      "default/spec-mempool": 262,
+      "spec": 262,
+      "spec-mempool": 262
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/stack/cases.jsonl",
+    "engine": "ts-sdk@3.0.0",
+    "entries": 262,
+    "file": "stack.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 258,
+          "default/spec-mempool": 262,
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "code_notes": [],
+        "corpus": "../corpus/stack/cases.jsonl",
+        "engine": "ts-sdk@3.0.0",
+        "entries": 262,
+        "file": "stack.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+            "entries": 4,
+            "from": "stack-00224",
+            "rule": "flags.policy-as-consensus",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-stack-default-spec-flags.policy-as-consensus-stack-00224"
+          }
+        ],
+        "sha256": "9d55c6e812273466cc0bff9e6f1e06fe947f4c5e5166ff57e8d049b54430e596",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 524
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:178–190; verify_script_flags.cpp:32–81 (standard restrictions absent from the block word); [SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 347–374 (default restrictions by transaction version).",
+        "entries": 4,
+        "from": "stack-00224",
+        "rule": "flags.policy-as-consensus",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-stack-default-spec-flags.policy-as-consensus-stack-00224"
+      }
+    ],
+    "sha256": "a93535e6326f83931cdc30f01ffa2a789df1df9645938f229a03672cf8b8a4f8",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 524
+    },
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "tx": {
+    "abort_messages": {
+      "tx-decode: Number can only safely store up to 53 bits": 3
+    },
+    "aborts_as_witnesses": 3,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "default/spec": 29,
+      "default/spec-mempool": 27,
+      "spec": 39,
+      "spec-mempool": 39
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/tx/tx.jsonl",
+    "decode_refusals": 3,
+    "engine": "ts-sdk@3.0.0",
+    "entries": 40,
+    "file": "tx.jsonl",
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "abort_messages": {
+          "tx-decode: Number can only safely store up to 53 bits": 3
+        },
+        "aborts_as_witnesses": 3,
+        "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.18.0 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "default/spec": 29,
+          "default/spec-mempool": 27,
+          "spec": 39,
+          "spec-mempool": 39
+        },
+        "code_notes": [],
+        "corpus": "../corpus/tx/tx.jsonl",
+        "decode_refusals": 3,
+        "engine": "ts-sdk@3.0.0",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "generated": "2026-10-06",
+        "rules": [
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+            "entries": 1,
+            "from": "tx-00026",
+            "rule": "engine.decode-refusal",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-default-spec-engine.decode-refusal-tx-00026"
+          },
+          {
+            "column": "default/spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:522–597; [SRC] @bsv/sdk 3.0.0 Spend.ts:892–931 (CLTV and CSV require explicit flag names), 327–329 (no flag names in the default mode).",
+            "entries": 10,
+            "from": "tx-00003",
+            "rule": "tx.default-mode.locktime-nops",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-default-spec-tx.default-mode.locktime-nops-tx-00003"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+            "entries": 1,
+            "from": "tx-00026",
+            "rule": "engine.decode-refusal",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-default-spec-mempool-engine.decode-refusal-tx-00026"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+            "entries": 2,
+            "from": "tx-00011",
+            "rule": "flags.discourage-upgradable-nops",
+            "ruling": "open",
+            "witness": "witness-ts-sdk-tx-default-spec-mempool-flags.discourage-upgradable-nops-tx-00011"
+          },
+          {
+            "column": "default/spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:522–597; [SRC] @bsv/sdk 3.0.0 Spend.ts:892–931 (CLTV and CSV require explicit flag names), 327–329 (no flag names in the default mode).",
+            "entries": 10,
+            "from": "tx-00003",
+            "rule": "tx.default-mode.locktime-nops",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-default-spec-mempool-tx.default-mode.locktime-nops-tx-00003"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+            "entries": 1,
+            "from": "tx-00026",
+            "rule": "engine.decode-refusal",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-spec-engine.decode-refusal-tx-00026"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+            "entries": 1,
+            "from": "tx-00026",
+            "rule": "engine.decode-refusal",
+            "ruling": "impl-wrong",
+            "witness": "witness-ts-sdk-tx-spec-mempool-engine.decode-refusal-tx-00026"
+          }
+        ],
+        "sha256": "dab6ed47c899be247f8cc35cf71b601e3d2cb378a177bce65e156a3440e32d4b",
+        "spec": "spec@c7d9b81",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "GENESIS": 62
+        },
+        "witnesses": 7,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 869935
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+        "entries": 1,
+        "from": "tx-00026",
+        "rule": "engine.decode-refusal",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-default-spec-engine.decode-refusal-tx-00026"
+      },
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:522–597; [SRC] @bsv/sdk 3.0.0 Spend.ts:892–931 (CLTV and CSV require explicit flag names), 327–329 (no flag names in the default mode).",
+        "entries": 10,
+        "from": "tx-00003",
+        "rule": "tx.default-mode.locktime-nops",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-default-spec-tx.default-mode.locktime-nops-tx-00003"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+        "entries": 1,
+        "from": "tx-00026",
+        "rule": "engine.decode-refusal",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-default-spec-mempool-engine.decode-refusal-tx-00026"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 policy.h:186 (policy flag); interpreter.cpp:765–771; [SRC] @bsv/sdk 3.0.0 Spend.ts:839, 887 (DISCOURAGE_UPGRADABLE_NOPS).",
+        "entries": 2,
+        "from": "tx-00011",
+        "rule": "flags.discourage-upgradable-nops",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-tx-default-spec-mempool-flags.discourage-upgradable-nops-tx-00011"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:522–597; [SRC] @bsv/sdk 3.0.0 Spend.ts:892–931 (CLTV and CSV require explicit flag names), 327–329 (no flag names in the default mode).",
+        "entries": 10,
+        "from": "tx-00003",
+        "rule": "tx.default-mode.locktime-nops",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-default-spec-mempool-tx.default-mode.locktime-nops-tx-00003"
+      },
+      {
+        "column": "spec",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+        "entries": 1,
+        "from": "tx-00026",
+        "rule": "engine.decode-refusal",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-spec-engine.decode-refusal-tx-00026"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Transaction.ts:548–553 (fromHex), 497 (every output amount through readUInt64LEBn().toNumber()), BigNumber.ts:625–629 (toNumber throws above 2^53: 'Number can only safely store up to 53 bits'); [SRC] bitcoin-sv v1.2.2 validation.cpp:543–546 (the reference decodes the amount as an int64 and decides the transaction at its own checks); D15 (docs/DESIGN.md §2.1).",
+        "entries": 1,
+        "from": "tx-00026",
+        "rule": "engine.decode-refusal",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-tx-spec-mempool-engine.decode-refusal-tx-00026"
+      }
+    ],
+    "sha256": "fc58099b44c69db796fdfbe4fbf88de3699feec6f21468d4d31a927e719f8e4b",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 62
+    },
+    "witnesses": 7,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 869935
+      }
+    ]
+  },
+  "xsig-144": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.23.3 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 1200,
+    "adapter_timeout_s": 120,
+    "agree": {
+      "default/spec": 11,
+      "default/spec-mempool": 11,
+      "spec": 12,
+      "spec-mempool": 12
+    },
+    "code_notes": [
+      {
+        "column": "default/spec",
+        "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      {
+        "column": "default/spec-mempool",
+        "engine": "SCRIPT_ERR_CHECKSIGVERIFY",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      }
+    ],
+    "corpus": "../corpus/xsig-144/xsig-144.jsonl",
+    "decode_refusals": 0,
+    "engine": "ts-sdk@3.0.0",
+    "entries": 16,
+    "file": "xsig-144.jsonl",
+    "generated": "2026-09-23",
+    "rules": [
+      {
+        "column": "default/spec",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 5,
+        "from": "xsig-00015",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-xsig-144-default-spec-eras.default-mode.no-era-xsig-00015"
+      },
+      {
+        "column": "default/spec-mempool",
+        "decided_by": "[SRC] @bsv/sdk 3.0.0 Spend.ts:319–321, 331–341 (without explicit flags, the eras follow the transaction version); [SRC] bitcoin-sv v1.2.2 policy.h:226–245, verify_script_flags.cpp:32–81 (coin and spend heights).",
+        "entries": 5,
+        "from": "xsig-00015",
+        "rule": "eras.default-mode.no-era",
+        "ruling": "open",
+        "witness": "witness-ts-sdk-xsig-144-default-spec-mempool-eras.default-mode.no-era-xsig-00015"
+      },
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3 interpreter.cpp:1471–1481 (the locking script appended to the scriptCode of a CHECKSIG in the unlocking script only when checksigData && IsChronicle(flags)), 1567–1577 (CHECKMULTISIG, the same gate), 2338–2342 (VerifyScript passes &scriptPubKey as checksigData); verify_script_flags.cpp:77–78 (SCRIPT_CHRONICLE from the SPEND's block era); @bsv/sdk 3.0.0 Spend.ts:1681–1692 (the subscript continues into the locking script whenever context is UnlockingScript, no flag read), Spend.ts:343–345 (the CHRONICLE flag is read by #enforceNonMalleability, not by the append)",
+        "entries": 4,
+        "from": "xsig-00015",
+        "rule": "crypto.checksig.unlock.ungated",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-xsig-144-spec-crypto.checksig.unlock.ungated-xsig-00015"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3 interpreter.cpp:1471–1481 (the locking script appended to the scriptCode of a CHECKSIG in the unlocking script only when checksigData && IsChronicle(flags)), 1567–1577 (CHECKMULTISIG, the same gate), 2338–2342 (VerifyScript passes &scriptPubKey as checksigData); verify_script_flags.cpp:77–78 (SCRIPT_CHRONICLE from the SPEND's block era); @bsv/sdk 3.0.0 Spend.ts:1681–1692 (the subscript continues into the locking script whenever context is UnlockingScript, no flag read), Spend.ts:343–345 (the CHRONICLE flag is read by #enforceNonMalleability, not by the append)",
+        "entries": 4,
+        "from": "xsig-00015",
+        "rule": "crypto.checksig.unlock.ungated",
+        "ruling": "impl-wrong",
+        "witness": "witness-ts-sdk-xsig-144-spec-mempool-crypto.checksig.unlock.ungated-xsig-00015"
+      }
+    ],
+    "sha256": "c463aa4a2b2057e44cf4d96a559f5ce8b1ec475cb60f22fc327118594a2f8580",
+    "spec": "spec@f5e7e0a6",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "GENESIS": 24
+    },
+    "witnesses": 4,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 900000,
+        "utxo_height": 900000,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 900000,
+        "utxo_height": 900000,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  }
+}

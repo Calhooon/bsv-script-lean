@@ -1,0 +1,26 @@
+{
+  "entries": 36,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/test_txnvalidator.jsonl",
+  "undecided": {
+    "a predicate (CTxnValidator, asynchronous, layer both): the drivers judge spends, and none has a hook that runs it": 10,
+    "a predicate (CTxnValidator::processValidation, layer both): the drivers judge spends, and none has a hook that runs it": 15,
+    "a predicate (MoneyRange(CTransaction::GetValueOut), layer consensus): the drivers judge spends, and none has a hook that runs it": 11
+  },
+  "undecided_ids": {
+    "a predicate (CTxnValidator, asynchronous, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-test_txnvalidator-00027..00036"
+    ],
+    "a predicate (CTxnValidator::processValidation, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-test_txnvalidator-00001..00008",
+      "cpp-test_txnvalidator-00010..00016"
+    ],
+    "a predicate (MoneyRange(CTransaction::GetValueOut), layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-test_txnvalidator-00009",
+      "cpp-test_txnvalidator-00017..00026"
+    ]
+  }
+}

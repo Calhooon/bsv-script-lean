@@ -1,0 +1,95 @@
+--- a/tools/cite_check.py
++++ b/tools/cite_check.py
+@@ -18,13 +18,15 @@
+ choose; `beyond-eof`: the lines do not exist at the pin, a citation error for the page's owner); the citations into this
+ repository's own files (`self`: not a pinned source; their lines move with every edit; a bare name this repository also
+ tracks, `lakefile.toml` or a shim's `main.go`, is `self` unless its paragraph names a pinned source holding that name)
+-and into `docs/records/`, `docs/audit/` and `docs/BLOCKS-ARCHIVE.md` (`history`: a record, a filed lens report and an
++and citations in excluded sites under `docs/records/`, `docs/audit/` and `docs/BLOCKS-ARCHIVE.md` (`history`: a record, a filed lens report and an
+ archived block, moved out of HANDOFF §0 byte for byte by D125, are never edited, so their citations stand at their own
+ commit and a re-pin moves none of them; #47's move to bsv-rs 0.3.30 moved eight audit citations of 0.3.28's
+ `spend.rs`, which no page could re-cut), and into `docs/security/` (a private advisory's draft, once filed, is the copy
+ of what was sent, D135; under A28 the drafts stay off `main`, so there the rule reads an absent directory and keeps a
+ branch that holds them GREEN), and into `docs/recon.md` (the recon log, #39: each dated entry reads the upstreams at its
+-own day's releases, most of them beyond the pins, and a later pin re-cuts no entry). The proposal's findings are listed too: a citation whose
++own day's releases, most of them beyond the pins, and a later pin re-cuts no entry). History sites are excluded BEFORE
++opening, each counted by name as "closed to model turns, not opened". Their citations are not scanned and existing anchor
++rows are retained as unchecked history, never treated as vanished citations. The proposal's findings are listed too: a citation whose
+ backticked neighbour symbol does not occur in the cited lines but does occur near them (`near-miss`), the class C2's S2
+ lens found by hand ("two citation ranges off by two lines at about twenty sites", #43's Why).
+ 
+@@ -199,8 +201,8 @@
+         return self.texts[key]
+ 
+ 
+-def scan_sites():
+-    """Every citation in lean/ and docs/: (site, line number in the site, the citation text, path, [(first, last)])."""
++def scan_sites(excluded=None):
++    """Live citation sites only; append excluded history names without opening them."""
+     found = []
+     for top, ext in SCAN:
+         base = os.path.join(ROOT, top)
+@@ -211,6 +213,11 @@
+                     continue
+                 full = os.path.join(dirpath, fn)
+                 site = os.path.relpath(full, ROOT)
++                # History may hold owner-closed evidence. Name it, but never open it.
++                if site.startswith(HISTORY_PREFIX):
++                    if excluded is not None:
++                        excluded.append(site)
++                    continue
+                 text = open(full, encoding="utf-8", errors="replace").read()
+                 for m in CITE.finditer(text):
+                     path = m.group(1)
+@@ -462,7 +469,14 @@
+     require = os.environ.get("CITE_CHECK_REQUIRE_CLONES") == "1"
+     rows = load_rows()
+     by_key = {key(r["site"], r["cite"], r["first"], r["last"]): r for r in rows}
+-    cites = scan_sites()
++    excluded = []
++    cites = scan_sites(excluded)
++    for site in excluded:
++        print(f"cite_check: [LIT] {site}: closed to model turns, not opened")
++    history_rows = [r for r in rows if r["site"].startswith(HISTORY_PREFIX)]
++    history_keys = {key(r["site"], r["cite"], r["first"], r["last"]) for r in history_rows}
++    print(f"cite_check: excluded files [D] {len(excluded)}; closed to model turns, not opened; "
++          f"excluded anchor rows [D] {len(history_rows)} (retained, not scanned)")
+     counts = Counter()       # per (occurrence, range): every citation found lands in exactly one class
+     moved, findings, listing, proposed = [], [], [], []
+     used, checked, proposed_keys, held_hit = set(), {}, set(), set()
+@@ -517,7 +531,7 @@
+                 if p:
+                     proposed.append(dict(site=c["site"], cite=c["cite"], first=first, last=last, repo=repo,
+                                          commit=src.repo[repo][1][:12], path=fullpath, **p))
+-    seen = used | proposed_keys
++    seen = used | proposed_keys | history_keys
+     orphans = [r for r in rows if key(r["site"], r["cite"], r["first"], r["last"]) not in seen]
+     counts["orphan"] = len(orphans)
+     if require and src.absent:
+@@ -528,7 +542,7 @@
+         print("\n".join(listing))
+     if "--propose" in args:
+         for (site, cite), why in HELD.items():
+-            if (site, cite) not in held_hit:
++            if not site.startswith(HISTORY_PREFIX) and (site, cite) not in held_hit:
+                 findings.append(f"held entry spent: {site} carries no unanchored {cite} any more; remove it from HELD "
+                                 f"({why})")
+         # a proposal runs the near-miss scan over every pinned citation, the anchored ones included
+@@ -539,7 +553,7 @@
+             for first, last in c["ranges"]:
+                 if key(c["site"], c["cite"], first, last) in used:
+                     propose_row(src, c, repo, fullpath, first, last, findings)
+-        kept = [r for r in rows if key(r["site"], r["cite"], r["first"], r["last"]) in used]
++        kept = [r for r in rows if key(r["site"], r["cite"], r["first"], r["last"]) in used | history_keys]
+         new_rows = sorted(kept + proposed, key=lambda r: (r["site"], r["cite"], r["first"], r["last"]))
+         print(f"cite_check --propose: {len(proposed)} rows proposed ({Counter(p['kind'] for p in proposed)}), "
+               f"{len(orphans)} orphan rows dropped, {len(new_rows)} rows after")
+@@ -566,7 +580,7 @@
+     if moved:
+         print("cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)")
+         return 1
+-    print("cite_check: GREEN (every anchored citation holds at the pin)")
++    print("cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)")
+     return 0
+ 
+ 

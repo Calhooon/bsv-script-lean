@@ -1,0 +1,32 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "seed": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 10000,
+    "agree_mempool": 10000,
+    "bsv-rs": "0.3.30",
+[withheld at export: a sibling tree's line]
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 10000,
+    "file": "seed.jsonl",
+    "generated": "2026-09-30",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@8fde74b",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  }
+}

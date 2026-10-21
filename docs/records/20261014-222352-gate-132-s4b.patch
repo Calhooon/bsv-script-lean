@@ -1,0 +1,477 @@
+diff --git a/harness/src/bin/run_teranode.rs b/harness/src/bin/run_teranode.rs
+index d9f6c6e1..db04e8a6 100644
+--- a/harness/src/bin/run_teranode.rs
++++ b/harness/src/bin/run_teranode.rs
+@@ -17,6 +17,7 @@
+ //! Start instance.py with --validator under the box leg lock, build the native
+ //! client with native/build.py, then run this adapter. Stop the instance afterward.
+ 
++use bsv_script_harness::fail::OrErr;
+ use std::collections::BTreeMap;
+ use std::fs::{self, File};
+ use std::io::{BufRead, BufReader, BufWriter, Write};
+@@ -26,7 +27,7 @@ use std::time::{Duration, Instant};
+ 
+ use bsv_rs::primitives::ec::PrivateKey;
+ use bsv_rs::primitives::hash::{hash160, sha256};
+-use bsv_script_harness::block::p2pkh_spend;
++use bsv_script_harness::block::try_p2pkh_spend;
+ use bsv_script_harness::corpus::{Divergence, Entry, ExpectJson, Manifest, PrevoutJson};
+ use bsv_script_harness::txraw::{txid_display_hex, txid_from_display_hex, RawOutput, RawTx};
+ use serde::Serialize;
+@@ -70,8 +71,8 @@ impl Worker {
+             .spawn()
+             .map_err(|e| e.to_string())?;
+         Ok(Self {
+-            input: child.stdin.take().unwrap(),
+-            output: BufReader::new(child.stdout.take().unwrap()),
++            input: child.stdin.take().or_err("child.stdin.take()")?,
++            output: BufReader::new(child.stdout.take().or_err("child.stdout.take()")?),
+             child,
+         })
+     }
+@@ -105,7 +106,41 @@ struct Road {
+     calls: u64,
+ }
+ 
++/// The funding road's two ends (#132): a wall the run records (the node's answer, the manifest's `funding_wall`), or a
++/// stop of the run (a malformed node answer where an unwrap stood: `run` returns the words and exits 1, as the panic
++/// stopped it before).
++enum Halt {
++    Wall(Value),
++    Stop(String),
++}
++
++impl From<Value> for Halt {
++    fn from(w: Value) -> Self {
++        Halt::Wall(w)
++    }
++}
++
++impl From<String> for Halt {
++    fn from(e: String) -> Self {
++        Halt::Stop(e)
++    }
++}
++
++impl Halt {
++    /// The wall for the record, or the stop as the run's `Err`.
++    fn wall(self) -> Result<Value, String> {
++        match self {
++            Halt::Wall(w) => Ok(w),
++            Halt::Stop(e) => Err(e),
++        }
++    }
++}
++
+ impl Road {
++    #[allow(
++        clippy::expect_used,
++        reason = "a journal write failure stops the road rather than losing an answer (the comment above); the message names it"
++    )]
+     fn call(&mut self, native: bool, request: Value) -> Value {
+         self.calls += 1;
+         let response = if native {
+@@ -190,20 +225,26 @@ impl Road {
+         Ok(())
+     }
+ 
+-    fn bake(&mut self, to: u32, address: &str) -> Result<(), Value> {
+-        let mut height = self.tip()?["blocks"].as_u64().unwrap() as u32;
++    fn bake(&mut self, to: u32, address: &str) -> Result<(), Halt> {
++        let mut height = self.tip()?["blocks"]
++            .as_u64()
++            .or_err("self.tip()?['blocks'].as_u64()")? as u32;
+         if height > to {
+-            return Err(json!({"call": "bake", "tip": height, "requested": to,
+-                              "reason": "the chain cannot be lowered through this adapter"}));
++            return Err(Halt::Wall(
++                json!({"call": "bake", "tip": height, "requested": to,
++                              "reason": "the chain cannot be lowered through this adapter"}),
++            ));
+         }
+         while height < to {
+             let n = (to - height).min(100);
+             self.mine(n, address)?;
+-            let actual = self.tip()?["blocks"].as_u64().unwrap() as u32;
++            let actual = self.tip()?["blocks"]
++                .as_u64()
++                .or_err("self.tip()?['blocks'].as_u64()")? as u32;
+             if actual != height + n {
+-                return Err(
++                return Err(Halt::Wall(
+                     json!({"call": "generatetoaddress", "expected_height": height + n, "actual_height": actual}),
+-                );
++                ));
+             }
+             height = actual;
+             if height % 1000 < 100 || height == to {
+@@ -307,7 +348,7 @@ fn contains_opcode(script: &[u8], needles: &[u8]) -> bool {
+                 if p + 2 > script.len() {
+                     return false;
+                 }
+-                let n = u16::from_le_bytes(script[p..p + 2].try_into().unwrap()) as usize;
++                let n = u16::from_le_bytes([script[p], script[p + 1]]) as usize;
+                 p += 2;
+                 n
+             }
+@@ -315,7 +356,8 @@ fn contains_opcode(script: &[u8], needles: &[u8]) -> bool {
+                 if p + 4 > script.len() {
+                     return false;
+                 }
+-                let n = u32::from_le_bytes(script[p..p + 4].try_into().unwrap()) as usize;
++                let n = u32::from_le_bytes([script[p], script[p + 1], script[p + 2], script[p + 3]])
++                    as usize;
+                 p += 4;
+                 n
+             }
+@@ -358,49 +400,53 @@ fn outpoint_slots(e: &Entry) -> (Vec<Option<usize>>, Vec<usize>) {
+     (slots, distinct)
+ }
+ 
+-fn exclusion(e: &Entry, tx: &RawTx) -> Option<String> {
++fn exclusion(e: &Entry, tx: &RawTx) -> Result<Option<String>, String> {
+     if tx.inputs.len() == 1 && e.prevouts.first().is_some_and(is_null) {
+-        return Some("a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)".into());
++        return Ok(Some("a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)".into()));
+     }
+     if tx.lock_time != 0
+         || tx.inputs.iter().any(|i| i.sequence != u32::MAX)
+         || e.rule.starts_with("tx.locktime.")
+         || e.rule.starts_with("tx.sequence.")
+     {
+-        return Some("absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)".into());
++        return Ok(Some("absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)".into()));
+     }
+-    let scripts: Vec<Vec<u8>> = e
+-        .prevouts
+-        .iter()
+-        .map(|p| hex::decode(&p.script).unwrap())
+-        .chain(tx.inputs.iter().map(|i| i.script.clone()))
+-        .collect();
++    let mut scripts: Vec<Vec<u8>> = Vec::new();
++    for p in &e.prevouts {
++        scripts.push(hex::decode(&p.script).or_err("a prevout script")?);
++    }
++    scripts.extend(tx.inputs.iter().map(|i| i.script.clone()));
+     if scripts.iter().any(|s| contains_opcode(s, &[0xb1, 0xb2])) {
+-        return Some("CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)".into());
++        return Ok(Some("CLTV/CSV absolute-height/time row is undecided under the era mapping (comment 5853443740)".into()));
+     }
+     if scripts
+         .iter()
+         .any(|s| contains_opcode(s, &[0xac, 0xad, 0xae, 0xaf]))
+     {
+-        return Some("outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys".into());
++        return Ok(Some("outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys".into()));
+     }
+     if e.flags.is_some() {
+-        return Some(
++        return Ok(Some(
+             "the instance derives flags from its chain and cannot accept an explicit corpus word"
+                 .into(),
+-        );
++        ));
+     }
+     if e.prevouts
+         .iter()
+         .any(|p| era(p.height) != era(e.params.spend_height))
+     {
+-        return Some("mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road".into());
++        return Ok(Some("mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road".into()));
+     }
+-    None
++    Ok(None)
+ }
+ 
++#[allow(
++    clippy::expect_used,
++    reason = "sha256 of the well's fixed label is a valid secp256k1 scalar"
++)]
+ fn well() -> (PrivateKey, Vec<u8>, String) {
+-    let key = PrivateKey::from_bytes(&sha256(b"bsv-script-lean/instance41/well")).unwrap();
++    let key = PrivateKey::from_bytes(&sha256(b"bsv-script-lean/instance41/well"))
++        .expect("PrivateKey::from_bytes(&sha256(b'bsv-script-lean/instance41/well'))");
+     let h = hash160(&key.public_key().to_compressed());
+     let script = [vec![0x76, 0xa9, 0x14], h.to_vec(), vec![0x88, 0xac]].concat();
+     let mut data = vec![0x6f];
+@@ -578,7 +624,8 @@ impl Outputs {
+                             ruling: "open".into(), minimized: None, minimized_prevouts: None,
+                             note: format!("Instance {PIN}, {path} path, same-era funded outputs; original entry id {}. Submitted bytes and node answer are attached.", entry.id),
+                         });
+-                        let mut witness = serde_json::to_value(&w).unwrap();
++                        let mut witness =
++                            serde_json::to_value(&w).or_err("serde_json::to_value(&w)")?;
+                         witness["instance_submission"] = bound.clone().unwrap_or(Value::Null);
+                         witness["node_answer"] = native.clone();
+                         line(&mut self.witnesses, &witness)?;
+@@ -620,7 +667,7 @@ fn setup(
+     entries: &[Entry],
+     eligible: &[usize],
+     base: &Path,
+-) -> Result<(RawTx, String), Value> {
++) -> Result<(RawTx, String), Halt> {
+     let (key, script, address) = well();
+     // The well lives with its chain: instance.py's INSTANCE41_DATA, else base/data.
+     let data = std::env::var_os("INSTANCE41_DATA")
+@@ -634,7 +681,10 @@ fn setup(
+         )
+         .map_err(|e| json!({"call": "parse well state", "reason": e.to_string()}))?
+     } else {
+-        let h = road.tip()?["blocks"].as_u64().unwrap() as u32 + 1;
++        let h = road.tip()?["blocks"]
++            .as_u64()
++            .or_err("road.tip()?['blocks'].as_u64()")? as u32
++            + 1;
+         road.mine(101, &address)?;
+         let raw = road.required(
+             "getblockbyheight",
+@@ -643,10 +693,19 @@ fn setup(
+         )?;
+         let decoded = road.call(true, json!({"method": "coinbase", "hex": raw}));
+         if has_error(&decoded) {
+-            return Err(json!({"call": "decode coinbase", "answer": decoded}));
++            return Err(Halt::Wall(
++                json!({"call": "decode coinbase", "answer": decoded}),
++            ));
+         }
+-        let tx = RawTx::decode(&hex::decode(decoded["result"]["tx"].as_str().unwrap()).unwrap())
+-            .map_err(|e| json!({"call": "decode coinbase transaction", "reason": e}))?;
++        let tx = RawTx::decode(
++            &hex::decode(
++                decoded["result"]["tx"]
++                    .as_str()
++                    .or_err("decoded['result']['tx'].as_str()")?,
++            )
++            .or_err("the coinbase transaction hex")?,
++        )
++        .map_err(|e| json!({"call": "decode coinbase transaction", "reason": e}))?;
+         let (vout, out) = tx.outputs.iter().enumerate().find(|(_, o)| o.script == script)
+             .ok_or_else(|| json!({"call": "generatetoaddress", "reason": "the node's coinbase does not pay the requested well", "coinbase": decoded}))?;
+         json!({"txid": txid_display_hex(&tx.txid_internal()), "vout": vout, "satoshis": out.satoshis,
+@@ -666,22 +725,25 @@ fn setup(
+             script: script.clone(),
+         });
+     }
+-    let available = wallet["satoshis"].as_u64().unwrap();
++    let available = wallet["satoshis"]
++        .as_u64()
++        .or_err("wallet['satoshis'].as_u64()")?;
+     if total > available {
+-        return Err(
++        return Err(Halt::Wall(
+             json!({"call": "build reservoir", "reason": "the mined well cannot fund these values", "required": total, "node_coinbase_or_change": wallet}),
+-        );
++        ));
+     }
+     pool.push(RawOutput {
+         satoshis: available - total,
+         script: script.clone(),
+     });
+     let input = (
+-        txid_from_display_hex(wallet["txid"].as_str().unwrap()).unwrap(),
+-        wallet["vout"].as_u64().unwrap() as u32,
++        txid_from_display_hex(wallet["txid"].as_str().or_err("wallet['txid'].as_str()")?)
++            .or_err("the well state's txid")?,
++        wallet["vout"].as_u64().or_err("wallet['vout'].as_u64()")? as u32,
+         available,
+     );
+-    let tx = p2pkh_spend(&[input], pool, &key, &script);
++    let tx = try_p2pkh_spend(&[input], pool, &key, &script)?;
+     let hex_tx = hex::encode(tx.encode());
+     road.required(
+         "sendrawtransaction",
+@@ -689,10 +751,12 @@ fn setup(
+         "[SRC] services/rpc/handlers.go:830-935 at the instance pin; reservoir submission",
+     )?;
+     road.mine_pending(1, &address)?;
+-    let height = road.tip()?["blocks"].as_u64().unwrap() as u32;
++    let height = road.tip()?["blocks"]
++        .as_u64()
++        .or_err("road.tip()?['blocks'].as_u64()")? as u32;
+     road.confirm(&tx, height)?;
+     fs::write(wallet_path, serde_json::to_vec_pretty(&json!({"txid": txid_display_hex(&tx.txid_internal()),
+-        "vout": eligible.len(), "satoshis": available - total, "script": hex::encode(&script), "instance_commit": PIN})).unwrap())
++        "vout": eligible.len(), "satoshis": available - total, "script": hex::encode(&script), "instance_commit": PIN})).or_err("the well state as JSON")?)
+         .map_err(|e| json!({"call": "write well state", "reason": e.to_string()}))?;
+     Ok((tx, address))
+ }
+@@ -718,25 +782,24 @@ fn run() -> Result<(), String> {
+     let bytes = fs::read(&input).map_err(|e| e.to_string())?;
+     let all: Vec<Entry> = BufReader::new(&bytes[..])
+         .lines()
+-        .filter_map(|l| {
+-            let l = l.expect("corpus line");
+-            if l.trim().is_empty() {
+-                None
+-            } else {
+-                Some(serde_json::from_str(&l).expect("entry JSON"))
+-            }
++        .filter_map(|l| match l {
++            Ok(l) if l.trim().is_empty() => None,
++            Ok(l) => Some(serde_json::from_str::<Entry>(&l).or_err("entry JSON")),
++            Err(err) => Some(Err(format!("corpus line: {err}"))),
+         })
+-        .collect();
++        .collect::<Result<_, _>>()?;
+     if all.len() as u64 != manifest.count {
+         return Err("corpus count differs from its manifest".into());
+     }
+     let limit: usize = arg(&args, "--limit")
+-        .map(|s| s.parse().expect("--limit"))
++        .map(|s| s.parse().or_err("--limit"))
++        .transpose()?
+         .unwrap_or(usize::MAX);
+     // --from skips that many corpus lines, so a long run goes in chunks that each
+     // fit one sitting's foreground command; each chunk is its own run directory.
+     let from: usize = arg(&args, "--from")
+-        .map(|s| s.parse().expect("--from"))
++        .map(|s| s.parse().or_err("--from"))
++        .transpose()?
+         .unwrap_or(0);
+     let entries: Vec<Entry> = all.into_iter().skip(from).take(limit).collect();
+     if entries.is_empty() {
+@@ -746,8 +809,8 @@ fn run() -> Result<(), String> {
+     let mut eligible = Vec::new();
+     for (i, e) in entries.iter().enumerate() {
+         e.check()?;
+-        let tx = RawTx::decode(&hex::decode(&e.tx).unwrap())?;
+-        if let Some(reason) = exclusion(e, &tx) {
++        let tx = RawTx::decode(&hex::decode(&e.tx).or_err("hex::decode(&e.tx)")?)?;
++        if let Some(reason) = exclusion(e, &tx)? {
+             excluded.insert(i, reason);
+         } else {
+             eligible.push(i);
+@@ -791,9 +854,18 @@ fn run() -> Result<(), String> {
+     let mut identity = attestation["result"].clone();
+     identity["native_client_sha256"] = json!(sha_file(&client)?);
+     let mut outputs = Outputs {
+-        answers: BufWriter::new(File::create(out_dir.join("answers.jsonl")).unwrap()),
+-        funding: BufWriter::new(File::create(out_dir.join("funding.jsonl")).unwrap()),
+-        witnesses: BufWriter::new(File::create(out_dir.join("witnesses.jsonl")).unwrap()),
++        answers: BufWriter::new(
++            File::create(out_dir.join("answers.jsonl"))
++                .or_err("File::create(out_dir.join('answers.jsonl'))")?,
++        ),
++        funding: BufWriter::new(
++            File::create(out_dir.join("funding.jsonl"))
++                .or_err("File::create(out_dir.join('funding.jsonl'))")?,
++        ),
++        witnesses: BufWriter::new(
++            File::create(out_dir.join("witnesses.jsonl"))
++                .or_err("File::create(out_dir.join('witnesses.jsonl'))")?,
++        ),
+         counts: PATHS
+             .iter()
+             .map(|p| (p.to_string(), Counts::default()))
+@@ -815,7 +887,7 @@ fn run() -> Result<(), String> {
+     let mut wall = None;
+     if !eligible.is_empty() {
+         match setup(&mut road, &entries, &eligible, &base) {
+-            Err(w) => wall = Some(w),
++            Err(h) => wall = Some(h.wall()?),
+             Ok((pool, address)) => {
+                 let (key, script, _) = well();
+                 let mut cursor = 0;
+@@ -843,7 +915,8 @@ fn run() -> Result<(), String> {
+                             break;
+                         }
+                     };
+-                    let fund_height = lo.max(tip["blocks"].as_u64().unwrap() as u32 + 1);
++                    let fund_height =
++                        lo.max(tip["blocks"].as_u64().or_err("tip['blocks'].as_u64()")? as u32 + 1);
+                     if fund_height >= hi {
+                         for i in &eligible[cursor..end] {
+                             for path in PATHS {
+@@ -854,8 +927,8 @@ fn run() -> Result<(), String> {
+                         cursor = end;
+                         continue;
+                     }
+-                    if let Err(w) = road.bake(fund_height - 1, &address) {
+-                        wall = Some(w);
++                    if let Err(h) = road.bake(fund_height - 1, &address) {
++                        wall = Some(h.wall()?);
+                         break;
+                     }
+                     let mut funded = Vec::new();
+@@ -865,12 +938,15 @@ fn run() -> Result<(), String> {
+                         let (_, distinct) = outpoint_slots(e);
+                         let locks: Vec<RawOutput> = distinct
+                             .iter()
+-                            .map(|k| RawOutput {
+-                                satoshis: e.prevouts[*k].satoshis,
+-                                script: hex::decode(&e.prevouts[*k].script).unwrap(),
++                            .map(|k| -> Result<RawOutput, String> {
++                                Ok(RawOutput {
++                                    satoshis: e.prevouts[*k].satoshis,
++                                    script: hex::decode(&e.prevouts[*k].script)
++                                        .or_err("a prevout script")?,
++                                })
+                             })
+-                            .collect();
+-                        let funding = p2pkh_spend(
++                            .collect::<Result<_, _>>()?;
++                        let funding = try_p2pkh_spend(
+                             &[(
+                                 pool.txid_internal(),
+                                 pool_vout as u32,
+@@ -879,7 +955,7 @@ fn run() -> Result<(), String> {
+                             locks.iter().chain(locks.iter()).cloned().collect(),
+                             &key,
+                             &script,
+-                        );
++                        )?;
+                         let response =
+                             road.rpc("sendrawtransaction", json!([hex::encode(funding.encode())]));
+                         line(
+@@ -929,14 +1005,18 @@ fn run() -> Result<(), String> {
+                                 break;
+                             }
+                         };
+-                        let candidate = tip["blocks"].as_u64().unwrap() as u32 + 1;
++                        let candidate =
++                            tip["blocks"].as_u64().or_err("tip['blocks'].as_u64()")? as u32 + 1;
+                         if candidate != fund_height + 1 {
+                             wall = Some(
+                                 json!({"call": "confirm funding", "planned_height": fund_height, "actual_tip": tip}),
+                             );
+                             break;
+                         }
+-                        let mtp = tip["mediantime"].as_u64().unwrap() as u32;
++                        let mtp = tip["mediantime"]
++                            .as_u64()
++                            .or_err("tip['mediantime'].as_u64()")?
++                            as u32;
+                         let candidate_time = mtp.saturating_add(1);
+                         'submissions: for (offset, (i, funding)) in funded.iter().enumerate() {
+                             let headroom = road.rpc("headroom", json!([]));
+@@ -953,7 +1033,9 @@ fn run() -> Result<(), String> {
+                                 }
+                             };
+                             for (path_index, path) in PATHS.iter().enumerate() {
+-                                let mut tx = RawTx::decode(&hex::decode(&e.tx).unwrap())?;
++                                let mut tx = RawTx::decode(
++                                    &hex::decode(&e.tx).or_err("hex::decode(&e.tx)")?,
++                                )?;
+                                 let mut prevouts: Vec<PrevoutJson> = e.prevouts.clone();
+                                 let (slots, distinct) = outpoint_slots(e);
+                                 for (k, input) in tx.inputs.iter_mut().enumerate() {
+@@ -1063,7 +1145,8 @@ fn run() -> Result<(), String> {
+         "provenance": "synthetic seed corpus; node at the tagged pin on the local private chain; witnesses are unclassified findings"});
+     fs::write(
+         out_dir.join("manifest.json"),
+-        serde_json::to_string_pretty(&header).unwrap() + "\n",
++        serde_json::to_string_pretty(&header).or_err("serde_json::to_string_pretty(&header)")?
++            + "\n",
+     )
+     .map_err(|e| e.to_string())?;
+     println!(
+@@ -1192,7 +1275,7 @@ mod tests {
+         let line = |prevouts: &str| -> Entry {
+             serde_json::from_str(&format!(r#"{{"id":"t","family":"f","rule":"r","tx":"00","prevouts":{prevouts},"params":{{"spend_height":700000,"era":"post-genesis","consensus":true,"tx_version":1}},"expect":{{}}}}"#)).unwrap()
+         };
+-        let a = format!("{}", "ab".repeat(32));
++        let a = "ab".repeat(32);
+         let z = "00".repeat(32);
+         let p = |t: &str, v: u32| {
+             format!(r#"{{"txid":"{t}","vout":{v},"script":"51","satoshis":1,"height":700000}}"#)

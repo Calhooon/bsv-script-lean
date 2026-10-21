@@ -1,0 +1,4759 @@
+[export: 260 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "base": "764dab8b2a7d45c5917214bc4589d5ae2d6f1910",
+  "start": "2026-10-12T00:35:47.953431+00:00",
+  "runner_sha256": "1df5a81ffe032cb71699c2682b182db1d27d3f257e96f843ae0e75c2005a91d4",
+  "recorded_spec": "spec@cb7e46e",
+  "recorded_spec_mempool": "spec-mempool@cb7e46e",
+  "protected_hashes": {
+    "harness/rules/go-sdk.json": "b4f30e3c2925c56a38bea99c80028718d5495ea4c9e38dc1fafd74a5211f1e53",
+    "harness/rules/gobdk.json": "3433979f5c55ca967ac84b8bb6223c2a196babe01275fa413f99e88b26363c8e",
+    "harness/rules/sv-node.json": "bd30ab75c33cb5712d8f5c07085918bdd18b085c93d38d3ae5825012fe98b380",
+    "harness/rules/ts-sdk.json": "b69f8ab2e404c3dbc5a8afb9b00c339dff1ce12b28306b5b84a09911e3282a95",
+    "harness/rules/bsv-rs.json": "52715d6d5edde87488cdb9003d1e2f8dff6c2a670c70bf19c2916577a2b599a2",
+    "corpus/witnesses/manifest.json": "dd947b1209b732a8a62f7b94b81a3ed5be984522a16fa65e62f103e04564b791",
+    "corpus/witnesses/sv-node/manifest.json": "1bb00874d8f87ac3476e19270fb16eba73bc73736b0f18bad71904c9c6eebba6",
+    "corpus/witnesses/ts-sdk/manifest.json": "f2395d0a0bf881334bd3faa23d0dcf9cfa0c2a330cdd06d7e0a372818c46219c",
+    "corpus/witnesses/gobdk/manifest.json": "c959228d56d4970a8903532e5a15aa814b751c0a462fee7edb01753bbfdc6b2d"
+  },
+  "corpora": [
+    {
+      "corpus": "arith",
+      "path": "corpus/arith/cases.jsonl",
+      "stored": "corpus/arith/cases.jsonl",
+      "entries": 692,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "arith",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/arith/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.028080+00:00",
+        "end": "2026-10-12T00:35:49.080786+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.0487001669825986,
+        "exit": 0
+      },
+      "stored_sha256_before": "6a4cb453d3ba601f3d832bbc0e831ed5369d03b0112d262827657a62164f8d14",
+      "stored_sha256_after": "ea87cb843dde04bdee411447c76966b05cdc5b15d279ab7cc4ce4866d3f9d49c",
+      "corpus_sha256_before": "6a4cb453d3ba601f3d832bbc0e831ed5369d03b0112d262827657a62164f8d14",
+      "corpus_sha256_after": "ea87cb843dde04bdee411447c76966b05cdc5b15d279ab7cc4ce4866d3f9d49c",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 692,
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 684
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1384,
+          "SCRIPT_GENESIS": 1384
+        },
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 8,
+            "witness": "witness-go-sdk-arith-spec-mempool-flags.version-gate.absent-arith-00351",
+            "from": "arith-00351"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 692,
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 8
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 8
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "bytes",
+      "path": "corpus/bytes/cases.jsonl",
+      "stored": "corpus/bytes/cases.jsonl",
+      "entries": 512,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "bytes",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/bytes/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.105548+00:00",
+        "end": "2026-10-12T00:35:49.152104+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.04301970801316202,
+        "exit": 0
+      },
+      "stored_sha256_before": "4d2b28b1872bccbe449a0c8dbf53e7d6991b271c812467cee3f37408130072bc",
+      "stored_sha256_after": "5c47cbfc0cdd49272b38f45ff28332a9dcb6c25556b1ac82a55c9025a057f007",
+      "corpus_sha256_before": "4d2b28b1872bccbe449a0c8dbf53e7d6991b271c812467cee3f37408130072bc",
+      "corpus_sha256_after": "5c47cbfc0cdd49272b38f45ff28332a9dcb6c25556b1ac82a55c9025a057f007",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 512,
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 363
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1024,
+          "SCRIPT_GENESIS": 1024
+        },
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 149,
+            "witness": "witness-go-sdk-bytes-spec-mempool-flags.version-gate.absent-bytes-00002",
+            "from": "bytes-00002"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 512,
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 8,
+        "go-sdk-mempool@v1.7.2": 167
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 149
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "crypto",
+      "path": "corpus/crypto/cases.jsonl",
+      "stored": "corpus/crypto/cases.jsonl",
+      "entries": 84,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "crypto",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/crypto/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.173455+00:00",
+        "end": "2026-10-12T00:35:49.222493+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.04523604107089341,
+        "exit": 0
+      },
+      "stored_sha256_before": "863995a24722a492f19e4702ca0da2d7f6c21e534fbd75499ba21b89982ec661",
+      "stored_sha256_after": "1fb17cbaa184b576e4ad4185b5c39f4a3e3bfbbd8986db362c58ff7156df0d82",
+      "corpus_sha256_before": "863995a24722a492f19e4702ca0da2d7f6c21e534fbd75499ba21b89982ec661",
+      "corpus_sha256_after": "1fb17cbaa184b576e4ad4185b5c39f4a3e3bfbbd8986db362c58ff7156df0d82",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 84,
+        "agree": {
+          "spec": 78,
+          "spec-mempool": 75
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 168,
+          "SCRIPT_GENESIS": 168
+        },
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "flags.version-gate.absent",
+            "entries": 6,
+            "witness": "witness-go-sdk-crypto-spec-flags.version-gate.absent-crypto-00012",
+            "from": "crypto-00012"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 9,
+            "witness": "witness-go-sdk-crypto-spec-mempool-flags.version-gate.absent-crypto-00039",
+            "from": "crypto-00039"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 84,
+        "agree": {
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 20,
+        "go-sdk-mempool@v1.7.2": 23
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 6,
+        "go-sdk-mempool@v1.7.2": 9
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "eras",
+      "path": "corpus/eras/eras.jsonl",
+      "stored": "corpus/eras/eras.jsonl",
+      "entries": 74,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "eras",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/eras/eras.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.234560+00:00",
+        "end": "2026-10-12T00:35:49.271204+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.032963708974421024,
+        "exit": 0
+      },
+      "stored_sha256_before": "de653ffec1307a4749b47e84dc4c13b2a4e61e58f14f1352e140ef8fc8a773c1",
+      "stored_sha256_after": "c8e1178568a684e82b647319574cf303d971dd0d1ce4e93ad620add40e18cef0",
+      "corpus_sha256_before": "de653ffec1307a4749b47e84dc4c13b2a4e61e58f14f1352e140ef8fc8a773c1",
+      "corpus_sha256_after": "c8e1178568a684e82b647319574cf303d971dd0d1ce4e93ad620add40e18cef0",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 74,
+        "agree": {
+          "spec": 70,
+          "spec-mempool": 69
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 108,
+          "SCRIPT_GENESIS": 112
+        },
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "flags.version-gate.absent",
+            "entries": 2,
+            "witness": "witness-go-sdk-eras-spec-flags.version-gate.absent-eras-00045",
+            "from": "eras-00045"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.must-use-forkid",
+            "entries": 1,
+            "witness": "witness-go-sdk-eras-spec-sighash.must-use-forkid-eras-00058",
+            "from": "eras-00058"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.type.chronicle-bit",
+            "entries": 1,
+            "witness": "witness-go-sdk-eras-spec-sighash.type.chronicle-bit-eras-00064",
+            "from": "eras-00064"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 4,
+            "witness": "witness-go-sdk-eras-spec-mempool-flags.version-gate.absent-eras-00006",
+            "from": "eras-00006"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "sighash.type.chronicle-bit",
+            "entries": 1,
+            "witness": "witness-go-sdk-eras-spec-mempool-sighash.type.chronicle-bit-eras-00064",
+            "from": "eras-00064"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 74,
+        "agree": {
+          "spec": 74,
+          "spec-mempool": 73
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength.policy",
+            "entries": 1,
+            "witness": "witness-go-sdk-eras-spec-mempool-limits.maxscriptnumlength.policy-eras-00042",
+            "from": "eras-00042"
+          }
+        ]
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 8,
+        "go-sdk-mempool@v1.7.2": 16
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 4,
+        "go-sdk-mempool@v1.7.2": 6
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "flow",
+      "path": "corpus/flow/flow.jsonl",
+      "stored": "corpus/flow/flow.jsonl",
+      "entries": 1094,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "flow",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/flow/flow.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.289363+00:00",
+        "end": "2026-10-12T00:35:49.353940+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.06048854102846235,
+        "exit": 0
+      },
+      "stored_sha256_before": "da9b9fbd76e68a83fc146d2e2a1c4ea760b9b6089fd228edd4422461fef4006c",
+      "stored_sha256_after": "0586c7ebac0e83fd941bc219b6ee8f53df29d83deb9b418b6e5e119052c17675",
+      "corpus_sha256_before": "da9b9fbd76e68a83fc146d2e2a1c4ea760b9b6089fd228edd4422461fef4006c",
+      "corpus_sha256_after": "0586c7ebac0e83fd941bc219b6ee8f53df29d83deb9b418b6e5e119052c17675",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1094,
+        "agree": {
+          "spec": 1089,
+          "spec-mempool": 792
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2188,
+          "SCRIPT_GENESIS": 2188
+        },
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "flags.version-gate.absent",
+            "entries": 5,
+            "witness": "witness-go-sdk-flow-spec-flags.version-gate.absent-flow-00961",
+            "from": "flow-00961"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 302,
+            "witness": "witness-go-sdk-flow-spec-mempool-flags.version-gate.absent-flow-01005",
+            "from": "flow-01005"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 1094,
+        "agree": {
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 23,
+        "go-sdk-mempool@v1.7.2": 322
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 5,
+        "go-sdk-mempool@v1.7.2": 302
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "gen",
+      "path": "corpus/gen/gen.jsonl",
+      "stored": "corpus/gen/gen.jsonl",
+      "entries": 1157,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "gen",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/gen/gen.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.393567+00:00",
+        "end": "2026-10-12T00:35:49.603251+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.205824083997868,
+        "exit": 1
+      },
+      "stored_sha256_before": "b34cf544591f937bc5043f57a2b6c44d607d7782ad04d9beb3686b5de47437a0",
+      "stored_sha256_after": "170d590a0dd79f8596753ca6bdfdedb28c7fee144f5d3d81d36b419f648d8414",
+      "corpus_sha256_before": "b34cf544591f937bc5043f57a2b6c44d607d7782ad04d9beb3686b5de47437a0",
+      "corpus_sha256_after": "170d590a0dd79f8596753ca6bdfdedb28c7fee144f5d3d81d36b419f648d8414",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1157,
+        "agree": {
+          "spec": 1142,
+          "spec-mempool": 1133
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 18,
+        "timeouts": 3,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2300,
+          "SCRIPT_GENESIS": 2302
+        },
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "engine.timeout",
+            "entries": 3,
+            "witness": "witness-go-sdk-gen-spec-engine.timeout-gen-00837",
+            "from": "gen-00837"
+          },
+          {
+            "column": "spec",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 3,
+            "witness": "witness-go-sdk-gen-spec-limits.maxscriptnumlength-gen-00009",
+            "from": "gen-00009"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.dispatch.forkid-bit-without-flag",
+            "entries": 1,
+            "witness": "witness-go-sdk-gen-spec-sighash.dispatch.forkid-bit-without-flag-gen-00995",
+            "from": "gen-00995"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.must-use-forkid",
+            "entries": 1,
+            "witness": "witness-go-sdk-gen-spec-sighash.must-use-forkid-gen-00972",
+            "from": "gen-00972"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.original.truncated-push",
+            "entries": 6,
+            "witness": "witness-go-sdk-gen-spec-sighash.original.truncated-push-gen-00997",
+            "from": "gen-00997"
+          },
+          {
+            "column": "spec",
+            "rule": "sighash.type.chronicle-bit",
+            "entries": 1,
+            "witness": "witness-go-sdk-gen-spec-sighash.type.chronicle-bit-gen-00974",
+            "from": "gen-00974"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "engine.timeout",
+            "entries": 3,
+            "witness": "witness-go-sdk-gen-spec-mempool-engine.timeout-gen-00837",
+            "from": "gen-00837"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 6,
+            "witness": "witness-go-sdk-gen-spec-mempool-flags.version-gate.absent-gen-00001",
+            "from": "gen-00001"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 1,
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-01010",
+            "from": "gen-01010"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength.policy",
+            "entries": 4,
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00010",
+            "from": "gen-00010"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "sighash.must-use-forkid",
+            "entries": 3,
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.must-use-forkid-gen-00972",
+            "from": "gen-00972"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "sighash.original.truncated-push",
+            "entries": 6,
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.original.truncated-push-gen-00997",
+            "from": "gen-00997"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "sighash.type.chronicle-bit",
+            "entries": 1,
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.type.chronicle-bit-gen-00974",
+            "from": "gen-00974"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 1157,
+        "agree": {
+          "spec": 1099,
+          "spec-mempool": 1090
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 57,
+            "witness": "witness-go-sdk-gen-spec-limits.maxscriptnumlength-gen-00796",
+            "from": "gen-00796"
+          },
+          {
+            "column": "spec",
+            "rule": "unexplained",
+            "entries": 1,
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 57,
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-00796",
+            "from": "gen-00796"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength.policy",
+            "entries": 9,
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00004",
+            "from": "gen-00004"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "unexplained",
+            "entries": 1,
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+          }
+        ]
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 99,
+        "go-sdk-mempool@v1.7.2": 113
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 71,
+        "go-sdk-mempool@v1.7.2": 82
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "seed",
+      "path": "corpus/seed/seed.jsonl",
+      "stored": "corpus/seed/seed.jsonl",
+      "entries": 10000,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "seed",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/seed/seed.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:49.707699+00:00",
+        "end": "2026-10-12T00:35:50.356268+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.644012707984075,
+        "exit": 0
+      },
+      "stored_sha256_before": "4f0a6eacdbd3191ab2ba7e10ac32a95a23d8c30da680186cec7cfc59b2e59572",
+      "stored_sha256_after": "4e68fa1e3fc4b8e5b5fa19bb2fb0de5f461ec0138f44136faa0c108efcd56b80",
+      "corpus_sha256_before": "4f0a6eacdbd3191ab2ba7e10ac32a95a23d8c30da680186cec7cfc59b2e59572",
+      "corpus_sha256_after": "4e68fa1e3fc4b8e5b5fa19bb2fb0de5f461ec0138f44136faa0c108efcd56b80",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 10000,
+        "agree": {
+          "spec": 9988,
+          "spec-mempool": 9010
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 20000,
+          "SCRIPT_GENESIS": 20000
+        },
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "flags.version-gate.absent",
+            "entries": 12,
+            "witness": "witness-go-sdk-seed-spec-flags.version-gate.absent-seed-009309",
+            "from": "seed-009309"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 990,
+            "witness": "witness-go-sdk-seed-spec-mempool-flags.version-gate.absent-seed-000068",
+            "from": "seed-000068"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 10000,
+        "agree": {
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 468,
+        "go-sdk-mempool@v1.7.2": 1549
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 12,
+        "go-sdk-mempool@v1.7.2": 990
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "stack",
+      "path": "corpus/stack/cases.jsonl",
+      "stored": "corpus/stack/cases.jsonl",
+      "entries": 262,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "stack",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/stack/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:35:50.640963+00:00",
+        "end": "2026-10-12T00:35:50.692303+00:00",
+        "load": [
+          2.43017578125,
+          3.7548828125,
+          4.93994140625
+        ],
+        "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+        "seconds": 0.047414790955372155,
+        "exit": 0
+      },
+      "stored_sha256_before": "e4688372721b62b714cbee4d6ebb80ad7bc9df73cc70c8047b20b9803d6d27eb",
+      "stored_sha256_after": "0e7dbea43740de7e1d9ba65ab72c09fafa37a37a6a74987558d74c035567ca27",
+      "corpus_sha256_before": "e4688372721b62b714cbee4d6ebb80ad7bc9df73cc70c8047b20b9803d6d27eb",
+      "corpus_sha256_after": "0e7dbea43740de7e1d9ba65ab72c09fafa37a37a6a74987558d74c035567ca27",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 262,
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 258
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 524,
+          "SCRIPT_GENESIS": 524
+        },
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "rule": "flags.version-gate.absent",
+            "entries": 4,
+            "witness": "witness-go-sdk-stack-spec-mempool-flags.version-gate.absent-stack-00223",
+            "from": "stack-00223"
+          }
+        ]
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 262,
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 4
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 4
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "tx",
+      "path": "corpus/tx/tx.jsonl",
+      "stored": "corpus/tx/tx.jsonl",
+      "entries": 40,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "tx",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/tx/tx.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:11.495561+00:00",
+        "end": "2026-10-12T00:37:11.721655+00:00",
+        "load": [
+          2.94580078125,
+          3.72265625,
+          4.81982421875
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+        "seconds": 0.22175033297389746,
+        "exit": 0
+      },
+      "stored_sha256_before": "6f631662726b2007145b1154e6b4dabbfc12d0287bc1c5382bf4fb35f63cd1b4",
+      "stored_sha256_after": "8aaa3627f4d228252ada65709f6dcd09108580ff63ea24a1cd43feec3bb14276",
+      "corpus_sha256_before": "6f631662726b2007145b1154e6b4dabbfc12d0287bc1c5382bf4fb35f63cd1b4",
+      "corpus_sha256_after": "8aaa3627f4d228252ada65709f6dcd09108580ff63ea24a1cd43feec3bb14276",
+      "before": {
+        "engine": "go-sdk@v1.7.1",
+        "entries": 40,
+        "agree": {
+          "spec": 40,
+          "spec-mempool": 40
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_GENESIS": 64
+        },
+        "rules": []
+      },
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 40,
+        "agree": {
+          "spec": 40,
+          "spec-mempool": 40
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      }
+    },
+    {
+      "corpus": "cpp-bn_op",
+      "path": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+      "entries": 170,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-bn_op",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:11.828209+00:00",
+        "end": "2026-10-12T00:37:11.873686+00:00",
+        "load": [
+          2.94580078125,
+          3.72265625,
+          4.81982421875
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+        "seconds": 0.041532374918460846,
+        "exit": 0
+      },
+      "stored_sha256_before": "f4f7852c9e7b02d039e50a8eab27bc4ade35b9101105a4f8ba47ea8811554d04",
+      "stored_sha256_after": "564a73a7f41e7a534b1f72bb551a0e96b02379d6a58bde4e91dba43f37bf4e4c",
+      "corpus_sha256_before": "f4f7852c9e7b02d039e50a8eab27bc4ade35b9101105a4f8ba47ea8811554d04",
+      "corpus_sha256_after": "564a73a7f41e7a534b1f72bb551a0e96b02379d6a58bde4e91dba43f37bf4e4c",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 170,
+        "agree": {
+          "spec": 170,
+          "spec-mempool": 170
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 170,
+        "go-sdk-mempool@v1.7.2": 170
+      }
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "path": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+      "entries": 36,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-lrshiftnum",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:11.889374+00:00",
+        "end": "2026-10-12T00:37:11.988105+00:00",
+        "load": [
+          2.94580078125,
+          3.72265625,
+          4.81982421875
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+        "seconds": 0.09466766705736518,
+        "exit": 0
+      },
+      "stored_sha256_before": "351117041ca0909f74ee64ef6dd5ccf50fd68bd7bd7f2154a2320e44a3d89ade",
+      "stored_sha256_after": "2704bfc99cc9a122ea03dce4deee5ad2f08b849f1105c9b7281d05ebbb0b69a7",
+      "corpus_sha256_before": "351117041ca0909f74ee64ef6dd5ccf50fd68bd7bd7f2154a2320e44a3d89ade",
+      "corpus_sha256_after": "2704bfc99cc9a122ea03dce4deee5ad2f08b849f1105c9b7281d05ebbb0b69a7",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 36,
+        "agree": {
+          "spec": 36,
+          "spec-mempool": 35
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength.policy",
+            "entries": 1,
+            "witness": "witness-go-sdk-cpp-lrshiftnum-spec-mempool-limits.maxscriptnumlength.policy-cpp-lrshiftnum-00018",
+            "from": "cpp-lrshiftnum-00018"
+          }
+        ]
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 36,
+        "go-sdk-mempool@v1.7.2": 36
+      }
+    },
+    {
+      "corpus": "cpp-multisig",
+      "path": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+      "entries": 30,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-multisig",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:12.001371+00:00",
+        "end": "2026-10-12T00:37:12.044000+00:00",
+        "load": [
+          2.94580078125,
+          3.72265625,
+          4.81982421875
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+        "seconds": 0.037831165944226086,
+        "exit": 0
+      },
+      "stored_sha256_before": "99efbaa88efa4f156cb8042dde749ca1e6d9ce3a191befd01e00548da50d233b",
+      "stored_sha256_after": "9ae3f684889fc874e73a187f42593f74115295beef08122211956b51e0b11577",
+      "corpus_sha256_before": "99efbaa88efa4f156cb8042dde749ca1e6d9ce3a191befd01e00548da50d233b",
+      "corpus_sha256_after": "9ae3f684889fc874e73a187f42593f74115295beef08122211956b51e0b11577",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 30,
+        "agree": {
+          "spec": 30,
+          "spec-mempool": 30
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 30,
+        "go-sdk-mempool@v1.7.2": 30
+      }
+    },
+    {
+      "corpus": "cpp-opcode",
+      "path": "corpus/cpp/replay/cpp-opcode/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-opcode/cases.jsonl.gz",
+      "entries": 144324,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-opcode",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-opcode/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:12.887466+00:00",
+        "end": "2026-10-12T00:37:18.723360+00:00",
+        "load": [
+          2.94580078125,
+          3.72265625,
+          4.81982421875
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+        "seconds": 5.831530875060707,
+        "exit": 0
+      },
+      "stored_sha256_before": "d2092eaf3653a8ac367be235885d62e25f73e247c34178575bdeb14f5b6ec9c6",
+      "stored_sha256_after": "e854a86e9648f623b1c10bf70b10c554e4851975038abf142992f10eec72f678",
+      "corpus_sha256_before": "82884199d098696515247ffe4a73b8740b1a38a3c0aab34b2c5cd45c7f785669",
+      "corpus_sha256_after": "2e1f5fca8607946ebc9adb7bc68e25abeee68e3d23778f3527e98c4dd121971f",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 144324,
+        "agree": {
+          "spec": 144324,
+          "spec-mempool": 144324
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 144324,
+        "go-sdk-mempool@v1.7.2": 144324
+      }
+    },
+    {
+      "corpus": "cpp-script",
+      "path": "corpus/cpp/replay/cpp-script/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-script/cases.jsonl.gz",
+      "entries": 67991,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-script",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-script/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:23.879951+00:00",
+        "end": "2026-10-12T00:37:25.944647+00:00",
+        "load": [
+          3.1201171875,
+          3.73193359375,
+          4.81005859375
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.12 3.73 4.81",
+        "seconds": 2.059521000017412,
+        "exit": 0
+      },
+      "stored_sha256_before": "62350cd523de182a39a4436538d967f7974ff19851d2e9b6d8088e01af64b827",
+      "stored_sha256_after": "0c6eec3a495422e41f853b32d1c06557e637c521519b27462368662d1d082935",
+      "corpus_sha256_before": "05aab314409c5995e86042699ba8c41474565b50d30998316db170346939f39a",
+      "corpus_sha256_after": "631ff0d4ceee11f40490b6f78b393bfde56fda4b96428648be864f81a336c6a0",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 67991,
+        "agree": {
+          "spec": 67991,
+          "spec-mempool": 67991
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 67991,
+        "go-sdk-mempool@v1.7.2": 67991
+      }
+    },
+    {
+      "corpus": "cpp-script_P2SH",
+      "path": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+      "entries": 64,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-script_P2SH",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:27.571704+00:00",
+        "end": "2026-10-12T00:37:27.605226+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.029673291952349246,
+        "exit": 0
+      },
+      "stored_sha256_before": "8ca2440e1cef299317c194b2a01c4333e11e936d7c476d93a1a1f129f320e321",
+      "stored_sha256_after": "5bf10ea8d4950444ecb0f7a05ee9b39ec789bceea56541ba228fab6cacfa8482",
+      "corpus_sha256_before": "8ca2440e1cef299317c194b2a01c4333e11e936d7c476d93a1a1f129f320e321",
+      "corpus_sha256_after": "5bf10ea8d4950444ecb0f7a05ee9b39ec789bceea56541ba228fab6cacfa8482",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 64,
+        "agree": {
+          "spec": 64,
+          "spec-mempool": 64
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 64,
+        "go-sdk-mempool@v1.7.2": 64
+      }
+    },
+    {
+      "corpus": "cpp-sigopcount",
+      "path": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+      "entries": 6,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-sigopcount",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:27.616058+00:00",
+        "end": "2026-10-12T00:37:27.657215+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.03769287501927465,
+        "exit": 0
+      },
+      "stored_sha256_before": "44190e13aa575c408ead99c73fffb7c3d09d98d2129f2c5dd4dc7138b0de8471",
+      "stored_sha256_after": "9e4f3d13ccf4ad5b86dfbef1ecfaa03670f6f79f0ebe60d57e527fdad08d8435",
+      "corpus_sha256_before": "44190e13aa575c408ead99c73fffb7c3d09d98d2129f2c5dd4dc7138b0de8471",
+      "corpus_sha256_after": "9e4f3d13ccf4ad5b86dfbef1ecfaa03670f6f79f0ebe60d57e527fdad08d8435",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 6,
+        "agree": {
+          "spec": 6,
+          "spec-mempool": 6
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 6,
+        "go-sdk-mempool@v1.7.2": 6
+      }
+    },
+    {
+      "corpus": "cpp-transaction",
+      "path": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+      "entries": 167,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "cpp-transaction",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:27.667111+00:00",
+        "end": "2026-10-12T00:37:27.724979+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.054449916002340615,
+        "exit": 0
+      },
+      "stored_sha256_before": "268943b4f9d03a3194ea5f255631e2ee89e5e20cfa160a054f1b9ba6f956d9c4",
+      "stored_sha256_after": "07707c79964ff957dbbc148bf64144e6d7b6df7730a9044147bf712092c2fffe",
+      "corpus_sha256_before": "268943b4f9d03a3194ea5f255631e2ee89e5e20cfa160a054f1b9ba6f956d9c4",
+      "corpus_sha256_after": "07707c79964ff957dbbc148bf64144e6d7b6df7730a9044147bf712092c2fffe",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 167,
+        "agree": {
+          "spec": 167,
+          "spec-mempool": 167
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 167,
+        "go-sdk-mempool@v1.7.2": 167
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c1",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+      "entries": 1024,
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "command": {
+        "name": "cpp-txvalidationcache-t100-g1-c1",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:27.742415+00:00",
+        "end": "2026-10-12T00:37:28.041915+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.2954442920163274,
+        "exit": 0
+      },
+      "stored_sha256_before": "ce6946898c714d0363fef15bdc89abd6305a29dabc1215330e6ef22f97d5a55e",
+      "stored_sha256_after": "4d4a587ae59f1bf07f9cd2ec72e782425c9330522663dee7d2dab26a8875e742",
+      "corpus_sha256_before": "ce6946898c714d0363fef15bdc89abd6305a29dabc1215330e6ef22f97d5a55e",
+      "corpus_sha256_after": "4d4a587ae59f1bf07f9cd2ec72e782425c9330522663dee7d2dab26a8875e742",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 1024,
+        "agree": {
+          "spec": 1024,
+          "spec-mempool": 1024
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 512
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 1024,
+        "go-sdk-mempool@v1.7.2": 1024
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c102",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz",
+      "entries": 2048,
+      "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+      "command": {
+        "name": "cpp-txvalidationcache-t100-g1-c102",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:28.087217+00:00",
+        "end": "2026-10-12T00:37:28.648326+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.5573241669917479,
+        "exit": 0
+      },
+      "stored_sha256_before": "7dd8f7ce1e35acfe59152342aaf32ecd8f90e6040e8f44cb4739983c77ff18dc",
+      "stored_sha256_after": "2c85940961b41af596076677e9bcb484763891f90c999f9ab797cbbfd2bb156d",
+      "corpus_sha256_before": "50dd49ad51819f8bc0f53e6b0269d094b3ffb8d9ed4f8ba3fe1d1178712a013c",
+      "corpus_sha256_after": "cbcebce2d91501a2e7c92c9e97112368f56f875d862d5b15aa97bd4fce37d165",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 2048,
+        "agree": {
+          "spec": 2048,
+          "spec-mempool": 2048
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 1024
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 2048,
+        "go-sdk-mempool@v1.7.2": 2048
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g102-c102",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz",
+      "entries": 4097,
+      "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+      "command": {
+        "name": "cpp-txvalidationcache-t100-g102-c102",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:28.740196+00:00",
+        "end": "2026-10-12T00:37:29.857083+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 1.1132004579994828,
+        "exit": 0
+      },
+      "stored_sha256_before": "b21b74ff0ab4d0a02ae585080b9bf0e0abe82fe9e9be7ced722ee2d6e5b51108",
+      "stored_sha256_after": "65cad2c7cf61b5ceecece4cb5c9a9c459d5e528c6cc968c9a326e654284c7686",
+      "corpus_sha256_before": "a461c635a448db6d78bb5d5dec8fba8a0364491bda9596b8993126fe062717a4",
+      "corpus_sha256_after": "5bc75aabb97d9d6277a601c7a8a83d6804705e5cc5d533f30f8ce4beca5bdb8e",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 4097,
+        "agree": {
+          "spec": 4097,
+          "spec-mempool": 4097
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 2048
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 4097,
+        "go-sdk-mempool@v1.7.2": 4097
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c1",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz",
+      "entries": 4096,
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "command": {
+        "name": "cpp-txvalidationcache-t101-g1-c1",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:30.003434+00:00",
+        "end": "2026-10-12T00:37:30.292339+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.28508179204072803,
+        "exit": 0
+      },
+      "stored_sha256_before": "b1e16dc485b0e92b5987b76b46a3cf0eb1c5271621e76208922a4b611d41f063",
+      "stored_sha256_after": "1e4d19617f71a3f74abaea838f4e8732511209f37acdff3a8f251e2e3f2c3181",
+      "corpus_sha256_before": "5be125cea4b3d788dc0d9eee924011ac4b8881d702710bca339718d6044fb113",
+      "corpus_sha256_after": "5def2632406eb00be81da2ad5791438b75cfae515abf708228d381d2df4c1669",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 4096,
+        "agree": {
+          "spec": 4096,
+          "spec-mempool": 4096
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 2048
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 4096,
+        "go-sdk-mempool@v1.7.2": 4096
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c103",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz",
+      "entries": 8192,
+      "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+      "command": {
+        "name": "cpp-txvalidationcache-t101-g1-c103",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:30.452100+00:00",
+        "end": "2026-10-12T00:37:31.006261+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.5500265839509666,
+        "exit": 0
+      },
+      "stored_sha256_before": "f838d4f4469d4386d3e4ecd2b92f56d61af9be41f84857e284e03dda2b1d8c4f",
+      "stored_sha256_after": "e3e3d8896e874f5e2489122b92d17562d2b10a9758536db0d779aaa203e9d38a",
+      "corpus_sha256_before": "f1286ff53f1d298a63066b630cd53d4d6b49aa4460cfdec4e78b3c133476bc3a",
+      "corpus_sha256_after": "8130ccae30471f5d453e2e2a9f13954bc290544be48fd34ce58d20d874c5f06e",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 8192,
+        "agree": {
+          "spec": 8192,
+          "spec-mempool": 8192
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 4096
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 8192,
+        "go-sdk-mempool@v1.7.2": 8192
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g102-c1",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+      "entries": 3,
+      "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+      "command": {
+        "name": "cpp-txvalidationcache-t101-g102-c1",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:31.236455+00:00",
+        "end": "2026-10-12T00:37:31.265417+00:00",
+        "load": [
+          2.9501953125,
+          3.6865234375,
+          4.78759765625
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+        "seconds": 0.02515683404635638,
+        "exit": 0
+      },
+      "stored_sha256_before": "47aa1f88b042a5b8991d07079813f0fd14212c3cbd258e46f4c74e92c3bec18a",
+      "stored_sha256_after": "ac0396996e0383829c28969eb302e7f69f9ac1901a8d4c806c71c181bc145d5b",
+      "corpus_sha256_before": "47aa1f88b042a5b8991d07079813f0fd14212c3cbd258e46f4c74e92c3bec18a",
+      "corpus_sha256_after": "ac0396996e0383829c28969eb302e7f69f9ac1901a8d4c806c71c181bc145d5b",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 3,
+        "agree": {
+          "spec": 3,
+          "spec-mempool": 3
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 3,
+        "go-sdk-mempool@v1.7.2": 3
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g103-c103",
+      "path": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+      "stored": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz",
+      "entries": 16384,
+      "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+      "command": {
+        "name": "cpp-txvalidationcache-t101-g103-c103",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:31.354318+00:00",
+        "end": "2026-10-12T00:37:34.098065+00:00",
+        "load": [
+          3.0341796875,
+          3.69140625,
+          4.78271484375
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+        "seconds": 2.739283375092782,
+        "exit": 0
+      },
+      "stored_sha256_before": "7d2196e4a47fddee25a56cf37bdd9fcc3db77dc56c3dec4091fb8625d9f16aa2",
+      "stored_sha256_after": "92d8d0fa0c7a6fed5fb4862b79213bc956e5cad9f6a259bae59cdbba008d8a3b",
+      "corpus_sha256_before": "31acc0ccbef1a2580f92a2f8eb4c09bf6efaa6eedadb954fc3647ed511c189e3",
+      "corpus_sha256_after": "d61ecb256653f19de7e069e55f59d1e711cb8415395244b86460212800fa8b9e",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 16384,
+        "agree": {
+          "spec": 16384,
+          "spec-mempool": 16384
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 8192
+        },
+        "rules": []
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 16384,
+        "go-sdk-mempool@v1.7.2": 16384
+      }
+    },
+    {
+      "corpus": "million",
+      "path": "corpus/million/witnesses.jsonl",
+      "stored": "corpus/million/witnesses.jsonl",
+      "entries": 4,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "million",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/million/witnesses.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:37:34.589116+00:00",
+        "end": "2026-10-12T00:37:34.618063+00:00",
+        "load": [
+          3.0341796875,
+          3.69140625,
+          4.78271484375
+        ],
+        "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+        "seconds": 0.024985500029288232,
+        "exit": 1
+      },
+      "stored_sha256_before": "89fd53d444f6cc76a469cb7a2bc729937d2cc9660f985cb00a490a3435d1b234",
+      "stored_sha256_after": "b50174931c688576b363328f5464da7617b332ba90fff0dc13965e50297220e4",
+      "corpus_sha256_before": "89fd53d444f6cc76a469cb7a2bc729937d2cc9660f985cb00a490a3435d1b234",
+      "corpus_sha256_after": "b50174931c688576b363328f5464da7617b332ba90fff0dc13965e50297220e4",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 4,
+        "agree": {
+          "spec": 3,
+          "spec-mempool": 4
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "unexplained",
+            "entries": 1,
+            "witness": "witness-go-sdk-million-spec-unexplained-million-seed-352758",
+            "from": "million-seed-352758"
+          }
+        ]
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 4,
+        "go-sdk-mempool@v1.7.2": 4
+      }
+    },
+    {
+      "corpus": "road",
+      "path": "corpus/road/road.jsonl",
+      "stored": "corpus/road/road.jsonl",
+      "entries": 13512,
+      "spec_config": "sv-mainnet-default",
+      "command": {
+        "name": "road",
+        "command": [
+          "harness/target/release/run_engine",
+          "--engine",
+          "gosdk",
+          "--corpus",
+          "corpus/road/road.jsonl",
+          "--spec",
+[withheld at export: a sibling tree's line]
+          "--words-from",
+[withheld at export: a sibling tree's line]
+          "--witnesses",
+          "corpus/witnesses",
+          "--record"
+        ],
+[withheld at export: a sibling tree's line]
+        "env": {
+          "ENGINE_ADAPTER_TIMEOUT_S": "60",
+          "SOURCE_DATE": "2026-10-12"
+        },
+        "start": "2026-10-12T00:40:08.603120+00:00",
+        "end": "2026-10-12T00:40:09.441770+00:00",
+        "load": [
+          4.23388671875,
+          3.75927734375,
+          4.611328125
+        ],
+        "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 4.23 3.76 4.61",
+        "seconds": 0.8339639169862494,
+        "exit": 1
+      },
+      "stored_sha256_before": "2ed2a1726921fc6832a0a3578c2e9da6b64da74f3ce3200a7825a8aa5047b204",
+      "stored_sha256_after": "c32073c069484b86bf2ea590ce542b03700cff1d364eea1a52d5463e4bf49161",
+      "corpus_sha256_before": "2ed2a1726921fc6832a0a3578c2e9da6b64da74f3ce3200a7825a8aa5047b204",
+      "corpus_sha256_after": "c32073c069484b86bf2ea590ce542b03700cff1d364eea1a52d5463e4bf49161",
+      "before": null,
+      "after": {
+        "engine": "go-sdk@v1.7.2",
+        "entries": 13512,
+        "agree": {
+          "spec": 13510,
+          "spec-mempool": 13504
+        },
+        "undecided_runs": 0,
+        "aborts_as_witnesses": 0,
+        "timeouts": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "rules": [
+          {
+            "column": "spec",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 1,
+            "witness": "witness-go-sdk-road-spec-limits.maxscriptnumlength-road-gen-00796",
+            "from": "road-gen-00796"
+          },
+          {
+            "column": "spec",
+            "rule": "unexplained",
+            "entries": 1,
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength",
+            "entries": 1,
+            "witness": "witness-go-sdk-road-spec-mempool-limits.maxscriptnumlength-road-gen-00796",
+            "from": "road-gen-00796"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "limits.maxscriptnumlength.policy",
+            "entries": 6,
+            "witness": "witness-go-sdk-road-spec-mempool-limits.maxscriptnumlength.policy-road-eras-00042",
+            "from": "road-eras-00042"
+          },
+          {
+            "column": "spec-mempool",
+            "rule": "unexplained",
+            "entries": 1,
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+          }
+        ]
+      },
+      "non_go_fields_equal": true,
+      "non_go_implementations_preserved": true,
+      "native_object_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "native_validity_changes": {
+        "go-sdk@v1.7.2": 0,
+        "go-sdk-mempool@v1.7.2": 0
+      },
+      "new_native_columns": {
+        "go-sdk@v1.7.2": 13512,
+        "go-sdk-mempool@v1.7.2": 13512
+      }
+    }
+  ],
+  "smoke": {
+    "command": {
+      "name": "smoke",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/seed/seed.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+[withheld at export: a sibling tree's line]
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:48.248858+00:00",
+      "end": "2026-10-12T00:35:49.015882+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.7627587910974398,
+      "exit": 0
+    },
+    "counts": {
+      "engine": "go-sdk@v1.7.2",
+      "entries": 10000,
+      "agree": {
+        "spec": 10000,
+        "spec-mempool": 10000
+      },
+      "undecided_runs": 0,
+      "aborts_as_witnesses": 0,
+      "timeouts": 0,
+      "unknown_messages": {},
+      "unmapped_bits": {},
+      "rules": []
+    }
+  },
+  "saved_word_sources_for_tx_and_road": {
+    "tx": {
+      "(610000, 605000, False)": [
+        "go-sdk/tx"
+      ],
+      "(610000, 605000, True)": [
+        "go-sdk/tx"
+      ],
+      "(620600, 620000, False)": [
+        "go-sdk/tx"
+      ],
+      "(620600, 620000, True)": [
+        "go-sdk/tx"
+      ],
+      "(620600, 620590, False)": [
+        "go-sdk/tx"
+      ],
+      "(620600, 620590, True)": [
+        "go-sdk/tx"
+      ]
+    },
+    "road": {
+      "(967896, 967895, True)": [
+        "eval/bsvs@ae1dfa53e944c2296916a365c673ada00235806d"
+      ],
+      "(967896, 967895, False)": [
+        "eval/bsvs@ae1dfa53e944c2296916a365c673ada00235806d"
+      ]
+    }
+  },
+  "road_words": {
+    "source_commit": "ae1dfa53e944c2296916a365c673ada00235806d",
+    "lean_tree": "e4578f4b2e34945f5700783d9095a6558dfa245e",
+[withheld at export: a sibling tree's line]
+    "evaluator_sha256": "4c5ade4e26064c702320420f63a3916cd3e4b110fa1ad9b005cdb9cba37db72d",
+    "words": [
+      {
+        "spend_height": 967896,
+        "utxo_height": 967895,
+        "consensus": true,
+        "word": 4015663
+      },
+      {
+        "spend_height": 967896,
+        "utxo_height": 967895,
+        "consensus": false,
+        "word": 4016127
+      }
+    ],
+    "commands": [
+      {
+        "name": "road-word-true",
+        "command": [
+[withheld at export: a sibling tree's line]
+          "eval",
+          "--tx",
+[withheld at export: a sibling tree's line]
+          "--prevouts",
+[withheld at export: a sibling tree's line]
+          "--spend-height",
+          "967896",
+          "--consensus",
+          "true",
+          "--config",
+          "sv"
+        ],
+[withheld at export: a sibling tree's line]
+        "start": "2026-10-12T00:39:52.341235+00:00",
+        "end": "2026-10-12T00:39:52.430855+00:00",
+        "load": [
+          3.52783203125,
+          3.609375,
+          4.5751953125
+        ],
+        "uptime": "20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58",
+        "seconds": 0.08492791699245572,
+        "exit": 0
+      },
+      {
+        "name": "road-word-false",
+        "command": [
+[withheld at export: a sibling tree's line]
+          "eval",
+          "--tx",
+[withheld at export: a sibling tree's line]
+          "--prevouts",
+[withheld at export: a sibling tree's line]
+          "--spend-height",
+          "967896",
+          "--consensus",
+          "false",
+          "--config",
+          "sv"
+        ],
+[withheld at export: a sibling tree's line]
+        "start": "2026-10-12T00:39:52.431022+00:00",
+        "end": "2026-10-12T00:39:52.510889+00:00",
+        "load": [
+          3.52783203125,
+          3.609375,
+          4.5751953125
+        ],
+        "uptime": "20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58",
+        "seconds": 0.07578804099466652,
+        "exit": 0
+      }
+    ],
+    "flags_source_blob_at_cb7e46e_and_head": "1e6d9b3d0ad167816668ca7a51386c19072cdda7",
+    "params_source_delta": "Only a source-citation line differs from cb7e46e; the definitions are unchanged."
+  },
+  "end": "2026-10-12T00:40:09.683808+00:00",
+  "all_protected_hashes_equal": true,
+  "summary": {
+    "before_nine": {
+      "entries": 13915,
+      "agree": {
+        "spec": 13873,
+        "spec-mempool": 12424
+      },
+      "classified": {
+        "spec-mempool": 1491,
+        "spec": 42
+      },
+      "unclassified": {}
+    },
+    "after_nine": {
+      "entries": 13915,
+      "agree": {
+        "spec": 13857,
+        "spec-mempool": 13847
+      },
+      "classified": {
+        "spec-mempool": 67,
+        "spec": 57
+      },
+      "unclassified": {
+        "spec": 1,
+        "spec-mempool": 1
+      }
+    },
+    "new_seventeen": {
+      "entries": 262148,
+      "agree": {
+        "spec": 262145,
+        "spec-mempool": 262139
+      },
+      "classified": {
+        "spec-mempool": 8,
+        "spec": 1
+      },
+      "unclassified": {
+        "spec": 2,
+        "spec-mempool": 1
+      }
+    },
+    "after_all": {
+      "entries": 276063,
+      "agree": {
+        "spec": 276002,
+        "spec-mempool": 275986
+      },
+      "classified": {
+        "spec-mempool": 75,
+        "spec": 58
+      },
+      "unclassified": {
+        "spec": 3,
+        "spec-mempool": 2
+      }
+    }
+  },
+  "changed_rows": [
+    {
+      "corpus": "arith",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 8,
+      "after": 0
+    },
+    {
+      "corpus": "bytes",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 149,
+      "after": 0
+    },
+    {
+      "corpus": "crypto",
+      "column": "spec",
+      "class": "flags.version-gate.absent",
+      "before": 6,
+      "after": 0
+    },
+    {
+      "corpus": "crypto",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 9,
+      "after": 0
+    },
+    {
+      "corpus": "eras",
+      "column": "spec",
+      "class": "flags.version-gate.absent",
+      "before": 2,
+      "after": 0
+    },
+    {
+      "corpus": "eras",
+      "column": "spec",
+      "class": "sighash.must-use-forkid",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "eras",
+      "column": "spec",
+      "class": "sighash.type.chronicle-bit",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "eras",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 4,
+      "after": 0
+    },
+    {
+      "corpus": "eras",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength.policy",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "corpus": "eras",
+      "column": "spec-mempool",
+      "class": "sighash.type.chronicle-bit",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "flow",
+      "column": "spec",
+      "class": "flags.version-gate.absent",
+      "before": 5,
+      "after": 0
+    },
+    {
+      "corpus": "flow",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 302,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "engine.timeout",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "limits.maxscriptnumlength",
+      "before": 3,
+      "after": 57
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "sighash.dispatch.forkid-bit-without-flag",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "sighash.must-use-forkid",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "sighash.original.truncated-push",
+      "before": 6,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "sighash.type.chronicle-bit",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec",
+      "class": "unexplained",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "engine.timeout",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 6,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength",
+      "before": 1,
+      "after": 57
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength.policy",
+      "before": 4,
+      "after": 9
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "sighash.must-use-forkid",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "sighash.original.truncated-push",
+      "before": 6,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "sighash.type.chronicle-bit",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "corpus": "gen",
+      "column": "spec-mempool",
+      "class": "unexplained",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "corpus": "seed",
+      "column": "spec",
+      "class": "flags.version-gate.absent",
+      "before": 12,
+      "after": 0
+    },
+    {
+      "corpus": "seed",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 990,
+      "after": 0
+    },
+    {
+      "corpus": "stack",
+      "column": "spec-mempool",
+      "class": "flags.version-gate.absent",
+      "before": 4,
+      "after": 0
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength.policy",
+      "before": null,
+      "after": 1
+    },
+    {
+      "corpus": "million",
+      "column": "spec",
+      "class": "unexplained",
+      "before": null,
+      "after": 1
+    },
+    {
+      "corpus": "road",
+      "column": "spec",
+      "class": "limits.maxscriptnumlength",
+      "before": null,
+      "after": 1
+    },
+    {
+      "corpus": "road",
+      "column": "spec",
+      "class": "unexplained",
+      "before": null,
+      "after": 1
+    },
+    {
+      "corpus": "road",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength",
+      "before": null,
+      "after": 1
+    },
+    {
+      "corpus": "road",
+      "column": "spec-mempool",
+      "class": "limits.maxscriptnumlength.policy",
+      "before": null,
+      "after": 6
+    },
+    {
+      "corpus": "road",
+      "column": "spec-mempool",
+      "class": "unexplained",
+      "before": null,
+      "after": 1
+    }
+  ],
+  "commands": [
+    {
+      "name": "cargo-build",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "CARGO_BUILD_JOBS": "4"
+      },
+      "start": "2026-10-12T00:33:27.255845+00:00",
+      "end": "2026-10-12T00:33:45.985809+00:00",
+      "load": [
+        1.990234375,
+        4.43115234375,
+        5.3505859375
+      ],
+      "uptime": "20:33  up 9 days, 27 mins, 3 users, load averages: 1.99 4.43 5.35",
+      "seconds": 18.72600100003183,
+      "exit": 0
+    },
+    {
+      "name": "go-build",
+      "command": [
+        "go",
+        "build",
+        "-p",
+        "4",
+        "-o",
+        "../../target/engines/gosdk-runner",
+        "."
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "GOFLAGS": "-mod=mod"
+      },
+      "start": "2026-10-12T00:33:45.986108+00:00",
+      "end": "2026-10-12T00:33:46.585603+00:00",
+      "load": [
+        3.287109375,
+        4.56494140625,
+        5.3759765625
+      ],
+      "uptime": "20:33  up 9 days, 27 mins, 3 users, load averages: 3.29 4.56 5.38",
+      "seconds": 0.5951446250546724,
+      "exit": 0
+    },
+    {
+      "name": "smoke-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/seed/seed.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:47.988092+00:00",
+      "end": "2026-10-12T00:35:48.248503+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.2567358750384301,
+      "exit": 0
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/seed/seed.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+[withheld at export: a sibling tree's line]
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:48.248858+00:00",
+      "end": "2026-10-12T00:35:49.015882+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.7627587910974398,
+      "exit": 0
+    },
+    {
+      "name": "arith-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/arith/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.017048+00:00",
+      "end": "2026-10-12T00:35:49.027892+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.006133000017143786,
+      "exit": 0
+    },
+    {
+      "name": "arith",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/arith/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.028080+00:00",
+      "end": "2026-10-12T00:35:49.080786+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.0487001669825986,
+      "exit": 0
+    },
+    {
+      "name": "bytes-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/bytes/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.096542+00:00",
+      "end": "2026-10-12T00:35:49.105341+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.005265958025120199,
+      "exit": 0
+    },
+    {
+      "name": "bytes",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/bytes/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.105548+00:00",
+      "end": "2026-10-12T00:35:49.152104+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.04301970801316202,
+      "exit": 0
+    },
+    {
+      "name": "crypto-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/crypto/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.165331+00:00",
+      "end": "2026-10-12T00:35:49.173277+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.0036098749842494726,
+      "exit": 0
+    },
+    {
+      "name": "crypto",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/crypto/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.173455+00:00",
+      "end": "2026-10-12T00:35:49.222493+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.04523604107089341,
+      "exit": 0
+    },
+    {
+      "name": "eras-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/eras/eras.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.226770+00:00",
+      "end": "2026-10-12T00:35:49.234380+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.0032898749923333526,
+      "exit": 0
+    },
+    {
+      "name": "eras",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/eras/eras.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.234560+00:00",
+      "end": "2026-10-12T00:35:49.271204+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.032963708974421024,
+      "exit": 0
+    },
+    {
+      "name": "flow-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/flow/flow.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.276415+00:00",
+      "end": "2026-10-12T00:35:49.289161+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.008283667033538222,
+      "exit": 0
+    },
+    {
+      "name": "flow",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/flow/flow.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.289363+00:00",
+      "end": "2026-10-12T00:35:49.353940+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.06048854102846235,
+      "exit": 0
+    },
+    {
+      "name": "gen-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/gen/gen.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.379895+00:00",
+      "end": "2026-10-12T00:35:49.393385+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.009307999978773296,
+      "exit": 0
+    },
+    {
+      "name": "gen",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/gen/gen.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.393567+00:00",
+      "end": "2026-10-12T00:35:49.603251+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.205824083997868,
+      "exit": 1
+    },
+    {
+      "name": "seed-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/seed/seed.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.652110+00:00",
+      "end": "2026-10-12T00:35:49.707487+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.05106049997266382,
+      "exit": 0
+    },
+    {
+      "name": "seed",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/seed/seed.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:49.707699+00:00",
+      "end": "2026-10-12T00:35:50.356268+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.644012707984075,
+      "exit": 0
+    },
+    {
+      "name": "stack-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/stack/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:50.630608+00:00",
+      "end": "2026-10-12T00:35:50.640729+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.005298667005263269,
+      "exit": 0
+    },
+    {
+      "name": "stack",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/stack/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:50.640963+00:00",
+      "end": "2026-10-12T00:35:50.692303+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.047414790955372155,
+      "exit": 0
+    },
+    {
+      "name": "tx-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/tx/tx.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:50.708017+00:00",
+      "end": "2026-10-12T00:35:50.723202+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.010445749969221652,
+      "exit": 0
+    },
+    {
+      "name": "tx",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/tx/tx.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:35:50.723439+00:00",
+      "end": "2026-10-12T00:35:50.771557+00:00",
+      "load": [
+        2.43017578125,
+        3.7548828125,
+        4.93994140625
+      ],
+      "uptime": "20:35  up 9 days, 29 mins, 3 users, load averages: 2.43 3.75 4.94",
+      "seconds": 0.043886750005185604,
+      "exit": 2
+    },
+    {
+      "name": "tx-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/tx/tx.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.482090+00:00",
+      "end": "2026-10-12T00:37:11.495316+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.009337374940514565,
+      "exit": 0
+    },
+    {
+      "name": "tx",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/tx/tx.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.495561+00:00",
+      "end": "2026-10-12T00:37:11.721655+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.22175033297389746,
+      "exit": 0
+    },
+    {
+      "name": "cpp-bn_op-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.817585+00:00",
+      "end": "2026-10-12T00:37:11.827994+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.0044691250659525394,
+      "exit": 0
+    },
+    {
+      "name": "cpp-bn_op",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.828209+00:00",
+      "end": "2026-10-12T00:37:11.873686+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.041532374918460846,
+      "exit": 0
+    },
+    {
+      "name": "cpp-lrshiftnum-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.880496+00:00",
+      "end": "2026-10-12T00:37:11.889177+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.0036405830178409815,
+      "exit": 0
+    },
+    {
+      "name": "cpp-lrshiftnum",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.889374+00:00",
+      "end": "2026-10-12T00:37:11.988105+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.09466766705736518,
+      "exit": 0
+    },
+    {
+      "name": "cpp-multisig-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:11.991482+00:00",
+      "end": "2026-10-12T00:37:12.001141+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.003987208008766174,
+      "exit": 0
+    },
+    {
+      "name": "cpp-multisig",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:12.001371+00:00",
+      "end": "2026-10-12T00:37:12.044000+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.037831165944226086,
+      "exit": 0
+    },
+    {
+      "name": "cpp-opcode-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:12.356998+00:00",
+      "end": "2026-10-12T00:37:12.887204+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 0.5248549999669194,
+      "exit": 0
+    },
+    {
+      "name": "cpp-opcode",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:12.887466+00:00",
+      "end": "2026-10-12T00:37:18.723360+00:00",
+      "load": [
+        2.94580078125,
+        3.72265625,
+        4.81982421875
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.72 4.82",
+      "seconds": 5.831530875060707,
+      "exit": 0
+    },
+    {
+      "name": "cpp-script-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-script/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:23.621806+00:00",
+      "end": "2026-10-12T00:37:23.879659+00:00",
+      "load": [
+        3.1201171875,
+        3.73193359375,
+        4.81005859375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.12 3.73 4.81",
+      "seconds": 0.25252345798071474,
+      "exit": 0
+    },
+    {
+      "name": "cpp-script",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-script/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:23.879951+00:00",
+      "end": "2026-10-12T00:37:25.944647+00:00",
+      "load": [
+        3.1201171875,
+        3.73193359375,
+        4.81005859375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.12 3.73 4.81",
+      "seconds": 2.059521000017412,
+      "exit": 0
+    },
+    {
+      "name": "cpp-script_P2SH-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.562660+00:00",
+      "end": "2026-10-12T00:37:27.571521+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.0035155420191586018,
+      "exit": 0
+    },
+    {
+      "name": "cpp-script_P2SH",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.571704+00:00",
+      "end": "2026-10-12T00:37:27.605226+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.029673291952349246,
+      "exit": 0
+    },
+    {
+      "name": "cpp-sigopcount-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.608724+00:00",
+      "end": "2026-10-12T00:37:27.615874+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.002970249974168837,
+      "exit": 0
+    },
+    {
+      "name": "cpp-sigopcount",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.616058+00:00",
+      "end": "2026-10-12T00:37:27.657215+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.03769287501927465,
+      "exit": 0
+    },
+    {
+      "name": "cpp-transaction-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.659417+00:00",
+      "end": "2026-10-12T00:37:27.666953+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.0036443329881876707,
+      "exit": 0
+    },
+    {
+      "name": "cpp-transaction",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.667111+00:00",
+      "end": "2026-10-12T00:37:27.724979+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.054449916002340615,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g1-c1-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.730878+00:00",
+      "end": "2026-10-12T00:37:27.742221+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.006876542000100017,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g1-c1",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:27.742415+00:00",
+      "end": "2026-10-12T00:37:28.041915+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.2954442920163274,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g1-c102-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=102)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:28.072051+00:00",
+      "end": "2026-10-12T00:37:28.087033+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.010531041072681546,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g1-c102",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:28.087217+00:00",
+      "end": "2026-10-12T00:37:28.648326+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.5573241669917479,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g102-c102-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=102,chronicle=102)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:28.716646+00:00",
+      "end": "2026-10-12T00:37:28.739975+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.019291916978545487,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t100-g102-c102",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:28.740196+00:00",
+      "end": "2026-10-12T00:37:29.857083+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 1.1132004579994828,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g1-c1-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:29.980935+00:00",
+      "end": "2026-10-12T00:37:30.003252+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.01747937500476837,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g1-c1",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:30.003434+00:00",
+      "end": "2026-10-12T00:37:30.292339+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.28508179204072803,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g1-c103-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=103)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:30.414911+00:00",
+      "end": "2026-10-12T00:37:30.451911+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.03204058296978474,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g1-c103",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:30.452100+00:00",
+      "end": "2026-10-12T00:37:31.006261+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.5500265839509666,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g102-c1-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=102,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:31.228575+00:00",
+      "end": "2026-10-12T00:37:31.236288+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.003098041983321309,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g102-c1",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:31.236455+00:00",
+      "end": "2026-10-12T00:37:31.265417+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.02515683404635638,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g103-c103-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=103,chronicle=103)"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:31.288318+00:00",
+      "end": "2026-10-12T00:37:31.354106+00:00",
+      "load": [
+        2.9501953125,
+        3.6865234375,
+        4.78759765625
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 2.95 3.69 4.79",
+      "seconds": 0.06132587499450892,
+      "exit": 0
+    },
+    {
+      "name": "cpp-txvalidationcache-t101-g103-c103",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:31.354318+00:00",
+      "end": "2026-10-12T00:37:34.098065+00:00",
+      "load": [
+        3.0341796875,
+        3.69140625,
+        4.78271484375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+      "seconds": 2.739283375092782,
+      "exit": 0
+    },
+    {
+      "name": "million-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/million/witnesses.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:34.581290+00:00",
+      "end": "2026-10-12T00:37:34.588921+00:00",
+      "load": [
+        3.0341796875,
+        3.69140625,
+        4.78271484375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+      "seconds": 0.0030017090030014515,
+      "exit": 0
+    },
+    {
+      "name": "million",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/million/witnesses.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:34.589116+00:00",
+      "end": "2026-10-12T00:37:34.618063+00:00",
+      "load": [
+        3.0341796875,
+        3.69140625,
+        4.78271484375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+      "seconds": 0.024985500029288232,
+      "exit": 1
+    },
+    {
+      "name": "road-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/road/road.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:34.629120+00:00",
+      "end": "2026-10-12T00:37:34.682145+00:00",
+      "load": [
+        3.0341796875,
+        3.69140625,
+        4.78271484375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+      "seconds": 0.04851433297153562,
+      "exit": 0
+    },
+    {
+      "name": "road",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/road/road.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:37:34.682338+00:00",
+      "end": "2026-10-12T00:37:34.758658+00:00",
+      "load": [
+        3.0341796875,
+        3.69140625,
+        4.78271484375
+      ],
+      "uptime": "20:37  up 9 days, 31 mins, 3 users, load averages: 3.03 3.69 4.78",
+      "seconds": 0.07163066603243351,
+      "exit": 101
+    },
+    {
+      "name": "road-word-true",
+      "command": [
+[withheld at export: a sibling tree's line]
+        "eval",
+        "--tx",
+[withheld at export: a sibling tree's line]
+        "--prevouts",
+[withheld at export: a sibling tree's line]
+        "--spend-height",
+        "967896",
+        "--consensus",
+        "true",
+        "--config",
+        "sv"
+      ],
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T00:39:52.341235+00:00",
+      "end": "2026-10-12T00:39:52.430855+00:00",
+      "load": [
+        3.52783203125,
+        3.609375,
+        4.5751953125
+      ],
+      "uptime": "20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58",
+      "seconds": 0.08492791699245572,
+      "exit": 0
+    },
+    {
+      "name": "road-word-false",
+      "command": [
+[withheld at export: a sibling tree's line]
+        "eval",
+        "--tx",
+[withheld at export: a sibling tree's line]
+        "--prevouts",
+[withheld at export: a sibling tree's line]
+        "--spend-height",
+        "967896",
+        "--consensus",
+        "false",
+        "--config",
+        "sv"
+      ],
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T00:39:52.431022+00:00",
+      "end": "2026-10-12T00:39:52.510889+00:00",
+      "load": [
+        3.52783203125,
+        3.609375,
+        4.5751953125
+      ],
+      "uptime": "20:39  up 9 days, 33 mins, 3 users, load averages: 3.53 3.61 4.58",
+      "seconds": 0.07578804099466652,
+      "exit": 0
+    },
+    {
+      "name": "road-spec",
+      "command": [
+        "harness/target/release/spec_recorded",
+        "--corpus",
+        "corpus/road/road.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:40:08.542117+00:00",
+      "end": "2026-10-12T00:40:08.602622+00:00",
+      "load": [
+        4.23388671875,
+        3.75927734375,
+        4.611328125
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 4.23 3.76 4.61",
+      "seconds": 0.05612008401658386,
+      "exit": 0
+    },
+    {
+      "name": "road",
+      "command": [
+        "harness/target/release/run_engine",
+        "--engine",
+        "gosdk",
+        "--corpus",
+        "corpus/road/road.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--words-from",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "ENGINE_ADAPTER_TIMEOUT_S": "60",
+        "SOURCE_DATE": "2026-10-12"
+      },
+      "start": "2026-10-12T00:40:08.603120+00:00",
+      "end": "2026-10-12T00:40:09.441770+00:00",
+      "load": [
+        4.23388671875,
+        3.75927734375,
+        4.611328125
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 4.23 3.76 4.61",
+      "seconds": 0.8339639169862494,
+      "exit": 1
+    },
+    {
+      "name": "rust-lib-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--release",
+        "--locked",
+        "--lib"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "CARGO_BUILD_JOBS": "4"
+      },
+      "start": "2026-10-12T00:40:48.141928+00:00",
+      "end": "2026-10-12T00:40:50.286117+00:00",
+      "load": [
+        6.36279296875,
+        4.35595703125,
+        4.7880859375
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79",
+      "seconds": 2.139356957981363,
+      "exit": 0
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "python3",
+        "tools/conformance.py",
+        "--out",
+        "docs/CONFORMANCE-2026-09-27.md",
+        "--date",
+        "2026-09-27"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "CARGO_BUILD_JOBS": "4"
+      },
+      "start": "2026-10-12T00:40:50.286415+00:00",
+      "end": "2026-10-12T00:40:50.321238+00:00",
+      "load": [
+        6.36279296875,
+        4.35595703125,
+        4.7880859375
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79",
+      "seconds": 0.02934675000142306,
+      "exit": 1
+    },
+    {
+      "name": "check-pins",
+      "command": [
+        "make",
+        "check-pins"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "CARGO_BUILD_JOBS": "4"
+      },
+      "start": "2026-10-12T00:40:50.321491+00:00",
+      "end": "2026-10-12T00:40:50.799961+00:00",
+      "load": [
+        6.36279296875,
+        4.35595703125,
+        4.7880859375
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79",
+      "seconds": 0.4739133750554174,
+      "exit": 0
+    },
+    {
+      "name": "citecheck",
+      "command": [
+        "make",
+        "citecheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "env": {
+        "CARGO_BUILD_JOBS": "4"
+      },
+      "start": "2026-10-12T00:40:50.800335+00:00",
+      "end": "2026-10-12T00:40:51.288974+00:00",
+      "load": [
+        6.36279296875,
+        4.35595703125,
+        4.7880859375
+      ],
+      "uptime": "20:40  up 9 days, 34 mins, 3 users, load averages: 6.36 4.36 4.79",
+      "seconds": 0.4822825420415029,
+      "exit": 2
+    },
+    {
+      "name": "citecheck-final",
+      "command": [
+        "make",
+        "citecheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "start": "2026-10-12T00:49:30.941276+00:00",
+      "end": "2026-10-12T00:49:31.398173+00:00",
+      "load": [
+        5.837890625,
+        5.48681640625,
+        5.203125
+      ],
+      "uptime": "20:49  up 9 days, 43 mins, 3 users, load averages: 5.84 5.49 5.20",
+      "seconds": 0.45188037503976375,
+      "exit": 0
+    }
+  ],
+  "report_generation": {
+    "exit": 1,
+    "generated": false,
+    "unclassified_runs": 5,
+    "retained_table_source": "1184f0b",
+    "manual_changes": "status notice and release qualification of one historical citation only"
+  },
+  "runner_module_sums": [
+    "github.com/bsv-blockchain/go-sdk v1.7.2 h1:AKJaeDOzcIqcLgEG/i5ksi6/StQsFEsGSZrIgHBRMzc=",
+    "github.com/bsv-blockchain/go-sdk v1.7.2/go.mod h1:NtCYkU9NX/D8wzdN+9zGUtl2Rpdp+Zk5Uhyd0Aww+/c="
+  ],
+  "data_commit": "85026f9d512ead74a8aebe6a68f8d47c992c5abf",
+  "recipe_sha256": "5fe96e76954dd6c15a214bb0c5e4ab996f5e57784a6412530b990333045281ab"
+}

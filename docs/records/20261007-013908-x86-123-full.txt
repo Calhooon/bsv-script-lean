@@ -1,0 +1,53 @@
+# full: the container's log (tools/modal_x86_node.py, app ap-68cP4imqK80PKWUutY3y2T); the stamp is the run's END time
+container: app ap-68cP4imqK80PKWUutY3y2T, cpu 4 / 8 GiB, retries 0, single-use; x86_64 |  01:38:44 up 0 min,  0 user,  load average: 0.00, 0.00, 0.00 | 4 |                total        used        free      shared  buff/cache   available | Mem:             400           0         400           0           0         400 | 
+price BEFORE: $0.00007032 per second; timeout 2400 s caps this function at $0.16877; lane cap $3
+shipped corpus/gen/gen.jsonl: 3241646 bytes, sha256 f56e979a5150719e742eb8955e36dcb5e157d70231bd82b273131325904333bc
+shipped corpus/gen/manifest.json: 31556 bytes, sha256 73c3687329a08adb92e3d31200fbb19f794cb93ea42e5c888a2922802f2637d2
+shipped corpus/witnesses/sv-node/manifest.json: 194730 bytes, sha256 1bb00874d8f87ac3476e19270fb16eba73bc73736b0f18bad71904c9c6eebba6
+shipped harness/oracle/bitcoin.conf: 5004 bytes, sha256 965115b49e0f3910c42ea0f22529c083219d866335b34bf07e8402e9481076e8
+shipped harness/oracle/bitcoin-policy.conf: 6250 bytes, sha256 90f16c5dc5ae4ef07c380d4e1ede93efc34788ebb3e52b9d1ccf766dbc593dd8
+shipped harness-sources.tar: 952320 bytes, sha256 8aeff52a106b10f6409574867fd4c30c19b673c7027c196dc1fa24e36f5fe18f
+shipped measurement.json: 217 bytes, sha256 d30637be0bbc7b4c7b6440ef0f05425f09d8f3b6ebb70f26e726a0a7e843f390
+adapter sources: HEAD c07b602c8cad1d2753c05c10b53f481de7ccee11, harness tree 70d60ef360589c1ae8cf7f3a8c3c0341ce321353; cached layer 55785b6; runner sha256 90938c42a2195d95b2df148d70f8f730e19d6c38084e985e3fbcb3bbe03df169
+read https://download.bitcoinsv.io/bitcoinsv/1.2.3/SHA256SUMS.asc: 2026-10-07T01:38:44Z to 2026-10-07T01:38:45Z, rc 0, 1289 bytes
+read https://download.bitcoinsv.io/bitcoinsv/1.2.3/bitcoin-sv-1.2.3-x86_64-linux-gnu.tar.gz: 2026-10-07T01:38:45Z to 2026-10-07T01:38:45Z, rc 0, 31676537 bytes
+the published line: 13f222f5b466fe4af2bb867628354e4ae9711a10019e89fc7bf018b90e30b3c8  bitcoin-sv-1.2.3-x86_64-linux-gnu.tar.gz
+the asset's sha256:  13f222f5b466fe4af2bb867628354e4ae9711a10019e89fc7bf018b90e30b3c8  bitcoin-sv-1.2.3-x86_64-linux-gnu.tar.gz
+sha256 VERIFIED against https://download.bitcoinsv.io/bitcoinsv/1.2.3/SHA256SUMS.asc before anything runs
+bitcoind -version (rc 0): Bitcoin SV version v1.2.3 / Copyright (C) 2009-2026 The Bitcoin Association
+bitcoind sha256 70b36ab04b1bdd5712e58cf43957e21f6d02dd890f0cce6d0acae16e97783610; bitcoin-cli sha256 dda20cfd24d8d7bbe1384d1be1d4fb3e5f679c9b418f6a61f9033168f1f53c82
+ldd: linux-vdso.so.1 (0x00002a98463cc000); libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00002a9847679000); librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00002a984767e000); libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00002a9847683000); libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00002a9847763000); libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00002a9847783000); /lib64/ld-linux-x86-64.so.2 (0x0000556afb7ae000)
+instance cons (harness/oracle/bitcoin.conf) at http://127.0.0.1:18563: height 0, /Bitcoin SV:1.2.3/, version 101020300, settings {"maxscriptsizepolicy": 4294967295, "maxopsperscriptpolicy": 4294967295, "maxscriptnumlengthpolicy": 4, "maxstackmemoryusagepolicy": 9223372036854775807, "maxstackmemoryusageconsensus": 9223372036854775807, "maxstdtxvalidationduration": 300000}
+instance pol (harness/oracle/bitcoin-policy.conf) at http://127.0.0.1:18565: height 0, /Bitcoin SV:1.2.3/, version 101020300, settings {"maxscriptsizepolicy": 500000, "maxopsperscriptpolicy": 4294967295, "maxscriptnumlengthpolicy": 4, "maxstackmemoryusagepolicy": 100000000, "maxstackmemoryusageconsensus": 9223372036854775807, "maxstdtxvalidationduration": 300000}
+cargo build --release --locked --bin run_svnode --bin spec_recorded: rc 0 in 14 s (Compiling bsv-script-harness v0.0.1 (/proj/harness) /     Finished `release` profile [optimized + debuginfo] target(s) in 13.21s)
+the baked tree: no .git in the layer (an export)
+spec_recorded (family, 28 entries): rc 0; spec_recorded: /tmp/x86/family/gen/gen.jsonl: 28 of 28 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to /tmp/x86/spec/family.jsonl (config sv-mainnet-default)
+run_svnode (family): rc 0 in 0.1 s
+  | run_svnode: gen/gen.jsonl (28 entries) vs sv-node@v1.2.3 (subversion /Bitcoin SV:1.2.3/; version 101020300) at http://127.0.0.1:18563; the mempool column at http://127.0.0.1:18565 (subversion /Bitcoin SV:1.2.3/; version 101020300; the node's default policy; getsettings' maxscriptnumlengthpolicy at its tip's era 4); the spec at spec@cb7e46e (sv-mainnet-default); 72 RPC calls; the words recorded in /tmp/x86/ship/corpus/witnesses/sv-node/manifest.json [gen] (0 CLI calls); totalTimeout 60000 ms, stopOnFirstInvalid true; 0.0s
+  |   word: spend 967896, utxo 620538, consensus false -> 0x1D47FF
+  |   word: spend 967896, utxo 620538, consensus true -> 0x1D462F
+  |   word: spend 967896, utxo 943816, consensus false -> 0x3D47FF
+  |   word: spend 967896, utxo 943816, consensus true -> 0x3D462F
+  |   agree: spec 28, spec-mempool 28; node undecided runs (timeout/skipped) 0; without a spec verdict 0; descriptions outside the table 0; flag-word drifts 0
+  | run_svnode: GREEN (0 divergent runs filed under cited classes; every other decided entry agrees in both columns)
+  compared (family): spec: agree 28, differ 0, missing 0 (reason text differs on 0 entries); spec-mempool: agree 28, differ 0, missing 0 (reason text differs on 0 entries)
+spec_recorded (whole, 1157 entries): rc 0; spec_recorded: /tmp/x86/whole/gen/gen.jsonl: 1157 of 1157 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to /tmp/x86/spec/whole.jsonl (config sv-mainnet-default)
+run_svnode (whole): rc 0 in 1.7 s
+  | run_svnode: gen/gen.jsonl (1157 entries) vs sv-node@v1.2.3 (subversion /Bitcoin SV:1.2.3/; version 101020300) at http://127.0.0.1:18563; the mempool column at http://127.0.0.1:18565 (subversion /Bitcoin SV:1.2.3/; version 101020300; the node's default policy; getsettings' maxscriptnumlengthpolicy at its tip's era 4); the spec at spec@cb7e46e (sv-mainnet-default); 2330 RPC calls; the words recorded in /tmp/x86/ship/corpus/witnesses/sv-node/manifest.json [gen] (0 CLI calls); totalTimeout 60000 ms, stopOnFirstInvalid true; 1.7s
+  |   word: spend 478558, utxo 478000, consensus false -> 0x147DF
+  |   word: spend 478558, utxo 478000, consensus true -> 0x605
+  |   word: spend 943815, utxo 620538, consensus false -> 0xD47FF
+  |   word: spend 943815, utxo 620538, consensus true -> 0xD462F
+  |   word: spend 967896, utxo 620537, consensus false -> 0x1547FF
+  |   word: spend 967896, utxo 620537, consensus true -> 0x15462F
+  |   word: spend 967896, utxo 620538, consensus false -> 0x1D47FF
+  |   word: spend 967896, utxo 620538, consensus true -> 0x1D462F
+  |   word: spend 967896, utxo 943816, consensus false -> 0x3D47FF
+  |   word: spend 967896, utxo 943816, consensus true -> 0x3D462F
+  |   agree: spec 1157, spec-mempool 1157; node undecided runs (timeout/skipped) 0; without a spec verdict 0; descriptions outside the table 0; flag-word drifts 0
+  |   recorded sv-node@v1.2.3, sv-node-mempool@v1.2.3 into /tmp/x86/whole/gen/gen.jsonl; new sha256 f56e979a5150719e742eb8955e36dcb5e157d70231bd82b273131325904333bc in /tmp/x86/whole/gen/manifest.json
+  | run_svnode: GREEN (0 divergent runs filed under cited classes; every other decided entry agrees in both columns)
+  compared (whole): spec: agree 1157, differ 0, missing 0 (reason text differs on 0 entries); spec-mempool: agree 1157, differ 0, missing 0 (reason text differs on 0 entries)
+stopped /tmp/x86/cons (exit 0); bitcoind.err tail: (empty)
+stopped /tmp/x86/pol (exit 0); bitcoind.err tail: (empty)
+container: done; wall 24 s ≈ $0.0017 at the [M] rates (cpu 4 / 8 GiB)

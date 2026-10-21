@@ -1,0 +1,801 @@
+{
+  "artifacts_sha256": {
+    "answers.jsonl": "d1021e5b0d576e9756bee04bb2f7df8cd2a40386b571ebdbe42cd8008362527a",
+    "funding.jsonl": "b3a7a9b4e1f6529a4bfa6e54542b3f09cd21eb3af563eb9172fe105bfb1dd726",
+    "rpc.jsonl": "da67b4d408f2cc277feec02e79297da82b195477a41c63b4a9d1cd915ad7ac91",
+    "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corpus": {
+    "manifest_count": 74,
+    "name": "eras",
+    "path": "corpus/eras/eras.jsonl",
+    "run_count": 74,
+    "run_from": 0,
+    "sha256": "2190075538d0315db3c8a03c497aeecd7048b850abbbc3bfa36663c9c082fb64"
+  },
+  "counts": {
+    "block": {
+      "agreeing": 8,
+      "disagreeing": 0,
+      "entries": 74,
+      "judged": 8,
+      "no_reference": 0,
+      "undecided": 66,
+      "unfundable": 0
+    },
+    "mempool": {
+      "agreeing": 8,
+      "disagreeing": 0,
+      "entries": 74,
+      "judged": 8,
+      "no_reference": 0,
+      "undecided": 66,
+      "unfundable": 0
+    }
+  },
+  "final_tip": {
+    "bestblockhash": "2357a1333aa4456542f6de0ebab1d6a29d4cea03c93798d95a0b3a1caa60251d",
+    "blocks": 225,
+    "chain_work": "00000000000000000000000000000000000000000000000000000000000001c4",
+    "header_median_time_past": 0,
+    "mediantime": 1792292776,
+    "time": 1792293205
+  },
+  "funding_wall": null,
+  "initial_tip": {
+    "bestblockhash": "034a6f641fe4fe0f18845e0015f238c6c16f740fb4e69a639cee26706984e441",
+    "blocks": 222,
+    "chain_work": "00000000000000000000000000000000000000000000000000000000000001be",
+    "header_median_time_past": 0,
+    "mediantime": 1792291681,
+    "time": 1792292816
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "host": "box",
+    "listeners": [
+      "127.0.0.1:8000",
+      "127.0.0.1:8081",
+      "127.0.0.1:8082",
+      "127.0.0.1:8084",
+      "127.0.0.1:8085",
+      "127.0.0.1:8086",
+      "127.0.0.1:8087",
+      "127.0.0.1:8088",
+      "127.0.0.1:8090",
+      "127.0.0.1:8833",
+      "127.0.0.1:8834",
+      "127.0.0.1:9091",
+      "127.0.0.1:9292"
+    ],
+    "native_client_sha256": "6bd3536ca88028aa4c2338d558b6c5cf714054d609367ba2f5f7d3fd1ae7c251",
+    "pid": 78010,
+    "rpc": "http://127.0.0.1:9292",
+    "settings": {
+      "environment": {
+        "DATADIR": "~/bsv/targets/spec-teranode/data",
+        "GOMAXPROCS": "4",
+        "GOMEMLIMIT": "6GiB",
+        "HOME": "~",
+        "LC_ALL": "C",
+        "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+        "SETTINGS_CONTEXT": "test",
+        "SETTINGS_ENV_FILE": "/dev/null",
+        "TMPDIR": "~/bsv/targets/spec-teranode/data/runtime/tmp"
+      },
+      "files": {
+        "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
+        "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
+        "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+      },
+      "services": [
+        "-all=0",
+        "-blockchain=1",
+        "-subtreevalidation=1",
+        "-blockvalidation=1",
+        "-blockassembly=1",
+        "-asset=1",
+        "-propagation=1",
+        "-rpc=1",
+        "-p2p=0",
+        "-alert=0",
+        "-legacy=0",
+        "-validator=1"
+      ]
+    },
+    "settings_hash": "133d2473bdbbfe199b39f7e586a80c37eed0936b952749759f616593bed8ce88",
+    "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
+    "tag": "v0.16.0",
+    "validator": "127.0.0.1:8081"
+  },
+  "mapping": {
+    "basis": "tracker comment 5853443740; go-chaincfg v1.6.2 params.go:276-277 (mainnet), 463,475-476 (regtest)",
+    "funding_targets": {
+      "post-chronicle": "200 or a later tip of the same era",
+      "post-genesis": "next available height, 100 through 198",
+      "pre-genesis": "none: no coinbase output matures below height 100; undecided"
+    },
+    "mainnet": {
+      "chronicle": 943816,
+      "genesis": 620538
+    },
+    "outpoints": "rebound, locking scripts and values preserved; signature and absolute-height/time rows excluded",
+    "regtest": {
+      "chronicle": 200,
+      "coinbase_maturity": 100,
+      "genesis": 100
+    },
+    "spend_height": "confirmed funding height + 1; actual chain tip + 1"
+  },
+  "paths": {
+    "block": "node ValidatorAPI.ValidateTransaction, SkipPolicyChecks=true, InBlock=true, parents read from its store; full block-wrapper acceptance is not inferred",
+    "mempool": "node sendrawtransaction under its recorded test settings"
+  },
+  "provenance": "synthetic seed corpus; node at the tagged pin on the local private chain; witnesses are unclassified findings",
+  "rpc_calls": 56,
+  "undecided": [
+    {
+      "id": "eras-00001",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00001",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00002",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00002",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00003",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00003",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00004",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00004",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00005",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00005",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00006",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00006",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00007",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00007",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00008",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00008",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00009",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00009",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00010",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00010",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00011",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00011",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00012",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00012",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00013",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00013",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00014",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00014",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00015",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00015",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00016",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00016",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00017",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00017",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00018",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00018",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00019",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00019",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00020",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00020",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00021",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00021",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00022",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00022",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00024",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00024",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00025",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00025",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00027",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00027",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00028",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00028",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00030",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00030",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00031",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00031",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00033",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00033",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00034",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00034",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00036",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00036",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00038",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00038",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00040",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00040",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00041",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00041",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00044",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00044",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00045",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00045",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00046",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00046",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00049",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00049",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00050",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00050",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00051",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00051",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00052",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00052",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00053",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00053",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00054",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00054",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "eras-00055",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00055",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00056",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00056",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00057",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00057",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00058",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00058",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00059",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00059",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00060",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00060",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00061",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00061",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00062",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00062",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00063",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00063",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00064",
+      "path": "block",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00064",
+      "path": "mempool",
+      "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
+    },
+    {
+      "id": "eras-00065",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00065",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00066",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00066",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00067",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00067",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00068",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00068",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00069",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00069",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00070",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00070",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00071",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00071",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00072",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00072",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00073",
+      "path": "block",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00073",
+      "path": "mempool",
+      "reason": "mixed prevout/spend eras need funding blocks in multiple era ranges; not implemented in this seed road"
+    },
+    {
+      "id": "eras-00043",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00043",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00047",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00047",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00048",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00048",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00074",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "eras-00074",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    }
+  ],
+  "unfundable": [],
+  "wall_seconds": 3.346618709
+}

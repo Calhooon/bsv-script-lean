@@ -1,0 +1,1102 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "aggregate": {
+    "agree": 282,
+    "date": "2026-10-13",
+    "diverge": 0,
+    "label": "[M]",
+    "measured": 282,
+    "needs-peer": 19,
+    "pending": 17,
+    "rows": 472,
+    "rpc-precheck": 7,
+    "unrealizable": 147
+  },
+  "base_commit": "e4745a84e05bc46862b27f279ecb8de8cf8ef7f9",
+  "complete": false,
+  "date": "2026-10-13",
+  "framework_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "label": "[X]",
+  "results": [
+    {
+      "date": "2026-10-13",
+      "declared_expected": {
+        "bodyAbsent": true,
+        "equalWork": true,
+        "ignored": true,
+        "notFailed": true
+      },
+      "expected": {
+        "bodyAbsent": true,
+        "equalWork": true,
+        "ignored": true,
+        "notFailed": true
+      },
+      "expected_label": "[D]",
+      "family": "chain",
+      "fixtures": {
+        "A": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+        "B": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+        "active_receipt": {
+          "result": null
+        },
+        "block_hex": "040000003b6f88e45199f4a3e7a4e641c9496204c023ae289e647aa984966ecd1363d65960b9a31badd992baef45ad7d23dbd9b2eae6219cdd261e04238c06420a926a6501f15365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1001690d756e7265717565737465642d42ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+        "body": {
+          "error": {
+            "code": -1,
+            "message": "Block file 16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b not available."
+          }
+        },
+        "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18572\nport=18573\nexcessiveblocksize=1000001\nlisten=1\nbind=127.0.0.1:18573\ngenesisactivationheight=10000\nchronicleactivationheight=15000\nacceptnonstdtxn=1\nacceptnonstdoutputs=1\nbanscore=100000\ndebug=mempool\ndebug=txnval\ndebug=netmsg\n",
+        "header": {
+          "bits": "207fffff",
+          "chainwork": "00000000000000000000000000000000000000000000000000000000000000d4",
+          "confirmations": -1,
+          "difficulty": 4.6565423739069247e-10,
+          "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+          "height": 105,
+          "mediantime": 1699990018,
+          "merkleroot": "656a920a42068c23041e26dd9c21e6eab2d9db237dad45efba92d9ad1ba3b960",
+          "nonce": 1,
+          "previousblockhash": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+          "status": {
+            "data": false,
+            "disk meta": false,
+            "double spend": false,
+            "failed": false,
+            "parent failed": false,
+            "soft consensus frozen": false,
+            "soft reject": false,
+            "undo": false,
+            "validity": "tree"
+          },
+          "time": 1700000001,
+          "version": 4,
+          "versionHex": "00000004"
+        },
+        "tips": [
+          {
+            "branchlen": 0,
+            "hash": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+            "height": 105,
+            "status": "active"
+          },
+          {
+            "branchlen": 1,
+            "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+            "height": 105,
+            "status": "headers-only"
+          }
+        ],
+        "traffic": {
+          "matched": true,
+          "observations": []
+        }
+      },
+      "id": "chain-unrequested-equal-work",
+      "label": "[X]",
+      "observed": {
+        "bodyAbsent": true,
+        "equalWork": true,
+        "ignored": true,
+        "notFailed": true
+      },
+      "peer": {
+        "events": [
+          {
+            "date": "2026-10-13",
+            "direction": "instrument",
+[withheld at export: a sibling tree's line]
+            "index": 0,
+            "label": "[X]",
+            "protocol_version": 70016,
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-in",
+            "index": 1,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "step": {
+              "host": "127.0.0.1",
+              "op": "connect",
+              "port": 18573
+            },
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "version",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "8011010001000000000000002858ce6a00000000010000000000000000000000000000000000ffff7f000001488d010000000000000000000000000000000000ffff00000000000052915022d71412711e2f707974686f6e2d6d696e696e6f64652d7465737465723a302e302e332fffffffff011100165627493cd2484fb582dcdca93c6dfc",
+            "index": 2,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "version",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa76657273696f6e00000000007a000000c70580ca80110100210000000000000000f1536500000000000000000000000000000000000000000000000000000000000021000000000000000000000000000000000000000000000000000d39443743b1eb50122f426974636f696e2053563a312e322e332f68000000011100165627493cd2484fb582dcdca93c6dfc",
+            "index": 3,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "verack",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "",
+            "index": 4,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "protoconf",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "020000200015426c6f636b5072696f726974792c44656661756c74",
+            "index": 5,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "verack",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa76657261636b000000000000000000005df6e0e2",
+            "index": 6,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "protoconf",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa70726f746f636f6e660000001b00000030d5edd0020000200015426c6f636b5072696f726974792c44656661756c74",
+            "index": 7,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "authch",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa6175746863680000000000002800000047511e2901000000200000006c6e6438c5ac1dedb82d2ef4ad07c1fedef2221e5ec3166f39caefd95ba786b0",
+            "index": 8,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "sendheaders",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa73656e646865616465727300000000005df6e0e2",
+            "index": 9,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "sendcmpct",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa73656e64636d70637400000009000000ccfe104a000100000000000000",
+            "index": 10,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "ping",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa70696e6700000000000000000800000020359095a344546119800165",
+            "index": 11,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "pong",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "a344546119800165",
+            "index": 12,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "command": "getheaders",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa676574686561646572730000650200004243c1e78011010012270690294e887b2f4b55d9450f458c7c2f9496c683b91b2d10fc0630981a644f1d826af94f109fd233be68bc2f8f02ea8187e0220de34625319df5e93767df0465c128a87ae4b7e0a4bc3cee8aa45f502dfbb8f4010a5a2954c41fe61ca3bc30b315101496b505a834440a7ee44747218d3c52394f2e2e4f9d508a384d9ea43f5e04cac8337b1cddc98013f7f0a477543128b8b92b5fc908c74fd8edfa3c221fa376f76fc35b517f3a9744d9a99c55cbdbca0308e9bb164d54bfed01719352318ada9543844506358479979ff854626a440ac675a7eb82b99bdcca079caa5c7c5f2c9830cdfdd71782f85d58425cd722c4915be9a6009e02b270614e1a357f5a20982b52463f5fb7d0a617e874e497e0846f5ee4a9213e65a0a7084dc8d30503916d6f744dea2c0dfb0c0c501e240ea116451dc60edf6a23408eba169ef5155e0dba32161195171e7fce2b67444a528d7267ed0083cfe7f68097c4104a3297076c36ab403f9a75752cd5d9510ed80067088a7b4d4f96c525df8aef0ccfc3a62498f8879a1f5a2755ee0b6dfec74d765b818bb9e5c7530efb92c330c7322f736a6aa0dd2418a1527907a0ba9affd05a07ca12ad7b85e7d4af2f4a6b499f45804e924c4c6ce82bf7a3a2a21195cdf4ca0ffb75193b19ce25932153148a2116035a0ba5a096dc77a835a52353953ccfa1b976bf7466667677e157d01c477169fe09f4d75ca3a1321d40cb18c59e57f6abf18d4802db627c743c4851d9363b1f543e06226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0000000000000000000000000000000000000000000000000000000000000000",
+            "index": 13,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:20Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-out",
+            "index": 14,
+            "label": "[X]",
+            "response": {
+              "ok": true,
+              "result": {
+                "connected": true,
+                "protocol_version": 70016
+              }
+            },
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-in",
+            "index": 15,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "step": {
+              "hex": "040000003b6f88e45199f4a3e7a4e641c9496204c023ae289e647aa984966ecd1363d65960b9a31badd992baef45ad7d23dbd9b2eae6219cdd261e04238c06420a926a6501f15365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1001690d756e7265717565737465642d42ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+              "op": "send_block"
+            },
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "command": "block",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "040000003b6f88e45199f4a3e7a4e641c9496204c023ae289e647aa984966ecd1363d65960b9a31badd992baef45ad7d23dbd9b2eae6219cdd261e04238c06420a926a6501f15365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1001690d756e7265717565737465642d42ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "index": 16,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "command": "ping",
+            "date": "2026-10-13",
+            "direction": "send",
+            "encoding": "reference-message-payload",
+            "hex": "0100000000000000",
+            "index": 17,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "command": "pong",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa706f6e6700000000000000000800000008533f6b0100000000000000",
+            "index": 18,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "command": "inv",
+            "date": "2026-10-13",
+            "direction": "receive",
+            "encoding": "reference-message-frame",
+            "hex": "dab5bffa696e7600000000000000000025000000c8ce231801020000000f7b4207e98a65236fee21917a79fef84ad3e68d9143d8a75698eaf70489dc12",
+            "index": 19,
+            "inventory": [
+              {
+                "hash": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+                "kind": 2
+              }
+            ],
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-out",
+            "index": 20,
+            "label": "[X]",
+            "response": {
+              "ok": true,
+              "result": {
+                "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b"
+              }
+            },
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-in",
+            "index": 21,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "step": {
+              "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+              "kind": "none",
+              "op": "expect",
+              "since": 15,
+              "timeout": 2.0
+            },
+            "utc": "2026-10-13T16:11:21Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-out",
+            "index": 22,
+            "label": "[X]",
+            "response": {
+              "ok": true,
+              "result": {
+                "matched": true,
+                "observations": []
+              }
+            },
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:23Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-in",
+            "index": 23,
+            "label": "[X]",
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "step": {
+              "op": "close"
+            },
+            "utc": "2026-10-13T16:11:23Z"
+          },
+          {
+            "date": "2026-10-13",
+            "direction": "step-out",
+            "index": 24,
+            "label": "[X]",
+            "response": {
+              "ok": true,
+              "result": {
+                "closed": true
+              }
+            },
+            "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "utc": "2026-10-13T16:11:23Z"
+          }
+        ],
+        "node_log": [],
+        "protocol_version": 70016,
+        "receipt": "s6-peer-66-chain-unrequested-equal-work-20261013-161120/chain-unrequested-equal-work-0/peer.jsonl",
+        "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+      },
+      "recipe": "[D] 2026-10-13: construct rival B at the same predecessor as A; accept A by RPC; send B body without inv/header/request from the unwhitelisted peer; observe header-only status, unavailable body, equal chainwork and unchanged active tip.",
+      "rpc": [
+        {
+          "date": "2026-10-13",
+          "label": "[M]",
+          "studio_load_1m": 14.40771484375
+        },
+        {
+          "earlier_launch_errors": [],
+          "startup_attempts": 1
+        },
+        {
+          "method": "setmocktime",
+          "params": [
+            1699990000
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "generatetoaddress",
+          "params": [
+            103,
+            "n3T3a2w9EpLBa5S3hGYwYFzHNmyioCmTRX"
+          ],
+          "reply": {
+            "result": [
+              "3f3959b1f624e201e438650cdce8ff53332a3d440fb989b9dd60b07b3569c08f",
+              "6508925a3fa38c893db323bfe2d310b745faba8709e87ddae5284f439d583d0f",
+              "22a1f819f24070a4383744dc7b9cd7301cf4a61b55f419dba63b3f9ae75c125c",
+              "701e843dc855b732c28d1e2199f1ec5b3d4510f5d7d94579ac01692133371235",
+              "5a3bb814e5573a28b7f470eca916a99fb482f870081311d58b17f01d238c8d93",
+              "58b671b85fe3de963c5c76bccd265bff646ec94ac7f2e8ec468bb7fc83bf4bdc",
+              "177a2c1fe4b3911464efd060c7183af81ad39bcde1c8ab3375824377a4f4072f",
+              "139569771688c199ea58862afabd9ce213e6f8b98ab9a691d3a3f67746091409",
+              "1ff62bcf99af04493db7fa354491f547e43dada23cbca3614078e72c93dabdc0",
+              "54f42fa2efd28338dc7ac92835e7c012e177ec94994ca6b87cfb65fbf541878c",
+              "430068245dc532bcf7467764d7193e8519fa9d149126b60e83b22331ed7b00ee",
+              "78f567f4336f5d81ed526c66d3b057fcd9e14b24cf7597e3d97a74fa54baa770",
+              "4c80a9c960996ba9d37f29a7bad689db65b7d85306348dd5399d1047c0dcef50",
+              "1ab8857c8aa36f1474ea84b581ec3f82e992d883e01d19983f3c8af96aa80008",
+              "49571bd2a992e8576689c03cb0b10f0a77805127c33f903b593c5ceef3ac095f",
+              "0c04c6724962477d46fe7b518dbc20ca07bf934c67b67863253754df68873243",
+              "1c75b30cd37dc6ec23458e6370caf5620dd7ece1f469efb7ab45fe6b854add4c",
+              "680a619be735e1cf74b60f3ac1b29125c548b8758b102b5b46f479d80c4a974f",
+              "615a5ef0ecd266f154c908a178279c01263955ddfee342fde4a2be5598e620d6",
+              "58db4a6c3afaf3ab38fde847f0153283867cdc354c5a9a4da8af59d9dbd81fe4",
+              "63aec2c76924389142b03ab3e5475c030c098986c5472d58e71ba4b8a20b1b82",
+              "746bd9ff4bb38b95346c06993c3709722b9c53075377342d7ee75245e12104e2",
+              "36210602ff1f41f112e7cd4b09a9304ca5178d1c21bfacc4fca49b5883e63e24",
+              "29a65714ee1c6f5684434a321e9302b967a067812f74b21053818dd6714ce699",
+              "5a0f0d16c24937e020dbc294b31502e3e1f7864505b1f96043cc40c3efbb4283",
+              "0206a3822ff231ebf1a9705342790f1724b35bb36b23416ab704b828acf790ec",
+              "3655387d6a72549fdb184e373e8b92858c59710186514397cda5f0ced13dbe63",
+              "614009af08cf9b2bd258c03cbcbd48b4a8e4a4f3cebdcc83a11c11567ba4f366",
+              "0e37bdd5fc80bb23f9891db6266d02e4831950c010a75180cae7bca941a9f8f9",
+              "3e541f3b36d951483c747c62db02488df1abf6579ec518cb401d32a1a35cd7f4",
+              "37ea3591f98aaa19377bb21ca7e67dc126c199a3dcb46ff2c25106fa94948257",
+              "4ca754293460332ad8169edbc7f67e213d49f94454c42bdff47d3eac76f18858",
+              "72fc5e70de922353afbdfc2550e0b32eac71cb03d50752361f7a32432aaf69c5",
+              "2a449faa741b94f87b9167e8989c131212f4fe53bb5976e8291b810158fba28a",
+              "06d579043baa1687cdd901f3c5c1c6197f832daab6610e7d77812e2eb9a34ffc",
+              "623a1f643ebaea32760ffd1b56d2a29c2ea4b8ba6cdaaa92fb565fe628c61c30",
+              "1e2291170b947168f4c73ff834f08690bcccd6732a65e521c734273b36ad7e2c",
+              "76a608dec4e3310019257c5ecdf468b62fabdaf00206be2baa8e94a17f8a7b5a",
+              "0c42cad12f23869d880e4ac401a45087e3cca4743f21ad18f73d90f7d9b6c853",
+              "3cb3ff72f834d2aa3555fef4e1b717e2b5e3492e1979958e463272938667b043",
+              "40ad407d88411523d7d90eea7db5d28a296efe66c9ed9980fb413db9828b1ecb",
+              "585e48d965c61e13e81a4f1b7793595853412fa89bea2c81262f534466f452a6",
+              "499929483331c641a12b7eac92cc0be802360e5987d0c931753e724bf7e43a94",
+              "58448d3fdd5767a90b54bfe40d978a228408e8ee68b4a1962eb4441f9f7bc75f",
+              "48a50c8bf5c78a5e534be13e63829fac9f5e64774127bf2fada226af16402e6f",
+              "4ba31c1cea170db527f870f99464a15b95b78e0e80774da068289a9e8f3c7a17",
+              "5b2a306063a935af330802cafc42f4a74c9d15530c8f8fb8fa77ef5e4c232e85",
+              "15ef8e275afa4f1cb65669b57f6f4c5daf3b6a9068f7c1a1654669b302a2c36a",
+              "496b4a05840f3ef8078919aa113445f067ab28eb68439bedb974f47aac1c1679",
+              "76a3bf2cf8912e55e14a0d94e4c8dea46ce396bf283bfb2e7978c7cc8b5109e6",
+              "0df1ed3f11bd5d5273731e8b7a8905296b829f662877de97edafbbd7ed4a9299",
+              "3509d12712c2baa8e2e3c602223831b5f81b347932e2d64395466562f88b5040",
+              "0d6dec75724ce27be08f4622324101167bdfddac448fdf0f5fbfeaa07a4844b2",
+              "40bb46db4055678026cac8254a17a0915bbc9f56877fd7e4ea61e13bcc6745e4",
+              "219b1e2b9af7410a029d738df329373164abb03e32f31ab5dab00924a6047ed3",
+              "61ca81b4af1dd1f8483d93ffb618fb464d701eebeb5ede4a0427d68a9162c880",
+              "3f1b8b4ea121951f14ecee0e28d99c27177ea27038d6fb9484e5f93392da63cd",
+              "3c60407641a9f8eeebe7c06aa053ca5b85d06a806f3e152a76314e4499bbba7e",
+              "591e0d0207acc032c409893d01fbc68a2f849db26dc2c6c36d6de375198e5bc0",
+              "2026beeea964249af012ab15e65d68171a4c541991e7ee086fca41717e75fc5f",
+              "74f6407f4a842d15b0cdd56787196feb230c8e273380590ca0901e53f2388ccc",
+              "09fe6971471cd057e17776666674bf76b9a1cf3c955323a535a877dc96a0a50b",
+              "0f3b6f464568a45d077f581e8763fb35bc6268b08d667e51638afb3fd974e0b2",
+              "18d872c27ea0ca8016c663537b3c4d9793cda2564bbfb6d28b2b28ca878aa9fa",
+              "404359138d1c4278ca488f833a6869ffc740c511beeb3e90d7e3c13e7999c3e2",
+              "06ffd9b42e6d50885ae0d732bbc920ef9f9126d57f2dcc4effc940b6b436f2f1",
+              "1efd47d96f90258a1f48c2963b6b194f58fee6b576fde21ae2342a0ef86581c1",
+              "3597301a0001dc552b18f67dfd6c3f07e956b8b675890e0918f8ac9928a2abe4",
+              "3832fe35c1fb42716311f9d766e57965338bd29630ffa2fcc30c5f1631e45ddd",
+              "618785085db1190e56b8c904c9f56e695f1d1fdc80d9440268a3210668c3c145",
+              "315f4730e4b6e5c23b89dab83b9fe256eeab6f110084b2242457a2a22865cfca",
+              "7f7c12b6e9d7c3016322e95b94f87905ed5afaaa28b2d8360b8192773e354bb1",
+              "0928e4f15cb6dabdac85e2b84989cbaabefbd718d5887204e3e5eddbe24b0631",
+              "2437678576264df1c7795931e0e1141e49b046e3f8e23f3780e599ada8ee2eec",
+              "7dd6c562a106b23b1b751c6e33b9eeea97bbb61fd868381f907bf2db3dd73b52",
+              "26f3aad1dca641bca8c00008d73e03e8c597680596af1452f2b2f96af3855890",
+              "73e773aeaa2f82a86c9e546165cd2189b69aef7c5a8fd66000e3c9caacad012f",
+              "5a0316218a1453219325ce193b1975fb0fcaf4cd9511a2a2a3f72be86c4c4c92",
+              "6f6dc9c33ebfeec7033d406c67106b2fc6f0dd04b12dbbb66c0e35afd0e523b9",
+              "2e6772e5e4b4061aac10f870b127cf47dc20d4d2d5550667e0e393418b541e42",
+              "193b6d3d248e99f75fb3a0b493278538177367173fa53f49f3cf9333057b533f",
+              "7d54962ac7a35d0009b418ab22dc5d8dbc91699fb528fd2c40ff918afd4bb2a7",
+              "6b6edb884a5a69f2222720c18200462033d3eaa280b96a94d222af308a0db67c",
+              "0e5a0b7bd1fbbee08bce791dad14ceb2dd0ee76cbaf3b69f7144668137b7fa37",
+              "3406a353291a1f3a4e326013fb3af05c8584e5f9a9bda3fd734934b76ff63f35",
+              "4e80459f496b4a2fafd4e7857bad12ca075ad0ff9abaa0077952a11824dda06a",
+              "540e308cc5d18b608d7f7683c3ce447537a0dded38644c7ec0ec14c1127ed07f",
+              "4a0df75dfbdbcd825e9c4930bf600347756f7b6deef782a288d8597675c3dfff",
+              "07280cd18d78c1b9246f736f56126fefa81ed1bd5dd8a393dc2491ed86ff6c5a",
+              "6a732f32c730c392fb0e53c7e5b98b815b764dc7fe6d0bee55275a1f9a87f898",
+              "0a446fd71f3f2a6b9b01f77a5b0ba8bea2e93a873863d1ceff0f9d94ef7a887a",
+              "24a6c3cf0cef8adf25c5964f4d7b8a086700d80e51d9d52c75759a3f40ab366c",
+              "0797324a10c49780f6e7cf8300ed67728d524a44672bce7f1e1795111632ba0d",
+              "5e15f59e16ba8e40236adf0ec61d4516a10e241e500c0cfb0d2cea4d746f6d91",
+              "0305d3c84d08a7a0653e21a9e45e6f84e097e474e817a6d0b75f3f46522b9820",
+              "5a7f351a4e6170b2029e00a6e95b91c422d75c42585df88217d7fdcd30982c5f",
+              "7c5caa9c07cadc9bb982eba775c60a446a6254f89f977984350645844395da8a",
+              "3152937101edbf544d16bbe90803cadbcb559ca9d944973a7f515bc36ff776a3",
+              "1f223cfaedd84fc708c95f2bb9b828315477a4f0f71380c9dd1c7b33c8ca045e",
+              "3fa49e4d388a509d4f2e2e4f39523c8d214747e47e0a4434a805b596141015b3",
+              "30bca31ce61fc454295a0a01f4b8fb2d505fa48aee3cbca4e0b7e47aa828c165",
+              "04df6737e9f59d312546e30d22e08781ea028f2fbc68be33d29f104ff96a821d",
+              "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627"
+            ]
+          },
+          "source": "[SRC] src/rpc/mining.cpp:227-268 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "3f3959b1f624e201e438650cdce8ff53332a3d440fb989b9dd60b07b3569c08f",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "0000000000000000000000000000000000000000000000000000000000000004",
+              "confirmations": 103,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "3f3959b1f624e201e438650cdce8ff53332a3d440fb989b9dd60b07b3569c08f",
+              "height": 1,
+              "mediantime": 1699990000,
+              "merkleroot": "b652a962a5e79f5f47fe5372ba518cfe7db8050bf3f80a7763be941c6e6f4187",
+              "nextblockhash": "6508925a3fa38c893db323bfe2d310b745faba8709e87ddae5284f439d583d0f",
+              "nonce": 0,
+              "num_tx": 1,
+              "previousblockhash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
+              "size": 169,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699990000,
+              "tx": [
+                "b652a962a5e79f5f47fe5372ba518cfe7db8050bf3f80a7763be941c6e6f4187"
+              ],
+              "version": 536870912,
+              "versionHex": "20000000"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getrawtransaction",
+          "params": [
+            "b652a962a5e79f5f47fe5372ba518cfe7db8050bf3f80a7763be941c6e6f4187",
+            0
+          ],
+          "reply": {
+            "result": "02000000010000000000000000000000000000000000000000000000000000000000000000ffffffff03510101ffffffff0100f2052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+          },
+          "source": "[SRC] src/rpc/rawtransaction.cpp:53-194 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "6508925a3fa38c893db323bfe2d310b745faba8709e87ddae5284f439d583d0f",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "0000000000000000000000000000000000000000000000000000000000000006",
+              "confirmations": 102,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "6508925a3fa38c893db323bfe2d310b745faba8709e87ddae5284f439d583d0f",
+              "height": 2,
+              "mediantime": 1699990000,
+              "merkleroot": "2f7189170c87939e3983f69091d99a243f12a0c0a555a10f15ae82c36003a72f",
+              "nextblockhash": "22a1f819f24070a4383744dc7b9cd7301cf4a61b55f419dba63b3f9ae75c125c",
+              "nonce": 0,
+              "num_tx": 1,
+              "previousblockhash": "3f3959b1f624e201e438650cdce8ff53332a3d440fb989b9dd60b07b3569c08f",
+              "size": 169,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699990001,
+              "tx": [
+                "2f7189170c87939e3983f69091d99a243f12a0c0a555a10f15ae82c36003a72f"
+              ],
+              "version": 536870912,
+              "versionHex": "20000000"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getrawtransaction",
+          "params": [
+            "2f7189170c87939e3983f69091d99a243f12a0c0a555a10f15ae82c36003a72f",
+            0
+          ],
+          "reply": {
+            "result": "02000000010000000000000000000000000000000000000000000000000000000000000000ffffffff03520101ffffffff0100f2052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+          },
+          "source": "[SRC] src/rpc/rawtransaction.cpp:53-194 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "22a1f819f24070a4383744dc7b9cd7301cf4a61b55f419dba63b3f9ae75c125c",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "0000000000000000000000000000000000000000000000000000000000000008",
+              "confirmations": 101,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "22a1f819f24070a4383744dc7b9cd7301cf4a61b55f419dba63b3f9ae75c125c",
+              "height": 3,
+              "mediantime": 1699990001,
+              "merkleroot": "db5c731c774d0b0c15cb9281ae182db6169a87460f542dc9da79380704716d1d",
+              "nextblockhash": "701e843dc855b732c28d1e2199f1ec5b3d4510f5d7d94579ac01692133371235",
+              "nonce": 0,
+              "num_tx": 1,
+              "previousblockhash": "6508925a3fa38c893db323bfe2d310b745faba8709e87ddae5284f439d583d0f",
+              "size": 169,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699990001,
+              "tx": [
+                "db5c731c774d0b0c15cb9281ae182db6169a87460f542dc9da79380704716d1d"
+              ],
+              "version": 536870912,
+              "versionHex": "20000000"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getrawtransaction",
+          "params": [
+            "db5c731c774d0b0c15cb9281ae182db6169a87460f542dc9da79380704716d1d",
+            0
+          ],
+          "reply": {
+            "result": "02000000010000000000000000000000000000000000000000000000000000000000000000ffffffff03530101ffffffff0100f2052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+          },
+          "source": "[SRC] src/rpc/rawtransaction.cpp:53-194 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "701e843dc855b732c28d1e2199f1ec5b3d4510f5d7d94579ac01692133371235",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "000000000000000000000000000000000000000000000000000000000000000a",
+              "confirmations": 100,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "701e843dc855b732c28d1e2199f1ec5b3d4510f5d7d94579ac01692133371235",
+              "height": 4,
+              "mediantime": 1699990001,
+              "merkleroot": "44cfe0b1be55fdd4e2d989c8d32ecb3b2a6a4a55b5c8dedb6c3af080d2ecd774",
+              "nextblockhash": "5a3bb814e5573a28b7f470eca916a99fb482f870081311d58b17f01d238c8d93",
+              "nonce": 1,
+              "num_tx": 1,
+              "previousblockhash": "22a1f819f24070a4383744dc7b9cd7301cf4a61b55f419dba63b3f9ae75c125c",
+              "size": 169,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699990002,
+              "tx": [
+                "44cfe0b1be55fdd4e2d989c8d32ecb3b2a6a4a55b5c8dedb6c3af080d2ecd774"
+              ],
+              "version": 536870912,
+              "versionHex": "20000000"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getrawtransaction",
+          "params": [
+            "44cfe0b1be55fdd4e2d989c8d32ecb3b2a6a4a55b5c8dedb6c3af080d2ecd774",
+            0
+          ],
+          "reply": {
+            "result": "02000000010000000000000000000000000000000000000000000000000000000000000000ffffffff03540101ffffffff0100f2052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+          },
+          "source": "[SRC] src/rpc/rawtransaction.cpp:53-194 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "setmocktime",
+          "params": [
+            1699999000
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getbestblockhash",
+          "params": [],
+          "reply": {
+            "result": "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627"
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "00000000000000000000000000000000000000000000000000000000000000d0",
+              "confirmations": 1,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627",
+              "height": 103,
+              "mediantime": 1699990018,
+              "merkleroot": "00804410d423662ff0a8eb3f1358f231f650ce2c0a45859439543639ec86c5ad",
+              "nonce": 4,
+              "num_tx": 1,
+              "previousblockhash": "04df6737e9f59d312546e30d22e08781ea028f2fbc68be33d29f104ff96a821d",
+              "size": 170,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699990018,
+              "tx": [
+                "00804410d423662ff0a8eb3f1358f231f650ce2c0a45859439543639ec86c5ad"
+              ],
+              "version": 536870912,
+              "versionHex": "20000000"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "submitblock",
+          "params": [
+            "04000000270690294e887b2f4b55d9450f458c7c2f9496c683b91b2d10fc0630981a644f48623bc18140aedbb8bf91dc8c8f316e26fe63f5643d1713020e9ae22979d5b418ed5365ffff7f20000000000501000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0d01680a706565722d66756e6473ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000010000000187416f6e1c94be63770af8f30b05b87dfe8c51ba7253fe475f9fe7a562a952b6000000006a473044022021f856065f8eff662c8dafc5413c6d156da41c77a84f18694ab731730405470b02207b30b78cc8bae3f58f983faeb56b82139322877d896274ceb718ecdee29e7f39412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a08601000000000001510000000001000000012fa70360c382ae150fa155a5c0a0123f249ad99190f683399e93870c1789712f000000006b483045022100e5654e83ed08360ed417c2cfadddeceb030c04c0c6355c253df9cad98f93d6790220525b9c4c27332aacaba170a67dbb84c700e8fd1a7c668a6d95f92a1c3f1a12ae412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a08601000000000001510000000001000000011d6d7104073879dac92d540f46879a16b62d18ae8192cb150c0b4d771c735cdb000000006b483045022100cb8efb5ebfc78792d30e1f129b4ab0be94efc0b97a0e24032d4d0a561149437d02204b0b54b0431543012aea45b23d7a4be025884e9fb6c3597006750ea22ef3cdd5412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a086010000000000015100000000010000000174d7ecd280f03a6cdbdec8b5554a6a2a3bcb2ed3c889d9e2d4fd55beb1e0cf44000000006a47304402203bfe0e28732e4b44966bc3293612aefb5b03c41a0ed3ac9e743e537a8c97960602205b84ca4a3b5003a440a9c5c0736b04508ea31066dd2cdfdfe80a151ae7a8615d412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff01a086010000000000015100000000"
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "setmocktime",
+          "params": [
+            1700000000
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getbestblockhash",
+          "params": [],
+          "reply": {
+            "result": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b"
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "00000000000000000000000000000000000000000000000000000000000000d2",
+              "confirmations": 1,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+              "height": 104,
+              "mediantime": 1699990018,
+              "merkleroot": "b4d57929e29a0e0213173d64f563fe266e318f8cdc91bfb8dbae4081c13b6248",
+              "nonce": 0,
+              "num_tx": 5,
+              "previousblockhash": "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627",
+              "size": 849,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699999000,
+              "tx": [
+                "1a520b91f4b58f8b281da69f494e3c808ef0ef82622a8570b096dd6f11434560",
+                "189a1e675e11c22426f471b834acdb5119981f123d2b3e313e2d9c838020cc57",
+                "71178a12bf10caf32b194d5336caecfbabd727eb3581cfe8b5d8f6163944a69a",
+                "e67b1b811ea7e3a9040b6745646ae9c6abdc93bb54da02b6835fc79ce39da5cc",
+                "b93cf9971a83d971a059daac2662e066d9434877a0de309c5b2d8d51fd4fb447"
+              ],
+              "version": 4,
+              "versionHex": "00000004"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "setmocktime",
+          "params": [
+            1700000000
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getbestblockhash",
+          "params": [],
+          "reply": {
+            "result": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b"
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+            1
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "00000000000000000000000000000000000000000000000000000000000000d2",
+              "confirmations": 1,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+              "height": 104,
+              "mediantime": 1699990018,
+              "merkleroot": "b4d57929e29a0e0213173d64f563fe266e318f8cdc91bfb8dbae4081c13b6248",
+              "nonce": 0,
+              "num_tx": 5,
+              "previousblockhash": "4f641a983006fc102d1bb983c696942f7c8c450f45d9554b2f7b884e29900627",
+              "size": 849,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1699999000,
+              "tx": [
+                "1a520b91f4b58f8b281da69f494e3c808ef0ef82622a8570b096dd6f11434560",
+                "189a1e675e11c22426f471b834acdb5119981f123d2b3e313e2d9c838020cc57",
+                "71178a12bf10caf32b194d5336caecfbabd727eb3581cfe8b5d8f6163944a69a",
+                "e67b1b811ea7e3a9040b6745646ae9c6abdc93bb54da02b6835fc79ce39da5cc",
+                "b93cf9971a83d971a059daac2662e066d9434877a0de309c5b2d8d51fd4fb447"
+              ],
+              "version": 4,
+              "versionHex": "00000004"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "submitblock",
+          "params": [
+            "040000003b6f88e45199f4a3e7a4e641c9496204c023ae289e647aa984966ecd1363d6594bc53824429b5355e41da7b759edae1c6ad56944b8c42edac44bf28c6fdb136500f15365ffff7f20000000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0169086163746976652d41ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+          ],
+          "reply": {
+            "result": null
+          },
+          "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getbestblockhash",
+          "params": [],
+          "reply": {
+            "result": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f"
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getchaintips",
+          "params": [],
+          "reply": {
+            "result": [
+              {
+                "branchlen": 0,
+                "hash": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+                "height": 105,
+                "status": "active"
+              },
+              {
+                "branchlen": 1,
+                "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+                "height": 105,
+                "status": "headers-only"
+              }
+            ]
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblockheader",
+          "params": [
+            "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+            true
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "00000000000000000000000000000000000000000000000000000000000000d4",
+              "confirmations": -1,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+              "height": 105,
+              "mediantime": 1699990018,
+              "merkleroot": "656a920a42068c23041e26dd9c21e6eab2d9db237dad45efba92d9ad1ba3b960",
+              "nonce": 1,
+              "previousblockhash": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+              "status": {
+                "data": false,
+                "disk meta": false,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": false,
+                "validity": "tree"
+              },
+              "time": 1700000001,
+              "version": 4,
+              "versionHex": "00000004"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblockheader",
+          "params": [
+            "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+            true
+          ],
+          "reply": {
+            "result": {
+              "bits": "207fffff",
+              "chainwork": "00000000000000000000000000000000000000000000000000000000000000d4",
+              "confirmations": 1,
+              "difficulty": 4.6565423739069247e-10,
+              "hash": "12dc8904f7ea9856a7d843918de6d34af8fe797a9121ee6f23658ae907427b0f",
+              "height": 105,
+              "mediantime": 1699990018,
+              "merkleroot": "6513db6f8cf24bc4da2ec4b84469d56a1caeed59b7a71de455539b422438c54b",
+              "nonce": 0,
+              "num_tx": 1,
+              "previousblockhash": "59d66313cd6e9684a97a649e28ae23c0046249c941e6a4e7a3f49951e4886f3b",
+              "size": 177,
+              "status": {
+                "data": true,
+                "disk meta": true,
+                "double spend": false,
+                "failed": false,
+                "parent failed": false,
+                "soft consensus frozen": false,
+                "soft reject": false,
+                "undo": true,
+                "validity": "scripts"
+              },
+              "time": 1700000000,
+              "version": 4,
+              "versionHex": "00000004"
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "getblock",
+          "params": [
+            "16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b",
+            1
+          ],
+          "reply": {
+            "error": {
+              "code": -1,
+              "message": "Block file 16cb3cc8707f10f3f9351eb9cb3b58b419301b006369f35bc318614de5b5c25b not available."
+            }
+          },
+          "source": "[SRC] src/rpc/blockchain.cpp:1108-1242 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        },
+        {
+          "method": "stop",
+          "params": [],
+          "reply": {
+            "result": "Bitcoin server stopping"
+          },
+          "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+        }
+      ],
+      "token": "measured agree: {\"bodyAbsent\":true,\"equalWork\":true,\"ignored\":true,\"notFailed\":true} [M] 2026-10-13 [X] docs/records/20261013-161120-s6-peer-66-chain-unrequested-equal-work-regtest-s3.md",
+      "verdict": "agree"
+    }
+  ],
+  "run_id": "s6-peer-66-chain-unrequested-equal-work-20261013-161120",
+  "runner_dirty": false,
+  "runner_sha256": "76250bc43339545e464fdb5bd1bcc70a9c2f3ce11927aca72c28f26cacf8f7e2",
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "started_utc": "2026-10-13T16:11:20Z",
+  "wall_seconds": 3.02468025
+}

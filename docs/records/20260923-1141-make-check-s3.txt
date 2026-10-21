@@ -1,0 +1,45 @@
+make check record (written by hand from the run's log, tools/check.sh had no writer yet; #43)
+commit: the working tree of S3 that landed as f02707d on 2026-09-23 (c5c68ef + the #29/#27 work; the run began 11:41 local = 15:41 UTC); after the spec leg passed the corpus/INDEX.md §4b reshuffle and make spec re-ran, specgen --check re-run by hand: OK (17 rules flagged)
+started: 2026-09-23 15:41 UTC; wall: 612s (10 min 12 s; zsh time: 203.93s user 209.72s system 67% cpu 10:12.20 total)
+host: the Studio (M1 Max, 32 GB, fifteen windows); load at start: 19.00 13.38 20.56; samples during the run: 78.59, 86.65, 34.68, 25.63; at the end: 5.82 35.58 38.29
+status: GREEN (exit 0); nineteen legs (the pins leg first; the eras leg of #20/#23 landed after this run)
+legs (the verdict lines, in order):
+  check-pins: GREEN (53 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  lean: build OK, sorry-free
+  axiom check: OK (123 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.27: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.3.27 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+  sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.27 ECDSA); 0 failures; negative control bit-flip fails on every entry
+  arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.27 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+  arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+  stackcheck: 262 engine cases; comparable 260: agree 260, mismatch 0, unimplemented 0; recorded (not counted) 2
+  seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and 
+  scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  txtests bitcoin-sv-v1.2.2-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+  txtests bitcoin-sv-v1.2.2-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+  flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  specgen --check: OK (117 files up to date; 17 rules flagged)
+  bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+  versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+  witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+  witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: ../corpus/witnesses/policy-defaults-large.jsonl absent (make policywitnesses regenerates it; its sha256 is in corpus/witnesses/policy-defaults-manifest.json): not counted
+  witnesscheck: 2 witness transactions decided under both nodes' derived parameters, 0 mismatches
+  bsvs --self-test
+  bsvs --self-test: GREEN
+  run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.3.27 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUEN
+  run_bsvrs --smoke: GREEN (10000 entries agree with their recorded bsv-rs verdicts)
+  run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.27 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERI
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.5.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.5.2 (docs/PROVENANCE.md §1a)); the spec at spec@c5c68ef (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.0s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@2.8.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 2.8.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@c5c68ef (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.9s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  make check: GREEN (stubs are listed above by name; a stub is not a pass)
+  make check  203.93s user 209.72s system 67% cpu 10:12.20 total

@@ -1,0 +1,18 @@
+{
+  "timestamp [M]": "2026-09-30T01:02:25.119654+00:00",
+  "draft_source [SRC]": "e39ba468c3c9bef42f6041509914767f81f34a79",
+  "documentation_corrections [LIT]": [
+    "Python prerequisite",
+    "bsv-rs recorded flag derivation qualified"
+  ],
+  "corpus_diff_exit [X]": 0,
+  "tracked_modified_paths_at_intake [LIT]": [
+    "harness/Cargo.toml",
+    "harness/README.md",
+    "harness/src/bin/run_engine.rs",
+    "harness/src/bin/run_svnode.rs",
+    "harness/src/flags_oracle.rs",
+    "harness/src/lib.rs"
+  ],
+  "tracked_modified_path_count_at_intake [D]": 6
+}

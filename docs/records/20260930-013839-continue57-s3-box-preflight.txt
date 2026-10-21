@@ -1,0 +1,10 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+System-wide memory free percentage: 89%
+21:19  up 5 days,  5:54, 3 users, load averages: 3.49 4.20 4.32
+total = 2048.00M  used = 1006.88M  free = 1041.12M  (encrypted)
+slot1: free
+slot2: free
+ [LIT]: absent
+[withheld at export: a sibling tree's line]
+box setup source [SRC]: d675b6fc88fabf4a0ad1de6d39bf516a974a3d0e
+box setup status [X]: ## HEAD (no branch)

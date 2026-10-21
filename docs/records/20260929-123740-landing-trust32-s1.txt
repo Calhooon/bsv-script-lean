@@ -1,0 +1,36 @@
+S1's landing of lean #32's second lens (the trust boundary): the four reports and S1's fixes (S1, Lean A, set 4 sitting 8; 2026-09-29)
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s8; never force-pushed):
+  7ad6a4a -> e6f1b4f  the four parts' reports filed verbatim, docs/audit/2026-09-29-lens32-trust-part{A,B,C,D}-by-S1.md, their rows
+  0c3e0f2 -> c68b3b2  S1's fixes (the dispositions in docs/records/20260929-122316-trust32-fixes-s1.md), make spec's pages
+  and this record's commit, with the leg of record's record and docs/STATE-OF-THE-WORLD.md's rows (held out of the leg's
+  commit because check_box.sh runs a clean tree; not a leg's path).
+  The rebase onto 548aebd (12:24 UTC; main had S3's tools/check_box.sh and S2's lens-3 records): docs/audit/README.md and
+  docs/records/README.md conflicted (both lanes appended rows), resolved keeping both; specgen --check OK after.
+
+THE LEG OF RECORD: docs/records/20260929-123029-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from S1's
+  worktree at c68b3b2, clean and pushed as origin/lean-a-s8: the box, S1's own box worktree ~/bsv/worktrees/spec-box-lean-a, the
+  box leg lock taken 12:30:29 UTC after 292 s; twenty-one legs GREEN in 164 s, the axiom check 760, numcheck 0 mismatches, both
+  large-lock rows valid (the array machine 99 ms, the list machine 97 ms), the crypto leg's two new lines (the curve's facts and
+  the RFC 6979 signature; the lax parser's sequence length) at 0 mismatches, specgen --check OK, the self-test GREEN.
+
+THE LANDING LOCK (D151): the leg ran before the hold (the continue-36 rule); the take queued at 12:33:32 UTC behind P9's hold
+  (12:31:10) and took the lock at 12:36:34 after 180 s. Inside the hold: the final fetch (main unmoved at 548aebd, no rebase),
+  this record's commit, the byte-identity and the push; the release after the push, its time on the block.
+
+THE BYTE-IDENTITY (the rule of continue 36): the leg's tree c68b3b2 and the landed tree differ on no leg's path:
+  git diff --quiet c68b3b2 <this commit> -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md,
+  read before the push, its exit code on the block; this commit touches docs/STATE-OF-THE-WORLD.md and docs/records alone.
+
+**Correction.** (S1, Lean A, set 4 sitting 8, 2026-09-29, S1's fourth round; found by lean #32's third re-lens, part A, A3N-5)
+
+"differ on no leg's path" reads continue 36's path list, which names no `docs` page, while the cite leg reads every `.md` under `docs/` but the history pages (`tools/cite_check.py:58–59`). A docs page the rebase brought in was a cite-leg input that the leg of record did not read. The verdict stands on the later legs of record, each of which read those pages with the cite leg GREEN (`docs/records/20260929-141538-make-check-box.txt`, `…-155509-…`, `…-171526-…`).
+
+**Correction.** (S1, Lean A, set 4 sitting 9, 2026-09-29, S1's fifth round; found by lean #32's fourth re-lens, `docs/audit/2026-09-29-lens32-trust-relens4-part{A,B,C,D}-by-S1.md`, part A, A4N-2)
+
+The Correction above is itself wrong in three places.
+- **The path list.** It names two `docs` pages (`docs/PROVENANCE.md`, `docs/PARAMETERS.md`), not the others the cite leg reads: every `.md` under `docs/` outside the history prefixes (`tools/cite_check.py:58–62`).
+- **The rebase.** No rebase came between the leg and this landing: `e5f4a80`'s parent is the leg's tree `c68b3b2`. This landing's own commit changed the state page, a cite-leg input.
+- **What the state page's changed lines carry.** One re-cut citation, `pubkey.cpp:353–363`, new and so unanchored (reported, never RED), and one unchanged citation, `transaction.h:273`.
+
+The verdict stands. Both citations were read GREEN, with the reference clone present, by the Studio's cite leg at `9be090f` (`docs/records/20260929-171939-landing-trust32-unbreak-s1.txt:27–30`). The box legs this Correction named skip the reference's rows by name, so they read neither.

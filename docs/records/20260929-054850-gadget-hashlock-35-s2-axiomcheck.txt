@@ -1,0 +1,10 @@
+-- #35 35a's worked example: BIP 199's hash-lock as a gadget triple (lean/BsvScript/Gadget/HashLock.lean)
+#print axioms BsvScript.Gadget.HashLock.run_sha256
+#print axioms BsvScript.Gadget.HashLock.run_push32
+#print axioms BsvScript.Gadget.HashLock.run_equalverify_same
+#print axioms BsvScript.Gadget.HashLock.framed_push32
+#print axioms BsvScript.Gadget.HashLock.framed_single
+#print axioms BsvScript.Gadget.HashLock.sha256_triple
+#print axioms BsvScript.Gadget.HashLock.push32_triple
+#print axioms BsvScript.Gadget.HashLock.equalverify_triple
+#print axioms BsvScript.Gadget.HashLock.hashLock_triple

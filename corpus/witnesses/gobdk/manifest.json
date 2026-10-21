@@ -1,0 +1,1525 @@
+{
+  "arith": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 692,
+      "spec-mempool": 692
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/arith/cases.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 692,
+    "file": "arith.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "code_notes": [],
+        "corpus": "../corpus/arith/cases.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 692,
+        "file": "arith.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "bytes": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 512,
+      "spec-mempool": 512
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/bytes/cases.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 512,
+    "file": "bytes.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "code_notes": [],
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 512,
+        "file": "bytes.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "crypto": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 84,
+      "spec-mempool": 84
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/crypto/cases.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 84,
+    "file": "crypto.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "code_notes": [],
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 84,
+        "file": "crypto.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "eras": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 74,
+      "spec-mempool": 74
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/eras/eras.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 74,
+    "file": "eras.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 74,
+          "spec-mempool": 74
+        },
+        "code_notes": [],
+        "corpus": "../corpus/eras/eras.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 74,
+        "file": "eras.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 0
+      },
+      {
+        "consensus": false,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ]
+  },
+  "flow": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 1094,
+      "spec-mempool": 1094
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/flow/flow.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 1094,
+    "file": "flow.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "code_notes": [],
+        "corpus": "../corpus/flow/flow.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 1094,
+        "file": "flow.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "gen": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 1099,
+      "spec-mempool": 1099
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "entries": 14,
+        "node": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "entries": 14,
+        "node": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/gen/gen.jsonl",
+    "decode_refusals": 0,
+    "engine": "gobdk@4eab3acd",
+    "entries": 1157,
+    "file": "gen.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1157,
+          "spec-mempool": 1157
+        },
+        "code_notes": [],
+        "corpus": "../corpus/gen/gen.jsonl",
+        "decode_refusals": 0,
+        "engine": "gobdk@4eab3acd",
+        "entries": 1157,
+        "file": "gen.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@be4897c",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 58,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.v1.2.2-fold",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 58,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "splice.substr.int64-reader.v1.2.2-fold",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      }
+    ],
+    "sha256": "ac7eea9d8cd04921025b0488db66b3ec7b789b2c4e072e2f565637ba752dc44d",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 2,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ],
+    "sha256_private": "09dd8985f3521744a4835953b74d7a9113c614697cadaaa05f6865aa8144ef47",
+    "withheld_entries": 2,
+    "withheld_groups": {
+      "d8-node-team-discretion": 2
+    },
+    "withheld_group": "d8-node-team-discretion"
+  },
+  "seed": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 10000,
+      "spec-mempool": 10000
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/seed/seed.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 10000,
+    "file": "seed.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "code_notes": [],
+        "corpus": "../corpus/seed/seed.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 10000,
+        "file": "seed.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "stack": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 262,
+      "spec-mempool": 262
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/stack/cases.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 262,
+    "file": "stack.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "code_notes": [],
+        "corpus": "../corpus/stack/cases.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 262,
+        "file": "stack.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "tx": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 40,
+      "spec-mempool": 40
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/tx/tx.jsonl",
+    "engine": "gobdk@4eab3acd",
+    "entries": 40,
+    "file": "tx.jsonl",
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gobdk-runner (bsv-script-lean #28) gobdk 4eab3acd (module github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260918043653-4eab3acdbbb9 built from the local clone ~/bsv/targets/spec-54/bdk/module/gobdk; libGoBDK: bitcoin-sv 1.2.2 v1.2.2 879fc8b42 2026-04-28 07:23:20 +0100; BDK 1.3.0 source master c10755d 2026-09-18 10:30:27 +0700 built 18-09-2026 04:29:42; Go binding 1.3.2; CGO BDK MacOS ARM64; chain \"main\") (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 40,
+          "spec-mempool": 40
+        },
+        "code_notes": [],
+        "corpus": "../corpus/tx/tx.jsonl",
+        "engine": "gobdk@4eab3acd",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "generated": "2026-09-23",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@4ba58e1",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 869935
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 869935
+      }
+    ]
+  }
+}

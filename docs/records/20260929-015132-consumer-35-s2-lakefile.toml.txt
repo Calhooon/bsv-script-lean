@@ -1,0 +1,14 @@
+# A scratch consumer of the spec (S2, #35 35a, 2026-09-29), outside the spec's tree: it requires the
+# package `bsvscript` (lean/ of Calgooon/bsv-script-lean) at a commit, as docs/DESIGN.md §12.1 says a
+# sibling does, and builds one module that uses the interface.
+name = "consumer"
+defaultTargets = ["Consumer"]
+
+[[require]]
+name = "bsvscript"
+git = "https://github.com/Calgooon/bsv-script-lean"
+rev = "b3406bf96d4b5e75f35999f61e950eeed925cf55"
+subDir = "lean"
+
+[[lean_lib]]
+name = "Consumer"

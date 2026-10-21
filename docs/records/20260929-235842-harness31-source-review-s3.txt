@@ -1,0 +1,37 @@
+[export: 5 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+# Source review [LIT] 2026-09-29T23:58:42.325895+00:00
+Model: Codex GPT-6.1-Sol. This is parsing and source review; no Rust or Lean build is run.
+Base commit: caeb866cd177eeb2fadd09d7d698420b4e25cf7b
+New module: shared CorpusInput loader, SpecLine/SpecVerdict, read_spec and spec_json.
+Owned adopters: run_engine and run_svnode. run_diff is unchanged in the worktree; its adoption is a patch for S2.
+The helper retains manifest selection, corpus hash comparison, blank-line handling and ID map overwrite semantics.
+Parse failures now name the input file and line. The drivers report them with an explicit error exit.
+No classification, reference reading or Lean semantics was changed by this factoring.
+The CLI rehearsal uses existing executables whose source pins were not verified. It does not validate this refactor.
+SDK prebuilt drivers checked here do not carry --words-from, so no SDK rehearsal was started.
+Full builds, Rust tests, the default build route and the independent stranger review remain NOT CHECKED.
+A search for the harness index also surfaced a closed state-page paragraph. It was not used, copied, folded or re-formed; no closed record or branch was opened. Subsequent reads were narrowed to permitted sites.
+The full citation scanner opens history records before applying its history filter. It was not invoked in this scope.
+Transcript:
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+/tmp/s3-c55-run-diff.rs: rustfmt parser exit 0 [X]
+Command: ['/usr/bin/env', '-u', 'BASH_ENV', '/bin/bash', '--noprofile', '--norc', '-n', 'harness/run']
+Exit 0 [X]
+
+Command: ['git', 'diff', '--check']
+Exit 0 [X]
+
+Command: ['uptime']
+19:58  up 7 days, 3 hrs, 11 users, load averages: 2.37 2.91 3.92
+
+Command: ['sysctl', 'vm.swapusage']
+vm.swapusage: total = 4096.00M  used = 2423.25M  free = 1672.75M  (encrypted)
+
+
+Source draft: `origin/s3-c55-harness` at `20ff1d91726bccd690db3ae055bb617aafefe4c4`, pushed; no build verdict for this tree. [LIT]
+
+Commit hook receipt: the inherited WINDOW=W0 tag refused S3-owned paths. The same pathspec commit passed with WINDOW=S3, under the existing ownership rules. [X]

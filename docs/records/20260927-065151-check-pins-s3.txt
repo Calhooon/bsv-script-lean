@@ -1,0 +1,81 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+# make check-pins on the Studio after the GoBDK shim's module pin and the driver hunk (S3, set 4 sitting 2, 2026-09-27 06:51 UTC; #28, S4b's ask A1): docs/PROVENANCE.md §1a gains gobdk.module / gobdk.pseudo_version / gobdk.sum / gobdk.gomod_sum (the pseudo-version Teranode v0.15.9's go.mod:12 requires, its go.sum:156–157's two sums) and tools/check_pins.py nine new sites (the shim's go.mod requirement and two go.sum sums; the pseudo-version naming gobdk.commit; Teranode's go.mod requirement and two sums at its tag; the built gobdk-runner's banner naming the module commit and the linked library's reference commit prefix, skipped by name where absent): the count moves from 64 (docs/records/20260927-063940-check-pins-s3.txt) to the figure below
+# commit: the working tree over 2d4ce51 (the commit that lands the GoBDK driver hunk carries this record); host: the Studio; command: make check-pins
+# uptime:  2:51  up 4 days,  9:53, 3 users, load averages: 5.20 6.41 5.31
+Sun Sep 27 06:51:51 UTC 2026
+== pins: tools/check_pins.py: docs/PROVENANCE.md §1a against every site (the toolchains, the engines, the manifests, --locked) ==
+  OK     lean/lean-toolchain                                                     leanprover/lean4:v4.33.0
+  OK     lean/lake-manifest.json mathlib rev                                     db584cd6d46c92f209a44c0f1c829460d327499d
+  OK     harness/rust-toolchain.toml channel                                     1.95.0
+  OK     rustc in use under harness/                                             rustc 1.95.0 (59807616e 2026-04-14)
+  OK     harness/Cargo.toml bsv-rs requirement                                   =0.3.28
+  OK     harness/Cargo.lock bsv-rs version                                       0.3.28
+  OK     harness/Cargo.lock bsv-rs checksum                                      dd7581645a93a0074bb90d7c49c361e0ca3a646b5efa91d1e6070ee113e1f4e8
+  OK     harness/src/lib.rs BSV_RS_VERSION                                       0.3.28
+  OK     harness/src/lib.rs BSV_RS_KEY                                           bsv-rs@0.3.28
+  OK     corpus/seed/manifest.json implementations[bsv-rs].version               0.3.28
+  OK     corpus/flow/manifest.json implementations[bsv-rs].version               0.3.28
+  OK     corpus/arith/cases-manifest.json implementations[bsv-rs].version        0.3.28
+  OK     corpus/stack/cases-manifest.json implementations[bsv-rs].version        0.3.28
+  OK     corpus/crypto/cases-manifest.json implementations[bsv-rs].version       0.3.28
+  OK     corpus/bytes/cases-manifest.json implementations[bsv-rs].version        0.3.28
+  OK     corpus/eras/manifest.json implementations[bsv-rs].version               0.3.28
+  OK     corpus/gen/manifest.json implementations[bsv-rs].version                0.3.28
+  OK     corpus/tx/manifest.json implementations[bsv-rs].version                 0.3.28
+  OK     corpus/witnesses/manifest.json [arith].bsv-rs                           0.3.28
+  OK     corpus/witnesses/manifest.json [crypto].bsv-rs                          0.3.28
+  OK     corpus/witnesses/manifest.json [eras].bsv-rs                            0.3.28
+  OK     corpus/witnesses/manifest.json [flow].bsv-rs                            0.3.28
+  OK     corpus/witnesses/manifest.json [gen].bsv-rs                             0.3.28
+  OK     corpus/witnesses/manifest.json [seed].bsv-rs                            0.3.28
+  OK     corpus/witnesses/manifest.json [stack].bsv-rs                           0.3.28
+  OK     corpus/witnesses/manifest.json [tx].bsv-rs                              0.3.28
+  OK     corpus/numbers/bsv-rs-0.3.28.jsonl                                      present
+  OK     corpus/arith/bsv-rs-0.3.28.jsonl                                        present
+  OK     corpus/sighash/bsv-rs-0.3.28.jsonl                                      present
+  OK     corpus/crypto/ecdsa-bsv-rs-0.3.28.jsonl                                 present
+  OK     tools/check.sh: bsv-rs vector versions named                            0.3.28
+  OK     Makefile: bsv-rs vector versions named                                  0.3.28
+  OK     tools/check.sh: every cargo invocation carries --locked                 yes
+  OK     Makefile: every cargo invocation carries --locked                       yes
+  OK     bsv-rs crate facts at the pin (harness/tests/crate_pins.rs)             ProtocolEra::mainnet None below 620538; block/standard words carry the block era's UTXO markers
+  OK     harness/src/engines.rs GO_SDK_VERSION                                   v1.5.2
+  OK     harness/src/engines.rs TS_SDK_VERSION                                   2.8.0
+  OK     harness/engines/go/go.mod go-sdk requirement                            v1.5.2
+  OK     harness/engines/go/go.sum module hash                                   github.com/bsv-blockchain/go-sdk v1.5.2 h1:CMRF9HcXQxvDgQK0n6wTy4/RyoGGL4HAjzHmCpqCgCs=
+  OK     harness/engines/go/go.sum go.mod hash                                   github.com/bsv-blockchain/go-sdk v1.5.2/go.mod h1:clGHSZoOwrnqJrzEw4VHYZk3JQXbrr+mnybCXZCdrt4=
+  OK     harness/engines/gobdk/go.mod gobdk requirement                          v1.2.5-0.20260526081552-cdfa7814ee5d
+  OK     harness/engines/gobdk/go.sum module hash                                github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d h1:bSTJ5f/DpTWPpnheayyZje7MK0bMSgB5xuWaxh/AOHY=
+  OK     harness/engines/gobdk/go.sum go.mod hash                                github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d/go.mod h1:XxBr/Y+e+pMw3+e2xYECvEayfZM3RX3n0jVvOGC3krE=
+  OK     gobdk.pseudo_version names gobdk.commit                                 cdfa7814ee5d
+  OK     go in use                                                               go version go1.27.0 darwin/arm64
+  OK     harness/engines/ts/package.json @bsv/sdk (exact)                        2.8.0
+  OK     harness/engines/ts/package-lock.json @bsv/sdk version                   2.8.0
+  OK     harness/engines/ts/package-lock.json @bsv/sdk integrity                 sha512-pXavnJa8F5ozKSOwVIphLZrTEJgEADlfj8Yu9CIOsdVC/X+CuGfHFwK9I5egr/EC1D2KCxmAbGls9erpc637Yw==
+[withheld at export: a sibling tree's line]
+  OK     ~/bsv/bitcoin-sv HEAD                                                   879fc8b42168dd0e608dafd51b39c6dabad37d4d
+  OK     ~/bsv/bitcoin-sv tag at HEAD                                            v1.2.2
+  OK     vendored script_tests.json == the pin's                                 a77f8b94412ef61e9ee59980ebc682a64212b47a16f06d87f809d91770ba496d
+  OK     vendored tx_valid.json == the pin's                                     20e42308ead38db645454c4def763288e8cef2e5c47a4d9088e53dc7fc01419d
+  OK     vendored tx_invalid.json == the pin's                                   536a533f00714374d15fb24f601b989a87f9447a7a414a6532380e41c09c4fbe
+  OK     vendored sighash.json == the pin's                                      9c1afcaf81e8482f818345efa8a3f0610f6541b975023b58550d50ad2a557f63
+  OK     ~/bsv/teranode v0.15.9                                                  04022a51db3a836ee2a4a4600903566ee4ccb607
+  OK     teranode v0.15.9 go.mod go-chaincfg requirement                         v1.5.8
+  OK     teranode v0.15.9 go.sum go-chaincfg module hash                         github.com/bsv-blockchain/go-chaincfg v1.5.8 h1:zhmi42r71mAqPChhSVggzzxaseTvLqC+zipyL2fAN0g=
+  OK     teranode v0.15.9 go.sum go-chaincfg go.mod hash                         github.com/bsv-blockchain/go-chaincfg v1.5.8/go.mod h1:n/Q8aGScTgydZ2Bsjfic7v8ulHBIpgI0WVyqE5mFMxU=
+  OK     teranode v0.15.9 go.mod gobdk requirement                               v1.2.5-0.20260526081552-cdfa7814ee5d
+  OK     teranode v0.15.9 go.sum gobdk module hash                               github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d h1:bSTJ5f/DpTWPpnheayyZje7MK0bMSgB5xuWaxh/AOHY=
+  OK     teranode v0.15.9 go.sum gobdk go.mod hash                               github.com/bitcoin-sv/bdk/module/gobdk v1.2.5-0.20260526081552-cdfa7814ee5d/go.mod h1:XxBr/Y+e+pMw3+e2xYECvEayfZM3RX3n0jVvOGC3krE=
+  OK     the built gobdk-runner's banner: the module commit                      gobdk cdfa7814
+  OK     the built gobdk-runner's banner: the linked library's reference commit  879fc8b42
+  OK     ~/bsv/go-chaincfg v1.5.8                                                d81fcaba4049af2dccb589c134fea89d6fd1f2f6
+  OK     ~/bsv/bdk HEAD                                                          cdfa7814ee5da7b899e7301f058710002baaea40
+  OK     ~/bsv/bsv-rs v0.3.28                                                    a97b9b6c8e530cd7dc6a75e6c14f3f7c9f4e5b64
+  OK     ~/bsv/go-sdk v1.5.2                                                     e533d90cdc04da65eba27c594a58791997f29b82
+  OK     ~/bsv/ts-stack has b3155fa2e                                            present
+  OK     ~/bsv/ts-stack packages/sdk/package.json at b3155fa2e                   2.8.0
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  OK     the built SV-node's version string                                      v1.2.2.0-g879fc8b42-dev
+check-pins: GREEN (73 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+exit: 0

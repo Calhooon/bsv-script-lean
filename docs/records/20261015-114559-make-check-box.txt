@@ -1,0 +1,12 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 0a803cd8 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20261015-114559 UTC; wall: 1s (0 min 1 s)
+host: box; load at start: 5.07 3.81 3.85; load at end: 5.07 3.81 3.85
+status: RED (exit 1)
+legs (the verdict lines, in order):
+  check-parameters: GREEN (17 inherited fields; 81 chain fields: 9 consensus / 72 policy including node settings; names, order, kinds, defaults, presence; 17 network fields / 4 networks / 68 cells; import direction)
+  chain lint: GREEN [X] (40 files, 0 clock, IO or network reads under lean/BsvChain; 0 network records or census defaults named by a definition outside Params.lean, 4 allowlisted with reasons)
+  check-pins: RED (7 drift, 6 skipped)
+[withheld at export: a sibling tree's line]
+  sample 11:45:59 UTC: load1 5.07; over 5% cpu: node 6% 0.2GB; node 52% 1.8GB; git 47% 0.3GB; other programs: 6 processes, 533% cpu; 

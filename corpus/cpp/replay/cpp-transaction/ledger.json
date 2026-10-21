@@ -1,0 +1,70 @@
+{
+  "entries": 273,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 165,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 2
+    },
+    "bsvrs_word_in_scope": 66,
+    "findings": [],
+    "observed": {
+      "agree": 167,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 167,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 167,
+  "source": "corpus/cpp/transaction_tests.jsonl",
+  "undecided": {
+    "a predicate (AreInputsStandard, layer policy): the drivers judge spends, and none has a hook that runs it": 1,
+    "a predicate (CScriptCheck, every input under each flag word, layer consensus): the drivers judge spends, and none has a hook that runs it": 1,
+    "a predicate (CheckRegularTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (IsDustReturnTxn, layer policy): the drivers judge spends, and none has a hook that runs it": 3,
+    "a predicate (IsFreeConsolidationTxn, layer policy): the drivers judge spends, and none has a hook that runs it": 10,
+    "a predicate (IsStandardTx, layer policy): the drivers judge spends, and none has a hook that runs it": 60,
+    "a predicate (SignSignature, every input in turn, layer both): the drivers judge spends, and none has a hook that runs it": 1,
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": 24,
+    "a predicate (Solver's type, as TxToJSON prints it, layer policy): the drivers judge spends, and none has a hook that runs it": 4
+  },
+  "undecided_ids": {
+    "a predicate (AreInputsStandard, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00003"
+    ],
+    "a predicate (CScriptCheck, every input under each flag word, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00005"
+    ],
+    "a predicate (CheckRegularTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00001..00002"
+    ],
+    "a predicate (IsDustReturnTxn, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00257..00259"
+    ],
+    "a predicate (IsFreeConsolidationTxn, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00260..00269"
+    ],
+    "a predicate (IsStandardTx, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00197..00256"
+    ],
+    "a predicate (SignSignature, every input in turn, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00004"
+    ],
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00006..00009",
+      "cpp-transaction-00040..00043",
+      "cpp-transaction-00075..00078",
+      "cpp-transaction-00109..00112",
+      "cpp-transaction-00144..00147",
+      "cpp-transaction-00163..00166"
+    ],
+    "a predicate (Solver's type, as TxToJSON prints it, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-transaction-00270..00273"
+    ]
+  }
+}

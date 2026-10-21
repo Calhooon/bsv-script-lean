@@ -1,0 +1,3476 @@
+{
+  "base_commit": "b7d28215e47aea7d39319847569f9015f9e3b953",
+  "counts": {
+    "depth": {
+      "agree": 16,
+      "diverge": 0,
+      "label": "[M]",
+      "lean_projection": "depth: GREEN [X] ([M] 17 derived rows; agree 17; failures 0; node column independently recorded)",
+      "pending": 0,
+      "realized": 16,
+      "rows": 17,
+      "unrealizable": 1,
+      "wall_seconds": 26.890959917
+    }
+  },
+  "datadir": "s6-73-20261014-013925",
+  "families": {
+    "depth": [
+      {
+        "expected": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "0",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2017,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18571\nport=18572\nexcessiveblocksize=1000001\nassumevalid=0\n",
+          "console": [
+            "2026-10-14 01:40:29 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:29 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd  height=102  log2_work=7.6865005  date=2023-11-14 22:15:02",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] ERROR: ConnectTip(): ConnectBlock 78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd failed (blk-bad-inputs, parallel script check failed (code 16))",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=485b17fd06d7555f9d76d67e1b37bcb0fa81f7468f882bf27b397cae25fac419  height=133  log2_work=8.0660892  date=2023-11-14 22:15:33",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "height": 2118,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": "inconclusive"
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-zero",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 5.1982421875
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "8ab757df61f18309b5454abfcc44261759c08bdc656ea1fc3ab9a575c09a5518",
+            "count": 2017,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "e94d78131417e4097d804bdab9727112db698bfe5f459918bba8587c1cc4fa35",
+            "count": 2017,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "submitblock",
+            "params": [
+              "0400000087fe08ef9fde98aa5205887a6711a52d716234bb61bae20de97b586a8af422712fc6114249dc2ef940d8bdaceb5cfaa1bd5c6bf51c2b779342cb5d2a1695a7cb47f95365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0247080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": "inconclusive"
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2118
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 2018,
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "invalid"
+                },
+                {
+                  "branchlen": 0,
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": -1,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": true,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": false,
+                  "validity": "transactions"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:38Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:33Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-zero-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "badBlockActive": true,
+          "badOutputUnspent": true,
+          "sideTipStatus": "active",
+          "tip": "F"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2017,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18571\nport=18572\nexcessiveblocksize=1000001\nassumevalid=5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7\n",
+          "console": [
+            "2026-10-14 01:40:33 [main] Assuming ancestors of block 5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7 have valid signatures.",
+            "2026-10-14 01:40:33 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000"
+          ],
+          "height": 2119,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": null
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-buried",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": true,
+          "badOutputUnspent": true,
+          "sideTipStatus": "active",
+          "tip": "F"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 5.1982421875
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "8ab757df61f18309b5454abfcc44261759c08bdc656ea1fc3ab9a575c09a5518",
+            "count": 2017,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "e94d78131417e4097d804bdab9727112db698bfe5f459918bba8587c1cc4fa35",
+            "count": 2017,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "submitblock",
+            "params": [
+              "0400000087fe08ef9fde98aa5205887a6711a52d716234bb61bae20de97b586a8af422712fc6114249dc2ef940d8bdaceb5cfaa1bd5c6bf51c2b779342cb5d2a1695a7cb47f95365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0247080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2119
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 2017,
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "valid-fork"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": 2018,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nextblockhash": "4eb7aee9a2f175aebfb9625007930314e314b88bef0084c205c08b14be3c2296",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": false,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": true,
+                  "validity": "scripts"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": {
+                "bestblock": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                "coinbase": false,
+                "confirmations": 2018,
+                "confiscation": false,
+                "scriptPubKey": {
+                  "addresses": [
+                    "n3T3a2w9EpLBa5S3hGYwYFzHNmyioCmTRX"
+                  ],
+                  "asm": "OP_DUP OP_HASH160 f09581d66893f0fddad00184dea48c5883179754 OP_EQUALVERIFY OP_CHECKSIG",
+                  "hex": "76a914f09581d66893f0fddad00184dea48c588317975488ac",
+                  "reqSigs": 1,
+                  "type": "pubkeyhash"
+                },
+                "value": 49.99997999
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:39Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": true,
+                  "numberofdisconnectedblocks": 2017,
+                  "oldtip": {
+                    "blocktime": "2023-11-14T22:48:38Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                    "height": 2118,
+                    "status": "valid-fork"
+                  }
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:37Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-buried-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2016,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nassumevalid=7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87\n",
+          "console": [
+            "2026-10-14 01:40:37 [main] Assuming ancestors of block 7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87 have valid signatures.",
+            "2026-10-14 01:40:37 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] InvalidChainFound: invalid block=78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd  height=102  log2_work=7.6865005  date=2023-11-14 22:15:02",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] ERROR: ConnectTip(): ConnectBlock 78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd failed (blk-bad-inputs, parallel script check failed (code 16))",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] InvalidChainFound: invalid block=485b17fd06d7555f9d76d67e1b37bcb0fa81f7468f882bf27b397cae25fac419  height=133  log2_work=8.0660892  date=2023-11-14 22:15:33",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "height": 2117,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": "inconclusive"
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-two-weeks-exact",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 6.38330078125
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "94787daed4dcccd84f5ba3e3cbbc02ed1353e981dc652d32e9f36d841f30e513",
+            "count": 2016,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2016
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "30526388f54f1db7db0852227f5afb0e64a0c295b8cd02cb2ba2c4b1207e67fe"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "48de0eefdd3faeca46498073bc006695ffd9fea36cea5915ff56797474132d29",
+            "count": 2016,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2016
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "63b9b788d31a4bb4921a9c7cf82e4eb1e15c8c15d3ceef47b1ed0cef324148f0"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "30526388f54f1db7db0852227f5afb0e64a0c295b8cd02cb2ba2c4b1207e67fe"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "submitblock",
+            "params": [
+              "04000000f0484132ef0cedb147efced3158c5ce1b14e2ef87c9c1a92b44b1ad388b7b9639caff073aef59ea4e41d6a65300a1d85f867e1e3d01f62d59e8fee2fd9a77b1f46f95365ffff7f20000000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0246080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": "inconclusive"
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "30526388f54f1db7db0852227f5afb0e64a0c295b8cd02cb2ba2c4b1207e67fe"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2117
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 2017,
+                  "hash": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87",
+                  "height": 2118,
+                  "status": "invalid"
+                },
+                {
+                  "branchlen": 0,
+                  "hash": "30526388f54f1db7db0852227f5afb0e64a0c295b8cd02cb2ba2c4b1207e67fe",
+                  "height": 2117,
+                  "status": "active"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": -1,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": true,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": false,
+                  "validity": "transactions"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:37Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "30526388f54f1db7db0852227f5afb0e64a0c295b8cd02cb2ba2c4b1207e67fe",
+                  "height": 2117,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:41Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-two-weeks-exact-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2017,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nassumevalid=697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07\n",
+          "console": [
+            "2026-10-14 01:40:41 [main] Assuming ancestors of block 697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07 have valid signatures.",
+            "2026-10-14 01:40:41 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd  height=102  log2_work=7.6865005  date=2023-11-14 22:15:02",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] ERROR: ConnectTip(): ConnectBlock 78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd failed (blk-bad-inputs, parallel script check failed (code 16))",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=485b17fd06d7555f9d76d67e1b37bcb0fa81f7468f882bf27b397cae25fac419  height=133  log2_work=8.0660892  date=2023-11-14 22:15:33",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "height": 2118,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": "inconclusive"
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-other-chain",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 6.1123046875
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "8ab757df61f18309b5454abfcc44261759c08bdc656ea1fc3ab9a575c09a5518",
+            "count": 2017,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "e94d78131417e4097d804bdab9727112db698bfe5f459918bba8587c1cc4fa35",
+            "count": 2017,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "submitblock",
+            "params": [
+              "0400000087fe08ef9fde98aa5205887a6711a52d716234bb61bae20de97b586a8af422712fc6114249dc2ef940d8bdaceb5cfaa1bd5c6bf51c2b779342cb5d2a1695a7cb47f95365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0247080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": "inconclusive"
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2118
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 2018,
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "invalid"
+                },
+                {
+                  "branchlen": 0,
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": -1,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": true,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": false,
+                  "validity": "transactions"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:38Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:45Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-other-chain-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "f3d3749a89d718cb0186897438062582000786bc3c5d0da206b6a77139062ed6",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2017,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nassumevalid=f3d3749a89d718cb0186897438062582000786bc3c5d0da206b6a77139062ed6\n",
+          "console": [
+            "2026-10-14 01:40:45 [main] Assuming ancestors of block f3d3749a89d718cb0186897438062582000786bc3c5d0da206b6a77139062ed6 have valid signatures.",
+            "2026-10-14 01:40:45 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker1-N-HTTPServer] InvalidChainFound: invalid block=78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd  height=102  log2_work=7.6865005  date=2023-11-14 22:15:02",
+            "2023-11-14 23:20:00 [worker1-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker1-N-HTTPServer] ERROR: ConnectTip(): ConnectBlock 78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd failed (blk-bad-inputs, parallel script check failed (code 16))",
+            "2023-11-14 23:20:00 [worker1-N-HTTPServer] InvalidChainFound: invalid block=485b17fd06d7555f9d76d67e1b37bcb0fa81f7468f882bf27b397cae25fac419  height=133  log2_work=8.0660892  date=2023-11-14 22:15:33",
+            "2023-11-14 23:20:00 [worker1-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "height": 2118,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": "inconclusive"
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-unknown-hash",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 5.94287109375
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "8ab757df61f18309b5454abfcc44261759c08bdc656ea1fc3ab9a575c09a5518",
+            "count": 2017,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "e94d78131417e4097d804bdab9727112db698bfe5f459918bba8587c1cc4fa35",
+            "count": 2017,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "submitblock",
+            "params": [
+              "0400000087fe08ef9fde98aa5205887a6711a52d716234bb61bae20de97b586a8af422712fc6114249dc2ef940d8bdaceb5cfaa1bd5c6bf51c2b779342cb5d2a1695a7cb47f95365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0247080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": "inconclusive"
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2118
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 2018,
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "invalid"
+                },
+                {
+                  "branchlen": 0,
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": -1,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": true,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": false,
+                  "validity": "transactions"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:38Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:49Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-unknown-hash-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "assumevalid": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+          "bad_block": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+          "bad_block_height": 102,
+          "bad_tx": {
+            "hex": "0100000001a06b8f2472af591fbd83b0c639ad861b3e4a514495e2e0745ba20877c71c0b83000000006b483045022100afba5357c7c272cb2a6f83556a0c37e5b9c25e7bfc201fecfbd49de5594c4f0f02202f68112a7b98588a006bac54622ad9d5e8712436004bcd255b4e0e1da1e0aad2412103786333c3f42e3dc609bc9c5179ba8df99d6d01800f9558ea277688a4dced4bceffffffff012fea052a010000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000",
+            "txid": "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a"
+          },
+          "blocks_above_bad": 2017,
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nassumevalid=5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7\nminimumchainwork=010000\n",
+          "console": [
+            "2026-10-14 01:40:49 [main] Assuming ancestors of block 5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7 have valid signatures.",
+            "2026-10-14 01:40:49 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000010000",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd  height=102  log2_work=7.6865005  date=2023-11-14 22:15:02",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] ERROR: ConnectTip(): ConnectBlock 78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd failed (blk-bad-inputs, parallel script check failed (code 16))",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] InvalidChainFound: invalid block=485b17fd06d7555f9d76d67e1b37bcb0fa81f7468f882bf27b397cae25fac419  height=133  log2_work=8.0660892  date=2023-11-14 22:15:33",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "height": 2118,
+          "label": "[M]",
+          "overtaking_submitblock": {
+            "result": "inconclusive"
+          },
+          "safemodeenabled": false
+        },
+        "id": "depth-assumevalid-work-floor",
+        "label": "[X]",
+        "observed": {
+          "badBlockActive": false,
+          "badOutputUnspent": false,
+          "sideTipStatus": "invalid",
+          "tip": "A"
+        },
+        "recipe": "Every block built from the regtest genesis block and handed over by submitblock on a fresh instance launched with the row's -assumevalid (and -minimumchainwork where named): 101 common blocks, the active chain, then the side chain whose opening block spends the height-1 coinbase with a signature that does not cover its output. The side chain is stored unconnected until its last block gives it more work; the reorganization then connects the bad block with the side tip as best header. Compare the tip, the bad block's membership of the active chain, its output's presence and the side tip's status.",
+        "rpc": [
+          {
+            "date": "2026-10-13",
+            "label": "[M]",
+            "studio_load_1m": 5.70703125
+          },
+          {
+            "earlier_launch_errors": [],
+            "startup_attempts": 1
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "setmocktime",
+            "params": [
+              1700004000
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/misc.cpp:980-1007 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "batch": "base",
+            "bytes_sha256": "d88813367abe9594bac2129f3369db4c2810ffefdbb159cc1a4bdd3e00b63f63",
+            "count": 101,
+            "from": "50128e1efdf5ce699199c800b64fec902f27ef4afecdd636ec771630e5192f8d",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 101
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443"
+          },
+          {
+            "batch": "active chain",
+            "bytes_sha256": "8ab757df61f18309b5454abfcc44261759c08bdc656ea1fc3ab9a575c09a5518",
+            "count": 2017,
+            "from": "7ad4c9f3c7b5dbb0fed699f04d43d375e4dfa6b64e96fba4d9ea0978dc3f8d98",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+          },
+          {
+            "batch": "side chain, stored",
+            "bytes_sha256": "e94d78131417e4097d804bdab9727112db698bfe5f459918bba8587c1cc4fa35",
+            "count": 2017,
+            "from": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2017
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "7122f48a6a587be90de2ba61bb3462712da511677a880552aa98de9fef08fe87"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "submitblock",
+            "params": [
+              "0400000087fe08ef9fde98aa5205887a6711a52d716234bb61bae20de97b586a8af422712fc6114249dc2ef940d8bdaceb5cfaa1bd5c6bf51c2b779342cb5d2a1695a7cb47f95365ffff7f20010000000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0b0247080773362d37332046ffffffff0117a80400000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "result": "inconclusive"
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 2118
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 2018,
+                  "hash": "5d62cc00e3673d0a86572acaed036442edab503780192e0cca540ecfe189aea7",
+                  "height": 2119,
+                  "status": "invalid"
+                },
+                {
+                  "branchlen": 0,
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getblockheader",
+            "params": [
+              "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+              true
+            ],
+            "reply": {
+              "result": {
+                "bits": "207fffff",
+                "chainwork": "00000000000000000000000000000000000000000000000000000000000000ce",
+                "confirmations": -1,
+                "difficulty": 4.6565423739069247e-10,
+                "hash": "78f1257cd29cb6106ba31b2c7dd90ff2e0173677e3a8c7618997cf6b33832dfd",
+                "height": 102,
+                "mediantime": 1700000097,
+                "merkleroot": "f7f1f02085b9949f506650679a9910efdae6c289c17a5f351f50545dbeefa9cc",
+                "nonce": 0,
+                "num_tx": 2,
+                "previousblockhash": "1c64d39d0e211a1300edd73612c9f08408a242c14a70bf973ee495ae2a767443",
+                "size": 368,
+                "status": {
+                  "data": true,
+                  "disk meta": true,
+                  "double spend": false,
+                  "failed": true,
+                  "parent failed": false,
+                  "soft consensus frozen": false,
+                  "soft reject": false,
+                  "undo": false,
+                  "validity": "transactions"
+                },
+                "time": 1700000102,
+                "version": 4,
+                "versionHex": "00000004"
+              }
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:884-1038 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "gettxout",
+            "params": [
+              "1cb3af049b7a13f1a0c12292c13868a01e65a464a5bd9e08ed8380841724be6a",
+              0
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:1923-2029 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:48:38Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "697e4cdbca01567eb6980616aaacfce3c9eeb1d929efdb7a9096ccfc554fdd07",
+                  "height": 2118,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:52Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-assumevalid-work-floor-0",
+            "method": "stop",
+            "params": [],
+            "reply": {
+              "result": "Bitcoin server stopping"
+            },
+            "source": "[SRC] src/rpc/server.cpp:265-287 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 2,
+              "hash": "01d286821a0651e08b9db8b48bd52461335689b49cea8d61aa2e1a2381b02bcd",
+              "height": 12,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": false,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-fork-short",
+        "label": "[X]",
+        "observed": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "1d21e91e64bf8bcc7ba57e04e9f7b464542ac5eb58df2a6b1accc1ffa28f515e",
+            "count": 6,
+            "from": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 6
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "7a762cb339a9b11704c3c0d07cec9f6fc1952a90942a97ca896b598bd5bcdf39",
+            "count": 2,
+            "from": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 2
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "01d286821a0651e08b9db8b48bd52461335689b49cea8d61aa2e1a2381b02bcd"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 2,
+                  "hash": "01d286821a0651e08b9db8b48bd52461335689b49cea8d61aa2e1a2381b02bcd",
+                  "height": 12,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [
+              {
+                "activechainfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                  "height": 11,
+                  "status": "active"
+                },
+                "forkfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                  "height": 11,
+                  "status": "valid-headers"
+                },
+                "lastcommonblock": {
+                  "blocktime": "2023-11-14T22:13:30Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                  "height": 10,
+                  "status": "active"
+                },
+                "tips": [
+                  {
+                    "blocktime": "2023-11-14T22:13:33Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                    "height": 13,
+                    "status": "valid-headers"
+                  }
+                ]
+              }
+            ],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": true,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-fork-at-length",
+        "label": "[X]",
+        "observed": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "6b1d310142e794ab4ea7ae0e5f58157159fc4c487886e763d7a66d78975fd408",
+            "count": 1,
+            "from": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 1
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [
+                  {
+                    "activechainfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                      "height": 11,
+                      "status": "active"
+                    },
+                    "forkfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                      "height": 11,
+                      "status": "valid-headers"
+                    },
+                    "lastcommonblock": {
+                      "blocktime": "2023-11-14T22:13:30Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                      "height": 10,
+                      "status": "active"
+                    },
+                    "tips": [
+                      {
+                        "blocktime": "2023-11-14T22:13:33Z",
+                        "firstseentime": "2023-11-14T23:20:00Z",
+                        "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                        "height": 13,
+                        "status": "valid-headers"
+                      }
+                    ]
+                  }
+                ],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": true,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "code": -2,
+          "message": "Safe mode: Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues. A large valid fork has been detected.",
+          "refused": true,
+          "safeCommandAnswered": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [
+              {
+                "activechainfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                  "height": 11,
+                  "status": "active"
+                },
+                "forkfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                  "height": 11,
+                  "status": "valid-headers"
+                },
+                "lastcommonblock": {
+                  "blocktime": "2023-11-14T22:13:30Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                  "height": 10,
+                  "status": "active"
+                },
+                "tips": [
+                  {
+                    "blocktime": "2023-11-14T22:13:33Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                    "height": 13,
+                    "status": "valid-headers"
+                  }
+                ]
+              }
+            ],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": true,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-rpc-refused",
+        "label": "[X]",
+        "observed": {
+          "code": -2,
+          "message": "Safe mode: Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues. A large valid fork has been detected.",
+          "refused": true,
+          "safeCommandAnswered": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [
+                  {
+                    "activechainfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                      "height": 11,
+                      "status": "active"
+                    },
+                    "forkfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                      "height": 11,
+                      "status": "valid-headers"
+                    },
+                    "lastcommonblock": {
+                      "blocktime": "2023-11-14T22:13:30Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                      "height": 10,
+                      "status": "active"
+                    },
+                    "tips": [
+                      {
+                        "blocktime": "2023-11-14T22:13:33Z",
+                        "firstseentime": "2023-11-14T23:20:00Z",
+                        "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                        "height": 13,
+                        "status": "valid-headers"
+                      }
+                    ]
+                  }
+                ],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": true,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "sendrawtransaction",
+            "params": [
+              "010000000173737373737373737373737373737373737373737373737373737373737373730000000000ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "error": {
+                "code": -2,
+                "message": "Safe mode: Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues. A large valid fork has been detected."
+              }
+            },
+            "source": "[SRC] src/rpc/rawtransaction.cpp:1530-1672 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 16
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": false,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": {
+            "result": null
+          }
+        },
+        "id": "depth-safemode-ignored",
+        "label": "[X]",
+        "observed": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "ignoresafemodeforblock",
+            "params": [
+              "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df"
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:12-51 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "code": null,
+          "message": null,
+          "refused": false,
+          "safeCommandAnswered": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": false,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-rpc-answered",
+        "label": "[X]",
+        "observed": {
+          "code": null,
+          "message": null,
+          "refused": false,
+          "safeCommandAnswered": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "sendrawtransaction",
+            "params": [
+              "010000000173737373737373737373737373737373737373737373737373737373737373730000000000ffffffff0100000000000000001976a914f09581d66893f0fddad00184dea48c588317975488ac00000000"
+            ],
+            "reply": {
+              "error": {
+                "code": -25,
+                "message": "Missing inputs"
+              }
+            },
+            "source": "[SRC] src/rpc/rawtransaction.cpp:1530-1672 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getblockcount",
+            "params": [],
+            "reply": {
+              "result": 16
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:205-218 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A16",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:36Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+              "height": 16,
+              "status": "active"
+            },
+            "forks": [
+              {
+                "activechainfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                  "height": 11,
+                  "status": "active"
+                },
+                "forkfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                  "height": 11,
+                  "status": "valid-headers"
+                },
+                "lastcommonblock": {
+                  "blocktime": "2023-11-14T22:13:30Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                  "height": 10,
+                  "status": "active"
+                },
+                "tips": [
+                  {
+                    "blocktime": "2023-11-14T22:13:33Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                    "height": 13,
+                    "status": "valid-headers"
+                  }
+                ]
+              }
+            ],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": true,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": {
+            "result": null
+          }
+        },
+        "id": "depth-safemode-reconsidered",
+        "label": "[X]",
+        "observed": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "reconsidersafemodeforblock",
+            "params": [
+              "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf"
+            ],
+            "reply": {
+              "result": null
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:53-95 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:36Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                "forks": [
+                  {
+                    "activechainfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                      "height": 11,
+                      "status": "active"
+                    },
+                    "forkfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                      "height": 11,
+                      "status": "valid-headers"
+                    },
+                    "lastcommonblock": {
+                      "blocktime": "2023-11-14T22:13:30Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                      "height": 10,
+                      "status": "active"
+                    },
+                    "tips": [
+                      {
+                        "blocktime": "2023-11-14T22:13:33Z",
+                        "firstseentime": "2023-11-14T23:20:00Z",
+                        "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                        "height": 13,
+                        "status": "valid-headers"
+                      }
+                    ]
+                  }
+                ],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": true,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "1e59b73d322574e963145914b8abdd369b4486e5276f0423f03567bae7ba233c",
+                  "height": 16,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A20",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+              "height": 20,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:40Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+              "height": 20,
+              "status": "active"
+            },
+            "forks": [
+              {
+                "activechainfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                  "height": 11,
+                  "status": "active"
+                },
+                "forkfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                  "height": 11,
+                  "status": "valid-headers"
+                },
+                "lastcommonblock": {
+                  "blocktime": "2023-11-14T22:13:30Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                  "height": 10,
+                  "status": "active"
+                },
+                "tips": [
+                  {
+                    "blocktime": "2023-11-14T22:13:33Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                    "height": 13,
+                    "status": "valid-headers"
+                  }
+                ]
+              }
+            ],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": true,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-distance-at-setting",
+        "label": "[X]",
+        "observed": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F13"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "62d2ffa6600d37482d8694f7c71b3200d324149225e7bdfc936302b28c5a1488",
+            "count": 4,
+            "from": "3d2eddd6c4f9564ce421978e9cc157ea11f44d2d7e6996be74b80e3a63348594",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 4
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99"
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:40Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+                  "height": 20,
+                  "status": "active"
+                },
+                "forks": [
+                  {
+                    "activechainfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                      "height": 11,
+                      "status": "active"
+                    },
+                    "forkfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                      "height": 11,
+                      "status": "valid-headers"
+                    },
+                    "lastcommonblock": {
+                      "blocktime": "2023-11-14T22:13:30Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                      "height": 10,
+                      "status": "active"
+                    },
+                    "tips": [
+                      {
+                        "blocktime": "2023-11-14T22:13:33Z",
+                        "firstseentime": "2023-11-14T23:20:00Z",
+                        "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                        "height": 13,
+                        "status": "valid-headers"
+                      }
+                    ]
+                  }
+                ],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": true,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+                  "height": 20,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A21",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b",
+              "height": 21,
+              "status": "active"
+            },
+            {
+              "branchlen": 3,
+              "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+              "height": 13,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=10\nsafemodeminforklength=3\nsafemodeminblockdifference=-50\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker3-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE",
+            "2023-11-14 23:20:00 [worker2-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:41Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b",
+              "height": 21,
+              "status": "active"
+            },
+            "forks": [],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": false,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-distance-over-setting",
+        "label": "[X]",
+        "observed": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "1c19c63174da93132265181d4779c9625961851a2e45c01dae874885ab2555dc",
+            "count": 1,
+            "from": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 1
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b"
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:41Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b",
+                  "height": 21,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-length-distance-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "550fe07da1373b729bbb9bcf80b50bb27240004b4b4e989fca888a3358e81b7b",
+                  "height": 21,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 3,
+                  "hash": "1bf630e4221b620547a3af1781f5faeb063ece8a7606852efa78000916a034bf",
+                  "height": 13,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F14"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A19",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403",
+              "height": 19,
+              "status": "active"
+            },
+            {
+              "branchlen": 4,
+              "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+              "height": 14,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=1000\nsafemodeminforklength=3\nsafemodeminblockdifference=-5\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to VALID"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:39Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403",
+              "height": 19,
+              "status": "active"
+            },
+            "forks": [
+              {
+                "activechainfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                  "height": 11,
+                  "status": "active"
+                },
+                "forkfirstblock": {
+                  "blocktime": "2023-11-14T22:13:31Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                  "height": 11,
+                  "status": "valid-headers"
+                },
+                "lastcommonblock": {
+                  "blocktime": "2023-11-14T22:13:30Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                  "height": 10,
+                  "status": "active"
+                },
+                "tips": [
+                  {
+                    "blocktime": "2023-11-14T22:13:34Z",
+                    "firstseentime": "2023-11-14T23:20:00Z",
+                    "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+                    "height": 14,
+                    "status": "valid-headers"
+                  }
+                ]
+              }
+            ],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": true,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-work-at-setting",
+        "label": "[X]",
+        "observed": {
+          "forks": [
+            {
+              "base": "F11",
+              "lastCommon": "C10",
+              "tips": [
+                "F14"
+              ]
+            }
+          ],
+          "safemodeenabled": true
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "5bcb318eb26f9a3d4361f63b51e0ed2fed9fb8dcf363705434448dec4d73374d",
+            "count": 9,
+            "from": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 9
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403"
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "1deee275f84fae105f5bab6efd8c0d0610c35d9b090468da9ae7a7d2fd61b887",
+            "count": 4,
+            "from": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "\"inconclusive\"": 4
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:39Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403",
+                  "height": 19,
+                  "status": "active"
+                },
+                "forks": [
+                  {
+                    "activechainfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "52b1bd74e63b76b26d935977d11d86528115c16d1f59f0e0f24c2040e96f5de5",
+                      "height": 11,
+                      "status": "active"
+                    },
+                    "forkfirstblock": {
+                      "blocktime": "2023-11-14T22:13:31Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "02d54066e288d194b2d4918f1f33f644a46d83d9637e54de077b1642426bb1df",
+                      "height": 11,
+                      "status": "valid-headers"
+                    },
+                    "lastcommonblock": {
+                      "blocktime": "2023-11-14T22:13:30Z",
+                      "firstseentime": "2023-11-14T23:20:00Z",
+                      "hash": "3dcefaa695a06138e100feb59deafc370ed53d4fe163ced501ac4ab228442bb9",
+                      "height": 10,
+                      "status": "active"
+                    },
+                    "tips": [
+                      {
+                        "blocktime": "2023-11-14T22:13:34Z",
+                        "firstseentime": "2023-11-14T23:20:00Z",
+                        "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+                        "height": 14,
+                        "status": "valid-headers"
+                      }
+                    ]
+                  }
+                ],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": true,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "09357416215cc88fc2b39470e5048d1537771ffa743ffd0a7d61362a8c134403",
+                  "height": 19,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 4,
+                  "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+                  "height": 14,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "expected": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "expected_label": "[D]",
+        "fixtures": {
+          "active_tip": "A20",
+          "chaintips": [
+            {
+              "branchlen": 0,
+              "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+              "height": 20,
+              "status": "active"
+            },
+            {
+              "branchlen": 4,
+              "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+              "height": 14,
+              "status": "valid-headers"
+            }
+          ],
+          "conf": "# #66 isolated regtest profile; bitcoin-sv pin\n# 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [SRC].\n# Regtest and txindex: src/chainparams.cpp:1457-1523; src/init.cpp:617-620,3797-3800.\nregtest=1\ntxindex=1\n# Server and loopback binding: src/init.cpp:1342-1378; src/httpserver.cpp:220-245.\nserver=1\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n# Isolation: src/init.cpp:711-735,830-837,3688-3689,4120;\n# regtest has empty seeds: src/chainparams.cpp:1520-1523. No addnode/connect.\nlisten=0\ndnsseed=0\ndiscover=0\nupnp=0\n# Expiry witness: src/validation.cpp:853-856; debug category selection src/init.cpp:2288-2304.\n# Logging: src/init.cpp:2042,2288-2304,3507-3510. Console captured in the owned datadir.\ndebug=mempool\nprinttoconsole=1\nshrinkdebugfile=1\n# Required launch inputs: src/bitcoind.cpp:140-164. Size supplied per run.\nmaxstackmemoryusageconsensus=100000000\nminminingtxfee=0.00000500\n# Cookie authentication: src/httprpc.cpp:341-351. No credentials here.\nrpcport=18573\nport=18574\nexcessiveblocksize=1000001\nsafemodemaxforkdistance=1000\nsafemodeminforklength=3\nsafemodeminblockdifference=-5\n",
+          "console": [
+            "2026-10-14 01:40:53 [main] Validating signatures for all blocks.",
+            "2026-10-14 01:40:53 [main] Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to UNKNOWN",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to VALID",
+            "2023-11-14 23:20:00 [worker0-N-HTTPServer] WARNING: Safe mode level changed to NONE"
+          ],
+          "getsafemodeinfo": {
+            "activetip": {
+              "blocktime": "2023-11-14T22:13:40Z",
+              "firstseentime": "2023-11-14T23:20:00Z",
+              "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+              "height": 20,
+              "status": "active"
+            },
+            "forks": [],
+            "reorg": {
+              "happened": false,
+              "numberofdisconnectedblocks": 0,
+              "oldtip": null
+            },
+            "safemodeenabled": false,
+            "timeutc": "2026-10-14T01:40:53Z"
+          },
+          "label": "[M]",
+          "operator_reply": null
+        },
+        "id": "depth-safemode-work-under-setting",
+        "label": "[X]",
+        "observed": {
+          "forks": [],
+          "safemodeenabled": false
+        },
+        "recipe": "A fresh instance launched with the row's three safe-mode settings; every block built from the regtest genesis block and handed over by submitblock: the common blocks, the active chain to the row's height, the side chain's stored blocks. The rows of one instance run in file order and only extend the chains. Read getsafemodeinfo (the forks by block name), or for an RPC row send a command registered as unsafe and one registered as safe.",
+        "rpc": [
+          {
+            "batch": "active chain",
+            "bytes_sha256": "a8d2940b06e6b9870667eba657023212eeb919d509481d02b8fa718942dd6321",
+            "count": 1,
+            "from": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {
+              "null": 1
+            },
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99"
+          },
+          {
+            "batch": "side chain",
+            "bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "count": 0,
+            "from": null,
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "label": "[M]",
+            "method": "submitblock",
+            "replies": {},
+            "source": "[SRC] src/rpc/mining.cpp:916-952 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+            "to": null
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getsafemodeinfo",
+            "params": [],
+            "reply": {
+              "result": {
+                "activetip": {
+                  "blocktime": "2023-11-14T22:13:40Z",
+                  "firstseentime": "2023-11-14T23:20:00Z",
+                  "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+                  "height": 20,
+                  "status": "active"
+                },
+                "forks": [],
+                "reorg": {
+                  "happened": false,
+                  "numberofdisconnectedblocks": 0,
+                  "oldtip": null
+                },
+                "safemodeenabled": false,
+                "timeutc": "2026-10-14T01:40:53Z"
+              }
+            },
+            "source": "[SRC] src/rpc/safe_mode.cpp:97-196 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getbestblockhash",
+            "params": [],
+            "reply": {
+              "result": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99"
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:220-236 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          },
+          {
+            "instance_id": "s6-73-20261014-013925/depth-safemode-work-0",
+            "method": "getchaintips",
+            "params": [],
+            "reply": {
+              "result": [
+                {
+                  "branchlen": 0,
+                  "hash": "652311d6c751cba704f9b53590554e07a7630e058b3a56154d7b93c21cb65f99",
+                  "height": 20,
+                  "status": "active"
+                },
+                {
+                  "branchlen": 4,
+                  "hash": "0949f8d2b0ec52f9d3b8c790b72a8e08df4825b0b588f4e778ed09d19e670694",
+                  "height": 14,
+                  "status": "valid-headers"
+                }
+              ]
+            },
+            "source": "[SRC] src/rpc/blockchain.cpp:2497-2632 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+          }
+        ],
+        "verdict": "agree"
+      },
+      {
+        "id": "depth-checkpoint-mismatch",
+        "label": "[X]",
+        "unrealizable": "regtest's only checkpoint is its genesis block at height 0 and the table is compiled, with no launch input; no second header exists at height 0, since a header that is not the genesis block needs a known parent; src/chainparams.cpp:1530-1533; src/validation.cpp:5903-5930,6152-6177"
+      }
+    ]
+  },
+  "record": "docs/records/20261014-013925-s6-73-regtest-s3.md",
+  "run_id": "s6-73-20261014-013925",
+  "runner_sha256": "0904f8370e42398526f4a679934eb6a34f2938163e8dc4987413311840d2d523",
+  "scope": "#73 validation depth and safe mode; no other family replayed",
+  "source_pin": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+  "started_utc": "2026-10-14T01:39:25Z",
+  "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev",
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 88.28997875
+  }
+}

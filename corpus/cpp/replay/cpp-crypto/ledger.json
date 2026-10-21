@@ -1,0 +1,28 @@
+{
+  "entries": 31,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 3,
+  "not_replayable_ids": [
+    "cpp-crypto-00010",
+    "cpp-crypto-00020",
+    "cpp-crypto-00031"
+  ],
+  "projected": 0,
+  "source": "corpus/cpp/crypto_tests.jsonl",
+  "undecided": {
+    "a predicate (CRIPEMD160, layer consensus): the drivers judge spends, and none has a hook that runs it": 9,
+    "a predicate (CSHA1, layer consensus): the drivers judge spends, and none has a hook that runs it": 9,
+    "a predicate (CSHA256, layer consensus): the drivers judge spends, and none has a hook that runs it": 10
+  },
+  "undecided_ids": {
+    "a predicate (CRIPEMD160, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-crypto-00001..00009"
+    ],
+    "a predicate (CSHA1, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-crypto-00011..00019"
+    ],
+    "a predicate (CSHA256, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-crypto-00021..00030"
+    ]
+  }
+}

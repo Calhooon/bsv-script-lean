@@ -1,0 +1,3533 @@
+[export: 164 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  "record_base": "docs/records/20261012-013350-bump-044b-s3",
+  "main": "34e36b5fa84025bf244a49a556c278634d430a31",
+  "incoming": "ad4216120db0363a845fb9d34ae59c27ce9f8e38",
+  "rebased": "118d847f64cbb89d201ec68a639126f85ce9d104",
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked"
+      ],
+      "cwd": "harness",
+      "environment": {},
+      "start": "2026-10-12T01:33:50.527197+00:00",
+      "end": "2026-10-12T01:34:15.374472+00:00",
+      "load1": 6.63916015625,
+      "wall_seconds": 24.846297042095102,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/seed/seed.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:09.902359+00:00",
+      "end": "2026-10-12T01:36:10.172011+00:00",
+      "load1": 8.083984375,
+      "wall_seconds": 0.26910620799753815,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/seed",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:10.172251+00:00",
+      "end": "2026-10-12T01:36:10.619929+00:00",
+      "load1": 8.083984375,
+      "wall_seconds": 0.4469522079452872,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/seed/seed.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:10.620261+00:00",
+      "end": "2026-10-12T01:36:11.101337+00:00",
+      "load1": 8.083984375,
+      "wall_seconds": 0.4804668329888955,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/seed",
+        "--smoke"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:11.454153+00:00",
+      "end": "2026-10-12T01:36:11.615851+00:00",
+      "load1": 8.083984375,
+      "wall_seconds": 0.16106883296743035,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/arith/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.129895+00:00",
+      "end": "2026-10-12T01:36:34.137737+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.007376041961833835,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/arith",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.137956+00:00",
+      "end": "2026-10-12T01:36:34.157083+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.018515000003390014,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/arith/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.157392+00:00",
+      "end": "2026-10-12T01:36:34.176254+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.01835075009148568,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/bytes/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.201249+00:00",
+      "end": "2026-10-12T01:36:34.208643+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.00676179095171392,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/bytes",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.208958+00:00",
+      "end": "2026-10-12T01:36:34.226241+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.01676070794928819,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/bytes/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.226644+00:00",
+      "end": "2026-10-12T01:36:34.246433+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.019044165965169668,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.269917+00:00",
+      "end": "2026-10-12T01:36:34.275185+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.004736916976980865,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-bn_op",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.275412+00:00",
+      "end": "2026-10-12T01:36:34.284268+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.00842908292543143,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.284493+00:00",
+      "end": "2026-10-12T01:36:34.296500+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.01146449998486787,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.306963+00:00",
+      "end": "2026-10-12T01:36:34.311264+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.0038722079480066895,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-lrshiftnum",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.311490+00:00",
+      "end": "2026-10-12T01:36:34.316896+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.004870290984399617,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.317140+00:00",
+      "end": "2026-10-12T01:36:34.323884+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.006256583030335605,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.330382+00:00",
+      "end": "2026-10-12T01:36:34.334724+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.0036886249436065555,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-multisig",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.335093+00:00",
+      "end": "2026-10-12T01:36:34.340890+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.005067083053290844,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.341205+00:00",
+      "end": "2026-10-12T01:36:34.347607+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.005853542010299861,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:34.624269+00:00",
+      "end": "2026-10-12T01:36:35.341783+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 0.716764249955304,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-opcode",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:35.342086+00:00",
+      "end": "2026-10-12T01:36:38.802347+00:00",
+      "load1": 7.5185546875,
+      "wall_seconds": 3.459533957997337,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:38.802933+00:00",
+      "end": "2026-10-12T01:36:42.678163+00:00",
+      "load1": 7.95703125,
+      "wall_seconds": 3.874398584011942,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:50.988324+00:00",
+      "end": "2026-10-12T01:36:51.284146+00:00",
+      "load1": 9.19970703125,
+      "wall_seconds": 0.29510754195507616,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:51.284633+00:00",
+      "end": "2026-10-12T01:36:52.474024+00:00",
+      "load1": 9.19970703125,
+      "wall_seconds": 1.1886765419039875,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:52.474387+00:00",
+      "end": "2026-10-12T01:36:53.864731+00:00",
+      "load1": 9.19970703125,
+      "wall_seconds": 1.3895460829371586,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.832479+00:00",
+      "end": "2026-10-12T01:36:56.836756+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.0038055831100791693,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script_P2SH",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.837040+00:00",
+      "end": "2026-10-12T01:36:56.843376+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.005873417016118765,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.843665+00:00",
+      "end": "2026-10-12T01:36:56.850399+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.006198875023983419,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.856485+00:00",
+      "end": "2026-10-12T01:36:56.860566+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.0036379590164870024,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-sigopcount",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.860858+00:00",
+      "end": "2026-10-12T01:36:56.865333+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.00400104105938226,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.865607+00:00",
+      "end": "2026-10-12T01:36:56.870714+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.00466624996624887,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.874524+00:00",
+      "end": "2026-10-12T01:36:56.879039+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.004067749949172139,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-transaction",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.879585+00:00",
+      "end": "2026-10-12T01:36:56.894754+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.014616459026001394,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.895079+00:00",
+      "end": "2026-10-12T01:36:56.911031+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.015352832968346775,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.921926+00:00",
+      "end": "2026-10-12T01:36:56.930960+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.00848124991171062,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:56.931283+00:00",
+      "end": "2026-10-12T01:36:57.064933+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.13308749999850988,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.065279+00:00",
+      "end": "2026-10-12T01:36:57.197196+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.13126079097855836,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=102)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.249867+00:00",
+      "end": "2026-10-12T01:36:57.266473+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.015866749919950962,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.266809+00:00",
+      "end": "2026-10-12T01:36:57.543337+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.2759535409277305,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.543654+00:00",
+      "end": "2026-10-12T01:36:57.821750+00:00",
+      "load1": 8.943359375,
+      "wall_seconds": 0.27753137494437397,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=102,chronicle=102)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.945249+00:00",
+      "end": "2026-10-12T01:36:57.980242+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.034204750088974833,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:57.980732+00:00",
+      "end": "2026-10-12T01:36:58.555336+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.5736180419335142,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:58.555949+00:00",
+      "end": "2026-10-12T01:36:58.899128+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.3424017500365153,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.140820+00:00",
+      "end": "2026-10-12T01:36:59.166117+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.024596625007689,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.166650+00:00",
+      "end": "2026-10-12T01:36:59.256332+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.08889025007374585,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.256755+00:00",
+      "end": "2026-10-12T01:36:59.411904+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.15448695898521692,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=1,chronicle=103)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.630065+00:00",
+      "end": "2026-10-12T01:36:59.686906+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.0560153330443427,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.687482+00:00",
+      "end": "2026-10-12T01:36:59.872367+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.18408454197924584,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:36:59.872781+00:00",
+      "end": "2026-10-12T01:37:00.189893+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.31648012495134026,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=102,chronicle=1)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:00.590163+00:00",
+      "end": "2026-10-12T01:37:00.594537+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.00378174998331815,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:00.595121+00:00",
+      "end": "2026-10-12T01:37:00.599878+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.004146834020502865,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:00.600405+00:00",
+      "end": "2026-10-12T01:37:00.606091+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.004905750043690205,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-regtest(genesis=103,chronicle=103)"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:00.643944+00:00",
+      "end": "2026-10-12T01:37:00.739835+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.09502662508748472,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:00.740398+00:00",
+      "end": "2026-10-12T01:37:01.103193+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.36205354204867035,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:01.103721+00:00",
+      "end": "2026-10-12T01:37:01.536374+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.4318455419270322,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/crypto/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.510585+00:00",
+      "end": "2026-10-12T01:37:02.517144+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.0057627500500530005,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/crypto",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.517588+00:00",
+      "end": "2026-10-12T01:37:02.533345+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.015097207971848547,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/crypto/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.533771+00:00",
+      "end": "2026-10-12T01:37:02.552090+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.01760604092851281,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/eras/eras.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.559560+00:00",
+      "end": "2026-10-12T01:37:02.564718+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.0045570830116048455,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/eras",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.565160+00:00",
+      "end": "2026-10-12T01:37:02.573388+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.007603500038385391,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/eras/eras.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.573784+00:00",
+      "end": "2026-10-12T01:37:02.585706+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.01112458307761699,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/flow/flow.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.598208+00:00",
+      "end": "2026-10-12T01:37:02.609998+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.010804207995533943,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/flow",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.610686+00:00",
+      "end": "2026-10-12T01:37:02.643355+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.03180454205721617,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/flow/flow.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.643933+00:00",
+      "end": "2026-10-12T01:37:02.676964+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.0321859170217067,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/gen/gen.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.722684+00:00",
+      "end": "2026-10-12T01:37:02.736282+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.012873042025603354,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/gen",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.736844+00:00",
+      "end": "2026-10-12T01:37:02.845743+00:00",
+      "load1": 8.94775390625,
+      "wall_seconds": 0.10778370802290738,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/gen/gen.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:02.846477+00:00",
+      "end": "2026-10-12T01:37:02.960421+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.11307966592721641,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/million/witnesses.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.023051+00:00",
+      "end": "2026-10-12T01:37:03.028031+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.004343666951172054,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/million",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.028622+00:00",
+      "end": "2026-10-12T01:37:03.033345+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.0040991249261423945,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/million/witnesses.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.033789+00:00",
+      "end": "2026-10-12T01:37:03.039800+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.005337624927051365,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/road/road.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.062774+00:00",
+      "end": "2026-10-12T01:37:03.128909+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.06517224991694093,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/road",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.129512+00:00",
+      "end": "2026-10-12T01:37:03.457440+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.32697112497407943,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/road/road.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:03.458019+00:00",
+      "end": "2026-10-12T01:37:03.858862+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.39995629200711846,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/stack/cases.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.274851+00:00",
+      "end": "2026-10-12T01:37:04.281681+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.005997124942950904,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/stack",
+        "--manifest",
+        "cases-manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.282224+00:00",
+      "end": "2026-10-12T01:37:04.298691+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.015592874959111214,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/stack/cases.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.299187+00:00",
+      "end": "2026-10-12T01:37:04.314768+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.014793041977100074,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/spec_recorded",
+        "--corpus",
+        "../corpus/tx/tx.jsonl",
+        "--out",
+[withheld at export: a sibling tree's line]
+        "--config",
+        "sv-mainnet-default"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.344900+00:00",
+      "end": "2026-10-12T01:37:04.360260+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.01440820808056742,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_bsvrs",
+        "--corpus",
+        "../corpus/tx",
+        "--manifest",
+        "manifest.json",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.360895+00:00",
+      "end": "2026-10-12T01:37:04.535685+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.17388433299493045,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/run_diff",
+        "--corpus",
+        "../corpus/tx/tx.jsonl",
+        "--spec",
+[withheld at export: a sibling tree's line]
+        "--witnesses",
+        "../corpus/witnesses",
+        "--record"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:04.536526+00:00",
+      "end": "2026-10-12T01:37:04.720649+00:00",
+      "load1": 9.03173828125,
+      "wall_seconds": 0.18314720899797976,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "target/release/num_vectors",
+        "--count",
+        "1000"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:10.676367+00:00",
+      "end": "2026-10-12T01:37:10.772495+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 0.094827666063793,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+    },
+    {
+      "argv": [
+        "target/release/sighash_vectors",
+        "--count",
+        "500"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:10.787521+00:00",
+      "end": "2026-10-12T01:37:10.885005+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 0.09627895790617913,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+    },
+    {
+      "argv": [
+        "target/release/arith_vectors",
+        "--count",
+        "10000"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:10.896763+00:00",
+      "end": "2026-10-12T01:37:11.102097+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 0.20407700003124774,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+    },
+    {
+      "argv": [
+        "target/release/ecdsa_vectors",
+        "--count",
+        "200"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:11.124904+00:00",
+      "end": "2026-10-12T01:37:11.255661+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 0.1295831250026822,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+    },
+    {
+      "argv": [
+        "python3",
+[withheld at export: a sibling tree's line]
+        "share",
+[withheld at export: a sibling tree's line]
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:11.359440+00:00",
+      "end": "2026-10-12T01:37:11.430637+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 0.06941970903426409,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "lake",
+        "build",
+        "numcheck",
+        "sighashcheck",
+        "arithcheck",
+        "cryptocheck"
+      ],
+      "cwd": "lean",
+      "environment": {},
+      "start": "2026-10-12T01:37:11.474414+00:00",
+      "end": "2026-10-12T01:37:36.388465+00:00",
+      "load1": 9.42919921875,
+      "wall_seconds": 24.912319584051147,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "make",
+        "numcheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:36.425915+00:00",
+      "end": "2026-10-12T01:37:38.149545+00:00",
+      "load1": 10.388671875,
+      "wall_seconds": 1.7219662501011044,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "make",
+        "sighashcheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:38.186167+00:00",
+      "end": "2026-10-12T01:37:40.175145+00:00",
+      "load1": 10.357421875,
+      "wall_seconds": 1.9876327079255134,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "make",
+        "arithcheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:40.208915+00:00",
+      "end": "2026-10-12T01:37:42.202949+00:00",
+      "load1": 10.357421875,
+      "wall_seconds": 1.9923072499223053,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "make",
+        "cryptocheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:37:42.239057+00:00",
+      "end": "2026-10-12T01:37:47.038184+00:00",
+      "load1": 10.357421875,
+      "wall_seconds": 4.797624333994463,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "harness/target/release/rules_check"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:38:33.602037+00:00",
+      "end": "2026-10-12T01:38:40.938200+00:00",
+      "load1": 8.82275390625,
+      "wall_seconds": 7.33442283293698,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "python3",
+[withheld at export: a sibling tree's line]
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:39:37.143996+00:00",
+      "end": "2026-10-12T01:39:37.176602+00:00",
+      "load1": 7.13916015625,
+      "wall_seconds": 0.031058749998919666,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/conformance.py",
+        "--out",
+        "docs/CONFORMANCE-2026-09-27.md",
+        "--date",
+        "2026-09-27"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:39:37.206894+00:00",
+      "end": "2026-10-12T01:39:37.276926+00:00",
+      "load1": 7.13916015625,
+      "wall_seconds": 0.06878916698042303,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/specgen.py"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:39:37.306304+00:00",
+      "end": "2026-10-12T01:39:38.297465+00:00",
+      "load1": 7.13916015625,
+      "wall_seconds": 0.9899770839838311,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "make",
+        "check-pins"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:41:05.519497+00:00",
+      "end": "2026-10-12T01:41:06.129670+00:00",
+      "load1": 7.25146484375,
+      "wall_seconds": 0.6085795840481296,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+[withheld at export: a sibling tree's line]
+        "make",
+        "citecheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:41:06.174082+00:00",
+      "end": "2026-10-12T01:41:06.735941+00:00",
+      "load1": 7.25146484375,
+      "wall_seconds": 0.5601728330366313,
+      "exit": 2,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "python3",
+        "docs/records/20261012-013350-bump-044b-audit.py"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:41:30.232561+00:00",
+      "end": "2026-10-12T01:41:40.719986+00:00",
+      "load1": 6.55078125,
+      "wall_seconds": 10.485722042038105,
+      "exit": 0,
+[withheld at export: a sibling tree's line]
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/specgen.py",
+        "--check"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:41:40.749813+00:00",
+      "end": "2026-10-12T01:41:41.766257+00:00",
+      "load1": 6.47216796875,
+      "wall_seconds": 1.0149813749594614,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:41:41.794399+00:00",
+      "end": "2026-10-12T01:41:42.177430+00:00",
+      "load1": 6.47216796875,
+      "wall_seconds": 0.3817897909320891,
+      "exit": 2,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+[withheld at export: a sibling tree's line]
+        "make",
+        "citecheck"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:42:38.670021+00:00",
+      "end": "2026-10-12T01:42:39.217290+00:00",
+      "load1": 6.048828125,
+      "wall_seconds": 0.5456667919643223,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:43:51.374751+00:00",
+      "end": "2026-10-12T01:43:51.744248+00:00",
+      "load1": 5.1435546875,
+      "wall_seconds": 0.36781475006137043,
+      "exit": 0,
+      "stdout_file": null
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/conformance.py",
+        "--out",
+        "docs/CONFORMANCE-2026-09-27.md",
+        "--date",
+        "2026-09-27"
+      ],
+[withheld at export: a sibling tree's line]
+      "environment": {},
+      "start": "2026-10-12T01:46:00.620805+00:00",
+      "end": "2026-10-12T01:46:00.686032+00:00",
+      "load1": 4.6953125,
+      "wall_seconds": 0.06345670798327774,
+      "exit": 0,
+      "stdout_file": null
+    }
+  ],
+  "corpora": [
+    {
+      "corpus": "arith",
+      "file": "corpus/arith/cases.jsonl",
+      "manifest": "corpus/arith/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "ea87cb843dde04bdee411447c76966b05cdc5b15d279ab7cc4ce4866d3f9d49c",
+      "after_sha256": "3e278dd179c88fa4404bdb8c4921b7cbfd129b84db563a042de0e92b9491a261",
+      "stored_sha256": "3e278dd179c88fa4404bdb8c4921b7cbfd129b84db563a042de0e92b9491a261",
+      "before": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 692,
+        "agree_mempool": 692,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 692,
+      "go_sdk_objects": 1384,
+      "go_sdk_before_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+      "go_sdk_after_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 610,
+        "invalid": 82
+      }
+    },
+    {
+      "corpus": "bytes",
+      "file": "corpus/bytes/cases.jsonl",
+      "manifest": "corpus/bytes/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "5c47cbfc0cdd49272b38f45ff28332a9dcb6c25556b1ac82a55c9025a057f007",
+      "after_sha256": "8b541227ca9d30b311230173b7acdc0e31f5a2946f9c44454ff536bd8974c540",
+      "stored_sha256": "8b541227ca9d30b311230173b7acdc0e31f5a2946f9c44454ff536bd8974c540",
+      "before": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 512,
+        "agree_mempool": 512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 512,
+      "go_sdk_objects": 1024,
+      "go_sdk_before_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+      "go_sdk_after_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 363,
+        "valid": 149
+      }
+    },
+    {
+      "corpus": "cpp-bn_op",
+      "file": "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-bn_op/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "564a73a7f41e7a534b1f72bb551a0e96b02379d6a58bde4e91dba43f37bf4e4c",
+      "after_sha256": "46a2ff8dd682ad579520aec789dd71078d5649993b9429f0db73d3b1a98d034d",
+      "stored_sha256": "46a2ff8dd682ad579520aec789dd71078d5649993b9429f0db73d3b1a98d034d",
+      "before": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 75,
+        "agree_mempool": 170,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 95
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 95,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 170,
+      "go_sdk_objects": 340,
+      "go_sdk_before_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+      "go_sdk_after_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 162,
+        "valid": 8
+      }
+    },
+    {
+      "corpus": "cpp-lrshiftnum",
+      "file": "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "2704bfc99cc9a122ea03dce4deee5ad2f08b849f1105c9b7281d05ebbb0b69a7",
+      "after_sha256": "aceb7edd461d6b051e7a55b73c432b93f8eade5a2a39ed7e1d3a651844df9800",
+      "stored_sha256": "aceb7edd461d6b051e7a55b73c432b93f8eade5a2a39ed7e1d3a651844df9800",
+      "before": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 13,
+        "agree_mempool": 32,
+        "undecided": 4,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 23
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 23,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 36,
+      "go_sdk_objects": 72,
+      "go_sdk_before_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+      "go_sdk_after_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 17,
+        "valid": 19
+      }
+    },
+    {
+      "corpus": "cpp-multisig",
+      "file": "corpus/cpp/replay/cpp-multisig/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-multisig/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "9ae3f684889fc874e73a187f42593f74115295beef08122211956b51e0b11577",
+      "after_sha256": "0ec2e48737469f563fa64740b91698ab9db4141b48adeafe18ae99cecb9c4be3",
+      "stored_sha256": "0ec2e48737469f563fa64740b91698ab9db4141b48adeafe18ae99cecb9c4be3",
+      "before": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 24,
+        "agree_mempool": 0,
+        "undecided": 30,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 6,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 30,
+      "go_sdk_objects": 60,
+      "go_sdk_before_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+      "go_sdk_after_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 30
+      }
+    },
+    {
+      "corpus": "cpp-opcode",
+      "file": "corpus/cpp/replay/cpp-opcode/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-opcode/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "2e1f5fca8607946ebc9adb7bc68e25abeee68e3d23778f3527e98c4dd121971f",
+      "after_sha256": "653762870fd6616ddb9f9fcc5932fd35d02e74c92ced9e7dfc4e22a40c3773de",
+      "stored_sha256": "dee0cd86ea640df2c050d52617e917fccf218f87d809a6b89c7ca1339aafe892",
+      "before": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 67061,
+        "agree_mempool": 123,
+        "undecided": 144201,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 77263
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 77263,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 144324,
+      "go_sdk_objects": 288648,
+      "go_sdk_before_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+      "go_sdk_after_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 66588,
+        "valid": 77736
+      }
+    },
+    {
+      "corpus": "cpp-script",
+      "file": "corpus/cpp/replay/cpp-script/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-script/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "631ff0d4ceee11f40490b6f78b393bfde56fda4b96428648be864f81a336c6a0",
+      "after_sha256": "e16fc8c477cf16bebbb8b0c4f8d87f6da726894844e2d46a098d04e02c64fec9",
+      "stored_sha256": "53745ac35b04482e977d43e1210d5876ab2ed95573b9fe285facdda090be3992",
+      "before": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 357,
+        "agree_mempool": 134,
+        "undecided": 67857,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 67634
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 67634,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 67991,
+      "go_sdk_objects": 135982,
+      "go_sdk_before_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+      "go_sdk_after_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 67831,
+        "valid": 160
+      }
+    },
+    {
+      "corpus": "cpp-script_P2SH",
+      "file": "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "5bf10ea8d4950444ecb0f7a05ee9b39ec789bceea56541ba228fab6cacfa8482",
+      "after_sha256": "fb61a6b6b2d12228f0de3eeca9236ad0a5598baa35c48454d9c0bab69394a94b",
+      "stored_sha256": "fb61a6b6b2d12228f0de3eeca9236ad0a5598baa35c48454d9c0bab69394a94b",
+      "before": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 56,
+        "agree_mempool": 0,
+        "undecided": 64,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 8
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 8,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 64,
+      "go_sdk_objects": 128,
+      "go_sdk_before_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+      "go_sdk_after_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 8,
+        "invalid": 56
+      }
+    },
+    {
+      "corpus": "cpp-sigopcount",
+      "file": "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-sigopcount/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "9e4f3d13ccf4ad5b86dfbef1ecfaa03670f6f79f0ebe60d57e527fdad08d8435",
+      "after_sha256": "79afca2e46271c1dee084df77045e7fd1449f6d727a9d25769097e6461b9e73b",
+      "stored_sha256": "79afca2e46271c1dee084df77045e7fd1449f6d727a9d25769097e6461b9e73b",
+      "before": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 6,
+        "agree_mempool": 2,
+        "undecided": 4,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 6,
+      "go_sdk_objects": 12,
+      "go_sdk_before_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+      "go_sdk_after_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 6
+      }
+    },
+    {
+      "corpus": "cpp-transaction",
+      "file": "corpus/cpp/replay/cpp-transaction/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-transaction/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "07707c79964ff957dbbc148bf64144e6d7b6df7730a9044147bf712092c2fffe",
+      "after_sha256": "118f3b1144c8d6433078b3deec41da6c6ecbe64f90ed4685b69b01d2206db12f",
+      "stored_sha256": "118f3b1144c8d6433078b3deec41da6c6ecbe64f90ed4685b69b01d2206db12f",
+      "before": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 108,
+        "agree_mempool": 66,
+        "undecided": 101,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 59
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 59,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 167,
+      "go_sdk_objects": 334,
+      "go_sdk_before_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+      "go_sdk_after_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 35,
+        "invalid": 132
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "4d4a587ae59f1bf07f9cd2ec72e782425c9330522663dee7d2dab26a8875e742",
+      "after_sha256": "9abd56367742f2df0a96d9d50d7a93e288c008a6ac665185b7a4d81eac832a11",
+      "stored_sha256": "9abd56367742f2df0a96d9d50d7a93e288c008a6ac665185b7a4d81eac832a11",
+      "before": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1024,
+        "agree_mempool": 0,
+        "undecided": 1024,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 1024,
+      "go_sdk_objects": 2048,
+      "go_sdk_before_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+      "go_sdk_after_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 1024
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g1-c102",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "cbcebce2d91501a2e7c92c9e97112368f56f875d862d5b15aa97bd4fce37d165",
+      "after_sha256": "3d439c336021647f762e806d8067f1a56f17797605b9964f89c67a6563d61b4c",
+      "stored_sha256": "542adf3094d23b73a6ec8a1119f1b4b13e96abbfa3998d062951c159d567f402",
+      "before": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 2048,
+        "agree_mempool": 0,
+        "undecided": 2048,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 2048,
+      "go_sdk_objects": 4096,
+      "go_sdk_before_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+      "go_sdk_after_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 2048
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t100-g102-c102",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "5bc75aabb97d9d6277a601c7a8a83d6804705e5cc5d533f30f8ce4beca5bdb8e",
+      "after_sha256": "eb86bda030c26ecb80dd87bc11cc0c0a3ba609d42a3a929bd7cad730dacd3b4f",
+      "stored_sha256": "fd05d62bcfa86f3941545813a648309fa77dfeb2b0c6218de07a896ef58be118",
+      "before": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 2049,
+        "agree_mempool": 0,
+        "undecided": 4097,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2048
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 2048,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 4097,
+      "go_sdk_objects": 8194,
+      "go_sdk_before_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+      "go_sdk_after_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 4097
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "5def2632406eb00be81da2ad5791438b75cfae515abf708228d381d2df4c1669",
+      "after_sha256": "e3c10929ec86d39cff4611e892e41564da22808e38bacc2b2a70561b0d53ae9a",
+      "stored_sha256": "5a873a72ba0e49fda7a96bcae78a6a2797cc272a02bbfe3521538a93dc517bff",
+      "before": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 4096,
+        "agree_mempool": 0,
+        "undecided": 4096,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 4096,
+      "go_sdk_objects": 8192,
+      "go_sdk_before_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+      "go_sdk_after_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 1024,
+        "invalid": 3072
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g1-c103",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "8130ccae30471f5d453e2e2a9f13954bc290544be48fd34ce58d20d874c5f06e",
+      "after_sha256": "a1265c036249a510d203ddd067545fc45cfeb362cfe7bea44dd5bf74e71a9300",
+      "stored_sha256": "da2638c2e8841219708eec906963a01f597481500f48a02063b0fadbaeedec31",
+      "before": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 8192,
+        "agree_mempool": 0,
+        "undecided": 8192,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 8192,
+      "go_sdk_objects": 16384,
+      "go_sdk_before_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+      "go_sdk_after_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 2048,
+        "invalid": 6144
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g102-c1",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "ac0396996e0383829c28969eb302e7f69f9ac1901a8d4c806c71c181bc145d5b",
+      "after_sha256": "3f9233f719643f89b2edab222e20f689abae82ddd363d3cb2c7a1d7828ebce3c",
+      "stored_sha256": "3f9233f719643f89b2edab222e20f689abae82ddd363d3cb2c7a1d7828ebce3c",
+      "before": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 1,
+        "agree_mempool": 0,
+        "undecided": 3,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 2
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 2,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 3,
+      "go_sdk_objects": 6,
+      "go_sdk_before_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+      "go_sdk_after_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 3
+      }
+    },
+    {
+      "corpus": "cpp-txvalidationcache-t101-g103-c103",
+      "file": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz",
+      "manifest": "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json",
+      "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "d61ecb256653f19de7e069e55f59d1e711cb8415395244b86460212800fa8b9e",
+      "after_sha256": "10d182599b822acfd95b21fce1c3f63b4755a91c1f7f47f5f776c7592bc29af5",
+      "stored_sha256": "0206817736505fec47161efe662611c8f92cc9a19b6ee4e5473545613ee5ef5c",
+      "before": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 10240,
+        "agree_mempool": 0,
+        "undecided": 16384,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.word-out-of-scope",
+          "entries": 6144
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 6144,
+          "rule": "engine.word-out-of-scope"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 16384,
+      "go_sdk_objects": 32768,
+      "go_sdk_before_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+      "go_sdk_after_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 4096,
+        "invalid": 12288
+      }
+    },
+    {
+      "corpus": "crypto",
+      "file": "corpus/crypto/cases.jsonl",
+      "manifest": "corpus/crypto/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "1fb17cbaa184b576e4ad4185b5c39f4a3e3bfbbd8986db362c58ff7156df0d82",
+      "after_sha256": "13095a9bb4eca5ffb5d5d8e7a9a0dc029f76b08c565e6a4ae17a1816e8eb142b",
+      "stored_sha256": "13095a9bb4eca5ffb5d5d8e7a9a0dc029f76b08c565e6a4ae17a1816e8eb142b",
+      "before": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 84,
+        "agree_mempool": 84,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 84,
+      "go_sdk_objects": 168,
+      "go_sdk_before_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+      "go_sdk_after_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 41,
+        "invalid": 43
+      }
+    },
+    {
+      "corpus": "eras",
+      "file": "corpus/eras/eras.jsonl",
+      "manifest": "corpus/eras/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "c8e1178568a684e82b647319574cf303d971dd0d1ce4e93ad620add40e18cef0",
+      "after_sha256": "57276264872c42e71b26ba749b4ded9f58e6f5065435ecfbc996c57456712b69",
+      "stored_sha256": "57276264872c42e71b26ba749b4ded9f58e6f5065435ecfbc996c57456712b69",
+      "before": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 32,
+        "agree_mempool": 32,
+        "undecided": 42,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 74,
+      "go_sdk_objects": 148,
+      "go_sdk_before_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+      "go_sdk_after_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "undecided": 42,
+        "valid": 23,
+        "invalid": 9
+      }
+    },
+    {
+      "corpus": "flow",
+      "file": "corpus/flow/flow.jsonl",
+      "manifest": "corpus/flow/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "0586c7ebac0e83fd941bc219b6ee8f53df29d83deb9b418b6e5e119052c17675",
+      "after_sha256": "3dec346665c7a0a5abdf3b4f086e578f5e5096ce8d43dd0d788529b26365043e",
+      "stored_sha256": "3dec346665c7a0a5abdf3b4f086e578f5e5096ce8d43dd0d788529b26365043e",
+      "before": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1094,
+        "agree_mempool": 1094,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 1094,
+      "go_sdk_objects": 2188,
+      "go_sdk_before_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+      "go_sdk_after_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 650,
+        "invalid": 444
+      }
+    },
+    {
+      "corpus": "gen",
+      "file": "corpus/gen/gen.jsonl",
+      "manifest": "corpus/gen/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "170d590a0dd79f8596753ca6bdfdedb28c7fee144f5d3d81d36b419f648d8414",
+      "after_sha256": "8e518649e5ed73d58199d9ea27706761c68b16e42ce7ccc83d8a8f94d97e785e",
+      "stored_sha256": "8e518649e5ed73d58199d9ea27706761c68b16e42ce7ccc83d8a8f94d97e785e",
+      "before": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 1152,
+        "agree_mempool": 1152,
+        "undecided": 5,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 1157,
+      "go_sdk_objects": 2314,
+      "go_sdk_before_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+      "go_sdk_after_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "undecided": 5,
+        "valid": 531,
+        "invalid": 621
+      }
+    },
+    {
+      "corpus": "million",
+      "file": "corpus/million/witnesses.jsonl",
+      "manifest": "corpus/million/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "b50174931c688576b363328f5464da7617b332ba90fff0dc13965e50297220e4",
+      "after_sha256": "e58d2e34af48ccba7470917a85567bd2080e2fa31b5036906bdce0b0116b16e8",
+      "stored_sha256": "e58d2e34af48ccba7470917a85567bd2080e2fa31b5036906bdce0b0116b16e8",
+      "before": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "after": {
+        "agree_block": 0,
+        "agree_mempool": 4,
+        "undecided": 0,
+        "witnesses": 1
+      },
+      "rules_before": [
+        {
+          "column": "spec",
+          "rule": "engine.resource-abort",
+          "entries": 4
+        }
+      ],
+      "rules_after": [
+        {
+          "column": "spec",
+          "entries": 4,
+          "rule": "engine.resource-abort"
+        }
+      ],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 4,
+      "go_sdk_objects": 8,
+      "go_sdk_before_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+      "go_sdk_after_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "invalid": 4
+      }
+    },
+    {
+      "corpus": "road",
+      "file": "corpus/road/road.jsonl",
+      "manifest": "corpus/road/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "c32073c069484b86bf2ea590ce542b03700cff1d364eea1a52d5463e4bf49161",
+      "after_sha256": "161aa6f6ab8f9f1c9d35eaf80f6e65a344930b794630d7d1d4bb66e33ad6891d",
+      "stored_sha256": "161aa6f6ab8f9f1c9d35eaf80f6e65a344930b794630d7d1d4bb66e33ad6891d",
+      "before": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 13512,
+        "agree_mempool": 13512,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 13512,
+      "go_sdk_objects": 27024,
+      "go_sdk_before_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+      "go_sdk_after_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 7397,
+        "invalid": 6115
+      }
+    },
+    {
+      "corpus": "seed",
+      "file": "corpus/seed/seed.jsonl",
+      "manifest": "corpus/seed/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "4e68fa1e3fc4b8e5b5fa19bb2fb0de5f461ec0138f44136faa0c108efcd56b80",
+      "after_sha256": "1ee4bd67b78e2a927c373d15e9def783b14182a5eb3c3b3c60eb988da2d2e0a6",
+      "stored_sha256": "1ee4bd67b78e2a927c373d15e9def783b14182a5eb3c3b3c60eb988da2d2e0a6",
+      "before": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 10000,
+        "agree_mempool": 10000,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 10000,
+      "go_sdk_objects": 20000,
+      "go_sdk_before_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+      "go_sdk_after_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 5342,
+        "invalid": 4658
+      }
+    },
+    {
+      "corpus": "stack",
+      "file": "corpus/stack/cases.jsonl",
+      "manifest": "corpus/stack/cases-manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "0e7dbea43740de7e1d9ba65ab72c09fafa37a37a6a74987558d74c035567ca27",
+      "after_sha256": "742b9b7510278a08ff1c19e0c047a94e253979a2dba8c3e3b18aef98d3fbb616",
+      "stored_sha256": "742b9b7510278a08ff1c19e0c047a94e253979a2dba8c3e3b18aef98d3fbb616",
+      "before": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 262,
+        "agree_mempool": 262,
+        "undecided": 0,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 262,
+      "go_sdk_objects": 524,
+      "go_sdk_before_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+      "go_sdk_after_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "valid": 182,
+        "invalid": 80
+      }
+    },
+    {
+      "corpus": "tx",
+      "file": "corpus/tx/tx.jsonl",
+      "manifest": "corpus/tx/manifest.json",
+      "spec_config": "sv-mainnet-default",
+      "spec": "spec@cb7e46e",
+      "before_sha256": "8aaa3627f4d228252ada65709f6dcd09108580ff63ea24a1cd43feec3bb14276",
+      "after_sha256": "0c1b766dc1ae0c828d08aa31311fab01feeaa0bd34e0df8d4c3646a75fa999f9",
+      "stored_sha256": "0c1b766dc1ae0c828d08aa31311fab01feeaa0bd34e0df8d4c3646a75fa999f9",
+      "before": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "after": {
+        "agree_block": 14,
+        "agree_mempool": 14,
+        "undecided": 26,
+        "witnesses": 0
+      },
+      "rules_before": [],
+      "rules_after": [],
+      "non_bsv_rs_implementation_rows_unchanged": true,
+      "witness_history_preserved": true,
+      "entries": 40,
+      "go_sdk_objects": 80,
+      "go_sdk_before_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+      "go_sdk_after_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+      "go_sdk_changed": 0,
+      "native_changes_from_main": 0,
+      "native_changes_from_bump": 0,
+      "non_bsv_rs_entry_changes": 0,
+      "new_verdicts": {
+        "undecided": 26,
+        "valid": 14
+      }
+    }
+  ],
+  "totals": {
+    "agree_block": 122704,
+    "agree_mempool": 27885,
+    "undecided": 248178,
+    "witnesses": 11
+  },
+  "audit": {
+    "entries": 276063,
+    "go_sdk_v172_objects": 552126,
+    "changed": 0,
+    "non_bsv_rs_entry_changes": 0,
+    "native_changes_from_original_bump": 0,
+    "protected_files": 81,
+    "protected_files_changed": 0,
+    "class_rows_moved": 0,
+    "unexplained": 0
+  },
+  "vectors": [
+    {
+      "file": "corpus/numbers/bsv-rs-0.4.4.jsonl",
+      "command": "num_vectors --count 1000",
+      "lines": 1000,
+      "sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515",
+      "identical_to_original_bump": true
+    },
+    {
+      "file": "corpus/sighash/bsv-rs-0.4.4.jsonl",
+      "command": "sighash_vectors --count 500",
+      "lines": 500,
+      "sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a",
+      "identical_to_original_bump": true
+    },
+    {
+      "file": "corpus/arith/bsv-rs-0.4.4.jsonl",
+      "command": "arith_vectors --count 10000",
+      "lines": 10000,
+      "sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba",
+      "identical_to_original_bump": true
+    },
+    {
+      "file": "corpus/crypto/ecdsa-bsv-rs-0.4.4.jsonl",
+      "command": "ecdsa_vectors --count 200",
+      "lines": 1340,
+      "sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb",
+      "identical_to_original_bump": true
+    }
+  ],
+  "independent_final_audit": {
+    "main": "34e36b5fa84025bf244a49a556c278634d430a31",
+    "original_bump": "ad4216120db0363a845fb9d34ae59c27ce9f8e38",
+    "load1": 6.55078125,
+    "status": "GREEN",
+    "totals": {
+      "entries": 276063,
+      "go_sdk_objects": 552126,
+      "bsv_rs_block_agree": 122704,
+      "bsv_rs_mempool_agree": 27885,
+      "go_sdk_block_agree": 276002,
+      "go_sdk_mempool_agree": 275986
+    },
+    "corpora": [
+      {
+        "corpus": "arith",
+        "entries": 692,
+        "go_sdk_objects": 1384,
+        "go_sdk_before_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+        "go_sdk_after_sha256": "270787a22e8b7f47a8339719fc61d6a53c516042345fb7b01b703dfeb2dc7e89",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "3e278dd179c88fa4404bdb8c4921b7cbfd129b84db563a042de0e92b9491a261",
+        "stored_sha256": "3e278dd179c88fa4404bdb8c4921b7cbfd129b84db563a042de0e92b9491a261",
+        "agree_block": 692,
+        "agree_mempool": 692
+      },
+      {
+        "corpus": "bytes",
+        "entries": 512,
+        "go_sdk_objects": 1024,
+        "go_sdk_before_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+        "go_sdk_after_sha256": "405988edeba6dceb910aa2c83ed1f2cb160a78e028d80ed3f5853517262711c7",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "8b541227ca9d30b311230173b7acdc0e31f5a2946f9c44454ff536bd8974c540",
+        "stored_sha256": "8b541227ca9d30b311230173b7acdc0e31f5a2946f9c44454ff536bd8974c540",
+        "agree_block": 512,
+        "agree_mempool": 512
+      },
+      {
+        "corpus": "cpp-bn_op",
+        "entries": 170,
+        "go_sdk_objects": 340,
+        "go_sdk_before_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+        "go_sdk_after_sha256": "1a2c5b4527ee559f80d7f564c7cec039abdb1be8e4bf0808fd139f55b57dc338",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "46a2ff8dd682ad579520aec789dd71078d5649993b9429f0db73d3b1a98d034d",
+        "stored_sha256": "46a2ff8dd682ad579520aec789dd71078d5649993b9429f0db73d3b1a98d034d",
+        "agree_block": 75,
+        "agree_mempool": 170
+      },
+      {
+        "corpus": "cpp-lrshiftnum",
+        "entries": 36,
+        "go_sdk_objects": 72,
+        "go_sdk_before_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+        "go_sdk_after_sha256": "f92ff16a7ac6708de586072c887f061e3c737ce49a8ad7785e933104201eb695",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "aceb7edd461d6b051e7a55b73c432b93f8eade5a2a39ed7e1d3a651844df9800",
+        "stored_sha256": "aceb7edd461d6b051e7a55b73c432b93f8eade5a2a39ed7e1d3a651844df9800",
+        "agree_block": 13,
+        "agree_mempool": 32
+      },
+      {
+        "corpus": "cpp-multisig",
+        "entries": 30,
+        "go_sdk_objects": 60,
+        "go_sdk_before_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+        "go_sdk_after_sha256": "9c0eb7431009094fc8fea1fd108fbb2a3eae3fb6a12b9e6c9c46a50c34402456",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "0ec2e48737469f563fa64740b91698ab9db4141b48adeafe18ae99cecb9c4be3",
+        "stored_sha256": "0ec2e48737469f563fa64740b91698ab9db4141b48adeafe18ae99cecb9c4be3",
+        "agree_block": 24,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-opcode",
+        "entries": 144324,
+        "go_sdk_objects": 288648,
+        "go_sdk_before_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+        "go_sdk_after_sha256": "c206cfe9816cddb355ad39139e679d0533ef1cde03db0c319ad0aab08090511c",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "653762870fd6616ddb9f9fcc5932fd35d02e74c92ced9e7dfc4e22a40c3773de",
+        "stored_sha256": "dee0cd86ea640df2c050d52617e917fccf218f87d809a6b89c7ca1339aafe892",
+        "agree_block": 67061,
+        "agree_mempool": 123
+      },
+      {
+        "corpus": "cpp-script",
+        "entries": 67991,
+        "go_sdk_objects": 135982,
+        "go_sdk_before_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+        "go_sdk_after_sha256": "56fd35469f895529176c764c9eae35fea3ce9b5efb8b50ce14aa90bc4b12ce37",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "e16fc8c477cf16bebbb8b0c4f8d87f6da726894844e2d46a098d04e02c64fec9",
+        "stored_sha256": "53745ac35b04482e977d43e1210d5876ab2ed95573b9fe285facdda090be3992",
+        "agree_block": 357,
+        "agree_mempool": 134
+      },
+      {
+        "corpus": "cpp-script_P2SH",
+        "entries": 64,
+        "go_sdk_objects": 128,
+        "go_sdk_before_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+        "go_sdk_after_sha256": "44ae6d4f998546ff17029d8c414733a2494e6a5b3d8d52625186b2e9225d550e",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "fb61a6b6b2d12228f0de3eeca9236ad0a5598baa35c48454d9c0bab69394a94b",
+        "stored_sha256": "fb61a6b6b2d12228f0de3eeca9236ad0a5598baa35c48454d9c0bab69394a94b",
+        "agree_block": 56,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-sigopcount",
+        "entries": 6,
+        "go_sdk_objects": 12,
+        "go_sdk_before_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+        "go_sdk_after_sha256": "c8182cde8c87c67b331b929e0971abb99e9328b6575a9bb71e97c563fda3a590",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "79afca2e46271c1dee084df77045e7fd1449f6d727a9d25769097e6461b9e73b",
+        "stored_sha256": "79afca2e46271c1dee084df77045e7fd1449f6d727a9d25769097e6461b9e73b",
+        "agree_block": 6,
+        "agree_mempool": 2
+      },
+      {
+        "corpus": "cpp-transaction",
+        "entries": 167,
+        "go_sdk_objects": 334,
+        "go_sdk_before_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+        "go_sdk_after_sha256": "432ef310c0c31248461c0637a3a174ee1cf386450ebd025d7ae7ebc61e0ce125",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "118f3b1144c8d6433078b3deec41da6c6ecbe64f90ed4685b69b01d2206db12f",
+        "stored_sha256": "118f3b1144c8d6433078b3deec41da6c6ecbe64f90ed4685b69b01d2206db12f",
+        "agree_block": 108,
+        "agree_mempool": 66
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g1-c1",
+        "entries": 1024,
+        "go_sdk_objects": 2048,
+        "go_sdk_before_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+        "go_sdk_after_sha256": "bf8d9e97e3d09839d2896c7599005a948e8f616aae0b4a7a62f6172cdbd7823a",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "9abd56367742f2df0a96d9d50d7a93e288c008a6ac665185b7a4d81eac832a11",
+        "stored_sha256": "9abd56367742f2df0a96d9d50d7a93e288c008a6ac665185b7a4d81eac832a11",
+        "agree_block": 1024,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g1-c102",
+        "entries": 2048,
+        "go_sdk_objects": 4096,
+        "go_sdk_before_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+        "go_sdk_after_sha256": "6b1251fdf5f823e56fa4d3ee25b1bfd683de6c09e1fea6eef99be4efdde0d121",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "3d439c336021647f762e806d8067f1a56f17797605b9964f89c67a6563d61b4c",
+        "stored_sha256": "542adf3094d23b73a6ec8a1119f1b4b13e96abbfa3998d062951c159d567f402",
+        "agree_block": 2048,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t100-g102-c102",
+        "entries": 4097,
+        "go_sdk_objects": 8194,
+        "go_sdk_before_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+        "go_sdk_after_sha256": "864a7a2a8021c95648dbca3b465bc4a9d2b3ba2cd14def361364fa01cbfc2d1f",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "eb86bda030c26ecb80dd87bc11cc0c0a3ba609d42a3a929bd7cad730dacd3b4f",
+        "stored_sha256": "fd05d62bcfa86f3941545813a648309fa77dfeb2b0c6218de07a896ef58be118",
+        "agree_block": 2049,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g1-c1",
+        "entries": 4096,
+        "go_sdk_objects": 8192,
+        "go_sdk_before_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+        "go_sdk_after_sha256": "130d1aad4038fc3b8edae7ff771ef0154df76d2e80392a2317161ad5c9ce4937",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "e3c10929ec86d39cff4611e892e41564da22808e38bacc2b2a70561b0d53ae9a",
+        "stored_sha256": "5a873a72ba0e49fda7a96bcae78a6a2797cc272a02bbfe3521538a93dc517bff",
+        "agree_block": 4096,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g1-c103",
+        "entries": 8192,
+        "go_sdk_objects": 16384,
+        "go_sdk_before_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+        "go_sdk_after_sha256": "3938f031e904d1338ec6c99c34c68ec37436a30267ec07d0b62b262e43ee53f3",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "a1265c036249a510d203ddd067545fc45cfeb362cfe7bea44dd5bf74e71a9300",
+        "stored_sha256": "da2638c2e8841219708eec906963a01f597481500f48a02063b0fadbaeedec31",
+        "agree_block": 8192,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g102-c1",
+        "entries": 3,
+        "go_sdk_objects": 6,
+        "go_sdk_before_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+        "go_sdk_after_sha256": "782544fa61d2419fd3f8ee6b8985debd2701648891ee87905396cd2338fe928b",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "3f9233f719643f89b2edab222e20f689abae82ddd363d3cb2c7a1d7828ebce3c",
+        "stored_sha256": "3f9233f719643f89b2edab222e20f689abae82ddd363d3cb2c7a1d7828ebce3c",
+        "agree_block": 1,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "cpp-txvalidationcache-t101-g103-c103",
+        "entries": 16384,
+        "go_sdk_objects": 32768,
+        "go_sdk_before_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+        "go_sdk_after_sha256": "4a40d87cf76a511c90133450841109053289681e226ede1494fe59bfc1eb56db",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "10d182599b822acfd95b21fce1c3f63b4755a91c1f7f47f5f776c7592bc29af5",
+        "stored_sha256": "0206817736505fec47161efe662611c8f92cc9a19b6ee4e5473545613ee5ef5c",
+        "agree_block": 10240,
+        "agree_mempool": 0
+      },
+      {
+        "corpus": "crypto",
+        "entries": 84,
+        "go_sdk_objects": 168,
+        "go_sdk_before_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+        "go_sdk_after_sha256": "e4a6e09b8c494ead0aad83544f187fc629d89dbdc863dce5043491281dbd75d4",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "13095a9bb4eca5ffb5d5d8e7a9a0dc029f76b08c565e6a4ae17a1816e8eb142b",
+        "stored_sha256": "13095a9bb4eca5ffb5d5d8e7a9a0dc029f76b08c565e6a4ae17a1816e8eb142b",
+        "agree_block": 84,
+        "agree_mempool": 84
+      },
+      {
+        "corpus": "eras",
+        "entries": 74,
+        "go_sdk_objects": 148,
+        "go_sdk_before_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+        "go_sdk_after_sha256": "f715ebc873eff3b48f78ff9e54c6684aac256a8bd4c802160f468719f43ec6c2",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "57276264872c42e71b26ba749b4ded9f58e6f5065435ecfbc996c57456712b69",
+        "stored_sha256": "57276264872c42e71b26ba749b4ded9f58e6f5065435ecfbc996c57456712b69",
+        "agree_block": 32,
+        "agree_mempool": 32
+      },
+      {
+        "corpus": "flow",
+        "entries": 1094,
+        "go_sdk_objects": 2188,
+        "go_sdk_before_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+        "go_sdk_after_sha256": "3826856c5de04078c8783293f84ce603339fcf627ee655d5bf036282cc2428a0",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "3dec346665c7a0a5abdf3b4f086e578f5e5096ce8d43dd0d788529b26365043e",
+        "stored_sha256": "3dec346665c7a0a5abdf3b4f086e578f5e5096ce8d43dd0d788529b26365043e",
+        "agree_block": 1094,
+        "agree_mempool": 1094
+      },
+      {
+        "corpus": "gen",
+        "entries": 1157,
+        "go_sdk_objects": 2314,
+        "go_sdk_before_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+        "go_sdk_after_sha256": "4ca8273fe7c4f1fc0b8f5c2c9e507ac973a627ee2b372f9e2edd51fde4b4f00b",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "8e518649e5ed73d58199d9ea27706761c68b16e42ce7ccc83d8a8f94d97e785e",
+        "stored_sha256": "8e518649e5ed73d58199d9ea27706761c68b16e42ce7ccc83d8a8f94d97e785e",
+        "agree_block": 1152,
+        "agree_mempool": 1152
+      },
+      {
+        "corpus": "million",
+        "entries": 4,
+        "go_sdk_objects": 8,
+        "go_sdk_before_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+        "go_sdk_after_sha256": "79da8ff78b153feb7b030f0aa5b373115ccdb91486cad4e01d96bbfc71b59fed",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "e58d2e34af48ccba7470917a85567bd2080e2fa31b5036906bdce0b0116b16e8",
+        "stored_sha256": "e58d2e34af48ccba7470917a85567bd2080e2fa31b5036906bdce0b0116b16e8",
+        "agree_block": 0,
+        "agree_mempool": 4
+      },
+      {
+        "corpus": "road",
+        "entries": 13512,
+        "go_sdk_objects": 27024,
+        "go_sdk_before_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+        "go_sdk_after_sha256": "4252f3adc4cfd7a55c87e0e069d6b736bb570d020882d61a9bb0ddbd091fcd59",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "161aa6f6ab8f9f1c9d35eaf80f6e65a344930b794630d7d1d4bb66e33ad6891d",
+        "stored_sha256": "161aa6f6ab8f9f1c9d35eaf80f6e65a344930b794630d7d1d4bb66e33ad6891d",
+        "agree_block": 13512,
+        "agree_mempool": 13512
+      },
+      {
+        "corpus": "seed",
+        "entries": 10000,
+        "go_sdk_objects": 20000,
+        "go_sdk_before_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+        "go_sdk_after_sha256": "510e4fa2652b34bacfb3dbf86c95ca740c06d6b9d54ce1568e955833e9e3072c",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "1ee4bd67b78e2a927c373d15e9def783b14182a5eb3c3b3c60eb988da2d2e0a6",
+        "stored_sha256": "1ee4bd67b78e2a927c373d15e9def783b14182a5eb3c3b3c60eb988da2d2e0a6",
+        "agree_block": 10000,
+        "agree_mempool": 10000
+      },
+      {
+        "corpus": "stack",
+        "entries": 262,
+        "go_sdk_objects": 524,
+        "go_sdk_before_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+        "go_sdk_after_sha256": "58ffec71b7f493087407aa078180363eff700b940d443dbf0672f778dd1970a2",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "742b9b7510278a08ff1c19e0c047a94e253979a2dba8c3e3b18aef98d3fbb616",
+        "stored_sha256": "742b9b7510278a08ff1c19e0c047a94e253979a2dba8c3e3b18aef98d3fbb616",
+        "agree_block": 262,
+        "agree_mempool": 262
+      },
+      {
+        "corpus": "tx",
+        "entries": 40,
+        "go_sdk_objects": 80,
+        "go_sdk_before_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+        "go_sdk_after_sha256": "6e2748bf38e5738ff308d2c3b56c0ff6195b0a1f068af6b3ba4eba83e1178d5f",
+        "changed_go_sdk_objects": 0,
+        "changed_other_fields": 0,
+        "changed_native_verdicts": 0,
+        "plain_sha256": "0c1b766dc1ae0c828d08aa31311fab01feeaa0bd34e0df8d4c3646a75fa999f9",
+        "stored_sha256": "0c1b766dc1ae0c828d08aa31311fab01feeaa0bd34e0df8d4c3646a75fa999f9",
+        "agree_block": 14,
+        "agree_mempool": 14
+      }
+    ],
+    "class_rows_moved": 0,
+    "unexplained": 0,
+    "protected_files_unchanged": 81,
+    "vectors_identical": 4,
+    "tracked_lean_unchanged": true
+  },
+  "protected_sha256": {
+    "corpus/witnesses/go-sdk/README.md": "3c8669243974e03b406d13b712cc09788a1f4aa8a7eaab235195b0f798ead169",
+    "corpus/witnesses/go-sdk/arith.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/bytes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-bn_op.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-lrshiftnum.jsonl": "ee718638744f99efce01e8abc62e71e05e03160d9f7b9233bb931aaba9c31984",
+    "corpus/witnesses/go-sdk/cpp-multisig.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-opcode.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-script.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-script_P2SH.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-sigopcount.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-transaction.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t100-g1-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t100-g1-c102.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t100-g102-c102.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t101-g1-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t101-g1-c103.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t101-g102-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/cpp-txvalidationcache-t101-g103-c103.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/crypto.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/eras.jsonl": "35e4a1204031b438af20ece10786daea75572aa4c30d597e4b5b8fc4ba64d3f6",
+    "corpus/witnesses/go-sdk/flow.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/gen.jsonl": "6fed550eab2875cc5bddfd5f5e9d2e0e961e59db415818d360e2db59ceb3f291",
+    "corpus/witnesses/go-sdk/manifest.json": "86e5a5de42a873b592af529cd7d52fe6ecf01655ad8252d2b05e97a6b47e55a5",
+    "corpus/witnesses/go-sdk/million.jsonl": "705216b9dcb8fa43bfd7025f1d97a1c9690f2a13ece73a313713ef0e5d96c190",
+    "corpus/witnesses/go-sdk/road.jsonl": "2e08f001374bce6daeb8a4c7d4783ad2c817dab292a7577ecab6914d77bcc27c",
+    "corpus/witnesses/go-sdk/seed.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/stack.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/go-sdk/tx.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/arith.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/bytes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/crypto.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/eras.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/flow.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/gen.jsonl": "09dd8985f3521744a4835953b74d7a9113c614697cadaaa05f6865aa8144ef47",
+    "corpus/witnesses/gobdk/manifest.json": "c959228d56d4970a8903532e5a15aa814b751c0a462fee7edb01753bbfdc6b2d",
+    "corpus/witnesses/gobdk/seed.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/stack.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/gobdk/tx.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/arith.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/bytes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-bn_op.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-lrshiftnum.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-multisig.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-opcode.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-script.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-script_P2SH.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-sigopcount.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-transaction.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t100-g1-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t100-g1-c102.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t100-g102-c102.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t101-g1-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t101-g1-c103.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t101-g102-c1.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/cpp-txvalidationcache-t101-g103-c103.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/crypto.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/eras.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/flow.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/gen.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/manifest.json": "1bb00874d8f87ac3476e19270fb16eba73bc73736b0f18bad71904c9c6eebba6",
+    "corpus/witnesses/sv-node/million.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/road.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/seed.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/stack.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corpus/witnesses/sv-node/tx.jsonl": "81d3602209cc7e6285cda46a65b03bc342d8b40f5c05a5fd8f1d07598b44505f",
+    "corpus/witnesses/ts-sdk/README.md": "ddd28da6d9a82b3df000206250179d7e7228294468ebb10ec4bc1c7cb55c97f0",
+    "corpus/witnesses/ts-sdk/arith.jsonl": "3d0a8b346e9350351789897a58d263276b0533076a171683b5ac1c9fa98345d2",
+    "corpus/witnesses/ts-sdk/bytes.jsonl": "e7eb6b7feb1a749896aaebf4d78ff2ab319d7efe629856798e088443515f65df",
+    "corpus/witnesses/ts-sdk/crypto.jsonl": "cc73f5875f5ff1c4161e01a66252d75f4ba46382455b0aab61dc743c2d68df45",
+    "corpus/witnesses/ts-sdk/eras.jsonl": "9a0714ddc290e5cdb1da02fab31ba9af82978aab421c7e9c570335e7c036095e",
+    "corpus/witnesses/ts-sdk/flow.jsonl": "15fa8496baab0f1cd78d7ebabe3e7c6687211af900316d6ba259e45df76437a6",
+    "corpus/witnesses/ts-sdk/gen.jsonl": "2eb30a22878742c37a5bab16641506e7ffa66473b6db5ba16709720a46a44788",
+    "corpus/witnesses/ts-sdk/manifest.json": "f2395d0a0bf881334bd3faa23d0dcf9cfa0c2a330cdd06d7e0a372818c46219c",
+    "corpus/witnesses/ts-sdk/seed.jsonl": "5e281806a550886935af7e6f7093e2db5585fc29f6c9eaecc177fca4b40be5c2",
+    "corpus/witnesses/ts-sdk/stack.jsonl": "a93535e6326f83931cdc30f01ffa2a789df1df9645938f229a03672cf8b8a4f8",
+    "corpus/witnesses/ts-sdk/tx.jsonl": "fc58099b44c69db796fdfbe4fbf88de3699feec6f21468d4d31a927e719f8e4b",
+    "harness/rules/bsv-rs.json": "52715d6d5edde87488cdb9003d1e2f8dff6c2a670c70bf19c2916577a2b599a2",
+    "harness/rules/go-sdk.json": "00477d18b594e435aad334f78d6f010b6f763b6d90acb7712690709cb7987dbc",
+    "harness/rules/gobdk.json": "3433979f5c55ca967ac84b8bb6223c2a196babe01275fa413f99e88b26363c8e",
+    "harness/rules/sv-node.json": "bd30ab75c33cb5712d8f5c07085918bdd18b085c93d38d3ae5825012fe98b380",
+    "harness/rules/ts-sdk.json": "b69f8ab2e404c3dbc5a8afb9b00c339dff1ce12b28306b5b84a09911e3282a95"
+  },
+  "environment": {
+    "CARGO_BUILD_JOBS": "4",
+    "GIT_TERMINAL_PROMPT": "0",
+    "stdin": "/dev/null",
+    "execution": "foreground",
+    "host": "box",
+    "lean_lock": "bump-044b, slot2, 2026-10-12T01:37:11Z to 2026-10-12T01:37:47Z"
+  },
+  "local_gates": {
+    "pins": {
+      "exit": 0,
+      "sites_agree": 76,
+      "skipped_by_name": 9,
+      "go_sdk_clone_checked": true,
+      "ts_stack_clone_skipped": true
+    },
+    "cite": {
+      "exit": 0,
+      "moved": 0,
+      "previous_failed_run_retained": true,
+      "source_verified_new_sighash_citation": 878,
+      "new_sighash_citation_in_anchor_table": false
+    },
+    "rules_check": {
+      "exit": 0,
+      "manifests": 96,
+      "entries_replayed": 856019,
+      "classified_runs": 154491
+    },
+    "specgen_check": {
+      "exit": 0,
+      "files": 117,
+      "flagged_rules": 1
+    }
+  },
+  "corpus_audit_recipe_sha256": "b85bdda1865d0c082a9d6c994bc09d3bc61f7e353b04251d5fb86354998ca07c",
+  "tested_harness_tree": "4ea1cefb150167f35deb1c25b259b9c791e2807c",
+  "tested_lean_tree": "e4578f4b2e34945f5700783d9095a6558dfa245e",
+  "measurement_commit": "0c8091473cfbe14ce1b4aed0cb41fcf3eca1e4be",
+  "measurement_commit_subject": "Re-measure bsv-rs 0.4.4 after #99 (S3, lane bump-044b, GPT-6, [M] 20261012-014509Z)",
+  "committed_measurement_files_verified": 72,
+  "report_source_stamp": "0c80914"
+}

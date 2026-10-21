@@ -1,0 +1,30 @@
+{
+  "entries": 9,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/miner_tests.jsonl",
+  "undecided": {
+    "a predicate (ContextualCheckTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": 2,
+    "a predicate (ContextualCheckTransactionForCurrentBlock, layer consensus): the drivers judge spends, and none has a hook that runs it": 5,
+    "a predicate (SequenceLocks, layer consensus): the drivers judge spends, and none has a hook that runs it": 2
+  },
+  "undecided_ids": {
+    "a predicate (ContextualCheckTransaction, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-miner-00006",
+      "cpp-miner-00008"
+    ],
+    "a predicate (ContextualCheckTransactionForCurrentBlock, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-miner-00001",
+      "cpp-miner-00003",
+      "cpp-miner-00005",
+      "cpp-miner-00007",
+      "cpp-miner-00009"
+    ],
+    "a predicate (SequenceLocks, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-miner-00002",
+      "cpp-miner-00004"
+    ]
+  }
+}

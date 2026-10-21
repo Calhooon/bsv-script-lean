@@ -1,0 +1,74 @@
+{
+  "entries": 150,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 64,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 0,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 64
+    }
+  },
+  "judged_entries": 64,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 64,
+  "source": "corpus/cpp/script_P2SH_tests.jsonl",
+  "undecided": {
+    "a predicate (AreInputsStandard, layer policy): the drivers judge spends, and none has a hook that runs it": 6,
+    "a predicate (GetP2SHSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": 6,
+    "a predicate (IsP2SH, layer both): the drivers judge spends, and none has a hook that runs it": 9,
+    "a predicate (IsStandardTx, layer policy): the drivers judge spends, and none has a hook that runs it": 12,
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": 49,
+    "the call's amount is negative, which no coin carries (a corpus prevout's satoshis are unsigned, docs/DESIGN.md section 6)": 4
+  },
+  "undecided_ids": {
+    "a predicate (AreInputsStandard, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-script_P2SH-00139",
+      "cpp-script_P2SH-00141",
+      "cpp-script_P2SH-00143",
+      "cpp-script_P2SH-00145",
+      "cpp-script_P2SH-00147",
+      "cpp-script_P2SH-00149"
+    ],
+    "a predicate (GetP2SHSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-script_P2SH-00140",
+      "cpp-script_P2SH-00142",
+      "cpp-script_P2SH-00144",
+      "cpp-script_P2SH-00146",
+      "cpp-script_P2SH-00148",
+      "cpp-script_P2SH-00150"
+    ],
+    "a predicate (IsP2SH, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-script_P2SH-00119..00127"
+    ],
+    "a predicate (IsStandardTx, layer policy): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-script_P2SH-00001..00002",
+      "cpp-script_P2SH-00093..00094",
+      "cpp-script_P2SH-00099..00100",
+      "cpp-script_P2SH-00105..00106",
+      "cpp-script_P2SH-00111..00112",
+      "cpp-script_P2SH-00117..00118"
+    ],
+    "a predicate (SignSignature, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-script_P2SH-00003..00026",
+      "cpp-script_P2SH-00095..00098",
+      "cpp-script_P2SH-00101..00104",
+      "cpp-script_P2SH-00107..00110",
+      "cpp-script_P2SH-00113..00116",
+      "cpp-script_P2SH-00130..00138"
+    ],
+    "the call's amount is negative, which no coin carries (a corpus prevout's satoshis are unsigned, docs/DESIGN.md section 6)": [
+      "cpp-script_P2SH-00091..00092",
+      "cpp-script_P2SH-00128..00129"
+    ]
+  }
+}

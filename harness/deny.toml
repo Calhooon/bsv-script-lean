@@ -1,0 +1,44 @@
+# harness/deny.toml (bsv-script-lean #133, S3, lane gate-133, 2026-10-14 [M]): the cargo-deny configuration of the harness
+# crate, run by tools/cargo_deny.sh (the deny leg of tools/check.sh). Four checks: advisories (the RustSec database), licenses
+# (the allowlist below is the set the locked tree uses, read from `cargo metadata --locked` on 2026-10-14: 100 packages),
+# bans (one version per crate, the one measured duplicate named with its reason) and sources (crates.io only).
+# A policy of this repository's gate, never a rule of the script semantics.
+
+[graph]
+all-features = false
+no-default-features = false
+
+[advisories]
+version = 2
+# every advisory is an error (version 2: vulnerability, unmaintained, unsound and yanked all deny); an exception is a
+# dated `ignore` entry with its reason, none on 2026-10-14
+yanked = "deny"
+ignore = []
+
+[licenses]
+version = 2
+# the harness crate itself is `publish = false`: cargo-deny skips its license field
+private = { ignore = true }
+confidence-threshold = 0.93
+# [M] 2026-10-14 the four licenses the locked tree needs: MIT and Apache-2.0 satisfy every `MIT OR Apache-2.0` family;
+# BSD-3-Clause is subtle 2.6.1's; Unicode-3.0 is unicode-ident 1.0.26's `(MIT OR Apache-2.0) AND Unicode-3.0`
+allow = ["MIT", "Apache-2.0", "BSD-3-Clause", "Unicode-3.0"]
+exceptions = []
+
+[bans]
+# a second version of a crate is an error, wildcard requirements are an error
+multiple-versions = "deny"
+wildcards = "deny"
+highlight = "all"
+# [M] 2026-10-14 the one duplicate of the locked tree: syn 2.0.119 (thiserror-impl 1.0.69, under bsv-rs 0.5.0's thiserror 1)
+# beside syn 3.0.6 (async-trait, futures-macro); both proc-macro build dependencies of the pinned bsv-rs 0.5.0, gone when
+# bsv-rs moves to thiserror 2 (a pin move, T3's)
+skip = [{ crate = "syn@2.0.119", reason = "thiserror-impl 1.0.69 under the pinned bsv-rs 0.5.0; a pin move retires it" }]
+deny = []
+
+[sources]
+# crates.io only: an unknown registry or any git dependency is an error
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []

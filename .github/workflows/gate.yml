@@ -1,0 +1,291 @@
+# The hosted gate (bsv-script-lean #116; S3, lane gate-116, 2026-10-18).
+#
+# Every pull request and every push to main runs the legs of `make check` (tools/check.sh) that a public runner can
+# run, through tools/gate_leg.sh, which calls the same step of tools/check.sh that `tools/check.sh all` runs (never a
+# re-implementation). Three jobs run the twenty-nine legs between them:
+#   rust   fmt, clippy, deny
+#   tree   pins, cite, jscpd, secrets, spec, tslint
+#   lean   lean, axioms, numbers, flow, sighash, arith, stack, crypto, seed, scripttests, txtests, flags, bytes,
+#          versiongate, eras, witnesses, eval, harness, chain, bench
+# A runner holds this tree and nothing else: the pinned upstream clones, the built reference and the box's baseline are
+# absent, and the legs that read them say SKIPPED BY NAME (never a pass), as in the Modal container. Those reads, the
+# node oracle and the Teranode instance are the withheld legs (tools/withheld_legs.txt). They never run on a public
+# runner (CLAUDE.md rules 10 and 17); the box runs them and posts the commit status `box/withheld-legs`
+# (tools/box_status.sh), which the branch protection requires beside these jobs. The job `withheld-legs` below only
+# prints that list; it posts nothing and runs nothing.
+# Every job is skipped while the repository is private (`!github.event.repository.private`): the workflow lives in the
+# private repository until the birth and runs on the public one's events.
+# The job `record` reads the three jobs' logs with the same verdict-line table and the same writer as `make check`
+# (`tools/check.sh record`) and uploads docs/records/<stamp>-make-check-hosted.txt as the artifact `gate-record`. The
+# workflow never commits it.
+#
+# Reading a red: open the failed job; tools/gate_leg.sh prints `gate: leg <name> exit <rc>, wall <s> s` after every leg
+# and the job stops at a leg that exits non-zero, so the last such line names that leg, and the lines above it
+# are that leg's own output. `tools/check.sh <leg>` reproduces it on any machine with the same toolchains. A red
+# `box/withheld-legs` names the box's record file in its description; the maintainers publish it on request.
+name: gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gate-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_BUILD_JOBS: "4"
+  CARGO_TERM_COLOR: never
+  GOTOOLCHAIN: local
+  GOFLAGS: -mod=mod
+  # the hosted runner has no baseline in tools/bench_baseline.json: the bench leg reports its walls and skips them by name
+  BENCH_HOST: github-hosted
+
+jobs:
+  rust:
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: the start
+        run: |
+          mkdir -p "$RUNNER_TEMP/gate"; date +%s > "$RUNNER_TEMP/gate/rust.start"
+          echo "GATE_JOB_START=$(cat "$RUNNER_TEMP/gate/rust.start")" >> "$GITHUB_ENV"
+          mkdir -p "$HOME/.cache/gate-toolchains"
+          echo "DENY_TOOLCHAINS=$HOME/.cache/gate-toolchains" >> "$GITHUB_ENV"
+      - name: the Rust toolchain of harness/rust-toolchain.toml
+        run: |
+          ch="$(sed -n 's/^channel = "\(.*\)"$/\1/p' harness/rust-toolchain.toml)"
+          rustup toolchain install "$ch" --profile minimal --component rustfmt --component clippy
+          cd harness && cargo --version && rustfmt --version
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            ~/.cache/gate-toolchains
+            harness/target
+          key: cargo-${{ runner.os }}-${{ github.job }}-${{ hashFiles('harness/Cargo.lock', 'harness/rust-toolchain.toml', 'tools/cargo_deny.sh') }}
+          restore-keys: cargo-${{ runner.os }}-${{ github.job }}-
+      - name: the legs fmt, clippy, deny
+        run: tools/gate_leg.sh "$RUNNER_TEMP/gate/rust.log" fmt clippy deny
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gate-log-rust
+          path: ${{ runner.temp }}/gate/
+          if-no-files-found: warn
+
+  tree:
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: the start, and the Go and Node majors of docs/PROVENANCE.md section 1a
+        id: pins
+        run: |
+          mkdir -p "$RUNNER_TEMP/gate"; date +%s > "$RUNNER_TEMP/gate/tree.start"
+          echo "GATE_JOB_START=$(cat "$RUNNER_TEMP/gate/tree.start")" >> "$GITHUB_ENV"
+          mkdir -p "$HOME/.cache/gate-toolchains"   # tools/secrets_scan.sh installs gitleaks into a toolchain directory that exists
+          echo "SECRETS_TOOLCHAINS=$HOME/.cache/gate-toolchains" >> "$GITHUB_ENV"
+          echo "JSCPD_HOME=$HOME/.cache/gate-toolchains/jscpd" >> "$GITHUB_ENV"
+          sed -n '/^```pins$/,/^```$/p' docs/PROVENANCE.md | sed -nE 's/^(go|node)\.major *= *([0-9.]+).*/\1=\2/p' >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+      - name: the Rust toolchain of harness/rust-toolchain.toml
+        run: |
+          ch="$(sed -n 's/^channel = "\(.*\)"$/\1/p' harness/rust-toolchain.toml)"
+          rustup toolchain install "$ch" --profile minimal --component rustfmt
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ steps.pins.outputs.go }}
+          cache-dependency-path: harness/engines/go/go.sum
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.pins.outputs.node }}
+      - name: the node the legs read (tools/node_bin.sh reads NODE_BIN before PATH)
+        run: echo "NODE_BIN=$(command -v node)" >> "$GITHUB_ENV"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            ~/.cache/gate-toolchains
+            harness/target
+          key: cargo-${{ runner.os }}-${{ github.job }}-${{ hashFiles('harness/Cargo.lock', 'harness/rust-toolchain.toml', 'tools/secrets_scan.sh', 'tools/jscpd/package-lock.json') }}
+          restore-keys: cargo-${{ runner.os }}-${{ github.job }}-
+      - name: the legs pins, cite, jscpd, secrets, spec, tslint
+        run: tools/gate_leg.sh "$RUNNER_TEMP/gate/tree.log" pins cite jscpd secrets spec tslint
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gate-log-tree
+          path: ${{ runner.temp }}/gate/
+          if-no-files-found: warn
+
+  lean:
+    # The axioms leg builds the kernel-checked stale run (StaleRunCheck, #120), whose build peaks near 29 GB
+    # (docs/records/20261014-061809-stale-cost-s1.md). A standard Linux runner of a public repository has 16 GB [LIT]
+    # (GitHub's documentation, 'About GitHub-hosted runners', the standard runners' table; read on the flip day), so the
+    # step below adds swap up to 40 GB; the repository variable GATE_LEAN_RUNNER names a larger runner when the owner provides one.
+    if: ${{ !github.event.repository.private }}
+    runs-on: ${{ vars.GATE_LEAN_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 330
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: the start, and the Go and Node majors of docs/PROVENANCE.md section 1a
+        id: pins
+        run: |
+          mkdir -p "$RUNNER_TEMP/gate"; date +%s > "$RUNNER_TEMP/gate/lean.start"
+          echo "GATE_JOB_START=$(cat "$RUNNER_TEMP/gate/lean.start")" >> "$GITHUB_ENV"
+          sed -n '/^```pins$/,/^```$/p' docs/PROVENANCE.md | sed -nE 's/^(go|node)\.major *= *([0-9.]+).*/\1=\2/p' >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+      - name: memory for the stale run (40 GB of memory and swap)
+        run: |
+          free -g
+          mem=$(awk '/^MemTotal/ {print int($2/1048576)}' /proc/meminfo); swap=$(awk '/^SwapTotal/ {print int($2/1048576)}' /proc/meminfo)
+          if [ $((mem + swap)) -lt 40 ]; then
+            sudo fallocate -l "$((40 - mem - swap + 1))G" /mnt/gate.swap && sudo chmod 600 /mnt/gate.swap \
+              && sudo mkswap /mnt/gate.swap > /dev/null && sudo swapon /mnt/gate.swap
+          fi
+          free -g
+      - name: the Rust toolchain of harness/rust-toolchain.toml
+        run: |
+          ch="$(sed -n 's/^channel = "\(.*\)"$/\1/p' harness/rust-toolchain.toml)"
+          rustup toolchain install "$ch" --profile minimal
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ steps.pins.outputs.go }}
+          cache-dependency-path: harness/engines/go/go.sum
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.pins.outputs.node }}
+      - name: the node the legs read (tools/node_bin.sh reads NODE_BIN before PATH)
+        run: echo "NODE_BIN=$(command -v node)" >> "$GITHUB_ENV"
+      # restore and save apart: actions/cache@v4 saves only when the whole job succeeds; the save here follows the lean
+      # and axioms legs (axioms builds StaleRunCheck, tools/check.sh:59) and runs only when both passed, so a red later
+      # leg still saves lean/.lake and a .lake without StaleRunCheck is never saved under a key no later run overwrites
+      - uses: actions/cache/restore@v4
+        id: lean-cache
+        with:
+          path: |
+            ~/.elan
+            lean/.lake
+          key: lean-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lake-manifest.json') }}-${{ hashFiles('lean/**/*.lean', 'lean/lakefile.toml') }}
+          restore-keys: lean-${{ runner.os }}-${{ hashFiles('lean/lean-toolchain', 'lean/lake-manifest.json') }}-
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            harness/target
+          key: cargo-${{ runner.os }}-${{ github.job }}-${{ hashFiles('harness/Cargo.lock', 'harness/rust-toolchain.toml') }}
+          restore-keys: cargo-${{ runner.os }}-${{ github.job }}-
+      - name: the Lean toolchain of lean/lean-toolchain (elan) and Mathlib's oleans at lean/lake-manifest.json
+        run: |
+          if [ ! -x "$HOME/.elan/bin/elan" ]; then
+            curl -sSfL https://elan.lean-lang.org/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+            sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none
+          fi
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean/lean-toolchain)"
+          cd lean && timeout 1800 "$HOME/.elan/bin/lake" exe cache get
+      - name: the ts-sdk adapter's package at its pin (make tssdk-install, npm ci)
+        run: make tssdk-install
+      - name: the legs lean and axioms
+        id: lean-axioms
+        run: tools/gate_leg.sh "$RUNNER_TEMP/gate/lean.log" lean axioms
+      - uses: actions/cache/save@v4
+        if: ${{ steps.lean-axioms.outcome == 'success' && steps.lean-cache.outputs.cache-hit != 'true' }}
+        with:
+          path: |
+            ~/.elan
+            lean/.lake
+          key: ${{ steps.lean-cache.outputs.cache-primary-key }}
+      - name: the columns, harness, chain, bench
+        run: |
+          tools/gate_leg.sh "$RUNNER_TEMP/gate/lean.log" numbers flow sighash arith stack crypto seed \
+            scripttests txtests flags bytes versiongate eras witnesses eval harness chain bench
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gate-log-lean
+          path: ${{ runner.temp }}/gate/
+          if-no-files-found: warn
+
+  withheld-legs:
+    # Declares the withheld legs; never runs them and never posts the status box/withheld-legs (the box does).
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: the withheld legs (tools/withheld_legs.txt), matched against tools/export_withheld.txt's families
+        run: python3 tools/withheld_legs.py --declare
+
+  record:
+    needs: [rust, tree, lean, withheld-legs]
+    if: ${{ always() && !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: gate-log-*
+          path: ${{ runner.temp }}/gate
+          merge-multiple: true
+      - name: the record (tools/check.sh record, the writer of make check)
+        env:
+          NEEDS: ${{ toJSON(needs) }}
+          CHECK_RECORD_NOTE: >-
+            GitHub Actions, ${{ github.repository }} run ${{ github.run_id }} attempt ${{ github.run_attempt }},
+            event ${{ github.event_name }}, the tree tested ${{ github.sha }}, the head ${{ github.event.pull_request.head.sha || github.sha }};
+            the legs ran as the jobs rust, tree and lean (tools/gate_leg.sh); the withheld legs are the status box/withheld-legs
+        run: |
+          rc=0
+          for j in rust tree lean withheld-legs; do
+            r="$(jq -r --arg j "$j" '.[$j].result' <<< "$NEEDS")"; echo "gate: job $j $r"
+            [ "$r" = success ] || rc=1
+          done
+          : > "$RUNNER_TEMP/gate/all.log"
+          for j in rust tree lean; do
+            if [ -f "$RUNNER_TEMP/gate/$j.log" ]; then cat "$RUNNER_TEMP/gate/$j.log" >> "$RUNNER_TEMP/gate/all.log"; else echo "gate: no log from the job $j"; rc=1; fi
+          done
+          GATE_STARTED="$(cat "$RUNNER_TEMP"/gate/*.start 2>/dev/null | sort -n | head -1)"
+          export GATE_STARTED
+          /usr/bin/env -u BASH_ENV bash --noprofile --norc tools/check.sh record "$RUNNER_TEMP/gate/all.log" "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gate-record
+          path: docs/records/*-make-check-hosted.txt
+          if-no-files-found: warn

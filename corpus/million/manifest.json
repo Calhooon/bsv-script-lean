@@ -1,0 +1,144 @@
+{
+  "corpus": "million",
+  "file": "witnesses.jsonl",
+  "generator": "bsv-script-harness seed_gen 0.0.2 (adapted from a predecessor harness of the owner's, its fuzz binary's pattern @ 0fc5ced, mechanism-free; format of DESIGN v1 §6), seed 0x5EED5C7197F00001, count 1,000,000 (the audit's item (f), A27): the witnesses alone",
+  "seed": "0x5EED5C7197F00001",
+  "count": 4,
+  "sha256": "e23c796320bd04bf21788f79713525b4731efbcfd07db42ac0b3d7770778950d",
+  "families": {
+    "mutation/lock": 3,
+    "mutation/unlock": 1
+  },
+  "rules": {
+    "mutation": 4
+  },
+  "verdicts": {
+    "invalid": 4
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.2",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 10000,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "spec-history",
+      "version": "a4df442",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-history-mempool",
+      "version": "a4df442",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin.conf: mainnet activation heights, every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive); txo.height = the prevout's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "configuration": "harness/oracle/bitcoin-policy.conf: mainnet activation heights, the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18565",
+        "total_timeout_ms": 60000
+      }
+    },
+    {
+      "name": "spec",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-mainnet-default",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    }
+  ],
+  "engine_executions": 40,
+  "generated": "2026-09-27",
+  "provenance": "the four bsv-rs witness lines (engine.resource-abort, the block column) of the 10^6 seeded run, docs/records/20260927-183819-seed1m-s3.md: the million (sha256 632da59935529c94c8ba495dfb3861fa60f488e493b94c8dec7284a9d1e50c78) regenerates from its seed with seed_gen; the ids keep the million's; bsv-rs 0.7.0's verdicts under the node's standard word, the recorded configuration of the generator's manifest; synthetic outpoints = sha256 of the entry id; no transaction of any private program"
+}

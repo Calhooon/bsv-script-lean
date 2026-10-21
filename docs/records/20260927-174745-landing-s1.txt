@@ -1,0 +1,42 @@
+S1's landing of its held stack on main (S1, Lean A, set 4 sitting 3; the landing rule on a moving main, as S4b's
+20260927-134936-cite-landing-s4b.txt applied it)
+
+The stack: the spec gap's remainder (SigOps, TxPolicy's count), #25's widths (Properties/Widths.lean), the hooks
+discharged (Properties/Hooks.lean), NULLFAIL/NULLDUMMY under the gate, D123's size cap, the multisig's NULLFAIL, and the
+history record of the lane branch's v4.33 run; held off main by THE HOUR (D124) until the parent's word "the landing is
+done" (15:35 UTC), then built at Lean v4.34.0 on Modal (the Studio has no v4.34 stack, A20).
+
+THE STAMP: docs/records/20260927-173006-make-check-modal.txt, twenty-one legs GREEN in 916 s at e1468dd (the stack
+rebased on 179ac49), Modal app ap-5QRQyjV3BqsgP5UVkINQhb, cpu 16 / 32 GiB, the axiom check 496, with the 64 spec/ pages
+tools/specgen.py regenerated uncommitted in the shipped tree (spec is not on S1's OWNERS line: the parent regenerates
+at the fold, the sitting-3 paste's rule).
+
+MAIN MOVED during the run: 179ac49 -> f5d89e0 (f3db1ad, 9e0a264, f5d89e0, S3's). The stack rebased onto f5d89e0
+without conflict; the landed tip is e69d07c.
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit and the landed tip, outside the four paths main's three
+commits changed:
+  git diff --quiet e1468dd e69d07c -- ':!HANDOFF.md' ':!corpus/INDEX.md' ':!docs/PARAMETERS.md' ':!harness/oracle/README.md'
+  exit 0
+  git diff --stat e1468dd e69d07c: HANDOFF.md (no leg reads it), corpus/INDEX.md (one row of §4's table; tools/specgen.py
+  reads the file), docs/PARAMETERS.md (one row; the cite leg reads docs/), harness/oracle/README.md (one table row; no
+  leg reads it: `grep -rn oracle/README tools/ harness/src` finds only a comment in tools/mini_lock.sh)
+
+THE LEGS THAT READ THE CHANGED PATHS (and the pins leg, cheap), LIVE AT THE TIP e69d07c on the Studio (python only, no Lean build; the clones
+present, so the cite and pins legs check what the container skips by name), with the regenerated spec/ pages in the tree:
+load before: { 30.40 27.26 23.12 }
+== tools/check.sh pins at e69d07c (17:47:45Z)
+check-pins: GREEN (71 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite at e69d07c (17:47:46Z)
+cite_check: 2729 citations found in lean/ and docs/ (2669 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1785, MOVED 0; not anchored (reported, never RED): unanchored 139, beyond-eof 1, unresolved 27, ambiguous 7, unpinned 0, other-version 28, self 491, history 251, absent 0, orphan rows 12; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec at e69d07c (17:47:50Z)
+specgen --check: OK (117 files up to date; 2 rules flagged)
+exit 0
+load after: { 29.89 27.21 23.13 }
+
+The other eighteen legs read nothing that changed: the stamp stands for them at e69d07c.
+The pre-rebase run at 15c2e61 (docs/records/20260927-170834-make-check-modal.txt, GREEN in 1030 s, app
+ap-6Zfzu0hbDySyZd0Qu0Elht) is HISTORY, never the stamp.

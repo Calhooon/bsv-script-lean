@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security concern privately
+    # the repository's address, the slot docs/ANNOUNCEMENT.md names, filled 2026-10-21 (the Calhooon organisation)
+    url: https://github.com/Calhooon/bsv-script-lean/security/advisories/new
+    about: A divergence one implementation accepts and another refuses can split the chain. Use the "Report a vulnerability" button under the Security tab, never an issue (SECURITY.md).

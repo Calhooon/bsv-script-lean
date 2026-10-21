@@ -1,0 +1,535 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+=== before: the summary
+ladder before at 4974440 (0 uncommitted), bsvs 2026-09-27T08:49:13 sha256 15a34de21db3c6f3
+rung 1000: rc 0, real 1.57 s, max RSS 66535424 B, load1 before 13.31, started 12:50:18 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-1000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 2000: rc 0, real 0.35 s, max RSS 73940992 B, load1 before 13.13, started 12:50:19 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-2000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 4000: rc 0, real 0.92 s, max RSS 88670208 B, load1 before 13.13, started 12:50:20 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-4000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 8000: rc 0, real 4.46 s, max RSS 117833728 B, load1 before 13.13, started 12:50:21 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-8000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 16000: rc 0, real 15.10 s, max RSS 175325184 B, load1 before 14.72, started 12:50:25 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-16000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 30000: rc 0, real 50.75 s, max RSS 263979008 B, load1 before 19.19, started 12:50:40 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-30000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+corpus/tx: rc 0, real 62.80 s, max RSS 250085376 B, load1 before 17.30, started 12:51:31 UTC; 37 lines
+done 12:52:34 UTC
+--- before rung-1000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@4974440
+        1.57 real         0.09 user         0.04 sys
+            66535424  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4500  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 416  involuntary context switches
+           975512546  instructions retired
+           436951900  cycles elapsed
+            16597592  peak memory footprint
+--- before rung-16000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@4974440
+       15.10 real        13.48 user         0.09 sys
+           175325184  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11133  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                9270  involuntary context switches
+         98322737915  instructions retired
+         40499746835  cycles elapsed
+           125452984  peak memory footprint
+--- before rung-2000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@4974440
+        0.35 real         0.26 user         0.01 sys
+            73940992  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4948  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 911  involuntary context switches
+          2105927737  instructions retired
+           840813301  cycles elapsed
+            24019568  peak memory footprint
+--- before rung-30000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@4974440
+       50.75 real        46.84 user         0.24 sys
+           263979008  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16544  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+               29842  involuntary context switches
+        340174707859  instructions retired
+        142490325707  cycles elapsed
+           214139624  peak memory footprint
+--- before rung-4000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@4974440
+        0.92 real         0.85 user         0.01 sys
+            88670208  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                5849  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 948  involuntary context switches
+          6863130792  instructions retired
+          2655083053  cycles elapsed
+            38732376  peak memory footprint
+--- before rung-8000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@4974440
+        4.46 real         3.54 user         0.03 sys
+           117833728  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                7627  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                2346  involuntary context switches
+         25366710532  instructions retired
+         10632279725  cycles elapsed
+            67912304  peak memory footprint
+--- before corpus-tx.time.txt: /usr/bin/time -l
+[withheld at export: a sibling tree's line]
+       62.80 real        47.49 user         0.32 sys
+           250085376  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               17136  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   7  voluntary context switches
+               44569  involuntary context switches
+        340728984426  instructions retired
+        143334426145  cycles elapsed
+           217088744  peak memory footprint
+=== after: the summary
+ladder after at 77e452d (0 uncommitted), bsvs 2026-09-27T08:56:14 sha256 2881c575465f3bae
+rung 1000: rc 0, real 1.52 s, max RSS 66633728 B, load1 before 19.64, started 12:56:16 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-1000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 2000: rc 0, real 0.10 s, max RSS 74055680 B, load1 before 19.64, started 12:56:17 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-2000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 4000: rc 0, real 0.11 s, max RSS 88850432 B, load1 before 19.64, started 12:56:17 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-4000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 8000: rc 0, real 0.17 s, max RSS 117424128 B, load1 before 19.64, started 12:56:17 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-8000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 16000: rc 0, real 0.23 s, max RSS 175161344 B, load1 before 19.64, started 12:56:18 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-16000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 30000: rc 0, real 0.28 s, max RSS 263864320 B, load1 before 19.64, started 12:56:18 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-30000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 100000: rc 0, real 0.79 s, max RSS 750518272 B, load1 before 18.55, started 12:56:18 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-100000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 300000: rc 0, real 2.70 s, max RSS 2339667968 B, load1 before 18.55, started 12:56:19 UTC; {"commit":"77e452d","config":"sv-mainnet-default","id":"ladder-tx-300000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+corpus/tx: rc 0, real 0.30 s, max RSS 265142272 B, load1 before 18.55, started 12:56:22 UTC; 37 lines
+done 12:56:22 UTC
+--- after rung-1000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        1.52 real         0.04 user         0.04 sys
+            66633728  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4499  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 122  involuntary context switches
+           592347252  instructions retired
+           277484817  cycles elapsed
+            16695944  peak memory footprint
+--- after rung-100000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-100000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.79 real         0.69 user         0.06 sys
+           750518272  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               46243  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 359  involuntary context switches
+          9412093347  instructions retired
+          2337287984  cycles elapsed
+           700892240  peak memory footprint
+--- after rung-16000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.23 real         0.18 user         0.01 sys
+           175161344  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11123  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 134  involuntary context switches
+          2383303792  instructions retired
+           616550640  cycles elapsed
+           125239968  peak memory footprint
+--- after rung-2000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.10 real         0.05 user         0.01 sys
+            74055680  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4954  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 101  involuntary context switches
+           599208250  instructions retired
+           202698086  cycles elapsed
+            24085080  peak memory footprint
+--- after rung-30000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.28 real         0.22 user         0.02 sys
+           263864320  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16535  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 174  involuntary context switches
+          3047783599  instructions retired
+           770543637  cycles elapsed
+           214008576  peak memory footprint
+--- after rung-300000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-300000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        2.70 real         2.14 user         0.38 sys
+          2339667968  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              143234  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   4  voluntary context switches
+                3671  involuntary context switches
+         28066261052  instructions retired
+          7585646694  cycles elapsed
+          2290927968  peak memory footprint
+--- after rung-4000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.11 real         0.07 user         0.01 sys
+            88850432  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                5857  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  72  involuntary context switches
+           847344453  instructions retired
+           257567722  cycles elapsed
+            38879832  peak memory footprint
+--- after rung-8000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@77e452d
+        0.17 real         0.11 user         0.01 sys
+           117424128  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                7605  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 202  involuntary context switches
+          1362312450  instructions retired
+           389753839  cycles elapsed
+            67486344  peak memory footprint
+--- after corpus-tx.time.txt: /usr/bin/time -l
+[withheld at export: a sibling tree's line]
+        0.30 real         0.24 user         0.03 sys
+           265142272  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16611  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 223  involuntary context switches
+          3225714878  instructions retired
+           850415588  cycles elapsed
+           215253736  peak memory footprint
+=== landed: the summary
+ladder landed at d9dac35 (1 uncommitted), bsvs 2026-09-27T08:56:14 sha256 2881c575465f3bae
+rung 1000: rc 0, real 0.08 s, max RSS 66420736 B, load1 before 41.50, started 13:18:52 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-1000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 2000: rc 0, real 0.11 s, max RSS 73793536 B, load1 before 41.50, started 13:18:52 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-2000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
+rung 4000: rc 0, real 0.10 s, max RSS 88227840 B, load1 before 41.50, started 13:18:52 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-4000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 8000: rc 0, real 0.14 s, max RSS 117276672 B, load1 before 41.50, started 13:18:52 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-8000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 16000: rc 0, real 0.24 s, max RSS 175767552 B, load1 before 41.50, started 13:18:52 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-16000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"tx-size","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 30000: rc 0, real 0.28 s, max RSS 266797056 B, load1 before 41.50, started 13:18:53 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-30000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 100000: rc 0, real 0.81 s, max RSS 750551040 B, load1 before 41.50, started 13:18:53 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-100000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+rung 300000: rc 0, real 2.36 s, max RSS 2339848192 B, load1 before 39.06, started 13:18:54 UTC; {"commit":"d9dac35","config":"sv-mainnet-default","id":"ladder-tx-300000","spec":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txns-oversize","verdict":"invalid"},"input":null,"verdict":"valid"}}
+corpus/tx: rc 0, real 0.28 s, max RSS 265125888 B, load1 before 39.06, started 13:18:56 UTC; 37 lines
+done 13:18:57 UTC
+--- landed rung-1000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.08 real         0.04 user         0.01 sys
+            66420736  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4488  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  66  involuntary context switches
+           464929254  instructions retired
+           167942922  cycles elapsed
+            16433728  peak memory footprint
+--- landed rung-100000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-100000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.81 real         0.71 user         0.06 sys
+           750551040  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               46242  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 319  involuntary context switches
+          9438759975  instructions retired
+          2376693549  cycles elapsed
+           700925008  peak memory footprint
+--- landed rung-16000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.24 real         0.18 user         0.01 sys
+           175767552  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11158  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 290  involuntary context switches
+          2386128817  instructions retired
+           618403562  cycles elapsed
+           125862584  peak memory footprint
+--- landed rung-2000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.11 real         0.05 user         0.01 sys
+            73793536  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                4942  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  85  involuntary context switches
+           598407991  instructions retired
+           197873575  cycles elapsed
+            23839344  peak memory footprint
+--- landed rung-30000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.28 real         0.23 user         0.02 sys
+           266797056  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16712  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                 169  involuntary context switches
+          3057482081  instructions retired
+           788378528  cycles elapsed
+           216924904  peak memory footprint
+--- landed rung-300000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-300000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        2.36 real         2.11 user         0.21 sys
+          2339848192  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              143245  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   4  voluntary context switches
+                 868  involuntary context switches
+         27762516502  instructions retired
+          7105942719  cycles elapsed
+          2291091784  peak memory footprint
+--- landed rung-4000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.10 real         0.06 user         0.01 sys
+            88227840  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                5814  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  57  involuntary context switches
+           851246605  instructions retired
+           248660402  cycles elapsed
+            38257240  peak memory footprint
+--- landed rung-8000.time.txt: /usr/bin/time -l
+bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+        0.14 real         0.10 user         0.01 sys
+           117276672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                7588  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  74  involuntary context switches
+          1363076589  instructions retired
+           363853209  cycles elapsed
+            67322480  peak memory footprint
+--- landed corpus-tx.time.txt: /usr/bin/time -l
+[withheld at export: a sibling tree's line]
+        0.28 real         0.23 user         0.02 sys
+           265125888  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               16617  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  81  involuntary context switches
+          3195904266  instructions retired
+           806609462  cycles elapsed
+           215204536  peak memory footprint

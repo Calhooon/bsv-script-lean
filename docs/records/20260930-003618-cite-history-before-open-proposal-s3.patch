@@ -1,0 +1,13 @@
+--- a/tools/cite_check.py
++++ b/tools/cite_check.py
+@@ -211,6 +211,10 @@
+                     continue
+                 full = os.path.join(dirpath, fn)
+                 site = os.path.relpath(full, ROOT)
++                # History is non-authoritative and can contain owner-closed evidence.
++                # Exclude it before opening, rather than after reading its citations.
++                if site.startswith(HISTORY_PREFIX):
++                    continue
+                 text = open(full, encoding="utf-8", errors="replace").read()
+                 for m in CITE.finditer(text):
+                     path = m.group(1)

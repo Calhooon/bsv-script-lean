@@ -1,0 +1,1230 @@
+{
+ "commit": "662bae70",
+ "delta": [
+  "resolved: scenario:chain-disconnected-now-nonfinal (was open; unexplained): no longer a divergence in this record's sources",
+  "scenario family chain: agree 12 -> 11, diverge 3 -> 2, no-verdict 2 -> 4",
+  "scenario family utxo: agree 22 -> 24, no-verdict 2 -> 0"
+ ],
+ "divergences": [
+  {
+   "citation": "Teranode's freeze path has no hold state by design: the alert service freezes the output in the UTXO store and a block spending it is refused at the store's spend (stores/utxo/aerospike/spend.go:1103-1107), its best header chosen among blocks not marked invalid (stores/blockchain/sql/GetBestBlockHeader.go:134-135) [SRC]. The reference holds such a block out of its best chain for -softconsensusfreezeduration blocks (a setting, default 3, src/validation.h:219; the trigger src/validation.cpp:3402-3406; the hold src/block_index.h:283-285) [SRC] and then activates through it. The chain decision differs on the same blocks once the hold lapses",
+   "class": "chain-split",
+   "detail": "consensus, #153",
+   "id": "soft-freeze-hold-lapse",
+   "key": "list:soft-freeze-hold-lapse",
+   "reference": "the leg's row, named: tl.soft-freeze (during the hold): docs/records/20261016-173411-s8-140-soft-freeze-reference-s3.json (ns-140, #140; the row measured on both oracles (the ledger's `tl.soft-freeze` `measured`)); row c (after the reference's hold lapses): docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.md (hz-94, #94; 8 rows: 3 agree, 3 differ, 2 not run (the signed-alert gossip delivery, go-alert-system v0.1.17's drop))",
+   "reference_record": "",
+   "row": "soft-freeze",
+   "row_kind": "chain-split",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): the chain-split row, issue #153",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "A node built as many services across many machines takes the operator's invalidate from one signed channel, the alert service (services/alert/node.go:160-176 InvalidateBlock; the keys settings/settings.go:198,202) [SRC], beside its RPC handler (services/rpc/handlers.go:1862, #85's contract); the reference takes it from the RPC credential's holder (src/rpc/blockchain.cpp:2732-2768) [SRC]. The authority is a node setting (docs/PARAMETERS.md section 8.10); the action is the same whichever authority admits it",
+   "class": "design",
+   "detail": "policy, #154",
+   "id": "alert-invalidate",
+   "key": "list:alert-invalidate",
+   "reference": "the leg's row, named: row e: docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.md (hz-94, #94; 8 rows: 3 agree, 3 differ, 2 not run (the signed-alert gossip delivery, go-alert-system v0.1.17's drop))",
+   "reference_record": "",
+   "row": "alert-system",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): a design row, issue #154",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "The peer ban arrives at Teranode by the same signed channel (services/alert/node.go:189-216 BanPeer), beside its RPC handler (`setban`, services/rpc/handlers.go:2447, mapped at services/rpc/Server.go:208) [SRC]; the reference bans by RPC (`setban`, `src/rpc/net.cpp:669-757` at `6504a3af`) [SRC]. The authority is a node setting (docs/PARAMETERS.md section 8.10); the trust root changes who, never what (`trust_root_changes_who_not_what`), but the ban's length differs: 100 years by the alert against the reference's `-bantime`, a day by default (`ban_until_differs`), and the reference's ban only lengthens where Teranode's overwrites",
+   "class": "design",
+   "detail": "policy, #154",
+   "id": "alert-ban",
+   "key": "list:alert-ban",
+   "reference": "the leg's row, named: row f: docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.md (hz-94, #94; 8 rows: 3 agree, 3 differ, 2 not run (the signed-alert gossip delivery, go-alert-system v0.1.17's drop))",
+   "reference_record": "",
+   "row": "alert-system",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z8, `94: issues`): a design row, issue #154",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "Teranode's alert service confiscates by reassignment: a frozen output is given a new locking script (stores/utxo/aerospike/alert_system.go:233-270 ReAssignUTXO, teranode.lua:870-958) and stays unspendable for utxostore_reassignedUtxoSpendableAfterBlocks blocks (a node setting, default 1000, settings/settings.go:528; docs/PARAMETERS.md section 8.10) [SRC]; the reference has no reassign and confiscates by a whitelisted confiscation transaction instead (#70; the row rl.alert-service)",
+   "class": "design",
+   "detail": "policy, #94",
+   "id": "alert-reassign",
+   "key": "list:alert-reassign",
+   "reference": "the leg's row, named: the reassign row: docs/records/20261017-203139-s4b-94-teranode-store-half-s4b.md (hz-94s, #94; 8 rows run: agree 6, differ 2; and 1 row not run by name (the alert gossip delivery), the #94 comment's counts)",
+   "reference_record": "",
+   "row": "alert-system",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, the same entry: classified design by lane close-88 under card Z8's framing rule, the class the owner's to confirm at #88's close",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "Teranode marks blocks invalid in its blocks table and its reconsider clears the block it names (services/rpc/handlers.go:1919-2028, services/blockvalidation/BlockValidation.go:2001-2042) [SRC]; the reference's reconsiderblock clears the failure marks of the named block's ancestors and re-activates (src/rpc/blockchain.cpp:2770-2818, src/validation.cpp:4913-5126) [SRC]. Reconsidering the invalidated block itself brings both to the same tip",
+   "class": "design",
+   "detail": "policy, #155",
+   "id": "reconsider-descendant",
+   "key": "list:reconsider-descendant",
+   "reference": "the leg's row, named: row e2 (row e3 restores agreement): docs/records/20261017-180732-s4b-93-teranode-chain-reorg-s4b.md (hz-93, #93; 11 rows: 9 agree, 1 differ, 1 not run (the peer-blocks optimistic-mining opt-in)); row e2 under the alert-driven invalidate: docs/records/20261017-203139-s4b-94-teranode-store-half-s4b.md (hz-94s, #94; 8 rows run: agree 6, differ 2; and 1 row not run by name (the alert gossip delivery), the #94 comment's counts)",
+   "reference_record": "",
+   "row": "invalidation",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z9, `93: finding`): a design row, issue #155",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "Teranode's getchaintips (services/rpc/handlers.go:2928) lists the tips its blocks table reports (services/blockchain/Server.go:1747 GetChainTips) [SRC]; the reference walks its block index (src/rpc/blockchain.cpp:2497-2615) [SRC]. The chain decision agrees; the listing's membership differs",
+   "class": "design",
+   "detail": "policy, #155",
+   "id": "tips-listing",
+   "key": "list:tips-listing",
+   "reference": "the leg's row, named: row g: docs/records/20261017-180732-s4b-93-teranode-chain-reorg-s4b.md (hz-93, #93; 11 rows: 9 agree, 1 differ, 1 not run (the peer-blocks optimistic-mining opt-in))",
+   "reference_record": "",
+   "row": "invalidation",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, S8's divergences ruled 2026-10-17 (card Z9, `93: finding`): a design row, issue #155",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "Teranode has no traditional mempool by design (docs/topics/architecture/teranode-overall-system-design.md:174) [LIT]: an unmined transaction is a store record stamped UnminedSince (stores/utxo/meta/data.go:61) [SRC] and kept, the pruner deleting only mined or conflicting records (Lifetimes.prune_only_mined_or_conflicting); the reference expires a pool entry after -mempoolexpiry (336 hours, policy; src/txmempool.cpp:2201-2220, src/config.cpp:87) [SRC]",
+   "class": "design",
+   "detail": "policy, #92",
+   "id": "unmined-expiry",
+   "key": "list:unmined-expiry",
+   "reference": "the leg's row, named: row b: docs/records/20261017-192745-s4b-92-teranode-lifetimes-s4b.md (hz-92, #92; 26 rows: 23 agree, 3 differ, 0 not run)",
+   "reference_record": "",
+   "row": "unmined-lifetime",
+   "row_kind": "design",
+   "ruling": "docs/PLAN-2026-10-05-SPEC-ALONE.md section 6, the same entry: classified design by lane close-88 under card Z8's framing rule, the class the owner's to confirm at #88's close",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "Teranode has no traditional mempool by design (docs/topics/architecture/teranode-overall-system-design.md:174) [LIT], so there is no pool to bound or trim; the reference trims its pool by size and fee under -maxmempool (policy; `TrimToSize`, `src/txmempool.cpp:2704-2799` at `6504a3af`) [SRC]",
+   "class": "design",
+   "detail": "policy, #92",
+   "id": "pool-eviction",
+   "key": "list:pool-eviction",
+   "reference": "the leg's row, named: the eviction row: docs/records/20261017-192745-s4b-92-teranode-lifetimes-s4b.md (hz-92, #92; 26 rows: 23 agree, 3 differ, 0 not run)",
+   "reference_record": "",
+   "row": "pool-size",
+   "row_kind": "design",
+   "ruling": "the absence ledger's `tl.pool-size`, ruled `gap` by the owner's rule of 2026-10-15 (card W2; `ruling_rule` in corpus/teranode/absences.json)",
+   "source": "the obligation list",
+   "teranode": "the same leg's row (its record withheld by name; the counts are the public ones)"
+  },
+  {
+   "citation": "[SRC] Teranode v0.16.0 at 4edb60a4: model/Block.go:715-736 (CheckHeaderContextual: a header time at or below the median of the eleven headers ending at the parent is an error only when the network's GenerateSupported is false, otherwise a warning, :728-735); go-chaincfg v1.6.2 (the version the tag's go.mod requires) params.go:484 (RegressionNetParams, :450: GenerateSupported true) and :286 (MainNetParams, :251: false). The reference: bitcoin-sv v1.2.3 at 6504a3af src/validation.cpp:5950-5954 (time-too-old on every network).",
+   "class": "open",
+   "detail": "scenario.header-median.regtest-warning",
+   "id": "header/time-at-median",
+   "key": "scenario:header/time-at-median",
+   "reference": "measured agree: {\"reason\":\"time-too-old\",\"status\":\"rejected\"}",
+   "reference_record": "[X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+   "row": "median-time-past",
+   "row_kind": "report",
+   "ruling": "harness/rules/second-oracle-scenarios.json, the class's `ruling` (the owner's under CLAUDE.md rule 15): `open`",
+   "source": "scenario column",
+   "teranode": "diverge: {\"durability\":\"held\",\"height\":109,\"send\":true,\"status\":\"ok\",\"sweep\":{\"active\":true,\"invalid\":false,\"stored\":true}}"
+  },
+  {
+   "citation": "[SRC] Teranode v0.16.0 at 4edb60a4: services/rpc/handlers.go:1919-1960 (reconsiderblock re-validates the block through the block validation service and answers -25 on its failure, :1946-1951), services/blockvalidation/Server.go:1401-1449 (RevalidateBlock: the block's read, its header's read, the subtree fetch, the re-validation). The reference: bitcoin-sv v1.2.3 at 6504a3af src/rpc/blockchain.cpp:2770-2815 (reconsiderblock clears the failure flags, src/validation.cpp:5528, and activates the best chain).",
+   "class": "open",
+   "detail": "scenario.reconsider.revalidation-refused",
+   "id": "chain-invalidate-reconsider",
+   "key": "scenario:chain-invalidate-reconsider",
+   "reference": "measured agree: [{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]},{\"coins\":[\"F\"],\"height\":101,\"held\":[],\"pool\":[\"T\"]},{\"coins\":[\"T\"],\"height\":102,\"held\":[],\"pool\":[]}]",
+   "reference_record": "[X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+   "row": "invalidation",
+   "row_kind": "design",
+   "ruling": "harness/rules/second-oracle-scenarios.json, the class's `ruling` (the owner's under CLAUDE.md rule 15): `open`",
+   "source": "scenario column",
+   "teranode": "diverge: {} (stage subtree-fetch)"
+  },
+  {
+   "citation": "[SRC] Teranode v0.16.0 at 4edb60a4: services/legacy/netsync/manager.go:1789-1801 (handleBlockMsg: a body whose hash is not in requestedBlocks is fed to the chain code on regtest, the peer disconnected with a warning on every other network) and :3156-3159 (BlockRequested answers true on regtest). The reference: bitcoin-sv v1.2.3 at 6504a3af src/validation.cpp:6308-6317 (AcceptBlock, :6238, fHasMoreWork :6281: an unrequested block is processed only with more work than the tip).",
+   "class": "open",
+   "detail": "scenario.unrequested-body.regtest-bridge-admits",
+   "id": "chain-unrequested-equal-work",
+   "key": "scenario:chain-unrequested-equal-work",
+   "reference": "measured agree: {\"bodyAbsent\":true,\"equalWork\":true,\"ignored\":true,\"notFailed\":true}",
+   "reference_record": "[M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+   "row": "chain-selection",
+   "row_kind": "theorem",
+   "ruling": "harness/rules/second-oracle-scenarios.json, the class's `ruling` (the owner's under CLAUDE.md rule 15): `open`; on a theorem row: its premises or the index row owed a reading",
+   "source": "scenario column",
+   "teranode": "diverge: {\"bodyAbsent\":false,\"equalWork\":true,\"ignored\":false,\"notFailed\":true} (fields bodyAbsent, ignored)"
+  }
+ ],
+ "gate": "#95",
+ "host": "box",
+ "mode": "live",
+ "obligations": {
+  "counts": {
+   "chain-split": 1,
+   "design": 16,
+   "open": 17,
+   "report": 10,
+   "theorem": 9,
+   "witness": 1
+  },
+  "rows": {
+   "alert-system": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": true
+   },
+   "bip30": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": false
+   },
+   "block-check": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": false
+   },
+   "block-connect": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": false
+   },
+   "block-order": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "block-persistence": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "block-size": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": false
+   },
+   "block-structure": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": false
+   },
+   "chain-selection": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": true
+   },
+   "checkpoints": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "coinbase-amount": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "coinbase-height": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "coinbase-maturity": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": true
+   },
+   "compact-blocks": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "conflicts": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "difficulty": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "double-spend-notify": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "event-kafka": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "event-surface": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "event-zmq": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "fee-floor": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "finality": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "freeze-confiscation": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": true
+   },
+   "header-context": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "header-pow": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "invalidation": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": true
+   },
+   "median-time-past": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "merkle-proof": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "merkle-root": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": false
+   },
+   "miner-id": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "mining-candidate": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "node-fsm": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "non-final-hold": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "observation-rpc": {
+    "kind": "theorem",
+    "label": "policy",
+    "rerun": false
+   },
+   "orphans": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "pool-persistence": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "pool-size": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": true
+   },
+   "pruning": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "reject-filter": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "reorg": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": true
+   },
+   "safe-mode": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "script-verdict": {
+    "kind": "witness",
+    "label": "consensus",
+    "rerun": true
+   },
+   "script-word": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": false
+   },
+   "sequence-locks": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "soft-freeze": {
+    "kind": "chain-split",
+    "label": "consensus",
+    "rerun": true
+   },
+   "subtrees": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": false
+   },
+   "tx-gate": {
+    "kind": "report",
+    "label": "consensus",
+    "rerun": true
+   },
+   "tx-receive": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "tx-relay": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "unmined-lifetime": {
+    "kind": "design",
+    "label": "policy",
+    "rerun": true
+   },
+   "utxo-spend": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": false
+   },
+   "validation-depth": {
+    "kind": "open",
+    "label": "policy",
+    "rerun": false
+   },
+   "wire-block": {
+    "kind": "open",
+    "label": "consensus",
+    "rerun": false
+   },
+   "wire-tx": {
+    "kind": "theorem",
+    "label": "consensus",
+    "rerun": false
+   }
+  }
+ },
+ "pins": {
+  "reference": {
+   "commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+   "name": "bitcoin-sv",
+   "tag": "v1.2.3"
+  },
+  "teranode": {
+   "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+   "name": "Teranode",
+   "tag": "v0.16.0"
+  }
+ },
+ "previous": "docs/records/20261017-231954-s8-95-gate-report-s3.json",
+ "previous_mode": "dry-run",
+ "previous_note": "no live gate record under docs/records yet, so the newest dry run stands as the previous",
+ "scenario": {
+  "base_commits": [
+   "662bae70"
+  ],
+  "counts": {
+   "block": {
+    "agree": 31,
+    "diverge": 1,
+    "no-verdict": 4,
+    "non-judging": 1,
+    "pending": 0,
+    "rows": 95,
+    "rpc-precheck": 0,
+    "unrealizable": 58
+   },
+   "chain": {
+    "agree": 11,
+    "diverge": 2,
+    "no-verdict": 4,
+    "non-judging": 0,
+    "pending": 0,
+    "rows": 44,
+    "rpc-precheck": 0,
+    "unrealizable": 27
+   },
+   "finality": {
+    "agree": 22,
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 3,
+    "pending": 0,
+    "rows": 114,
+    "rpc-precheck": 0,
+    "unrealizable": 89
+   },
+   "mempool": {
+    "agree": 16,
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 17,
+    "pending": 0,
+    "rows": 115,
+    "rpc-precheck": 1,
+    "unrealizable": 81
+   },
+   "oracle": {
+    "agree": 0,
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rows": 30,
+    "rpc-precheck": 0,
+    "unrealizable": 30
+   },
+   "utxo": {
+    "agree": 24,
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rows": 80,
+    "rpc-precheck": 0,
+    "unrealizable": 56
+   }
+  },
+  "coverage": [],
+  "instance_pins": [
+   "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+  ],
+  "newer_not_read": [],
+  "records": [
+   "docs/records/20261017-234648-s6-66-cut2-second-oracle-s3.json",
+   "docs/records/20261017-235714-s6-66-cut2-second-oracle-s3.json",
+   "docs/records/20261018-001434-s6-66-cut2-second-oracle-s3.json",
+   "docs/records/20261018-002403-s6-66-cut2-second-oracle-s3.json",
+   "docs/records/20261018-003328-s6-66-cut2-second-oracle-s3.json",
+   "docs/records/20261018-004255-s6-66-cut2-second-oracle-s3.json"
+  ],
+  "reference": {
+   "block": {
+    "agree": 47,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "record": "docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.json",
+    "rows": 95,
+    "rpc-precheck": 2,
+    "unrealizable": 46,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   },
+   "chain": {
+    "agree": 38,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "record": "docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.json",
+    "rows": 44,
+    "rpc-precheck": 0,
+    "unrealizable": 6,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   },
+   "finality": {
+    "agree": 76,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "record": "docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.json",
+    "rows": 114,
+    "rpc-precheck": 1,
+    "unrealizable": 37,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   },
+   "mempool": {
+    "agree": 86,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 6,
+    "pending": 0,
+    "record": "docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.json",
+    "rows": 115,
+    "rpc-precheck": 2,
+    "unrealizable": 21,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   },
+   "oracle": {
+    "agree": 30,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "record": "docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.json",
+    "rows": 30,
+    "rpc-precheck": 0,
+    "unrealizable": 0,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   },
+   "utxo": {
+    "agree": 48,
+    "base_commit": "662bae70",
+    "diverge": 0,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "record": "docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.json",
+    "rows": 80,
+    "rpc-precheck": 2,
+    "unrealizable": 30,
+    "version": "Bitcoin SV version v1.2.3.0-g6504a3aff-dev"
+   }
+  },
+  "run_ids": [
+   "gate95-20261017-234627-234648",
+   "gate95-20261017-234627-235714",
+   "gate95-20261017-234627-001434",
+   "gate95-20261017-234627-002403",
+   "gate95-20261017-234627-003328",
+   "gate95-20261017-234627-004255"
+  ]
+ },
+ "script": {
+  "reference": {
+   "arith": {
+    "agree": {
+     "spec": 692,
+     "spec-mempool": 692
+    },
+    "entries": 692,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "bytes": {
+    "agree": {
+     "spec": 512,
+     "spec-mempool": 512
+    },
+    "entries": 512,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-bn_op": {
+    "agree": {
+     "spec": 170,
+     "spec-mempool": 170
+    },
+    "entries": 170,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-lrshiftnum": {
+    "agree": {
+     "spec": 36,
+     "spec-mempool": 36
+    },
+    "entries": 36,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-multisig": {
+    "agree": {
+     "spec": 30,
+     "spec-mempool": 30
+    },
+    "entries": 30,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-opcode": {
+    "agree": {
+     "spec": 144324,
+     "spec-mempool": 144324
+    },
+    "entries": 144324,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-script": {
+    "agree": {
+     "spec": 67991,
+     "spec-mempool": 67991
+    },
+    "entries": 67991,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-script_P2SH": {
+    "agree": {
+     "spec": 64,
+     "spec-mempool": 64
+    },
+    "entries": 64,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-sigopcount": {
+    "agree": {
+     "spec": 6,
+     "spec-mempool": 6
+    },
+    "entries": 6,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-transaction": {
+    "agree": {
+     "spec": 167,
+     "spec-mempool": 167
+    },
+    "entries": 167,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t100-g1-c1": {
+    "agree": {
+     "spec": 1024,
+     "spec-mempool": 1024
+    },
+    "entries": 1024,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t100-g1-c102": {
+    "agree": {
+     "spec": 2048,
+     "spec-mempool": 2048
+    },
+    "entries": 2048,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t100-g102-c102": {
+    "agree": {
+     "spec": 4097,
+     "spec-mempool": 4097
+    },
+    "entries": 4097,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t101-g1-c1": {
+    "agree": {
+     "spec": 4096,
+     "spec-mempool": 4096
+    },
+    "entries": 4096,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t101-g1-c103": {
+    "agree": {
+     "spec": 8192,
+     "spec-mempool": 8192
+    },
+    "entries": 8192,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t101-g102-c1": {
+    "agree": {
+     "spec": 3,
+     "spec-mempool": 3
+    },
+    "entries": 3,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "cpp-txvalidationcache-t101-g103-c103": {
+    "agree": {
+     "spec": 16384,
+     "spec-mempool": 16384
+    },
+    "entries": 16384,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "crypto": {
+    "agree": {
+     "spec": 84,
+     "spec-mempool": 84
+    },
+    "entries": 84,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "eras": {
+    "agree": {
+     "spec": 74,
+     "spec-mempool": 74
+    },
+    "entries": 74,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "flow": {
+    "agree": {
+     "spec": 1094,
+     "spec-mempool": 1094
+    },
+    "entries": 1094,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "gen": {
+    "agree": {
+     "spec": 1157,
+     "spec-mempool": 1157
+    },
+    "entries": 1157,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "million": {
+    "agree": {
+     "spec": 4,
+     "spec-mempool": 4
+    },
+    "entries": 4,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "road": {
+    "agree": {
+     "spec": 13512,
+     "spec-mempool": 13512
+    },
+    "entries": 13512,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "seed": {
+    "agree": {
+     "spec": 10000,
+     "spec-mempool": 10000
+    },
+    "entries": 10000,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "stack": {
+    "agree": {
+     "spec": 262,
+     "spec-mempool": 262
+    },
+    "entries": 262,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   },
+   "tx": {
+    "agree": {
+     "spec": 36,
+     "spec-mempool": 36
+    },
+    "entries": 40,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 1
+   },
+   "xsig-144": {
+    "agree": {
+     "spec": 16,
+     "spec-mempool": 16
+    },
+    "entries": 16,
+    "node": "sv-node@v1.2.3",
+    "witnesses": 0
+   }
+  },
+  "reference_column": {
+   "record": "docs/records/20261018-054323-column-sv-node-v1.2.3-s3.json",
+   "verdict": "column: sv-node v1.2.3 (dry run on the current pin): 1 corpora, 16 entries; agree spec 16 (recorded 16); spec-mempool 16 (recorded 16); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 0 s: REPRODUCED"
+  },
+  "teranode": {
+   "arith-cases": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/arith/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 692,
+      "disagreeing": 0,
+      "entries": 692,
+      "judged": 692,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 692,
+      "disagreeing": 0,
+      "entries": 692,
+      "judged": 692,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "bytes": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/bytes/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 498,
+      "disagreeing": 0,
+      "entries": 512,
+      "judged": 498,
+      "no_reference": 0,
+      "undecided": 12,
+      "unfundable": 2
+     },
+     "mempool": {
+      "agreeing": 498,
+      "disagreeing": 0,
+      "entries": 512,
+      "judged": 498,
+      "no_reference": 0,
+      "undecided": 12,
+      "unfundable": 2
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "crypto-cases": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/crypto/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 84,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 84,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 84,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 84,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "eras": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/eras/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 8,
+      "disagreeing": 0,
+      "entries": 74,
+      "judged": 8,
+      "no_reference": 0,
+      "undecided": 66,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 8,
+      "disagreeing": 0,
+      "entries": 74,
+      "judged": 8,
+      "no_reference": 0,
+      "undecided": 66,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "flow": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/flow/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 1088,
+      "disagreeing": 0,
+      "entries": 1094,
+      "judged": 1088,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 6
+     },
+     "mempool": {
+      "agreeing": 1088,
+      "disagreeing": 0,
+      "entries": 1094,
+      "judged": 1088,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 6
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "gen": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/gen/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 958,
+      "disagreeing": 0,
+      "entries": 1157,
+      "judged": 958,
+      "no_reference": 0,
+      "undecided": 177,
+      "unfundable": 22
+     },
+     "mempool": {
+      "agreeing": 958,
+      "disagreeing": 0,
+      "entries": 1157,
+      "judged": 958,
+      "no_reference": 0,
+      "undecided": 177,
+      "unfundable": 22
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "road": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-00000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-03000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-06000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-09000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-12000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 13419,
+      "disagreeing": 0,
+      "entries": 13512,
+      "judged": 13419,
+      "no_reference": 0,
+      "undecided": 85,
+      "unfundable": 8
+     },
+     "mempool": {
+      "agreeing": 13417,
+      "disagreeing": 0,
+      "entries": 13512,
+      "judged": 13417,
+      "no_reference": 0,
+      "undecided": 87,
+      "unfundable": 8
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "seed": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-00000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-03000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-06000.manifest.json",
+     "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-09000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 9988,
+      "disagreeing": 0,
+      "entries": 10000,
+      "judged": 9988,
+      "no_reference": 0,
+      "undecided": 12,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 9986,
+      "disagreeing": 0,
+      "entries": 10000,
+      "judged": 9986,
+      "no_reference": 0,
+      "undecided": 14,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "stack-cases": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/stack/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 262,
+      "disagreeing": 0,
+      "entries": 262,
+      "judged": 262,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 262,
+      "disagreeing": 0,
+      "entries": 262,
+      "judged": 262,
+      "no_reference": 0,
+      "undecided": 0,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   },
+   "tx": {
+    "corpus_moved": [],
+    "instance_commits": [
+     "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+    ],
+    "manifests": [
+     "harness/engines/instance41/runs/20261017-234627-gate/tx/chunk-00000.manifest.json"
+    ],
+    "paths": {
+     "block": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 40,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 40,
+      "unfundable": 0
+     },
+     "mempool": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 40,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 40,
+      "unfundable": 0
+     }
+    },
+    "run": "harness/engines/instance41/runs/20261017-234627-gate"
+   }
+  }
+ },
+ "sources": {
+  "corpus/teranode/absences.json": "389b4e6a8ab8f9607e19404700db889de7d433c43bb906746a9ea7c3a9a098ce",
+  "corpus/teranode/obligations.json": "a223626720608b8bdda92f07d7ff122b59d3641f9226d5c14b906192a18dcfcf",
+  "corpus/witnesses/sv-node/manifest.json": "d7efea1218cb6b67fd6bf55437e4c1fa3faeb25f7ca90d2e7f03302002464849",
+  "docs/records/20261017-234648-s6-66-cut2-second-oracle-s3.json": "311b34863e0a38732467fca4fde69863af82d1f205446b6b86a0129e8b93acdf",
+  "docs/records/20261017-235714-s6-66-cut2-second-oracle-s3.json": "d6358e0de8195e536cb2765c496ea43f4d4addcdfbd0287e133bf10b2bcbb529",
+  "docs/records/20261018-001434-s6-66-cut2-second-oracle-s3.json": "8588c7b8809bbb908a6f06411dd51e4ce3a91baa909073cd14f57708bdcb876c",
+  "docs/records/20261018-002403-s6-66-cut2-second-oracle-s3.json": "0ffdb44a1c64fe475fc302b02d3f36331c0bbfda11a135480f9c703699ff955e",
+  "docs/records/20261018-003328-s6-66-cut2-second-oracle-s3.json": "8e94545de49ccd4a7ec7322586984f8adf04adae46c27d5b1c18b6c18cc4ea26",
+  "docs/records/20261018-004255-s6-66-cut2-second-oracle-s3.json": "3c9b847dfe4ae468c02e8d47e6c0e17cefbf7cc4cf900f284d6a72b5df302158",
+  "docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.json": "70b364459173b086fc2b3a52f06e06cf95a15fbbd2928c26681581dfcb88e102",
+  "docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.json": "cd33dc37825913aedf6dd589119e2e775542e841de2f5c7258bd2c4baa893d4f",
+  "docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.json": "177aefdc4b8194c3cd61f76e690daff5452d70823632c4ea56b5950ea9251292",
+  "docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.json": "027897f13de94b6e305fce5c566ebd0404bcd6c76f662ebc4385d35dfcb7faa8",
+  "docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.json": "8bdc870d9ec90b5aa87bee28f0994d406e868548496ec13ac2d4852da74308fd",
+  "docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.json": "295444194bccb89d3d7fa30d93d98465df9d55eb201109c935bbaaf045d2cb5a",
+  "docs/records/20261018-054323-column-sv-node-v1.2.3-s3.json": "1986a00bbcfb9d07e9e936c33cdafc38411f478a0bbdb4d36f34e1878f3aca3e",
+  "harness/engines/instance41/runs/20261017-234627-gate/arith/chunk-00000.manifest.json": "1d02e8d41667705853854d7482209dc6ffbf21d8a8aae9f5126b616e7344cc50",
+  "harness/engines/instance41/runs/20261017-234627-gate/bytes/chunk-00000.manifest.json": "4f4e253f9863153f536983e6bc1a38c1da1eef93e1de0c9376ad724abc43fd0d",
+  "harness/engines/instance41/runs/20261017-234627-gate/crypto/chunk-00000.manifest.json": "bf4acedc309863bc590e91e703899a16b2edca5bab6e538763547358382a7c45",
+  "harness/engines/instance41/runs/20261017-234627-gate/eras/chunk-00000.manifest.json": "b62c7206ffd588d20c650c9505e3ee9b77c0ea835882bff4985a1959c423ee0d",
+  "harness/engines/instance41/runs/20261017-234627-gate/flow/chunk-00000.manifest.json": "e9542df324ddaa4aeab92a3ae52ffe0fd38470aa82bb5bff0d560f7f517f98c5",
+  "harness/engines/instance41/runs/20261017-234627-gate/gen/chunk-00000.manifest.json": "8a5a565f17dc8318752b2a6abb955cfeb1766b8d7769b3ceb7de90f5dd0c6232",
+  "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-00000.manifest.json": "b16346c0d01366586e1f440dfc9eef9fc09356b04e1daf077a96bf4a3f6dad5f",
+  "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-03000.manifest.json": "a479b0db8ba6ba9c5de2552f25b2435749729a128e0a91fe6d3a39b4b8768990",
+  "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-06000.manifest.json": "cdc66d7d983febf3432f28000407c251b15439c8dab83261bb098ed7733c7913",
+  "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-09000.manifest.json": "e37fa06e6aaef8165c101b2ffedf99292ce8da92d93c9111f6352aeff7e6312e",
+  "harness/engines/instance41/runs/20261017-234627-gate/road/chunk-12000.manifest.json": "d6c3351af9986daf78fad481d55eae356d820850587cba1672b501e153da452f",
+  "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-00000.manifest.json": "1b1333220560bc4268c6ab0a6ade299af9b540c8ac0e41da5316da98c5b5f4c7",
+  "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-03000.manifest.json": "56b84330c969a78e62aa1075929d3f541b12168a224dcf5830c3755704911256",
+  "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-06000.manifest.json": "542dc153c63b318f51c871d3bfc86633e5ad5dac4943aaa8435f943bdf338193",
+  "harness/engines/instance41/runs/20261017-234627-gate/seed/chunk-09000.manifest.json": "38157321b015ac5952d6e5ccf19741c1ca53f6f0aabf3c2e3a1d26c6aa5ffdcc",
+  "harness/engines/instance41/runs/20261017-234627-gate/stack/chunk-00000.manifest.json": "d7a9aeecb9b025c8b1e09c075ff3ad931df61f30f1a467155fe72d805d961e0e",
+  "harness/engines/instance41/runs/20261017-234627-gate/tx/chunk-00000.manifest.json": "a1ce7c5109aac4e91c39570a85b2716fa6df1abc6429d5bdd36f7d73d8fcbf16",
+  "harness/rules/second-oracle-scenarios.json": "df134aa96e11384b76df61ae1dd32dcfd2d431cc13834369b6abb49239b44478",
+  "harness/rules/teranode-gate.json": "5d7dff25473085a33a7a2ac00248e0a177dba2110e2419a38f1e8616d8b08da2"
+ },
+ "stamp": "20261017-234627"
+}

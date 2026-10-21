@@ -1,0 +1,24 @@
+{
+  "entries": 67,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/cscript_tests.jsonl",
+  "undecided": {
+    "a predicate (CScript::GetOp2, layer consensus): the drivers judge spends, and none has a hook that runs it": 14,
+    "a predicate (CScript::GetSigOpCount (P2SH, from the unlocking script), layer both): the drivers judge spends, and none has a hook that runs it": 16,
+    "a predicate (CScript::GetSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": 37
+  },
+  "undecided_ids": {
+    "a predicate (CScript::GetOp2, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-cscript-00001..00014"
+    ],
+    "a predicate (CScript::GetSigOpCount (P2SH, from the unlocking script), layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-cscript-00052..00067"
+    ],
+    "a predicate (CScript::GetSigOpCount, layer both): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-cscript-00015..00051"
+    ]
+  }
+}

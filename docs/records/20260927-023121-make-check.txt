@@ -1,0 +1,118 @@
+[export: 4 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: ecee407 (8 uncommitted paths at the start of the run, 8 at its end)
+started: 20260927-023121 UTC; wall: 356s (5 min 56 s)
+[withheld at export: a sibling tree's line]
+status: GREEN
+legs (the verdict lines, in order):
+  check-pins: GREEN (60 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite_check: 1418 citations found in lean/ and docs/ (1401 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1059, MOVED 0; not anchored (reported, never RED): unanchored 9, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 6, other-version 2, self 168, history 170, absent 0, orphan rows 2; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+  lean: build OK, sorry-free
+  axiom check: OK (301 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.28: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.3.28 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+  sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.28 ECDSA); 0 failures; negative control bit-flip fails on every entry
+  arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.28 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+  arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+  stackcheck: 262 engine cases; comparable 260: agree 260, mismatch 0, unimplemented 0; recorded (not counted) 2
+  crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+  crypto: ECDSA vectors from bsv-rs 0.3.28: 1340 cases, 0 mismatches
+  crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+  crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+  seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and expansion opcodes of #11/#18) and 0 elsewhere
+  scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  txtests bitcoin-sv-v1.2.2-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+  txtests bitcoin-sv-v1.2.2-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+  flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  specgen --check: OK (117 files up to date; 2 rules flagged)
+  bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+  versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+  erascheck: 74 rows × 2 cells = 148 cells decided under Params.derive (SV-node's mainnet defaults, block and mempool) with the error code (eras 128, p2sh 16, p2sh-txlevel 4); 2 rows decided at the transaction level (CheckRegularTransaction): 0 mismatches
+  witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+  witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: witness-policy-00003 witness-policy/tx-size (params.policy.maxtxsizepolicy): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: 3 witness transactions decided under both nodes' derived parameters, 0 mismatches
+  bsvs --self-test
+  bsvs --self-test: GREEN
+  run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.3.28 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided=0 nondeterminism=0, 0.1s
+  run_bsvrs --smoke: GREEN (10000 entries agree with their recorded bsv-rs verdicts)
+  run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.28 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the block word per input, the spec-mempool column under the standard word per input, from the entry's spend height and the coin's height (engine::word_for); entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@ecee407 (sv-mainnet-default); 0.2s
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.5.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.5.2 (docs/PROVENANCE.md §1a)); the spec at spec@ecee407 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 0.9s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@2.8.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 2.8.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@ecee407 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.9s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  rules_check: go-sdk on arith: 692 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 8 divergent runs in 1 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: go-sdk on bytes: 512 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 149 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on crypto: 84 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 15 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on eras: 74 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 9 divergent runs in 5 classes; EQUAL to the manifest
+  rules_check: go-sdk on flow: 1094 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 307 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on gen: 1008 entries replayed from go-sdk@v1.5.2 (spec spec@badb898 recorded in the corpus); 66 divergent runs in 14 classes; EQUAL to the manifest
+  rules_check: go-sdk on seed: 10000 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 1002 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: go-sdk on stack: 262 entries replayed from go-sdk@v1.5.2 (spec spec@e78a043 recorded in the corpus); 4 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on tx: 37 entries replayed from go-sdk@v1.5.2 (spec spec@6c949a6 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: ts-sdk on arith: 692 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 136 divergent runs in 6 classes; EQUAL to the manifest
+[withheld at export: a sibling tree's line]
+  rules_check: ts-sdk on bytes: 512 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 from eval/bsvs corpus, the corpus carrying no spec key); 309 divergent runs in 4 classes; EQUAL to the manifest
+  rules_check: ts-sdk on crypto: 84 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 30 divergent runs in 9 classes; EQUAL to the manifest
+  rules_check: ts-sdk on eras: 74 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 114 divergent runs in 14 classes; EQUAL to the manifest
+  rules_check: ts-sdk on flow: 1094 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 612 divergent runs in 6 classes; EQUAL to the manifest
+  rules_check: ts-sdk on gen: 1008 entries replayed from ts-sdk@2.8.0 (spec spec@badb898 recorded in the corpus); 135 divergent runs in 27 classes; EQUAL to the manifest
+  rules_check: ts-sdk on seed: 10000 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 1162 divergent runs in 3 classes; EQUAL to the manifest
+  rules_check: ts-sdk on stack: 262 entries replayed from ts-sdk@2.8.0 (spec spec@e78a043 recorded in the corpus); 16 divergent runs in 6 classes; EQUAL to the manifest
+  rules_check: ts-sdk on tx: 37 entries replayed from ts-sdk@2.8.0 (spec spec@6c949a6 recorded in the corpus); 40 divergent runs in 6 classes; EQUAL to the manifest
+  rules_check: bsv-rs on arith: 692 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on crypto: 84 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on eras: 74 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on flow: 1094 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on gen: 1008 entries run live under the two words (bsv-rs@0.3.28; spec spec@badb898); 58 divergent runs in 10 classes; EQUAL to the manifest
+  rules_check: bsv-rs on seed: 10000 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on stack: 262 entries run live under the two words (bsv-rs@0.3.28; spec spec@e78a043); 4 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: bsv-rs on tx: 37 entries run live under the two words (bsv-rs@0.3.28; spec spec@6c949a6); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: GREEN (the tables reproduce every recorded classification) (26 corpus × engine manifests, 40777 entries replayed, 4176 divergent runs classified; 0 s)
+  make check: GREEN (stubs are listed above by name; a stub is not a pass)
+[withheld at export: a sibling tree's line]
+  sample 02:31:21 UTC: load1 7.08; over 5% cpu: other programs: 5 processes, 272% cpu; 
+  sample 02:31:31 UTC: load1 7.53; over 5% cpu: rustc 95% 0.2GB; rustc 22% 0.1GB; rustc 76% 0.1GB; rustc 65% 0.2GB; other programs: 11 processes, 266% cpu; 
+  sample 02:31:41 UTC: load1 7.43; over 5% cpu: other programs: 5 processes, 186% cpu; 
+  sample 02:31:51 UTC: load1 7.61; over 5% cpu: lean 41% 0.2GB; other programs: 6 processes, 75% cpu; 
+  sample 02:32:01 UTC: load1 7.69; over 5% cpu: lean 27% 1.2GB; other programs: 2 processes, 49% cpu; 
+  sample 02:32:11 UTC: load1 7.77; over 5% cpu: lean 14% 3.1GB; other programs: 7 processes, 80% cpu; 
+  sample 02:32:21 UTC: load1 7.04; over 5% cpu: lean 12% 4.4GB; other programs: 1 processes, 10% cpu; 
+  sample 02:32:31 UTC: load1 7.78; over 5% cpu: lake 248% 0.8GB; other programs: 9 processes, 122% cpu; 
+  sample 02:32:41 UTC: load1 7.03; over 5% cpu: lake 241% 0.7GB; other programs: 3 processes, 26% cpu; 
+  sample 02:32:51 UTC: load1 6.49; over 5% cpu: lean 18% 4.3GB; other programs: 4 processes, 49% cpu; 
+  sample 02:33:01 UTC: load1 6.33; over 5% cpu: lake 132% 0.9GB; lean 58% 0.2GB; other programs: 2 processes, 79% cpu; 
+  sample 02:33:12 UTC: load1 6.27; over 5% cpu: lake 398% 0.8GB; other programs: 6 processes, 84% cpu; 
+  sample 02:33:22 UTC: load1 6.55; over 5% cpu: lean 98% 1.1GB; lean 93% 0.3GB; other programs: 6 processes, 172% cpu; 
+  sample 02:33:32 UTC: load1 6.79; over 5% cpu: lake 460% 0.8GB; lake 30% 0.7GB; other programs: 3 processes, 42% cpu; 
+  sample 02:33:42 UTC: load1 6.66; over 5% cpu: lake 101% 0.9GB; lake 76% 0.6GB; other programs: 6 processes, 122% cpu; 
+  sample 02:33:52 UTC: load1 8.22; over 5% cpu: lake 58% 1.0GB; lake 40% 0.6GB; lake 63% 0.6GB; other programs: 7 processes, 202% cpu; 
+  sample 02:34:02 UTC: load1 8.17; over 5% cpu: lake 330% 0.8GB; lake 290% 0.7GB; lean 64% 0.5GB; other programs: 2 processes, 66% cpu; 
+  sample 02:34:12 UTC: load1 8.65; over 5% cpu: lean 10% 3.4GB; lean 10% 3.4GB; lake 47% 0.3GB; other programs: 5 processes, 206% cpu; 
+  sample 02:34:22 UTC: load1 8.57; over 5% cpu: lake 333% 0.8GB; lean 84% 0.2GB; other programs: 4 processes, 110% cpu; 
+  sample 02:34:32 UTC: load1 9.85; over 5% cpu: lean 100% 4.8GB; .laketxtests 19% 0.1GB; other programs: 2 processes, 79% cpu; 
+  sample 02:34:42 UTC: load1 9.11; over 5% cpu: lake 359% 0.7GB; lake 10% 0.1GB; other programs: 3 processes, 44% cpu; 
+  sample 02:34:52 UTC: load1 8.99; over 5% cpu: lean 33% 1.0GB; lake 100% 0.9GB; other programs: 2 processes, 110% cpu; 
+  sample 02:35:02 UTC: load1 8.07; over 5% cpu: lean 13% 3.4GB; lake 387% 0.7GB; 
+  sample 02:35:12 UTC: load1 7.43; over 5% cpu: lake 14% 1.0GB; .lakewitnesscheck 99% 3.1GB; clang 28% 0.0GB; other programs: 3 processes, 72% cpu; 
+  sample 02:35:22 UTC: load1 7.46; over 5% cpu: lake 103% 0.9GB; lake 376% 0.8GB; other programs: 3 processes, 152% cpu; 
+  sample 02:35:32 UTC: load1 7.45; over 5% cpu: run_engine 15% 0.0GB; node 116% 0.1GB; other programs: 2 processes, 200% cpu; 
+  sample 02:35:42 UTC: load1 7.37; over 5% cpu: other programs: 2 processes, 150% cpu; 
+  sample 02:35:53 UTC: load1 6.91; over 5% cpu: lean 21% 2.3GB; other programs: 4 processes, 130% cpu; 
+  sample 02:36:03 UTC: load1 6.47; over 5% cpu: lean 126% 5.3GB; other programs: 4 processes, 129% cpu; 
+  sample 02:36:13 UTC: load1 6.45; over 5% cpu: lake 9% 1.0GB; lean 34% 0.6GB; other programs: 2 processes, 41% cpu; 
+  sample 02:36:23 UTC: load1 6.52; over 5% cpu: lean 10% 3.1GB; other programs: 3 processes, 61% cpu; 
+  sample 02:36:33 UTC: load1 6.76; over 5% cpu: other programs: 8 processes, 215% cpu; 
+  sample 02:36:43 UTC: load1 7.28; over 5% cpu: lake 312% 0.8GB; other programs: 5 processes, 169% cpu; 
+  sample 02:36:53 UTC: load1 7.09; over 5% cpu: .lakewitnesscheck 100% 3.1GB; other programs: 3 processes, 183% cpu; 
+  sample 02:37:03 UTC: load1 6.84; over 5% cpu: lake 316% 0.8GB; other programs: 6 processes, 113% cpu; 
+  sample 02:37:13 UTC: load1 6.48; over 5% cpu: other programs: 5 processes, 252% cpu; 

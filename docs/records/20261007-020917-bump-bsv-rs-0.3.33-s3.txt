@@ -1,0 +1,58 @@
+bsv-rs 0.3.33 pin bump: foreground validation receipt
+base: 4222d12e67345b4fbe3836e97f3291cb4bfdc94b plus the tested lane changes committed as 1184f0b95b220ac7b8daaf2e3cef3b44ff77a34b
+branch: lane/bump-0333
+upstream: a395c72fe5a7e5ca7a625b1c1bebfe755435620d
+checksum: dcb878969c663f4aad400775420e1308239af7f253b714748b03f988d8832efb
+box snapshot: ~/bsv/targets/spec-bump-0333-tree
+51 harness source/test/rule/pin and tripwire files and all 26 stored corpora matched the Studio worktree byte-for-byte.
+
+BOX: CARGO_BUILD_JOBS=4 cargo build --release --locked; 2026-10-07T02:01:21Z, load1 1.35, completed in 18.57 s.
+STUDIO: same build; 2026-10-07T02:05:09Z, load1 19.06, completed in 27.99 s.
+BOX: foreground check.sh legs under box leg lock and Lean slot; 2026-10-07T02:10:47Z to 02:11:38Z.
+Box leg-start load1 values: pins 3.67; remaining recorded starts stayed under 20.
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh pins
+check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 10 skipped by name: the reference clone, GoBDK's embedded reference clone, the Teranode clone, the built gobdk-runner, the go-chaincfg clone, the GoBDK clone, the go-sdk clone, the ts-stack clone, the predecessor-harness clone, the predecessor-lean clone)
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh numbers
+numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.33: 0 mismatch(es)
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh sighash
+sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+sighash: bsv-rs 0.3.33 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+sighash: GREEN (the ECDSA leg follows)
+sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.33 ECDSA); 0 failures; the negative control (a bit-flipped digest) fails to verify on 8 of 8 entries
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh arith
+arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.33 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh crypto
+crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+crypto: ECDSA vectors from bsv-rs 0.3.33: 1340 cases, 0 mismatches
+crypto: the curve's facts (2·G, n·G = O, (n−1)·G = −G) and the key-1 signature of RFC 6979's nonce procedure (two keys, a flipped digest bit): 0 mismatches
+crypto: the lax parser's sequence length (88 01×8, 87 01×7 verify; an overlong form fails): 0 mismatches
+crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+
+command: env -u BASH_ENV bash --noprofile --norc tools/check.sh harness
+run_bsvrs --smoke: GREEN (10000 of 10000 entries compared, every one agreeing with its recorded bsv-rs verdict; no panic, no nondeterminism)
+run_diff: GREEN (every divergence explained by a rule with its citation)
+run_engine: GREEN (every divergence explained by a rule with its citation)
+run_engine: GREEN (every divergence explained by a rule with its citation)
+rules_check: GREEN (the tables reproduce the classes, counts, smallest witnesses and rulings of the go-sdk, ts-sdk, gobdk, sv-node and bsv-rs manifests; policy-defaults has no classifier rows) (79 corpus × engine manifests, 593871 entries replayed, 155886 divergent runs classified; 3 s)
+
+command: CARGO_BUILD_JOBS=4 cargo test --release --locked
+46 tests passed in total; 0 failed; crate_pins 3 of 3 passed.
+
+STUDIO: cite_check: 2558 citations found in lean/ and docs/ (2549 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1198, MOVED 0; not anchored (reported, never RED): unanchored 991, beyond-eof 0, unresolved 2, ambiguous 3, unpinned 0, other-version 142, self 222, history 0, absent 0, orphan rows 499; skipped 0
+STUDIO: cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)
+
+AUDIT GREEN 276063 entries; old keys {'bsv-rs@0.3.32': 13915, 'absent': 262144, 'bsv-rs@0.3.30': 4} ; native {'valid': 100073, 'invalid': 175917, 'undecided': 73} ; newly agreeing with both node columns {'gen': 58, 'road': 2}
+
+All 26 run_diff logs end GREEN. All four cmp checks returned 0 on the box and at home.
+ROUTE: CLAUDE.md rule 17; required foreground legs completed on the box.
+STUDIO REPEAT: stopped before setup or tests at 2026-10-07T02:22:55Z, load1 100.27. No queued leg remains running.
+Full 21-leg landing tripwire: not run by this lane.

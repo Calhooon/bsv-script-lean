@@ -1,0 +1,5264 @@
+{
+  "arith": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 692,
+      "spec-mempool": 692
+    },
+    "code_notes": [],
+    "corpus": "../corpus/arith/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 692,
+    "file": "arith.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 684
+        },
+        "code_notes": [],
+        "corpus": "../corpus/arith/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 692,
+        "file": "arith.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 8,
+            "from": "arith-00351",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-arith-spec-mempool-flags.version-gate.absent-arith-00351"
+          }
+        ],
+        "sha256": "bbc8a94911d1939d7421fcef1636666a37da8ba9c93769d6c191f9ea41198eed",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1384,
+          "SCRIPT_GENESIS": 1384
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 684
+        },
+        "code_notes": [],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/arith/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 692,
+        "file": "arith.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 8,
+            "from": "arith-00351",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-arith-spec-mempool-flags.version-gate.absent-arith-00351"
+          }
+        ],
+        "sha256": "5c93985ba769fe0aff68fd95d22bade73e13ca875564421fa6e3bf5c88ba2d08",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1384,
+          "SCRIPT_GENESIS": 1384
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "bytes": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 512,
+      "spec-mempool": 512
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 10,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 6,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      }
+    ],
+    "corpus": "../corpus/bytes/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 512,
+    "file": "bytes.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 363
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 20,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_SIG_DER"
+          }
+        ],
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 512,
+        "file": "bytes.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 149,
+            "from": "bytes-00002",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-bytes-spec-mempool-flags.version-gate.absent-bytes-00002"
+          }
+        ],
+        "sha256": "347d869ca7fc4b138f0c9859c1c567833b8454105e8ab56494dbb4fb9d98bd63",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1024,
+          "SCRIPT_GENESIS": 1024
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 363
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 4,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 20,
+            "node": "SCRIPT_ERR_CLEANSTACK",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 6,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 4,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 512,
+        "file": "bytes.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 149,
+            "from": "bytes-00002",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-bytes-spec-mempool-flags.version-gate.absent-bytes-00002"
+          }
+        ],
+        "sha256": "a98abe6d91e50628e25a969ffe1a1c2e4fc271a426330e5fd0edaf0ffb9ef171",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 1024,
+          "SCRIPT_GENESIS": 1024
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "cpp-bn_op": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 170,
+      "spec-mempool": 170
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 3,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      }
+    ],
+    "corpus": "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 170,
+    "file": "cpp-bn_op.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-lrshiftnum": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 36,
+      "spec-mempool": 35
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 36,
+    "file": "cpp-lrshiftnum.jsonl",
+    "generated": "2026-10-12",
+    "rules": [
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+        "entries": 1,
+        "from": "cpp-lrshiftnum-00018",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-go-sdk-cpp-lrshiftnum-spec-mempool-limits.maxscriptnumlength.policy-cpp-lrshiftnum-00018"
+      }
+    ],
+    "sha256": "ee718638744f99efce01e8abc62e71e05e03160d9f7b9233bb931aaba9c31984",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-multisig": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 30,
+      "spec-mempool": 30
+    },
+    "code_notes": [
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_MUST_USE_FORKID",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      }
+    ],
+    "corpus": "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 30,
+    "file": "cpp-multisig.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-opcode": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 144324,
+      "spec-mempool": 144324
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 1062,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 13,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 3186,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 5,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+        "entries": 6,
+        "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+      }
+    ],
+    "corpus": "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 144324,
+    "file": "cpp-opcode.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 600000,
+        "word": 346111
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-script": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 67991,
+      "spec-mempool": 67991
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_MUST_USE_FORKID",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_MUST_USE_FORKID",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_ILLEGAL_CHRONICLE",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      }
+    ],
+    "corpus": "../corpus/cpp/replay/cpp-script/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 67991,
+    "file": "cpp-script.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-script_P2SH": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 64,
+      "spec-mempool": 64
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 12,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 12,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      }
+    ],
+    "corpus": "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 64,
+    "file": "cpp-script_P2SH.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-sigopcount": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 6,
+      "spec-mempool": 6
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 6,
+    "file": "cpp-sigopcount.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-transaction": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 167,
+      "spec-mempool": 167
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 167,
+    "file": "cpp-transaction.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 600000,
+        "word": 346111
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g1-c1": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 1024,
+      "spec-mempool": 1024
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 1024,
+    "file": "cpp-txvalidationcache-t100-g1-c1.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 512
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g1-c102": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 2048,
+      "spec-mempool": 2048
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 2048,
+    "file": "cpp-txvalidationcache-t100-g1-c102.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 1024
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g102-c102": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 4097,
+      "spec-mempool": 4097
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 4097,
+    "file": "cpp-txvalidationcache-t100-g102-c102.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 2048
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g1-c1": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 4096,
+      "spec-mempool": 4096
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 4096,
+    "file": "cpp-txvalidationcache-t101-g1-c1.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 2048
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g1-c103": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 8192,
+      "spec-mempool": 8192
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 8192,
+    "file": "cpp-txvalidationcache-t101-g1-c103.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 4096
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g102-c1": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 3,
+      "spec-mempool": 3
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 3,
+    "file": "cpp-txvalidationcache-t101-g102-c1.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 1394687
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g103-c103": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 16384,
+      "spec-mempool": 16384
+    },
+    "code_notes": [],
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 16384,
+    "file": "cpp-txvalidationcache-t101-g103-c103.jsonl",
+    "generated": "2026-10-12",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {
+      "SCRIPT_VERIFY_COMPRESSED_PUBKEYTYPE": 8192
+    },
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 83935
+      }
+    ]
+  },
+  "crypto": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 84,
+      "spec-mempool": 84
+    },
+    "code_notes": [],
+    "corpus": "../corpus/crypto/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 84,
+    "file": "crypto.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 78,
+          "spec-mempool": 75
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          }
+        ],
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 84,
+        "file": "crypto.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 6,
+            "from": "crypto-00012",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-crypto-spec-flags.version-gate.absent-crypto-00012"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 9,
+            "from": "crypto-00039",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-crypto-spec-mempool-flags.version-gate.absent-crypto-00039"
+          }
+        ],
+        "sha256": "44999f39eb62086778e04850795c34832381fe2630f3bdef1acc3a02bbfc83f9",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 168,
+          "SCRIPT_GENESIS": 168
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 78,
+          "spec-mempool": 75
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_HIGH_S",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 5,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "node": "SCRIPT_ERR_EVAL_FALSE",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HIGH_S",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_HIGH_S",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 5,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_EVAL_FALSE",
+            "entries": 2,
+            "node": "SCRIPT_ERR_EVAL_FALSE",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HIGH_S",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HIGH_S",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 84,
+        "file": "crypto.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 6,
+            "from": "crypto-00012",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-crypto-spec-flags.version-gate.absent-crypto-00012"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 9,
+            "from": "crypto-00039",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-crypto-spec-mempool-flags.version-gate.absent-crypto-00039"
+          }
+        ],
+        "sha256": "5146364f619ff7291fef40ba2b3af825f2416d0856b6381b1a957ffef35f269e",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 168,
+          "SCRIPT_GENESIS": 168
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "eras": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 74,
+      "spec-mempool": 73
+    },
+    "code_notes": [
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_MUST_USE_FORKID",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      }
+    ],
+    "corpus": "../corpus/eras/eras.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 74,
+    "file": "eras.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 70,
+          "spec-mempool": 69
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          }
+        ],
+        "corpus": "../corpus/eras/eras.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 74,
+        "file": "eras.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 2,
+            "from": "eras-00045",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-flags.version-gate.absent-eras-00045"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 1,
+            "from": "eras-00058",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-sighash.must-use-forkid-eras-00058"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–547,551–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "eras-00064",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-sighash.type.chronicle-bit-eras-00064"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 4,
+            "from": "eras-00006",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-mempool-flags.version-gate.absent-eras-00006"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–547,551–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "eras-00064",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-mempool-sighash.type.chronicle-bit-eras-00064"
+          }
+        ],
+        "sha256": "1a8fa7ea01aca3794a38f7a44d69c5b36712d3ea729e629f16862f3a0c5fcda5",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 108,
+          "SCRIPT_GENESIS": 112
+        },
+        "witnesses": 5,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 70,
+          "spec-mempool": 69
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 1,
+            "node": "SCRIPT_ERR_MINIMALDATA",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 2,
+            "node": "SCRIPT_ERR_MINIMALDATA",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/eras/eras.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 74,
+        "file": "eras.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 2,
+            "from": "eras-00045",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-flags.version-gate.absent-eras-00045"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 1,
+            "from": "eras-00058",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-sighash.must-use-forkid-eras-00058"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "eras-00064",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-sighash.type.chronicle-bit-eras-00064"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 4,
+            "from": "eras-00006",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-mempool-flags.version-gate.absent-eras-00006"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "eras-00064",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-eras-spec-mempool-sighash.type.chronicle-bit-eras-00064"
+          }
+        ],
+        "sha256": "ce0cbcb16b4f9a2ad12ca47208c367b79ca38319f7db45fb01d7a89c6f48d46a",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 108,
+          "SCRIPT_GENESIS": 112
+        },
+        "witnesses": 5,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+        "entries": 1,
+        "from": "eras-00042",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-go-sdk-eras-spec-mempool-limits.maxscriptnumlength.policy-eras-00042"
+      }
+    ],
+    "sha256": "35e4a1204031b438af20ece10786daea75572aa4c30d597e4b5b8fc4ba64d3f6",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 0
+      },
+      {
+        "consensus": false,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ]
+  },
+  "flow": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 1094,
+      "spec-mempool": 1094
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      }
+    ],
+    "corpus": "../corpus/flow/flow.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 1094,
+    "file": "flow.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1089,
+          "spec-mempool": 792
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          }
+        ],
+        "corpus": "../corpus/flow/flow.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1094,
+        "file": "flow.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 5,
+            "from": "flow-00961",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-flow-spec-flags.version-gate.absent-flow-00961"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 302,
+            "from": "flow-01005",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-flow-spec-mempool-flags.version-gate.absent-flow-01005"
+          }
+        ],
+        "sha256": "8a21822e388ad9ce03c03c2ab6025de67352a33138a5071ef6891348e44b0d73",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2188,
+          "SCRIPT_GENESIS": 2188
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1089,
+          "spec-mempool": 792
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 4,
+            "node": "SCRIPT_ERR_CLEANSTACK",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 5,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/flow/flow.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1094,
+        "file": "flow.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 5,
+            "from": "flow-00961",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-flow-spec-flags.version-gate.absent-flow-00961"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 302,
+            "from": "flow-01005",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-flow-spec-mempool-flags.version-gate.absent-flow-01005"
+          }
+        ],
+        "sha256": "59863526fe85ce5ddbfe2a3cafd1dcf0c0bb17537d9ab0db7a5a71984705a9b6",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2188,
+          "SCRIPT_GENESIS": 2188
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "gen": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 1099,
+      "spec-mempool": 1090
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 14,
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 11,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 14,
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      }
+    ],
+    "corpus": "../corpus/gen/gen.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 1157,
+    "file": "gen.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {
+          "adapter-timeout: adapter-timeout: no answer within 60 s, nor within 600 s on the D15a re-run in a fresh adapter (the adapter killed both times; ENGINE_ADAPTER_TIMEOUT_S): go-sdk: adapter-timeout: no answer within 60 s on this entry (the adapter killed; ENGINE_ADAPTER_TIMEOUT_S)": 6,
+          "non-engine-error: not enough data": 12
+        },
+        "aborts_as_witnesses": 18,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1086,
+          "spec-mempool": 1075
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 25,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 24,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 5,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          }
+        ],
+        "corpus": "../corpus/gen/gen.jsonl",
+        "decode_refusals": 0,
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1157,
+        "file": "gen.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+            "entries": 3,
+            "from": "gen-00837",
+            "rule": "engine.timeout",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-engine.timeout-gen-00837"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+            "entries": 2,
+            "from": "gen-00009",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-limits.maxscriptnumlength-gen-00009"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:2112–2124 (BIP143 requires the FORKID word and type bit, with Chronicle dispatch), verify_script_flags.cpp:32–59; go-sdk v1.7.1 transaction/signaturehash.go:26–30,64–75 (dispatch reads the type, no script flag), script/interpreter/operations.go:1995–2009 (the word affects scriptCode clean-up before that call).",
+            "entries": 1,
+            "from": "gen-00995",
+            "rule": "sighash.dispatch.forkid-bit-without-flag",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.dispatch.forkid-bit-without-flag-gen-00995"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 1,
+            "from": "gen-00972",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.must-use-forkid-gen-00972"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1862–1892 (SerializeScriptCode), script.h:163–196 (GetOp2), interpreter.cpp:856–871 (post-Genesis OP_RETURN); go-sdk v1.7.1 transaction/signaturehash.go:338–347 (RemoveCodeSeparators error propagated), script/script.go:444–458 (ParseOps), script/script_chunk.go:25–90 (ErrDataTooSmall), script/errors.go:8; harness/engines/go/main.go:175–180 (the plain Execute error returned as undecided)",
+            "entries": 6,
+            "from": "gen-00997",
+            "rule": "sighash.original.truncated-push",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.original.truncated-push-gen-00997"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "gen-00974",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.type.chronicle-bit-gen-00974"
+          },
+          {
+            "column": "spec",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 57,
+            "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+            "rule": "splice.substr.int64-reader",
+            "ruling": "impl-wrong",
+            "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+            "entries": 3,
+            "from": "gen-00837",
+            "rule": "engine.timeout",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-engine.timeout-gen-00837"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 17,
+            "from": "gen-00001",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-flags.version-gate.absent-gen-00001"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+            "entries": 1,
+            "from": "gen-01010",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-01010"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+            "entries": 4,
+            "from": "gen-00010",
+            "rule": "limits.maxscriptnumlength.policy",
+            "ruling": "open",
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00010"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 3,
+            "from": "gen-00972",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.must-use-forkid-gen-00972"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1862–1892 (SerializeScriptCode), script.h:163–196 (GetOp2), interpreter.cpp:856–871 (post-Genesis OP_RETURN); go-sdk v1.7.1 transaction/signaturehash.go:338–347 (RemoveCodeSeparators error propagated), script/script.go:444–458 (ParseOps), script/script_chunk.go:25–90 (ErrDataTooSmall), script/errors.go:8; harness/engines/go/main.go:175–180 (the plain Execute error returned as undecided)",
+            "entries": 6,
+            "from": "gen-00997",
+            "rule": "sighash.original.truncated-push",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.original.truncated-push-gen-00997"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "gen-00974",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.type.chronicle-bit-gen-00974"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+            "entries": 47,
+            "from": "gen-01018",
+            "rule": "splice.substr.int64-reader",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-splice.substr.int64-reader-gen-01018"
+          }
+        ],
+        "sha256": "cff7dd1a28afa57a05f5ea7a8294dd8cf8ef255509500e97555006acdc2e4220",
+        "spec": "spec@be4897c",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 3,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2300,
+          "SCRIPT_GENESIS": 2302
+        },
+        "witnesses": 15,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {
+          "adapter-timeout: adapter-timeout: no answer within 60 s, nor within 600 s on the D15a re-run in a fresh adapter (the adapter killed both times; ENGINE_ADAPTER_TIMEOUT_S): go-sdk: adapter-timeout: no answer within 60 s on this entry (the adapter killed; ENGINE_ADAPTER_TIMEOUT_S)": 6,
+          "non-engine-error: not enough data": 12
+        },
+        "aborts_as_witnesses": 18,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 1142,
+          "spec-mempool": 1133
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 12,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 71,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "node": "SCRIPT_ERR_PUBKEY_COUNT",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_ILLEGAL_CHRONICLE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 10,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_NULLFAIL",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_NULLFAIL",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "entries": 62,
+            "node": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "node": "SCRIPT_ERR_PUBKEY_COUNT",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 15,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/gen/gen.jsonl",
+        "decode_refusals": 0,
+        "engine": "go-sdk@v1.7.1",
+        "entries": 1157,
+        "file": "gen.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+            "entries": 3,
+            "from": "gen-00837",
+            "rule": "engine.timeout",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-engine.timeout-gen-00837"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+            "entries": 3,
+            "from": "gen-00009",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-limits.maxscriptnumlength-gen-00009"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:2112–2124 (BIP143 requires the FORKID word and type bit, with Chronicle dispatch), verify_script_flags.cpp:32–59; go-sdk v1.7.1 transaction/signaturehash.go:26–30,64–75 (dispatch reads the type, no script flag), script/interpreter/operations.go:1995–2009 (the word affects scriptCode clean-up before that call).",
+            "entries": 1,
+            "from": "gen-00995",
+            "rule": "sighash.dispatch.forkid-bit-without-flag",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.dispatch.forkid-bit-without-flag-gen-00995"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 1,
+            "from": "gen-00972",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.must-use-forkid-gen-00972"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1862–1892 (SerializeScriptCode), script.h:163–196 (GetOp2), interpreter.cpp:856–871 (post-Genesis OP_RETURN); go-sdk v1.7.1 transaction/signaturehash.go:338–347 (RemoveCodeSeparators error propagated), script/script.go:444–458 (ParseOps), script/script_chunk.go:25–90 (ErrDataTooSmall), script/errors.go:8; harness/engines/go/main.go:175–180 (the plain Execute error returned as undecided)",
+            "entries": 6,
+            "from": "gen-00997",
+            "rule": "sighash.original.truncated-push",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.original.truncated-push-gen-00997"
+          },
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "gen-00974",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-sighash.type.chronicle-bit-gen-00974"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "the driver's per-entry wall (harness/src/engines.rs adapter_timeout, ENGINE_ADAPTER_TIMEOUT_S, 120 s by default) and the D15a re-run (2026-09-24, #42): once more in a fresh adapter at ten times the wall; no answer within either, the adapter killed and respawned, both walls named in the message; the reference decides every entry of the generated corpora (corpus/INDEX.md §4c) in milliseconds",
+            "entries": 3,
+            "from": "gen-00837",
+            "rule": "engine.timeout",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-engine.timeout-gen-00837"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 6,
+            "from": "gen-00001",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-flags.version-gate.absent-gen-00001"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+            "entries": 1,
+            "from": "gen-01010",
+            "rule": "limits.maxscriptnumlength",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-01010"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+            "entries": 4,
+            "from": "gen-00010",
+            "rule": "limits.maxscriptnumlength.policy",
+            "ruling": "open",
+            "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00010"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:304–306,2315–2319; verify_script_flags.cpp:56–58; go-sdk v1.7.1 script/interpreter/thread.go:562–591 (a defined non-FORKID type returns nil at 575–579 before the missing-FORKID refusal at 589–590).",
+            "entries": 3,
+            "from": "gen-00972",
+            "rule": "sighash.must-use-forkid",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.must-use-forkid-gen-00972"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:1862–1892 (SerializeScriptCode), script.h:163–196 (GetOp2), interpreter.cpp:856–871 (post-Genesis OP_RETURN); go-sdk v1.7.1 transaction/signaturehash.go:338–347 (RemoveCodeSeparators error propagated), script/script.go:444–458 (ParseOps), script/script_chunk.go:25–90 (ErrDataTooSmall), script/errors.go:8; harness/engines/go/main.go:175–180 (the plain Execute error returned as undecided)",
+            "entries": 6,
+            "from": "gen-00997",
+            "rule": "sighash.original.truncated-push",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.original.truncated-push-gen-00997"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:291–303 (CHRONICLE legality from the spend flag); sighashtype.h:14–22; go-sdk v1.7.1 script/interpreter/thread.go:552–558,562–591 (range-check mask permits CHRONICLE only when the coin is after Chronicle and the type has FORKID), script/interpreter/thread.go:296–302 (coin-era input).",
+            "entries": 1,
+            "from": "gen-00974",
+            "rule": "sighash.type.chronicle-bit",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-gen-spec-mempool-sighash.type.chronicle-bit-gen-00974"
+          }
+        ],
+        "sha256": "75457bf73f53c7ffc5b47df997f70abd6553211588cb6de42b6363881a14e528",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 3,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 2300,
+          "SCRIPT_GENESIS": 2302
+        },
+        "witnesses": 13,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+        "entries": 57,
+        "from": "gen-00796",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-go-sdk-gen-spec-limits.maxscriptnumlength-gen-00796"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+        "entries": 57,
+        "from": "gen-00796",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength-gen-00796"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+        "entries": 9,
+        "from": "gen-00004",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-go-sdk-gen-spec-mempool-limits.maxscriptnumlength.policy-gen-00004"
+      }
+    ],
+    "sha256": "4001a679074bf1c7ef6667a6d4fbecec55841eeaeeca7077399fab7a89fbbb00",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 5,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ],
+    "sha256_private": "6fed550eab2875cc5bddfd5f5e9d2e0e961e59db415818d360e2db59ceb3f291",
+    "withheld_entries": 2,
+    "withheld_groups": {
+      "d9-gosdk-172-splice": 2
+    },
+    "withheld_group": "d9-gosdk-172-splice"
+  },
+  "million": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 3,
+      "spec-mempool": 4
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_STACK_SIZE",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_STACK_SIZE",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_STACK_SIZE",
+        "entries": 1,
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      }
+    ],
+    "corpus": "../corpus/million/witnesses.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 4,
+    "file": "million.jsonl",
+    "generated": "2026-10-12",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "[SRC] go-sdk@v1.7.2 (2ca481c5931b987a0c8f48bb341c70b7477b6b07) script/interpreter/config.go:34–40, script/interpreter/thread.go:482–490, script/interpreter/options.go:176–194, script/interpreter/operations.go:1071–1079, script/interpreter/stack.go:35–63; CHANGELOG.md:70,90 (new stack accounting and the 100,000,000-byte default, configurable with WithMaxStackMemory). The spec at bitcoin-sv v1.2.3 (6504a3af), spec/opcodes/OP_NUM2BIN.md:11–24 and spec/flags.md:136–151, cites interpreter.cpp:1741–1778 and configscriptpolicy.cpp:139–154,280–283: padding is charged against the configured budget, whose block zero setting means INT64_MAX.",
+        "entries": 1,
+        "from": "million-seed-352758",
+        "rule": "limits.stackmemory.policy-default",
+        "ruling": "open",
+        "witness": "witness-go-sdk-million-spec-limits.stackmemory.policy-default-million-seed-352758"
+      }
+    ],
+    "sha256": "705216b9dcb8fa43bfd7025f1d97a1c9690f2a13ece73a313713ef0e5d96c190",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 1,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "road": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 13510,
+      "spec-mempool": 13504
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 16,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 9,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 7,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 6,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_CLEANSTACK",
+        "entries": 12,
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_SPLIT_RANGE",
+        "entries": 16,
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 9,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 7,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 6,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      }
+    ],
+    "corpus": "../corpus/road/road.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 13512,
+    "file": "road.jsonl",
+    "generated": "2026-10-12",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+        "entries": 1,
+        "from": "road-gen-00796",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-go-sdk-road-spec-limits.maxscriptnumlength-road-gen-00796"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 script_num.cpp:62 (the length test before the decode) → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW; the widths configscriptpolicy.cpp:79–110 (4 before Genesis consensus.h:62, 750,000 after consensus.h:64, 32,000,000 after Chronicle consensus.h:66; the policy default 10,000 policy.h:156); go-sdk v1.7.1 config.go:22 and 87–89 (4 before Genesis), 83–85 (750,000 after Genesis), 26 and 119–121 (32 * 1024 * 1024 = 33,554,432 after Chronicle, where the reference's is 32,000,000), the check number.go:72–79 (MakeScriptNumber, ErrNumberTooBig) through stack.go:50, 106–112 (PopInt); the same width at OP_BIN2NUM's result, interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE (go-sdk operations.go:1061–1064 (MinimallyEncode, then MaxScriptNumberLength(), ErrNumberTooBig))",
+        "entries": 1,
+        "from": "road-gen-00796",
+        "rule": "limits.maxscriptnumlength",
+        "ruling": "impl-wrong",
+        "witness": "witness-go-sdk-road-spec-mempool-limits.maxscriptnumlength-road-gen-00796"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "[SRC] bitcoin-sv v1.2.2 configscriptpolicy.cpp:79–110 (GetMaxScriptNumLength: off the consensus path the configured maxScriptNumLengthPolicy, default DEFAULT_SCRIPT_NUM_LENGTH_POLICY = 10 * ONE_KILOBYTE = 10,000 bytes, policy.h:156 and consensus.h:13; on it 750,000 after Genesis consensus.h:64 and 32,000,000 after Chronicle consensus.h:66) through script_num.cpp:62 → interpreter.cpp:1807–1810 SCRIPT_ERR_SCRIPTNUM_OVERFLOW (a number read) and OP_BIN2NUM's result test interpreter.cpp:1789–1790 SCRIPT_ERR_INVALID_NUMBER_RANGE; go-sdk v1.7.1 has no policy width: its widths are the consensus ones (config.go:83–85, 750,000 after Genesis; 26 and 119–121, 33,554,432 after Chronicle), and the engine takes a flag word only (harness/engines/go/main.go:171, Execute(WithTx, WithFlags))",
+        "entries": 6,
+        "from": "road-eras-00042",
+        "rule": "limits.maxscriptnumlength.policy",
+        "ruling": "open",
+        "witness": "witness-go-sdk-road-spec-mempool-limits.maxscriptnumlength.policy-road-eras-00042"
+      }
+    ],
+    "sha256": "6c0de38d8eb1fd9af966b63bc53a1eecf34166e6673ba7816535c6ff608a704b",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 5,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967895,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967895,
+        "word": 4015663
+      }
+    ],
+    "sha256_private": "2e08f001374bce6daeb8a4c7d4783ad2c817dab292a7577ecab6914d77bcc27c",
+    "withheld_entries": 2,
+    "withheld_groups": {
+      "d9-gosdk-172-splice": 2
+    },
+    "withheld_group": "d9-gosdk-172-splice"
+  },
+  "seed": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 10000,
+      "spec-mempool": 10000
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 5,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 3,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 5,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+        "entries": 3,
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      }
+    ],
+    "corpus": "../corpus/seed/seed.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 10000,
+    "file": "seed.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 9988,
+          "spec-mempool": 9010
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 55,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 15,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 24,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 41,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 10,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_VERIFY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 54,
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 74,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 21,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 14,
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_INVALID_SPLIT_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 24,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 41,
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 3,
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 10,
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "spec": "SCRIPT_ERR_VERIFY"
+          }
+        ],
+        "corpus": "../corpus/seed/seed.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 10000,
+        "file": "seed.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 12,
+            "from": "seed-009309",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-seed-spec-flags.version-gate.absent-seed-009309"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 990,
+            "from": "seed-000068",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-seed-spec-mempool-flags.version-gate.absent-seed-000068"
+          }
+        ],
+        "sha256": "afe7e9e6409b9dd48fec963297435b382bd679e5726e4788159861a3229e478c",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 20000,
+          "SCRIPT_GENESIS": 20000
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 9988,
+          "spec-mempool": 9010
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 55,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 15,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 3,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 24,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 41,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 2,
+            "node": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "node": "SCRIPT_ERR_PUBKEY_COUNT",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 10,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_VERIFY"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 54,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_CLEANSTACK",
+            "entries": 74,
+            "node": "SCRIPT_ERR_CLEANSTACK",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 2,
+            "node": "SCRIPT_ERR_MINIMALDATA",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 21,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 14,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 3,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_INVALID_SPLIT_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 24,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_MINIMALDATA",
+            "entries": 1,
+            "node": "SCRIPT_ERR_MINIMALDATA",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 2,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 41,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 1,
+            "node": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_MINENCODE",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_PUBKEY_COUNT",
+            "entries": 1,
+            "node": "SCRIPT_ERR_PUBKEY_COUNT",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_HASHTYPE",
+            "entries": 3,
+            "node": "SCRIPT_ERR_SIG_HASHTYPE",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_BAD_OPCODE",
+            "entries": 1,
+            "node": "SCRIPT_ERR_BAD_OPCODE",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 10,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_SIG_PUSHONLY",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SIG_PUSHONLY",
+            "spec": "SCRIPT_ERR_VERIFY"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/seed/seed.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 10000,
+        "file": "seed.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 12,
+            "from": "seed-009309",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-seed-spec-flags.version-gate.absent-seed-009309"
+          },
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 990,
+            "from": "seed-000068",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-seed-spec-mempool-flags.version-gate.absent-seed-000068"
+          }
+        ],
+        "sha256": "3836eb49d1355112635cfaf7539501993cd733af3d53ecef45db703434d043eb",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 20000,
+          "SCRIPT_GENESIS": 20000
+        },
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "stack": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 262,
+      "spec-mempool": 262
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+        "entries": 2,
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+        "entries": 4,
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      }
+    ],
+    "corpus": "../corpus/stack/cases.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 262,
+    "file": "stack.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 258
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 4,
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          }
+        ],
+        "corpus": "../corpus/stack/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 262,
+        "file": "stack.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 4,
+            "from": "stack-00223",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-stack-spec-mempool-flags.version-gate.absent-stack-00223"
+          }
+        ],
+        "sha256": "ec015c411f4236dbd5d132e33765445049cc6d8913f125a71e42cdc44442f328",
+        "spec": "spec@f163ba4",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 524,
+          "SCRIPT_GENESIS": 524
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 258
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 4,
+            "node": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "entries": 2,
+            "node": "SCRIPT_ERR_INVALID_STACK_OPERATION",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec-mempool",
+            "engine": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "entries": 4,
+            "node": "SCRIPT_ERR_IMPOSSIBLE_ENCODING",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          }
+        ],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/stack/cases.jsonl",
+        "engine": "go-sdk@v1.7.1",
+        "entries": 262,
+        "file": "stack.jsonl",
+        "generated": "2026-09-23",
+        "rules": [
+          {
+            "column": "spec-mempool",
+            "decided_by": "[SRC] bitcoin-sv v1.2.2 interpreter.cpp:40–44 EnforceNonMalleability(flags, v) = !(IsChronicle(flags) && v > 1) at the seven sites 285 (LOW_S), 433 (MINIMALDATA), 801 (MINIMALIF), 1493 and 1643 (NULLFAIL), 1666 (NULLDUMMY), 2441 (CLEANSTACK) and the SIGPUSHONLY read at 2327; go-sdk v1.7.1 scriptflag/scriptflag.go:1–86 (no spend-era flag: SCRIPT_CHRONICLE and SCRIPT_GENESIS have no image), thread.go:243 (clean stack), 353 (push-only), 787 (high S), operations.go:2060/2302 (NULLFAIL), 2179 (NULLDUMMY), 409/412 (MINIMALIF), opcodeparser.go:95–129 and number.go:424 (minimal data), every one on the flag alone",
+            "entries": 4,
+            "from": "stack-00223",
+            "rule": "flags.version-gate.absent",
+            "ruling": "impl-wrong",
+            "witness": "witness-go-sdk-stack-spec-mempool-flags.version-gate.absent-stack-00223"
+          }
+        ],
+        "sha256": "ec46fffc5e837bdc8e657db7bdafceae7d8a076bd3b6fe6e155875b2e07f4b2b",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_CHRONICLE": 524,
+          "SCRIPT_GENESIS": 524
+        },
+        "witnesses": 1,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "tx": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 600,
+    "adapter_timeout_s": 60,
+    "agree": {
+      "spec": 40,
+      "spec-mempool": 40
+    },
+    "code_notes": [],
+    "corpus": "../corpus/tx/tx.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 40,
+    "file": "tx.jsonl",
+    "generated": "2026-10-12",
+    "history": [
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 40,
+          "spec-mempool": 40
+        },
+        "code_notes": [],
+        "corpus": "../corpus/tx/tx.jsonl",
+        "decode_refusals": 0,
+        "engine": "go-sdk@v1.7.1",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "generated": "2026-10-06",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c7d9b81",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_GENESIS": 64
+        },
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 869935
+          }
+        ]
+      },
+      {
+        "abort_messages": {},
+        "aborts_as_witnesses": 0,
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.1 (docs/PROVENANCE.md §1a)",
+        "adapter_deaths": 0,
+        "adapter_deaths_recovered_in_a_fresh_process": 0,
+        "adapter_timeout_rerun_s": 600,
+        "adapter_timeout_s": 60,
+        "agree": {
+          "spec": 40,
+          "spec-mempool": 40
+        },
+        "code_notes": [],
+        "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+        "corpus": "../corpus/tx/tx.jsonl",
+        "decode_refusals": 0,
+        "engine": "go-sdk@v1.7.1",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "generated": "2026-10-06",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@cb7e46e",
+        "spec_config": "sv-mainnet-default",
+        "timeouts": 0,
+        "timeouts_decided_on_the_10x_rerun": 0,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_messages": {},
+        "unmapped_bits": {
+          "SCRIPT_GENESIS": 64
+        },
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 610000,
+            "utxo_height": 605000,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620000,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 620600,
+            "utxo_height": 620590,
+            "word": 869935
+          }
+        ]
+      }
+    ],
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 610000,
+        "utxo_height": 605000,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620000,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 620600,
+        "utxo_height": 620590,
+        "word": 869935
+      }
+    ]
+  },
+  "xsig-144": {
+    "abort_messages": {},
+    "aborts_as_witnesses": 0,
+    "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+    "adapter_deaths": 0,
+    "adapter_deaths_recovered_in_a_fresh_process": 0,
+    "adapter_timeout_rerun_s": 1200,
+    "adapter_timeout_s": 120,
+    "agree": {
+      "spec": 16,
+      "spec-mempool": 16
+    },
+    "code_notes": [],
+    "corpus": "../corpus/xsig-144/xsig-144.jsonl",
+    "decode_refusals": 0,
+    "engine": "go-sdk@v1.7.2",
+    "entries": 16,
+    "file": "xsig-144.jsonl",
+    "generated": "2026-09-23",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@f5e7e0a6",
+    "spec_config": "sv-mainnet-default",
+    "timeouts": 0,
+    "timeouts_decided_on_the_10x_rerun": 0,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_messages": {},
+    "unmapped_bits": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 900000,
+        "utxo_height": 900000,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 900000,
+        "utxo_height": 900000,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  }
+}

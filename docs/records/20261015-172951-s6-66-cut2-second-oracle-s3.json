@@ -1,0 +1,748 @@
+{
+  "base_commit": "d71c05408ccfec50469b8f0a2d7ba71d6e81303b",
+  "calls": 1413,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 6,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 6,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 6,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 19,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 22,
+      "no-verdict": 0,
+      "non-judging": 3,
+      "pending": 0,
+      "rows": 22,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [
+      {
+        "id": "chain-missing-input",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001470583,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-txns-inputs-missingorspent\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reward",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.257599125,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: \"bad-cb-amount\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-queued-script",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001160042,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"blk-bad-inputs\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-sequential-inputs",
+        "label": "[X]",
+        "observed": {
+          "height": 1361,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"childLive\":true,\"fees\":2000,\"parentSpent\":true} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reversed-inputs",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001232375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-txns-inputs-missingorspent\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "chain-reward-before-script",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.00099575,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: \"bad-cb-amount\" [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ],
+    "finality": [
+      {
+        "id": "finality/lock-zero",
+        "label": "[X]",
+        "observed": {
+          "height": 1351,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-below",
+        "label": "[X]",
+        "observed": {
+          "height": 1352,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000906875,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-above",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.003036084,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-below",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.00119575,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001435458,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-above",
+        "label": "[X]",
+        "observed": {
+          "height": 1353,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/all-final-future-height",
+        "label": "[X]",
+        "observed": {
+          "height": 1354,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/mixed-future-height",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001509291,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/all-final-future-time",
+        "label": "[X]",
+        "observed": {
+          "height": 1355,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/mixed-future-time",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001604333,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/height-ignores-time",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000864209,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "finality/time-ignores-height",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001039416,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/mtp-below",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "tip/mtp-equal",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "tip/mtp-above",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/successor-height",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/successor-height-equal",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "block/csv-mtp-below",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000888583,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/csv-mtp-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000947583,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/csv-mtp-above",
+        "label": "[X]",
+        "observed": {
+          "height": 1356,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/postgenesis-still-rejected",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000751208,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 3738661,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-172951Z/receipt.json",
+    "sha256": "9f60fd845b51afd7ef69aaa864aac5a5ae38a65c44cbc3c7a9c7d2ccb86e6d74"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "640f22e42c4d13b094d7f4dfe0821b1d34f8e9e02bca355fb6e53ae09bf04363",
+      "height": 1363
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261015-172951-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 15,
+    "ends": 15,
+    "events": 335,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "finality/lock-zero",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/all-final-future-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/mixed-future-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/all-final-future-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/mixed-future-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/height-ignores-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "finality/time-ignores-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/mtp-below",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "tip/mtp-equal",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "tip/mtp-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/successor-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/successor-height-equal",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "block/csv-mtp-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/csv-mtp-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/csv-mtp-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/postgenesis-still-rejected",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-missing-input",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reward",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-queued-script",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-sequential-inputs",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reversed-inputs",
+        "verdict": "agree"
+      },
+      {
+        "row": "chain-reward-before-script",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "block/csv-mtp-above",
+    "block/csv-mtp-below",
+    "block/csv-mtp-equal",
+    "block/postgenesis-still-rejected",
+    "chain-missing-input",
+    "chain-queued-script",
+    "chain-reversed-inputs",
+    "chain-reward",
+    "chain-reward-before-script",
+    "chain-sequential-inputs",
+    "finality/all-final-future-height",
+    "finality/all-final-future-time",
+    "finality/height-above",
+    "finality/height-below",
+    "finality/height-equal",
+    "finality/height-ignores-time",
+    "finality/lock-zero",
+    "finality/mixed-future-height",
+    "finality/mixed-future-time",
+    "finality/time-above",
+    "finality/time-below",
+    "finality/time-equal",
+    "finality/time-ignores-height",
+    "tip/mtp-above",
+    "tip/mtp-below",
+    "tip/mtp-equal",
+    "tip/successor-height",
+    "tip/successor-height-equal"
+  ],
+  "run_id": "cut2-66q5-20261015-172951",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-15T17:29:51Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 25,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 28,
+    "no-verdict": 0,
+    "non-judging": 3,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 252.755657167
+  }
+}

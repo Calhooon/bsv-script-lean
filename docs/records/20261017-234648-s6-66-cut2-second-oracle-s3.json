@@ -1,0 +1,1083 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 1455,
+  "counts": {
+    "block": {
+      "agree": 22,
+      "diverge": 1,
+      "label": "[M]",
+      "measured": 23,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 80,
+      "rpc-precheck": 0,
+      "unrealizable": 57
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "mempool": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [
+      {
+        "id": "block/empty",
+        "label": "[X]",
+        "reference_token": "rpc-precheck: -22 Block does not start with a coinbase (src/rpc/mining.cpp:830-838) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row delivers a block that carries no transactions; the bridge's legacy sync manager reads the body's coinbase before it checks the body is non-empty, so a zero-length body ends the node's process on an out-of-range index (services/legacy/netsync/handle_block.go:205, reached from the block handler of services/legacy/netsync/manager.go); the road withholds the frame rather than end the node, and the behavior is recorded as a Finding in docs/records/20261015-040959-s6-66-cut2-instance-exit-s3.md [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/size-at-setting",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below launch/RPC setter floor; disabling size checks is not a submitblock option; src/config.cpp:232-245; src/rpc/mining.cpp:916-952; src/validation.cpp:5801-5815 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 206; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/size-one-over-setting",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below launch/RPC setter floor; disabling size checks is not a submitblock option; src/config.cpp:232-245; src/rpc/mining.cpp:916-952; src/validation.cpp:5801-5815 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 205; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/early-count",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below launch/RPC setter floor; disabling size checks is not a submitblock option; src/config.cpp:232-245; src/rpc/mining.cpp:916-952; src/validation.cpp:5801-5815 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 19; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/size-before-noncoinbase",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below launch/RPC setter floor; disabling size checks is not a submitblock option; src/config.cpp:232-245; src/rpc/mining.cpp:916-952; src/validation.cpp:5801-5815 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 10; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/size-disabled",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below launch/RPC setter floor; disabling size checks is not a submitblock option; src/config.cpp:232-245; src/rpc/mining.cpp:916-952; src/validation.cpp:5801-5815 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row switches a CheckBlock gate off (its options); Teranode's block validation has no such switch on the bridge's road (services/legacy/netsync/handle_block.go:52-348) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/merkle-disabled",
+        "label": "[X]",
+        "reference_token": "unrealizable: submitblock always validates merkle root; no RPC/launch switch supplies the row's disabled check; src/rpc/mining.cpp:916-952; src/validation.cpp:5769-5785 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row switches a CheckBlock gate off (its options); Teranode's block validation has no such switch on the bridge's road (services/legacy/netsync/handle_block.go:52-348) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/p2sh-before-genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row spends a coin in a block before Genesis; the instance's Genesis is height 100 and no coin matures below height 101 (go-chaincfg v1.6.2 params.go:463,475), so no pre-Genesis block can carry a spend [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/sigops-at-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: row replaces compiled MAX_BLOCK_SIGOPS_PER_MB_BEFORE_GENESIS with 1 or 2; getter has no launch/RPC override; src/config.cpp:825-834 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row replaces the pre-Genesis block sigop cap with 1 or 2; a pre-Genesis block on the instance's chain is below height 100 (go-chaincfg v1.6.2 params.go:475) and the reference itself has no override for the cap (src/config.cpp:825-834 at 6504a3af) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/sigops-above-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: row replaces compiled MAX_BLOCK_SIGOPS_PER_MB_BEFORE_GENESIS with 1 or 2; getter has no launch/RPC override; src/config.cpp:825-834 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row replaces the pre-Genesis block sigop cap with 1 or 2; a pre-Genesis block on the instance's chain is below height 100 (go-chaincfg v1.6.2 params.go:475) and the reference itself has no override for the cap (src/config.cpp:825-834 at 6504a3af) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/sigops-before-next-structure",
+        "label": "[X]",
+        "reference_token": "unrealizable: row replaces compiled MAX_BLOCK_SIGOPS_PER_MB_BEFORE_GENESIS with 1 or 2; getter has no launch/RPC override; src/config.cpp:825-834 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row replaces the pre-Genesis block sigop cap with 1 or 2; a pre-Genesis block on the instance's chain is below height 100 (go-chaincfg v1.6.2 params.go:475) and the reference itself has no override for the cap (src/config.cpp:825-834 at 6504a3af) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/size-at-setting",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below the launch/RPC setter floor; src/config.cpp:232-245 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 145; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/size-one-over",
+        "label": "[X]",
+        "reference_token": "unrealizable: named excessiveBlockSize is below the launch/RPC setter floor; src/config.cpp:232-245 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 144; the bridge reads blocks up to its compiled 4,000,000,000-byte bound (services/legacy/config.go:29,45) and the setting policy.ExcessiveBlockSize only lowers the size it advertises (services/legacy/config.go:145-151), so the row's small size bound has no Teranode setting this road can select [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/finality-before-height",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/bip34-one-below",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/bip34-at-wrong",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/bip34-at-correct",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/launchable-size-plus-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 1,000,001; the bridge's read bound is a compiled 4,000,000,000 bytes (services/legacy/config.go:29,45) and policy.ExcessiveBlockSize only lowers the advertised size (:145-151), so no setting this road can select bounds a block at 1,000,001 bytes [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/launchable-size-plus-0",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 1,000,001; the bridge's read bound is a compiled 4,000,000,000 bytes (services/legacy/config.go:29,45) and policy.ExcessiveBlockSize only lowers the advertised size (:145-151), so no setting this road can select bounds a block at 1,000,001 bytes [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/launchable-size-plus-1",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-blk-length\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 1,000,001; the bridge's read bound is a compiled 4,000,000,000 bytes (services/legacy/config.go:29,45) and policy.ExcessiveBlockSize only lowers the advertised size (:145-151), so no setting this road can select bounds a block at 1,000,001 bytes [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/launchable-size-plus-1",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"bad-blk-length\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects excessiveBlockSize 1,000,001; the bridge's read bound is a compiled 4,000,000,000 bytes (services/legacy/config.go:29,45) and policy.ExcessiveBlockSize only lowers the advertised size (:145-151), so no setting this road can select bounds a block at 1,000,001 bytes [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/height-push-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/height-push-16",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/height-push-17",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/height-push-127",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "context/height-push-128",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 activation override is unavailable: regtest compiles height 100000000, with no RPC/launch override; the named small-height prefix/activation boundary cannot be reproduced; src/chainparams.cpp:1461-1469; src/validation.cpp:6085-6099 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "header/version-bip34",
+        "label": "[X]",
+        "reference_token": "unrealizable: named BIP34 height 1000 is a compiled-parameter override unavailable on regtest; src/chainparams.cpp:1461-1469; src/validation.cpp:5964-5974 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects a BIP34 activation height; go-chaincfg v1.6.2's regtest compiles BIP0034Height 100000000 (params.go:464), as the reference's regtest does (src/chainparams.cpp:1461-1469 at 6504a3af), with no setting [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "header/negative-now",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"reason\":\"time-too-new\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row sets the node's adjusted time to -1; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), its now is the host's [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "header/missing-ancestry",
+        "label": "[X]",
+        "reference_token": "unrealizable: RPC locates a real parent index with complete ancestry before contextual validation; a height-999 index with only one ancestor is not reachable; src/validation.cpp:6164-6190 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row needs a parent index with one ancestor at height 999; the bridge validates a block against a parent the blockchain service already stores with its whole ancestry (services/legacy/netsync/handle_block.go:52-348) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "pow/above-limit",
+        "label": "[X]",
+        "reference_token": "unrealizable: named mainnet powLimit boundary is below the compiled regtest limit; no regtest RPC/launch override supplies the mainnet limit; src/chainparams.cpp:1471-1477; src/pow.cpp:150-165 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row injects a standalone hash operand or the mainnet limit; a block on the bridge's road is checked by its serialized header's hash against the regtest limit (go-chaincfg v1.6.2 params.go:461), so the operand cannot be selected [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "pow/equal-target",
+        "label": "[X]",
+        "reference_token": "unrealizable: row injects a standalone hash integer 1 or 2 at target 1; RPC validates a serialized header's SHA256d hash and cannot inject that operand, and this preimage boundary cannot be materialized by a regtest RPC; src/validation.cpp:5736-5747; src/pow.cpp:150-171 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row injects a standalone hash operand or the mainnet limit; a block on the bridge's road is checked by its serialized header's hash against the regtest limit (go-chaincfg v1.6.2 params.go:461), so the operand cannot be selected [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "pow/over-target",
+        "label": "[X]",
+        "reference_token": "unrealizable: row injects a standalone hash integer 1 or 2 at target 1; RPC validates a serialized header's SHA256d hash and cannot inject that operand, and this preimage boundary cannot be materialized by a regtest RPC; src/validation.cpp:5736-5747; src/pow.cpp:150-171 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row injects a standalone hash operand or the mainnet limit; a block on the bridge's road is checked by its serialized header's hash against the regtest limit (go-chaincfg v1.6.2 params.go:461), so the operand cannot be selected [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "compact/01800001",
+        "label": "[X]",
+        "reference_token": "unrealizable: standalone SetCompact target/negative/overflow tuple is not an RPC observable; header submission collapses these outputs into high-hash or continues to contextual checks, so it cannot compare this tuple; src/arith_uint256.cpp:182-200; src/pow.cpp:150-171; src/validation.cpp:5736-5747 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks the standalone compact-target tuple; no surface of the instance answers SetCompact for an input (services/blockchain/Difficulty.go:74 is internal) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "compact/04923456",
+        "label": "[X]",
+        "reference_token": "unrealizable: standalone SetCompact target/negative/overflow tuple is not an RPC observable; header submission collapses these outputs into high-hash or continues to contextual checks, so it cannot compare this tuple; src/arith_uint256.cpp:182-200; src/pow.cpp:150-171; src/validation.cpp:5736-5747 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks the standalone compact-target tuple; no surface of the instance answers SetCompact for an input (services/blockchain/Difficulty.go:74 is internal) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "compact/220000ff",
+        "label": "[X]",
+        "reference_token": "unrealizable: standalone SetCompact target/negative/overflow tuple is not an RPC observable; header submission collapses these outputs into high-hash or continues to contextual checks, so it cannot compare this tuple; src/arith_uint256.cpp:182-200; src/pow.cpp:150-171; src/validation.cpp:5736-5747 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks the standalone compact-target tuple; no surface of the instance answers SetCompact for an input (services/blockchain/Difficulty.go:74 is internal) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "compact/22000100",
+        "label": "[X]",
+        "reference_token": "unrealizable: standalone SetCompact target/negative/overflow tuple is not an RPC observable; header submission collapses these outputs into high-hash or continues to contextual checks, so it cannot compare this tuple; src/arith_uint256.cpp:182-200; src/pow.cpp:150-171; src/validation.cpp:5736-5747 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks the standalone compact-target tuple; no surface of the instance answers SetCompact for an input (services/blockchain/Difficulty.go:74 is internal) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "compact/2100ffff",
+        "label": "[X]",
+        "reference_token": "unrealizable: standalone SetCompact target/negative/overflow tuple is not an RPC observable; header submission collapses these outputs into high-hash or continues to contextual checks, so it cannot compare this tuple; src/arith_uint256.cpp:182-200; src/pow.cpp:150-171; src/validation.cpp:5736-5747 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks the standalone compact-target tuple; no surface of the instance answers SetCompact for an input (services/blockchain/Difficulty.go:74 is internal) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "subsidy/0",
+        "label": "[X]",
+        "reference_token": "measured agree: 5000000000 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's subsidy height (remapped to the regtest interval of 150, go-chaincfg v1.6.2 params.go:478) is read from a generated coinbase on the reference; cut 2 does not mine the instance to the remapped heights (up to 9,600 blocks) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "subsidy/209999",
+        "label": "[X]",
+        "reference_token": "measured agree: 5000000000 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's subsidy height (remapped to the regtest interval of 150, go-chaincfg v1.6.2 params.go:478) is read from a generated coinbase on the reference; cut 2 does not mine the instance to the remapped heights (up to 9,600 blocks) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "subsidy/210000",
+        "label": "[X]",
+        "reference_token": "measured agree: 2500000000 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's subsidy height (remapped to the regtest interval of 150, go-chaincfg v1.6.2 params.go:478) is read from a generated coinbase on the reference; cut 2 does not mine the instance to the remapped heights (up to 9,600 blocks) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "subsidy/6930000",
+        "label": "[X]",
+        "reference_token": "measured agree: 0 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's subsidy height (remapped to the regtest interval of 150, go-chaincfg v1.6.2 params.go:478) is read from a generated coinbase on the reference; cut 2 does not mine the instance to the remapped heights (up to 9,600 blocks) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "subsidy/13440000",
+        "label": "[X]",
+        "reference_token": "measured agree: 0 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's subsidy height (remapped to the regtest interval of 150, go-chaincfg v1.6.2 params.go:478) is read from a generated coinbase on the reference; cut 2 does not mine the instance to the remapped heights (up to 9,600 blocks) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "ttor/ahead-of-tip",
+        "label": "[X]",
+        "reference_token": "unrealizable: the reversed dependent body above the active tip must connect and fails input availability after the skipped TTOR policy check; submitblock has no isolated TTOR-success result and no RPC bypasses connection at this boundary; src/validation.cpp:5671-5682,6440-6495; src/rpc/mining.cpp:830-875 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row needs a null tip or a reversed body above the active tip; the bridge's road connects every block it accepts onto a stored parent (services/legacy/netsync/handle_block.go:52-348) and the reference's own recipe found the cell unreachable [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "ttor/no-tip",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest initializes a genesis tip; genesis connection returns without undo and DisconnectBlock fails without undo, so ordinary RPC invalidation cannot remove that tip to supply the null TTOR operand; src/validation.cpp:3040-3051,4065-4090,5671-5682; src/processing_block_index.cpp:79-96 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row needs a null tip or a reversed body above the active tip; the bridge's road connects every block it accepts onto a stored parent (services/legacy/netsync/handle_block.go:52-348) and the reference's own recipe found the cell unreachable [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/genesis",
+        "label": "[X]",
+        "reference_token": "unrealizable: mainnet no-parent powLimit differs from the compiled regtest genesis/limit; no RPC invokes GetNextWorkRequired with an injected null parent and chosen network; src/chainparams.cpp:1471-1477,1513-1518; src/pow.cpp:95-113 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/no-retarget-before-daa",
+        "label": "[X]",
+        "reference_token": "unrealizable: row's height-zero parent bits 0x1c123456 cannot be installed: regtest genesis bits are 0x207fffff and no-retargeting preserves them at every reachable descendant; src/chainparams.cpp:1471-1477,1513-1518; src/pow.cpp:102-113 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/testnet-delay-at",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/testnet-delay-over",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/testnet-backscan",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/eda-43199",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/eda-43200",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/eda-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/eda-missing",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/periodic-1",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/periodic-1209600",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/periodic-99999999",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "next/daa-delay",
+        "label": "[X]",
+        "reference_token": "unrealizable: regtest's compiled no-retargeting returns parent bits before EDA, periodic, testnet-delay/backscan or DAA logic; no RPC/launch override enables the named network rule; src/chainparams.cpp:1471-1477; src/pow.cpp:22-117 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row asks GetNextWorkRequired on a named network and parent; the instance's regtest computes its own next bits (services/blockchain/Difficulty.go:74) with no per-input surface and no other network [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/valid",
+        "label": "[X]",
+        "observed": {
+          "height": 104,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/pow-precedes-root",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001448625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"high-hash\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/root-mismatch",
+        "label": "[X]",
+        "observed": {
+          "late": true,
+          "seconds": 21.1737075,
+          "send": true,
+          "status": "rejected",
+          "stored": false,
+          "wire": "getdata"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txnmrklroot\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/duplicate-suffix",
+        "label": "[X]",
+        "observed": {
+          "late": true,
+          "seconds": 21.182564958,
+          "send": true,
+          "status": "rejected",
+          "stored": false,
+          "wire": "getdata"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-duplicate\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/duplicate-interior",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001078375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-duplicate\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/root-before-duplicate",
+        "label": "[X]",
+        "observed": {
+          "late": true,
+          "seconds": 21.208895125,
+          "send": true,
+          "status": "rejected",
+          "stored": false,
+          "wire": "getdata"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txnmrklroot\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/missing-coinbase",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.269849792,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "rpc-precheck: -22 Block does not start with a coinbase (src/rpc/mining.cpp:830-838) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/coinbase-script-1",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.293897542,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-cb-length\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/coinbase-script-2",
+        "label": "[X]",
+        "observed": {
+          "height": 105,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/coinbase-script-100",
+        "label": "[X]",
+        "observed": {
+          "height": 106,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/coinbase-script-101",
+        "label": "[X]",
+        "observed": {
+          "invalid": true,
+          "late": true,
+          "seconds": 21.266808875,
+          "send": true,
+          "status": "rejected",
+          "stored": true,
+          "wire": "invalid"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-cb-length\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/extra-coinbase",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001144375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-tx-coinbase\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/vin-empty",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001156125,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vin-empty\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/vout-empty",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001086209,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-empty\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/negative",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001123125,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-negative\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/over-money",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001123625,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-toolarge\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/p2sh-at-genesis",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001078875,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vout-p2sh\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/regular-before-own-sigops",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001060541,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-vin-empty\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/sigops-off-at-genesis",
+        "label": "[X]",
+        "observed": {
+          "height": 107,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "context/pre-csv-own-time",
+        "label": "[X]",
+        "observed": {
+          "height": 108,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "adjudication": {
+          "class": "scenario.header-median.regtest-warning",
+          "ruling": "open"
+        },
+        "id": "header/time-at-median",
+        "label": "[X]",
+        "observed": {
+          "durability": "held",
+          "height": 109,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"reason\":\"time-too-old\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "diverge"
+      },
+      {
+        "id": "context/nonfinal-at-median",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.001249375,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "context/final-below-median",
+        "label": "[X]",
+        "observed": {
+          "height": 576,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ],
+    "chain": [],
+    "finality": [],
+    "mempool": [],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 4833627,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-234648/receipt.json",
+    "sha256": "ce96110c16f5b8e4afe5704434f693fe6abc7e7fa3cad7a33bddff2aa152781f"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "43fb6aed20a91e58b547d77eb9de2da2ec9a7f66e341309183099aa6b690b6b5",
+      "height": 1350
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261017-234648-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 11,
+    "ends": 11,
+    "events": 1797,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "block/valid",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/pow-precedes-root",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/root-mismatch",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/duplicate-suffix",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/duplicate-interior",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/root-before-duplicate",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/missing-coinbase",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/coinbase-script-1",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/coinbase-script-2",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/coinbase-script-100",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/coinbase-script-101",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/extra-coinbase",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/vin-empty",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/vout-empty",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/negative",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/over-money",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/p2sh-at-genesis",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/regular-before-own-sigops",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/sigops-off-at-genesis",
+        "verdict": "agree"
+      },
+      {
+        "row": "context/pre-csv-own-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "header/time-at-median",
+        "verdict": "diverge"
+      },
+      {
+        "row": "context/nonfinal-at-median",
+        "verdict": "agree"
+      },
+      {
+        "row": "context/final-below-median",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "block/coinbase-script-1",
+    "block/coinbase-script-100",
+    "block/coinbase-script-101",
+    "block/coinbase-script-2",
+    "block/duplicate-interior",
+    "block/duplicate-suffix",
+    "block/early-count",
+    "block/empty",
+    "block/extra-coinbase",
+    "block/launchable-size-plus-0",
+    "block/launchable-size-plus-1",
+    "block/merkle-disabled",
+    "block/missing-coinbase",
+    "block/negative",
+    "block/over-money",
+    "block/p2sh-at-genesis",
+    "block/p2sh-before-genesis",
+    "block/pow-precedes-root",
+    "block/regular-before-own-sigops",
+    "block/root-before-duplicate",
+    "block/root-mismatch",
+    "block/sigops-above-cap",
+    "block/sigops-at-cap",
+    "block/sigops-before-next-structure",
+    "block/sigops-off-at-genesis",
+    "block/size-at-setting",
+    "block/size-before-noncoinbase",
+    "block/size-disabled",
+    "block/size-one-over-setting",
+    "block/valid",
+    "block/vin-empty",
+    "block/vout-empty",
+    "compact/01800001",
+    "compact/04923456",
+    "compact/2100ffff",
+    "compact/220000ff",
+    "compact/22000100",
+    "context/bip34-at-correct",
+    "context/bip34-at-wrong",
+    "context/bip34-one-below",
+    "context/final-below-median",
+    "context/finality-before-height",
+    "context/height-push-1",
+    "context/height-push-127",
+    "context/height-push-128",
+    "context/height-push-16",
+    "context/height-push-17",
+    "context/launchable-size-plus-0",
+    "context/launchable-size-plus-1",
+    "context/nonfinal-at-median",
+    "context/pre-csv-own-time",
+    "context/size-at-setting",
+    "context/size-one-over",
+    "header/missing-ancestry",
+    "header/negative-now",
+    "header/time-at-median",
+    "header/version-bip34",
+    "next/daa-delay",
+    "next/eda-43199",
+    "next/eda-43200",
+    "next/eda-cap",
+    "next/eda-missing",
+    "next/genesis",
+    "next/no-retarget-before-daa",
+    "next/periodic-1",
+    "next/periodic-1209600",
+    "next/periodic-99999999",
+    "next/testnet-backscan",
+    "next/testnet-delay-at",
+    "next/testnet-delay-over",
+    "pow/above-limit",
+    "pow/equal-target",
+    "pow/over-target",
+    "subsidy/0",
+    "subsidy/13440000",
+    "subsidy/209999",
+    "subsidy/210000",
+    "subsidy/6930000",
+    "ttor/ahead-of-tip",
+    "ttor/no-tip"
+  ],
+  "run_id": "gate95-20261017-234627-234648",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-17T23:46:48Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 22,
+    "diverge": 1,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 23,
+    "no-verdict": 0,
+    "non-judging": 0,
+    "pending": 0,
+    "rpc-precheck": 0
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 358.73220725
+  }
+}

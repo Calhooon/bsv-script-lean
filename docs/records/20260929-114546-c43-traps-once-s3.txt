@@ -1,0 +1,80 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+helper defines no trap since P6's retirement, pool 029fc632) (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE CHANGE, 3534b51 (origin/s3-c43; landed as 3671fae):
+  - `setopt POSIX_TRAPS`, then `trap 'exit 130' INT; trap 'exit 143' TERM; trap 'exit 129' HUP` and the one EXIT trap
+    (`box_leg_release; lean_lock_release`), set once after the helpers are sourced and before every take. The re-set after
+    box_leg_take is gone: the helper at the box's pool clone (0d47ef7d, which contains 029fc632) has no trap line.
+  - The heavy step (make check-local in its own session) gains RULES-TREE (33)'s executed rows: the child's SIGPIPE and SIGINT
+    restored to their defaults at the spawn (F3, the INT caveat), a HUP trap forwarding TERM to the child's group and exiting 129
+    (F2), the guarded wait `rc=0; wait $child || rc=$?` (F1).
+
+THE ROW, run before the landing: a stand-in child (`/bin/sh -c "sleep N; exit K"`) in the exact form, signalled 1.5 s in:
+ON THE STUDIO:
+    TERM rc 143 after 0.03 s; the stand-in pid 13356 dead
+     [leg 11:24:49] the stand-in 13356 started in its own session
+     [leg 11:24:51] EXIT trap: the releases run here (the stand-in dead)
+    INT  rc 130 after 0.03 s; the stand-in pid 14792 dead
+     [leg 11:24:51] the stand-in 14792 started in its own session
+     [leg 11:24:53] EXIT trap: the releases run here (the stand-in dead)
+    HUP  rc 129 after 0.03 s; the stand-in pid 15700 dead
+     [leg 11:24:53] the stand-in 15700 started in its own session
+     [leg 11:24:55] EXIT trap: the releases run here (the stand-in dead)
+    none rc 0 after 0.52 s; the stand-in pid 16585 dead
+     [leg 11:24:55] the stand-in 16585 started in its own session
+     [leg 11:24:57] the child ended rc 0
+     [leg 11:24:57] EXIT trap: the releases run here (the stand-in dead)
+    none rc 3 after 0.52 s; the stand-in pid 17889 dead
+     [leg 11:24:57] the stand-in 17889 started in its own session
+     [leg 11:24:59] the child ended rc 3
+     [leg 11:24:59] EXIT trap: the releases run here (the stand-in dead)
+ON THE BOX:
+  zsh 5.9 (arm64-apple-darwin26.0)
+    TERM rc 143 after 0.03 s; the stand-in pid 17879 dead
+     [leg 11:25:00] the stand-in 17879 started in its own session
+     [leg 11:25:02] EXIT trap: the releases run here (the stand-in dead)
+    INT  rc 130 after 0.03 s; the stand-in pid 17914 dead
+     [leg 11:25:02] the stand-in 17914 started in its own session
+     [leg 11:25:04] EXIT trap: the releases run here (the stand-in dead)
+    HUP  rc 129 after 0.03 s; the stand-in pid 17958 dead
+     [leg 11:25:04] the stand-in 17958 started in its own session
+     [leg 11:25:06] EXIT trap: the releases run here (the stand-in dead)
+    none rc 0 after 0.51 s; the stand-in pid 17990 dead
+     [leg 11:25:06] the stand-in 17990 started in its own session
+     [leg 11:25:08] the child ended rc 0
+     [leg 11:25:08] EXIT trap: the releases run here (the stand-in dead)
+    none rc 3 after 0.51 s; the stand-in pid 18040 dead
+     [leg 11:25:08] the stand-in 18040 started in its own session
+     [leg 11:25:11] the child ended rc 3
+     [leg 11:25:11] EXIT trap: the releases run here (the stand-in dead)
+
+THE TRIPWIRE AT 3534b51, on the box (make check-box): docs/records/20260929-114143-make-check-box.txt, twenty-one legs GREEN in 180 s, every leg's own line
+present, the axiom check 709, a 1-minute load of 17.44 there at its start (the Studio's gate is 20). The helper's queue now wakes
+its waiters at a release ("a wake written into 4 waiter(s)' fifo(s)"). Its route's own lines:
+  check: BOX (the caller's HEAD 3534b51, for harness-land, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 11:25:28Z load1 10.65] the toolchains: go1.27.0, node v22.18.0
+  [box 11:25:28Z load1 10.65] the box shell's pid is 19085: to stop this run, kill -TERM it on the box (during the legs its trap stops them within seconds; in a lock's wait, once the current sleep ends; then the EXIT trap 
+  lean_lock: every slot held (slot1: T9 pid 9559 pgid 9551 at 2026-09-29T11:24:52Z on box;slot2: T4 pid 12829 pgid 12729 at 2026-09-29T11:23:47Z on box;); check-box:harness-land waits (11:25:28Z)
+  lean_lock: every slot held (slot1: T4c pid 28223 pgid 28223 at 2026-09-29T11:30:13Z on box;slot2: T4 pid 12829 pgid 12729 at 2026-09-29T11:29:08Z on box;); check-box:harness-land waits (11:30:28Z)
+  lean_lock: check-box:harness-land took slot1 (11:33:14Z)
+  lean_lock: released slot1 (11:33:14Z)
+  [box 11:38:57Z load1 8.68] the box leg lock's queue: this take's ticket 001790681594234384000.0019085.02731 withdrawn at its take (it yielded to an older waiter at 1 read(s); its waits ended by a wake 2 time(s), by the p
+[withheld at export: a sibling tree's line]
+  lean_lock: every slot held (slot1: T10 pid 29156 pgid 29148 at 2026-09-29T11:38:46Z on box;slot2: T6 pid 35548 pgid 35548 at 2026-09-29T11:37:16Z on box;); check-box:harness-land waits (11:38:57Z)
+  lean_lock: check-box:harness-land took slot1 (11:41:42Z)
+  [box 11:41:42Z load1 17.44] the box leg lock and a Lean slot taken; the worktree at 3534b51, clean
+  [box 11:41:42Z load1 17.44] make check-local
+  [box 11:44:43Z load1 6.34] the box leg lock RELEASED by pid 19085 (11:44:43Z)
+  [box 11:44:43Z load1 6.34] the box leg lock's queue: a wake written into 4 waiter(s)' fifo(s) at this release
+  [box 11:44:43Z load1 6.34] make check-local rc 0
+  lean_lock: released slot1 (11:44:43Z)
+
+THE LANDING: 3534b51 cherry-picked with its committer date onto main at 8572171 (S1's sitting-7 lens: docs only) as 3671fae;
+  git diff --quiet 3534b51 HEAD outside the 6 paths main moved since 20aeaf0: exit 0
+  docs/audit/2026-09-29-lens-S1-sitting7-by-S1.md docs/audit/README.md docs/lanes/lean.md docs/records/20260929-081730-landing-s7-1-s1.txt docs/records/20260929-111633-landing-v3-s1.txt docs/records/README.md
+the legs that read the moved pages, live at the rebuilt tip:
+  pins (11:45:14Z, load 5.69): exit 0: check-pins: GREEN (73 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-ru
+  cite (11:45:19Z, load 5.69): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (11:45:21Z, load 5.72): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)

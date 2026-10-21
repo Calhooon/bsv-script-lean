@@ -1,0 +1,103 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 908276e (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260924-024354 UTC; wall: 848s (14 min 8 s)
+host: modal; load at start: 0.00, 0.00, 0.00; load at end: 0.00, 0.00, 0.00
+[withheld at export: a sibling tree's line]
+status: RED (exit 127)
+legs (the verdict lines, in order):
+[withheld at export: a sibling tree's line]
+  lean: build OK, sorry-free
+  axiom check: OK (204 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.27: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.3.27 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+[withheld at export: a sibling tree's line]
+  sample 02:43:55 UTC: load1 0.00; over 5% cpu: python 40% 0.1GB; bash 6% 0.0GB; python3 100% 0.0GB; bash 50% 0.0GB; other programs: 4 processes, 259% cpu; 
+  sample 02:44:05 UTC: load1 0.00; over 5% cpu: python 16% 0.1GB; cargo 9% 0.1GB; rustc 98% 0.5GB; bash 67% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:44:15 UTC: load1 0.00; over 5% cpu: python 10% 0.1GB; lake 27% 0.2GB; git 98% 0.0GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:44:25 UTC: load1 0.00; over 5% cpu: python 8% 0.1GB; git 340% 0.5GB; bash 67% 0.0GB; other programs: 3 processes, 267% cpu; 
+  sample 02:44:35 UTC: load1 0.00; over 5% cpu: python 6% 0.1GB; lake 17% 1.0GB; bash 33% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:44:45 UTC: load1 0.00; over 5% cpu: lake 254% 1.2GB; lean 100% 0.3GB; bash 33% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 02:44:55 UTC: load1 0.00; over 5% cpu: lake 498% 1.3GB; lean 99% 0.5GB; bash 14% 0.0GB; other programs: 3 processes, 197% cpu; 
+  sample 02:45:05 UTC: load1 0.00; over 5% cpu: lake 603% 1.4GB; lean 96% 0.6GB; lean 97% 0.5GB; bash 20% 0.0GB; other programs: 3 processes, 225% cpu; 
+  sample 02:45:16 UTC: load1 0.00; over 5% cpu: lake 505% 1.4GB; lean 78% 3.1GB; bash 50% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:45:26 UTC: load1 0.00; over 5% cpu: lake 434% 1.4GB; lean 77% 5.9GB; bash 67% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:45:36 UTC: load1 0.00; over 5% cpu: lake 381% 1.4GB; lean 94% 7.8GB; bash 67% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:45:46 UTC: load1 0.00; over 5% cpu: lake 340% 1.5GB; lean 99% 1.0GB; lean 99% 1.0GB; lean 99% 1.0GB; lean 99% 0.9GB; bash 28% 0.0GB; other programs: 3 processes, 246% cpu; 
+  sample 02:45:56 UTC: load1 0.00; over 5% cpu: lake 306% 1.5GB; lean 99% 5.2GB; lean 98% 5.2GB; lean 98% 5.2GB; lean 98% 5.2GB; bash 40% 0.0GB; other programs: 3 processes, 275% cpu; 
+  sample 02:46:06 UTC: load1 0.00; over 5% cpu: lake 279% 1.4GB; lean 101% 7.8GB; lean 100% 0.0GB; lean 100% 0.2GB; bash 33% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:46:16 UTC: load1 0.00; over 5% cpu: lake 257% 1.5GB; lean 97% 3.7GB; lean 99% 2.5GB; lean 99% 2.5GB; lean 99% 1.7GB; lean 98% 1.7GB; bash 17% 0.0GB; other programs: 3 processes, 230% cpu; 
+  sample 02:46:26 UTC: load1 0.00; over 5% cpu: lake 237% 1.5GB; lean 98% 6.7GB; lean 98% 6.3GB; lean 99% 6.3GB; lean 99% 5.4GB; lean 98% 5.6GB; bash 17% 0.0GB; other programs: 3 processes, 230% cpu; 
+  sample 02:46:36 UTC: load1 0.00; over 5% cpu: lake 221% 1.5GB; lean 105% 0.0GB; lean 98% 0.8GB; lean 99% 0.8GB; bash 17% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:46:47 UTC: load1 0.00; over 5% cpu: lake 206% 1.5GB; lean 98% 6.4GB; lean 98% 6.4GB; lean 98% 4.7GB; bash 33% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 02:46:57 UTC: load1 0.00; over 5% cpu: lake 194% 1.5GB; lean 99% 0.8GB; lean 98% 0.8GB; lean 100% 0.8GB; bash 40% 0.0GB; other programs: 3 processes, 250% cpu; 
+  sample 02:47:07 UTC: load1 0.00; over 5% cpu: lake 183% 1.5GB; lean 98% 6.3GB; lean 98% 6.3GB; lean 99% 6.3GB; bash 33% 0.0GB; other programs: 3 processes, 215% cpu; 
+  sample 02:47:17 UTC: load1 0.00; over 5% cpu: lake 173% 1.5GB; lean 99% 0.7GB; lean 98% 0.7GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:47:27 UTC: load1 0.00; over 5% cpu: lake 164% 1.5GB; lean 98% 7.4GB; lean 97% 7.4GB; bash 25% 0.0GB; other programs: 2 processes, 134% cpu; 
+  sample 02:47:37 UTC: load1 0.00; over 5% cpu: lake 156% 1.5GB; lean 99% 2.4GB; lean 99% 2.4GB; lean 99% 2.4GB; bash 50% 0.0GB; other programs: 3 processes, 242% cpu; 
+  sample 02:47:47 UTC: load1 0.00; over 5% cpu: lake 149% 1.5GB; lean 98% 7.5GB; lean 98% 7.5GB; lean 98% 7.5GB; bash 33% 0.0GB; other programs: 3 processes, 183% cpu; 
+  sample 02:47:57 UTC: load1 0.00; over 5% cpu: lake 142% 1.5GB; lean 97% 4.2GB; lean 98% 4.2GB; bash 40% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 02:48:07 UTC: load1 0.00; over 5% cpu: lake 136% 1.5GB; lean 156% 7.9GB; bash 33% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 02:48:17 UTC: load1 0.00; over 5% cpu: lake 131% 1.5GB; lean 97% 3.0GB; lean 97% 3.0GB; bash 25% 0.0GB; other programs: 3 processes, 167% cpu; 
+  sample 02:48:28 UTC: load1 0.00; over 5% cpu: lake 126% 1.5GB; lean 148% 7.9GB; lean 99% 0.0GB; bash 50% 0.0GB; other programs: 3 processes, 500% cpu; 
+  sample 02:48:38 UTC: load1 0.00; over 5% cpu: lake 121% 1.5GB; lean 95% 7.5GB; lean 97% 5.0GB; bash 25% 0.0GB; other programs: 3 processes, 175% cpu; 
+  sample 02:48:48 UTC: load1 0.00; over 5% cpu: lake 117% 1.5GB; lean 95% 2.4GB; bash 50% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 02:48:58 UTC: load1 0.00; over 5% cpu: lake 56% 1.0GB; bash 25% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 02:49:08 UTC: load1 0.00; over 5% cpu: lake 11% 1.1GB; lean 94% 6.4GB; bash 50% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 02:49:18 UTC: load1 0.00; over 5% cpu: lake 465% 1.2GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:49:28 UTC: load1 0.00; over 5% cpu: lake 644% 1.4GB; lean 94% 0.8GB; bash 25% 0.0GB; other programs: 3 processes, 234% cpu; 
+  sample 02:49:44 UTC: load1 0.00; over 5% cpu: lake 321% 1.6GB; clang 56% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 58% 0.1GB; clang 16% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 57% 0.1GB; clang 56% 0.1GB; clang 56% 0.1GB; clang 56% 0.1GB; clang 55% 0.1GB; bash 25% 0.0GB; other programs: 3 processes, 211% cpu; 
+  sample 02:49:54 UTC: load1 0.00; over 5% cpu: lake 322% 1.6GB; clang 99% 0.2GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 99% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 101% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 103% 0.1GB; clang 104% 0.1GB; clang 106% 0.1GB; clang 100% 0.1GB; clang 116% 0.0GB; bash 20% 0.0GB; clang 150% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:50:04 UTC: load1 0.00; over 5% cpu: lake 326% 1.6GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 100% 0.2GB; clang 100% 0.1GB; clang 96% 0.2GB; clang 102% 0.2GB; clang 102% 0.1GB; clang 103% 0.1GB; clang 103% 0.1GB; clang 104% 0.1GB; clang 110% 0.1GB; clang 113% 0.1GB; clang 130% 0.1GB; bash 25% 0.0GB; clang 200% 0.0GB; other programs: 3 processes, 250% cpu; 
+  sample 02:50:14 UTC: load1 0.00; over 5% cpu: lake 326% 1.6GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 97% 0.2GB; clang 98% 0.2GB; clang 97% 0.2GB; clang 98% 0.1GB; clang 95% 0.2GB; clang 100% 0.2GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 94% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 40% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:50:24 UTC: load1 0.00; over 5% cpu: lake 324% 1.6GB; clang 98% 0.2GB; clang 100% 0.2GB; clang 99% 0.2GB; clang 99% 0.1GB; clang 99% 0.1GB; clang 100% 0.2GB; clang 100% 0.1GB; clang 100% 0.2GB; clang 91% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 114% 0.0GB; bash 40% 0.0GB; lake 200% 0.6GB; other programs: 3 processes, 225% cpu; 
+  sample 02:50:35 UTC: load1 0.00; over 5% cpu: lake 323% 1.6GB; clang 98% 0.2GB; clang 35% 0.0GB; clang 38% 0.0GB; clang 50% 0.0GB; clang 54% 0.0GB; clang 57% 0.0GB; clang 97% 0.0GB; clang 96% 0.0GB; clang 83% 0.0GB; clang 105% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 40% 0.0GB; clang 133% 0.0GB; other programs: 3 processes, 225% cpu; 
+  sample 02:50:45 UTC: load1 0.00; over 5% cpu: lake 321% 1.6GB; clang 36% 0.0GB; clang 92% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 40% 0.0GB; clang 125% 0.0GB; other programs: 3 processes, 175% cpu; 
+  sample 02:50:55 UTC: load1 0.00; over 5% cpu: lake 321% 1.6GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; lake 100% 0.8GB; other programs: 3 processes, 166% cpu; 
+  sample 02:51:05 UTC: load1 0.00; over 5% cpu: lake 321% 1.6GB; clang 104% 0.1GB; clang 105% 0.1GB; clang 92% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; clang 133% 0.0GB; other programs: 3 processes, 259% cpu; 
+  sample 02:51:15 UTC: load1 0.00; over 5% cpu: lake 319% 1.6GB; clang 98% 0.2GB; clang 85% 0.0GB; clang 61% 0.0GB; clang 71% 0.0GB; clang 95% 0.1GB; clang 93% 0.1GB; clang 100% 0.1GB; clang 116% 0.0GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:51:25 UTC: load1 0.00; over 5% cpu: lake 320% 1.6GB; clang 103% 0.0GB; clang 110% 0.1GB; clang 108% 0.0GB; clang 110% 0.1GB; clang 111% 0.1GB; clang 116% 0.1GB; clang 125% 0.1GB; bash 25% 0.0GB; clang 200% 0.0GB; other programs: 3 processes, 250% cpu; 
+  sample 02:51:35 UTC: load1 0.00; over 5% cpu: lake 318% 1.6GB; clang 99% 0.3GB; clang 98% 0.2GB; clang 17% 0.0GB; clang 32% 0.0GB; clang 49% 0.0GB; clang 100% 0.0GB; clang 59% 0.0GB; clang 95% 0.0GB; clang 83% 0.0GB; clang 114% 0.1GB; clang 120% 0.1GB; clang 128% 0.1GB; bash 25% 0.0GB; clang 166% 0.0GB; other programs: 3 processes, 250% cpu; 
+  sample 02:51:45 UTC: load1 0.00; over 5% cpu: lake 319% 1.6GB; clang 59% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 40% 0.0GB; lake 100% 0.6GB; other programs: 3 processes, 225% cpu; 
+  sample 02:51:55 UTC: load1 0.00; over 5% cpu: lake 318% 1.6GB; clang 103% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 112% 0.1GB; clang 100% 0.0GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:52:06 UTC: load1 0.00; over 5% cpu: lake 317% 1.6GB; clang 75% 0.0GB; clang 100% 0.1GB; clang 92% 0.1GB; clang 89% 0.1GB; bash 25% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:52:16 UTC: load1 0.00; over 5% cpu: lake 316% 1.6GB; clang 36% 0.0GB; clang 42% 0.0GB; clang 50% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 50% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:52:26 UTC: load1 0.00; over 5% cpu: lake 316% 1.6GB; clang 54% 0.0GB; clang 64% 0.0GB; clang 62% 0.0GB; clang 89% 0.0GB; clang 106% 0.1GB; clang 118% 0.1GB; clang 114% 0.1GB; bash 25% 0.0GB; clang 166% 0.0GB; other programs: 2 processes, 233% cpu; 
+  sample 02:52:36 UTC: load1 0.00; over 5% cpu: lake 315% 1.6GB; clang 61% 0.0GB; clang 112% 0.0GB; clang 120% 0.1GB; clang 128% 0.1GB; clang 125% 0.0GB; bash 67% 0.0GB; other programs: 3 processes, 333% cpu; 
+  sample 02:52:46 UTC: load1 0.00; over 5% cpu: lake 314% 1.6GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; clang 133% 0.0GB; other programs: 3 processes, 234% cpu; 
+  sample 02:52:56 UTC: load1 0.00; over 5% cpu: lake 314% 1.6GB; clang 99% 0.2GB; clang 98% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 125% 0.0GB; bash 50% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:53:06 UTC: load1 0.00; over 5% cpu: lake 314% 1.6GB; clang 46% 0.0GB; clang 96% 0.1GB; clang 68% 0.0GB; clang 94% 0.0GB; clang 92% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 02:53:16 UTC: load1 0.00; over 5% cpu: lake 314% 1.6GB; clang 62% 0.0GB; clang 64% 0.0GB; clang 115% 0.1GB; clang 125% 0.1GB; clang 150% 0.0GB; bash 25% 0.0GB; other programs: 3 processes, 266% cpu; 
+  sample 02:53:26 UTC: load1 0.00; over 5% cpu: lake 314% 1.6GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 40% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 02:53:36 UTC: load1 0.00; over 5% cpu: lake 313% 1.6GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 100% 0.2GB; clang 106% 0.0GB; clang 118% 0.1GB; clang 114% 0.1GB; bash 33% 0.0GB; clang 150% 0.0GB; other programs: 3 processes, 350% cpu; 
+  sample 02:53:47 UTC: load1 0.00; over 5% cpu: lake 313% 1.6GB; clang 99% 0.3GB; clang 98% 0.2GB; clang 98% 0.1GB; clang 93% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:53:57 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 47% 0.0GB; clang 95% 0.0GB; clang 100% 0.0GB; clang 100% 0.1GB; clang 120% 0.0GB; bash 50% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 02:54:07 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 20% 0.0GB; clang 88% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 50% 0.0GB; other programs: 3 processes, 267% cpu; 
+  sample 02:54:17 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 28% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 120% 0.0GB; bash 25% 0.0GB; lake 200% 0.6GB; other programs: 3 processes, 250% cpu; 
+  sample 02:54:27 UTC: load1 0.00; over 5% cpu: lake 313% 1.6GB; clang 18% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 25% 0.0GB; lake 100% 0.7GB; other programs: 3 processes, 217% cpu; 
+  sample 02:54:37 UTC: load1 0.00; over 5% cpu: lake 313% 1.6GB; clang 28% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 25% 0.0GB; lake 100% 0.6GB; other programs: 3 processes, 200% cpu; 
+  sample 02:54:47 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 90% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 25% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 166% cpu; 
+  sample 02:54:57 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 88% 0.0GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 25% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 02:55:07 UTC: load1 0.00; over 5% cpu: lake 313% 1.6GB; clang 89% 0.0GB; clang 107% 0.1GB; clang 100% 0.1GB; bash 50% 0.0GB; clang 100% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 02:55:17 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 94% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; bash 50% 0.0GB; lake 150% 0.8GB; other programs: 3 processes, 233% cpu; 
+  sample 02:55:27 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 94% 0.0GB; clang 106% 0.1GB; clang 110% 0.1GB; clang 114% 0.1GB; bash 33% 0.0GB; clang 133% 0.0GB; other programs: 3 processes, 250% cpu; 
+  sample 02:55:38 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 67% 0.0GB; clang 100% 0.0GB; clang 100% 0.1GB; clang 114% 0.1GB; bash 33% 0.0GB; lake 150% 0.7GB; other programs: 3 processes, 233% cpu; 
+  sample 02:55:48 UTC: load1 0.00; over 5% cpu: lake 312% 1.6GB; clang 100% 0.1GB; clang 85% 0.1GB; clang 100% 0.1GB; clang 80% 0.0GB; bash 25% 0.0GB; other programs: 2 processes, 142% cpu; 
+  sample 02:55:58 UTC: load1 0.00; over 5% cpu: lake 311% 1.6GB; clang 71% 0.0GB; clang 94% 0.0GB; clang 92% 0.1GB; clang 88% 0.0GB; bash 40% 0.0GB; lake 100% 0.6GB; other programs: 3 processes, 217% cpu; 
+  sample 02:56:08 UTC: load1 0.00; over 5% cpu: lake 311% 1.6GB; clang 98% 0.2GB; clang 99% 0.2GB; clang 99% 0.2GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.0GB; bash 67% 0.0GB; lake 300% 0.7GB; other programs: 3 processes, 233% cpu; 
+  sample 02:56:18 UTC: load1 0.00; over 5% cpu: lake 308% 1.6GB; clang 98% 0.3GB; clang 97% 0.2GB; bash 33% 0.0GB; other programs: 3 processes, 205% cpu; 
+  sample 02:56:28 UTC: load1 0.00; over 5% cpu: lake 301% 1.6GB; clang 98% 0.3GB; clang 98% 0.3GB; bash 33% 0.0GB; other programs: 3 processes, 166% cpu; 
+  sample 02:56:38 UTC: load1 0.00; over 5% cpu: lake 294% 1.6GB; clang 97% 0.1GB; bash 20% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:56:48 UTC: load1 0.00; over 5% cpu: lake 288% 1.6GB; clang 5% 0.1GB; bash 33% 0.0GB; other programs: 4 processes, 445% cpu; 
+  sample 02:56:58 UTC: load1 0.00; over 5% cpu: lake 680% 1.2GB; bash 25% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 02:57:08 UTC: load1 0.00; over 5% cpu: lake 740% 1.5GB; lean 96% 2.3GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 100% 0.1GB; clang 108% 0.1GB; clang 104% 0.1GB; clang 110% 0.1GB; clang 106% 0.1GB; clang 107% 0.1GB; clang 120% 0.1GB; clang 140% 0.0GB; bash 20% 0.0GB; clang 300% 0.0GB; other programs: 3 processes, 242% cpu; 
+  sample 02:57:19 UTC: load1 0.00; over 5% cpu: lake 477% 1.5GB; lean 97% 0.0GB; bash 20% 0.0GB; other programs: 3 processes, 180% cpu; 
+  sample 02:57:29 UTC: load1 0.00; over 5% cpu: lake 77% 1.1GB; bash 20% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:57:39 UTC: load1 0.00; over 5% cpu: lake 748% 1.3GB; bash 25% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 02:57:49 UTC: load1 0.00; over 5% cpu: lake 588% 1.5GB; lean 95% 7.4GB; bash 33% 0.0GB; other programs: 3 processes, 167% cpu; 
+  sample 02:57:59 UTC: load1 0.00; over 5% cpu: lake 410% 1.5GB; clang 17% 0.1GB; bash 25% 0.0GB; other programs: 4 processes, 689% cpu; 

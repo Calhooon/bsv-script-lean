@@ -1,0 +1,89 @@
+{
+ "engine": "gobdk",
+ "pin": "4eab3acd",
+ "source": "the GoBDK shim (#28, D14; harness/engines/gobdk at d9e89da): no class yet. Every divergence is UNEXPLAINED, filed as a witness under corpus/witnesses/gobdk/ and RED until S3 names its class here (D83, D83c); the eight corpora's run at 801e635 had none (docs/records/20260926-210253-gobdk-shim-s4b.md); re-pinned to 4eab3acd by #54 (2026-10-06), its run in the #54 record (docs/records/, the name ending -repin54.md)",
+ "classes": {
+  "splice.substr.int64-reader.v1.2.2-fold": {
+   "decided_by": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`). [SRC] GoBDK `4eab3acd`, `module/gobdk/bdkcgo/version_cgo.h:22–23`, identifies its linked reference; its own recorded columns remain in the corpus.",
+   "ruling": "impl-wrong",
+   "note": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`)."
+  }
+ },
+ "rows": [
+  {
+   "why": "The reading of record at v1.2.3 is a defined refusal ([SRC] `int_serialization.h:61–118`, `script_num.cpp:80–91` at `6504a3af`); the previous pin's reading and its measurements are recorded in material withheld from the public edition at the maintainers' request (group `d8-node-team-discretion`).",
+   "when": {
+    "id_in": [
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "gen-00796",
+     "gen-01018",
+     "gen-01020",
+     "gen-01024",
+     "gen-01026",
+     "gen-01028",
+     "gen-01030",
+     "gen-01032",
+     "gen-01034",
+     "gen-01036",
+     "gen-01038",
+     "gen-01040",
+     "gen-01042",
+     "gen-01044",
+     "gen-01046",
+     "gen-01050",
+     "gen-01052",
+     "gen-01054",
+     "gen-01056",
+     "gen-01058",
+     "gen-01062",
+     "gen-01064",
+     "gen-01066",
+     "gen-01068",
+     "gen-01070",
+     "gen-01074",
+     "gen-01076",
+     "gen-01078",
+     "gen-01080",
+     "gen-01082",
+     "gen-01086",
+     "gen-01088",
+     "gen-01090",
+     "gen-01092",
+     "gen-01094",
+     "gen-01096",
+     "gen-01098",
+     "gen-01102",
+     "gen-01104",
+     "gen-01106",
+     "gen-01108",
+     "gen-01112",
+     "gen-01116",
+     "gen-01118",
+     "gen-01120",
+     "gen-01122",
+     "gen-01126",
+     "gen-01130",
+     "gen-01132",
+     "gen-01134",
+     "gen-01136",
+     "gen-01140",
+     "gen-01144",
+     "gen-01146",
+     "gen-01148",
+     "gen-01150",
+     "gen-01154",
+     "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+     "road-gen-00796"
+    ],
+    "spec": "invalid",
+    "engine": "valid",
+    "has_opcode_any": [
+     179,
+     180,
+     181
+    ]
+   },
+   "class": "splice.substr.int64-reader.v1.2.2-fold"
+  }
+ ]
+}

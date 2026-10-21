@@ -1,0 +1,146 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 017b2eb (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260924-044921 UTC; wall: 962s (16 min 2 s)
+host: modal; load at start: 0.00, 0.00, 0.00; load at end: 0.00, 0.00, 0.00
+[withheld at export: a sibling tree's line]
+status: GREEN
+legs (the verdict lines, in order):
+[withheld at export: a sibling tree's line]
+  lean: build OK, sorry-free
+  axiom check: OK (204 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.3.28: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.3.28 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+  sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.3.28 ECDSA); 0 failures; negative control bit-flip fails on every entry
+  arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.3.28 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+  arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+  stackcheck: 262 engine cases; comparable 260: agree 260, mismatch 0, unimplemented 0; recorded (not counted) 2
+  crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+  crypto: ECDSA vectors from bsv-rs 0.3.28: 1340 cases, 0 mismatches
+  crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+  crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+  seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and expansion opcodes of #11/#18) and 0 elsewhere
+  scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  txtests bitcoin-sv-v1.2.2-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+  txtests bitcoin-sv-v1.2.2-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+  flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  specgen --check: OK (117 files up to date; 10 rules flagged)
+  bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+  versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+  erascheck: 74 rows × 2 cells = 148 cells decided under Params.derive (SV-node's mainnet defaults, block and mempool) with the error code (eras 128, p2sh 16, p2sh-txlevel 4); 2 rows decided at the transaction level (CheckRegularTransaction): 0 mismatches
+  witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+  witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: ../corpus/witnesses/policy-defaults-large.jsonl absent (make policywitnesses regenerates it; its sha256 is in corpus/witnesses/policy-defaults-manifest.json): not counted
+  witnesscheck: 2 witness transactions decided under both nodes' derived parameters, 0 mismatches
+  bsvs --self-test
+  bsvs --self-test: GREEN
+  run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.3.28 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided=0 nondeterminism=0, 0.6s
+  run_bsvrs --smoke: GREEN (10000 entries agree with their recorded bsv-rs verdicts)
+  run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.3.28 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the block word per input, the spec-mempool column under the standard word per input, from the entry's spend height and the coin's height (engine::word_for); entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@017b2eb (sv-mainnet-default); 0.6s
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.5.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.5.2 (docs/PROVENANCE.md §1a)); the spec at spec@017b2eb (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 8.2s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@2.8.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 2.8.0 on node v22.18.0 (docs/PROVENANCE.md §1a)); the spec at spec@017b2eb (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 13.0s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  make check: GREEN (stubs are listed above by name; a stub is not a pass)
+[withheld at export: a sibling tree's line]
+  sample 04:49:22 UTC: load1 0.00; over 5% cpu: python 48% 0.1GB; bash 28% 0.0GB; python3 100% 0.0GB; bash 25% 0.0GB; other programs: 4 processes, 248% cpu; 
+  sample 04:49:32 UTC: load1 0.00; over 5% cpu: python 21% 0.1GB; lake 31% 0.2GB; git 95% 0.0GB; bash 33% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 04:49:42 UTC: load1 0.00; over 5% cpu: python 14% 0.1GB; git 350% 0.6GB; bash 33% 0.0GB; other programs: 3 processes, 183% cpu; 
+  sample 04:49:53 UTC: load1 0.00; over 5% cpu: python 10% 0.1GB; lake 18% 1.1GB; git 100% 0.0GB; bash 33% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 04:50:03 UTC: load1 0.00; over 5% cpu: python 8% 0.1GB; lake 418% 1.3GB; bash 14% 0.0GB; other programs: 3 processes, 214% cpu; 
+  sample 04:50:13 UTC: load1 0.00; over 5% cpu: python 7% 0.1GB; lake 613% 1.3GB; bash 12% 0.0GB; other programs: 3 processes, 168% cpu; 
+  sample 04:50:23 UTC: load1 0.00; over 5% cpu: python 6% 0.1GB; lake 24% 1.1GB; lean 84% 1.2GB; bash 25% 0.0GB; other programs: 3 processes, 234% cpu; 
+  sample 04:50:33 UTC: load1 0.00; over 5% cpu: lake 9% 1.1GB; lean 79% 3.5GB; bash 25% 0.0GB; other programs: 3 processes, 233% cpu; 
+  sample 04:50:43 UTC: load1 0.00; over 5% cpu: lake 6% 1.1GB; lean 80% 6.0GB; bash 33% 0.0GB; other programs: 3 processes, 166% cpu; 
+  sample 04:50:53 UTC: load1 0.00; over 5% cpu: lean 82% 7.7GB; bash 33% 0.0GB; other programs: 3 processes, 133% cpu; 
+  sample 04:51:03 UTC: load1 0.00; over 5% cpu: lake 698% 1.2GB; bash 20% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 04:51:13 UTC: load1 0.00; over 5% cpu: lake 689% 1.4GB; bash 33% 0.0GB; other programs: 3 processes, 223% cpu; 
+  sample 04:51:24 UTC: load1 0.00; over 5% cpu: bash 33% 0.0GB; other programs: 3 processes, 180% cpu; 
+  sample 04:51:34 UTC: load1 0.00; over 5% cpu: lake 448% 1.2GB; bash 9% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 04:51:44 UTC: load1 0.00; over 5% cpu: lake 703% 1.2GB; bash 20% 0.0GB; other programs: 3 processes, 240% cpu; 
+  sample 04:51:54 UTC: load1 0.00; over 5% cpu: lake 778% 1.3GB; bash 18% 0.0GB; other programs: 3 processes, 198% cpu; 
+  sample 04:52:05 UTC: load1 0.00; over 5% cpu: lake 750% 1.4GB; bash 27% 0.0GB; other programs: 3 processes, 199% cpu; 
+  sample 04:52:15 UTC: load1 0.00; over 5% cpu: lake 25% 0.2GB; bash 25% 0.0GB; other programs: 3 processes, 224% cpu; 
+  sample 04:52:25 UTC: load1 0.00; over 5% cpu: lake 323% 1.2GB; bash 19% 0.0GB; other programs: 3 processes, 215% cpu; 
+  sample 04:52:36 UTC: load1 0.00; over 5% cpu: lake 576% 1.2GB; bash 15% 0.0GB; other programs: 3 processes, 219% cpu; 
+  sample 04:52:46 UTC: load1 0.00; over 5% cpu: lake 692% 1.3GB; bash 27% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 04:52:56 UTC: load1 0.00; over 5% cpu: lake 750% 1.3GB; bash 18% 0.0GB; other programs: 3 processes, 218% cpu; 
+  sample 04:53:07 UTC: load1 0.00; over 5% cpu: lake 850% 1.5GB; bash 10% 0.0GB; other programs: 3 processes, 188% cpu; 
+  sample 04:53:17 UTC: load1 0.00; over 5% cpu: lake 277% 1.2GB; bash 17% 0.0GB; other programs: 3 processes, 215% cpu; 
+  sample 04:53:27 UTC: load1 0.00; over 5% cpu: lake 674% 1.2GB; bash 18% 0.0GB; other programs: 3 processes, 206% cpu; 
+  sample 04:53:38 UTC: load1 0.00; over 5% cpu: lake 765% 1.3GB; bash 20% 0.0GB; other programs: 3 processes, 188% cpu; 
+  sample 04:53:48 UTC: load1 0.00; over 5% cpu: lake 762% 1.3GB; bash 33% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 04:53:58 UTC: load1 0.00; over 5% cpu: arithcheck 96% 0.1GB; bash 30% 0.0GB; other programs: 3 processes, 219% cpu; 
+  sample 04:54:08 UTC: load1 0.00; over 5% cpu: lake 383% 1.2GB; bash 21% 0.0GB; other programs: 3 processes, 207% cpu; 
+  sample 04:54:19 UTC: load1 0.00; over 5% cpu: lake 678% 1.2GB; bash 14% 0.0GB; other programs: 3 processes, 187% cpu; 
+  sample 04:54:29 UTC: load1 0.00; over 5% cpu: lake 754% 1.3GB; bash 20% 0.0GB; other programs: 3 processes, 210% cpu; 
+  sample 04:54:39 UTC: load1 0.00; over 5% cpu: lake 769% 1.3GB; bash 33% 0.0GB; other programs: 3 processes, 203% cpu; 
+  sample 04:54:49 UTC: load1 0.00; over 5% cpu: stackcheck 96% 0.6GB; bash 14% 0.0GB; other programs: 3 processes, 193% cpu; 
+  sample 04:54:59 UTC: load1 0.00; over 5% cpu: lake 66% 1.1GB; bash 33% 0.0GB; other programs: 3 processes, 220% cpu; 
+  sample 04:55:10 UTC: load1 0.00; over 5% cpu: lake 519% 1.2GB; bash 20% 0.0GB; other programs: 3 processes, 211% cpu; 
+  sample 04:55:20 UTC: load1 0.00; over 5% cpu: lake 696% 1.2GB; bash 22% 0.0GB; other programs: 3 processes, 228% cpu; 
+  sample 04:55:30 UTC: load1 0.00; over 5% cpu: lake 760% 1.3GB; bash 18% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 04:55:40 UTC: load1 0.00; over 5% cpu: lake 722% 1.5GB; bash 10% 0.0GB; other programs: 3 processes, 197% cpu; 
+  sample 04:55:51 UTC: load1 0.00; over 5% cpu: cryptocheck 98% 0.1GB; bash 28% 0.0GB; other programs: 3 processes, 210% cpu; 
+  sample 04:56:01 UTC: load1 0.00; over 5% cpu: lake 354% 1.2GB; bash 16% 0.0GB; other programs: 3 processes, 187% cpu; 
+  sample 04:56:11 UTC: load1 0.00; over 5% cpu: lake 679% 1.3GB; bash 21% 0.0GB; other programs: 3 processes, 199% cpu; 
+  sample 04:56:22 UTC: load1 0.00; over 5% cpu: lake 753% 1.3GB; bash 20% 0.0GB; other programs: 3 processes, 194% cpu; 
+  sample 04:56:32 UTC: load1 0.00; over 5% cpu: lake 786% 1.3GB; bash 27% 0.0GB; other programs: 3 processes, 254% cpu; 
+  sample 04:56:42 UTC: load1 0.00; over 5% cpu: lake 942% 1.5GB; bash 17% 0.0GB; other programs: 3 processes, 210% cpu; 
+  sample 04:56:53 UTC: load1 0.00; over 5% cpu: lake 143% 1.1GB; bash 15% 0.0GB; other programs: 3 processes, 212% cpu; 
+  sample 04:57:03 UTC: load1 0.00; over 5% cpu: lake 620% 1.2GB; bash 14% 0.0GB; other programs: 3 processes, 203% cpu; 
+  sample 04:57:13 UTC: load1 0.00; over 5% cpu: lake 735% 1.3GB; bash 23% 0.0GB; other programs: 3 processes, 220% cpu; 
+  sample 04:57:24 UTC: load1 0.00; over 5% cpu: lake 783% 1.3GB; bash 17% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 04:57:34 UTC: load1 0.00; over 5% cpu: lake 833% 1.5GB; bash 10% 0.0GB; other programs: 3 processes, 177% cpu; 
+  sample 04:57:44 UTC: load1 0.00; over 5% cpu: lake 60% 1.1GB; bash 43% 0.0GB; other programs: 3 processes, 241% cpu; 
+  sample 04:57:54 UTC: load1 0.00; over 5% cpu: lake 619% 1.2GB; bash 8% 0.0GB; other programs: 3 processes, 186% cpu; 
+  sample 04:58:05 UTC: load1 0.00; over 5% cpu: lake 743% 1.3GB; bash 20% 0.0GB; other programs: 3 processes, 205% cpu; 
+  sample 04:58:15 UTC: load1 0.00; over 5% cpu: lake 785% 1.3GB; bash 30% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 04:58:25 UTC: load1 0.00; over 5% cpu: lake 903% 1.5GB; bash 10% 0.0GB; other programs: 3 processes, 188% cpu; 
+  sample 04:58:36 UTC: load1 0.00; over 5% cpu: lake 218% 1.2GB; bash 20% 0.0GB; other programs: 3 processes, 217% cpu; 
+  sample 04:58:46 UTC: load1 0.00; over 5% cpu: lake 667% 1.2GB; bash 12% 0.0GB; other programs: 3 processes, 219% cpu; 
+  sample 04:58:56 UTC: load1 0.00; over 5% cpu: lake 759% 1.3GB; bash 17% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 04:59:07 UTC: load1 0.00; over 5% cpu: lake 796% 1.3GB; bash 25% 0.0GB; other programs: 3 processes, 186% cpu; 
+  sample 04:59:17 UTC: load1 0.00; over 5% cpu: bash 40% 0.0GB; other programs: 3 processes, 225% cpu; 
+  sample 04:59:27 UTC: load1 0.00; over 5% cpu: lake 60% 1.1GB; bash 14% 0.0GB; git 100% 0.0GB; other programs: 3 processes, 167% cpu; 
+  sample 04:59:37 UTC: load1 0.00; over 5% cpu: lake 630% 1.2GB; bash 22% 0.0GB; other programs: 3 processes, 220% cpu; 
+  sample 04:59:47 UTC: load1 0.00; over 5% cpu: lake 756% 1.3GB; bash 17% 0.0GB; other programs: 3 processes, 204% cpu; 
+  sample 04:59:58 UTC: load1 0.00; over 5% cpu: lake 792% 1.3GB; bash 20% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:00:08 UTC: load1 0.00; over 5% cpu: lake 942% 1.5GB; bash 40% 0.0GB; other programs: 3 processes, 267% cpu; 
+  sample 05:00:18 UTC: load1 0.00; over 5% cpu: lake 337% 1.2GB; bash 15% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:00:28 UTC: load1 0.00; over 5% cpu: lake 657% 1.2GB; bash 9% 0.0GB; other programs: 3 processes, 188% cpu; 
+  sample 05:00:39 UTC: load1 0.00; over 5% cpu: lake 744% 1.2GB; bash 15% 0.0GB; other programs: 3 processes, 195% cpu; 
+  sample 05:00:49 UTC: load1 0.00; over 5% cpu: lake 774% 1.3GB; bash 17% 0.0GB; other programs: 3 processes, 209% cpu; 
+  sample 05:00:59 UTC: load1 0.00; over 5% cpu: lake 923% 0.0GB; bash 28% 0.0GB; other programs: 3 processes, 186% cpu; 
+  sample 05:01:10 UTC: load1 0.00; over 5% cpu: lake 174% 1.2GB; bash 23% 0.0GB; other programs: 3 processes, 213% cpu; 
+  sample 05:01:20 UTC: load1 0.00; over 5% cpu: lake 520% 1.2GB; bash 24% 0.0GB; other programs: 3 processes, 218% cpu; 
+  sample 05:01:31 UTC: load1 0.00; over 5% cpu: lake 651% 1.3GB; bash 21% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:01:41 UTC: load1 0.00; over 5% cpu: lake 702% 1.3GB; bash 17% 0.0GB; other programs: 3 processes, 196% cpu; 
+  sample 05:01:52 UTC: load1 0.00; over 5% cpu: lake 729% 1.3GB; bash 15% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:02:02 UTC: load1 0.00; over 5% cpu: lake 701% 1.4GB; bash 25% 0.0GB; other programs: 3 processes, 236% cpu; 
+  sample 05:02:12 UTC: load1 0.00; over 5% cpu: bash 30% 0.0GB; bash 38% 0.0GB; lake 133% 0.0GB; other programs: 5 processes, 371% cpu; 
+  sample 05:02:23 UTC: load1 0.00; over 5% cpu: lake 232% 1.2GB; bash 20% 0.0GB; other programs: 3 processes, 207% cpu; 
+  sample 05:02:33 UTC: load1 0.00; over 5% cpu: lake 593% 1.2GB; bash 16% 0.0GB; other programs: 3 processes, 214% cpu; 
+  sample 05:02:44 UTC: load1 0.00; over 5% cpu: lake 694% 1.3GB; bash 13% 0.0GB; other programs: 3 processes, 209% cpu; 
+  sample 05:02:54 UTC: load1 0.00; over 5% cpu: lake 737% 1.3GB; bash 22% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:03:04 UTC: load1 0.00; over 5% cpu: lake 757% 1.3GB; bash 19% 0.0GB; other programs: 3 processes, 199% cpu; 
+  sample 05:03:15 UTC: load1 0.00; over 5% cpu: lake 804% 1.5GB; bash 14% 0.0GB; other programs: 3 processes, 192% cpu; 
+  sample 05:03:25 UTC: load1 0.00; over 5% cpu: witnesscheck 10% 1.6GB; bash 25% 0.0GB; other programs: 3 processes, 210% cpu; 
+  sample 05:03:36 UTC: load1 0.00; over 5% cpu: witnesscheck 20% 1.7GB; bash 14% 0.0GB; other programs: 3 processes, 200% cpu; 
+  sample 05:03:46 UTC: load1 0.00; over 5% cpu: witnesscheck 29% 1.7GB; bash 28% 0.0GB; other programs: 3 processes, 157% cpu; 
+  sample 05:03:56 UTC: load1 0.00; over 5% cpu: witnesscheck 35% 3.1GB; bash 28% 0.0GB; other programs: 3 processes, 210% cpu; 
+  sample 05:04:06 UTC: load1 0.00; over 5% cpu: lake 374% 1.2GB; bash 17% 0.0GB; other programs: 3 processes, 190% cpu; 
+  sample 05:04:17 UTC: load1 0.00; over 5% cpu: lake 711% 1.2GB; bash 22% 0.0GB; other programs: 3 processes, 235% cpu; 
+  sample 05:04:27 UTC: load1 0.00; over 5% cpu: lake 797% 1.3GB; bash 27% 0.0GB; other programs: 3 processes, 216% cpu; 
+  sample 05:04:37 UTC: load1 0.00; over 5% cpu: lake 774% 1.4GB; bash 33% 0.0GB; other programs: 3 processes, 220% cpu; 
+  sample 05:04:47 UTC: load1 0.00; over 5% cpu: bsvs 93% 0.3GB; bash 28% 0.0GB; other programs: 3 processes, 193% cpu; 
+  sample 05:04:57 UTC: load1 0.00; over 5% cpu: go 662% 0.1GB; bash 28% 0.0GB; other programs: 4 processes, 289% cpu; 
+  sample 05:05:07 UTC: load1 0.00; over 5% cpu: bash 9% 0.0GB; cargo 100% 0.0GB; bash 28% 0.0GB; other programs: 5 processes, 233% cpu; 
+  sample 05:05:18 UTC: load1 0.00; over 5% cpu: run_engine 42% 0.1GB; node 110% 0.2GB; bash 33% 0.0GB; other programs: 3 processes, 245% cpu; 

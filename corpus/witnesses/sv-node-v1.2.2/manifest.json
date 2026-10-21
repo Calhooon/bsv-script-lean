@@ -1,0 +1,5733 @@
+{
+  "arith": {
+    "agree": {
+      "spec": 692,
+      "spec-mempool": 692
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/arith/cases.jsonl",
+    "entries": 692,
+    "est_families": {},
+    "file": "arith.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "code_notes": [],
+        "corpus": "../corpus/arith/cases.jsonl",
+        "entries": 692,
+        "est_families": {},
+        "file": "arith.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "code_notes": [],
+        "corpus": "../corpus/arith/cases.jsonl",
+        "entries": 692,
+        "est_families": {},
+        "file": "arith.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "bytes": {
+    "agree": {
+      "spec": 512,
+      "spec-mempool": 512
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/bytes/cases.jsonl",
+    "entries": 512,
+    "est_families": {},
+    "file": "bytes.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "code_notes": [],
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "entries": 512,
+        "est_families": {},
+        "file": "bytes.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "code_notes": [],
+        "corpus": "../corpus/bytes/cases.jsonl",
+        "entries": 512,
+        "est_families": {},
+        "file": "bytes.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "cpp-bn_op": {
+    "agree": {
+      "spec": 170,
+      "spec-mempool": 170
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+    "entries": 170,
+    "est_families": {},
+    "file": "cpp-bn_op.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 170,
+          "spec-mempool": 170
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "entries": 170,
+        "est_families": {},
+        "file": "cpp-bn_op.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 170,
+          "spec-mempool": 170
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+        "entries": 170,
+        "est_families": {},
+        "file": "cpp-bn_op.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-lrshiftnum": {
+    "agree": {
+      "spec": 36,
+      "spec-mempool": 36
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+    "entries": 36,
+    "est_families": {},
+    "file": "cpp-lrshiftnum.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 36,
+          "spec-mempool": 36
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "entries": 36,
+        "est_families": {},
+        "file": "cpp-lrshiftnum.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 36,
+          "spec-mempool": 36
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+        "entries": 36,
+        "est_families": {},
+        "file": "cpp-lrshiftnum.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-multisig": {
+    "agree": {
+      "spec": 30,
+      "spec-mempool": 30
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+    "entries": 30,
+    "est_families": {},
+    "file": "cpp-multisig.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 30,
+          "spec-mempool": 30
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "entries": 30,
+        "est_families": {},
+        "file": "cpp-multisig.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 30,
+          "spec-mempool": 30
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+        "entries": 30,
+        "est_families": {},
+        "file": "cpp-multisig.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-opcode": {
+    "agree": {
+      "spec": 144324,
+      "spec-mempool": 144324
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+    "entries": 144324,
+    "est_families": {},
+    "file": "cpp-opcode.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 144324,
+          "spec-mempool": 144324
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "entries": 144324,
+        "est_families": {},
+        "file": "cpp-opcode.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 600000,
+            "word": 346111
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 144324,
+          "spec-mempool": 144324
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+        "entries": 144324,
+        "est_families": {},
+        "file": "cpp-opcode.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 600000,
+            "word": 346111
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 600000,
+        "word": 346111
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-script": {
+    "agree": {
+      "spec": 67991,
+      "spec-mempool": 67991
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-script/cases.jsonl",
+    "entries": 67991,
+    "est_families": {},
+    "file": "cpp-script.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 67991,
+          "spec-mempool": 67991
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-script/cases.jsonl",
+        "entries": 67991,
+        "est_families": {},
+        "file": "cpp-script.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 67991,
+          "spec-mempool": 67991
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-script/cases.jsonl",
+        "entries": 67991,
+        "est_families": {},
+        "file": "cpp-script.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-script_P2SH": {
+    "agree": {
+      "spec": 64,
+      "spec-mempool": 64
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+    "entries": 64,
+    "est_families": {},
+    "file": "cpp-script_P2SH.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 64,
+          "spec-mempool": 64
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "entries": 64,
+        "est_families": {},
+        "file": "cpp-script_P2SH.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 64,
+          "spec-mempool": 64
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+        "entries": 64,
+        "est_families": {},
+        "file": "cpp-script_P2SH.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-sigopcount": {
+    "agree": {
+      "spec": 6,
+      "spec-mempool": 6
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+    "entries": 6,
+    "est_families": {},
+    "file": "cpp-sigopcount.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 6,
+          "spec-mempool": 6
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "entries": 6,
+        "est_families": {},
+        "file": "cpp-sigopcount.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 6,
+          "spec-mempool": 6
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+        "entries": 6,
+        "est_families": {},
+        "file": "cpp-sigopcount.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-transaction": {
+    "agree": {
+      "spec": 167,
+      "spec-mempool": 167
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+    "entries": 167,
+    "est_families": {},
+    "file": "cpp-transaction.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 167,
+          "spec-mempool": 167
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "entries": 167,
+        "est_families": {},
+        "file": "cpp-transaction.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@bf4b543",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 600000,
+            "word": 346111
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 167,
+          "spec-mempool": 167
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+        "entries": 167,
+        "est_families": {},
+        "file": "cpp-transaction.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 600000,
+            "utxo_height": 600000,
+            "word": 83935
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 600000,
+            "word": 346111
+          },
+          {
+            "consensus": false,
+            "spend_height": 700000,
+            "utxo_height": 700000,
+            "word": 870399
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 600000,
+            "word": 1394687
+          },
+          {
+            "consensus": false,
+            "spend_height": 950000,
+            "utxo_height": 950000,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 600000,
+        "utxo_height": 600000,
+        "word": 83935
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 600000,
+        "word": 346111
+      },
+      {
+        "consensus": false,
+        "spend_height": 700000,
+        "utxo_height": 700000,
+        "word": 870399
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 600000,
+        "word": 1394687
+      },
+      {
+        "consensus": false,
+        "spend_height": 950000,
+        "utxo_height": 950000,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g1-c1": {
+    "agree": {
+      "spec": 1024,
+      "spec-mempool": 1024
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+    "entries": 1024,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t100-g1-c1.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 1024,
+          "spec-mempool": 1024
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+        "entries": 1024,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t100-g1-c1.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 32000000,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 101,
+            "utxo_height": 1,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 32000000,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g1-c102": {
+    "agree": {
+      "spec": 2048,
+      "spec-mempool": 2048
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+    "entries": 2048,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t100-g1-c102.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 2048,
+          "spec-mempool": 2048
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+        "entries": 2048,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t100-g1-c102.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 750000,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 101,
+            "utxo_height": 1,
+            "word": 870399
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 750000,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t100-g102-c102": {
+    "agree": {
+      "spec": 4097,
+      "spec-mempool": 4097
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+    "entries": 4097,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t100-g102-c102.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 4097,
+          "spec-mempool": 4097
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+        "entries": 4097,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t100-g102-c102.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 101,
+            "utxo_height": 1,
+            "word": 83935
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 101,
+        "utxo_height": 1,
+        "word": 83935
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g1-c1": {
+    "agree": {
+      "spec": 4096,
+      "spec-mempool": 4096
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+    "entries": 4096,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t101-g1-c1.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 4096,
+          "spec-mempool": 4096
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+        "entries": 4096,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t101-g1-c1.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 32000000,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 102,
+            "utxo_height": 101,
+            "word": 4016127
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 32000000,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 4016127
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g1-c103": {
+    "agree": {
+      "spec": 8192,
+      "spec-mempool": 8192
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+    "entries": 8192,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t101-g1-c103.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 8192,
+          "spec-mempool": 8192
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+        "entries": 8192,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t101-g1-c103.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 750000,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 102,
+            "utxo_height": 101,
+            "word": 870399
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 750000,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 870399
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g102-c1": {
+    "agree": {
+      "spec": 3,
+      "spec-mempool": 3
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+    "entries": 3,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t101-g102-c1.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 3,
+          "spec-mempool": 3
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+        "entries": 3,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t101-g102-c1.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 102,
+            "utxo_height": 101,
+            "word": 1394687
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 1394687
+      }
+    ]
+  },
+  "cpp-txvalidationcache-t101-g103-c103": {
+    "agree": {
+      "spec": 16384,
+      "spec-mempool": 16384
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+    "entries": 16384,
+    "est_families": {},
+    "file": "cpp-txvalidationcache-t101-g103-c103.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-09-23",
+    "history": [
+      {
+        "agree": {
+          "spec": 16384,
+          "spec-mempool": 16384
+        },
+        "code_notes": [],
+        "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+        "entries": 16384,
+        "est_families": {},
+        "file": "cpp-txvalidationcache-t101-g103-c103.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "rpc_mempool": "http://127.0.0.1:18585",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@b64aca9",
+        "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 102,
+            "utxo_height": 101,
+            "word": 83935
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18583",
+    "rpc_mempool": "http://127.0.0.1:18585",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 102,
+        "utxo_height": 101,
+        "word": 83935
+      }
+    ]
+  },
+  "crypto": {
+    "agree": {
+      "spec": 84,
+      "spec-mempool": 84
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/crypto/cases.jsonl",
+    "entries": 84,
+    "est_families": {},
+    "file": "crypto.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "code_notes": [],
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "entries": 84,
+        "est_families": {},
+        "file": "crypto.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "code_notes": [],
+        "corpus": "../corpus/crypto/cases.jsonl",
+        "entries": 84,
+        "est_families": {},
+        "file": "crypto.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "eras": {
+    "agree": {
+      "spec": 74,
+      "spec-mempool": 74
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/eras/eras.jsonl",
+    "entries": 74,
+    "est_families": {},
+    "file": "eras.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 74,
+          "spec-mempool": 74
+        },
+        "code_notes": [],
+        "corpus": "../corpus/eras/eras.jsonl",
+        "entries": 74,
+        "est_families": {},
+        "file": "eras.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 74,
+          "spec-mempool": 74
+        },
+        "code_notes": [],
+        "corpus": "../corpus/eras/eras.jsonl",
+        "entries": 74,
+        "est_families": {},
+        "file": "eras.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173805,
+            "utxo_height": 100,
+            "word": 0
+          },
+          {
+            "consensus": false,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 173806,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363724,
+            "utxo_height": 100,
+            "word": 1
+          },
+          {
+            "consensus": false,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 363725,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388380,
+            "utxo_height": 100,
+            "word": 5
+          },
+          {
+            "consensus": false,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 388381,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419327,
+            "utxo_height": 100,
+            "word": 517
+          },
+          {
+            "consensus": false,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 419328,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 100,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478559,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504031,
+            "utxo_height": 100,
+            "word": 67079
+          },
+          {
+            "consensus": false,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 504032,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 100,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 620537,
+            "utxo_height": 620537,
+            "word": 83471
+          },
+          {
+            "consensus": false,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 346111
+          },
+          {
+            "consensus": true,
+            "spend_height": 620538,
+            "utxo_height": 620537,
+            "word": 345647
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 943816,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943815,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173805,
+        "utxo_height": 100,
+        "word": 0
+      },
+      {
+        "consensus": false,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 173806,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363724,
+        "utxo_height": 100,
+        "word": 1
+      },
+      {
+        "consensus": false,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 363725,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388380,
+        "utxo_height": 100,
+        "word": 5
+      },
+      {
+        "consensus": false,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 388381,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419327,
+        "utxo_height": 100,
+        "word": 517
+      },
+      {
+        "consensus": false,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 419328,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 100,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478559,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504031,
+        "utxo_height": 100,
+        "word": 67079
+      },
+      {
+        "consensus": false,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 504032,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 100,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 620537,
+        "utxo_height": 620537,
+        "word": 83471
+      },
+      {
+        "consensus": false,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 346111
+      },
+      {
+        "consensus": true,
+        "spend_height": 620538,
+        "utxo_height": 620537,
+        "word": 345647
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 943816,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943815,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ]
+  },
+  "flow": {
+    "agree": {
+      "spec": 1094,
+      "spec-mempool": 1094
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/flow/flow.jsonl",
+    "entries": 1094,
+    "est_families": {},
+    "file": "flow.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "code_notes": [],
+        "corpus": "../corpus/flow/flow.jsonl",
+        "entries": 1094,
+        "est_families": {},
+        "file": "flow.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "code_notes": [],
+        "corpus": "../corpus/flow/flow.jsonl",
+        "entries": 1094,
+        "est_families": {},
+        "file": "flow.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "gen": {
+    "agree": {
+      "spec": 1099,
+      "spec-mempool": 1099
+    },
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "entries": 14,
+        "node": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_EVAL_FALSE",
+        "entries": 1,
+        "node": "SCRIPT_ERR_EVAL_FALSE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec-mempool",
+        "engine": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "entries": 14,
+        "node": "SCRIPT_ERR_INVALID_NUMBER_RANGE",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/gen/gen.jsonl",
+    "entries": 1157,
+    "est_families": {},
+    "file": "gen.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 1157,
+          "spec-mempool": 1157
+        },
+        "code_notes": [],
+        "corpus": "../corpus/gen/gen.jsonl",
+        "entries": 1157,
+        "est_families": {},
+        "file": "gen.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@be4897c",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 1027,
+          "spec-mempool": 1027
+        },
+        "code_notes": [
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec-mempool",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec-mempool",
+            "entries": 1,
+            "node": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          }
+        ],
+        "corpus": "../corpus/gen/gen.jsonl",
+        "entries": 1039,
+        "est_families": {},
+        "file": "gen.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [
+          {
+            "column": "spec",
+            "entries": 12,
+            "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+            "rule": "reference.v1.2.3.int64-overflow",
+            "ruling": "spec-wrong",
+            "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+          },
+          {
+            "column": "spec-mempool",
+            "entries": 12,
+            "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+            "rule": "reference.v1.2.3.int64-overflow",
+            "ruling": "spec-wrong",
+            "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+          }
+        ],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "d9eca457cf0b3272104de545c59217a2e9eea039e2e4fc24f77f689a1ce321ed",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 2,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 83935
+          },
+          {
+            "consensus": true,
+            "spend_height": 478558,
+            "utxo_height": 478000,
+            "word": 1541
+          },
+          {
+            "consensus": false,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 870399
+          },
+          {
+            "consensus": true,
+            "spend_height": 943815,
+            "utxo_height": 620538,
+            "word": 869935
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394687
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620537,
+            "word": 1394223
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918975
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 620538,
+            "word": 1918511
+          },
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 943816,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 58,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "reference.v1.2.3.int64-overflow",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 58,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "reference.v1.2.3.int64-overflow",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      }
+    ],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "72edec3b37c702fef9bc3340c9fdfecde2e028a504223b32258a1d5a1428396a",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 2,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 83935
+      },
+      {
+        "consensus": true,
+        "spend_height": 478558,
+        "utxo_height": 478000,
+        "word": 1541
+      },
+      {
+        "consensus": false,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 870399
+      },
+      {
+        "consensus": true,
+        "spend_height": 943815,
+        "utxo_height": 620538,
+        "word": 869935
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394687
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620537,
+        "word": 1394223
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918975
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 620538,
+        "word": 1918511
+      },
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 943816,
+        "word": 4015663
+      }
+    ],
+    "sha256_private": "9faed95570b968c6bdfc22286cb3d224dc67e3a90ac62345e0fbc9c43abd2ab8",
+    "withheld_entries": 2,
+    "withheld_groups": {
+      "d7-node-team-split": 2,
+      "d8-node-team-discretion": 2
+    }
+  },
+  "million": {
+    "agree": {
+      "spec": 4,
+      "spec-mempool": 4
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/million/witnesses.jsonl",
+    "entries": 4,
+    "est_families": {},
+    "file": "million.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 4,
+          "spec-mempool": 4
+        },
+        "code_notes": [],
+        "corpus": "../corpus/million/witnesses.jsonl",
+        "entries": 4,
+        "est_families": {},
+        "file": "million.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@a4df442",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 4,
+          "spec-mempool": 4
+        },
+        "code_notes": [],
+        "corpus": "../corpus/million/witnesses.jsonl",
+        "entries": 4,
+        "est_families": {},
+        "file": "million.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "road": {
+    "activation_context": {
+      "bip34_height": 100000000,
+      "bip34_source": "regtest's compiled consensus.BIP34Height, chainparams.cpp:1463 at 6504a3a; the instance's configuration sets no BIP34 height [SRC]",
+      "chronicle_height": 943816,
+      "excluded_rule": "the coinbase height requirement (BIP34), validation.cpp:6085–6093 bad-cb-height: block context, outside the transaction gate by the owner's ruling R2 on #32; recorded from source, never executed by the road",
+      "genesis_height": 620538,
+      "instance": "the block instance (harness/oracle/bitcoin-block.conf, regtest, bitcoin-sv v1.2.3 6504a3a)",
+      "mainnet_bip34_height": 227931,
+      "mainnet_bip34_source": "chainparams.cpp:1038 at 6504a3a [SRC]"
+    },
+    "agree": {
+      "spec": 13510,
+      "spec-mempool": 13510
+    },
+    "agree_instance_qualified": {
+      "spec": 0
+    },
+    "base_height": 600000,
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 551,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_BAD_OPCODE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 1,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_BIG_INT"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 1,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 9,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 12,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_EQUALVERIFY"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 4324,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_EVAL_FALSE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 152,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 4,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 43,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 27,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 10,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_INVALID_SPLIT_RANGE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 194,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 4,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 3,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 4,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_NUMEQUALVERIFY"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 3,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_PUBKEYTYPE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 2,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_PUBKEY_COUNT"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 11,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_PUSH_SIZE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 7,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 2,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_COUNT"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 9,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_DER"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 3,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 5,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_HIGH_S"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 11,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 13,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 53,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 13,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_VERIFY"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/road/road.jsonl",
+    "entries": 13512,
+    "file": "road.jsonl",
+    "funding": [
+      {
+        "height": 967895,
+        "txid": "5d43a8765e074593a900b139395583f6e97d1724b32a693d2a14a54980dcb679"
+      }
+    ],
+    "generated": "2026-09-26",
+    "history": [
+      {
+        "agree": {
+          "spec": 13512,
+          "spec-mempool": 13512
+        },
+        "base_height": 600000,
+        "code_notes": [
+          {
+            "column": "spec",
+            "entries": 551,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_BIG_INT"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 9,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "entries": 12,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_EQUALVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 4324,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "entries": 152,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "entries": 43,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "entries": 27,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec",
+            "entries": 10,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_SPLIT_RANGE"
+          },
+          {
+            "column": "spec",
+            "entries": 194,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_NUMEQUALVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec",
+            "entries": 2,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUBKEY_COUNT"
+          },
+          {
+            "column": "spec",
+            "entries": 11,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "entries": 7,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "entries": 2,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_COUNT"
+          },
+          {
+            "column": "spec",
+            "entries": 9,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec",
+            "entries": 5,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "spec",
+            "entries": 11,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec",
+            "entries": 13,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec",
+            "entries": 53,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "entries": 13,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_VERIFY"
+          }
+        ],
+        "corpus": "../corpus/road/road.jsonl",
+        "entries": 13512,
+        "file": "road.jsonl",
+        "funding": [
+          {
+            "height": 967895,
+            "txid": "5d43a8765e074593a900b139395583f6e97d1724b32a693d2a14a54980dcb679"
+          }
+        ],
+        "generated": "2026-09-26",
+        "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "/Bitcoin SV:1.2.2/",
+        "node_reported": "/Bitcoin SV:1.2.2/",
+        "outputs_funded": 13518,
+        "policy_settings": {
+          "acceptnonstdconsolidationinput": false,
+          "acceptnonstdoutputs": true,
+          "blockmaxsize": 128000000,
+          "datacarrier": true,
+          "datacarriersize": 4294967295,
+          "excessiveblocksize": 4000000000,
+          "limitancestorcount": 10000,
+          "limitcpfpgroupmemberscount": 25,
+          "maxconsolidationinputscriptsize": 150,
+          "maxmempool": 1000000000,
+          "maxmempoolsizedisk": 0,
+          "maxnonstdtxvalidationduration": 600000,
+          "maxopsperscriptpolicy": 4294967295,
+          "maxorphantxsize": 1000000000,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 10000,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusageconsensus": 9223372036854775807,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxstdtxvalidationduration": 300000,
+          "maxtxchainvalidationbudget": 50,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000,
+          "mempoolmaxpercentcpfp": 10,
+          "minconfconsolidationinput": 6,
+          "minconsolidationfactor": 20,
+          "minconsolidationinputmaturity": 6,
+          "minminingtxfee": 1e-06,
+          "validationclockcpu": true
+        },
+        "rpc_block": "http://127.0.0.1:18567",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@a251aa4",
+        "spec_config": "sv-mainnet-default",
+        "spend_height": 967896,
+        "spend_heights": [
+          967896
+        ],
+        "t0": 1700000000,
+        "tips": [
+          {
+            "block_time": 1700968043,
+            "spend_height": 967896,
+            "tip_mediantime": 1700968042,
+            "tip_time": 1700968043
+          }
+        ],
+        "undecided_runs": 0,
+        "unknown_reasons": {},
+        "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+        "witnesses": 0
+      },
+      {
+        "activation_context": {
+          "bip34_height": 100000000,
+          "bip34_source": "regtest's compiled consensus.BIP34Height, chainparams.cpp:1463 at 6504a3a; the instance's configuration sets no BIP34 height [SRC]",
+          "chronicle_height": 943816,
+          "excluded_rule": "the coinbase height requirement (BIP34), validation.cpp:6085–6093 bad-cb-height: block context, outside the transaction gate by the owner's ruling R2 on #32; recorded from source, never executed by the road",
+          "genesis_height": 620538,
+          "instance": "the block instance (harness/oracle/bitcoin-block.conf, regtest, bitcoin-sv v1.2.3 6504a3a)",
+          "mainnet_bip34_height": 227931,
+          "mainnet_bip34_source": "chainparams.cpp:1038 at 6504a3a [SRC]"
+        },
+        "agree": {
+          "spec": 13510,
+          "spec-mempool": 13510
+        },
+        "agree_instance_qualified": {},
+        "base_height": 600000,
+        "code_notes": [
+          {
+            "column": "spec",
+            "entries": 551,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_BAD_OPCODE"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_BIG_INT"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_CHECKSIGVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 9,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_DIV_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "entries": 12,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_EQUALVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 4324,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_EVAL_FALSE"
+          },
+          {
+            "column": "spec",
+            "entries": 152,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_IMPOSSIBLE_ENCODING"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_ALTSTACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "entries": 43,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_NUMBER_RANGE"
+          },
+          {
+            "column": "spec",
+            "entries": 27,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_OPERAND_SIZE"
+          },
+          {
+            "column": "spec",
+            "entries": 10,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_SPLIT_RANGE"
+          },
+          {
+            "column": "spec",
+            "entries": 194,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_INVALID_STACK_OPERATION"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_MOD_BY_ZERO"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_MUST_USE_FORKID"
+          },
+          {
+            "column": "spec",
+            "entries": 4,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_NUMEQUALVERIFY"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUBKEYTYPE"
+          },
+          {
+            "column": "spec",
+            "entries": 2,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUBKEY_COUNT"
+          },
+          {
+            "column": "spec",
+            "entries": 11,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_PUSH_SIZE"
+          },
+          {
+            "column": "spec",
+            "entries": 7,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "entries": 2,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_COUNT"
+          },
+          {
+            "column": "spec",
+            "entries": 9,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_DER"
+          },
+          {
+            "column": "spec",
+            "entries": 3,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_HASHTYPE"
+          },
+          {
+            "column": "spec",
+            "entries": 5,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_HIGH_S"
+          },
+          {
+            "column": "spec",
+            "entries": 11,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_NULLFAIL"
+          },
+          {
+            "column": "spec",
+            "entries": 13,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SIG_PUSHONLY"
+          },
+          {
+            "column": "spec",
+            "entries": 53,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"
+          },
+          {
+            "column": "spec",
+            "entries": 13,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_VERIFY"
+          }
+        ],
+        "corpus": "../corpus/road/road.jsonl",
+        "entries": 13512,
+        "file": "road.jsonl",
+        "funding": [
+          {
+            "height": 967895,
+            "txid": "5d43a8765e074593a900b139395583f6e97d1724b32a693d2a14a54980dcb679"
+          }
+        ],
+        "generated": "2026-09-26",
+        "instance_qualified": [],
+        "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "/Bitcoin SV:1.2.3/",
+        "node_reported": "/Bitcoin SV:1.2.3/",
+        "outputs_funded": 13518,
+        "policy_settings": {
+          "acceptnonstdconsolidationinput": false,
+          "acceptnonstdoutputs": true,
+          "blockmaxsize": 128000000,
+          "datacarrier": true,
+          "datacarriersize": 4294967295,
+          "excessiveblocksize": 4000000000,
+          "limitancestorcount": 10000,
+          "limitcpfpgroupmemberscount": 25,
+          "maxconsolidationinputscriptsize": 150,
+          "maxmempool": 1000000000,
+          "maxmempoolsizedisk": 0,
+          "maxnonstdtxvalidationduration": 600000,
+          "maxopsperscriptpolicy": 4294967295,
+          "maxorphantxsize": 1000000000,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 10000,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusageconsensus": 9223372036854775807,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxstdtxvalidationduration": 300000,
+          "maxtxchainvalidationbudget": 50,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000,
+          "mempoolmaxpercentcpfp": 10,
+          "minconfconsolidationinput": 6,
+          "minconsolidationfactor": 20,
+          "minconsolidationinputmaturity": 6,
+          "minminingtxfee": 1e-06,
+          "validationclockcpu": true
+        },
+        "rpc_block": "http://127.0.0.1:18567",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [
+          {
+            "column": "spec",
+            "entries": 2,
+            "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+            "rule": "reference.v1.2.3.int64-overflow",
+            "ruling": "spec-wrong",
+            "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+          },
+          {
+            "column": "spec-mempool",
+            "entries": 2,
+            "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+            "rule": "reference.v1.2.3.int64-overflow",
+            "ruling": "spec-wrong",
+            "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+          }
+        ],
+        "sha256": "fc825d37cf93cbfa2260010ba68d5841985ea2c6bb965c3fff4ae7a4a5e1c9de",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "spend_height": 967896,
+        "spend_heights": [
+          967896
+        ],
+        "t0": 1700000000,
+        "tips": [
+          {
+            "block_time": 1700968043,
+            "spend_height": 967896,
+            "tip_mediantime": 1700968042,
+            "tip_time": 1700968043
+          }
+        ],
+        "undecided_runs": 0,
+        "unknown_reasons": {},
+        "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+        "witnesses": 2
+      }
+    ],
+    "instance_qualified": [],
+    "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "outputs_funded": 13518,
+    "policy_settings": {
+      "acceptnonstdconsolidationinput": false,
+      "acceptnonstdoutputs": true,
+      "blockmaxsize": 128000000,
+      "datacarrier": true,
+      "datacarriersize": 4294967295,
+      "excessiveblocksize": 4000000000,
+      "limitancestorcount": 10000,
+      "limitcpfpgroupmemberscount": 25,
+      "maxconsolidationinputscriptsize": 150,
+      "maxmempool": 1000000000,
+      "maxmempoolsizedisk": 0,
+      "maxnonstdtxvalidationduration": 600000,
+      "maxopsperscriptpolicy": 4294967295,
+      "maxorphantxsize": 1000000000,
+      "maxpubkeyspermultisigpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 10000,
+      "maxscriptsizepolicy": 500000,
+      "maxstackmemoryusageconsensus": 9223372036854775807,
+      "maxstackmemoryusagepolicy": 100000000,
+      "maxstdtxvalidationduration": 300000,
+      "maxtxchainvalidationbudget": 50,
+      "maxtxsigopscountspolicy": 4294967295,
+      "maxtxsizepolicy": 10000000,
+      "mempoolmaxpercentcpfp": 10,
+      "minconfconsolidationinput": 6,
+      "minconsolidationfactor": 20,
+      "minconsolidationinputmaturity": 6,
+      "minminingtxfee": 1e-06,
+      "validationclockcpu": true
+    },
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc_block": "http://127.0.0.1:18567",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 2,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "reference.v1.2.3.int64-overflow",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      },
+      {
+        "column": "spec-mempool",
+        "decided_by": "WITHHELD: d8-node-team-discretion (see corpus/INDEX.md)",
+        "entries": 2,
+        "from": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)",
+        "rule": "reference.v1.2.3.int64-overflow",
+        "ruling": "impl-wrong",
+        "witness": "WITHHELD: d9-gosdk-172-splice (see corpus/INDEX.md)"
+      }
+    ],
+    "sha256": "6c1184a9cf0f67b46947497a93135c99d44f83943e115a603bd95542ef6189c7",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "spend_height": 967896,
+    "spend_heights": [
+      967896
+    ],
+    "t0": 1700000000,
+    "tips": [
+      {
+        "block_time": 1700968043,
+        "spend_height": 967896,
+        "tip_mediantime": 1700968042,
+        "tip_time": 1700968043
+      }
+    ],
+    "undecided_runs": 0,
+    "unknown_reasons": {},
+    "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+    "witnesses": 2,
+    "sha256_private": "24676cdba080f23673ae997ed4ffe7c925ab2947534a96c7002916dd42c0a7b0",
+    "withheld_entries": 2,
+    "withheld_groups": {
+      "d7-node-team-split": 2,
+      "d8-node-team-discretion": 2
+    }
+  },
+  "seed": {
+    "agree": {
+      "spec": 10000,
+      "spec-mempool": 10000
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/seed/seed.jsonl",
+    "entries": 10000,
+    "est_families": {},
+    "file": "seed.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "code_notes": [],
+        "corpus": "../corpus/seed/seed.jsonl",
+        "entries": 10000,
+        "est_families": {},
+        "file": "seed.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "code_notes": [],
+        "corpus": "../corpus/seed/seed.jsonl",
+        "entries": 10000,
+        "est_families": {},
+        "file": "seed.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "stack": {
+    "agree": {
+      "spec": 262,
+      "spec-mempool": 262
+    },
+    "code_notes": [],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/stack/cases.jsonl",
+    "entries": 262,
+    "est_families": {},
+    "file": "stack.jsonl",
+    "flag_drifts": 0,
+    "generated": "2026-10-06",
+    "history": [
+      {
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "code_notes": [],
+        "corpus": "../corpus/stack/cases.jsonl",
+        "entries": 262,
+        "est_families": {},
+        "file": "stack.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-09-23",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "node_reported": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@e78a043",
+        "spec_config": "sv-mainnet-default",
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      },
+      {
+        "agree": {
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "code_notes": [],
+        "corpus": "../corpus/stack/cases.jsonl",
+        "entries": 262,
+        "est_families": {},
+        "file": "stack.jsonl",
+        "flag_drifts": 0,
+        "generated": "2026-10-06",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "node_reported": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18563",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [],
+        "settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 4294967295,
+          "maxstackmemoryusagepolicy": 9223372036854775807,
+          "maxstdtxvalidationduration": 300000
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "stop_on_first_invalid": true,
+        "total_timeout_ms": 60000,
+        "undecided_messages": {},
+        "undecided_runs": 0,
+        "unknown_descriptions": {},
+        "witnesses": 0,
+        "words": [
+          {
+            "consensus": false,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4016127
+          },
+          {
+            "consensus": true,
+            "spend_height": 967896,
+            "utxo_height": 967896,
+            "word": 4015663
+          }
+        ]
+      }
+    ],
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc": "http://127.0.0.1:18563",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [],
+    "settings": {
+      "maxopsperscriptpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 4,
+      "maxscriptsizepolicy": 4294967295,
+      "maxstackmemoryusagepolicy": 9223372036854775807,
+      "maxstdtxvalidationduration": 300000
+    },
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "stop_on_first_invalid": true,
+    "total_timeout_ms": 60000,
+    "undecided_messages": {},
+    "undecided_runs": 0,
+    "unknown_descriptions": {},
+    "witnesses": 0,
+    "words": [
+      {
+        "consensus": false,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4016127
+      },
+      {
+        "consensus": true,
+        "spend_height": 967896,
+        "utxo_height": 967896,
+        "word": 4015663
+      }
+    ]
+  },
+  "tx": {
+    "activation_context": {
+      "bip34_height": 100000000,
+      "bip34_source": "regtest's compiled consensus.BIP34Height, chainparams.cpp:1463 at 6504a3a; the instance's configuration sets no BIP34 height [SRC]",
+      "chronicle_height": 943816,
+      "excluded_rule": "the coinbase height requirement (BIP34), validation.cpp:6085–6093 bad-cb-height: block context, outside the transaction gate by the owner's ruling R2 on #32; recorded from source, never executed by the road",
+      "genesis_height": 620538,
+      "instance": "the block instance (harness/oracle/bitcoin-block.conf, regtest, bitcoin-sv v1.2.3 6504a3a)",
+      "mainnet_bip34_height": 227931,
+      "mainnet_bip34_source": "chainparams.cpp:1038 at 6504a3a [SRC]"
+    },
+    "agree": {
+      "spec": 36,
+      "spec-mempool": 36
+    },
+    "agree_instance_qualified": {
+      "spec": 2
+    },
+    "base_height": 600000,
+    "code_notes": [
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 1,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_NEGATIVE_LOCKTIME"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 1,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+      },
+      {
+        "column": "spec",
+        "engine": "blk-bad-inputs",
+        "entries": 8,
+        "node": "blk-bad-inputs",
+        "spec": "SCRIPT_ERR_UNSATISFIED_LOCKTIME"
+      }
+    ],
+    "comparison_basis": "offline replay of the recorded implementation keys against the evaluator rebuilt from this tree; sv-node@v1.2.3 is the current reference, v1.2.2 keys are historical; no implementation or node was rerun by this reclassification",
+    "corpus": "../corpus/tx/tx.jsonl",
+    "entries": 40,
+    "file": "tx.jsonl",
+    "funding": [
+      {
+        "height": 605000,
+        "txid": "ad55c07d5b210d5003595247d9bd6dd0e8e802eec60d24f1d841f747f9353e19"
+      },
+      {
+        "height": 620000,
+        "txid": "40db4be556a03bef2484013d31f49e1836175710cb7ca87a622bb1a2b0ab0b50"
+      },
+      {
+        "height": 620590,
+        "txid": "b321ca4052a584379e462f299df701014b31a7ef7057d9f7c225054e0993696b"
+      }
+    ],
+    "generated": "2026-09-26",
+    "history": [
+      {
+        "activation_context": {
+          "bip34_height": 100000000,
+          "bip34_source": "regtest's compiled consensus.BIP34Height, chainparams.cpp:1463 at 879fc8b; the instance's configuration sets no BIP34 height [SRC]",
+          "chronicle_height": 943816,
+          "excluded_rule": "the coinbase height requirement (BIP34), validation.cpp:6038-6046 bad-cb-height: block context, outside the transaction gate by the owner's ruling R2 on #32; recorded from source, never executed by the road",
+          "genesis_height": 620538,
+          "instance": "the block instance (harness/oracle/bitcoin-block.conf, regtest, bitcoin-sv v1.2.2 879fc8b)",
+          "mainnet_bip34_height": 227931,
+          "mainnet_bip34_source": "chainparams.cpp:1038 at 879fc8b [SRC]"
+        },
+        "agree": {
+          "spec": 36,
+          "spec-mempool": 36
+        },
+        "agree_instance_qualified": {
+          "spec": 2
+        },
+        "base_height": 600000,
+        "code_notes": [
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_NEGATIVE_LOCKTIME"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "entries": 8,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_UNSATISFIED_LOCKTIME"
+          }
+        ],
+        "corpus": "../corpus/tx/tx.jsonl",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "funding": [
+          {
+            "height": 605000,
+            "txid": "ad55c07d5b210d5003595247d9bd6dd0e8e802eec60d24f1d841f747f9353e19"
+          },
+          {
+            "height": 620000,
+            "txid": "40db4be556a03bef2484013d31f49e1836175710cb7ca87a622bb1a2b0ab0b50"
+          },
+          {
+            "height": 620590,
+            "txid": "b321ca4052a584379e462f299df701014b31a7ef7057d9f7c225054e0993696b"
+          }
+        ],
+        "generated": "2026-09-26",
+        "instance_qualified": [
+          {
+            "column": "spec",
+            "id": "tx-00029",
+            "rule": "bip34",
+            "verdict": "valid"
+          },
+          {
+            "column": "spec",
+            "id": "tx-00030",
+            "rule": "bip34",
+            "verdict": "valid"
+          }
+        ],
+        "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+        "node": "sv-node@v1.2.2",
+        "node_mempool_reported": "/Bitcoin SV:1.2.2/",
+        "node_reported": "/Bitcoin SV:1.2.2/",
+        "outputs_funded": 36,
+        "policy_settings": {
+          "acceptnonstdconsolidationinput": false,
+          "acceptnonstdoutputs": true,
+          "blockmaxsize": 128000000,
+          "datacarrier": true,
+          "datacarriersize": 4294967295,
+          "excessiveblocksize": 4000000000,
+          "limitancestorcount": 10000,
+          "limitcpfpgroupmemberscount": 25,
+          "maxconsolidationinputscriptsize": 150,
+          "maxmempool": 1000000000,
+          "maxmempoolsizedisk": 0,
+          "maxnonstdtxvalidationduration": 600000,
+          "maxopsperscriptpolicy": 4294967295,
+          "maxorphantxsize": 1000000000,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 10000,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusageconsensus": 9223372036854775807,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxstdtxvalidationduration": 300000,
+          "maxtxchainvalidationbudget": 50,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000,
+          "mempoolmaxpercentcpfp": 10,
+          "minconfconsolidationinput": 6,
+          "minconsolidationfactor": 20,
+          "minconsolidationinputmaturity": 6,
+          "minminingtxfee": 1e-06,
+          "validationclockcpu": true
+        },
+        "rpc_block": "http://127.0.0.1:18567",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [
+          {
+            "column": "spec",
+            "entries": 2,
+            "from": "tx-00037",
+            "rule": "tx.finality.out-of-scope",
+            "ruling": "open",
+            "witness": "witness-sv-node-tx-spec-tx.finality.out-of-scope-tx-00037"
+          }
+        ],
+        "sha256": "2f4424fd04a90d980a5ce5e7ef74489c3562207e38777ed831de9f94dec0e204",
+        "spec": "spec@013f578",
+        "spec_config": "sv-mainnet-default",
+        "spend_height": 620600,
+        "spend_heights": [
+          610000,
+          620600
+        ],
+        "t0": 1700000000,
+        "tips": [
+          {
+            "block_time": 1700610165,
+            "spend_height": 610000,
+            "tip_mediantime": 1700610164,
+            "tip_time": 1700610165
+          },
+          {
+            "block_time": 1700620688,
+            "spend_height": 620600,
+            "tip_mediantime": 1700620687,
+            "tip_time": 1700620688
+          }
+        ],
+        "undecided_runs": 4,
+        "unknown_reasons": {},
+        "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+        "witnesses": 1
+      },
+      {
+        "activation_context": {
+          "bip34_height": 100000000,
+          "bip34_source": "regtest's compiled consensus.BIP34Height, chainparams.cpp:1463 at 6504a3a; the instance's configuration sets no BIP34 height [SRC]",
+          "chronicle_height": 943816,
+          "excluded_rule": "the coinbase height requirement (BIP34), validation.cpp:6085–6093 bad-cb-height: block context, outside the transaction gate by the owner's ruling R2 on #32; recorded from source, never executed by the road",
+          "genesis_height": 620538,
+          "instance": "the block instance (harness/oracle/bitcoin-block.conf, regtest, bitcoin-sv v1.2.3 6504a3a)",
+          "mainnet_bip34_height": 227931,
+          "mainnet_bip34_source": "chainparams.cpp:1038 at 6504a3a [SRC]"
+        },
+        "agree": {
+          "spec": 36,
+          "spec-mempool": 36
+        },
+        "agree_instance_qualified": {
+          "spec": 2
+        },
+        "base_height": 600000,
+        "code_notes": [
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_NEGATIVE_LOCKTIME"
+          },
+          {
+            "column": "spec",
+            "entries": 1,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_SCRIPTNUM_OVERFLOW"
+          },
+          {
+            "column": "spec",
+            "entries": 8,
+            "node": "blk-bad-inputs",
+            "spec": "SCRIPT_ERR_UNSATISFIED_LOCKTIME"
+          }
+        ],
+        "corpus": "../corpus/tx/tx.jsonl",
+        "entries": 40,
+        "file": "tx.jsonl",
+        "funding": [
+          {
+            "height": 605000,
+            "txid": "ad55c07d5b210d5003595247d9bd6dd0e8e802eec60d24f1d841f747f9353e19"
+          },
+          {
+            "height": 620000,
+            "txid": "40db4be556a03bef2484013d31f49e1836175710cb7ca87a622bb1a2b0ab0b50"
+          },
+          {
+            "height": 620590,
+            "txid": "b321ca4052a584379e462f299df701014b31a7ef7057d9f7c225054e0993696b"
+          }
+        ],
+        "generated": "2026-09-26",
+        "instance_qualified": [
+          {
+            "column": "spec",
+            "id": "tx-00029",
+            "rule": "bip34",
+            "verdict": "valid"
+          },
+          {
+            "column": "spec",
+            "id": "tx-00030",
+            "rule": "bip34",
+            "verdict": "valid"
+          }
+        ],
+        "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+        "node": "sv-node@v1.2.3",
+        "node_mempool_reported": "/Bitcoin SV:1.2.3/",
+        "node_reported": "/Bitcoin SV:1.2.3/",
+        "outputs_funded": 36,
+        "policy_settings": {
+          "acceptnonstdconsolidationinput": false,
+          "acceptnonstdoutputs": true,
+          "blockmaxsize": 128000000,
+          "datacarrier": true,
+          "datacarriersize": 4294967295,
+          "excessiveblocksize": 4000000000,
+          "limitancestorcount": 10000,
+          "limitcpfpgroupmemberscount": 25,
+          "maxconsolidationinputscriptsize": 150,
+          "maxmempool": 1000000000,
+          "maxmempoolsizedisk": 0,
+          "maxnonstdtxvalidationduration": 600000,
+          "maxopsperscriptpolicy": 4294967295,
+          "maxorphantxsize": 1000000000,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 10000,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusageconsensus": 9223372036854775807,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxstdtxvalidationduration": 300000,
+          "maxtxchainvalidationbudget": 50,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000,
+          "mempoolmaxpercentcpfp": 10,
+          "minconfconsolidationinput": 6,
+          "minconsolidationfactor": 20,
+          "minconsolidationinputmaturity": 6,
+          "minminingtxfee": 1e-06,
+          "validationclockcpu": true
+        },
+        "rpc_block": "http://127.0.0.1:18567",
+        "rpc_mempool": "http://127.0.0.1:18565",
+        "rules": [
+          {
+            "column": "spec",
+            "entries": 2,
+            "from": "tx-00037",
+            "rule": "tx.finality.out-of-scope",
+            "ruling": "open",
+            "witness": "witness-sv-node-tx-spec-tx.finality.out-of-scope-tx-00037"
+          }
+        ],
+        "sha256": "7755b7337be70e3d9d01152f35b4d0c87d5036eb76182eb3240da7f6957c7910",
+        "spec": "spec@c59ff89",
+        "spec_config": "sv-mainnet-default",
+        "spec_recorded_keys": {
+          "spec": "spec-sv-node@c59ff89",
+          "spec-mempool": "spec-sv-node-mempool@c59ff89"
+        },
+        "spend_height": 620600,
+        "spend_heights": [
+          610000,
+          620600
+        ],
+        "t0": 1700000000,
+        "tips": [
+          {
+            "block_time": 1700610165,
+            "spend_height": 610000,
+            "tip_mediantime": 1700610164,
+            "tip_time": 1700610165
+          },
+          {
+            "block_time": 1700620688,
+            "spend_height": 620600,
+            "tip_mediantime": 1700620687,
+            "tip_time": 1700620688
+          }
+        ],
+        "undecided_runs": 4,
+        "unknown_reasons": {},
+        "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+        "witnesses": 1
+      }
+    ],
+    "instance_qualified": [
+      {
+        "column": "spec",
+        "id": "tx-00029",
+        "rule": "bip34",
+        "verdict": "valid"
+      },
+      {
+        "column": "spec",
+        "id": "tx-00030",
+        "rule": "bip34",
+        "verdict": "valid"
+      }
+    ],
+    "mode": "block-connect (the consensus column: a block the harness assembles, submitblock, invalidateblock) and sendrawtransaction with dontcheckfee (the policy column) on the policy instance's copy of the chain",
+    "node": "sv-node@v1.2.2",
+    "node_mempool_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "node_reported": "historical v1.2.2 recorded corpus keys, no node rerun",
+    "outputs_funded": 36,
+    "policy_settings": {
+      "acceptnonstdconsolidationinput": false,
+      "acceptnonstdoutputs": true,
+      "blockmaxsize": 128000000,
+      "datacarrier": true,
+      "datacarriersize": 4294967295,
+      "excessiveblocksize": 4000000000,
+      "limitancestorcount": 10000,
+      "limitcpfpgroupmemberscount": 25,
+      "maxconsolidationinputscriptsize": 150,
+      "maxmempool": 1000000000,
+      "maxmempoolsizedisk": 0,
+      "maxnonstdtxvalidationduration": 600000,
+      "maxopsperscriptpolicy": 4294967295,
+      "maxorphantxsize": 1000000000,
+      "maxpubkeyspermultisigpolicy": 4294967295,
+      "maxscriptnumlengthpolicy": 10000,
+      "maxscriptsizepolicy": 500000,
+      "maxstackmemoryusageconsensus": 9223372036854775807,
+      "maxstackmemoryusagepolicy": 100000000,
+      "maxstdtxvalidationduration": 300000,
+      "maxtxchainvalidationbudget": 50,
+      "maxtxsigopscountspolicy": 4294967295,
+      "maxtxsizepolicy": 10000000,
+      "mempoolmaxpercentcpfp": 10,
+      "minconfconsolidationinput": 6,
+      "minconsolidationfactor": 20,
+      "minconsolidationinputmaturity": 6,
+      "minminingtxfee": 1e-06,
+      "validationclockcpu": true
+    },
+    "reference_comparison": "the reference at v1.2.2 read by the fold; the spec follows v1.2.3",
+    "rpc_block": "http://127.0.0.1:18567",
+    "rpc_mempool": "http://127.0.0.1:18565",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "[SRC] bitcoin-sv v1.2.3 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b: validation.cpp:227–247 (IsFinalTx), :5977–5993 (ContextualCheckTransaction: block bad-txns-nonfinal; after Genesis an off-block non-final transaction routes to the non-final pool, :912–926), :257–336 (CalculateSequenceLocks/EvaluateSequenceLocks), :3345–3348 (block BIP68 refusal), :1201–1203 (mempool non-BIP68-final); policy.h:248–256 (StandardNonFinalVerifyFlags: sequence locks before Genesis only). docs/DESIGN.md §5.5: block-level rules, the UTXO set, ordering and maturity are outside the transaction gate, #36.",
+        "entries": 2,
+        "from": "tx-00037",
+        "rule": "tx.finality.out-of-scope",
+        "ruling": "open",
+        "witness": "witness-sv-node-tx-spec-tx.finality.out-of-scope-tx-00037"
+      }
+    ],
+    "sha256": "6fbe23b6faad967eb4b67f583e8013a2e11dcb4dc04402b81b71cc5a72ae96e0",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "spec_recorded_keys": {
+      "spec": "spec-sv-node@cb7e46e",
+      "spec-mempool": "spec-sv-node-mempool@cb7e46e"
+    },
+    "spend_height": 620600,
+    "spend_heights": [
+      610000,
+      620600
+    ],
+    "t0": 1700000000,
+    "tips": [
+      {
+        "block_time": 1700610165,
+        "spend_height": 610000,
+        "tip_mediantime": 1700610164,
+        "tip_time": 1700610165
+      },
+      {
+        "block_time": 1700620688,
+        "spend_height": 620600,
+        "tip_mediantime": 1700620687,
+        "tip_time": 1700620688
+      }
+    ],
+    "undecided_runs": 4,
+    "unknown_reasons": {},
+    "well": "mp8mQRhTHizTPwQXD9h4r59BdzFfkKp3Bk",
+    "witnesses": 1
+  }
+}

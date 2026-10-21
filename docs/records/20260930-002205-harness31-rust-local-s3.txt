@@ -1,0 +1,209 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+Model: Codex GPT-6.1-Sol. Scope: offline Rust build and tests for [LIT] #31; no Lean build, scanner, node call or paid job.
+
+Command: ['git', 'rev-parse', 'HEAD']
+1569d24a915d1e88f394015315c93e93fab487c6
+Exit [X] 0
+
+Command: ['git', 'status', '--short', '--branch']
+## s3-c56-harness
+ M harness/Cargo.toml
+ M harness/README.md
+ M harness/src/bin/run_engine.rs
+ M harness/src/bin/run_svnode.rs
+ M harness/src/flags_oracle.rs
+ M harness/src/lib.rs
+?? docs/records/20260930-002205-harness31-rust-local-s3.txt
+?? harness/ci/
+?? harness/run
+?? harness/src/bin/spec_recorded.rs
+?? harness/src/differential.rs
+Exit [X] 0
+Gate free [M] 84%; one-minute load [M] 2.10302734375; thresholds [LIT] 50% and [LIT] 20.
+
+Command: ['uptime']
+20:22  up 7 days,  3:23, 11 users, load averages: 2.10 3.08 3.63
+Exit [X] 0
+
+Command: ['sysctl', '-n', 'vm.swapusage']
+total = 4096.00M  used = 2423.25M  free = 1672.75M  (encrypted)
+Exit [X] 0
+
+Command: ['cargo', 'test', '--release', '--locked', '--offline']
+   Compiling bsv-rs v0.3.30
+[withheld at export: a sibling tree's line]
+warning: field `unlock` is never read
+  --> src/bin/crypto_cases.rs:51:5
+   |
+47 | struct Case {
+   |        ---- field in this struct
+...
+51 |     unlock: Vec<u8>,
+   |     ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `bsv-script-harness` (bin "crypto_cases") generated 1 warning
+warning: `bsv-script-harness` (bin "crypto_cases" test) generated 1 warning (1 duplicate)
+    Finished `release` profile [optimized + debuginfo] target(s) in 19.38s
+     Running unittests src/lib.rs (target/release/deps/bsv_script_harness-fa3cf51745996a06)
+
+running 16 tests
+test block::tests::a_coinbase_script_is_between_two_and_a_hundred_bytes ... ok
+test block::tests::merkle_of_one_and_two ... ok
+test gosdk_codes::tests::the_message_rows_narrow_before_the_bare_rows ... ok
+test block::tests::regtest_target_and_a_ground_header ... ok
+test gen::tests::enc_num_vectors ... ok
+test bsvrs_codes::tests::every_seed_message_shape_has_a_row ... ok
+test pin_tests::cargo_lock_pins_the_recorded_bsv_rs_version ... ok
+test gen::tests::rng_is_reproducible ... ok
+test engine::tests::the_words_are_the_reference_numbers ... ok
+test rules::tests::spec_consensus_tells_a_policy_refusal_and_never_holds_unsupplied ... ok
+test rules::tests::a_stop_row_explains_nothing_and_a_missing_class_is_refused ... ok
+test svnode_codes::tests::the_descriptions_are_exact ... ok
+test tssdk_codes::tests::the_seed_message_shapes_have_rows ... ok
+test txraw::tests::round_trip ... ok
+test txraw::tests::unparseable_scripts_still_frame ... ok
+test rules::tests::the_three_tables_load_and_every_named_class_exists ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/arith_cases.rs (target/release/deps/arith_cases-3aacbadd1467ad9e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/arith_vectors.rs (target/release/deps/arith_vectors-5fc4472f5cfe14be)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/bytes_cases.rs (target/release/deps/bytes_cases-ea403ef7b844f53e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/crypto_cases.rs (target/release/deps/crypto_cases-861b60500e4bf623)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/ecdsa_vectors.rs (target/release/deps/ecdsa_vectors-007487931d09840b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/flow_cases.rs (target/release/deps/flow_cases-8c071d4578710750)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/gen.rs (target/release/deps/gen-22eb43c3acf79746)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/num_vectors.rs (target/release/deps/num_vectors-8819bf497ac289ae)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/oracle_chain.rs (target/release/deps/oracle_chain-a08924affa480ef9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/policy_witnesses.rs (target/release/deps/policy_witnesses-bd6c091dfc8609ab)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rules_check.rs (target/release/deps/rules_check-4c64686051b516d7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/run_bsvrs.rs (target/release/deps/run_bsvrs-d679b1736d83c1d4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/run_diff.rs (target/release/deps/run_diff-50cf034d5fb80e74)
+
+running 2 tests
+test tests::an_abort_on_a_decided_entry_is_a_witness ... ok
+test tests::the_spec_column_honours_the_entry ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/run_engine.rs (target/release/deps/run_engine-451a5fa3ac9b588f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/run_svnode.rs (target/release/deps/run_svnode-94d57c58febd354d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/seed_gen.rs (target/release/deps/seed_gen-fc83342115ed5fd1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/sighash_vectors.rs (target/release/deps/sighash_vectors-159a45f491c71378)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/sighash_verify.rs (target/release/deps/sighash_verify-bac5f72efa66e3b4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/spec_recorded.rs (target/release/deps/spec_recorded-31f423a650b5f91c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/stack_cases.rs (target/release/deps/stack_cases-f0af081ebce05d9a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/crate_pins.rs (target/release/deps/crate_pins-9fd29fcc51c4fa86)
+
+running 3 tests
+test block_and_standard_words_carry_both_utxo_markers_from_the_block_era ... ok
+test protocol_era_is_none_below_genesis_and_named_above ... ok
+test the_script_number_length_limit_is_the_reference_number_of_the_coin_era_and_the_path ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests bsv_script_harness
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Exit [X] 0
+Elapsed seconds [M] 24.149

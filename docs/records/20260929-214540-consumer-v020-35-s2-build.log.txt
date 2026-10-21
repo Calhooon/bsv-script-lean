@@ -1,0 +1,153 @@
+info: bsvscript: checking out revision '21ae89e5ffd41be043515ed5e80f61591c1aed32'
+✔ [328/442] Built BsvScript.Params (764ms)
+✔ [998/1041] Built BsvScript.Opcodes (508ms)
+⚠ [999/1041] Built BsvScript.Numbers (7.0s)
+warning: BsvScript/Numbers.lean:445:68: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BsvScript/Numbers.lean:778:16: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h3, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:786:20: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [encode, h1, h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:866:26: This simp argument is unused:
+  hlt
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [signTopRev, hmod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:866:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BsvScript/Numbers.lean:1165:41: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [decode, List.reverse_append, List.reverse_replicate, List.reverse_reverse, List.reverse_cons,
+    List.reverse_nil, List.nil_append, List.cons_append, List.append_assoc, decodeRev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Numbers.lean:1194:47: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [deserializeInt64, decode, decodeRev, h8]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [1000/1041] Built BsvScript.Hash.Sha256 (1.9s)
+✔ [1001/1041] Built BsvScript.Machine (2.9s)
+✔ [1002/1041] Built BsvScript.Crypto.Secp256k1 (1.7s)
+✔ [1003/1041] Built BsvScript.Hash.Ripemd160 (1.8s)
+✔ [1004/1041] Built BsvScript.Hash.Sha1 (1.7s)
+✔ [1005/1041] Built BsvScript.SigOps (1.7s)
+⚠ [1006/1041] Built BsvScript.Gadget (2.4s)
+warning: BsvScript/Gadget.lean:92:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BsvScript/Gadget.lean:186:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1007/1041] Built BsvScript.Ops.Arith (1.6s)
+⚠ [1008/1041] Built BsvScript.Tx (1.7s)
+warning: BsvScript/Tx.lean:33:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.inputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:35:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.lockTime`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:32:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.version`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:34:2: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx.outputs`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+warning: BsvScript/Tx.lean:31:10: The namespace `Tx` is duplicated in the declaration `BsvScript.Tx.Tx`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+✔ [1009/1041] Built BsvScript.Ops.Bitwise (1.6s)
+✔ [1010/1041] Built BsvScript.Ops.Stack (1.4s)
+✔ [1011/1041] Built BsvScript.Ops.Expansion (1.6s)
+✔ [1012/1041] Built BsvScript.Sighash (2.2s)
+✔ [1013/1041] Built BsvScript.Ops.Splice (1.3s)
+✔ [1014/1041] Built BsvScript.Impl.State (1.7s)
+✔ [1015/1041] Built BsvScript.Ops.Crypto (1.5s)
+✔ [1016/1041] Built BsvScript.Impl.Expansion (1.6s)
+✔ [1017/1041] Built BsvScript.TxRules (2.9s)
+✔ [1018/1041] Built BsvScript.Impl.Splice (1.5s)
+✔ [1019/1041] Built BsvScript.Impl.Stack (1.6s)
+✔ [1020/1041] Built BsvScript.Impl.Bitwise (1.6s)
+✔ [1021/1041] Built BsvScript.Impl.Arith (1.6s)
+✔ [1022/1041] Built BsvScript.Impl.Machine (2.2s)
+✔ [1023/1041] Built BsvScript.Impl.Crypto (1.7s)
+✔ [1024/1041] Built BsvScript.TxContext (1.5s)
+✔ [1025/1041] Built BsvScript.Eval (1.4s)
+✔ [1026/1041] Built BsvScript.Gadget.HashLock (1.8s)
+✔ [1027/1041] Built BsvScript.Properties.Resources (3.0s)
+✔ [1028/1041] Built BsvScript.Properties.Basic (1.6s)
+✔ [1029/1041] Built BsvScript.Properties.Coverage (3.7s)
+✔ [1030/1041] Built BsvScript.Properties.Widths (1.9s)
+✔ [1031/1041] Built BsvScript.Properties.VersionGate (1.9s)
+✔ [1032/1041] Built BsvScript.Flags (3.1s)
+✔ [1033/1041] Built BsvScript.Standard (1.6s)
+✔ [1034/1041] Built BsvScript.Properties.Hooks (2.3s)
+✔ [1035/1041] Built BsvScript.Properties.KernelSample (2.2s)
+✔ [1036/1041] Built BsvScript.Properties.Eras (2.8s)
+⚠ [1037/1041] Built BsvScript.Properties.P2SH (1.7s)
+warning: BsvScript/Properties/P2SH.lean:49:20: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [isP2SH, hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BsvScript/Properties/P2SH.lean:96:19: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1038/1041] Built BsvScript.TxPolicy (5.8s)
+warning: BsvScript/TxPolicy.lean:274:83: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1039/1041] Built BsvScript (1.3s)
+ℹ [1040/1041] Built Consumer (1.3s)
+info: Consumer.lean:33:0: BsvScript.Machine.Verdict.valid
+info: Consumer.lean:34:0: 'cAdd_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Consumer.lean:35:0: 'BsvScript.Gadget.HashLock.hashLock_triple' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (1041 jobs).
+       58.19 real        99.40 user        34.68 sys
+          1910013952  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             5736286  page reclaims
+               78437  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  17  messages sent
+                 209  messages received
+                 107  signals received
+               27697  voluntary context switches
+              464053  involuntary context switches
+         17746988710  instructions retired
+          7782976749  cycles elapsed
+           170304744  peak memory footprint

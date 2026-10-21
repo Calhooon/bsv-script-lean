@@ -1,0 +1,204 @@
+import Lean
+open Lean
+
+/-!
+# The Mathlib surface of `lean/BsvScript` (S2, Lean B; #35, 35a; 2026-09-29)
+
+An instrument, not a module of the spec. Run from `lean/` of a built tree:
+`lake env lean --run MathlibSurface.lean <repo>/lean`. It imports the library root `BsvScript`
+(every module of the semantics and the properties) and reports, for every module of the library:
+
+* `decls`: the constants the module declares (the kernel's count, auxiliaries included);
+* `named`: those with a declaration range (the source's own declarations);
+* `useAll`: the constants whose type or value names a constant declared in a MATHLIB-SIDE module
+  (a module of Mathlib or of the packages it brings: Batteries, Aesop, Qq, Plausible, ProofWidgets,
+  ImportGraph, LeanSearchClient, Cli);
+* `useNamed`: the named declarations that use one, an auxiliary counted under its named parent;
+* `consts`: the distinct Mathlib-side constants named;
+* `stxNodes` / `stxKinds`: the syntax nodes of the module's source whose kind is declared in a
+  Mathlib-side module, and the distinct kinds (every command parsed with the imported environment's
+  parser tables, parse only);
+* `parseErr`: the parse errors of that parse (0 means the parse read the file as Lean did);
+* `direct`: the module's own `import` lines that name a Mathlib-side module.
+
+Then the totals: the Mathlib-side modules in the import closure, those that declare a constant or a
+syntax kind the library uses (NEEDED), and the import closure of NEEDED (what a narrowed import of
+`Numbers.lean` would load, before any build proves it). Every figure is read from the environment
+and the sources; none is typed.
+-/
+
+def mathlibSide (m : Name) : Bool :=
+  [`Mathlib, `Batteries, `Aesop, `Qq, `Plausible, `ProofWidgets, `ImportGraph,
+   `LeanSearchClient, `Cli].contains m.getRoot
+
+def modOf (env : Environment) (n : Name) : Option Name :=
+  (env.getModuleIdxFor? n).map fun i => env.header.moduleNames[i.toNat]!
+
+/-- the named parent of an auxiliary constant: the longest prefix with a declaration range -/
+partial def namedParent (named : NameSet) : Name → Option Name
+  | .anonymous => none
+  | n => if named.contains n then some n else namedParent named n.getPrefix
+
+partial def collectIdents (stx : Syntax) (acc : Array Name) : Array Name :=
+  match stx with
+  | .node _ _ args => args.foldl (fun a s => collectIdents s a) acc
+  | .ident _ _ val _ => acc.push val
+  | _ => acc
+
+partial def collectKinds (stx : Syntax) (acc : Array SyntaxNodeKind) : Array SyntaxNodeKind :=
+  match stx with
+  | .node _ k args => args.foldl (fun a s => collectKinds s a) (acc.push k)
+  | _ => acc
+
+structure Row where
+  mod : Name
+  decls : Nat := 0
+  named : Nat := 0
+  useAll : Nat := 0
+  useNamed : NameSet := {}
+  consts : NameSet := {}
+  stxNodes : Nat := 0
+  stxKinds : NameSet := {}
+  parseErr : Nat := 0
+  idents : Nat := 0
+  identConsts : NameSet := {}
+  topIdents : Std.HashMap Name Nat := {}
+  direct : Nat := 0
+  topConsts : Std.HashMap Name Nat := {}
+  topKinds : Std.HashMap Name Nat := {}
+
+def nsSize (s : NameSet) : Nat := Std.TreeSet.size s
+def nsToList (s : NameSet) : List Name := Std.TreeSet.toList s
+
+/-- the library's declarations with a declaration range (the source's own) -/
+def namedDecls (env : Environment) (libMods : Array Name) : CoreM NameSet := do
+  let mut s : NameSet := {}
+  for m in libMods do
+    let md := env.header.moduleData[(env.getModuleIdx? m).get!.toNat]!
+    for n in md.constNames do
+      if (← findDeclarationRanges? n).isSome then s := s.insert n
+  return s
+
+def bump (m : Std.HashMap Name Nat) (k : Name) : Std.HashMap Name Nat :=
+  m.insert k (m.getD k 0 + 1)
+
+def top (m : Std.HashMap Name Nat) (n : Nat) : List (Name × Nat) :=
+  (m.toList.toArray.qsort (fun a b => a.2 > b.2 || (a.2 == b.2 && a.1.toString < b.1.toString))).toList.take n
+
+unsafe def main (args : List String) : IO Unit := do
+  let root : System.FilePath := args.headD "."
+  initSearchPath (← findSysroot)
+  enableInitializersExecution
+  let env ← importModules #[{ module := `BsvScript }] {} (trustLevel := 1024) (leakEnv := true) (loadExts := true)
+  let mods := env.header.moduleNames
+  let libMods := mods.filter fun m => m.getRoot == `BsvScript
+  -- the named declarations (a declaration range), per the environment
+  let (named, _) ← (namedDecls env libMods).toIO { fileName := "", fileMap := default } { env := env }
+  let mut rows : Std.HashMap Name Row := {}
+  for m in libMods do rows := rows.insert m { mod := m }
+  let mut needed : NameSet := {}
+  for m in libMods do
+   let md := env.header.moduleData[(env.getModuleIdx? m).get!.toNat]!
+   for ci in md.constants do
+    let n := ci.name
+    let mut r := rows.getD m { mod := m }
+    r := { r with decls := r.decls + 1, named := if named.contains n then r.named + 1 else r.named }
+    let used := ci.type.getUsedConstants ++ ((ci.value? (allowOpaque := true)).map (·.getUsedConstants)).getD #[]
+    let mut hit := false
+    for u in used do
+      if let some um := modOf env u then
+        if mathlibSide um then
+          hit := true
+          r := { r with consts := r.consts.insert u, topConsts := bump r.topConsts u }
+          needed := needed.insert um
+    if hit then
+      r := { r with useAll := r.useAll + 1 }
+      if let some p := namedParent named n then r := { r with useNamed := r.useNamed.insert p }
+    rows := rows.insert m r
+  -- the sources, parsed with the imported parser tables
+  for m in libMods do
+    let path := root / (System.mkFilePath (m.components.map toString) |>.addExtension "lean")
+    let text ← IO.FS.readFile path
+    let inputCtx := Parser.mkInputContext text path.toString
+    let (_hdr, mps0, msgs0) ← Parser.parseHeader inputCtx
+    let mut r := rows.getD m { mod := m }
+    -- the module's own imports that name a Mathlib-side module
+    let imps := (env.header.moduleData[(env.getModuleIdx? m).get!.toNat]!).imports
+    r := { r with direct := (imps.filter fun i => mathlibSide i.module).size }
+    let mut mps := mps0
+    let mut msgs := msgs0
+    let mut done := false
+    while !done do
+      let pmctx : Parser.ParserModuleContext := { env := env, options := {} }
+      let (cmd, mps', msgs') := Parser.parseCommand inputCtx pmctx mps msgs
+      mps := mps'
+      msgs := msgs'
+      for k in collectKinds cmd #[] do
+        if let some km := modOf env k then
+          if mathlibSide km then
+            r := { r with stxNodes := r.stxNodes + 1, stxKinds := r.stxKinds.insert k, topKinds := bump r.topKinds k }
+            needed := needed.insert km
+      for i in collectIdents cmd #[] do
+        if env.contains i then
+          if let some im := modOf env i then
+            if mathlibSide im then
+              r := { r with idents := r.idents + 1, identConsts := r.identConsts.insert i, topIdents := bump r.topIdents i }
+      if Parser.isTerminalCommand cmd then done := true
+    r := { r with parseErr := (msgs.toList.filter (·.severity == .error)).length }
+    rows := rows.insert m r
+  -- the report
+  IO.println "module\tdecls\tnamed\tuseAll\tuseNamed\tconsts\tstxNodes\tstxKinds\tidents\tidentConsts\tparseErr\tdirect"
+  let mut tot : Array Nat := #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  let sorted := libMods.qsort (fun a b => a.toString < b.toString)
+  for m in sorted do
+    let r := rows.getD m { mod := m }
+    let v := #[r.decls, r.named, r.useAll, nsSize r.useNamed, nsSize r.consts, r.stxNodes, nsSize r.stxKinds, r.idents, nsSize r.identConsts, r.parseErr, r.direct]
+    tot := (tot.zip v).map fun (a, b) => a + b
+    IO.println s!"{m}\t{r.decls}\t{r.named}\t{r.useAll}\t{nsSize r.useNamed}\t{nsSize r.consts}\t{r.stxNodes}\t{nsSize r.stxKinds}\t{r.idents}\t{nsSize r.identConsts}\t{r.parseErr}\t{r.direct}"
+  IO.println s!"TOTAL ({libMods.size} modules)\t{tot[0]!}\t{tot[1]!}\t{tot[2]!}\t{tot[3]!}\t(per-module sums)\t{tot[5]!}\t(per-module sums)\t{tot[7]!}\t(per-module sums)\t{tot[9]!}\t{tot[10]!}"
+  -- distinct across the library
+  let mut allConsts : NameSet := {}
+  let mut allKinds : NameSet := {}
+  let mut allIdents : NameSet := {}
+  for m in libMods do
+    let r := rows.getD m { mod := m }
+    allConsts := allConsts.append r.consts
+    allKinds := allKinds.append r.stxKinds
+    allIdents := allIdents.append r.identConsts
+  IO.println s!"DISTINCT Mathlib-side constants used by the library: {nsSize allConsts}; syntax kinds: {nsSize allKinds}; named in the source by identifier: {nsSize allIdents}"
+  -- per module, the top names (the record's detail)
+  for m in sorted do
+    let r := rows.getD m { mod := m }
+    if nsSize r.consts > 0 || nsSize r.stxKinds > 0 || r.idents > 0 then
+      IO.println s!"DETAIL {m} consts: {(top r.topConsts 12).map fun (n, c) => s!"{n}×{c}"}"
+      IO.println s!"DETAIL {m} kinds: {(top r.topKinds 12).map fun (n, c) => s!"{n}×{c}"}"
+      IO.println s!"DETAIL {m} idents: {(top r.topIdents 40).map fun (n, c) => s!"{n}×{c}"}"
+  -- the closure
+  let msideAll := mods.filter mathlibSide
+  let byPkg (a : Array Name) : String :=
+    let roots := [`Mathlib, `Batteries, `Aesop, `Qq, `Plausible, `ProofWidgets, `ImportGraph, `LeanSearchClient, `Cli]
+    ", ".intercalate (roots.map fun p => s!"{p} {(a.filter (·.getRoot == p)).size}")
+  IO.println s!"CLOSURE of `import BsvScript`: {mods.size} modules, {msideAll.size} Mathlib-side ({byPkg msideAll})"
+  let neededArr := (nsToList needed).toArray
+  IO.println s!"NEEDED (Mathlib-side modules declaring a used constant or kind): {neededArr.size} ({byPkg neededArr})"
+  -- the import closure of NEEDED
+  let idxOf : Std.HashMap Name Nat := Id.run do
+    let mut h : Std.HashMap Name Nat := {}
+    for i in [0:mods.size] do h := h.insert mods[i]! i
+    return h
+  let mut seen : NameSet := {}
+  let mut stack := neededArr.toList
+  while !stack.isEmpty do
+    match stack with
+    | [] => pure ()
+    | x :: rest =>
+      stack := rest
+      unless seen.contains x do
+        seen := seen.insert x
+        if let some i := idxOf.get? x then
+          for imp in env.header.moduleData[i]!.imports do
+            unless seen.contains imp.module do stack := imp.module :: stack
+  let seenArr := (nsToList seen).toArray
+  let seenM := seenArr.filter mathlibSide
+  IO.println s!"NEEDED's import closure: {seenArr.size} modules, {seenM.size} Mathlib-side ({byPkg seenM})"
+  IO.println s!"NEEDED list: {(neededArr.qsort (fun a b => a.toString < b.toString)).toList}"

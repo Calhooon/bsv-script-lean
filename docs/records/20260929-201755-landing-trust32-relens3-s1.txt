@@ -1,0 +1,42 @@
+S1's landing of lean #32's fourth round (S1, Lean A, set 4 sitting 9, the parent's paste of 2026-09-29 20:15 UTC, item (1))
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first as origin/lean-a-s8-r7 (3084bb4); never force-pushed):
+  7a94db9 -> 48ea7e0 -> a7ffb6d  S1's sites (the walk naming every implemented_by and extern constant; the wrapper's GIT_*
+                      clearing by name and its overrides refusal; the reader naming prevouts; the depth wording)
+  013b193 -> d922aac -> 5ef14cc  the round's record docs/records/20260929-174125-trust32-relens3-fixes-s1.md, the v4 patch
+                      records for S3 and S2 and S4b's v3 with their companions and tests, the Corrections appended to eleven
+                      earlier records
+  3084bb4 -> a25a9f2            S2's patch for S1 applied (lean/Test/VersionGateCheck.lean:310, script.cpp:215); the rust and
+                      S4b companions re-cut onto S2's patches
+  and this record's commit, with its row.
+  The rebase onto 8bc0209 (main at 20:15 UTC): two conflicts, both kept on both sides. The unbreak landing record's two
+  appended Corrections (the round's, written 18:02, and the lens's of 18:55) are kept in that order. The round's own
+  Correction there said the pins, cite and spec legs "read docs/", the premise its END BLOCK's lens corrected, so it now
+  reads "of the three, the cite leg is the one that reads those docs/ pages". The records index kept both windows' rows.
+  The first take (21:15:05 UTC, after 3,383 s in the queue) found main at b889a2c: S4b's c870006 had re-cut the cite table in
+  tools/cite_check.py, a leg path, so the script stopped and released the lock at 21:15:06 without landing. The round was
+  rebased onto b889a2c without conflict. Only the cite leg reads that file (tools/check.sh:125–127), so, as in S4b's
+  landing at 0de880b, the identity below is taken off docs/ and off the table, and the cite leg re-runs locally on it.
+  The final base is b889a2c.
+
+THE LEG OF RECORD: docs/records/20260929-182857-make-check-box.txt (committed to main at f16f4b7), `make check-box` itself
+  (tools/check_box.sh, D156) from S1's worktree at 3084bb4, clean and pushed as origin/lean-a-s8-r7, in S1's own box worktree
+  ~/bsv/worktrees/spec-box-lean-a. It queued behind T5b's box hold (taken 18:13:30Z; S1's box shell pid 88971, from 18:10:01Z),
+  and its legs started 18:28:57 UTC: twenty-one legs GREEN in 140 s. The axiom check was 760 with the walk; the versiongate
+  leg had 296 cells and 0 differ (S2's cite fix at :310 among its rows); `bsvs --self-test` GREEN.
+
+THE BYTE-IDENTITY (the landing rule; docs/ on the path list since the parent's ruling at 38cae0d, S1's ask 6):
+  git diff --quiet 3084bb4 <this commit> -- lean eval harness corpus tools Makefile spec ':(exclude)tools/cite_check.py'  exits 0
+  git diff --quiet 3084bb4 <this commit> -- tools/cite_check.py   exits 1 (S4b's re-cut table, c870006)
+  git diff --quiet 3084bb4 <this commit> -- docs                  exits 1 (main's docs commits since the leg, and this record)
+  So the eighteen legs that read neither stand on the leg of record, and the pins, cite and spec legs re-ran LOCAL at the
+  rebased tip, inside the hold:
+  (at a25a9f2 plus this record, 21:25:55 UTC; load: 17:25  up 7 days, 27 mins, 10 users, load averages: 4.15 8.37 7.82)
+  check-pins: GREEN (73 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)   exit 0
+  cite_check: 7839 citations found in lean/ and docs/ (7758 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 2071, MOVED 0; not anchored (reported, never RED): unanchored 6, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 72, self 207, history 5479, absent 0, orphan rows 2; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)   exit 0
+  specgen --check: OK (117 files up to date; 0 rules flagged)   exit 0
+
+THE LANDING LOCK (D151): The take asked at 21:16:20 UTC and took the lock at 21:25:54 UTC after 574 s. Inside the hold: the final fetch (main unmoved at b889a2c, no rebase), the identity above, the three local legs,
+  this record's commit and the push. The release comes after the push, by the landing script's EXIT trap; its time is on
+  #32 and in S1's END BLOCK.

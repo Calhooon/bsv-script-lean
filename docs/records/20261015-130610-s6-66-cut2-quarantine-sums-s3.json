@@ -1,0 +1,2877 @@
+{
+ "label": "[M]",
+ "lane": "cut2-66q",
+ "date": "2026-10-15",
+ "note": "sha256 of every file in the run's quarantine directories, computed by hashing bytes only; the files are closed to model turns under the closed-set name pattern (their paths carry teranode)",
+ "directories": [
+  {
+   "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z",
+   "role": "the run of record (cut2-66q-20261015-130610, base 55940560)",
+   "files": 439,
+   "manifest": [
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/column-teranode.err",
+     "bytes": 6114,
+     "sha256": "49a1dc4038d4393cb432dea8fe7545771405da86c00d1e7a178a691a97a2992f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/column-teranode.out",
+     "bytes": 825,
+     "sha256": "785f8f7edf34767b0ecafc8f7d0c8e386d7aeea68b185e999c2beb0f9a89e888"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/column-teranode.rc",
+     "bytes": 2,
+     "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/blockchain.db",
+     "bytes": 1236992,
+     "sha256": "8d563c1a59ebb37b36405cce39d3b998fcdf33e52c87b454ea9793c200ef547b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/blockchain.db-shm",
+     "bytes": 32768,
+     "sha256": "6ea226e894c1e6bcd1e44f992282d2fdf3efa5c5402ad4da2b4054d1f8097997"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/blockchain.db-wal",
+     "bytes": 4169472,
+     "sha256": "f0dff0fb705c1b4ccfae045620cb7c47f6eedefbf4d10f8000144f2720812b21"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/control.lock",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/instance.log",
+     "bytes": 19038906,
+     "sha256": "d5209a82f8611ac0bb3c23e596ccf52e945f3bd7c1375e86161daf307843c367"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/rpc.cookie",
+     "bytes": 15,
+     "sha256": "93bbe4e7605fc1d70661609c0adf6ac73746190b5dfe4aa6b5c5b35cb41f33f1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/runtime/settings.conf",
+     "bytes": 92135,
+     "sha256": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/runtime/settings_local.conf",
+     "bytes": 5781,
+     "sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/runtime/settings_test.conf",
+     "bytes": 32,
+     "sha256": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/runtime/teranode.run",
+     "bytes": 188769954,
+     "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/00/00a585c6655a9edb5d0d98c726056ca23f33890e9122f7930d6073905738bc3a.subtree",
+     "bytes": 216,
+     "sha256": "3e559e92951af6f0d36df82fafc4ba4a886585a0d31194fd595b28a8d62d38c3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/00/00a585c6655a9edb5d0d98c726056ca23f33890e9122f7930d6073905738bc3a.subtreeMeta",
+     "bytes": 136,
+     "sha256": "7fc9e36514aceb60433597cf080f17d7731969a27eaf92fbdcaae79058ca7fee"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/03/036b792ee2e9ef16cd990a5fb9816139deb3108b23df66bf17197d0ba2ea6cf7.subtree",
+     "bytes": 168,
+     "sha256": "aed3c976a341ea8ec63afa8493166d2a048d15c5bf54664831ef81c093e6ce84"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/03/036b792ee2e9ef16cd990a5fb9816139deb3108b23df66bf17197d0ba2ea6cf7.subtreeData",
+     "bytes": 85,
+     "sha256": "8b8e316f99a5fb682427ce22597c6c9b894bbae77bd05e63fb892ca8543a9959"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/03/036b792ee2e9ef16cd990a5fb9816139deb3108b23df66bf17197d0ba2ea6cf7.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a71923b095cd455081c045e93a2edc2cb85b8fc50e3cee3ff4a4ff88852231f4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/03/036b792ee2e9ef16cd990a5fb9816139deb3108b23df66bf17197d0ba2ea6cf7.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "84102345f105a59fb88e512d5ce0f33730fb80caa14c7955701d1193f2e6867c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/04/04ddd3210e1510a6dbaac5987060a79b01c68c03db52e26a3e7da9da58a83951.subtree",
+     "bytes": 360,
+     "sha256": "4c6e1c2e77135f06c28769b0ea00a191f4df2fee96f70e640be529cb5c2c7986"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/04/04ddd3210e1510a6dbaac5987060a79b01c68c03db52e26a3e7da9da58a83951.subtreeMeta",
+     "bytes": 268,
+     "sha256": "924a510ff63517afb70752cd69a7763207744e68d2d957d1fd64149641376e3a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/06/0644dbfb71d737f6dca56f492e01277286f55c988b5e2cb2a51b9cfe52daf8ad.subtree",
+     "bytes": 168,
+     "sha256": "cff5af77b6ea9f396914888cb9d0ee1110e3de7854679836e9f6f0eadabd21ab"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/06/0644dbfb71d737f6dca56f492e01277286f55c988b5e2cb2a51b9cfe52daf8ad.subtreeData",
+     "bytes": 86,
+     "sha256": "0038ec47f42a77b4e3e1bbbca5d094e5aa2ddea6ac2026edbb3158f4acb5d7c7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/06/0644dbfb71d737f6dca56f492e01277286f55c988b5e2cb2a51b9cfe52daf8ad.subtreeMeta",
+     "bytes": 92,
+     "sha256": "5a4166202973e8a965e727aa51cf9186eab297a9a73285450f392f33785ad545"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/06/0644dbfb71d737f6dca56f492e01277286f55c988b5e2cb2a51b9cfe52daf8ad.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "bc2be6a4952c41852f8675f4b851ce1d91d1d5f82a3d97d82f66948584caea54"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/07/07a800c2ad725ba95fbfe5ee73b632ae2d9d7f08f1a2a7310912fa9a85f287e4.subtree",
+     "bytes": 168,
+     "sha256": "588b5c84dd917d22b0f29f9ebabd9080114008ec2c055e1967c89a2642283229"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/07/07a800c2ad725ba95fbfe5ee73b632ae2d9d7f08f1a2a7310912fa9a85f287e4.subtreeData",
+     "bytes": 85,
+     "sha256": "bff9f56556452e6729368d0781f39f6fbc967c2fb519fb3fffda072b3e67ba64"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/07/07a800c2ad725ba95fbfe5ee73b632ae2d9d7f08f1a2a7310912fa9a85f287e4.subtreeMeta",
+     "bytes": 92,
+     "sha256": "1593ddec37f2c18b4406b49f801f371d413e61fa7ad6cdb7421d4845e52dd474"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/07/07a800c2ad725ba95fbfe5ee73b632ae2d9d7f08f1a2a7310912fa9a85f287e4.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a1110b9e93db41b886bbc600bb334b683167a866416090b4904826f1906ef7fe"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/083f8e8bc8c1eabe899c044ca47074854af07ae5d02ca4ebb89c35513bb178b2.subtreeData",
+     "bytes": 85,
+     "sha256": "ebede6eafd07bc9fdc8e35ea262dab70ed690feb41f3e9e59317638241acdabc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/083f8e8bc8c1eabe899c044ca47074854af07ae5d02ca4ebb89c35513bb178b2.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a8adc729c874a0bdcd49d33f007adc7a33caf678ba6ff4daec58d29eefde1168"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/083f8e8bc8c1eabe899c044ca47074854af07ae5d02ca4ebb89c35513bb178b2.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "c8cec9b2bfa01912b1b4c0da3e9520e378f266139954775c7c64766e1d08b814"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/08479e65c26461250317c62d23320e8e326721964bce6fd2a81d52ea10ce633d.subtree",
+     "bytes": 168,
+     "sha256": "7e7e4366a46ddfc2611492d86b9b55f4b29cb4465e8a13027e5c69a581189470"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/08479e65c26461250317c62d23320e8e326721964bce6fd2a81d52ea10ce633d.subtreeData",
+     "bytes": 85,
+     "sha256": "e9f38bcd83a86fb3371826e3fe7d9102901bb29e0ef7f1abf137fc2dcc3138f5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/08479e65c26461250317c62d23320e8e326721964bce6fd2a81d52ea10ce633d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "4e77947ac91ec1f11963c5fbe128603d80fb244f8388ebb2214e34ef1b9d0939"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/08/08479e65c26461250317c62d23320e8e326721964bce6fd2a81d52ea10ce633d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e37377111cc2734cbd32b804ec5230424c05524c2af6a9239e1e43024a417243"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/09/09a7e7e1a40b310487bb5974af3d5468c88f6477ee6b8608901c00fcf0e7f13d.subtree",
+     "bytes": 168,
+     "sha256": "a9e9e991bede093fb4e17ae66816c4f0de26d4d476505c9a198b3cb62f7c11e2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/09/09a7e7e1a40b310487bb5974af3d5468c88f6477ee6b8608901c00fcf0e7f13d.subtreeData",
+     "bytes": 85,
+     "sha256": "842616e504c1cc1a2ebeb0df01d1d9d73f61a9fdfe62bc4ec3fcdd35b2e93963"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/09/09a7e7e1a40b310487bb5974af3d5468c88f6477ee6b8608901c00fcf0e7f13d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "b0ec27275a0884d59c0f0666d8f745213cb66907415ea2aa52795e1dddbc669b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/09/09a7e7e1a40b310487bb5974af3d5468c88f6477ee6b8608901c00fcf0e7f13d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "2b9308c477ee11993a446677a352ee321f47e4924f5420fcebb549e62a3a55b6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/164dd7bb11e5bb7208ac00e8664a9ea139575dc544d44983b45a3ccab942ddd3.subtree",
+     "bytes": 312,
+     "sha256": "e410d036614dae77989f0b7c7a87145147bf8e9661f6af39ff82c234c87b7c8c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/164dd7bb11e5bb7208ac00e8664a9ea139575dc544d44983b45a3ccab942ddd3.subtreeMeta",
+     "bytes": 224,
+     "sha256": "0e692591fd2eee2c21046ed914e4a77c5efcdc517159c2821e37d24357b740ab"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/16bf0b78a952436b86424a78b2546e236b3680c9f2ab6bec695a040f520b1e20.subtree",
+     "bytes": 168,
+     "sha256": "5164ed4a328ab5df5ee62f06fbf345509798d48835c593be2c0e89975094fe24"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/16bf0b78a952436b86424a78b2546e236b3680c9f2ab6bec695a040f520b1e20.subtreeData",
+     "bytes": 87,
+     "sha256": "2747df8ed531e5146c3a4f97811c2d61005289fb3b3a386bbdba487ec079791d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/16bf0b78a952436b86424a78b2546e236b3680c9f2ab6bec695a040f520b1e20.subtreeMeta",
+     "bytes": 92,
+     "sha256": "118d597b45786a6b25da8a0989d4b3ef2497ba1bcc2923a575d1994de1f394ed"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/16/16bf0b78a952436b86424a78b2546e236b3680c9f2ab6bec695a040f520b1e20.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "2afb3e466d805d17a0fffbaaca3575b5d78d31e0c0d48d86726e04d5e42e443d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/194bb8defa0b297645548b497661f44b0a15d65e33becb6ec011a5e1a34381b4.subtree",
+     "bytes": 168,
+     "sha256": "530dfdd701951e0f151db15eb91eb7c68e427623958fc91ccc4b0999d308b5f0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/194bb8defa0b297645548b497661f44b0a15d65e33becb6ec011a5e1a34381b4.subtreeData",
+     "bytes": 85,
+     "sha256": "21ce9cd8c5ece576d7cc983d9eee1f3c31c840da64e41553a1e4d286e0a981b9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/194bb8defa0b297645548b497661f44b0a15d65e33becb6ec011a5e1a34381b4.subtreeMeta",
+     "bytes": 92,
+     "sha256": "1079587d43b7d29492e3ff04d6d42686e361367a94f3b7fb12d9b647ad444d32"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/194bb8defa0b297645548b497661f44b0a15d65e33becb6ec011a5e1a34381b4.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "9bccc0f572b5b08bd17fe0d9b6e38859017bd6d3f2f90827464ae0af42e973c6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/19ff74af7c7352b2631da7df6d38d18e4460923a90cccccf7966a0d7d8839bf2.subtree",
+     "bytes": 168,
+     "sha256": "e05ed4ee1af76a9b63e37e6f59a2998ae0a02ca0d37ad9265be789c65fc65671"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/19ff74af7c7352b2631da7df6d38d18e4460923a90cccccf7966a0d7d8839bf2.subtreeData",
+     "bytes": 109,
+     "sha256": "16702d301ba262504653f08112dfd8f9fa7d18cdb1aa5ac64e487215609e38d2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/19ff74af7c7352b2631da7df6d38d18e4460923a90cccccf7966a0d7d8839bf2.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f8a9e8085287e3b8cf6ea5f01d15c19b0a2db196b6615c2175fed3817cd02f43"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/19/19ff74af7c7352b2631da7df6d38d18e4460923a90cccccf7966a0d7d8839bf2.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b113563831a0bb6f3456cbf714e262c6c30e7d63d21ba122ad5e034fc7930537"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1b/1b5e2acbaea649dd22b911ab60d67ed6ccf28d1a4d9c9ade5ab369b6fb588390.subtree",
+     "bytes": 168,
+     "sha256": "821fad7f3ba162ea5fbe0d2b3207564da8bbeee3db8aa7a32b13ae3fa81363f6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1b/1b5e2acbaea649dd22b911ab60d67ed6ccf28d1a4d9c9ade5ab369b6fb588390.subtreeData",
+     "bytes": 85,
+     "sha256": "2fe5501717929b7a9ac4e3a8b20fc3f9ccfacba2a94af074fced60224d16b79d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1b/1b5e2acbaea649dd22b911ab60d67ed6ccf28d1a4d9c9ade5ab369b6fb588390.subtreeMeta",
+     "bytes": 92,
+     "sha256": "d4489b8a2c16284686f146eb723cdca1d89b962e64e1ed041a12215565ce4ef7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1b/1b5e2acbaea649dd22b911ab60d67ed6ccf28d1a4d9c9ade5ab369b6fb588390.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "211b9c485c99f648db79a0eef961231f15753725e54db8c06a6e5c7cd864b72b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1ea73592d97d0616688230be1a63ae39082b8f2d3a7524ae431922376592afd2.subtree",
+     "bytes": 168,
+     "sha256": "6f8f2e9ecb2476131015eed9e218651b6a24fdb367bdf1ec64139043fd44a22f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1ea73592d97d0616688230be1a63ae39082b8f2d3a7524ae431922376592afd2.subtreeData",
+     "bytes": 85,
+     "sha256": "0612c64442c9b14869c41cda6f3ea1a68c239d0f1c733e3e2e3cbe3dfab6a4cf"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1ea73592d97d0616688230be1a63ae39082b8f2d3a7524ae431922376592afd2.subtreeMeta",
+     "bytes": 92,
+     "sha256": "358c9266ae9e3d6c6ed8db41c05e4698eb9cb21d6658e90c690ab9602f59f6af"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1ea73592d97d0616688230be1a63ae39082b8f2d3a7524ae431922376592afd2.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "d0d890314a8ce2c78b556f9cb25c4934bbd5c25354dc86c0ec36b792cfc593ee"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1efe5dc0ebccc81e04cd444bafd4cd24c990abac35b3686821c9161ae9999797.subtree",
+     "bytes": 200,
+     "sha256": "dcc109c9bdfb76001ba99395274440861ff3d18c2630c56eb80212dbea611728"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1efe5dc0ebccc81e04cd444bafd4cd24c990abac35b3686821c9161ae9999797.subtreeData",
+     "bytes": 85,
+     "sha256": "663ccc9b193a289869bbbd9ec824b714af0fe24c117b8615be86f5c28489b4d5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1efe5dc0ebccc81e04cd444bafd4cd24c990abac35b3686821c9161ae9999797.subtreeMeta",
+     "bytes": 92,
+     "sha256": "479fabe35cbd25dbeffa9883e6d7993db871969c60887e170551bfc744c15712"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1e/1efe5dc0ebccc81e04cd444bafd4cd24c990abac35b3686821c9161ae9999797.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "98cd08fddbbf80971ac0ca6fc87986567a4203aad05e0b30b597845cc1e4e3a5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1f/1f40812210881626849bd36164dd5724b22fd207933c167121e54962d4047c0f.subtree",
+     "bytes": 312,
+     "sha256": "b66d5d10b3f984dee198b702153bb5885e4bd6a6dca66acc235e8716ba41b07a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/1f/1f40812210881626849bd36164dd5724b22fd207933c167121e54962d4047c0f.subtreeMeta",
+     "bytes": 224,
+     "sha256": "cb45ad90d51e1078f147c55b63d4d4b366a6b615dc55159bec3d61c40544f0de"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/20/2007d816e6a327ac076253974d8cce232ce8ba488240f397eb33d549c222487c.subtree",
+     "bytes": 168,
+     "sha256": "b31c4edb20ee97cd86ba2e4c35df30bcf9a03f4a4b28b29c33b71632cbe02c1a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/20/2007d816e6a327ac076253974d8cce232ce8ba488240f397eb33d549c222487c.subtreeData",
+     "bytes": 85,
+     "sha256": "8821267e132cb366ffca0053e431c0171b1319ffa340988754fef21bd33b0d0f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/20/2007d816e6a327ac076253974d8cce232ce8ba488240f397eb33d549c222487c.subtreeMeta",
+     "bytes": 92,
+     "sha256": "e8f451655c65476031994ad8051eb2ed0ddf8922d18dbdadc5ae8b1793507013"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/20/2007d816e6a327ac076253974d8cce232ce8ba488240f397eb33d549c222487c.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "cb67a3600205cfde5a021ccfac39f520a388fbec51cb264d2596815596e4e7bb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/214779550166043f5f9a47d7b4559b13860c014c6fd55d036d649c68fc071185.subtree",
+     "bytes": 168,
+     "sha256": "8f1b6fea9b6634666f3202ee6d6d700257f8b40a31f3c29846ca735f330fcc33"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/214779550166043f5f9a47d7b4559b13860c014c6fd55d036d649c68fc071185.subtreeMeta",
+     "bytes": 92,
+     "sha256": "4d52cad0563b9c9591de5b929b117216ffcb734844babcc9aaaae7a322ce3e06"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/2194982782249272b12c8c34cca8b80661a075be298f839b8b1f29c03331d754.subtree",
+     "bytes": 168,
+     "sha256": "5b6f6ac964f64ed81b81efb71d05aa916d3ee086b06b411cf3a8559189d56a87"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/2194982782249272b12c8c34cca8b80661a075be298f839b8b1f29c03331d754.subtreeData",
+     "bytes": 85,
+     "sha256": "bf9e645b52c209f684d68e842f46c65d46960e0d4fa27565b2b37dc943a7da97"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/2194982782249272b12c8c34cca8b80661a075be298f839b8b1f29c03331d754.subtreeMeta",
+     "bytes": 92,
+     "sha256": "de2b80440799d81608e10220e3c347424979fd797cdc2f5b8226b01a583c2711"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/21/2194982782249272b12c8c34cca8b80661a075be298f839b8b1f29c03331d754.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "064b96dd1ff98d8338c3f20a58889773090dcce6fa0dc946b08b62c41c331768"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/23/2348a816650f52fd0ced62dce495d03a2b71001cb5832a48d87186e1746ae4aa.subtreeData",
+     "bytes": 136,
+     "sha256": "07ada7b81613205493cb735d93669fe2995f395ca34a8782719567624bcb7b17"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/23/2348a816650f52fd0ced62dce495d03a2b71001cb5832a48d87186e1746ae4aa.subtreeMeta",
+     "bytes": 96,
+     "sha256": "101f833607960c3d6b6293ace1c1ff2b545d144dbfdc44e78740e1c46aa315f1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/23/2348a816650f52fd0ced62dce495d03a2b71001cb5832a48d87186e1746ae4aa.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "f594ed7ee9bc1ed270b2d878188193715ff640aa9f044423658319e45fc3d73b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/24/24f5857509f09e5cb3394e933498ede1b004671cf677e777109c301fa96da943.subtree",
+     "bytes": 168,
+     "sha256": "4279a45acd4d85608f690cad2deb9ccc44eb726744eb76a242a69ea0e2cdbf6c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/24/24f5857509f09e5cb3394e933498ede1b004671cf677e777109c301fa96da943.subtreeData",
+     "bytes": 86,
+     "sha256": "6b550739c2eb7016904f3869e52b5744607b026c2edd971686366731d4fdbb32"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/24/24f5857509f09e5cb3394e933498ede1b004671cf677e777109c301fa96da943.subtreeMeta",
+     "bytes": 92,
+     "sha256": "6654a0888560d535f5ce52c96281603c136c20a5f21e857258249824c03a4b5b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/24/24f5857509f09e5cb3394e933498ede1b004671cf677e777109c301fa96da943.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "02929128a2c8c77bf006754d3b85eaf8fd58114d58de841dd2dda4fc0cb6e865"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/25/2522cf046d2f95df493e8f7e3c3b73bc5f53ae713e86bce20b03391db6ff8f75.subtreeData",
+     "bytes": 85,
+     "sha256": "0bc73c48aef6551c6ba0ee67f055f64d3df7e4e8a4be5dde4127695ef3d945c8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/25/2522cf046d2f95df493e8f7e3c3b73bc5f53ae713e86bce20b03391db6ff8f75.subtreeMeta",
+     "bytes": 92,
+     "sha256": "eb5e67b9c6e0bb7e9c035ec892b8ba5875f914580724c30e058d1674c546acca"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/25/2522cf046d2f95df493e8f7e3c3b73bc5f53ae713e86bce20b03391db6ff8f75.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "fdc5cc4c048e4db83eb15c0fc2718bfacc027edecfd7bd198aa2068310df2bf8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/26/26d1737016f25c833120675e029b69c7ab2d29c09d60e9ab9d50176eefa04825.subtreeData",
+     "bytes": 136,
+     "sha256": "a00186a826e5798fe6efeb87e4b79a749cd4cc3dc7ae41882b5d9b82ebb47fe7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/26/26d1737016f25c833120675e029b69c7ab2d29c09d60e9ab9d50176eefa04825.subtreeMeta",
+     "bytes": 96,
+     "sha256": "6869efd248d5ff96989056a79a59595b8994e3b80f76067487a25af258285433"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/26/26d1737016f25c833120675e029b69c7ab2d29c09d60e9ab9d50176eefa04825.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "573094f9805abd4ad8d90ba9bdce1ec4d583fab224f48b90e624886fc77543ba"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/27/2782758cba8437cf88b72a6b95219790fc7a612670ac5258e14e56730d48b1bf.subtree",
+     "bytes": 168,
+     "sha256": "76e62010a974cfde2cac5fb242884b00d2d711a35c989f1fb5e5478a8c58613f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/27/2782758cba8437cf88b72a6b95219790fc7a612670ac5258e14e56730d48b1bf.subtreeData",
+     "bytes": 85,
+     "sha256": "b16f182f5109b4984b50fe14d03630093fb23a2faf534f583c479e32a5059268"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/27/2782758cba8437cf88b72a6b95219790fc7a612670ac5258e14e56730d48b1bf.subtreeMeta",
+     "bytes": 92,
+     "sha256": "bdc811566fa0b04cb7d3697569202b89e2ac62da34b93d1f862af2c1fdca183e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/27/2782758cba8437cf88b72a6b95219790fc7a612670ac5258e14e56730d48b1bf.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "5b05fa92912fd84e8e127fbeb04890d13229666cd895d8c7b7e89c86c6a12783"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/2a/2afdfbc2b83770f2dbbf17fe3439bbc18303c27559a337e3395a37ee05662a48.subtree",
+     "bytes": 168,
+     "sha256": "a593231708122dbce78a046560dd2ea1913093adf83cc33fa20ed09e3f8057f8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/2a/2afdfbc2b83770f2dbbf17fe3439bbc18303c27559a337e3395a37ee05662a48.subtreeData",
+     "bytes": 85,
+     "sha256": "0165fccf0476bc0f3056f7fa36b725471adfbe3ed70cbbf0a24053e67a7acc15"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/2a/2afdfbc2b83770f2dbbf17fe3439bbc18303c27559a337e3395a37ee05662a48.subtreeMeta",
+     "bytes": 92,
+     "sha256": "91109da9cf3eb454db78177d9d664ed83eebbd333187d586803d75c80911764d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/2a/2afdfbc2b83770f2dbbf17fe3439bbc18303c27559a337e3395a37ee05662a48.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "349b3469d42ded3444274c79d728785cfd31c1864b3f4d4cd7df1451f7766d8a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/30/30e9c65c87a4e039d209a9ff0c8d48e4f68a30965d5575345c89e9e0e0bf13b7.subtree",
+     "bytes": 168,
+     "sha256": "1a0ef2bc6c5aea42d04c939f7514b9c4637ba9bca274ce37ee4213397bd771a1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/30/30e9c65c87a4e039d209a9ff0c8d48e4f68a30965d5575345c89e9e0e0bf13b7.subtreeData",
+     "bytes": 85,
+     "sha256": "b3dd1e9c40a4146f1e37bb9ca571ee950b9fd04eae086660e53e6578a3f43032"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/30/30e9c65c87a4e039d209a9ff0c8d48e4f68a30965d5575345c89e9e0e0bf13b7.subtreeMeta",
+     "bytes": 92,
+     "sha256": "20e47d78b51ae84c8e82d94e614b9f0daa46c19bc10bd9ca7bf4c7e79f015138"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/30/30e9c65c87a4e039d209a9ff0c8d48e4f68a30965d5575345c89e9e0e0bf13b7.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "4986c56749d4a9b0578d2cf901bd0527caefb1fbc623420a868e981c306ae4b6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/3546828e899899e51f015532dba1b6c9ad064bd75b08bebb4467827a12092a25.subtree",
+     "bytes": 168,
+     "sha256": "73ce8bb0707b98fc0b599c117cc98bc1d571df09a4aa465dbc805d70509947f2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/3546828e899899e51f015532dba1b6c9ad064bd75b08bebb4467827a12092a25.subtreeData",
+     "bytes": 85,
+     "sha256": "69ba9a665d5b241928d23783aabc5bff359a2a8bbb005ad42c7c4eaf88e68724"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/3546828e899899e51f015532dba1b6c9ad064bd75b08bebb4467827a12092a25.subtreeMeta",
+     "bytes": 92,
+     "sha256": "9a8dee5cc66f4f2aba7d8d69cdb1cff8f7272983b34d509052b1e5cb39eaef51"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/3546828e899899e51f015532dba1b6c9ad064bd75b08bebb4467827a12092a25.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "7438a9a068a8b61122babc9b44f3d3d219f025e2fecf5f23183fd4b87888023b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/35abc5075e1af390354159100c75192285daa7f45c8be3cd894e90d2b58b1951.subtree",
+     "bytes": 168,
+     "sha256": "b8808b8c5cd70767bee8fc75d94b6118da6ddbae4738243e386d01023397f744"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/35abc5075e1af390354159100c75192285daa7f45c8be3cd894e90d2b58b1951.subtreeData",
+     "bytes": 136,
+     "sha256": "d1abbca5ffc3e57b1ef3f27a4ba9f55f804a6d6ea6113e2e0c3034cfc26b8ed7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/35abc5075e1af390354159100c75192285daa7f45c8be3cd894e90d2b58b1951.subtreeMeta",
+     "bytes": 96,
+     "sha256": "f68b41893954210794e0018a25e2a15a27aed5cfe23bd3677207a09446e3694a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/35/35abc5075e1af390354159100c75192285daa7f45c8be3cd894e90d2b58b1951.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "5e06437a991a5c0c1a421964d03f55f052601c1d5eadfda8456d519f91866d6d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/36/361f6c8d33e8b1a20323162555e4fd9bae1e1bc754990b30f86430ee36a52934.subtreeData",
+     "bytes": 85,
+     "sha256": "1ef8995d04e2dd448f11709c93561b87347d8e30064254167c1432e85e642f2c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/36/361f6c8d33e8b1a20323162555e4fd9bae1e1bc754990b30f86430ee36a52934.subtreeMeta",
+     "bytes": 92,
+     "sha256": "7f668dc8216d491f4a9232fa3aa2b37ba6dc2b4a55a3eb91c7f6ff240fd39169"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/36/361f6c8d33e8b1a20323162555e4fd9bae1e1bc754990b30f86430ee36a52934.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b65ab5bee51d654ec0d3a9abfaff1d6e18491fe573c4ae1282e2acd6d5684b58"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/3a/3a99b9a63cebb3835d87b91c8bcf5e83f0c9d185055f974f800538a04d67cdce.subtree",
+     "bytes": 216,
+     "sha256": "629087b6cd0b9a3594ff9f8a1ee0d3c8fa1d0ddcb849f62e27cd5a15cd891e78"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/3a/3a99b9a63cebb3835d87b91c8bcf5e83f0c9d185055f974f800538a04d67cdce.subtreeData",
+     "bytes": 471,
+     "sha256": "27e88344e190144414688f5dc42aecf46dd57505b88895fa555497122844ff05"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/3a/3a99b9a63cebb3835d87b91c8bcf5e83f0c9d185055f974f800538a04d67cdce.subtreeMeta",
+     "bytes": 136,
+     "sha256": "5b915610957730df07be9fbd703870a91de2bd54605da5983a2caa6e10e1ce3f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/3a/3a99b9a63cebb3835d87b91c8bcf5e83f0c9d185055f974f800538a04d67cdce.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "5fb6f27c08211ed4c80ef85b2114fdec059bdf25b42af13b2e4f483dbcbe1376"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/43/431c6bbebb0b917b8e7803cfe3e45acd1885572d5cad99ab95abfff419a44c17.subtreeData",
+     "bytes": 162,
+     "sha256": "76a7c1dab444e0ff615e921f253c72c40ae42bd65a341b6895f78f9f6f3e5d88"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/43/431c6bbebb0b917b8e7803cfe3e45acd1885572d5cad99ab95abfff419a44c17.subtreeMeta",
+     "bytes": 136,
+     "sha256": "a07b820cfe42b62cf170d8cb92884fff8a0b49bc69889f6eec6985fdaec602a5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/43/431c6bbebb0b917b8e7803cfe3e45acd1885572d5cad99ab95abfff419a44c17.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "4f5aaa024c510f172cc90afdb27d5b8a5ed6d9a8736355a66a1c31a6a1747d04"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/48/4841654e9694f0cec5df664257b44a9a2b4100ba52a0ef05eb18f3b52cce991d.subtreeData",
+     "bytes": 107,
+     "sha256": "3b8603ab414cd9ac545f98b4ab7b67ba17428948eb807355ace3f32a5d28dbb2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/48/4841654e9694f0cec5df664257b44a9a2b4100ba52a0ef05eb18f3b52cce991d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c95b56c2fdfce96dba1190e24d29b0f8e24f85b1fa627125c342db9bc7df40a0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/48/4841654e9694f0cec5df664257b44a9a2b4100ba52a0ef05eb18f3b52cce991d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "8043641897918eb9df80939c0c8226601f9fea9bdc39d1bed22ca28fd689f740"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/51/51a4d018813f8011a735247842314d9aab3291c420f556407f71cfc30582ed00.subtree",
+     "bytes": 168,
+     "sha256": "b8a52a3b4e70b214e8d733d25955c41519845509293bc1d20dc3b66079b4ec43"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/51/51a4d018813f8011a735247842314d9aab3291c420f556407f71cfc30582ed00.subtreeData",
+     "bytes": 85,
+     "sha256": "0750623f2f569a6b7159481f7a81c28085a76cf20351e2ab70f5289cd2d45e42"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/51/51a4d018813f8011a735247842314d9aab3291c420f556407f71cfc30582ed00.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c32facd0fd411f453f289b1bdf848e937e75cc0fa2eda3b62d42e143af83bab8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/51/51a4d018813f8011a735247842314d9aab3291c420f556407f71cfc30582ed00.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e93aca5494c7baa1d243660e2d0ff2b631dd8fcabc2e639017fb48836b93fab2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/54/54ef414f76d0d45576b04f4f476a87a42163478af986886978a7499c14d2d7c5.subtree",
+     "bytes": 264,
+     "sha256": "ffe695a5127b8a962a9c20a018479187e0d4f55e9330ae82bdda74439261b08f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/54/54ef414f76d0d45576b04f4f476a87a42163478af986886978a7499c14d2d7c5.subtreeMeta",
+     "bytes": 180,
+     "sha256": "0920f69cb929493cf2cd36378cfd5dd9454393a0d15252b008bdf2d190425162"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/55/550cff81381b268c2786a28a56bcb5e3d4cd287990f250ab8c796fab8d3c7e5a.subtree",
+     "bytes": 216,
+     "sha256": "76ec24e260555809dd759d84bc06d41d38b8b6817c74227b5152c0b3b75cc0a9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/55/550cff81381b268c2786a28a56bcb5e3d4cd287990f250ab8c796fab8d3c7e5a.subtreeMeta",
+     "bytes": 136,
+     "sha256": "88e7fcb54d3598bd0b4d74b70abb98b466e0740128fe96857a99a040728b6c44"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/5854490b105f2fb839b91b115d068d3f0c896525b5ca7f8f528a96248e546c02.subtreeData",
+     "bytes": 136,
+     "sha256": "4a2cf6e16fc38e22fc2c3dc6665baa720426eb1df0abb8f1bbfd0bca4cc84281"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/5854490b105f2fb839b91b115d068d3f0c896525b5ca7f8f528a96248e546c02.subtreeMeta",
+     "bytes": 96,
+     "sha256": "8043269d72515d5b55443dc2092727b0d6632f779330059e8aea4e8dc1972ad4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/5854490b105f2fb839b91b115d068d3f0c896525b5ca7f8f528a96248e546c02.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b1331601d1e3037c931a24dfaf173fe26745d4c2bb0cbede58a91d98c719eb80"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/58b4f7195618bfc1720af6f8f37eb931e565f1b1e88ab8d4c010f228e72f9671.subtreeData",
+     "bytes": 471,
+     "sha256": "82afe532cdf2ca9f918a8243bc611fd9b47ca05cf01be890d5206d92eb4aec24"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/58b4f7195618bfc1720af6f8f37eb931e565f1b1e88ab8d4c010f228e72f9671.subtreeMeta",
+     "bytes": 136,
+     "sha256": "7e61cd9317968f1b9e0ec1c4e922c996ede29271690a26b6da4597aeafdc51b0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/58/58b4f7195618bfc1720af6f8f37eb931e565f1b1e88ab8d4c010f228e72f9671.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "d0e9dc67876ac933df7216bb67e439b282ac2ac4b046d40b66ec9d2e04590b3c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/590c06baf2cce71a1742c47ddbbafc8c0b99ceb6f443494c4b8c33ad836c5f5a.subtree",
+     "bytes": 168,
+     "sha256": "2a44522c46a561efd3164e4da97d7fa84273ea1832dea2e40df47912c1714c4c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/590c06baf2cce71a1742c47ddbbafc8c0b99ceb6f443494c4b8c33ad836c5f5a.subtreeData",
+     "bytes": 85,
+     "sha256": "29e214331aae0d95d2eb32bacca9a237139f6feac67d21d23dee809d5304de23"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/590c06baf2cce71a1742c47ddbbafc8c0b99ceb6f443494c4b8c33ad836c5f5a.subtreeMeta",
+     "bytes": 92,
+     "sha256": "085bdf5215be61d501cc3794bd8e71c5f73402e3df6bf5e40c4d054709c66191"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/590c06baf2cce71a1742c47ddbbafc8c0b99ceb6f443494c4b8c33ad836c5f5a.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "82012f81afbb791229ec3c1b36eca0a4457072e894201db006601c62f5e47499"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59167e2f5d919b07096df20258ceae8601e0e35afa0e11dc4a73865405e0141b.subtree",
+     "bytes": 312,
+     "sha256": "eba7e908fe64e65cea0603f439758635e39a907dfe88c6a1091ab4743e12ff1f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59167e2f5d919b07096df20258ceae8601e0e35afa0e11dc4a73865405e0141b.subtreeMeta",
+     "bytes": 224,
+     "sha256": "f3d5bab4108f53aebf35b265222dd75721cf102f8ae556963b20b531eadf72e8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59aa8ac5f641dd96917a441416d5404dba4f1363d77c38446e51a6931426572b.subtree",
+     "bytes": 168,
+     "sha256": "9fec7b5a76a17c7d9b755f3a3f75cae572041534969478e541abaf701b5e5f63"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59aa8ac5f641dd96917a441416d5404dba4f1363d77c38446e51a6931426572b.subtreeData",
+     "bytes": 109,
+     "sha256": "6bf4b1c80d0a9cb69c1960a7977f03df9fd4ce745788f25af10629bd9375d719"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59aa8ac5f641dd96917a441416d5404dba4f1363d77c38446e51a6931426572b.subtreeMeta",
+     "bytes": 92,
+     "sha256": "1e5976a2f22df4dbcaee8c1052dc7a50b6095edc81cd0f953d7a471f2fc2e9eb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/59/59aa8ac5f641dd96917a441416d5404dba4f1363d77c38446e51a6931426572b.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "ead1e2f77718a368e0b935c26aa0deae489331658958eb2a9e43c039472b3434"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/5e/5ef6fdac594df07c22464fe4f0e2c6edfd6d08610c3fa045183c47e79c427320.subtree",
+     "bytes": 216,
+     "sha256": "ebaa243be0437b53b054ca68787b9b895dd7fa76b74a6ed1b08d9fbde26b26a3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/5e/5ef6fdac594df07c22464fe4f0e2c6edfd6d08610c3fa045183c47e79c427320.subtreeData",
+     "bytes": 162,
+     "sha256": "9781f7d389127cb4af270ce338203a346e42614c0448b8e21c4ac1f7a8ed0d1b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/5e/5ef6fdac594df07c22464fe4f0e2c6edfd6d08610c3fa045183c47e79c427320.subtreeMeta",
+     "bytes": 136,
+     "sha256": "5875eb2fc5e9f691c8844abf47937aad4742cec0fdf429649f2fde5d1067d526"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/5e/5ef6fdac594df07c22464fe4f0e2c6edfd6d08610c3fa045183c47e79c427320.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "d3e1ece881f8f31f8788aa85c15cf1f5750299b782b8ae42ae37fdf3f4d744e8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/60/60e22c3e9745d51fdc33c9622037a504d74b444fb4f6423c018014882517e25f.subtree",
+     "bytes": 168,
+     "sha256": "db1816b507a04266db2479fd2326c40aaa2a16462f0fe302fa375de9e7c8dc37"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/60/60e22c3e9745d51fdc33c9622037a504d74b444fb4f6423c018014882517e25f.subtreeData",
+     "bytes": 85,
+     "sha256": "c5fa17c68bc3dafc18dd519c2bcf625fea2bb918b1ea1107e0192071e25f3208"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/60/60e22c3e9745d51fdc33c9622037a504d74b444fb4f6423c018014882517e25f.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f1ad8722472458599039243f4e805a253e2e40222a0b335221f65412c46d807d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/60/60e22c3e9745d51fdc33c9622037a504d74b444fb4f6423c018014882517e25f.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a05d222a8b7fa3f7aca70fff42d3807bd8231317aee99cbf495bab9112cc4ee3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/61232c26370a24d6c37ea5107c67562289717ef28b3ff6155d9cdfafc2f65081.subtree",
+     "bytes": 168,
+     "sha256": "62f1038ac9bb3942b6272b27c8ead62d394a9d978cf22a459a6a12e6839f264f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/61232c26370a24d6c37ea5107c67562289717ef28b3ff6155d9cdfafc2f65081.subtreeData",
+     "bytes": 86,
+     "sha256": "fdf04275f2d097646913eb1122c14e1aa207a97ae807187707d6c8db22a8aa16"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/61232c26370a24d6c37ea5107c67562289717ef28b3ff6155d9cdfafc2f65081.subtreeMeta",
+     "bytes": 92,
+     "sha256": "701a12eecb0e128806de08bf4754ab9136beb96a2afae97cd7c1911f206232c2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/61232c26370a24d6c37ea5107c67562289717ef28b3ff6155d9cdfafc2f65081.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "f39c3e81877671a78dcbd58928d908b46e7e678f03de971886492785f8ee23fc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/617535deb9cba02accd06ae70b9e18594a7aeb1e629160756f6464e882aefeda.subtreeData",
+     "bytes": 85,
+     "sha256": "4feb9e3c2a14cf2fef43ed181f56014b4311f9f6a8c61ec9d81bfc26b70fe20e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/617535deb9cba02accd06ae70b9e18594a7aeb1e629160756f6464e882aefeda.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f3cb26381e2d8a1cab922bf5ca8994c2796cd2c24529c801aff888e366310390"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/61/617535deb9cba02accd06ae70b9e18594a7aeb1e629160756f6464e882aefeda.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "38ffac26007fbc5dbc16aadecd86edc7320e626d4ecc904005b05815256e69ec"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/6a/6a12a99ef57e261d2a1e3c469b79ce7719948c82a8f7ab7615bb78aa7a864ff3.subtreeData",
+     "bytes": 168,
+     "sha256": "05c20a8787874a2833a06e6c9737bb3d034b647c705a190535c304ba063ca997"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/6a/6a12a99ef57e261d2a1e3c469b79ce7719948c82a8f7ab7615bb78aa7a864ff3.subtreeMeta",
+     "bytes": 92,
+     "sha256": "fefbce86e7a17975ff39577c1a51d110b586597d6cf93786963a3f42b989f91e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/6a/6a12a99ef57e261d2a1e3c469b79ce7719948c82a8f7ab7615bb78aa7a864ff3.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "516e795b40ba66f0cdf5312c4347dbb2bd4ea6483c1904866aabd80bbfd7dc31"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/6a/6a2589bbcd4698db4b7eaba6542291d78d63431ddf9307ca6b96982bb8676ab1.subtree",
+     "bytes": 168,
+     "sha256": "e0f005f1705fde083d4f21b1c9fc56c8e698ae7b3e2cb554c1fb0e81c59058f3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/6a/6a2589bbcd4698db4b7eaba6542291d78d63431ddf9307ca6b96982bb8676ab1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c3a78fb0d3fa090f20a0b8330066f3b650cf593a7be38e3af47c6da20369dc79"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/70/708f769c61b36b96502562fe8fcd6794d40a49ff9008c7f4fec4d65c41ea4682.subtree",
+     "bytes": 168,
+     "sha256": "fc74695cc1e59bc709d32dd2fee61acc12d4252ea33e9fb5b618d35661b123c1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/70/708f769c61b36b96502562fe8fcd6794d40a49ff9008c7f4fec4d65c41ea4682.subtreeMeta",
+     "bytes": 92,
+     "sha256": "3dd18518ccac901a94ba0ab4d60c0f9a7f83bf2be0faeb4dc62653ac6ceb0f72"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/70/70dfbd017a252e4844b5b0109398e4b10d79739be445aa21a7d2481f0b86dc71.subtreeData",
+     "bytes": 87,
+     "sha256": "ebe0e29fae7c59f3770c206d3fcdca7cec2b8b4f9baa63ee3a6ab5ad489ade84"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/70/70dfbd017a252e4844b5b0109398e4b10d79739be445aa21a7d2481f0b86dc71.subtreeMeta",
+     "bytes": 92,
+     "sha256": "d18a4642fe1502946bbc65b9b705ae65d5f8d46e86d1f774075890a1bcdafa15"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/70/70dfbd017a252e4844b5b0109398e4b10d79739be445aa21a7d2481f0b86dc71.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a6173619d7a5c5b14b5249897e1480aa3fe23950eb1db462aafb89c606219142"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/71/71cc3e59a51af71d99330bebf57293125b79150ff43f33fae104703cc9b29477.subtreeData",
+     "bytes": 85,
+     "sha256": "0d497fe584eb682b9522bbf8990621de35399764d8fcc542774b0fde1aaa3da9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/71/71cc3e59a51af71d99330bebf57293125b79150ff43f33fae104703cc9b29477.subtreeMeta",
+     "bytes": 92,
+     "sha256": "2b61dfabac046bd1544e96b4759e0216de0fe77b4f45983145be17792f2f8900"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/71/71cc3e59a51af71d99330bebf57293125b79150ff43f33fae104703cc9b29477.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "0b44397a1ae68478cf8aa23350f76339e5c74d8a5285a5a17cba8c469ea543e8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/77/776a7e981de771453ee1fcbcf38c41af79dc0f93867ca2c7fdeba06dead88647.subtree",
+     "bytes": 600,
+     "sha256": "f6cf03bd984350bc397b48bbcab549b3ddd1cc9851bc55d8a5c51fdad22ec8c0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/77/776a7e981de771453ee1fcbcf38c41af79dc0f93867ca2c7fdeba06dead88647.subtreeMeta",
+     "bytes": 488,
+     "sha256": "6d095e51ceac3964295b7a9004746398bd2fffa8a1937bbf0e1412222ad3cddf"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/79/797ec42d837d48febd737524341e753d3e38877d71aa2fa09bbfc2878b3977f4.subtree",
+     "bytes": 216,
+     "sha256": "b30b2d3de727330cc407dbb7f2d20281c1e6fae447813d2e6d25036c2032cc70"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/79/797ec42d837d48febd737524341e753d3e38877d71aa2fa09bbfc2878b3977f4.subtreeMeta",
+     "bytes": 136,
+     "sha256": "34b63f37ad940d86941f95c624ef448c278ea74c240ed82626d6ec5e2dc0210a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/80/806e2afc848c1e785d5f5dbf5575aa7439c33279251349f77e6dee0da7d2c398.subtreeData",
+     "bytes": 85,
+     "sha256": "b9e4c6bd0204eaf442e25f2e36baa2614669c8398a8c820742d5f630d15a6777"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/80/806e2afc848c1e785d5f5dbf5575aa7439c33279251349f77e6dee0da7d2c398.subtreeMeta",
+     "bytes": 92,
+     "sha256": "ab5956abc09cf813ca0b384d7dc463cc35680b522bc6c6330311f43b0405f01f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/80/806e2afc848c1e785d5f5dbf5575aa7439c33279251349f77e6dee0da7d2c398.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a44e88980333b24c5f2605248dac4c69a490a85fcfc3c1f05a7b8c096fc0f7c2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/81/810c82bf3418e6381e608cf657570f641c6bfe22a31ab3dc9ecbc291b63132df.subtree",
+     "bytes": 168,
+     "sha256": "a89d95d68438d68fa8a48c009272966962491437d86c11694ca8e66e195c9e95"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/81/810c82bf3418e6381e608cf657570f641c6bfe22a31ab3dc9ecbc291b63132df.subtreeData",
+     "bytes": 85,
+     "sha256": "7e961d40ee5f1d3c8fcf1ef9c3f882f98fa42985095247ff44cd781519b28c18"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/81/810c82bf3418e6381e608cf657570f641c6bfe22a31ab3dc9ecbc291b63132df.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c2e98e4319e6f742d5238aed00fb631fc5da71f38d161f92adf9c8470e232027"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/81/810c82bf3418e6381e608cf657570f641c6bfe22a31ab3dc9ecbc291b63132df.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "54af464555ca20bbfe368a6f4fb5fe3b0f011501a3db8a0f6ef7e8ce125c1c49"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/821bb58fb84ddb5fcce56f017cc265e4b96c352412a10f70b17f1e5fa1f020ae.subtree",
+     "bytes": 168,
+     "sha256": "ed53832be3d96caf6b8e973f54690796a96ba72a29fbb8c58fdb3fc3aa8df965"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/821bb58fb84ddb5fcce56f017cc265e4b96c352412a10f70b17f1e5fa1f020ae.subtreeData",
+     "bytes": 87,
+     "sha256": "7665ca30caf8d5022ef6170d1177c3e58caf2ba2358f0e5cbc3411f583104d9c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/821bb58fb84ddb5fcce56f017cc265e4b96c352412a10f70b17f1e5fa1f020ae.subtreeMeta",
+     "bytes": 92,
+     "sha256": "b327b13d077ead425e6fc57601e165109aba818b79339dbc15d1c04f0f44b7f9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/821bb58fb84ddb5fcce56f017cc265e4b96c352412a10f70b17f1e5fa1f020ae.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b78909f1fe2f0a5f6e37c4893f333299823991d50a5815030391bdce0dcb18d3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/82ab3722d93d89c791a0f094cd880da09dfebf99ba1b49f5c75f6ab7d0601da4.subtreeData",
+     "bytes": 85,
+     "sha256": "f1b982d5d00afda99789cfe6760f957a0235f4c400ccd730fcdf006e2850b06f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/82ab3722d93d89c791a0f094cd880da09dfebf99ba1b49f5c75f6ab7d0601da4.subtreeMeta",
+     "bytes": 92,
+     "sha256": "417c6573013fd785c068519244eb88576b9535a7ec3587bda7241265cd6e36c4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/82/82ab3722d93d89c791a0f094cd880da09dfebf99ba1b49f5c75f6ab7d0601da4.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "7a10a6cd8e140c24fd707f1b18bbd0c156e2b620559b92bc217889d0919f74b9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/84/8492bb43f0b84b8f17aa6fcfae289ba30a0896db8e8ec7fe2293b226af4c7409.subtree",
+     "bytes": 168,
+     "sha256": "f7fc72e181196a876f6335adc6726da3eff558f54570540028fedf049996f424"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/84/8492bb43f0b84b8f17aa6fcfae289ba30a0896db8e8ec7fe2293b226af4c7409.subtreeData",
+     "bytes": 136,
+     "sha256": "b3548a0ff43e49545b0e6e7da055df5d0c8fe0e62c961e4532656da751a6731b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/84/8492bb43f0b84b8f17aa6fcfae289ba30a0896db8e8ec7fe2293b226af4c7409.subtreeMeta",
+     "bytes": 96,
+     "sha256": "07086a59622b57ac044a311bba4b6fc7db423565dc28239ab4b51c454dacab81"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/84/8492bb43f0b84b8f17aa6fcfae289ba30a0896db8e8ec7fe2293b226af4c7409.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "337da069a235f6f536131b31ae8a05ca6e90353d0d1600b1aed155a829a5149c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/85/85f96ce2f50a4f36d402d7cb094942d3cbe4c0a9e1c7482a30354326a5154172.subtree",
+     "bytes": 168,
+     "sha256": "b3661f698e9987ff430c861b445ae39367251771dcd40b89174fb600bd8bb9e2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/85/85f96ce2f50a4f36d402d7cb094942d3cbe4c0a9e1c7482a30354326a5154172.subtreeData",
+     "bytes": 239,
+     "sha256": "9f2bed8ccbe0ace2073e24b37c790eec20d6a6310e23c2ddfb077dc2435d0380"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/85/85f96ce2f50a4f36d402d7cb094942d3cbe4c0a9e1c7482a30354326a5154172.subtreeMeta",
+     "bytes": 92,
+     "sha256": "9f4891cebd81a18f15b458be0669260fd4acbb4206a5d984ffd8cdef645f697d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/85/85f96ce2f50a4f36d402d7cb094942d3cbe4c0a9e1c7482a30354326a5154172.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "70ea587ec71089b3ca65da5089264b8634e80c285e13d113074b39c3b7491659"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/88/88e027e686e9bfc582abcb6b4b43a3760ae429e5b7b55e623e26defb4757e0bf.subtree",
+     "bytes": 168,
+     "sha256": "fc6c4e61fc092b6c46ee8d66240bb181f398a7aecab947053bca4d5108c8fb3a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/88/88e027e686e9bfc582abcb6b4b43a3760ae429e5b7b55e623e26defb4757e0bf.subtreeData",
+     "bytes": 85,
+     "sha256": "d3d76a076d54bf88dee24908181f5e3e6f1c8ee6ef29315af638d038e848a507"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/88/88e027e686e9bfc582abcb6b4b43a3760ae429e5b7b55e623e26defb4757e0bf.subtreeMeta",
+     "bytes": 92,
+     "sha256": "d3c9b8e7acf5ea2bce904f65fd24c298dc348ff42faef4774f1317c076277379"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/88/88e027e686e9bfc582abcb6b4b43a3760ae429e5b7b55e623e26defb4757e0bf.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "12cea60a77ebae019f2e50eb2dd310ec989bcb87a4a1129219b09e062c37fb3f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a4f4db1fe65a21a9a0008d3d0c02079d92df250d94c069fc841ae0a8f6032d2.subtree",
+     "bytes": 168,
+     "sha256": "ae2c6285701d3c655e344229abf72d2bd558699be62347a9ef7922b0bf7f0ef1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a4f4db1fe65a21a9a0008d3d0c02079d92df250d94c069fc841ae0a8f6032d2.subtreeData",
+     "bytes": 85,
+     "sha256": "6f0e00aef8da5ba89054aa58594b493162767fa4faec1927a0be8efa0f7f188a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a4f4db1fe65a21a9a0008d3d0c02079d92df250d94c069fc841ae0a8f6032d2.subtreeMeta",
+     "bytes": 92,
+     "sha256": "cc29bc273cbb721191f02b1a015eeaa3ff2085836db7168d194c81f17875ae59"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a4f4db1fe65a21a9a0008d3d0c02079d92df250d94c069fc841ae0a8f6032d2.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "fa406dcf476fe2dfd8678eef2ccbaa486029c202385cf60d88b23fad9e3e04b7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a985b4853512145859b9735a33ce1c47b56123d53b66711d752410fd11bf503.subtree",
+     "bytes": 216,
+     "sha256": "c5ba2498a1e2e30652e612f329aaf3b0f309d0fe7d9e38284515e8bef0a5a194"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8a/8a985b4853512145859b9735a33ce1c47b56123d53b66711d752410fd11bf503.subtreeMeta",
+     "bytes": 136,
+     "sha256": "5573a55d09007b189df7955a4b20565e7bcc16d57e250742415d6c718c4abf4e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8e/8e33f9a790c19906c38219b1617d526da358eb04c1e5d7a00757ed2bd1ba1172.subtree",
+     "bytes": 168,
+     "sha256": "0628011c73d5b7c72845045de1ed71f0915bed46739503ab4b6ab56692a34da2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8e/8e33f9a790c19906c38219b1617d526da358eb04c1e5d7a00757ed2bd1ba1172.subtreeData",
+     "bytes": 85,
+     "sha256": "e0f7edf88213a3ae8f5f2db709c0ab3fb363bdc97cace3703d2c1ba73a971d5d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8e/8e33f9a790c19906c38219b1617d526da358eb04c1e5d7a00757ed2bd1ba1172.subtreeMeta",
+     "bytes": 92,
+     "sha256": "3a62e2f2dc1b9fab9946d9aeb856ec35ad784b5c0b64fec800a88fee237f216f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/8e/8e33f9a790c19906c38219b1617d526da358eb04c1e5d7a00757ed2bd1ba1172.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "d59ba9b321378165bc023577aebba2446ddeddbc589d084b437adde884770b74"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91491777952b859fbf8a393118e7bd40c319a84287e458879a4a6fdcf2a848e2.subtree",
+     "bytes": 168,
+     "sha256": "36396fc340ad5cb990a11bc80f63471565a494a8dfaea5c2235bdeca1cea357a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91491777952b859fbf8a393118e7bd40c319a84287e458879a4a6fdcf2a848e2.subtreeData",
+     "bytes": 85,
+     "sha256": "2568d4c25b574e84db0d8dbe32ae914fe8c90d527cc43a5a47264de7d2177377"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91491777952b859fbf8a393118e7bd40c319a84287e458879a4a6fdcf2a848e2.subtreeMeta",
+     "bytes": 92,
+     "sha256": "aba28e1625de233270c29e1c3ac37c22b74e637db6bcfe580583d167e4833bee"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91491777952b859fbf8a393118e7bd40c319a84287e458879a4a6fdcf2a848e2.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "074db21295b7d1e07b2238e1e7360bfbc2df771a2eecb0251b0422892bff35c0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91c51857936913ec64ec63e6172364ef79de6f90b3d0bfdfa9b6c8f1b2417af3.subtreeData",
+     "bytes": 162,
+     "sha256": "195aebcb99c7bbb6af734d60ed1b34eb617f3db4365b4a20dccb5b4380097979"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91c51857936913ec64ec63e6172364ef79de6f90b3d0bfdfa9b6c8f1b2417af3.subtreeMeta",
+     "bytes": 136,
+     "sha256": "d89810e475f2ee31e448abb23894add9b0edcf9c71588318be7be4e4bfac5287"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/91/91c51857936913ec64ec63e6172364ef79de6f90b3d0bfdfa9b6c8f1b2417af3.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "3d4f6534f03b8cf600fb7337fc02865d3b16cd0026c28833066fbb4d99932efb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/92/92fea255ad953fa735ef364aa35cdfd5d1cd44941e91bfd56e004bb49dae83d1.subtree",
+     "bytes": 168,
+     "sha256": "5fce4dff9884e070584c373a619a35cedf76b4ea79520330fc38dce3d9406beb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/92/92fea255ad953fa735ef364aa35cdfd5d1cd44941e91bfd56e004bb49dae83d1.subtreeData",
+     "bytes": 85,
+     "sha256": "f39c6e0d4512f2314ecb3ae76bbc76bf03fb2e9b69dc37409223f53c2b50debc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/92/92fea255ad953fa735ef364aa35cdfd5d1cd44941e91bfd56e004bb49dae83d1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "49cd98799ecb5eba9a92704f614fdad391f884840f4575216791cfc4d5bb4912"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/92/92fea255ad953fa735ef364aa35cdfd5d1cd44941e91bfd56e004bb49dae83d1.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a42313cc7db5fcaa4854478dced3e32dbdaf776abe862b02e9f76c210e8041d7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/94/94b6a9ac702199fdb74c9e71adff45c32de0db160b4eeac124cf63b6e837ea8a.subtree",
+     "bytes": 168,
+     "sha256": "7d00eb38c794988daa933f625074bb7d9ca9f618c33364765a10b077eeddec3c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/94/94b6a9ac702199fdb74c9e71adff45c32de0db160b4eeac124cf63b6e837ea8a.subtreeMeta",
+     "bytes": 92,
+     "sha256": "469bdcbf83bd061ce08be4a28513ae6ec574a2f5f56b249538b0e9797a9049ca"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/97/97accb943f7ecb4781f428175e74561992df5ebb9bfe8133c6fed583565cf497.subtree",
+     "bytes": 168,
+     "sha256": "4999db6a79e5d290ebef7d5815a4ba8508563373982d246480493994509f1d3c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/97/97accb943f7ecb4781f428175e74561992df5ebb9bfe8133c6fed583565cf497.subtreeData",
+     "bytes": 85,
+     "sha256": "7306ab3d847a72874fe681c80dddd73641ca5036fc095287a741675be42766f7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/97/97accb943f7ecb4781f428175e74561992df5ebb9bfe8133c6fed583565cf497.subtreeMeta",
+     "bytes": 92,
+     "sha256": "910f5b4c121dcf3c6fa6ea4a869dfd01f5d38fd44acf052697782669398f04d6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/97/97accb943f7ecb4781f428175e74561992df5ebb9bfe8133c6fed583565cf497.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "11441959339f6cd09fc87589d661140941dc11fc7393c01c384ffbaa1b060d8e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9a4d91a29f1c5f565ecb12088cf756e80d0c26f77fb332e4538d519d020bb6c3.subtreeData",
+     "bytes": 75,
+     "sha256": "b6ee16fc8ff8ef65334a515f58552e1ff40f44ff45c42bef2fe415cf3fc392f0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9a4d91a29f1c5f565ecb12088cf756e80d0c26f77fb332e4538d519d020bb6c3.subtreeMeta",
+     "bytes": 92,
+     "sha256": "830d6283c5308dcfa125f0a861e02eb76ace8e7d50bbaf273551b87022d334a0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9a4d91a29f1c5f565ecb12088cf756e80d0c26f77fb332e4538d519d020bb6c3.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e13a08451cecae14c092b8f296e442c6194efb93b9837ddbc6067555f7f07fee"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9add330222df5a695e564aef8932556b3e74558351035818ad75c64eaad37167.subtree",
+     "bytes": 168,
+     "sha256": "79d9b2b6a458587dd3c1223edd08d423aa82a25f9c588e70622074c6b0dd4346"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9add330222df5a695e564aef8932556b3e74558351035818ad75c64eaad37167.subtreeData",
+     "bytes": 85,
+     "sha256": "788fbed750447e8d42e314bbaad67ef041a686d73e55bcab9a17e6a4b58c356b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9add330222df5a695e564aef8932556b3e74558351035818ad75c64eaad37167.subtreeMeta",
+     "bytes": 92,
+     "sha256": "61096411198cc2d5b34f8577633ab91cae852dfe41cc242a39130372701d82c7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9a/9add330222df5a695e564aef8932556b3e74558351035818ad75c64eaad37167.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "593114c5af05ab6e1d8a06bcc849814fc8b0ab27548bb380bf278bc42480378b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9e/9e05e73c69720dd3470a7056ac0855b25afd83ed876b7a873cae9fc71847b1c0.subtree",
+     "bytes": 264,
+     "sha256": "f3bced0164bcc469e838e12a8c1572fba53a09d1f226f21d57ffb52737df9acc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/9e/9e05e73c69720dd3470a7056ac0855b25afd83ed876b7a873cae9fc71847b1c0.subtreeMeta",
+     "bytes": 180,
+     "sha256": "5133f4cac545409b4da28b8380dee025a96e5b6cfab1665298b91550e6472871"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a4/a4288a8b113548d96cdfce3c3ec378d1bb79a166c11302a6f5b7aa2bb27471c0.subtree",
+     "bytes": 168,
+     "sha256": "8b69f3c51c3f7d8d48ab30b501c07e30d7155d49675b82366f8ef97a1f1bc59b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a4/a4288a8b113548d96cdfce3c3ec378d1bb79a166c11302a6f5b7aa2bb27471c0.subtreeData",
+     "bytes": 109,
+     "sha256": "4f4739333cd02f6dc90fe718e8bb927e13f939568ccefdf9318136a126b39d71"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a4/a4288a8b113548d96cdfce3c3ec378d1bb79a166c11302a6f5b7aa2bb27471c0.subtreeMeta",
+     "bytes": 92,
+     "sha256": "09beaf2849850e809936bc8671d1959a5c7563f2673b1ff56658b716474b7737"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a4/a4288a8b113548d96cdfce3c3ec378d1bb79a166c11302a6f5b7aa2bb27471c0.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "58cd86804268148a1dea60b558de39fbc804a3c79064624457c2f44139b6d64a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a5/a5ea36213e8fe38f78a764157b041ba1f77f8e34fa5b58b6054c5fd51feb0e51.subtree",
+     "bytes": 168,
+     "sha256": "822b0912182759b7ca009d78c48190dc4b1a16c4193623a7297a2a68b3314cbb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a5/a5ea36213e8fe38f78a764157b041ba1f77f8e34fa5b58b6054c5fd51feb0e51.subtreeMeta",
+     "bytes": 92,
+     "sha256": "e7d2ebda652782bae9a46fdb0a901de08d3773ec40c25508be0f32992d643b8e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a6/a643639920050236dd6543742af4a98018bde212a17c42cd0ad65ba6099d027a.subtree",
+     "bytes": 168,
+     "sha256": "aa2e5aa6cd466007d1879202101db52d3dd18c75b2505fec146e85216b9f9d42"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a6/a643639920050236dd6543742af4a98018bde212a17c42cd0ad65ba6099d027a.subtreeData",
+     "bytes": 85,
+     "sha256": "def19287a3f49981e75237af9b539aeaa3889ee088ecc18eeeb42b3fd794d382"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a6/a643639920050236dd6543742af4a98018bde212a17c42cd0ad65ba6099d027a.subtreeMeta",
+     "bytes": 92,
+     "sha256": "d7289bc24b3acb3f1d1438d2ed621e3bef16aabe688be2f610b8dacf09c37b91"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a6/a643639920050236dd6543742af4a98018bde212a17c42cd0ad65ba6099d027a.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "9da825ecb0432b6b02f24dac38e89b38bca8c9d2c8d5dbafd355297acf9c58b4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a7/a772bcf3b2f3c690b8bd0e61a3180b093d2bef84cb1910061e6cd7dec3b509b9.subtree",
+     "bytes": 168,
+     "sha256": "63aba372f07192972273d372e85d5c521277e1032b9592b77e124abdc9abf337"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a7/a772bcf3b2f3c690b8bd0e61a3180b093d2bef84cb1910061e6cd7dec3b509b9.subtreeData",
+     "bytes": 85,
+     "sha256": "f69908f9e7597077712b9ccc641f46d1b0179f2de0e3a4d6b1646838ac697c80"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a7/a772bcf3b2f3c690b8bd0e61a3180b093d2bef84cb1910061e6cd7dec3b509b9.subtreeMeta",
+     "bytes": 92,
+     "sha256": "74b563affe821b4dcf96244e7b7362149141c81c98d397d065e5ce40a81b956f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/a7/a772bcf3b2f3c690b8bd0e61a3180b093d2bef84cb1910061e6cd7dec3b509b9.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "88eec757cae90c4da045d462b07409dfc276cf3410424d07af4a24511084214c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ab/ab3ce085490b867a727655c3fa920b7fc53dfa57781178c74942ee1bdc3d2ac0.subtreeData",
+     "bytes": 85,
+     "sha256": "44b801ed93768ae9ef1436dab56d9eb4a1375317258ba2cba5c080ea5dcd0b35"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ab/ab3ce085490b867a727655c3fa920b7fc53dfa57781178c74942ee1bdc3d2ac0.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f2f031a9631644c9f20817d927bd9cef247addcd761a860e8abd73534ffb2de4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ab/ab3ce085490b867a727655c3fa920b7fc53dfa57781178c74942ee1bdc3d2ac0.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "a7ebf005b101e96ff0a56559abd8dd4d7f0e3f20825a6963c94c4661d6454f73"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/af/af8f6d398c2ddef68c785601c72559bc3399e82a92152cdb89fb72ae9b724033.subtree",
+     "bytes": 360,
+     "sha256": "cfc52bf8df2ef9a32c39496584a99660467ade13511be817c203df0c4aca5e31"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/af/af8f6d398c2ddef68c785601c72559bc3399e82a92152cdb89fb72ae9b724033.subtreeMeta",
+     "bytes": 268,
+     "sha256": "cf6801553a8fbafa442e95e6414f104ceec0bfb2bb00e1faa34ff354073e24c0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b1/b16367720a20b4edc1a959c1e13779efd372cde05ae593e810bdbe05aad42dbe.subtree",
+     "bytes": 168,
+     "sha256": "ebea97ac2a81092b82046b55c0451281e036b8a5993233d536516c2a197b91e8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b1/b16367720a20b4edc1a959c1e13779efd372cde05ae593e810bdbe05aad42dbe.subtreeData",
+     "bytes": 85,
+     "sha256": "970c7b34111e4d2b33317a21fda34a758e717ee55b2d501b2ea94e2fce22013e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b1/b16367720a20b4edc1a959c1e13779efd372cde05ae593e810bdbe05aad42dbe.subtreeMeta",
+     "bytes": 92,
+     "sha256": "075b13e56d2b9c2eecea1f42a198bd1375b0fe463ff3de02d6d79cd866ed795f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b1/b16367720a20b4edc1a959c1e13779efd372cde05ae593e810bdbe05aad42dbe.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "d65f3e790d902e86eaf4fccac122f3dd327cb9831f57385717ad167aada829fb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b4/b4fb5b9bde00dd52587c63700896204efa711f2951b31b2f7451cb128a982220.subtree",
+     "bytes": 168,
+     "sha256": "3603a972acf186474d35411eebbd5d037ca3b1c1da2ba36c2a11fa0edd085eb2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/b4/b4fb5b9bde00dd52587c63700896204efa711f2951b31b2f7451cb128a982220.subtreeMeta",
+     "bytes": 92,
+     "sha256": "11f93ea14c8177fa7d6bb9067815e3825d2f7aa91b3db8ca6fab09fb49e2722b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bc/bc9110d60d1cc7fad75bcace659b691ab4f657b2ffec42db815edcd83bd0f7a9.subtreeData",
+     "bytes": 168,
+     "sha256": "5cf126b3b8caf2c2e5144055244ea1a9bed8b5e8e0d49f0048f29a9714480015"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bc/bc9110d60d1cc7fad75bcace659b691ab4f657b2ffec42db815edcd83bd0f7a9.subtreeMeta",
+     "bytes": 92,
+     "sha256": "df109387621a9995d9566beb85342c509d8a7338c35c03a7f0307768ff06e770"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bc/bc9110d60d1cc7fad75bcace659b691ab4f657b2ffec42db815edcd83bd0f7a9.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "f101f66233b8e5268795a21dbb579cdc1c7189ba18def5ba7101bd0702dfba7c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bd/bd8e9c617d0577855d593f3c53186de8b15a07e667a04770fbb87cb1a9d1817e.subtreeData",
+     "bytes": 85,
+     "sha256": "b99732c5cf8c701a1bf37c1dbdfc20dae72961dead100ac50415aafa14d676a4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bd/bd8e9c617d0577855d593f3c53186de8b15a07e667a04770fbb87cb1a9d1817e.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a74af5f612060bc6fe647511f88a84af27bb80d039519622227bbb7111c4f0cf"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bd/bd8e9c617d0577855d593f3c53186de8b15a07e667a04770fbb87cb1a9d1817e.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e1b1171947922ffbeec291355473d9330660243a0c83cf530f3f11971c074566"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bf068fcfd379922b65008ca16b475a814d93857a4d7fa030978eb96b24478d53.subtree",
+     "bytes": 168,
+     "sha256": "5db324699b072eac347dca47d2ba454a5473896ca41ad9878e35edd5cfd3c609"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bf068fcfd379922b65008ca16b475a814d93857a4d7fa030978eb96b24478d53.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f18f1329bdbc8343b2efc4375c7463263c0a6b310b73a2d94cf6d81ed0cd3603"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bfb569f97b048888b9c2f305b9a720080cf4daad377ca6445a8b5b91178adb6d.subtree",
+     "bytes": 168,
+     "sha256": "e1e0af495b133d38626140adb84cb4995e31a74c1a41dda50e326f8d9d5971d1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bfb569f97b048888b9c2f305b9a720080cf4daad377ca6445a8b5b91178adb6d.subtreeData",
+     "bytes": 109,
+     "sha256": "145ecbbf7d5d4d855e6baf0ed61699cadf6793b5c1ffe2d9b8c5c2c6fd0538e8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bfb569f97b048888b9c2f305b9a720080cf4daad377ca6445a8b5b91178adb6d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c6ba0d7a29fa02580d573dd30a5576f5e81a67b560a605d91f37b316d6bfc58f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/bf/bfb569f97b048888b9c2f305b9a720080cf4daad377ca6445a8b5b91178adb6d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "97ab170e7f725cefbf1957e1cc787301c7491764e23843e720fa962ba375ba83"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c1/c1404448fff83fe7766b331005edd0c9745162086bf545ba5b7cbff228e934d7.subtree",
+     "bytes": 216,
+     "sha256": "a8fcf55f0d6052cde03917b4cec6beff8078a134ba7b6f029ea150b450f70e62"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c1/c1404448fff83fe7766b331005edd0c9745162086bf545ba5b7cbff228e934d7.subtreeMeta",
+     "bytes": 136,
+     "sha256": "81e111f2374f72ae0aef26f9a6fb105221e3b2b5f93cd85e3cf518a53eb6bdb4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c1/c1eefffeb3c9deaa6a0e37ad3e0cf3ac40d34ba0a11008acf9fa81bb2e003c05.subtree",
+     "bytes": 216,
+     "sha256": "711eed24100f96d8b99eaf073ec4882c27481b522cece654f0fd726cf78b90c8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c1/c1eefffeb3c9deaa6a0e37ad3e0cf3ac40d34ba0a11008acf9fa81bb2e003c05.subtreeMeta",
+     "bytes": 136,
+     "sha256": "8def897baaff0940a1399ebea0ff9730a8a86fe7978672c48b571dfa9ab5c67e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c3/c30f45c88b52240de1b3b3070c712110d3baf5eddf18914e5350c9977f174a96.subtree",
+     "bytes": 168,
+     "sha256": "9279e8334e6966d157438c21f1e0fca5b4e80d8febee857eb6f831c934747e51"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c3/c30f45c88b52240de1b3b3070c712110d3baf5eddf18914e5350c9977f174a96.subtreeData",
+     "bytes": 85,
+     "sha256": "305f275cc705f19c0e1a92b7cf7cc85f9c2f2acf4460af30724f628252031276"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c3/c30f45c88b52240de1b3b3070c712110d3baf5eddf18914e5350c9977f174a96.subtreeMeta",
+     "bytes": 92,
+     "sha256": "36170605be18926f769c84a71c2c97c733561dd334c60b57344832332e251124"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c3/c30f45c88b52240de1b3b3070c712110d3baf5eddf18914e5350c9977f174a96.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "5e91438571029067b7933d42ae116f2f3ccc0e1c7659b60ca47a35e3fd2f6695"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c6/c60c2652563b16fdd6d93878963ccb3fad68ca0093fa478baaa06aead2c221b6.subtreeData",
+     "bytes": 85,
+     "sha256": "e17d3d206f02783bc551e9c92bb9799c83c0d0f0baba2c29d7944ef5743b16a4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c6/c60c2652563b16fdd6d93878963ccb3fad68ca0093fa478baaa06aead2c221b6.subtreeMeta",
+     "bytes": 92,
+     "sha256": "2ba32c35d37eac2c1349548c5017a0040697fa15928ccc473cd46778d09651ef"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c6/c60c2652563b16fdd6d93878963ccb3fad68ca0093fa478baaa06aead2c221b6.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "7b679a2f0832bfaf7fd91509fe74fdbe4f7ac9bdfa2a06c887e92552a76027d3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c8/c840264907617a85ab7b96ed91ab9102f168594f2265a36841e68b33cd3b9c05.subtree",
+     "bytes": 216,
+     "sha256": "b001da3d1252445a0925ff34a20e55df16cd7b48e2fafbc12d2e98f11adbbd59"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/c8/c840264907617a85ab7b96ed91ab9102f168594f2265a36841e68b33cd3b9c05.subtreeMeta",
+     "bytes": 136,
+     "sha256": "1c78a8564ae32e3576e206e1345771de5daea8943e35c2c9c91ab6645d1012c1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ca/ca09e492b4d8c3d9e084da35f05a05fb4f1cdc730561352d0c3c5e0178368739.subtree",
+     "bytes": 168,
+     "sha256": "9edea47564dc84b11409a5dad26dc26516f9bc253c1eaa0542ef127e76d30d4b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ca/ca09e492b4d8c3d9e084da35f05a05fb4f1cdc730561352d0c3c5e0178368739.subtreeData",
+     "bytes": 109,
+     "sha256": "e94dbdee0626ac9bf63ccf7ed669902673bac44628bac7092719b99f0cad1ae0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ca/ca09e492b4d8c3d9e084da35f05a05fb4f1cdc730561352d0c3c5e0178368739.subtreeMeta",
+     "bytes": 92,
+     "sha256": "955c87fa323de7c05bab50b347522cfb9e7838b30b13f7f01ca1f59a50a45bfa"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ca/ca09e492b4d8c3d9e084da35f05a05fb4f1cdc730561352d0c3c5e0178368739.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "565434acdd31871bb9a99eb48c85fd92070f0a1cfe7dfda5688dceb8d922114b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d1/d1e010d05c9186989d072ce57ffd0c397eb2a57efacb483dee093bfe673cf762.subtree",
+     "bytes": 168,
+     "sha256": "a805fc4c8d190efd190df92089c3241567768b5f9d365f4b7fe174cc429ed1ec"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d1/d1e010d05c9186989d072ce57ffd0c397eb2a57efacb483dee093bfe673cf762.subtreeData",
+     "bytes": 85,
+     "sha256": "314ef2bb1ccab8db640dca170962a1b48dab7be93d5eb6f073d7fa568fc1e9d1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d1/d1e010d05c9186989d072ce57ffd0c397eb2a57efacb483dee093bfe673cf762.subtreeMeta",
+     "bytes": 92,
+     "sha256": "d42b6b38d7f70ece7cf3316c11e0fa7ae0c6713425c3a0f9aed5d5dc33122c4a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d1/d1e010d05c9186989d072ce57ffd0c397eb2a57efacb483dee093bfe673cf762.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "ec475d981e58c8cb252fe47d625568360e3a0b454e9b13b7cbd8a8155dd2226a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d2/d2fcced3d415f259252c73622dffc8b9af5222e91295c4daac8e546bdf4a885e.subtree",
+     "bytes": 168,
+     "sha256": "e5db7f1543ec3ba64c0ccf644a79d8b0bd6354646c4fe36dfd7f7db9b4c2cf8e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d2/d2fcced3d415f259252c73622dffc8b9af5222e91295c4daac8e546bdf4a885e.subtreeData",
+     "bytes": 85,
+     "sha256": "ff56e3b427c6f1c025d4cf1b158efea505795fb0c5e6c1dc4368452b43be1dc0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d2/d2fcced3d415f259252c73622dffc8b9af5222e91295c4daac8e546bdf4a885e.subtreeMeta",
+     "bytes": 92,
+     "sha256": "7a412315732bdfc1d8a25da4ccbe62ebf9cc7cd46fe50cd34a31a149d90d6418"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d2/d2fcced3d415f259252c73622dffc8b9af5222e91295c4daac8e546bdf4a885e.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "af79c63a9242acdba54a8f8559f8047e4cbfa02c4260b6c7b66f0b7f56bc61ff"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d6/d684666d903f858832b8b7b3946d61d6204fed0a8c4239139e420c301a9237f1.subtree",
+     "bytes": 168,
+     "sha256": "445e0f98742f1a2da87ac1e15b9ade39c9c0ee153ac806aa99f8cb5c9e04e4bd"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d6/d684666d903f858832b8b7b3946d61d6204fed0a8c4239139e420c301a9237f1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "de7a2629fd30058e99d7185ed8148c48aa309993b5bdbadd53b34189eaf09e36"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d8/d898c46600a99fd429a1274cf445aab6769a55e657356e9b6abb627871166d32.subtree",
+     "bytes": 168,
+     "sha256": "435a4cae53b99eaeb64383a4ad5f7aef8887c194b12f37e1b15ebaa0ac82902e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/d8/d898c46600a99fd429a1274cf445aab6769a55e657356e9b6abb627871166d32.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a50a98904a86d7495410a7a548fde75533f702058e0888c567aeb3ea12fba3e9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e0/e00553a406550ff767082e15447e79d07038b746e850095668ee6eb3eea21dc0.subtree",
+     "bytes": 168,
+     "sha256": "c134e17d5eb8be8ffd7e6469f720bb756d1fa137b111ffd77bcf054517cd09c6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e0/e00553a406550ff767082e15447e79d07038b746e850095668ee6eb3eea21dc0.subtreeData",
+     "bytes": 85,
+     "sha256": "fce557af9bde55e5976274fd82e6b3cb73e6afb9873ec121564c89e26d916057"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e0/e00553a406550ff767082e15447e79d07038b746e850095668ee6eb3eea21dc0.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c403c0f3938fed55d37df48ba19d0d21f24034159e1c5579f7d7120537f351d8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e0/e00553a406550ff767082e15447e79d07038b746e850095668ee6eb3eea21dc0.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "78a3c09b189ca1d8980edcc68996aca54dd82481f19b9954e8591b59f226cc9d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e3/e3642db7e1702be3a500189e2c7574374357f8655504f2971004532d43910cb1.subtree",
+     "bytes": 168,
+     "sha256": "1f175d540d745a08b07a97f0d00690d51464cb6ed249eb6d2f8ce190dd200f5d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e3/e3642db7e1702be3a500189e2c7574374357f8655504f2971004532d43910cb1.subtreeData",
+     "bytes": 85,
+     "sha256": "457e32e94f2b32b69ef96392b6f4904aeb543db811b80cc9ef4198d5b08f3a34"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e3/e3642db7e1702be3a500189e2c7574374357f8655504f2971004532d43910cb1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "f546e7fa8a0c8c586123501d3260658d2edcfdcae690185e071f2e618c374ba0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e3/e3642db7e1702be3a500189e2c7574374357f8655504f2971004532d43910cb1.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b4afe029d406039c2b3a82badd64ce2566476cd3cf1d29f0981da92ef9bd062f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e5281de095df360a97cea76f04f94a48af7d82f454a2f25d9e72acecdc382bd9.subtree",
+     "bytes": 168,
+     "sha256": "adc011b92743b5771b5fd0c50d2e12450a199638819d16b167bee5c254d950c9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e5281de095df360a97cea76f04f94a48af7d82f454a2f25d9e72acecdc382bd9.subtreeData",
+     "bytes": 85,
+     "sha256": "0acb700f3b945e7088d8f12e860a5a8730fcf6d0ecfbcf1ab6282fb9d9cf47b9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e5281de095df360a97cea76f04f94a48af7d82f454a2f25d9e72acecdc382bd9.subtreeMeta",
+     "bytes": 92,
+     "sha256": "ecb0c48bc558c5d0a990386cd8d1924618372fc9b7678230b1d761f09646f29d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e5281de095df360a97cea76f04f94a48af7d82f454a2f25d9e72acecdc382bd9.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e3851bef56f5fcde3bb8068e6185b71cd9e274db86de6eba7f496a1574b88a32"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e53d2390a373f691d85b95d864b6d42ec57c8a99d2d49105c1ee9e6fc371b487.subtree",
+     "bytes": 168,
+     "sha256": "edb9a3589d0f6caa3d88f5f8fa49e44f7a8c44e65dd4f10cb7888c8ba4293039"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e53d2390a373f691d85b95d864b6d42ec57c8a99d2d49105c1ee9e6fc371b487.subtreeData",
+     "bytes": 109,
+     "sha256": "e9570cbfe92663fe4df35e2e0c57907e0915b4f7578ef869d58ca9c278819942"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e53d2390a373f691d85b95d864b6d42ec57c8a99d2d49105c1ee9e6fc371b487.subtreeMeta",
+     "bytes": 92,
+     "sha256": "e43324a5c448b20d3d974cf85a76a19b97d236cea7c94498bc0376b2de4dd6a7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e5/e53d2390a373f691d85b95d864b6d42ec57c8a99d2d49105c1ee9e6fc371b487.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b7eb6230097d40640887545b8f21a9c24a1d9e4d20239f6a310d41cc98f9042b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9b0fba95372ef7c20df579dda64335750ef7d5447ad33ee23d24e715dda02f4.subtree",
+     "bytes": 504,
+     "sha256": "90d8b5850d97915318de773c1afc32f51bec33e3fc5d410fa9aac626cbd46002"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9b0fba95372ef7c20df579dda64335750ef7d5447ad33ee23d24e715dda02f4.subtreeMeta",
+     "bytes": 400,
+     "sha256": "988113d3dec41b9c6346ccd1684892ffb327f110006351f43027517aac0cb23b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9c52c2fd15594fcde04cf775f76ec1e09d893c40cdb6914b7cc069a1ff946e1.subtree",
+     "bytes": 168,
+     "sha256": "476f03d7410c5f09bfc20de3835bda1db6b7d8022bd1f55e6027f954d4886e64"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9c52c2fd15594fcde04cf775f76ec1e09d893c40cdb6914b7cc069a1ff946e1.subtreeData",
+     "bytes": 85,
+     "sha256": "1286c5bd1715c55fc987a9b13ed5f54f55a245d843710f7f5799e87d2385d2b4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9c52c2fd15594fcde04cf775f76ec1e09d893c40cdb6914b7cc069a1ff946e1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "0c9968003f9a71f77b72a2fe358d5fd3005b8af075e73509412ef7372c985ab5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/e9/e9c52c2fd15594fcde04cf775f76ec1e09d893c40cdb6914b7cc069a1ff946e1.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "bf71731b19374b8f67ce750112e1517cd73f7e3e53ff62da1ce419eabd847634"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ea/eab308abbbe955fc4a9f3fa8ef64b86921bd75cad72a287416202cc42cf4495c.subtree",
+     "bytes": 312,
+     "sha256": "97e8c9ffdff5a1cf8a0bd3349ededa44cc9917b90c370e15ebb51418d14c53e6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ea/eab308abbbe955fc4a9f3fa8ef64b86921bd75cad72a287416202cc42cf4495c.subtreeMeta",
+     "bytes": 224,
+     "sha256": "9ba807e3f9f8e85250f394ffbafe6067c68230f68f3eca12ffa31328a86447dc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ed/edbf8b64fde793ab750b80c5fca17c36ff1e5b096baa651497f90a00b25dfa33.subtree",
+     "bytes": 168,
+     "sha256": "6a995285ff027f4f06aff9994dcc14109ce055f676aaf381e18e401950f5ea9a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ed/edbf8b64fde793ab750b80c5fca17c36ff1e5b096baa651497f90a00b25dfa33.subtreeData",
+     "bytes": 86,
+     "sha256": "d1ba082cb707a3b8f79e92166f86019d0a3f020ec8e3bb76856fd53102e9f6ef"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ed/edbf8b64fde793ab750b80c5fca17c36ff1e5b096baa651497f90a00b25dfa33.subtreeMeta",
+     "bytes": 92,
+     "sha256": "9520e3d210d259dd24b9f85cc34ac9e932d912e809a9b94a9519340531dabbca"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ed/edbf8b64fde793ab750b80c5fca17c36ff1e5b096baa651497f90a00b25dfa33.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "f3c0a43dda9c18f6d4232bd01d3f3480c94dba7096ff41b5af7c038ce34d25d9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ee/eec84b966deb7f11c332caba0395620917d9397368824f97aacf35f1509ee3a1.subtree",
+     "bytes": 168,
+     "sha256": "51b61ba8dc45ce0ee7d16fc7b29090ed2c5123f93e601f6139b9e89b25889676"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/ee/eec84b966deb7f11c332caba0395620917d9397368824f97aacf35f1509ee3a1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "c499284ad3d5ffd24063ec27c85f4b5afc496c0b8710be0e37a547022f1e58c3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f6/f6b226c55e266147802bc116a06a62e4e21ed988eed9d70a19c273bae12c01f7.subtree",
+     "bytes": 168,
+     "sha256": "462cec55df34863da41342eaca33bdb9267524c70e7d21991bec722684f09682"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f6/f6b226c55e266147802bc116a06a62e4e21ed988eed9d70a19c273bae12c01f7.subtreeData",
+     "bytes": 85,
+     "sha256": "d70db13c4f1385e89001018f64a4c5bb27016992ca78b4ee1ed4b788d2700ef9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f6/f6b226c55e266147802bc116a06a62e4e21ed988eed9d70a19c273bae12c01f7.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a59c35f7c32abbc7a268547c0baf2dc98300a2485a11cd22d3f76eed9dd56ace"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f6/f6b226c55e266147802bc116a06a62e4e21ed988eed9d70a19c273bae12c01f7.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e6502568fd0eea0f12503a877f17e2c4a65f546c7ac483a522727148ab4fe655"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f998810e6d3b4d55e163bcb218a9c09067fc7f31b9ffe97c78cf1f74e237a55a.subtree",
+     "bytes": 168,
+     "sha256": "76289df01030eff24b4f45574ff1a7bf14de69edd1505afaddebe0e4d08be652"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f998810e6d3b4d55e163bcb218a9c09067fc7f31b9ffe97c78cf1f74e237a55a.subtreeData",
+     "bytes": 85,
+     "sha256": "39a8b3e061a824ab2e6e45385aeaf7ce28b19c65ed4bd264d31c9d195c00ea59"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f998810e6d3b4d55e163bcb218a9c09067fc7f31b9ffe97c78cf1f74e237a55a.subtreeMeta",
+     "bytes": 92,
+     "sha256": "fe1ed7009dde720a341c617886a8d568febcf9732d16a09c8bbda415b46352a7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f998810e6d3b4d55e163bcb218a9c09067fc7f31b9ffe97c78cf1f74e237a55a.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "27f14fbab13930c4afd37c7b278ceec0d7b8bbdc8da97d428b510d1275e62bb0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f9f2ae285a2a6f8d7f64f26e7b7b468e6cb946023c4eee8582edf8d56b61fb50.subtree",
+     "bytes": 168,
+     "sha256": "0bfd88a20d93df4364df14add12e60ab4eddd9350ce18f2d08b0797231944786"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f9f2ae285a2a6f8d7f64f26e7b7b468e6cb946023c4eee8582edf8d56b61fb50.subtreeData",
+     "bytes": 85,
+     "sha256": "3bbd6ead6218518edf66ff4be1a985006e99d052f9ed05059a38294ef0300506"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f9f2ae285a2a6f8d7f64f26e7b7b468e6cb946023c4eee8582edf8d56b61fb50.subtreeMeta",
+     "bytes": 92,
+     "sha256": "e44f4542b85265c8cb596d0cb95e6973301691bdf87f242e5f9408cbe1a1f4a8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/f9/f9f2ae285a2a6f8d7f64f26e7b7b468e6cb946023c4eee8582edf8d56b61fb50.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "3df2496bc9c5854ea3d514e995e54900eb1b7c65e41f86c50b0e9e3bcccf6452"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fb/fba543b0bbb728417e44b41f62c5b393cb971802e0e99e94b272d71545d78a7b.subtree",
+     "bytes": 168,
+     "sha256": "f03605fe1cf1372c9c633e0c2a81fd4fccc9cadc74bb480f176b54ee84a02947"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fb/fba543b0bbb728417e44b41f62c5b393cb971802e0e99e94b272d71545d78a7b.subtreeData",
+     "bytes": 85,
+     "sha256": "75df85447d178879c2fc24fc7e95e65451815358160d3f0f1e0f9928af96daa7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fb/fba543b0bbb728417e44b41f62c5b393cb971802e0e99e94b272d71545d78a7b.subtreeMeta",
+     "bytes": 92,
+     "sha256": "22eb0abb0d7b3ba308e01b80dcfb7fba3174fa8d3f47f025eca45854c32b3d19"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fb/fba543b0bbb728417e44b41f62c5b393cb971802e0e99e94b272d71545d78a7b.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "e910c5171ab9c321bd2c4c958e7e69fe49b18f94d290d1c3827b16615b7f5cc6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fc/fc352e9263656b6528c0e1de7c2c15eb5a03c2eb215a633aa5d1417cf67150af.subtreeData",
+     "bytes": 85,
+     "sha256": "201ad413bb97c527db42856a4e50fc71807e7d14c115bebdbcf5058f9485d9c3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fc/fc352e9263656b6528c0e1de7c2c15eb5a03c2eb215a633aa5d1417cf67150af.subtreeMeta",
+     "bytes": 92,
+     "sha256": "6dd3cfe669f2ad08cd25d8cedfe138831f542b5586c7f1b82beabb2e68838200"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/subtreestore/fc/fc352e9263656b6528c0e1de7c2c15eb5a03c2eb215a633aa5d1417cf67150af.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "29f42032ba7bd0fbd124d3e03ae4f9e66994d337f5533e359a92bdcf872c2e3b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/data/utxostore.db",
+     "bytes": 778240,
+     "sha256": "77f7c0b0e182aa4ae97e3df00d749e1e4cf84b986a42f503943b02b3bc50990a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-1.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-1.jsonl",
+     "bytes": 135416,
+     "sha256": "a81fe7d8e61b1db00676a0681f0f79c642a909a8cf7c1b961d015c497e382669"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-10.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-10.jsonl",
+     "bytes": 104761,
+     "sha256": "e961db47205d329e4c0c67f8198347698d6e7fcf1716be4cff6997a0404058f9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-11.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-11.jsonl",
+     "bytes": 5267,
+     "sha256": "b0ae435430d7c1490595d9a2750d9295c5829a8d3acb82448fd0b4494788d388"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-12.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-12.jsonl",
+     "bytes": 5267,
+     "sha256": "dd3a45e4164394984aa7b43c868754b6b880521f0f38dfab9a79be051e1d7ea3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-13.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-13.jsonl",
+     "bytes": 91365,
+     "sha256": "83ef51c6755af73c58e0bb509a569ef7dc07f6d76949c5205fac59cbec32c8ce"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-14.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-14.jsonl",
+     "bytes": 5799,
+     "sha256": "309cbc0f62de14f9c832b93c63bb35eff2d1c4552725bd7eda7e60728f72a670"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-15.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-15.jsonl",
+     "bytes": 60073,
+     "sha256": "49ebf3a724569274227d0b720291bff6787251d58efb61af3d37266bc41acced"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-16.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-16.jsonl",
+     "bytes": 5547,
+     "sha256": "212c3d0736dc5f2ef755a92686a14c91ea7d9970de222ed67c4c6d3761aae356"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-17.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-17.jsonl",
+     "bytes": 5539,
+     "sha256": "8e25664344778beef5ced5dfcd5bf1e7efb306f48a6e28fd8944bafc63f4331f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-18.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-18.jsonl",
+     "bytes": 5539,
+     "sha256": "e2cdacba288ced4286ab8a302c9477d5e06e416d44048f36ceb7950eb60c96e2"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-19.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-19.jsonl",
+     "bytes": 10489,
+     "sha256": "582fa79863954cc2c53783153328e7d852beeea8c089753cc5da46e3a7aa7248"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-2.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-2.jsonl",
+     "bytes": 18525,
+     "sha256": "bd40cfe8a21e41ad9d12a49713a06bb02f00b76957a23dcea53f7bee0df72083"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-20.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-20.jsonl",
+     "bytes": 8206,
+     "sha256": "4521dc963dd31410d9105443850c97766b491e11dec581951a9585ae60a2457c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-21.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-21.jsonl",
+     "bytes": 5575,
+     "sha256": "157cb9894a289033dc0b9aee0a0d25e365d0de87bf651a8fc780abb94691afa5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-22.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-22.jsonl",
+     "bytes": 5575,
+     "sha256": "3b3d488c9511a9a5fccb973986605691e5da97dc210c5da3e16f6c0ca2a44166"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-23.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-23.jsonl",
+     "bytes": 5539,
+     "sha256": "ede16d32c0958a877807ef66f2e924efc2c88e2eb2b568b84be24aad49fe09d3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-24.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-24.jsonl",
+     "bytes": 5539,
+     "sha256": "39e7d6063e62cf32e57dbbec4766ab18409058966ca2b6babcc2d9354f984947"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-25.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-25.jsonl",
+     "bytes": 7858,
+     "sha256": "da0d8c161fa186ea341edee68a2b99eca2d21b52fe813aea483ee8d4167d7fa5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-26.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-26.jsonl",
+     "bytes": 8006,
+     "sha256": "de6e6df22fb9b11097f7f748866ceb07f844418333ac01fc3d9161e5584ce562"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-27.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-27.jsonl",
+     "bytes": 13232,
+     "sha256": "32fd980531400aa30ef8daef148094a009445937734fc6c98fa5f3d88ffbe0b5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-28.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-28.jsonl",
+     "bytes": 15156,
+     "sha256": "7c3417c1a1995e6db8d305c0fdfafca9420d2df5d2de2eae3eecd2fff5bcfb7b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-29.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-29.jsonl",
+     "bytes": 8194,
+     "sha256": "995e380d5c4a033fc7018824a78842007496ecf3a41a09b3ae08af17a24f7047"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-3.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-3.jsonl",
+     "bytes": 23248,
+     "sha256": "32d2f2cb48a1101fb85093dc2fd8c36d8ff858e92a619a4e9063d61fb9b81cbe"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-30.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-30.jsonl",
+     "bytes": 5543,
+     "sha256": "8283edcce02f905f7235043a09b514d92c6fcda8084217d919adee86f48fd001"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-31.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-31.jsonl",
+     "bytes": 61537,
+     "sha256": "e346bd499934d00c11efc405e740844f01634f2c2c1b79f349c55760ced4b7ce"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-32.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-32.jsonl",
+     "bytes": 118885,
+     "sha256": "571d28d983d74ba3876c866c68f00350e3a3cf803d4a4dca1b3a6a6585722962"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-33.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-33.jsonl",
+     "bytes": 7918,
+     "sha256": "ea8a8a8f85c5440548e158af3f52e27578ff1e9aaee45e8f637158db0e8151ef"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-34.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-34.jsonl",
+     "bytes": 7950,
+     "sha256": "6a66eb1ec877b839b449969ce6a6b4515f1772a3d324087481963833eaa6d129"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-35.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-35.jsonl",
+     "bytes": 8018,
+     "sha256": "7457074b3acb147aa51bbcbfb431ef35ddc50ce518e52c385cf41e8cec541306"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-36.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-36.jsonl",
+     "bytes": 16786,
+     "sha256": "1cbfbb180a402adac76409a202c0f5cb41de43a23f44f75cf8186998ed22f3bf"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-37.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-37.jsonl",
+     "bytes": 16762,
+     "sha256": "56eff37292f58c5961b289856b1ef4f20e193a2d86f10b51c4d490f350c7d5d3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-38.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-38.jsonl",
+     "bytes": 12388,
+     "sha256": "338aee3d6a3bf703cd4fe930db2c08e181d47cfe660f0696d57abb0d0ded7265"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-39.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-39.jsonl",
+     "bytes": 17380,
+     "sha256": "31d5760331b06c5f46f8dbfeff556ec6e9b182a20c778014e8759fbebf256335"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-4.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-4.jsonl",
+     "bytes": 5355,
+     "sha256": "d9ca625ec4514cf2e8364f6079f769df7927e343f6d85826dcf61c64862ac118"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-5.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-5.jsonl",
+     "bytes": 5483,
+     "sha256": "90d6209db8950d712d8148ae4eb202505d6fcbcc5c17af7cf9d5d5c11ce95b32"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-6.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-6.jsonl",
+     "bytes": 5515,
+     "sha256": "465922824aa4ae28477bc11bc35adcfc048adc8c46c7ba8d6a4a063ccb76de7c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-7.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-7.jsonl",
+     "bytes": 5523,
+     "sha256": "7b53cfaec6ee17f4e5d1c2139a186ea266aa52a380f2b7bb33b6ef60c3b0af64"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-8.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-8.jsonl",
+     "bytes": 5631,
+     "sha256": "80401940fa9e9f6905b215e14ae431c06c5675f2724ec436970237c03ffba482"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-9.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/peer-9.jsonl",
+     "bytes": 85427,
+     "sha256": "104d2b4433f286c9eada5799adbdb0b7b409aac1d02ff6e3658c4545d226f296"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/phases.jsonl",
+     "bytes": 234,
+     "sha256": "39c25eb3775d47a4828ba0f882b91c2c969969ac12c6133c58f23be5e01c106f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/progress.jsonl",
+     "bytes": 8293,
+     "sha256": "666cc1d8f0d30bba82dfe54bf7ce478af6fa5410bf82f8d64c37fe8d53f1c7da"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-130610Z/receipt.json",
+     "bytes": 15330012,
+     "sha256": "20cc378af08b79106215c9d2c57c66c38ff45c4de28bba79c7d778d16aaf5db8"
+    }
+   ]
+  },
+  {
+   "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z",
+   "role": "a preliminary run on a tree with uncommitted hunks (not a stamp; no count of it is quoted)",
+   "files": 132,
+   "manifest": [
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/column-teranode.err",
+     "bytes": 3349,
+     "sha256": "d40dd04940bbb1c7a2dadd33e40ca75dd4d961e83509eabc0fd84273f7aa8f28"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/column-teranode.out",
+     "bytes": 787,
+     "sha256": "1eca8dc7e114ebb2e787aa9d407d461afa34956c007645340fc0291b731196ff"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/blockchain.db",
+     "bytes": 999424,
+     "sha256": "d5745cc87caff7e0510ecc5631f38d5921786ba13ae6a722b116d8dc4ab4cada"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/blockchain.db-shm",
+     "bytes": 32768,
+     "sha256": "a2525675846d2c77a4281441018101e57926203fbe268b81fd0232d5ab94d531"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/blockchain.db-wal",
+     "bytes": 4169472,
+     "sha256": "f531d48a364f8f64ffe8d1ddc52853d56eac15ab8e6b8a67a6e4625765435e52"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/control.lock",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/instance.log",
+     "bytes": 13427464,
+     "sha256": "ebeb60adedfa9592cbfca849b3474d2a7ff844100320a66f14284b6885d392eb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/rpc.cookie",
+     "bytes": 15,
+     "sha256": "93bbe4e7605fc1d70661609c0adf6ac73746190b5dfe4aa6b5c5b35cb41f33f1"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/runtime/settings.conf",
+     "bytes": 92135,
+     "sha256": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/runtime/settings_local.conf",
+     "bytes": 5781,
+     "sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/runtime/settings_test.conf",
+     "bytes": 32,
+     "sha256": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/runtime/teranode.run",
+     "bytes": 188769954,
+     "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/01/01b6ca7df76ba3dba2c6476c2c9b30586b40ac6496c2402f596b8d989ec2e442.subtree",
+     "bytes": 168,
+     "sha256": "ea8b34a66ea69e4032b8e36e64c1ae9cb90e0fe1204694cbf95ade518589636e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/01/01b6ca7df76ba3dba2c6476c2c9b30586b40ac6496c2402f596b8d989ec2e442.subtreeMeta",
+     "bytes": 92,
+     "sha256": "bc3ab761b20380d9c463b522e268bc6acfa86e7067174864bc1f7ed32d37b852"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/02/02042af663bd725b9434495559204e79190cd8cd4b32bd183eb14e3218f35564.subtree",
+     "bytes": 168,
+     "sha256": "c71159c4e091eb74dd4677ef6d23e3330a441c5ffdb481e5236f9408babf4feb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/02/02042af663bd725b9434495559204e79190cd8cd4b32bd183eb14e3218f35564.subtreeMeta",
+     "bytes": 92,
+     "sha256": "228139f4aecd0019beede41d08cccf4ead52285884e32cbae0d825fe3161c3e4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/16/16cdff045f91b18050856bc43c9a85d230b75ea344b84e0c833d434d524c62ee.subtree",
+     "bytes": 216,
+     "sha256": "8ad45e22807d8ce0970e9435503424870eccec236a6b9331c21ef4ff6306a798"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/16/16cdff045f91b18050856bc43c9a85d230b75ea344b84e0c833d434d524c62ee.subtreeMeta",
+     "bytes": 136,
+     "sha256": "a0c407b6e921bc05d3db341ddd67b827f54593f47664e80f56731d4efea7c269"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/1f/1fc4bc53ad13dcfa73baefc5128db939844065b84234f7b52986d82bef3dfb2d.subtree",
+     "bytes": 168,
+     "sha256": "ca427a6e59871ac69de90fb09c2c04c7e308140a944e9e6f790a3c6c1b08fe7b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/1f/1fc4bc53ad13dcfa73baefc5128db939844065b84234f7b52986d82bef3dfb2d.subtreeData",
+     "bytes": 85,
+     "sha256": "10a82a0fd97bd4629ca8f9ce4ed81709ea5e2df3a7b8478b0a81154c9f616243"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/1f/1fc4bc53ad13dcfa73baefc5128db939844065b84234f7b52986d82bef3dfb2d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "a93538559970d0a10c2ca2f297cc2442387804cd35141f9ebc8cee418edc571e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/1f/1fc4bc53ad13dcfa73baefc5128db939844065b84234f7b52986d82bef3dfb2d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "be6e126bff232b14b478d473f1b7b1dbb85e7ab95e181c3b99b9370956db0988"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/21/21851c425e6fc22c7ad13e0b8c828c8cff307390eb57253504dda1e1f8f07523.subtree",
+     "bytes": 168,
+     "sha256": "0ed0d6056ece6cbb0ae1a27b9a4dc678c4a21009686717173f4e8020ae717c11"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/21/21851c425e6fc22c7ad13e0b8c828c8cff307390eb57253504dda1e1f8f07523.subtreeMeta",
+     "bytes": 92,
+     "sha256": "98b274f18a75eab03adf8bde3d6768c0b6bf255965a242e69d6f4632b2e37cd9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/22/224937aa887e4d232dcb7721e75f4d764502107d75202862b2e2f429f935d690.subtree",
+     "bytes": 312,
+     "sha256": "0d661938df3f2485473b7ab097f3218168982d71aa4f42802cf0b2abc590bfd7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/22/224937aa887e4d232dcb7721e75f4d764502107d75202862b2e2f429f935d690.subtreeMeta",
+     "bytes": 224,
+     "sha256": "5b9de5a6dd8e16da2692ef904be5e932db1b865b25e0d6ec9e471b165c34e98f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/2b/2be1926152454a7df0b9a18d8ce0a1ad252afa838a248f5f3e3b2faa33872080.subtree",
+     "bytes": 168,
+     "sha256": "1617df14ea4606ce5754c781db493f475205a2ebcbd697df8fbe0903ef1a987c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/2b/2be1926152454a7df0b9a18d8ce0a1ad252afa838a248f5f3e3b2faa33872080.subtreeData",
+     "bytes": 85,
+     "sha256": "e35f9c7a7e367ee6f1f5b12965139261d1f96f8b8b224a2c2c1ad61ccfb45e61"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/2b/2be1926152454a7df0b9a18d8ce0a1ad252afa838a248f5f3e3b2faa33872080.subtreeMeta",
+     "bytes": 92,
+     "sha256": "b669f76f1e97835ee1d50eea573609ec1463f23cecbd104314259ba5ce8eafd0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/2b/2be1926152454a7df0b9a18d8ce0a1ad252afa838a248f5f3e3b2faa33872080.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "b1b034c9d65ccf0b9aa47b0ea9a3ca5374d7c7dc022100f727b67cb53eb0eabd"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/31/312dfd341f755ad5b9f4df923142be393263ee2537e9b6eac0223e7ea7e63a14.subtree",
+     "bytes": 168,
+     "sha256": "ef42f56ea31bb6716ceaa3ce9d9e7d35de4078abae0340de4667933a69e1e396"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/31/312dfd341f755ad5b9f4df923142be393263ee2537e9b6eac0223e7ea7e63a14.subtreeMeta",
+     "bytes": 92,
+     "sha256": "4572ff039f610b782646ed8222cf26751db37d37fcb9243d15d98f38848f32df"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/32/325c543b927c3d6062e566715639ab9f335b5f1a3ffeae03f393d43eef26d77b.subtreeData",
+     "bytes": 162,
+     "sha256": "b1e0efa7eb5e397c734dfa076a3b644726b9690a3b2d96f36d7a1c9f86b2e4ad"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/32/325c543b927c3d6062e566715639ab9f335b5f1a3ffeae03f393d43eef26d77b.subtreeMeta",
+     "bytes": 136,
+     "sha256": "188892fa54a45773bd2161fa603dc4f42be5306d984340f2457066e5f40177a7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/32/325c543b927c3d6062e566715639ab9f335b5f1a3ffeae03f393d43eef26d77b.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "40491867ea13973c6e1cf98817eac54f3fad6158669b8d1b035a2d6c8e7d47e7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/36/3636e14b7ae17a19011c821a9e7d41ae81c9b78bdfe2d50d14832ea510ffdac9.subtree",
+     "bytes": 216,
+     "sha256": "7b266cb8e9e081ef914b47800c7c82b719f14ab8a93bffa98fd6cb5cfbb4b4dd"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/36/3636e14b7ae17a19011c821a9e7d41ae81c9b78bdfe2d50d14832ea510ffdac9.subtreeData",
+     "bytes": 162,
+     "sha256": "402e8c0027755ee291b2d42ed5040313b28a067eca5509f94a3e6f69239c7e5a"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/36/3636e14b7ae17a19011c821a9e7d41ae81c9b78bdfe2d50d14832ea510ffdac9.subtreeMeta",
+     "bytes": 136,
+     "sha256": "f201b92cf0d8f7394324d14f18f0d2780e18658deb6a346b3540507bc2b9f67d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/36/3636e14b7ae17a19011c821a9e7d41ae81c9b78bdfe2d50d14832ea510ffdac9.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "3c6385ff569dd267e75500980d7e6d56264e54ab4d7c6d4e049c395ddec0fa2f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/38/384635ff3c0c1f90dc84e340f21d2a697c5fb9ad9e9e9c75feeb97c343c2127c.subtree",
+     "bytes": 216,
+     "sha256": "54f7c8f91ba5cebe00094fd19edbffff569d47ef33a8589728242eba6e004756"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/38/384635ff3c0c1f90dc84e340f21d2a697c5fb9ad9e9e9c75feeb97c343c2127c.subtreeMeta",
+     "bytes": 136,
+     "sha256": "efdc596f6ea23d3433b35a0fdccfffd22b7c444fe1d7f4246c7637957af2f76f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/42/423c191b3f6d3af259c4cd27c49cf800cec6b4270448e72ffb52f138a5fece0e.subtree",
+     "bytes": 168,
+     "sha256": "c3ac550700c694ff38722cb26853380eb21e6f1d4ae7feebb364a6f38a1f4869"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/42/423c191b3f6d3af259c4cd27c49cf800cec6b4270448e72ffb52f138a5fece0e.subtreeData",
+     "bytes": 85,
+     "sha256": "b893643c7c3658d02d1f8b891a17d8b4ab3190d8daeefc5ed2959926e9079178"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/42/423c191b3f6d3af259c4cd27c49cf800cec6b4270448e72ffb52f138a5fece0e.subtreeMeta",
+     "bytes": 92,
+     "sha256": "839d86fba9d8f2cf7bd1fc7be3a7ba9a760dc9313ce4d9fc9cd19e31d0a62fdf"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/42/423c191b3f6d3af259c4cd27c49cf800cec6b4270448e72ffb52f138a5fece0e.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "175c78b49312c01f91a2ebdceb9f8fe3c4927ecb505d66dd8ba138f61b6f7509"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/51/5186752838892f85a1b8071d086f4fed3f6c4e6057992c6ae442217f4e735354.subtree",
+     "bytes": 168,
+     "sha256": "dfdf3db4d02d06e6d4411be3553b0ecca4d66a6188136ce46158ffa715c7d381"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/51/5186752838892f85a1b8071d086f4fed3f6c4e6057992c6ae442217f4e735354.subtreeData",
+     "bytes": 85,
+     "sha256": "ac7a4552360f321677c8ed915d5dc578b717bd9e76bc501cc97d5002be817a52"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/51/5186752838892f85a1b8071d086f4fed3f6c4e6057992c6ae442217f4e735354.subtreeMeta",
+     "bytes": 92,
+     "sha256": "51bd6f939b00857c47650633f5448ba1fcd38f86db9f53136f4388f42a1d1ab8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/51/5186752838892f85a1b8071d086f4fed3f6c4e6057992c6ae442217f4e735354.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "96fefa3af40fe8efb6cdc127d8c1ef24c9831a02847035bef8ab97351066a714"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/52/52f1d1835b4dbe4216169d005fef913cf3ed5015222e57a661dcca7bbea87856.subtree",
+     "bytes": 168,
+     "sha256": "bfba45f0d534095a7e46bfffcb56148ffb90ce7b703d708f840ec59ac2ab2f26"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/52/52f1d1835b4dbe4216169d005fef913cf3ed5015222e57a661dcca7bbea87856.subtreeMeta",
+     "bytes": 92,
+     "sha256": "891df339d44f2c1169f566a5984c4dde29892ce6e105158e0e833a423f32b725"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/57/5724cb01ec91ce050b4333c8f91ce5c18d3166c77f1305c34871d8a336b153b5.subtreeData",
+     "bytes": 75,
+     "sha256": "1e4f9b08f023d4b761e06917676304ac7e2b5a4b4e137b2814b5ed711decf96f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/57/5724cb01ec91ce050b4333c8f91ce5c18d3166c77f1305c34871d8a336b153b5.subtreeMeta",
+     "bytes": 92,
+     "sha256": "ec63184c91d4d55c345a5a5338abea31b34a77834dc1421061004f888ce27c60"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/57/5724cb01ec91ce050b4333c8f91ce5c18d3166c77f1305c34871d8a336b153b5.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "9228f431981bfa0ed7313d420ea62c449dbb8311e7c2065ca45a2e4bd819f578"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/5f/5f3f994373af42bf188ae993ff9712c1eaaad472bd0012d70ebbd346801b3fb5.subtree",
+     "bytes": 216,
+     "sha256": "3ea57e42fb2093144db67cf084dc6af1dedd743ffe55f5b6a2e25f3eb3d7aec8"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/5f/5f3f994373af42bf188ae993ff9712c1eaaad472bd0012d70ebbd346801b3fb5.subtreeMeta",
+     "bytes": 136,
+     "sha256": "5b021721b7e3586857f5fa617031ad4f45c9359491133afc9c30c48a99e3ec40"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/6b/6b5f89aed89c6738ae6d3649eeca8b1e76996ea86d9ba1460c0d0a725e46d0f1.subtree",
+     "bytes": 168,
+     "sha256": "ed51b79370aa0fd409b28a27f9712062380ac5ad2622cced587a90caec8dcb51"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/6b/6b5f89aed89c6738ae6d3649eeca8b1e76996ea86d9ba1460c0d0a725e46d0f1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "b4d91717ed25021ffb55617e7d72b06f93d5886b9e45825ef281947e1c450e68"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/81/81320d7475cb7da1fc9663462e3c227d3d38eeefca4799b17b9f0ed1cc6b6490.subtree",
+     "bytes": 312,
+     "sha256": "107a9b8dafc6686a9ee0117e90fb5ccf84e4b4dc68a85c309acae0da310c7b04"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/81/81320d7475cb7da1fc9663462e3c227d3d38eeefca4799b17b9f0ed1cc6b6490.subtreeMeta",
+     "bytes": 224,
+     "sha256": "1d3831aa6b56a2700963eb88d5efb1335ab4743a44f1f1473f00cf2cff59ca87"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/83/836584fe0c0775f8de64de28d58bcb10497b2487232ca197be4f0d60cf2a85b9.subtree",
+     "bytes": 504,
+     "sha256": "1555170f1f232981a61b1868877766cb62284fd8723c2ee308b65ff8b2e960ec"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/83/836584fe0c0775f8de64de28d58bcb10497b2487232ca197be4f0d60cf2a85b9.subtreeMeta",
+     "bytes": 400,
+     "sha256": "8c786bdf6455f525f8d5665e5c64416ae85316391db1a0b28da5bec10d63360c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/83/83e81f306d5ab4a932b1f78bda09aef74852e6f93d4ce10cf17915664d4f69c4.subtree",
+     "bytes": 168,
+     "sha256": "6241b6b952ce1983aef5673baef90aa465cc9d190274521c0f7d34900d8c70be"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/83/83e81f306d5ab4a932b1f78bda09aef74852e6f93d4ce10cf17915664d4f69c4.subtreeMeta",
+     "bytes": 92,
+     "sha256": "546872bc8380f13f969d8a16c5b6cc724c5964c49dbb70f8169ae0dd68026b49"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/8c/8cb0577e931175c805f454474cd45459c7d41e6e2ab39075d1a69da92be1c8d4.subtree",
+     "bytes": 216,
+     "sha256": "d8c0b8cdf6160275f5468b479d3bb983b5020311fd128678bde42b170ed6c596"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/8c/8cb0577e931175c805f454474cd45459c7d41e6e2ab39075d1a69da92be1c8d4.subtreeMeta",
+     "bytes": 136,
+     "sha256": "b956d262248e825180350007d3662bc421d0d31e43692507765e0de80b799d40"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/97/972e38817febfcfe775d23ad9cb31bb2c6ab1187c03e05a6f2d5a0746043d069.subtree",
+     "bytes": 360,
+     "sha256": "cb70b0e93dfe9c2865546811218c08554a4e2092bfd1998fa68df67f20cc1e1e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/97/972e38817febfcfe775d23ad9cb31bb2c6ab1187c03e05a6f2d5a0746043d069.subtreeMeta",
+     "bytes": 268,
+     "sha256": "c1d475a25d0dfc062d78144ae068862a49f5b18f574ed77614216e50ac38d77b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a6/a60342430353fa40e06d74cfdb5b8a4daf703c20049a613d56341d4c47975b8d.subtree",
+     "bytes": 168,
+     "sha256": "c0dcaae433740f8a84b85952cc66c181d33b9e579c2e2486546ccb77647871dd"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a6/a60342430353fa40e06d74cfdb5b8a4daf703c20049a613d56341d4c47975b8d.subtreeData",
+     "bytes": 85,
+     "sha256": "b1c761b518c1936db26d147d93e28930389e5fd8d0f19824d749070b6b32c5b6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a6/a60342430353fa40e06d74cfdb5b8a4daf703c20049a613d56341d4c47975b8d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "add131a718520dd655dbc59eab4fbfd6df6a059795566f559cf74c1bae752072"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a6/a60342430353fa40e06d74cfdb5b8a4daf703c20049a613d56341d4c47975b8d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "03f7ac14ee47fe4b70fd929445b9c53c1ef5214c32420018ac1322e785b9c1c0"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a7/a78df62e1beb7652b97ec828a3fa5bb66a5ff3974256de59710727496477f180.subtree",
+     "bytes": 600,
+     "sha256": "0ff48196f3d26c9ca2e57bd7d2e9832ea9112425804de65f76c4cfc121b2c0c9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/a7/a78df62e1beb7652b97ec828a3fa5bb66a5ff3974256de59710727496477f180.subtreeMeta",
+     "bytes": 488,
+     "sha256": "bfa3d0eee70bf9621a1cb14da3cc4968b34191cc239705409e0e925bff5e213c"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/b1/b1abbca7fb83b8bb48aad980740e32af6bd7127aab4b74017e72f00e59e24aaa.subtree",
+     "bytes": 264,
+     "sha256": "da6d8d82459c1b73d3b0ec363e712f23aa76c49399ab30b84eb0dfa7489098fb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/b1/b1abbca7fb83b8bb48aad980740e32af6bd7127aab4b74017e72f00e59e24aaa.subtreeMeta",
+     "bytes": 180,
+     "sha256": "604444d3fcf4ac6caacd19a3cb3343b6bf264d67f124833d38423789e3ba6abc"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/c0/c01a57a78477c4024db6eb469b60502214d2b8bd17773e48e657d37eaed47c8b.subtree",
+     "bytes": 168,
+     "sha256": "3c9736b7ea3da9ba88d3c4655e9ef888a71640d1bd862791b20685c5857aaeb6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/c0/c01a57a78477c4024db6eb469b60502214d2b8bd17773e48e657d37eaed47c8b.subtreeMeta",
+     "bytes": 92,
+     "sha256": "e2d848638c70b699025a6f297fb753d7d4f261b48f396bea43d621739db7aef7"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/d5/d504909384a012294ffec0fce972e3cd4d5f9287dfad371efa12a80f5315b499.subtree",
+     "bytes": 264,
+     "sha256": "c9bcf11503bb14a75096704acd3ec3add3c383d23473ec9b74e2d449e05ba692"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/d5/d504909384a012294ffec0fce972e3cd4d5f9287dfad371efa12a80f5315b499.subtreeMeta",
+     "bytes": 180,
+     "sha256": "90e1ec0dd1ae3a2ca20c46b05294a712fd834303911349a8d46260ca626dbe04"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e1/e170c2bdf26f35cf2ae701697f0642827fc8c1bde9dbaec2bb9528026e854c0d.subtree",
+     "bytes": 168,
+     "sha256": "cacbf2402deecd354945cad8b317a7ac7281237fc249996e252acf7927ffb732"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e1/e170c2bdf26f35cf2ae701697f0642827fc8c1bde9dbaec2bb9528026e854c0d.subtreeData",
+     "bytes": 85,
+     "sha256": "b865a3ccb36e9b6d5c5dd84f1992e28917e3157a618b7b07c82f12e72a3086f3"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e1/e170c2bdf26f35cf2ae701697f0642827fc8c1bde9dbaec2bb9528026e854c0d.subtreeMeta",
+     "bytes": 92,
+     "sha256": "04519aec5ac252242a7f35bbc723fbcaa62f001d209b4f0ab97b3f9e63d79285"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e1/e170c2bdf26f35cf2ae701697f0642827fc8c1bde9dbaec2bb9528026e854c0d.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "5a196a9106d468ff525a786926decab8d053fe350d81df1108f7e30e22af528e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e2/e257f7e5c6094be0b178630f23c0a47d2eb6f1cf1cf2119f85223e0bea75ceae.subtree",
+     "bytes": 168,
+     "sha256": "5b932417f14b3381657ec607f89e6c19394d1ce4bd6bee918aa47f520fd41338"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e2/e257f7e5c6094be0b178630f23c0a47d2eb6f1cf1cf2119f85223e0bea75ceae.subtreeMeta",
+     "bytes": 92,
+     "sha256": "9f833ad422f419e5c641a7ff531cbccddedd5012d1eee1e2e5fe1f10cf0cb8c4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e5/e5892163cb5dc9a21142440aeb936ca8d0ef65d83c9317ff49a0f0dec502d171.subtree",
+     "bytes": 312,
+     "sha256": "3ba9e76a258646a5a9d148095c7bf6be372a2c7a144be1deae46d0bb50706208"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/e5/e5892163cb5dc9a21142440aeb936ca8d0ef65d83c9317ff49a0f0dec502d171.subtreeMeta",
+     "bytes": 224,
+     "sha256": "aa7b9757cf9b72d5282bcc2de6cb1440cd02c1498315c6ead6fee04303bfad29"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/eb/ebe5930815f85bb5ee474c79f263e5e6054d5b1108ad3aed21c70b003d2eebf7.subtreeData",
+     "bytes": 162,
+     "sha256": "b66f394afa161c52dc0d93d988a7e72b5a7812f2202a71baf625ef9a52ec45f5"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/eb/ebe5930815f85bb5ee474c79f263e5e6054d5b1108ad3aed21c70b003d2eebf7.subtreeMeta",
+     "bytes": 136,
+     "sha256": "e0b56d056e9a2f6e0c2b4cf6e9a2de958e2674ea771c569a244d2e0e05f779e4"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/eb/ebe5930815f85bb5ee474c79f263e5e6054d5b1108ad3aed21c70b003d2eebf7.subtreeToCheck",
+     "bytes": 216,
+     "sha256": "647eb809f179fdd0f9d338ab2f86c3b61d969c64679a5c4dc31c8352656b609f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/f2/f25b62c14e674eb89ea2808b659f01f4dc8d919702ba7666a7c203b2dc5ac7a7.subtree",
+     "bytes": 216,
+     "sha256": "ba0b8162cb6e0daa2dad68ff36454f7a02ae45a57f04f38f9fa3928e11c7f581"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/f2/f25b62c14e674eb89ea2808b659f01f4dc8d919702ba7666a7c203b2dc5ac7a7.subtreeMeta",
+     "bytes": 136,
+     "sha256": "610b8ba7ee39032a29fb9e0bfa54a81ad4da330302563b05cfb7cc3ab3225690"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/f6/f60fd99fe8d1857ec52845da7c0098b3d846cc7cdea18594b85311e059ab03b0.subtree",
+     "bytes": 168,
+     "sha256": "d28805a3e415b0df38dec2914477d76035dfe9b2a0bba84a78efdd250b6a1df9"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/f6/f60fd99fe8d1857ec52845da7c0098b3d846cc7cdea18594b85311e059ab03b0.subtreeMeta",
+     "bytes": 92,
+     "sha256": "76d15ba79c4c3a6da794e110b75d743703f8b086e2839ede82246288ac6e161b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/ff/ff037143e0f397127fe49062be1f667c9f0dd576fc5d98a1b8a3d2b6c15ef2a1.subtreeData",
+     "bytes": 107,
+     "sha256": "8214f729977a12fbb7cd6b4962c4230846b465c08146084aaa281946cd8fea41"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/ff/ff037143e0f397127fe49062be1f667c9f0dd576fc5d98a1b8a3d2b6c15ef2a1.subtreeMeta",
+     "bytes": 92,
+     "sha256": "6e5bf2d8588810c225dbea3b8aa7f2ef052b66ee222fc061a2ab272b4a98e2d6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/subtreestore/ff/ff037143e0f397127fe49062be1f667c9f0dd576fc5d98a1b8a3d2b6c15ef2a1.subtreeToCheck",
+     "bytes": 168,
+     "sha256": "f00bc77c03f700ff2057e99a933071a20ed42f970f52bb841780d3535847138e"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/data/utxostore.db",
+     "bytes": 618496,
+     "sha256": "a5977eddea855072773d18bbe5c54d19aa24db64628de63cb693456db137e37f"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-1.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-1.jsonl",
+     "bytes": 133124,
+     "sha256": "07f5256b3e6165aa1aabe8676d5770b7ec3ed5afe3b7b4f2b8183718ba382a13"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-10.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-10.jsonl",
+     "bytes": 104757,
+     "sha256": "a383401d1c51b0a91fc32a8903143dd19d37b3577f86e144cc6e9ca59b715b0b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-11.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-11.jsonl",
+     "bytes": 5267,
+     "sha256": "8fa26b9420ac6b428aa2a14b3a0f4df5e019aa0dbf5f60ab34509ab7ab300499"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-12.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-12.jsonl",
+     "bytes": 5267,
+     "sha256": "270c75b67cac10316aeddfcf9c8b60a0dfe60d8a346ded9fa71962db35b73b78"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-13.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-13.jsonl",
+     "bytes": 91825,
+     "sha256": "ab0ad1dbaa65a11f3fb4e7c7cc5debb68d1efe7d5f75642a167aea3910b6ed31"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-14.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-14.jsonl",
+     "bytes": 5799,
+     "sha256": "1bd53bb83202ff9adc975a28b9989cebc76057f9e5d0190250237324c27080c6"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-15.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-15.jsonl",
+     "bytes": 53489,
+     "sha256": "14dc7d3011054c786ce797b199098e3e917029b35868e260e61886bacf9bc168"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-2.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-2.jsonl",
+     "bytes": 18525,
+     "sha256": "bf3239caa231915bd30b5a3ed8d4ade65a3184cd40e2a5c2fd50b5eb763d9d6d"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-3.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-3.jsonl",
+     "bytes": 23248,
+     "sha256": "670b9aa796a5f9dd1e3b6776b5e054d00a714ea4e74769bbc5b5fd826102b677"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-4.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-4.jsonl",
+     "bytes": 5355,
+     "sha256": "571a2b7cf8c63869d86aa2463c5bb10bd9ce3386a5b9c09e66bd5afbac412f63"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-5.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-5.jsonl",
+     "bytes": 5483,
+     "sha256": "cce9417a0b30f6f414368f211d050d5012997a3fe540d7890f410ad509427791"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-6.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-6.jsonl",
+     "bytes": 5515,
+     "sha256": "ac5d212678181237e5213749229bb8a9dadd31ca0e800f0d728d11fa03612970"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-7.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-7.jsonl",
+     "bytes": 5523,
+     "sha256": "779f873e09133b490b6569e3f57783833e8664143f9108273dba1ff17b6c47eb"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-8.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-8.jsonl",
+     "bytes": 5631,
+     "sha256": "01a8fb73c1786c3a809fc8e68fdf14d93ab2201c127ce33b47a6cd09571d8f3b"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-9.err",
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/peer-9.jsonl",
+     "bytes": 85427,
+     "sha256": "602e101adcd5f45aed8bfe6d0822308f6caf4740903fca3d78f240251a84f902"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/phases.jsonl",
+     "bytes": 234,
+     "sha256": "c5c80c57853f0647d755cfa4d5c9e04a7401fe783534e6eb851b1827e9620dfa"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/progress.jsonl",
+     "bytes": 4352,
+     "sha256": "21b6c8bfadae11fee0c8007972661ed2905c16fcc3aab81d0c8b857500c11c04"
+    },
+    {
+     "path": "~/bsv/targets/spec-oracle-quarantine/teranode-20261015-125217Z/receipt.json",
+     "bytes": 7725202,
+     "sha256": "1fcd288b7b1cd2da79018719d3ff356037b15d5db9ddb3cbc210793d66ff3b15"
+    }
+   ]
+  }
+ ]
+}

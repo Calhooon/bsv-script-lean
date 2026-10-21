@@ -1,0 +1,56 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[withheld at export: a sibling tree's line]
+continue 39 of 2026-09-29 06:5x UTC) (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-29)
+
+THE CHANGE, aa7c8dd (origin/s3-a2form; landed as 10efde4): make check-local starts as
+  python3 -c 'import os, sys; os.setsid(); os.execvp(sys.argv[1], sys.argv[1:])' env CARGO_TARGET_DIR=... CARGO_BUILD_JOBS=4 make check-local & child=$!
+then `wait $child`. Both signal traps kill the child's group, wait on it and exit (TERM 143, INT 130), so the EXIT trap releases the
+box leg lock and the Lean slot only after the child is dead; the plain traps return once the child ends. The route's printed stop
+line says so. Before: a foreground make check-local held both locks until it ended (zsh runs a trapped signal when the foreground
+child returns).
+
+THE ROWS, executed before the change was written (the rule's last sentence):
+  The script (zsh -f): set -u -o pipefail; the three plain traps; an EXIT trap that reports whether the child lives; the stand-in
+  `python3 -c 'import os, sys; os.setsid(); os.execvp(sys.argv[1], sys.argv[1:])' env STANDIN=1 sleep <n> & child=$!`; then the
+  TERM and INT traps that kill the child's group, wait and exit 143 / 130; `wait $child`. The harness starts it, sends the signal
+  1.5 s later, and times the script's exit.
+  ON THE STUDIO (zsh 5.9, arm64-apple-darwin25.0), 2026-09-29 06:56 UTC:
+    TERM rc 143 after 0.03 s; the stand-in dead      (the EXIT trap: "child dead")
+    INT  rc 130 after 0.03 s; the stand-in dead      (the EXIT trap: "child dead")
+    none rc 0 after 0.51 s; the stand-in dead        (the child ended rc 0, then the EXIT trap)
+  ON THE BOX (zsh 5.9, arm64-apple-darwin26.0), 06:56 UTC:
+    TERM rc 143 after 0.02 s; the stand-in pid 43426 dead (by its pid; a first TERM row read "ALIVE" by `pgrep "sleep 60$"`, which
+         matched three other lanes' `sleep 60` on the box, pids 41516, 41616 and 42909; the EXIT trap's own check read it dead)
+    INT  rc 130 after 0.02 s; the stand-in dead
+    none rc 0 after 0.52 s; the stand-in dead
+
+THE TRIPWIRE AT aa7c8dd, on the box (make check-box): docs/records/20260929-071331-make-check-box.txt, twenty-one legs GREEN in 174 s, every leg's own line
+present, the axiom check 569, a 1-minute load of 4.67 there at its start; the new form's normal path (the child's rc 0, the traps
+restored, the locks released after it). 877 s in the leg lock's FIFO queue, the Lean slot at once under it. Its route's own lines:
+  check: BOX (the caller's HEAD aa7c8dd, for harness-land, on the box over ssh; D156)
+[withheld at export: a sibling tree's line]
+  [box 06:58:39Z load1 13.74] the toolchains: go1.27.0, node v22.18.0
+  [box 06:58:39Z load1 13.74] the box shell's pid is 58079: to stop this run, kill -TERM it on the box (during the legs its trap stops them within seconds; in a lock's wait, once the current sleep ends; then the EXIT trap 
+  lean_lock: every slot held (slot1: T9b pid 50724 pgid 50714 at 2026-09-29T06:57:54Z on box;slot2: T9c pid 57758 pgid 57749 at 2026-09-29T06:58:36Z on box;); check-box:harness-land waits (06:58:39Z)
+  lean_lock: check-box:harness-land took slot2 (06:58:54Z)
+  lean_lock: released slot2 (06:58:54Z)
+  [box 07:13:31Z load1 4.67] the box leg lock's queue: this take's ticket 001790665134217286000.0058079.16936 withdrawn at its take (it yielded to an older waiter at 7 read(s))
+[withheld at export: a sibling tree's line]
+  lean_lock: check-box:harness-land took slot1 (07:13:31Z)
+  [box 07:13:31Z load1 4.67] the box leg lock and a Lean slot taken; the worktree at aa7c8dd, clean
+  [box 07:13:31Z load1 4.67] make check-local
+  [box 07:16:25Z load1 5.03] the box leg lock RELEASED by pid 58079 (07:16:25Z)
+  [box 07:16:26Z load1 5.03] make check-local rc 0
+  lean_lock: released slot1 (07:16:26Z)
+
+THE LANDING: aa7c8dd cherry-picked with its committer date onto main at 9778d82 as 10efde4. Main moved 57 files under it (S2's #32
+lens-1 fixes in lean/, tools/specgen.py and 38 spec/ pages; S4b's lens corrections and the records). The landed tree is S2's own
+GREEN box leg's tree outside docs/ (docs/records/20260929-070004-make-check-box.txt, commit 17db102, twenty-one legs, 176 s) plus
+tools/check_box.sh, which no leg reads:
+  tools/check_box.sh at the tip = aa7c8dd's: exit 0
+  the tip = 17db102 outside docs/ and tools/check_box.sh: exit 0
+the legs that read docs/, live at the tip under the gate:
+  pins (07:18:06Z, load 3.53): exit 0: check-pins: GREEN (75 sites agree with docs/PROVENANCE.md §1a; 0 skipped by name)
+  cite (07:18:10Z, load 3.53): exit 0: cite_check: GREEN (every anchored citation holds at the pin)
+  spec (07:18:11Z, load 3.81): exit 0: specgen --check: OK (117 files up to date; 0 rules flagged)
+  at 10efde4

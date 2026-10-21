@@ -1,0 +1,48 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+# The first launch of the tripwire on the rewritten gen commit 58ba1c3 died in its bake (S3, set 3, 2026-09-24 05:16–05:24 UTC; the launcher's log, `modal run tools/modal_check.py::check --committed --label 58ba1c3` with SPEC_CHECK_LAYER_DIR at the export of 58ba1c3; app ap-OI34WE55Tm5py0q59RaSXS; metered $0.169 [M] by `modal billing report --for today --resolution h`, read 10:53 UTC)
+# What it shows: the sources layer built (COPY), the bake step ran `lake exe cache get` (rc 0, 135 s) and `npm ci` (rc 0), then its `make check-local` step produced no verdict line and no `bake:` line; the builder printed `Saving image… Image saved, took 2.07s … Finished image build` and the client raised ImageBuildError; `modal image logs` and `modal app logs` carry nothing more. The same export relaunched at 05:29 UTC ran its bake GREEN (1,312 s) and its check GREEN (docs/records/20260924-055104-make-check-modal.txt, app ap-WWzyBfdRPdf1D9sRV4BF7X). The cause is on no record; the death is not this tree's (the relaunch says so).
+# The lines below are the launcher's output with the cache fetch's progress lines removed.
+Thu Sep 24 05:16:12 UTC 2026
+ 1:16  up 1 day,  8:17, 13 users, load averages: 2.88 3.25 3.30
+commit 58ba1c3
+export: 335 files
+✓ Initialized. View run at 
+[withheld at export: a sibling tree's line]
+Building image im-YI10SyzH6hdax3kDMBBnS3
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 1.01s
+
+Built image im-YI10SyzH6hdax3kDMBBnS3 in 2.96s
+
+
+Building image im-fwmcgixu59wFu9oUrOxqb3
+
+=> Step 0: running function 'bake'
+lake exe cache get (rc 0, 135 s):
+
+Decompressed 8690 file(s)
+Already decompressed 8690 file(s)
+
+npm ci at the ts pin (rc 0):
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+npm notice To update run: npm install -g npm@12.1.0
+npm notice
+
+Building image im-fwmcgixu59wFu9oUrOxqb3
+
+=> Step 0: running function 'bake'
+Saving image...
+Image saved, took 2.07s
+Finished image build for im-fwmcgixu59wFu9oUrOxqb3
+Stopping app - uncaught exception raised locally: ImageBuildError('Image build for im-fwmcgixu59wFu9oUrOxqb3 failed.\nView the build logs:\n  modal image logs im-fwmcgixu59wFu9oUrOxqb3').
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ Image build for im-fwmcgixu59wFu9oUrOxqb3 failed.                            │
+│ View the build logs:                                                         │
+│   modal image logs im-fwmcgixu59wFu9oUrOxqb3                                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+modal exit 1
+Thu Sep 24 05:24:56 UTC 2026

@@ -1,0 +1,38 @@
+{
+  "entries": 249,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "judge": {
+    "asserted": {
+      "agree": 151,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 19
+    },
+    "bsvrs_word_in_scope": 0,
+    "findings": [],
+    "observed": {
+      "agree": 170,
+      "code_differs": 0,
+      "disagree": 0,
+      "none": 0
+    }
+  },
+  "judged_entries": 170,
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 170,
+  "source": "corpus/cpp/bn_op_tests.jsonl",
+  "undecided": {
+    "the checker `equality_checker` decides a signature, lock-time or sequence opcode the script executes, and no spend reproduces it": 17,
+    "the spend form is above 1,000,000 bytes: the corpus format writes an element as hex, and no driver reads corpus/cpp's runs": 62
+  },
+  "undecided_ids": {
+    "the checker `equality_checker` decides a signature, lock-time or sequence opcode the script executes, and no spend reproduces it": [
+      "cpp-bn_op-00233..00249"
+    ],
+    "the spend form is above 1,000,000 bytes: the corpus format writes an element as hex, and no driver reads corpus/cpp's runs": [
+      "cpp-bn_op-00097..00156",
+      "cpp-bn_op-00231..00232"
+    ]
+  }
+}

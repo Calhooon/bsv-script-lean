@@ -1,0 +1,2856 @@
+{
+  "date": "2026-10-14",
+  "_header": [
+    "corpus/teranode/absences.json: the absence ledger of #96 (S8), written [M] 2026-10-14.",
+    "One object per absence: a surface one implementation has at its pin and the other lacks. The present side is cited at file and line with an anchor (a text that must occur inside the cited lines); the absent side is a directory listed at the tag and the searches that found nothing (or found only the hits named), each search quoted as a command.",
+    "The pins are docs/PROVENANCE.md section 1a: Teranode v0.16.0 = 4edb60a40c6628ff0ef60231c2628efd7103fde5, bitcoin-sv v1.2.3 = 6504a3aff65ba97c0f6c80962b033e35ecbfed4b. Every read is `git show` or `git grep` at the commit, never a working tree.",
+    "ROW KEYS (coordination with #87's corpus/teranode/map.json): `id` is this table's own key, `tl.<surface>` for a surface Teranode lacks and `rl.<surface>` for one the reference lacks. `map_row` names the #87 row the absence belongs to, written as #87's issue names it (transaction validation, script word selection, UTXO spend, conflicts, unmined lifetime, block structure, merkle root, block validation, chain selection, reorg, difficulty, invalidation, freeze and confiscation, relay, event surface, observation surface, pruning and persistence). `map_id` is map.json's `id`; every map.json row whose mechanism is `absent` has a row here with that `map_id` (checked by `--verify` when map.json is present in the tree; map.json lands with #87); a map.json row may point here by `id`.",
+    "RULINGS are the maintainers'. `ruling.proposed` is the proposal with `ruling.reason` (the reading of the row's dependents); `ruling.owner` carries the maintainers' ruled word, its date and `by` (the rule it was ruled by, `ruling_rule` below), and `ruling.owner_reason` where the ruled word differs from the proposal; a row added later carries `ruling.owner` null until the rule is applied to it. The four words of #96: dropped (dropped on purpose), pending (pending in Teranode), gap (a gap a client will feel), new (new behavior the reference never had). A row whose word is `gap` names in `breaks` the view of #67 (spec/status-views.md) or the event of #84 that it breaks.",
+    "The page spec/teranode-absences.md is generated from this file by tools/teranode_absences.py (and by `make spec` through tools/specgen.py); `tools/teranode_absences.py --verify` re-reads every citation, listing and search at the pins on a machine that holds the clones.",
+    "[D] 2026-10-16 (#140 as the maintainers re-cut it on 2026-10-16): every row gains `section` (the sections are `sections` below), every section-3 row gains `design` (`reason`, the design decision that removes the surface in Teranode's own terms; `cites`, Teranode's docs `[LIT]` and source `[SRC]` at the pin, each `repo`, `path`, `lines`, `anchor` and `label`, re-read by `--verify`; `client`, what a client built on section 2 does instead), and the rows a run has answered gain `measured` (`reference` and `teranode`, each `label`, `answer`, `record`, `receipts`, or `owed` naming the issue that owes it). `contract` holds the page's evidence for sections 0 to 2. spec/node-client-contract.md is generated from this file by tools/node_contract.py (and by `make spec`). No existing field of a row, no ruling and no `ruling_rule` changed."
+  ],
+  "ruling_rule": {
+    "rule": [
+      "A row is GAP when a transaction-level client depends on the surface: a wallet behavior, a broadcaster or payment service, or a status word of #67 or an event of #84 that such a client consumes.",
+      "A row is DROPPED when only an operator, a peer or a relay encoding depends on it, OR when the information reaches such a client by another carrier of the same implementation, named on the row as its counterpart: the carrier changed, not the promise.",
+      "A reference-lacks row is NEW.",
+      "The rule is applied to every row, now and at every later release; a row's proposal is a reading of its dependents and its counterpart, and the rule decides."
+    ],
+    "by": "the maintainers",
+    "when": "2026-10-15",
+    "on": "the maintainers' ruling of 2026-10-15 between 22:10 and 22:19 UTC; the record docs/records/20261015-223120-s8-96-rulings-s3.md, section 1"
+  },
+  "pins": {
+    "teranode": {
+      "tag": "v0.16.0",
+      "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+      "clone_key": "teranode.clone"
+    },
+    "bitcoin-sv": {
+      "tag": "v1.2.3",
+      "commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
+      "clone_key": "reference.clone"
+    }
+  },
+  "rulings": {
+    "dropped": "dropped on purpose",
+    "pending": "pending in Teranode",
+    "gap": "a gap a client will feel",
+    "new": "new behavior the reference never had"
+  },
+  "listings": {
+    "teranode-services": {
+      "repo": "teranode",
+      "tree": "services",
+      "entries": [
+        "alert",
+        "asset",
+        "blockassembly",
+        "blockchain",
+        "blockpersister",
+        "blockvalidation",
+        "legacy",
+        "p2p",
+        "propagation",
+        "pruner",
+        "rpc",
+        "subtreevalidation",
+        "utxopersister",
+        "validator"
+      ]
+    },
+    "reference-src-dirs": {
+      "repo": "bitcoin-sv",
+      "tree": "src",
+      "dirs_only": true,
+      "entries": [
+        "bench",
+        "compat",
+        "config",
+        "consensus",
+        "crypto",
+        "double_spend",
+        "invalid_txn_sinks",
+        "leveldb",
+        "miner_id",
+        "mining",
+        "net",
+        "obj",
+        "obj-test",
+        "policy",
+        "primitives",
+        "rpc",
+        "script",
+        "secp256k1",
+        "support",
+        "test",
+        "univalue",
+        "wallet",
+        "zmq"
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "of": "#96's Source line, \"ZMQ in 1 Go file\"",
+      "finding": "At the tag no Go file uses ZeroMQ. A case-insensitive substring search for `zmq` over the Go files returns one file, services/legacy/bsvec/secp256k1.go, whose hit is inside base64 data (line 10, the precomputed points blob); the word-bounded search returns go.mod's two indirect requirements (go.mod:113-114), their go.sum checksums and three SV-node test configurations under test/config/, none of them Go code.",
+      "search": {
+        "repo": "teranode",
+        "pattern": "zmq",
+        "flags": "-il",
+        "paths": [
+          "*.go"
+        ],
+        "files": [
+          "services/legacy/bsvec/secp256k1.go"
+        ]
+      }
+    },
+    {
+      "of": "#96's and #87's Source lines, \"model/Block.go:101 (subtrees)\"",
+      "finding": "At the tag the Block struct's `Subtrees` field (the subtree roots) is model/Block.go:100 and `SubtreeSlices` (the subtrees themselves, not serialized) is :101; the ledger cites :100-101.",
+      "cite": {
+        "repo": "teranode",
+        "path": "model/Block.go",
+        "lines": [
+          100,
+          101
+        ],
+        "anchor": "Subtrees         []*chainhash.Hash"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "tl.dsdetected",
+      "map_row": "event surface",
+      "map_id": "double-spend-notify",
+      "direction": "Teranode-lacks",
+      "surface": "the `dsdetected` P2P message and its webhook",
+      "what": "A peer announces a block (or blocks) observed to contain an attempt to double-spend some UTXOs; the reference checks the message, accepts the headers, updates the blocks' status, relays it to its other peers and posts it to the configured webhook.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/protocol.h",
+          "lines": [
+            406,
+            410
+          ],
+          "anchor": "extern const char* const DSDETECTED;",
+          "note": "the message and its meaning"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4826,
+            4827
+          ],
+          "anchor": "NetMsgType::DSDETECTED",
+          "note": "the dispatch"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4648,
+            4648
+          ],
+          "anchor": "UpdateBlockStatus(msg)",
+          "note": "the blocks' status updated"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4657,
+            4665
+          ],
+          "anchor": "NetMsgType::DSDETECTED, msg",
+          "note": "the relay to every other peer"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4668,
+            4676
+          ],
+          "anchor": "CreateForDoubleSpendDetectedWebhook",
+          "note": "the webhook post"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            1637,
+            1637
+          ],
+          "anchor": "-dsdetectedwebhookurl",
+          "note": "the webhook's setting"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "dsdetected",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "Teranode refuses the second spend at validation (`ErrTxInvalidDoubleSpend` and `ErrTxConflicting`, errors/Error_types.go:60-64; HTTP 409 on the propagation surface, services/propagation/Server.go:768-773) and marks the losing transaction `conflicting` in the UTXO store (row rl.conflicting-record); no message tells a peer or a service that a block carrying a double spend was seen.",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "errors/Error_types.go",
+          "lines": [
+            60,
+            64
+          ],
+          "anchor": "ErrTxInvalidDoubleSpend"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/propagation/Server.go",
+          "lines": [
+            768,
+            773
+          ],
+          "anchor": "http.StatusConflict"
+        }
+      ],
+      "depends": [
+        "a service registered at `-dsdetectedwebhookurl` (a payment processor or a broadcaster watching for competing blocks) [D]",
+        "the reference's peers, which relay the message onward",
+        "#67's derived status `conflictedByMinedSpend`: DESIGN-S6 section 3 row 6 names the double-spend notification (S7's #80) as one of the node's own words for it",
+        "#80's deliverable (the dsdetected format, the webhook delivery)"
+      ],
+      "ruling": {
+        "proposed": "gap",
+        "reason": "A service that learns of a double spend in a competing block from the reference's webhook learns nothing from Teranode: no message, no webhook, no event, and the derived status `conflictedByMinedSpend` then has only the chain read to stand on. The status itself remains derivable (it is a chain fact), so what breaks is the push, the timing a service relies on, not the state.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [
+        {
+          "where": "#67",
+          "view": "`conflictedByMinedSpend` (spec/status-views.md, the row; the ProvenTxReqStatus column's partial `doubleSpend`)",
+          "link": "status-views.md"
+        },
+        {
+          "where": "#84",
+          "view": "the double-spend notification beside #84's removal events (#80 writes it; #84's vocabulary maps it)",
+          "link": null
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode settles a double spend inside the UTXO store, not by announcement: a double spend is rejected outright during normal transaction validation, and one that arrives inside a block with valid proof of work is saved and marked `conflicting`, with its children, so that the chain of most work decides and a reorganization can be handled consistently (its double-spend design page). A loose double spend's refusal is gossiped to peers with its reason (row rl.rejected-tx-gossip); a block is not announced as carrying one.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/understandingDoubleSpends.md",
+            "lines": [
+              57,
+              62
+            ],
+            "anchor": "Proof of Work Override",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "stores/utxo/Interface.go",
+            "lines": [
+              537,
+              541
+            ],
+            "anchor": "SetConflicting",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              768,
+              773
+            ],
+            "anchor": "http.StatusConflict",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/p2p/message_types.go",
+            "lines": [
+              126,
+              139
+            ],
+            "anchor": "type RejectedTxMessage struct",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client reads a double spend in a competing block the way the whitepaper's reader does, by headers and proofs: it re-asks its proof when the tip moves; on the reference the `dsdetected` webhook, where an operator configured one, is a hint that may arrive sooner, never the evidence."
+      },
+      "measured": {
+        "reference": {
+          "label": "[X]",
+          "answer": "a peer's `dsdetected` message (685 bytes) valid at B, relayed to A only and posted to B's webhook; valid at A, relayed to A's other peer only and posted to A's webhook; both bodies 1896 bytes, equal to the model's; the repeat answered by the duplicate cache with no relay and no post (`chaincheck --dsnt`: 47 checks agree, 0 witnesses)",
+          "record": "docs/records/20261015-165715-s7-80-double-spend-s1.md",
+          "receipts": [
+            "docs/records/20261015-165715-s7-80-double-spend-s1.json",
+            "corpus/p2p/2026-10-15-double-spend-two-node.receipt.json"
+          ]
+        },
+        "teranode": {
+          "label": "[M]",
+          "answer": "the second spend of an accepted output refused (`mempool/accepted-spend-conflict`: RPC code -25, the verdict agree with the reference's `txn-mempool-conflict`, check 5); no `dsdetected` message or webhook exists to observe (the row's searches, [SRC]); the 409 on the propagation surface and the rejected-transaction gossip stand as a reading at the pin (#80's record, section 5 of docs/CONFORMANCE-DOUBLE-SPEND.md), not yet a run",
+          "record": "docs/records/20261016-001926-s8-97-contract-check5-s4b.md",
+          "receipts": [
+            "docs/records/20261016-001926-s6-66-cut2-second-oracle-s3.json"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tl.ds-attempt-callback",
+      "map_row": "conflicts",
+      "map_id": "double-spend-notify",
+      "direction": "Teranode-lacks",
+      "surface": "the double-spend attempt handler and its callback to the transaction's declared endpoint",
+      "what": "When a transaction arrives that double-spends an input of a transaction the reference already holds, the reference's handler can call back the endpoint the original transaction declared in its notification output, at a level the operator sets (none, standard transactions only, all), with fast and slow callback queues, a slow-endpoint rate limit and a time-limited blacklist.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dsattempt_handler.h",
+          "lines": [
+            34,
+            34
+          ],
+          "anchor": "class DSAttemptHandler final",
+          "note": "the handler"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dsattempt_handler.h",
+          "lines": [
+            75,
+            75
+          ],
+          "anchor": "HandleDoubleSpend",
+          "note": "a detected attempt submitted"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dsattempt_handler.h",
+          "lines": [
+            122,
+            122
+          ],
+          "anchor": "SendNotification",
+          "note": "the notification sent"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dscallback_msg.h",
+          "lines": [
+            20,
+            20
+          ],
+          "anchor": "class DSCallbackMsg",
+          "note": "the callback message carried in the output"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            1576,
+            1578
+          ],
+          "anchor": "-dsnotifylevel",
+          "note": "the operator's level"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dsattempt_handler.h",
+          "lines": [
+            48,
+            54
+          ],
+          "anchor": "DEFAULT_DS_ENDPOINT_BLACKLIST_SIZE",
+          "note": "the blacklist size, the fast and slow thread pools and the slow-endpoint rate limit"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/double_spend/dsattempt_handler.h",
+          "lines": [
+            193,
+            194
+          ],
+          "anchor": "TimeLimitedBlacklist",
+          "note": "the time-limited blacklist of callback servers"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "dsattempt",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          },
+          {
+            "repo": "teranode",
+            "pattern": "dscallback",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          },
+          {
+            "repo": "teranode",
+            "pattern": "dsendpoint",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          },
+          {
+            "repo": "teranode",
+            "pattern": "dsnt",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "The attempt is refused at validation with HTTP 409 (services/propagation/Server.go:768-773); the original transaction's submitter is not told; the rejection, with its reason, is gossiped to peers on the rejected-transaction topic (row rl.rejected-tx-gossip), never to the original transaction's declared endpoint.",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/propagation/Server.go",
+          "lines": [
+            768,
+            773
+          ],
+          "anchor": "errors.ErrTxConflicting"
+        }
+      ],
+      "depends": [
+        "a wallet that declares a callback endpoint in a transaction's output to hear of attempts against its inputs [D]",
+        "Arcade's word `DOUBLE_SPEND_ATTEMPTED` (#67's Arcade vocabulary, lean/BsvChain/Views/Status.lean:38) when its producer reads a node's attempt signal [D]",
+        "#80's deliverable (the detector's events, the callback message, the webhook rules)"
+      ],
+      "ruling": {
+        "proposed": "gap",
+        "reason": "The callback is addressed by the transaction itself, so the client that wrote the endpoint is the one that stops hearing; nothing on Teranode's surfaces carries an attempt against someone else's pending transaction to that transaction's owner.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [
+        {
+          "where": "#67",
+          "view": "the Arcade word `DOUBLE_SPEND_ATTEMPTED` (#67's Arcade vocabulary, lean/BsvChain/Views/Status.lean:38; spec/status-views.md maps no derived status to it): no node-side producer on Teranode",
+          "link": "../lean/BsvChain/Views/Status.lean"
+        },
+        {
+          "where": "#84",
+          "view": "the double-spend attempt event (#80's detector events, mapped through #84's vocabulary)",
+          "link": null
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode scales horizontally, to over a million transactions a second, and it does so with no traditional mempool: a transaction is validated and organized into subtrees as it arrives, and continuous validation and subtree creation replaces mempool functionality (its system design's comparison table). With no pool to hold a contested transaction, a double spend is settled where the outputs live, at the UTXO store: the second spend of an output is refused at validation (HTTP 409 on the propagation surface), and the refusal is gossiped to peers with its reason on the rejected-transaction topic (row rl.rejected-tx-gossip). The outcome is a verdict to the submitter, not a callback to an endpoint the earlier transaction declared.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              174,
+              174
+            ],
+            "anchor": "No traditional mempool.",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              768,
+              773
+            ],
+            "anchor": "http.StatusConflict",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/p2p/message_types.go",
+            "lines": [
+              126,
+              139
+            ],
+            "anchor": "type RejectedTxMessage struct",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client that must know whether its spend stands watches its own proof: a valid merkle proof against the active header settles it, and a refusal on broadcast tells the submitter of the later spend at once; nothing is addressed to an endpoint in the transaction's own output."
+      },
+      "measured": {
+        "reference": {
+          "label": "[X]",
+          "answer": "the attempt handler took each refused double spend, checked its input and called back the declared endpoint (a query and a submit for E1, the query alone for E2, nothing for the blacklisted E3), each as the model predicts (`chaincheck --dsnt`)",
+          "record": "docs/records/20261015-165715-s7-80-double-spend-s1.md",
+          "receipts": [
+            "docs/records/20261015-165715-s7-80-double-spend-s1.json"
+          ]
+        },
+        "teranode": {
+          "label": "[M]",
+          "answer": "the double spend refused at intake (`mempool/accepted-spend-conflict`: RPC code -25, agree, check 5); no callback surface exists to observe (the row's searches, [SRC])",
+          "record": "docs/records/20261016-001926-s8-97-contract-check5-s4b.md",
+          "receipts": [
+            "docs/records/20261016-001926-s6-66-cut2-second-oracle-s3.json"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tl.zmq-announce",
+      "map_row": "event surface",
+      "map_id": "event-zmq",
+      "direction": "Teranode-lacks",
+      "surface": "the ZMQ announcement topics: hashblock, rawblock, hashtx, rawtx and their `2` variants",
+      "what": "The reference publishes, on ZeroMQ sockets the operator names, every new block and every transaction accepted (hash or raw), the `2` variants on a separate topic prefix.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqnotificationinterface.cpp",
+          "lines": [
+            59,
+            80
+          ],
+          "anchor": "factories[\"pubhashblock\"]",
+          "note": "the topic factories"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqpublishnotifier.cpp",
+          "lines": [
+            22,
+            36
+          ],
+          "anchor": "MSG_HASHBLOCK = \"hashblock\"",
+          "note": "the topic names"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            886,
+            913
+          ],
+          "anchor": "-zmqpubhashblock=<address>",
+          "note": "the settings"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "zmq\\|zeromq",
+            "flags": "-ilw",
+            "paths": [],
+            "files": [
+              "go.mod",
+              "go.sum",
+              "test/config/svnode-1.conf",
+              "test/config/svnode-2.conf",
+              "test/config/svnode-3.conf"
+            ],
+            "note": "go.mod:113-114 are indirect requirements and go.sum holds their checksums; the three files are SV-node configurations for Teranode's tests; no Go file (see the correction above)"
+          }
+        ]
+      },
+      "counterpart": "Blocks are announced on the P2P service's websocket (row rl.websocket; type `block`, services/p2p/server_helpers.go:111; `subtree`, :287) and on the Kafka block topics (settings/settings.go:154, :161); accepted transactions move between services on the Kafka validator and txmeta topics (:151-152), which #97 names as what an application on Teranode reads instead of ZMQ.",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/p2p/server_helpers.go",
+          "lines": [
+            111,
+            111
+          ],
+          "anchor": "\"block\""
+        },
+        {
+          "repo": "teranode",
+          "path": "settings/settings.go",
+          "lines": [
+            151,
+            161
+          ],
+          "anchor": "BlocksConfig"
+        }
+      ],
+      "depends": [
+        "a subscriber to the reference's block and transaction topics (an indexer, a broadcaster, a wallet backend) [D]",
+        "#84's vocabulary (`pubhashtx`, `pubrawtx`, `pubhashtx2`, `pubrawtx2` named in #84's Source)"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "Every announcement has a Teranode carrier (the websocket for blocks and subtrees, Kafka for blocks and transactions) and no derived status of #67 reads an announcement; a subscriber moves to another transport and #97 writes its contract. What is lost is the transport, not the information. By the maintainers' rule the row is DROPPED by its carrier clause: the information reaches the subscriber by another Teranode carrier, the counterpart (row rl.websocket and the Kafka topics).",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "Teranode's services exchange blocks and transactions over Kafka topics, and its Asset Service offers clients a WebSocket interface for real-time notifications when new subtrees and blocks are added; block announcements ride those carriers.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/services/assetServer.md",
+            "lines": [
+              67,
+              67
+            ],
+            "anchor": "WebSocket interface",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/p2p/server_helpers.go",
+            "lines": [
+              111,
+              111
+            ],
+            "anchor": "\"block\"",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "settings/settings.go",
+            "lines": [
+              151,
+              161
+            ],
+            "anchor": "BlocksConfig",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client subscribes to tips through whichever push its node offers (`hashblock` over ZMQ on the reference, the `block` notification over the WebSocket on Teranode) and treats each as a hint to re-ask its proofs, never as evidence."
+      }
+    },
+    {
+      "id": "tl.zmq-removal",
+      "map_row": "event surface",
+      "map_id": "event-zmq",
+      "direction": "Teranode-lacks",
+      "surface": "the ZMQ removal topics with reasons: discardedfrommempool and removedfrommempoolblock",
+      "what": "The reference publishes each transaction leaving its pool with the reason (and, for a conflict, the transaction it conflicted with), and each transaction removed because a block included it or a conflicting spend.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqnotificationinterface.cpp",
+          "lines": [
+            248,
+            248
+          ],
+          "anchor": "NotifyRemovedFromMempool(txid, reason, conflictedWith)",
+          "note": "removal with reason and the conflicting transaction"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqnotificationinterface.cpp",
+          "lines": [
+            266,
+            266
+          ],
+          "anchor": "NotifyRemovedFromMempoolBlock(txid, reason)",
+          "note": "removal by a block"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqpublishnotifier.cpp",
+          "lines": [
+            30,
+            31
+          ],
+          "anchor": "MSG_DISCARDEDFROMMEMPOOL",
+          "note": "the topic names"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/txmempool.cpp",
+          "lines": [
+            1115,
+            1116
+          ],
+          "anchor": "MemPoolRemovalReason::CONFLICT",
+          "note": "the pool's removal with reason CONFLICT that feeds it"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "zmq\\|zeromq",
+            "flags": "-ilw",
+            "paths": [],
+            "files": [
+              "go.mod",
+              "go.sum",
+              "test/config/svnode-1.conf",
+              "test/config/svnode-2.conf",
+              "test/config/svnode-3.conf"
+            ],
+            "note": "as in tl.zmq-announce"
+          },
+          {
+            "repo": "teranode",
+            "pattern": "discardedfrommempool\\|removedfrommempool",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "Teranode has no pool to leave: its own comment says so (services/validator/Validator.go:681-683; the design, docs/topics/services/blockAssembly.md:36). A transaction that loses to a mined spend is marked `conflicting` in the UTXO store (stores/utxo/Interface.go:541) and nothing publishes that mark as an event with a reason; the Kafka topics carry rejections at intake (settings/settings.go:155, :158-159), not removals.",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/validator/Validator.go",
+          "lines": [
+            681,
+            683
+          ],
+          "anchor": "BSV has no"
+        },
+        {
+          "repo": "teranode",
+          "path": "stores/utxo/Interface.go",
+          "lines": [
+            541,
+            541
+          ],
+          "anchor": "SetConflicting"
+        },
+        {
+          "repo": "teranode",
+          "path": "docs/topics/services/blockAssembly.md",
+          "lines": [
+            36,
+            36
+          ],
+          "anchor": "No Mempool Design"
+        }
+      ],
+      "depends": [
+        "a service that learns from the removal events that its transaction was dropped and why (Arcade's REJECTED and DOUBLE_SPEND_ATTEMPTED producers read such events [D])",
+        "#84's events `discardedfrommempool` and `removedfrommempoolblock` (#84's Source: zmqnotificationinterface.cpp:248, :266)",
+        "#67's `conflictedByMinedSpend`: DESIGN-S6 section 3 row 6 names the pool's removal with reason CONFLICT as the node's own word"
+      ],
+      "ruling": {
+        "proposed": "gap",
+        "reason": "The removal with its reason is the one event that tells a client its accepted transaction is gone and why; Teranode keeps the fact (the conflicting mark) but publishes no event for it, so a client polling nothing learns nothing, and #84's two removal events have no Teranode producer.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [
+        {
+          "where": "#84",
+          "view": "the events `discardedfrommempool` and `removedfrommempoolblock` with their reasons",
+          "link": null
+        },
+        {
+          "where": "#67",
+          "view": "`conflictedByMinedSpend` (spec/status-views.md): the node's own removal word is gone; the status is read only from the chain and the store",
+          "link": "status-views.md"
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode scales horizontally, to over a million transactions a second, and it does so with no traditional mempool: a transaction is validated and organized into subtrees as it arrives, and continuous validation and subtree creation replaces mempool functionality (its system design's comparison table). A transaction never waits in a pool, so it never leaves one; a transaction that loses to a mined spend is kept as a record marked `conflicting` in the UTXO store, the fact SV-node publishes as a removal event.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              174,
+              174
+            ],
+            "anchor": "No traditional mempool.",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/services/blockAssembly.md",
+            "lines": [
+              36,
+              36
+            ],
+            "anchor": "No Mempool Design",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/validator/Validator.go",
+            "lines": [
+              681,
+              683
+            ],
+            "anchor": "BSV has no",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "stores/utxo/Interface.go",
+            "lines": [
+              541,
+              541
+            ],
+            "anchor": "SetConflicting",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client learns that its transaction lost from the refusal of the losing spend on broadcast (section 2, the same verdict on both nodes) and from its proofs: it re-asks its own merkle proof when the tip moves and never waits for a removal event."
+      }
+    },
+    {
+      "id": "tl.invalidtx-sinks",
+      "map_row": "event surface",
+      "map_id": "event-surface",
+      "direction": "Teranode-lacks",
+      "surface": "the invalid-transaction publisher and its sinks (file, ZMQ `invalidtx`)",
+      "what": "The reference publishes every invalid transaction with its rejection to the sinks the operator selects: a file sink and a ZMQ sink on the `invalidtx` topic, the two settings checked against each other at start.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/invalid_txn_publisher.h",
+          "lines": [
+            29,
+            29
+          ],
+          "anchor": "class InvalidTxnInfo",
+          "note": "the published record"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/zmq/zmqnotificationinterface.cpp",
+          "lines": [
+            204,
+            204
+          ],
+          "anchor": "NotifyTextMessage(\"invalidtx\", message)",
+          "note": "the ZMQ sink's topic"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            2757,
+            2766
+          ],
+          "anchor": "invalidtxsink",
+          "note": "the sink settings"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "invalidtxsink",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          },
+          {
+            "repo": "teranode",
+            "pattern": "invalidtx",
+            "flags": "-ilw",
+            "paths": [
+              "*.go"
+            ],
+            "files": [
+              "services/blockassembly/Server_security_test.go",
+              "services/validator/Server_test.go",
+              "test/e2e/daemon/wip/tnb_test.go"
+            ],
+            "note": "three tests naming a local variable `invalidTx`; no sink, no topic"
+          }
+        ]
+      },
+      "counterpart": "Teranode publishes rejections on the Kafka rejected-transaction and policy-rejection topics (settings/settings.go:155, :158-159) and gossips each rejection to its peers (row rl.rejected-tx-gossip).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "settings/settings.go",
+          "lines": [
+            155,
+            155
+          ],
+          "anchor": "RejectedTxConfig"
+        }
+      ],
+      "depends": [
+        "#84's event `invalidtx` and the invalid-transaction sink formats (#84's deliverable)",
+        "a service consuming the reference's invalid-transaction file or topic [D]"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "The information has two Teranode carriers (Kafka and the P2P gossip); the sink formats are what goes, and #97 maps #84's `invalidtx` onto the Kafka topic or records the fields that do not carry. By the maintainers' rule the row is DROPPED by its carrier clause: the information reaches the consuming service by another Teranode carrier, the counterpart (the Kafka rejection topics and row rl.rejected-tx-gossip).",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "Teranode publishes rejections on its Kafka rejected-transaction topic and gossips each to its peers with the reason (row rl.rejected-tx-gossip).",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "settings/settings.go",
+            "lines": [
+              155,
+              155
+            ],
+            "anchor": "RejectedTxConfig",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/p2p/message_types.go",
+            "lines": [
+              126,
+              139
+            ],
+            "anchor": "type RejectedTxMessage struct",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client learns of its own transaction's refusal from the verdict its broadcast receives (section 2), on either node; the sinks serve an operator."
+      }
+    },
+    {
+      "id": "tl.miner-id",
+      "map_row": "block validation",
+      "map_id": "miner-id",
+      "direction": "Teranode-lacks",
+      "surface": "Miner ID: the coinbase document, miner-info and dataref transactions, revocation, the database and its RPCs; authenticated connections",
+      "what": "The reference parses and validates the Miner ID coinbase document of each block, indexes miner-info and dataref transactions, tracks revocation in its database and exposes it by RPC (`getmineridinfo`, `revokeminerid`, `dumpminerids` and the miner-info calls); its authenticated-connection handshake signs with the Miner ID key.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/miner_id/coinbase_doc.h",
+          "lines": [
+            34,
+            34
+          ],
+          "anchor": "class CoinbaseDocument",
+          "note": "the coinbase document"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/rpc/miner_info.cpp",
+          "lines": [
+            1060,
+            1072
+          ],
+          "anchor": "getmineridinfo",
+          "note": "the RPC table"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "minerid",
+            "flags": "-il",
+            "paths": [
+              "*.go"
+            ],
+            "files": [
+              "services/legacy/peer/peer.go"
+            ],
+            "note": "one Go file: the handshake fallback below"
+          },
+          {
+            "repo": "teranode",
+            "pattern": "miner_id\\|minerinfo\\|revokemid\\|dataref",
+            "flags": "-il",
+            "paths": [
+              "*.go"
+            ],
+            "files": [
+              "services/blockchain/client_test.go",
+              "test/utils/transactions/create_transaction.go"
+            ],
+            "note": "a test fixture's string `specific_miner_id` and a test helper's `minerInfo` parameter; no Miner ID code"
+          }
+        ]
+      },
+      "counterpart": "The legacy bridge answers an `authch` handshake as a node without Miner ID and continues unauthenticated (services/legacy/peer/peer.go:1204-1234; its comment: legacy nodes handle messages without Miner ID as the base assumption, :1209-1210). Teranode reads a miner's free-text tag from the coinbase (util/coinbase.go:33), which is not the Miner ID protocol.",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/legacy/peer/peer.go",
+          "lines": [
+            1204,
+            1234
+          ],
+          "anchor": "does not have MinerID configured"
+        },
+        {
+          "repo": "teranode",
+          "path": "util/coinbase.go",
+          "lines": [
+            33,
+            33
+          ],
+          "anchor": "ExtractCoinbaseMiner"
+        }
+      ],
+      "depends": [
+        "attribution, reputation and research built on Miner ID (#83's Why) [D]",
+        "the RPC surface of #83 and peers that authenticate with a Miner ID key"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "Nothing of Miner ID is consensus (#83 says so throughout) and no view of #67 or event of #84 reads it; the one place Teranode meets it, it declines it deliberately in code (the handshake fallback). No Teranode source at the tag states a plan to add it, so `pending` has no citation; the maintainers may read the fallback otherwise. Its dependent of attribution, reputation and research reads the Miner ID coinbase documents from the blocks themselves and depends on no node surface [D]; what remains is the RPCs (an operator) and the authenticated handshake (a peer), so the maintainers' rule rules it DROPPED.",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "The legacy bridge answers an authenticated-connection challenge as a node without Miner ID and continues; its source names that as the base assumption for legacy nodes, with a graceful fallback.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "services/legacy/peer/peer.go",
+            "lines": [
+              1209,
+              1210
+            ],
+            "anchor": "base assumption",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A Miner ID document sits in a block's coinbase; a client that uses one reads it from the block, with the block's header and the coinbase's proof, on either node."
+      }
+    },
+    {
+      "id": "tl.nonfinal-pool",
+      "map_row": "unmined lifetime",
+      "map_id": "non-final-hold",
+      "direction": "Teranode-lacks",
+      "surface": "the non-final (time-locked) pool and `getrawnonfinalmempool`",
+      "what": "The reference holds a transaction that is not yet final in a separate pool until it finalises or is replaced, and lists the held ids by RPC.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/time_locked_mempool.h",
+          "lines": [
+            34,
+            34
+          ],
+          "anchor": "class CTimeLockedMempool final",
+          "note": "the pool"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/rpc/blockchain.cpp",
+          "lines": [
+            502,
+            502
+          ],
+          "anchor": "getrawnonfinalmempool",
+          "note": "the RPC"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "getrawnonfinalmempool\\|timelockedmempool\\|time_locked",
+            "flags": "-il",
+            "paths": [],
+            "files": [
+              "docs/topics/services/validator.md"
+            ],
+            "note": "Teranode's design note (line 249) stating that it keeps no non-final holding pool"
+          }
+        ]
+      },
+      "counterpart": "Teranode refuses a non-final transaction at validation (`ErrNonFinal`, services/validator/Validator.go:978-979, errors/Error_types.go:41) and the propagation surface answers HTTP 400 (services/propagation/Server.go:782-784); nothing is held. Its design note says so: no main mempool and no non-final holding pool, so a non-final transaction is terminally rejected rather than retained (docs/topics/services/validator.md:249).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/validator/Validator.go",
+          "lines": [
+            978,
+            979
+          ],
+          "anchor": "NewUtxoNonFinalError"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/propagation/Server.go",
+          "lines": [
+            782,
+            784
+          ],
+          "anchor": "errors.ErrNonFinal"
+        },
+        {
+          "repo": "teranode",
+          "path": "docs/topics/services/validator.md",
+          "lines": [
+            249,
+            249
+          ],
+          "anchor": "terminally rejected"
+        }
+      ],
+      "depends": [
+        "#67's derived status `heldNonFinal` (DESIGN-S6 section 3 row 3)",
+        "the wallet-toolbox word `nonfinal` (ProvenTxReqStatus, lean/BsvChain/Views/Status.lean:45)",
+        "a wallet that broadcasts a time-locked transaction early and expects the node to hold it [D]"
+      ],
+      "ruling": {
+        "proposed": "gap",
+        "reason": "The same transaction is held by the reference and refused by Teranode, so a client that broadcasts early gets a rejection where it expected a hold and must keep and resubmit the transaction itself; `heldNonFinal` has no Teranode state. Teranode's design note calls the refusal deliberate (docs/topics/services/validator.md:249), so the maintainers choose between `dropped` and `gap`; the proposal is `gap` because the client feels it whatever the intent. The hold is node behavior, not a validity rule.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [
+        {
+          "where": "#67",
+          "view": "`heldNonFinal` (spec/status-views.md, the row); the wallet-toolbox word `nonfinal` (lean/BsvChain/Views/Status.lean:45)",
+          "link": "status-views.md"
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode scales horizontally, to over a million transactions a second, and it does so with no traditional mempool: a transaction is validated and organized into subtrees as it arrives, and continuous validation and subtree creation replaces mempool functionality (its system design's comparison table). Its validator's design note: with neither a main mempool nor a non-final holding pool, a non-final transaction is terminally rejected rather than retained, as expected behaviour, and the rejection carries the reason and the lock time back to the submitter.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              174,
+              174
+            ],
+            "anchor": "No traditional mempool.",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/services/validator.md",
+            "lines": [
+              249,
+              249
+            ],
+            "anchor": "terminally rejected",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/validator/Validator.go",
+            "lines": [
+              978,
+              979
+            ],
+            "anchor": "NewUtxoNonFinalError",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client holds a time-locked transaction itself and submits it once the tip passes its lock time (the median time past for a time lock), as Teranode's design note puts it; the reference accepts the same submission, so a client built this way runs on both."
+      },
+      "measured": {
+        "reference": {
+          "label": "[X]",
+          "answer": "`mempool/nonfinal-held-height-equality`: the transaction held, `heldNonFinal`, none accepted",
+          "record": "docs/records/20261014-032012-s6-72-regtest-s3.md",
+          "receipts": []
+        },
+        "teranode": {
+          "label": "[M]",
+          "answer": "`mempool/nonfinal-held-height-equality`: refused, RPC code -25, nothing held; the verdict non-judging (the row selects a hold Teranode does not carry by design), check 5; check 4 the same",
+          "record": "docs/records/20261016-001926-s8-97-contract-check5-s4b.md",
+          "receipts": [
+            "docs/records/20261016-001926-s6-66-cut2-second-oracle-s3.json",
+            "docs/records/20261015-233751-s6-66-cut2-second-oracle-s3.json"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tl.orphan-pool",
+      "map_row": "relay",
+      "map_id": "orphans",
+      "direction": "Teranode-lacks",
+      "surface": "the orphan pool on the client-facing paths",
+      "what": "The reference keeps a transaction whose parent it has not seen in its orphan pool, asks the sending peer for the parent and retries the child when the parent arrives.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/orphan_txns.h",
+          "lines": [
+            26,
+            26
+          ],
+          "anchor": "class COrphanTxns",
+          "note": "the pool"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "orphan",
+            "flags": "-il",
+            "paths": [
+              "services/propagation"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "Teranode's own comment: the propagation surfaces keep nothing and the legacy P2P relay parks such a transaction in netsync's orphan pool (services/validator/Validator.go:681-686); a submission whose parent is missing gets HTTP 422 (services/propagation/Server.go:774-775).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/validator/Validator.go",
+          "lines": [
+            681,
+            686
+          ],
+          "anchor": "orphan pool"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/propagation/Server.go",
+          "lines": [
+            774,
+            775
+          ],
+          "anchor": "ErrTxMissingParent"
+        }
+      ],
+      "depends": [
+        "#67's derived status `orphan`, witnessed only over the loopback P2P scenario (DESIGN-S6 section 3 row 4: an RPC submission never retains an orphan)"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "Teranode says in its own source that the client-facing paths keep nothing, and the reference's RPC path keeps no orphan either; the P2P path that does keep one survives in the legacy bridge. A client submitting by API sees the same answer from both (a missing-inputs refusal), so no client-facing view moves.",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "With no mempool, the client-facing paths keep nothing of a transaction they cannot finish (the validator's comment on its retry budget) and a submission whose parent is unknown is answered HTTP 422 at once; the legacy P2P relay keeps its orphan pool for legacy peers.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "services/validator/Validator.go",
+            "lines": [
+              680,
+              686
+            ],
+            "anchor": "orphan pool",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              774,
+              775
+            ],
+            "anchor": "ErrTxMissingParent",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client submits parents before children, or the ancestry together; on the API paths neither node keeps a child whose parent it has not seen."
+      }
+    },
+    {
+      "id": "tl.safe-mode",
+      "map_row": "chain selection",
+      "map_id": "safe-mode",
+      "direction": "Teranode-lacks",
+      "surface": "safe mode and its RPCs",
+      "what": "The reference enters safe mode when it sees a competing chain it should warn about (fed in part by the dsdetected blocks of row tl.dsdetected), reports it by `getsafemodeinfo` and lets the operator ignore a block by `ignoresafemodeforblock`.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/rpc/safe_mode.cpp",
+          "lines": [
+            204,
+            206
+          ],
+          "anchor": "getsafemodeinfo",
+          "note": "the RPC table"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            1702,
+            1702
+          ],
+          "anchor": "-safemodewebhookurl",
+          "note": "the safe-mode webhook setting"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4628,
+            4628
+          ],
+          "anchor": "GetSafeModeMaxForkDistance",
+          "note": "the dsdetected path's fork-distance check, which feeds safe mode"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "safemode",
+            "flags": "-il",
+            "paths": [
+              "*.go"
+            ],
+            "files": [
+              "services/rpc/bsvjson/jsonrpcerr.go"
+            ],
+            "note": "an RPC error code constant (jsonrpcerr.go:34) that nothing produces"
+          },
+          {
+            "repo": "teranode",
+            "pattern": "ErrRPCForbiddenBySafeMode",
+            "flags": "-l",
+            "paths": [],
+            "files": [
+              "services/rpc/bsvjson/jsonrpcerr.go"
+            ],
+            "note": "the constant's one file: defined, never used"
+          }
+        ]
+      },
+      "counterpart": "None at the tag; the FSM (row rl.fsm) is a sync state, not a fork warning.",
+      "counterpart_cites": [],
+      "depends": [
+        "an operator or service polling `getsafemodeinfo` [D]",
+        "the safe-mode webhook of the reference's settings (`-safemodewebhookurl`, src/init.cpp:1702)"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "No view of #67 or event of #84 reads safe mode; it warns an operator, not a client. No Teranode source at the tag names it as planned, so `pending` has no citation.",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "Teranode's blockchain service runs a state machine every service reads (row rl.fsm); its states (IDLE, RUNNING, CATCHINGBLOCKS) name the service's sync state; no Teranode document or source line at the tag gives a reason for a fork warning, so none is stated here.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "services/blockchain/fsm.go",
+            "lines": [
+              17,
+              42
+            ],
+            "anchor": "var FSMTransitions = fsm.Events{",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client follows forks and reorganizations by headers (the chain-event feed of BSV-NORTH-STAR.md section 5) on either node; safe mode is an operator's warning, not a client surface."
+      }
+    },
+    {
+      "id": "tl.pool-size",
+      "map_row": "unmined lifetime",
+      "map_id": "pool-size",
+      "direction": "Teranode-lacks",
+      "surface": "the pool's size bound and its eviction (`-maxmempool`, `TrimToSize`)",
+      "what": "When the pool passes `-maxmempool` (a policy setting, default 1000 MB), the reference evicts the least worthy transactions with their descendants until it is under the bound and raises the rolling minimum fee; an accepted transaction can leave the pool this way unmined.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/txmempool.cpp",
+          "lines": [
+            2704,
+            2704
+          ],
+          "anchor": "TrimToSize",
+          "note": "the eviction"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/policy/policy.h",
+          "lines": [
+            86,
+            87
+          ],
+          "anchor": "DEFAULT_MAX_MEMPOOL_SIZE = 1000",
+          "note": "the policy default"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "TrimToSize\\|maxmempool",
+            "flags": "-il",
+            "paths": [
+              "*.go"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "Teranode keeps no size bound on its pool and evicts nothing. Its block-assembly ingest queue is unbounded by default (`blockassembly_maxQueueItems`, default 0, settings/settings.go:328, a policy setting); with a positive bound a batch with no room is shed (`AddTxBatchIfRoom`, services/blockassembly/BlockAssembler.go:1806-1818; services/blockassembly/Server.go:1279-1315): a synchronous submitter gets a retryable refusal, and a Kafka-ingest transaction already acknowledged by propagation is dropped without notice (settings/blockassembly_settings.go:65).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "settings/settings.go",
+          "lines": [
+            328,
+            328
+          ],
+          "anchor": "blockassembly_maxQueueItems"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/blockassembly/BlockAssembler.go",
+          "lines": [
+            1806,
+            1818
+          ],
+          "anchor": "refused for room"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/blockassembly/Server.go",
+          "lines": [
+            1279,
+            1315
+          ],
+          "anchor": "addTxBatchWithBackpressure"
+        },
+        {
+          "repo": "teranode",
+          "path": "settings/blockassembly_settings.go",
+          "lines": [
+            65,
+            65
+          ],
+          "anchor": "without notifying the submitter"
+        }
+      ],
+      "depends": [
+        "#67's derived status `unknown` [D] (a reading: an evicted transaction leaves no node record, so the derived status falls back to `unknown`; spec/status-views.md's `unknown` row does not name eviction) for an accepted transaction the reference evicts unmined (DESIGN-S6 section 2.1 row 14: `LimitMempoolSize`, `TrimToSize`)",
+        "the Lean definition `BsvChain.trimToSize` (lean/BsvChain/Mempool.lean:535)",
+        "a wallet that rebroadcasts a low-fee transaction after the node evicts it [D]"
+      ],
+      "ruling": {
+        "proposed": "gap",
+        "reason": "The same accepted low-fee transaction can be evicted by the reference and kept by Teranode, so the client's view moves: on the reference it can fall back to `unknown` and must be rebroadcast; on Teranode nothing is evicted at the default; under an operator's queue bound the pressure shows as a shed at intake, silent on the Kafka path. The bound is a policy setting, never a rule of validity.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [
+        {
+          "where": "#67",
+          "view": "`unknown` [D] (a reading: an evicted transaction leaves no node record, so the derived status falls back to `unknown`; spec/status-views.md's `unknown` row does not name eviction) for an accepted transaction evicted unmined: no eviction on Teranode",
+          "link": "status-views.md"
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode scales horizontally, to over a million transactions a second, and it does so with no traditional mempool: a transaction is validated and organized into subtrees as it arrives, and continuous validation and subtree creation replaces mempool functionality (its system design's comparison table). With no pool there is no pool to bound or trim: a bound an operator can set is block assembly's intake queue (`blockassembly_maxQueueItems`), 0 by default, which leaves the queue unbounded, a policy setting.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              174,
+              174
+            ],
+            "anchor": "No traditional mempool.",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/services/blockAssembly.md",
+            "lines": [
+              36,
+              36
+            ],
+            "anchor": "No Mempool Design",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "settings/settings.go",
+            "lines": [
+              328,
+              328
+            ],
+            "anchor": "blockassembly_maxQueueItems",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/blockassembly/subtreeprocessor/queue.go",
+            "lines": [
+              35,
+              35
+            ],
+            "anchor": "ingest queue is unbounded",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client treats an accepted transaction as pending until its merkle proof arrives and rebroadcasts when no proof has come by its own deadline, never on an eviction notice; that works the same on both nodes."
+      }
+    },
+    {
+      "id": "tl.soft-freeze",
+      "map_row": "chain selection",
+      "map_id": "soft-freeze",
+      "direction": "Teranode-lacks",
+      "surface": "the soft consensus freeze of a block that spends a consensus-frozen output",
+      "what": "A block that spends an output on the consensus-frozen list is held from selection for `-softconsensusfreezeduration` blocks (a setting, default 3; 0 freezes it indefinitely) and unfreezes when enough child blocks are mined after it.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/validation.cpp",
+          "lines": [
+            3720,
+            3720
+          ],
+          "anchor": "softConsensusFreeze",
+          "note": "the freeze"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/init.cpp",
+          "lines": [
+            1214,
+            1221
+          ],
+          "anchor": "-softconsensusfreezeduration",
+          "note": "the setting"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/validation.h",
+          "lines": [
+            219,
+            219
+          ],
+          "anchor": "DEFAULT_SOFT_CONSENSUS_FREEZE_DURATION = 3",
+          "note": "its default"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/validation.cpp",
+          "lines": [
+            3402,
+            3406
+          ],
+          "anchor": "REJECT_SOFT_CONSENSUS_FREEZE",
+          "note": "the freeze's trigger in ConnectBlock"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/block_index.h",
+          "lines": [
+            283,
+            285
+          ],
+          "anchor": "can't be added to best chain",
+          "note": "the hold until enough descendants"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "softconsensusfreeze\\|soft_consensus_freeze\\|softfreeze",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "Teranode's best header query selects among blocks not marked invalid; no freeze state exists (stores/blockchain/sql/GetBestBlockHeader.go:134-135). A block that spends a frozen output is refused at the UTXO store's spend and never accepted (`ruling.owner_reason`; stores/utxo/aerospike/spend.go:1103-1107).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "stores/blockchain/sql/GetBestBlockHeader.go",
+          "lines": [
+            134,
+            135
+          ],
+          "anchor": "WHERE invalid = false"
+        },
+        {
+          "repo": "teranode",
+          "path": "stores/utxo/aerospike/spend.go",
+          "lines": [
+            1103,
+            1107
+          ],
+          "anchor": "LuaErrorCodeFrozenUntil"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/alert/node.go",
+          "lines": [
+            346,
+            346
+          ],
+          "anchor": "FreezeUTXOs"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/validator/Validator.go",
+          "lines": [
+            1248,
+            1248
+          ],
+          "anchor": "error spending utxos"
+        },
+        {
+          "repo": "teranode",
+          "path": "errors/errors.go",
+          "lines": [
+            181,
+            181
+          ],
+          "anchor": "cur.code == targetError.code"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/subtreevalidation/check_block_subtrees.go",
+          "lines": [
+            1410,
+            1410
+          ],
+          "anchor": "errors.Is(err, errors.ErrTxInvalid)"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/blockvalidation/BlockValidation.go",
+          "lines": [
+            2123,
+            2123
+          ],
+          "anchor": "errors.Is(err, errors.ErrTxInvalid)"
+        }
+      ],
+      "depends": [
+        "the Lean definition `BsvChain.freezeBlockIndex` (lean/BsvChain/Chain.lean:706; DESIGN-S6 section 2.2)",
+        "the alert system's consensus-frozen list (row rl.alert-service; #94)",
+        "the tip a node follows, and with it the block a transaction-level client reads its transaction in: the reference and Teranode, both following the alerts, hold the same tip while the reference holds a frozen spend's block out of its best chain (until the block has `-softconsensusfreezeduration` child blocks, a setting, default 3, `src/validation.h:219` at `6504a3af`) and can hold different tips once that hold lapses, Teranode refusing the block (the maintainers' ruling, 2026-10-15; the mechanism [SRC] in `ruling.owner_reason`) [D]"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "No view of #67 or event of #84 reads the freeze; it moves chain selection only for a block that spends a consensus-frozen output, an alert-system case whose Teranode handling is #94's and #93's to read [D]. No Teranode source at the tag names it as planned, so `pending` has no citation; the maintainers may read it as `gap` once #94 reads Teranode's frozen-block path. The duration is a setting.",
+        "owner": {
+          "word": "gap",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        },
+        "owner_reason": "its dependent is the tip a node follows. The reference: a block whose input spends a consensus-frozen output fails `CheckInputs` with `REJECT_SOFT_CONSENSUS_FREEZE` and is soft frozen for `-softconsensusfreezeduration` blocks (a setting, default 3, `src/validation.h:219`; 0 holds it indefinitely, `src/init.cpp:1214-1221`) (`src/validation.cpp:3402-3406`), and a soft-frozen block cannot join the best chain until it has enough descendant blocks to pass the threshold (`src/block_index.h:283-285`), all at bitcoin-sv `6504a3af` [SRC]. Teranode: the alert service freezes the output in the UTXO store (row rl.alert-service; `AddToConsensusBlacklist`, `services/alert/node.go:274`, calling `FreezeUTXOs` at :346, which sets the spending id to FF...FF, `stores/utxo/aerospike/alert_system.go:71-77`); the store's spend refuses a frozen output with `ERR_UTXO_FROZEN` (`stores/utxo/aerospike/spend.go:1103-1107`); the validator returns the refusal as a processing error (`services/validator/Validator.go:1248`), which subtree validation does not read as an invalid transaction (`errors.Is` matches by code, `errors/errors.go:181`; `services/subtreevalidation/check_block_subtrees.go:1410`, :1474-1475), so block validation returns it without accepting the block and without storing it invalid (`services/blockvalidation/BlockValidation.go:2123`, :2161), all at Teranode `4edb60a4` [SRC, the subtree-validation path; the legacy-sync path not traced]. So the two alert-following nodes hold the same tip while the reference's hold lasts and can hold different tips once it lapses, for as long as the frozen spend's branch leads on the reference [D]. #94's measured leg is where it is witnessed."
+      },
+      "breaks": [
+        {
+          "where": "#67",
+          "view": "`minedActive h` and `onStaleBranch` [D] (a reading, the maintainers' ruling of 2026-10-15) for a transaction in a block that spends a consensus-frozen output or in a block built on it: on the reference it reads `onStaleBranch` while the block is held out of selection and `minedActive h` once it unfreezes; on Teranode, whose UTXO store refuses the frozen spend, it never reads `minedActive` on that branch; #94's measured leg is the witness, not yet run",
+          "link": "status-views.md"
+        }
+      ],
+      "section": "3",
+      "design": {
+        "reason": "Teranode carries the alert system inside the node (row rl.alert-service): an alert freezes the output in the UTXO store, for network security and compliance purposes as its glossary says, so the store's spend refuses the frozen output wherever the spend is made, at intake and inside a block alike, and there is no block-level hold to release.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/references/glossary.md",
+            "lines": [
+              3,
+              3
+            ],
+            "anchor": "UTXO freezing/unfreezing",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/references/services/alert_reference.md",
+            "lines": [
+              190,
+              190
+            ],
+            "anchor": "Adds funds to the consensus blacklist",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/alert/node.go",
+            "lines": [
+              346,
+              346
+            ],
+            "anchor": "FreezeUTXOs",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "stores/utxo/aerospike/spend.go",
+            "lines": [
+              1103,
+              1107
+            ],
+            "anchor": "LuaErrorCodeFrozenUntil",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "stores/utxo/sql/sql.go",
+            "lines": [
+              2434,
+              2435
+            ],
+            "anchor": "utxo is frozen",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "A client never builds on a spend of an output it knows to be frozen, and treats a block that carries one by depth on the chain its node follows: the reference holds such a block out of its best chain for `-softconsensusfreezeduration` blocks (a setting, default 3) and Teranode's store refuses its spend, so a proof into that block is evidence only once the block is on the active chain at the client's depth."
+      },
+      "measured": {
+        "reference": {
+          "label": "[M]",
+          "answer": "at the default duration (the setting unset, 3): block A at 103, spending a consensus-blacklisted output, answered `bad-txns-inputs-frozen` by `submitblock` and held: `getblock` confirmations -1 with the soft consensus freeze flag set, `getchaintips` its branch `valid-headers`, the tip at 102; three coinbase-only blocks on A each answered `inconclusive` with the tip held at 102; at the fourth (107) the chain through A activated, the tip A+4, A's confirmations 5, the frozen output spent; with `softconsensusfreezeduration=0` the tip stayed at 102 through five blocks on A and the output stayed unspent (tools/soft_freeze_probe.py, two fresh regtest instances; one run of record, an earlier run discarded for a projection key collision, record section 5)",
+          "record": "docs/records/20261016-172953-s8-140-node-client-contract-s3.md",
+          "receipts": [
+            "docs/records/20261016-173411-s8-140-soft-freeze-reference-s3.json"
+          ]
+        },
+        "teranode": {
+          "label": "[M]",
+          "answer": "on the cut 2 road (the legacy recipe, under the quarantine rule, `ORACLE_ROWS` the two frozen rows, the contract's freeze call at three parameters): the freeze accepted (`frozen` true: the freeze RPC answered without error, `harness/src/scenarios/road.rs:1805-1820`; the handler sets the store's flag, `services/rpc/handlers.go:2725`), and the block spending the frozen output refused on the bridge's wire with reject code 16 (`REJECT_INVALID`, 0x10 at bitcoin-sv `6504a3af` `src/consensus/validation.h:15`, the value Teranode sends being go-wire's `RejectInvalid RejectCode = 0x10`, `msg_reject.go:21` in go-wire v1.2.11, the version Teranode's `go.mod` requires at `4edb60a4`, the bridge's code, with the text \"block rejected\", for any block it refuses outside a transient local error, [SRC] `services/legacy/netsync/manager.go:2099-2100` at Teranode `4edb60a4`; the code does not name the freeze, whose refusal is the reading of the store's spend above; `frozen/block`: status rejected, verdict agree with the reference's refusal of the same block; `availability/precedes-frozen`: refused too, agreeing with the reference's `bad-txns-inputs-missingorspent`); blocks built on the refused block were not driven on Teranode (the road delivers one block per row), so the half after the reference's hold lapses is owed to #94's measured leg",
+          "record": "docs/records/20261016-172953-s8-140-node-client-contract-s3.md",
+          "receipts": [
+            "docs/records/20261016-173953-s6-66-cut2-second-oracle-s3.json"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tl.compact-blocks",
+      "map_row": "relay",
+      "map_id": "compact-blocks",
+      "direction": "Teranode-lacks",
+      "surface": "compact block relay (`sendcmpct`, `cmpctblock`)",
+      "what": "The reference relays a block as its header and short transaction ids, reconstructed by the receiver from its pool.",
+      "present": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/blockencodings.h",
+          "lines": [
+            155,
+            155
+          ],
+          "anchor": "CBlockHeaderAndShortTxIDs",
+          "note": "the message"
+        },
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/protocol.cpp",
+          "lines": [
+            41,
+            42
+          ],
+          "anchor": "cmpctblock",
+          "note": "the two message names"
+        }
+      ],
+      "absent": {
+        "listing": "teranode-services",
+        "searches": [
+          {
+            "repo": "teranode",
+            "pattern": "cmpctblock\\|sendcmpct\\|compactblock\\|shorttxid",
+            "flags": "-il",
+            "paths": [
+              "*.go"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "The legacy bridge takes whole blocks (`handleBlockMsg`, services/legacy/netsync/manager.go:1726); Teranode's own relay announces blocks by their subtrees (row rl.subtrees).",
+      "counterpart_cites": [
+        {
+          "repo": "teranode",
+          "path": "services/legacy/netsync/manager.go",
+          "lines": [
+            1726,
+            1726
+          ],
+          "anchor": "handleBlockMsg"
+        }
+      ],
+      "depends": [
+        "a legacy peer that announces blocks with `cmpctblock` [D]"
+      ],
+      "ruling": {
+        "proposed": "dropped",
+        "reason": "A relay encoding between peers; no view of #67 or event of #84 reads it, and a legacy peer still delivers the whole block. No Teranode source at the tag names it as planned.",
+        "owner": {
+          "word": "dropped",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "3",
+      "design": {
+        "reason": "Teranode propagates a block's transactions ahead of the block, as subtrees broadcast about every second, so the block itself travels as its subtree roots (row rl.subtrees); the legacy bridge takes whole blocks from legacy peers.",
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              82,
+              82
+            ],
+            "anchor": "Subtrees are broadcast every second",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/legacy/netsync/manager.go",
+            "lines": [
+              1726,
+              1726
+            ],
+            "anchor": "handleBlockMsg",
+            "label": "[SRC]"
+          }
+        ],
+        "client": "No client reads a relay encoding between peers; a client reads blocks and headers through section 2's surfaces."
+      }
+    },
+    {
+      "id": "rl.subtrees",
+      "map_row": "block structure",
+      "map_id": "subtrees",
+      "direction": "reference-lacks",
+      "surface": "subtrees: the block body as a list of subtree roots, validated and announced by subtree",
+      "what": "A Teranode block carries its transactions as subtrees (the roots in the block, the subtrees fetched and validated by their own service) and announces subtrees as they form.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "model/Block.go",
+          "lines": [
+            100,
+            101
+          ],
+          "anchor": "Subtrees         []*chainhash.Hash",
+          "note": "the roots and the slices"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/subtreevalidation/SubtreeValidation.go",
+          "lines": [
+            627,
+            627
+          ],
+          "anchor": "ValidateSubtreeInternal",
+          "note": "the service (DESIGN-S6 section 5.2)"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/server_helpers.go",
+          "lines": [
+            287,
+            287
+          ],
+          "anchor": "\"subtree\"",
+          "note": "the announcement"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "subtree",
+            "flags": "-il",
+            "paths": [
+              "src"
+            ],
+            "files": [
+              "src/binary_counter.h",
+              "src/consensus/merkle.cpp",
+              "src/consensus/merkle.h",
+              "src/merkleblock.cpp",
+              "src/merkletree.cpp",
+              "src/merkletree.h",
+              "src/test/merkle_tests.cpp",
+              "src/univalue/TODO"
+            ],
+            "note": "every hit is a subtree of the merkle tree's computation, never a unit of the block body"
+          }
+        ]
+      },
+      "counterpart": "The reference's block body is the flat transaction list; the merkle root is computed over it (src/consensus/merkle.h).",
+      "counterpart_cites": [],
+      "depends": [
+        "#89 (subtree merkle equivalence: the root over subtrees equals the root over the flat list)",
+        "#97 (the Kafka subtrees topic and the asset HTTP's block-subtrees endpoint)",
+        "a client fetching a block from Teranode's asset service [D]"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "The reference never had a subtree; the block it validates is the same block, which #89 proves for the root. A client sees the difference only on Teranode's own endpoints, which #97 contracts.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.fsm",
+      "map_row": "observation surface",
+      "map_id": "node-fsm",
+      "direction": "reference-lacks",
+      "surface": "the blockchain service's finite state machine (IDLE, RUNNING, CATCHINGBLOCKS)",
+      "what": "Teranode's blockchain service runs a state machine whose transitions (RUN, CATCHUPBLOCKS, STOP) every service reads; the state is published in the node status notification.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "services/blockchain/fsm.go",
+          "lines": [
+            17,
+            42
+          ],
+          "anchor": "var FSMTransitions = fsm.Events{",
+          "note": "the transitions"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/HandleWebsocket.go",
+          "lines": [
+            46,
+            46
+          ],
+          "anchor": "FSMState",
+          "note": "published in the node status"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "fsm\\|FiniteStateMachine",
+            "flags": "-ilw",
+            "paths": [
+              "src"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "The reference's nearest are flags, not a machine: initial block download, and the import and reindex flags its message dispatch tests (src/net/net_processing.cpp:4826).",
+      "counterpart_cites": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/net/net_processing.cpp",
+          "lines": [
+            4826,
+            4826
+          ],
+          "anchor": "!fImporting && !fReindex"
+        }
+      ],
+      "depends": [
+        "#97: an observation of Teranode is taken in a named FSM state, or it is not comparable with the reference's",
+        "#92 and #93 (record lifetimes, chain selection) where the state gates a transition [D]"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "A machine state the reference never had; it changes what an observation means (a node catching blocks answers from an older tip), so the runner records it with every read. No client view breaks because the reference has nothing a client read here.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.kafka",
+      "map_row": "observation surface",
+      "map_id": "event-kafka",
+      "direction": "reference-lacks",
+      "surface": "the Kafka topics between services",
+      "what": "Teranode's services exchange validator transactions, transaction metadata, legacy inventory, final blocks, rejected transactions, invalid blocks and subtrees, policy rejections, subtrees and blocks over Kafka topics an operator configures.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "settings/settings.go",
+          "lines": [
+            151,
+            161
+          ],
+          "anchor": "ValidatorTxsConfig",
+          "note": "the topic settings"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "kafka",
+            "flags": "-il",
+            "paths": [],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "None: the reference is one process; its outward events are ZMQ (rows tl.zmq-announce, tl.zmq-removal) and the invalid-transaction sinks.",
+      "counterpart_cites": [],
+      "depends": [
+        "#97 (the topics as the runner's interface and the application's view)",
+        "an application on Teranode reading the topics instead of ZMQ (#97's Why)"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "A transport the reference never had, carrying most of what its ZMQ topics carried; #97 maps each topic onto #84's vocabulary or records the gap.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.alert-service",
+      "map_row": "freeze and confiscation",
+      "map_id": "alert-system",
+      "direction": "reference-lacks",
+      "surface": "the in-process alert service: freeze, confiscation, block invalidation and peer bans on a signed alert",
+      "what": "Teranode embeds the alert system's node interface: an alert adds outputs to the frozen list, whitelists confiscation transactions, invalidates a block or bans a peer, inside the node.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "services/alert/node.go",
+          "lines": [
+            160,
+            160
+          ],
+          "anchor": "InvalidateBlock",
+          "note": "block invalidation"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/alert/node.go",
+          "lines": [
+            189,
+            189
+          ],
+          "anchor": "BanPeer",
+          "note": "peer ban"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/alert/node.go",
+          "lines": [
+            274,
+            274
+          ],
+          "anchor": "AddToConsensusBlacklist",
+          "note": "the frozen list"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/alert/node.go",
+          "lines": [
+            397,
+            397
+          ],
+          "anchor": "AddToConfiscationTransactionWhitelist",
+          "note": "the confiscation whitelist"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "alertkey\\|CAlert",
+            "flags": "-ilw",
+            "paths": [
+              "src"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "The reference holds the same lists and takes them by RPC (`addToConsensusBlacklist`, `addToConfiscationTxidWhitelist`, src/rpc/frozentxo_rpc.cpp:904-908); [D] a reading, not read at a pin here: the alert system that signs and delivers them runs as a separate process and calls those RPCs (#94 states it).",
+      "counterpart_cites": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/rpc/frozentxo_rpc.cpp",
+          "lines": [
+            904,
+            908
+          ],
+          "anchor": "addToConsensusBlacklist"
+        }
+      ],
+      "depends": [
+        "#94 (the alert system)",
+        "the frozen-output and confiscation rules of the chain layer (corpus/chain/frozen)"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "The effect exists in both (the same lists, the same invalidation); what the reference lacks is the alert path inside the node. The difference is where the signed alert is checked, which #94 states; no client view moves.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.rejected-tx-gossip",
+      "map_row": "relay",
+      "map_id": "tx-relay",
+      "direction": "reference-lacks",
+      "surface": "the network-wide gossip of rejected transactions",
+      "what": "A Teranode node publishes each rejected transaction, with the reason, to every peer on the P2P rejected-transaction topic, so the network stops re-sending it.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "services/p2p/message_types.go",
+          "lines": [
+            126,
+            139
+          ],
+          "anchor": "type RejectedTxMessage struct",
+          "note": "the message"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/Server.go",
+          "lines": [
+            1324,
+            1324
+          ],
+          "anchor": "RejectedTxMessage{",
+          "note": "built"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/Server.go",
+          "lines": [
+            1350,
+            1350
+          ],
+          "anchor": "s.rejectedTxTopicName",
+          "note": "published"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "rejected_tx\\|rejectedtx",
+            "flags": "-il",
+            "paths": [
+              "src"
+            ],
+            "files": [
+              "src/frozentxo_logging.cpp",
+              "src/frozentxo_logging.h",
+              "src/rawtxvalidator.cpp",
+              "src/test/test_txnvalidator.cpp",
+              "src/txn_validator.cpp",
+              "src/txn_validator.h"
+            ],
+            "note": "a log field and the validator's `RejectedTxns` result type (txn_validator.h:36); no message"
+          }
+        ]
+      },
+      "counterpart": "The reference answers the sending peer alone with a `reject` message (src/protocol.cpp:37).",
+      "counterpart_cites": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/protocol.cpp",
+          "lines": [
+            37,
+            37
+          ],
+          "anchor": "REJECT = \"reject\""
+        }
+      ],
+      "depends": [
+        "#84's `invalidtx` event, which the gossip partly carries (row tl.invalidtx-sinks)",
+        "S7's P2P wire machine (#78)"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "A broadcast the reference never made (it tells the sender only); it is information a client can read where the reference offered the invalid-transaction sinks.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.websocket",
+      "map_row": "event surface",
+      "map_id": "event-surface",
+      "direction": "reference-lacks",
+      "surface": "the P2P service's websocket notifications (block, subtree, node status)",
+      "what": "Teranode streams notifications over a websocket: blocks, subtrees, and the node status (version, best block, FSM state, fee policy).",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "services/p2p/HandleWebsocket.go",
+          "lines": [
+            28,
+            30
+          ],
+          "anchor": "type notificationMsg struct",
+          "note": "the message and its type"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/server_helpers.go",
+          "lines": [
+            111,
+            111
+          ],
+          "anchor": "\"block\"",
+          "note": "type block"
+        },
+        {
+          "repo": "teranode",
+          "path": "services/p2p/Server.go",
+          "lines": [
+            1741,
+            1741
+          ],
+          "anchor": "\"node_status\"",
+          "note": "type node_status"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "websocket",
+            "flags": "-il",
+            "paths": [
+              "src"
+            ],
+            "files": []
+          }
+        ]
+      },
+      "counterpart": "The reference's block announcements are the ZMQ topics (row tl.zmq-announce).",
+      "counterpart_cites": [],
+      "depends": [
+        "#97 and #84: the websocket's `block` type is the Teranode carrier of the block announcements",
+        "a client following blocks on Teranode [D]"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "A transport the reference never had; it carries blocks and node status but no transaction event, which is why the removal topics stay a gap (row tl.zmq-removal).",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    },
+    {
+      "id": "rl.conflicting-record",
+      "map_row": "conflicts",
+      "map_id": "conflicts",
+      "direction": "reference-lacks",
+      "surface": "the stored `conflicting` mark on a transaction record and its counter-conflicting lookups",
+      "what": "Teranode keeps a transaction that lost a conflict as a record marked `conflicting`, with the children that spend it and a lookup of the transactions it conflicts with.",
+      "present": [
+        {
+          "repo": "teranode",
+          "path": "stores/utxo/fields/fields.go",
+          "lines": [
+            40,
+            42
+          ],
+          "anchor": "Conflicting FieldName = \"conflicting\"",
+          "note": "the mark and the children"
+        },
+        {
+          "repo": "teranode",
+          "path": "stores/utxo/Interface.go",
+          "lines": [
+            534,
+            541
+          ],
+          "anchor": "GetCounterConflicting",
+          "note": "the lookups and the setter"
+        }
+      ],
+      "absent": {
+        "listing": "reference-src-dirs",
+        "searches": [
+          {
+            "repo": "bitcoin-sv",
+            "pattern": "conflicting",
+            "flags": "-il",
+            "paths": [
+              "src",
+              ":!src/test",
+              ":!src/wallet"
+            ],
+            "files": [
+              "src/double_spend/dsattempt_handler.cpp",
+              "src/double_spend/dsattempt_handler.h",
+              "src/double_spend/dsdetected_message.h",
+              "src/scheduler.cpp",
+              "src/secp256k1/sage/group_prover.sage"
+            ],
+            "note": "the detector's in-flight state and two unrelated uses (an overload, a prover constraint); no stored mark on a transaction"
+          }
+        ]
+      },
+      "counterpart": "The reference removes the loser from its pool with reason CONFLICT (src/txmempool.cpp:1115-1116) and keeps no record of it; the removal event is its only trace (row tl.zmq-removal).",
+      "counterpart_cites": [
+        {
+          "repo": "bitcoin-sv",
+          "path": "src/txmempool.cpp",
+          "lines": [
+            1115,
+            1116
+          ],
+          "anchor": "MemPoolRemovalReason::CONFLICT"
+        }
+      ],
+      "depends": [
+        "#67's `conflictedByMinedSpend`, which on Teranode can be read from the store where the reference needs the journal (DESIGN-S6 section 1.4)",
+        "#90 (the UTXO store's spend order)"
+      ],
+      "ruling": {
+        "proposed": "new",
+        "reason": "State the reference never kept; it lets Teranode answer `conflictedByMinedSpend` from its own store, which #74 maps.",
+        "owner": {
+          "word": "new",
+          "date": "2026-10-15",
+          "by": "ruling_rule"
+        }
+      },
+      "breaks": [],
+      "section": "2b"
+    }
+  ],
+  "contract": {
+    "north_stars": {
+      "bsv": {
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/references/networkConsensusRules.md",
+            "lines": [
+              4,
+              4
+            ],
+            "anchor": "set in stone",
+            "label": "[LIT]"
+          }
+        ],
+        "quote": "These rules are **protocol level rules** that are **set in stone**",
+        "stack_page": {
+          "path": "<the maintainers' build host>:bsv-stack-lean/docs/BSV-NORTH-STAR.md",
+          "sha256": "e64800b53e71d6661f3fa17fc6fba7e35bd8343bb8fe0daa731c2b0cb4481d96",
+          "commit": "f212d02",
+          "read_utc": "2026-10-16T17:23:35Z",
+          "reads": [
+            "section 1: one chain, unbounded blocks, script as the law, and a read model in which nobody reads the chain (the whitepaper's section 8, simplified payment verification)",
+            "section 2: the chain gives verdicts (a transaction accepted or refused by a node's policy, a block mined, a merkle path valid against one header) and does not push, does not promise that a block stays, gives depth rather than finality",
+            "section 3: only headers and proofs are evidence",
+            "section 4: the six tests, T1 scale, T2 verify, T3 fast and cheap, T4 law, T5 trust, T6 executable"
+          ]
+        }
+      },
+      "teranode": {
+        "cites": [
+          {
+            "repo": "teranode",
+            "path": "docs/topics/teranodeIntro.md",
+            "lines": [
+              7,
+              7
+            ],
+            "anchor": "horizontal scaling approach",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/teranodeIntro.md",
+            "lines": [
+              9,
+              9
+            ],
+            "anchor": "over 1 million transactions per second",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              82,
+              82
+            ],
+            "anchor": "Subtrees are broadcast every second",
+            "label": "[LIT]"
+          },
+          {
+            "repo": "teranode",
+            "path": "docs/topics/architecture/teranode-overall-system-design.md",
+            "lines": [
+              174,
+              174
+            ],
+            "anchor": "No traditional mempool.",
+            "label": "[LIT]"
+          }
+        ],
+        "quote": "No traditional mempool. Transactions are immediately processed and organized into subtrees. Continuous validation and subtree creation replaces mempool functionality.",
+        "quote_cite": 3
+      }
+    },
+    "consensus": {
+      "column_rows": 478,
+      "runs": [
+        {
+          "name": "the record of cut 2",
+          "shape": "chunked: eight chunks on fresh instances and a repeat of the branch chunk",
+          "record": "docs/records/20261015-170946-s6-66-cut2q5-column-s3.md",
+          "row_text": "| **all** | **478** | **126** | **102** | **4** | **20** | **10** | **1** | **0** | **341** |",
+          "figures": {
+            "measured": 126,
+            "agree": 102,
+            "diverge": 4,
+            "non-judging": 20,
+            "no-verdict": 10,
+            "rpc-precheck": 1,
+            "unrealizable": 341
+          }
+        },
+        {
+          "name": "check 4",
+          "shape": "whole",
+          "record": "docs/records/20261015-233751-s8-97-contract-check4-s4b.md",
+          "projection": "docs/records/20261015-233751-s6-66-cut2-second-oracle-s3.json",
+          "figures": {
+            "measured": 125,
+            "agree": 101,
+            "diverge": 3,
+            "non-judging": 21,
+            "no-verdict": 11,
+            "rpc-precheck": 1,
+            "unrealizable": 341
+          }
+        },
+        {
+          "name": "check 5",
+          "shape": "whole",
+          "record": "docs/records/20261016-001926-s8-97-contract-check5-s4b.md",
+          "projection": "docs/records/20261016-001926-s6-66-cut2-second-oracle-s3.json",
+          "figures": {
+            "measured": 128,
+            "agree": 103,
+            "diverge": 4,
+            "non-judging": 21,
+            "no-verdict": 8,
+            "rpc-precheck": 1,
+            "unrealizable": 341
+          }
+        }
+      ],
+      "reference_column": {
+        "record": "docs/records/20261015-170946-s6-66-cut2q5-column-s3.md",
+        "row_text": "478 rows, 325 agree, 0 diverge, 6 non-judging, 7 rpc-precheck, 140 unrealizable, 0 pending [M]"
+      },
+      "rules_file": "harness/rules/second-oracle-scenarios.json",
+      "class_readings": {
+        "scenario.reconsider.revalidation-refused": "an operator RPC (`reconsiderblock`), never block validity",
+        "scenario.unrequested-body.regtest-bridge-admits": "the regtest bridge's admission of an unrequested equal-work body; on mainnet both nodes leave such a body unprocessed",
+        "scenario.invalidateblock.unmined-not-revalidated": "an operator RPC path (`invalidateblock`), never block validity"
+      },
+      "withheld": [
+        {
+          "row_sha256": "3c4d7cebd39f44b3b24314858f93195e2d84c510063f84e2871bcb816e3862d1",
+          "group": "D135"
+        }
+      ],
+      "theorems": [
+        {
+          "issue": "#89",
+          "name": "subtreeRoot_eq_blockMerkleRoot",
+          "says": "every root Teranode's check accepts for a block body of subtrees is the reference's merkle root of the same transaction ids in order"
+        },
+        {
+          "issue": "#89",
+          "name": "assembly_root_eq_blockMerkleRoot",
+          "says": "the root block assembly's partition produces is the flat root, whatever the subtree size"
+        },
+        {
+          "issue": "#90",
+          "name": "accepted_eq_mempool",
+          "says": "under sequential arrival, the transactions Teranode's store keeps are exactly those the reference's earliest-seen rule accepts, in the same order"
+        },
+        {
+          "issue": "#91",
+          "name": "teranode_word_eq_mempool_word",
+          "says": "the script flag word Teranode's validator computes for an unconfirmed parent equals the reference's mempool word"
+        },
+        {
+          "issue": "#91",
+          "name": "teranode_word_eq_block_word",
+          "says": "with the candidate-height option the block paths set, the word equals the reference's block word"
+        }
+      ],
+      "signer_theorems": [
+        {
+          "issue": "#149",
+          "name": "scriptCode_unlock_site",
+          "says": "the scriptCode a signature check hands the digest is the machine's codeSep (set at the script's start and at each executed OP_CODESEPARATOR, codeSep_sites), with the locking script appended when the check runs inside the unlocking script under SCRIPT_CHRONICLE; over a whole run of the unlocking script codeSep is a suffix of it containing the check, so under SCRIPT_CHRONICLE the scriptCode is strictly longer than the locking script (scriptCode_run); which executed separator is the last is stated over the whole run (codeSep_last, scriptCode_last)",
+          "src": "`src/script/interpreter.cpp:1471-1481`, `:1567-1577`, `:2338-2342`, `:2358-2362`, `:2402-2406`"
+        },
+        {
+          "issue": "#149",
+          "name": "codeSep_last",
+          "says": "along every run of the loop from a state whose codeSep is the script, under any opcode table whose continuations leave codeSep as they found it (the evaluator's own, opExec_codeSep), codeSep is the script from the byte after the last executed OP_CODESEPARATOR of the run so far, the script's start when none executed; at a signature check the scriptCode is that suffix, with the locking script appended inside the unlocking script under SCRIPT_CHRONICLE (scriptCode_last)",
+          "src": "`src/script/interpreter.cpp:405-407`, `:450`, `:459`, `:482`, `:1445-1448`, `:1471-1481`, `:1567-1577`"
+        },
+        {
+          "issue": "#149",
+          "name": "scriptCode_run",
+          "says": "in the unlocking phase, at every instruction the evaluator's loop reaches, codeSep is a suffix of the unlocking script containing that instruction; under SCRIPT_CHRONICLE the scriptCode is codeSep with the locking script appended, strictly longer than the locking script",
+          "src": "`src/script/interpreter.cpp:407`, `:1445-1448`, `:1471-1481`, `:1567-1577`, `:2338-2342`"
+        },
+        {
+          "issue": "#149",
+          "name": "digest_dispatch_chronicle",
+          "says": "a hash type carrying the CHRONICLE bit is signed over the original digest whatever its FORKID bit; FORKID without CHRONICLE, with SCRIPT_ENABLE_SIGHASH_FORKID, over the BIP143 digest",
+          "src": "`src/script/interpreter.cpp:2112-2124`"
+        },
+        {
+          "issue": "#149",
+          "name": "single_past_outputs",
+          "says": "under SIGHASH_SINGLE with no output at the signed input's index the original digest is the constant one, unhashed, and the BIP143 preimage's hashOutputs is thirty-two zero bytes",
+          "src": "`src/script/interpreter.cpp:2086-2100`, `:2034-2083`"
+        }
+      ]
+    },
+    "client_surfaces": [
+      {
+        "surface": "a verdict on a broadcast",
+        "methods": [
+          "sendrawtransaction"
+        ],
+        "teranode_cites": [
+          {
+            "repo": "teranode",
+            "path": "services/rpc/handlers.go",
+            "lines": [
+              926,
+              930
+            ],
+            "anchor": "ErrRPCVerify",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/bsvjson/jsonrpcerr.go",
+            "lines": [
+              41,
+              41
+            ],
+            "anchor": "ErrRPCVerify",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/handlers.go",
+            "lines": [
+              847,
+              856
+            ],
+            "anchor": "ErrRPCDeserialization",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/bsvjson/jsonrpcerr.go",
+            "lines": [
+              40,
+              40
+            ],
+            "anchor": "ErrRPCDeserialization",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/Server.go",
+            "lines": [
+              372,
+              373
+            ],
+            "anchor": "ErrRPCDecodeHexString",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/bsvjson/jsonrpcerr.go",
+            "lines": [
+              79,
+              79
+            ],
+            "anchor": "ErrRPCDecodeHexString",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/handlers.go",
+            "lines": [
+              865,
+              868
+            ],
+            "anchor": "ErrRPCInternal",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/bsvjson/jsonrpcerr.go",
+            "lines": [
+              21,
+              22
+            ],
+            "anchor": "-32603",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/handlers.go",
+            "lines": [
+              899,
+              903
+            ],
+            "anchor": "PreviousOutputsDecorate",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/rpc/handlers.go",
+            "lines": [
+              912,
+              915
+            ],
+            "anchor": "absurdly-high-fee",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              768,
+              773
+            ],
+            "anchor": "http.StatusConflict",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              774,
+              775
+            ],
+            "anchor": "ErrTxMissingParent",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              782,
+              784
+            ],
+            "anchor": "errors.ErrNonFinal",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              761,
+              765
+            ],
+            "anchor": "ErrTxExists",
+            "label": "[SRC]"
+          },
+          {
+            "repo": "teranode",
+            "path": "services/propagation/Server.go",
+            "lines": [
+              766,
+              767
+            ],
+            "anchor": "ErrFrozen",
+            "label": "[SRC]"
+          }
+        ],
+        "note": "the verdict, accepted or refused, is the contract; the error code is each node's own (Teranode answers every refusal its validator returns with RPC code -25, `ErrRPCVerify`, and the reason in the message, [SRC] `services/rpc/handlers.go:926-930`, `services/rpc/bsvjson/jsonrpcerr.go:41`; before validation it answers a string that is not hexadecimal -22 (`rpcDecodeHexError`, `handlers.go:847-848`, `services/rpc/Server.go:372-373`, `ErrRPCDecodeHexString`, `jsonrpcerr.go:79`), a transaction it cannot decode -22 (`ErrRPCDeserialization`, `handlers.go:853-856`, `jsonrpcerr.go:40`), a failure to store it -32603 (`ErrRPCInternal`, `handlers.go:865-868`, `jsonrpcerr.go:21-22`), and the absurd-fee ceiling's refusal -25 (`handlers.go:912-915`), and a parent it cannot read for the fee ceiling -25 (`handlers.go:899-903`)), so a client reads the verdict and the reason, never the code; Teranode's propagation service answers the same verdicts over HTTP, 409 for a double spend, 422 for a transaction whose parent it has not seen, 400 for a non-final one and 403 for a spend of a frozen output, and it answers 200 to a resubmission of a transaction it has already accepted",
+        "evidence": "family:mempool"
+      },
+      {
+        "surface": "blocks",
+        "methods": [
+          "getblock",
+          "getblockhash",
+          "getbestblockhash"
+        ],
+        "teranode_cites": [],
+        "evidence": "column"
+      },
+      {
+        "surface": "headers and the tips",
+        "methods": [
+          "getblockheader",
+          "getchaintips"
+        ],
+        "teranode_cites": [
+          {
+            "repo": "teranode",
+            "path": "services/asset/httpimpl/http.go",
+            "lines": [
+              376,
+              378
+            ],
+            "anchor": "/header/:hash",
+            "label": "[SRC]"
+          }
+        ],
+        "evidence": "column"
+      },
+      {
+        "surface": "a transaction by id",
+        "methods": [
+          "getrawtransaction"
+        ],
+        "teranode_cites": [],
+        "evidence": "contract"
+      },
+      {
+        "surface": "merkle proofs",
+        "methods": [
+          "getmerkleproof2"
+        ],
+        "teranode_cites": [
+          {
+            "repo": "teranode",
+            "path": "services/asset/httpimpl/http.go",
+            "lines": [
+              431,
+              433
+            ],
+            "anchor": "/merkle_proof/:hash",
+            "label": "[SRC]"
+          }
+        ],
+        "note": "the reference serves a proof by RPC (`getmerkleproof2`, the TSC form, spec/merkle-proof.md); Teranode serves one from its Asset Service over HTTP (`/merkle_proof/:hash`), not by RPC; either proof is checked by the client against its own headers",
+        "evidence": "merkle"
+      }
+    ]
+  },
+  "sections": {
+    "1": "consensus, set in stone: the rules of validity every node that follows the chain applies alike; no row of this ledger is one (a row is a surface, an event or a policy), and the page's section 1 is evidence from the runs and the theorems",
+    "2": "the protocol's client contract: what every node gives a client (a verdict on a broadcast, blocks, headers, merkle proofs); no row of this ledger is one, since both nodes give them, and the page's section 2 is evidence from the measured surfaces",
+    "2b": "a surface one implementation adds (the `new` rows): a client may use it on the node that carries it and does not require it of another",
+    "3": "beyond the protocol: SV-node's conveniences and its operator or peer surfaces, which Teranode does not carry by design; a client builds on section 2 instead"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "corpus": "signer",
+  "count_per_family": 40,
+  "files": [
+    {
+      "count": 40,
+      "expect": {
+        "invalid": 3,
+        "valid": 37
+      },
+      "family": "p2pkh",
+      "file": "p2pkh.jsonl",
+      "rules": {
+        "eras.spend.chronicle": 2,
+        "eras.spend.genesis": 2,
+        "sighash.bip143": 10,
+        "sighash.dispatch": 9,
+        "sighash.original": 9,
+        "tx.locktime": 4,
+        "tx.sequence": 4
+      },
+      "seed": "0xA92284F2451B6BD5",
+      "sha256": "5966ab867429fe074e30a1305be1e1fa14ba60b1057dab0db4bb068e8884c7f1",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 4,
+        "ALL|ANYONECANPAY|FORKID|CHRONICLE": 1,
+        "ALL|FORKID": 16,
+        "ALL|FORKID|CHRONICLE": 4,
+        "NONE|ANYONECANPAY|FORKID": 9,
+        "NONE|ANYONECANPAY|FORKID|CHRONICLE": 3,
+        "NONE|FORKID": 4,
+        "NONE|FORKID|CHRONICLE": 3,
+        "SINGLE": 1,
+        "SINGLE|ANYONECANPAY|FORKID": 4,
+        "SINGLE|ANYONECANPAY|FORKID|CHRONICLE": 3,
+        "SINGLE|FORKID": 5,
+        "SINGLE|FORKID|CHRONICLE": 4
+      },
+      "templates": {
+        "p2pkh": 61
+      }
+    },
+    {
+      "count": 40,
+      "expect": {
+        "valid": 40
+      },
+      "family": "p2pk",
+      "file": "p2pk.jsonl",
+      "rules": {
+        "eras.spend.genesis": 2,
+        "sighash.bip143": 8,
+        "sighash.dispatch": 20,
+        "sighash.original": 7,
+        "tx.locktime": 3
+      },
+      "seed": "0xCFA955140ADABC47",
+      "sha256": "7c89111c8be562b7514c5d9b5c3bbbbf9536f9396c8aadd5014f38acc63c6ea3",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 6,
+        "ALL|ANYONECANPAY|FORKID|CHRONICLE": 1,
+        "ALL|FORKID": 16,
+        "ALL|FORKID|CHRONICLE": 4,
+        "NONE|ANYONECANPAY|FORKID": 8,
+        "NONE|ANYONECANPAY|FORKID|CHRONICLE": 5,
+        "NONE|FORKID": 3,
+        "NONE|FORKID|CHRONICLE": 4,
+        "SINGLE|ANYONECANPAY|FORKID": 8,
+        "SINGLE|ANYONECANPAY|FORKID|CHRONICLE": 4,
+        "SINGLE|FORKID": 8,
+        "SINGLE|FORKID|CHRONICLE": 4
+      },
+      "templates": {
+        "p2pk": 71
+      }
+    },
+    {
+      "count": 40,
+      "expect": {
+        "valid": 40
+      },
+      "family": "multisig",
+      "file": "multisig.jsonl",
+      "rules": {
+        "crypto.checkmultisig": 31,
+        "eras.spend.genesis": 2,
+        "sighash.bip143": 1,
+        "sighash.original": 6
+      },
+      "seed": "0x6A5716614FB619E7",
+      "sha256": "eeb029e726a8063028c6e73471fd177f509174179774ae4d62e85ff53881f3d9",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 3,
+        "ALL|ANYONECANPAY|FORKID|CHRONICLE": 2,
+        "ALL|FORKID": 11,
+        "ALL|FORKID|CHRONICLE": 3,
+        "NONE|ANYONECANPAY|FORKID": 7,
+        "NONE|ANYONECANPAY|FORKID|CHRONICLE": 5,
+        "NONE|FORKID": 7,
+        "NONE|FORKID|CHRONICLE": 3,
+        "SINGLE|ANYONECANPAY|FORKID": 4,
+        "SINGLE|ANYONECANPAY|FORKID|CHRONICLE": 2,
+        "SINGLE|FORKID": 4,
+        "SINGLE|FORKID|CHRONICLE": 3
+      },
+      "templates": {
+        "multisig-1-of-1": 14,
+        "multisig-2-of-3": 21,
+        "multisig-3-of-3": 19
+      }
+    },
+    {
+      "count": 40,
+      "expect": {
+        "invalid": 20,
+        "valid": 20
+      },
+      "family": "checksig-in-unlock-a",
+      "file": "checksig-in-unlock-a.jsonl",
+      "rules": {
+        "crypto.checksig.unlock": 20,
+        "flags.sigpushonly": 20
+      },
+      "seed": "0x663ECE7E7E6E174E",
+      "sha256": "596976d20f5db2a2cdf2e6c0949a971689960c70a769573ba217f7ead43cee25",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 2,
+        "ALL|ANYONECANPAY|FORKID|CHRONICLE": 6,
+        "ALL|FORKID": 8,
+        "ALL|FORKID|CHRONICLE": 4,
+        "NONE|ANYONECANPAY|FORKID": 6,
+        "NONE|ANYONECANPAY|FORKID|CHRONICLE": 2,
+        "NONE|FORKID": 2,
+        "NONE|FORKID|CHRONICLE": 4,
+        "SINGLE|ANYONECANPAY|FORKID": 4,
+        "SINGLE|ANYONECANPAY|FORKID|CHRONICLE": 4,
+        "SINGLE|FORKID": 6,
+        "SINGLE|FORKID|CHRONICLE": 2
+      },
+      "templates": {
+        "checksig-in-unlock-a": 50
+      }
+    },
+    {
+      "count": 41,
+      "expect": {
+        "invalid": 21,
+        "valid": 20
+      },
+      "family": "checksig-in-unlock-b",
+      "file": "checksig-in-unlock-b.jsonl",
+      "rules": {
+        "crypto.checksig.unlock": 20,
+        "flags.sigpushonly": 21
+      },
+      "seed": "0xD1586B23BBD70130",
+      "sha256": "0cbec5ba743850226c5fe0bf954a7cf9bf4836df382a1f2dda98c395b492bda8",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 10,
+        "ALL|FORKID": 13,
+        "NONE|ANYONECANPAY|FORKID": 10,
+        "NONE|FORKID": 6,
+        "SINGLE|ANYONECANPAY|FORKID": 12,
+        "SINGLE|FORKID": 8
+      },
+      "templates": {
+        "checksig-in-unlock-b": 59
+      }
+    },
+    {
+      "count": 40,
+      "expect": {
+        "valid": 40
+      },
+      "family": "version",
+      "file": "version.jsonl",
+      "rules": {
+        "flags.version-gate": 40
+      },
+      "seed": "0xB5C903A751804CCC",
+      "sha256": "307bce571c838d78a0d2958f8aef912e209216a76ceeaf25d80b3d1ffccc58ec",
+      "sighash_types": {
+        "ALL|ANYONECANPAY|FORKID": 2,
+        "ALL|FORKID": 10,
+        "ALL|FORKID|CHRONICLE": 4,
+        "NONE|ANYONECANPAY|FORKID": 6,
+        "NONE|ANYONECANPAY|FORKID|CHRONICLE": 2,
+        "NONE|FORKID": 8,
+        "NONE|FORKID|CHRONICLE": 2,
+        "SINGLE|ANYONECANPAY|FORKID": 8,
+        "SINGLE|ANYONECANPAY|FORKID|CHRONICLE": 2,
+        "SINGLE|FORKID": 6,
+        "SINGLE|FORKID|CHRONICLE": 2
+      },
+      "templates": {
+        "p2pk": 22,
+        "p2pkh": 30
+      }
+    }
+  ],
+  "format": "corpus/signer/README.md",
+  "generated": "2026-10-16",
+  "generator": "bsv-script-harness signer_gen 0.1.0 (#145 piece 1, lane sign-145a; harness/src/signer.rs)",
+  "provenance": "docs/PROVENANCE.md §1a (bitcoin-sv v1.2.3 6504a3af, bsv-rs 0.5.0); throwaway keys sha256 of a label and a draw of the family's stream; synthetic outpoints sha256 of the row id and input; no transaction of any private program",
+  "salt": "each family's seed is the corpus seed xor the leading 16 hex digits of sha256(\"spec-signer-corpus family <F>\")",
+  "seed": "0x5167014500000001"
+}

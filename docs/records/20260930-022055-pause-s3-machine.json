@@ -1,0 +1,28 @@
+{
+  "studio [M]": {
+    "stamp [M]": "2026-09-30T02:29:05Z",
+    "stamp [M] exit [X]": 0,
+    "uptime [M]": "22:29  up 7 days,  5:30, 10 users, load averages: 2.41 2.61 2.61",
+    "uptime [M] exit [X]": 0,
+    "free_memory [M]": "System-wide memory free percentage: 85%",
+    "free_memory [M] exit [X]": 0,
+    "swap [M]": "total = 4096.00M  used = 2399.25M  free = 1696.75M  (encrypted)",
+    "swap [M] exit [X]": 0,
+    "disk [M]": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1s1   460Gi    12Gi    30Gi    29%    459k  312M    0%   /",
+    "disk [M] exit [X]": 0
+  },
+  "box [M]": {
+    "stamp [M]": "2026-09-30T02:29:05Z",
+    "stamp [M] exit [X]": 0,
+    "uptime [M]": "22:29  up 5 days,  7:04, 3 users, load averages: 2.13 2.02 2.97",
+    "uptime [M] exit [X]": 0,
+    "free_memory [M]": "System-wide memory free percentage: 88%",
+    "free_memory [M] exit [X]": 0,
+    "swap [M]": "total = 2048.00M  used = 958.81M  free = 1089.19M  (encrypted)",
+    "swap [M] exit [X]": 0,
+    "disk [M]": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1s1   460Gi    13Gi    52Gi    21%    484k  544M    0%   /",
+    "disk [M] exit [X]": 0
+  },
+  "builds_started [D]": 0,
+  "paid_apps_started [D]": 0
+}

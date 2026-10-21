@@ -1,0 +1,172 @@
+#!/usr/bin/env bash
+# eval/bsvs: the evaluator CLI (#14), compiled from the Lean (lean/Bsvs/Main.lean, the lake exe `bsvs`).
+# Builds the binary on first use (or with BSVS_REBUILD=1), stamps the run with the repo's commit
+# (the `spec@<commit>` key of docs/DESIGN.md §6) and the repo root (for --self-test), and execs it.
+# THE GUARD (A23, the parent's lens's ask A1; S1, 2026-09-27): the build runs only where lean/.lake/packages
+# exists (the plan's shared Lean cache, or the tripwire container's baked one: a build without it clones and
+# builds Mathlib in the worktree) and only inside a held slot of the plan's Lean lock (the helper the maintainers' host file
+# tools/host_private.sh names as LEAN_LOCK_SH exports LEAN_LOCK_SLOT); otherwise it refuses, says why, and exits 3.
+# THE LOCK IS THE MAINTAINERS' (the public reader, 2026-10-21): where no lock helper exists (LEAN_LOCK_SH unset and no
+# tools/host_private.sh naming one, or the path names no file), as in the public edition, the build runs without a lock
+# and says so in one line; where the helper exists, the held slot stays mandatory.
+# THE STAMP (lean #32's second lens, finding B-4, and its re-lens, BN-1 and BN-3; S1, 2026-09-29): a present binary
+# runs only when Lake finds it up to date with the Lean sources of the tree (`lake build --no-build bsvs` builds
+# nothing and exits 3 when a build is required, Lake v4.34.0 `Build/Run.lean:275`, `377`); else it refuses with exit 3
+# (rebuild with BSVS_REBUILD=1 inside a held slot). Any other failure of that check is reported with Lake's exit code
+# and its last line, and refused with exit 3 too. The check is not a pure read: Lake first loads the workspace, which
+# MATERIALIZES every package of the manifest, leaving one alone only when its directory exists and its HEAD is the
+# manifest's revision; otherwise it fetches, checks out and cleans it, or deletes it and clones it again (Lake v4.34.0
+# `Load/Materialize.lean:255–264`, `updateGitRepo` above it; an absent one is cloned), in `lean/.lake/packages`, which
+# is the plan's package cache every checkout of the key shares. A test under `GIT_DIR=/nonexistent` made Lake delete
+# and re-clone the shared Mathlib on 2026-09-29 (lean #32's re-lens record). So THE GUARD before every Lake run: the
+# wrapper unsets every `GIT_*` variable by name (never by parsing values: a value that is not UTF-8 stops `sed`), and
+# refuses (exit 3) when one cannot be unset (bash 3.2 lists an environment name that is not an identifier, such as
+# `GIT_A-B`, and `unset` refuses it; lean #32's fourth re-lens, B4N-3) or remains, when `lean/.lake/package-overrides.json` exists (Lake overlays the manifest with
+# it, `Load/Resolve.lean:603`), when git or python3 cannot run, and unless every package of `lean/lake-manifest.json`
+# sits at its revision, Lake's own condition, read the same way (`git rev-parse --verify`) in the environment Lake
+# inherits; then Lake has nothing to fetch, and the check reads Lake's traces (1 to 7 s and a peak memory footprint of some
+# 155 MB on the Studio by `/usr/bin/time -l`, 2026-09-29; it takes no Lean lock), writing Lake's `.nobuild` trace
+# beside an out-of-date target (`Build/Common.lean:313–317`). It runs once per state of the sources and
+# the binary: the fingerprint (the HEAD commit, read once, with its `lean` tree; the `lean/` sources changed against
+# that commit and the untracked ones; the binary's mtime and inode; without a HEAD at the root, the names and contents
+# of the `lean/` sources) is taken before the check and again after it, and kept beside the binary only when the two agree:
+# if the sources or the binary moved during the check, the run is refused (exit 3). The digest is SHA-256
+# (`sha256sum` or `shasum -a 256`), else POSIX `cksum`. The stamp is `spec@<commit>` of that same HEAD when `lean/` has no
+# uncommitted change, `spec@<commit>+dirty` when it has, and `spec@unknown` without a HEAD at the root (git itself
+# is required by THE GUARD): a verdict is keyed by the
+# sources it was computed from, never by a HEAD it was not. A `+dirty` or `unknown` stamp is a local run's, never a
+# record's (`eval/README.md`). A caller's own `--commit` or `--root` is refused. What the fingerprint cannot see is a
+# rebuild of the binary in this worktree between the check and the exec, and a change undone within the check's
+# seconds; one writer per worktree rules out the first (the wrapper holds no Lean lock).
+#   eval/bsvs eval --tx <hex|@file> --prevouts '<json array>|@file' [--spend-height N] [--consensus true|false]
+#                  [--flags <u32|json array>] [--config sv|teranode|sv-regtest] [--genesis-height N]
+#                  [--chronicle-height N] [--input I] [--trace] [--pretty]
+#   eval/bsvs corpus <file.jsonl> [--out <file.jsonl>] [--config sv|teranode|sv-regtest] [--genesis-height N] [--chronicle-height N]
+#   eval/bsvs sighash --tx <hex|@file> --scriptcode <hex> --type <u32> [--input I] [--amount <satoshis>] [--forkid true|false]
+#   eval/bsvs --self-test
+#   eval/bsvs --version
+set -euo pipefail
+for v in "${!GIT_@}"; do unset "$v" 2>/dev/null || { echo "eval/bsvs: refusing to run: cannot unset $v, which Lake and git would inherit" >&2; exit 3; }; done
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+BIN="$ROOT/lean/.lake/build/bin/bsvs"
+# THE GUARD (see the header): no Lake run unless every package of the manifest is at its revision
+guard_packages() {
+  if [ -n "${!GIT_*}" ]; then
+    echo "eval/bsvs: refusing to run Lake: git environment variables remain (${!GIT_*}); Lake would inherit them" >&2
+    exit 3
+  fi
+  if [ -e "$ROOT/lean/.lake/package-overrides.json" ]; then
+    echo "eval/bsvs: refusing to run Lake: $ROOT/lean/.lake/package-overrides.json overlays the manifest's packages (Lake v4.34.0 Load/Resolve.lean:603, Config/Workspace.lean:212-213), which this check does not read" >&2
+    exit 3
+  fi
+  if ! command -v git >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1; then
+    echo "eval/bsvs: refusing to run Lake: git and python3 are needed to check its packages first (without git, Lake deletes a package it cannot read and then cannot clone it)" >&2
+    exit 3
+  fi
+  local bad
+  if ! bad="$(python3 - "$ROOT/lean" <<'PY'
+import json, os, subprocess, sys
+lean = sys.argv[1]
+m = json.load(open(os.path.join(lean, "lake-manifest.json")))
+pdir = os.path.join(lean, m.get("packagesDir") or ".lake/packages")
+bad = []
+for p in m.get("packages", []):
+    if p.get("type") != "git":
+        continue
+    d = os.path.join(pdir, p["name"])
+    if not os.path.isdir(d):
+        bad.append(p["name"] + " (absent)")
+        continue
+    r = subprocess.run(["git", "rev-parse", "--verify", "--end-of-options", "HEAD"], cwd=d, capture_output=True, text=True)
+    head = r.stdout.strip() if r.returncode == 0 else ""
+    if head != p.get("rev"):
+        bad.append(p["name"] + " (at " + (head[:12] or "no HEAD") + ", the manifest " + str(p.get("rev"))[:12] + ")")
+print("; ".join(bad))
+PY
+)"; then
+    echo "eval/bsvs: refusing to run Lake: the check of its packages failed to run" >&2
+    exit 3
+  fi
+  if [ -n "$bad" ]; then
+    echo "eval/bsvs: refusing to run Lake: packages not at the manifest's revisions: $bad; Lake would fetch, check out and clean them, delete and clone them again, or clone an absent one, in the package cache every checkout of this key shares (Lake v4.34.0 Load/Materialize.lean:255-264); repair the cache (the helper tools/host_private.sh names as LEAN_CACHE_PY), then run again" >&2
+    exit 3
+  fi
+}
+if [ ! -x "$BIN" ] || [ "${BSVS_REBUILD:-0}" = 1 ]; then
+  if [ ! -e "$ROOT/lean/.lake/packages" ]; then
+    echo "eval/bsvs: refusing to run \`lake build bsvs\`: $ROOT/lean/.lake/packages is absent, so the build would clone and build Mathlib in this worktree; link the plan's shared Lean cache first, or build in the tripwire's container (A23)" >&2
+    exit 3
+  fi
+  # THE LOCK IS THE MAINTAINERS' (see the header): the helper from the environment, else from the host file's line
+  LOCK_HELPER="${LEAN_LOCK_SH:-}"
+  if [ -z "$LOCK_HELPER" ] && [ -f "$ROOT/tools/host_private.sh" ]; then
+    LOCK_HELPER="$(sed -n 's/^LEAN_LOCK_SH="\(.*\)"$/\1/p' "$ROOT/tools/host_private.sh" | head -n 1)"
+    LOCK_HELPER="${LOCK_HELPER//\$HOME/$HOME}"
+  fi
+  if [ -n "$LOCK_HELPER" ] && [ -f "$LOCK_HELPER" ]; then
+    if [ -z "${LEAN_LOCK_SLOT:-}" ] || [ ! -f "${LEAN_LOCK_SLOT}/holder" ]; then
+      echo "eval/bsvs: refusing to run \`lake build bsvs\`: no slot of the plan's Lean lock is held; source the Lean lock helper tools/host_private.sh names as LEAN_LOCK_SH and run \`lean_lock_take <W>\` in the same shell, before this (A23)" >&2
+      exit 3
+    fi
+  else
+    echo "eval/bsvs: no Lean lock helper here (LEAN_LOCK_SH names no file); building bsvs without a lock" >&2
+  fi
+  guard_packages
+  ( cd "$ROOT/lean" && lake build bsvs 2>&1 | grep -v "^trace:" | tail -1 >&2 )
+fi
+for arg in "$@"; do
+  case "$arg" in
+    --commit|--commit=*|--root|--root=*)
+      echo "eval/bsvs: refusing a caller's $arg: the wrapper stamps the commit of the sources the binary is up to date with, and the root" >&2
+      exit 3 ;;
+  esac
+done
+# the fingerprint of the sources and the binary (see THE STAMP above)
+if command -v sha256sum >/dev/null 2>&1; then HASHER="sha256sum"
+elif command -v shasum >/dev/null 2>&1; then HASHER="shasum -a 256"
+else HASHER="cksum"; fi
+digest() { $HASHER | cut -c1-16; }
+if HEADSHA="$(git -C "$ROOT" rev-parse --verify -q HEAD 2>/dev/null)"; then
+  GIT=1
+  LEANTREE="$(git -C "$ROOT" rev-parse "$HEADSHA:lean" 2>/dev/null || echo none)"
+  EMPTY="$(printf '' | digest)"
+else
+  GIT=0; HEADSHA=""; LEANTREE="nogit"; EMPTY=""
+fi
+sources() {
+  if [ "$GIT" = 1 ]; then
+    { git -C "$ROOT" diff "$HEADSHA" -- lean; git -C "$ROOT" ls-files -o --exclude-standard -z -- lean | xargs -0 cat 2>/dev/null || true; } | digest
+  else
+    ( cd "$ROOT" && find lean -path lean/.lake -prune -o -type f \( -name '*.lean' -o -name 'lakefile.*' -o -name 'lake-manifest.json' -o -name 'lean-toolchain' \) -print | LC_ALL=C sort | while IFS= read -r f; do printf '%s\n' "$f"; cat "$f"; done ) | digest
+  fi
+}
+binstat() { if stat -c '%Y %i' "$BIN" >/dev/null 2>&1; then stat -c '%Y %i' "$BIN"; else stat -f '%m %i' "$BIN"; fi; }
+CHANGED="$(sources)"
+FP="$LEANTREE $CHANGED $(binstat)"
+if [ "$(cat "$BIN.fingerprint" 2>/dev/null)" != "$FP" ]; then
+  if [ ! -e "$ROOT/lean/.lake/packages" ]; then
+    echo "eval/bsvs: refusing to run a binary it cannot check: $ROOT/lean/.lake/packages is absent (A23)" >&2
+    exit 3
+  fi
+  guard_packages
+  if CHECK="$(cd "$ROOT/lean" && lake build --no-build bsvs 2>&1)"; then RC=0; else RC=$?; fi
+  if [ "$RC" = 3 ]; then
+    echo "eval/bsvs: refusing to run $BIN: it is not up to date with the Lean sources (lake build --no-build bsvs exits 3, a build is required); rebuild it with BSVS_REBUILD=1 inside a held slot of the plan's Lean lock (lean #32, B-4)" >&2
+    exit 3
+  elif [ "$RC" != 0 ]; then
+    echo "eval/bsvs: refusing to run $BIN: Lake's up-to-date check failed with exit $RC, not a verdict on the binary: $(printf '%s\n' "$CHECK" | grep -v '^trace:' | tail -1)" >&2
+    exit 3
+  fi
+  if [ "$FP" != "$LEANTREE $(sources) $(binstat)" ] || { [ "$GIT" = 1 ] && [ "$(git -C "$ROOT" rev-parse --verify -q HEAD 2>/dev/null)" != "$HEADSHA" ]; }; then
+    echo "eval/bsvs: refusing to run $BIN: the Lean sources, the HEAD or the binary moved while Lake checked them; run again (lean #32, BN-1)" >&2
+    exit 3
+  fi
+  printf '%s\n' "$FP" > "$BIN.fingerprint.$$" && mv "$BIN.fingerprint.$$" "$BIN.fingerprint"
+fi
+if [ "$GIT" = 1 ]; then
+  COMMIT="$(git -C "$ROOT" rev-parse --short "$HEADSHA")"
+  if [ "$CHANGED" != "$EMPTY" ]; then COMMIT="$COMMIT+dirty"; fi
+else
+  COMMIT="unknown"
+fi
+exec "$BIN" --root "$ROOT" --commit "$COMMIT" "$@"

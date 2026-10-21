@@ -1,0 +1,766 @@
+[export: 4 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: 28477a62 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20261018-161514 UTC; wall: 168s (2 min 48 s)
+host: box; load at start: 3.13 4.87 5.67; load at end: 5.49 5.22 5.67
+status: GREEN
+legs (the verdict lines, in order):
+  check-parameters: GREEN (17 inherited fields; 81 chain fields: 9 consensus / 72 policy including node settings; names, order, kinds, defaults, presence; 17 network fields / 4 networks / 68 cells; import direction)
+  chain lint: GREEN [X] (64 files, 0 clock, IO or network reads under lean/BsvChain; 0 network records or census defaults named by a definition outside Params.lean, 4 allowlisted with reasons)
+  check-pins: GREEN (96 sites agree with docs/PROVENANCE.md §1a; 6 skipped by name: the built gobdk-runner, the go-chaincfg clone, the ts-stack clone, the predecessor-harness clone, the predecessor-lean clone, the zmq build)
+  fmt: GREEN [X]: cargo fmt --all -- --check under harness/ at rustfmt 1.9.0-stable (toolchain 1.95.0): 80 .rs files, 0 differ
+  clippy: GREEN [X]: cargo clippy --locked --keep-going --all-targets -- -D warnings under harness/ (toolchain 1.95.0): 0 warnings; unwrap_used, expect_used, panic denied by harness/Cargo.toml; 2 s
+  cite_check: [LIT] docs/BLOCKS-ARCHIVE.md: closed to model turns, not opened
+  cite_check: [LIT] docs/recon.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-26-lens-S3r1-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-26-lens-S4b-commits-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S1-block-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S1-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S1-sitting2-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S1-sitting3-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S2-block-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S2-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S2-sitting4-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S3-fold-sitting3-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S3r2-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-block-by-S4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-sitting3-block-by-S4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-28-lens-S1-sitting4-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-28-lens-S3-sitting3-end-by-S3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting5-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting6-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting7-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S1-sitting8-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting6-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting7-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting8-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9b-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S2-sitting9c-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting5-by-S4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting6-by-S4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens-S4b-sitting7-by-S4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partA-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partB-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partC-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-partD-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partA-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partB-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partC-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens-partD-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens2-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens3-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-harness-relens4-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partA-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partB-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partC-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-partD-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partA-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partB-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partC-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens-partD-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-properties-relens2-by-S2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partA-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partB-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partC-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-partD-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partA-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partB-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partC-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens-partD-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partA-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partB-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partC-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens2-partD-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partA-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partB-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partC-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens3-partD-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partA-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partB-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partC-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-29-lens32-trust-relens4-partD-by-S1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-30-s3-opener-lens-s1-sitting10.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-09-30-s3-opener-lens-s2-sitting10.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-10-06-confirming-lens-32-by-sol.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-10-06-final-lens-32-harness-by-sol.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-10-06-final-lens-32-lean-a-by-sol.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/2026-10-06-final-lens-32-lean-b-by-sol.md: closed to model turns, not opened
+  cite_check: [LIT] docs/audit/README.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260923-1143-svnode-smoke-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-025740-eras-engines-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-030828-svnode-record-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-040437-gen-first-cut-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-051100-gen-rerecord-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-110732-d15-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-114622-d72-rerecord-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260924-150154-sighash-family-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-205320-ladder45-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-205650-gobdk-shim-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-210253-gobdk-shim-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-210609-rules-check-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-211729-gobdk-hunk-d83c-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-211841-ladder45-after-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-213535-diff45-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-213915-run-diff-d83c-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-215135-tx-families-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260926-231004-txroad-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-023153-witness-replay-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-030651-gen-redesign-red-s3r2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-030904-toolchain-dryrun-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-031436-diff-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-044619-gen-redesign-s3r2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-050002-release-bsv-rs-0.3.29-t3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-083627-gen-redesign-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-085525-pipefail-grep-audit-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-120430-post-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-122126-witness-replay-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-125018-decoder-wall-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-125717-pool-lock-45-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-130311-repin-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-152550-release-bsv-rs-0.3.30-t3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-165145-pool-lock-45b-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-165244-tripwire-negatives-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-170817-d135-sdk-classes-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-171920-official-v122-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-174629-diff-bsv-rs-0.3.30-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-181348-coverage-v122-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-183819-seed1m-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-225753-ff-sigops-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260927-231608-d123-road-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-110928-47-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-111408-num2bin-memory-relabel-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-113333-road-a3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-113357-million-witnesses-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-114104-d135-filing-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-115150-replay-173805-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-120047-stacked-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-121537-diff24-full-corpus-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-152551-road-b-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260928-155752-road-a4-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-013146-rejudge-48-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-013409-mathlib-surface-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-013700-foreign-fixture-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-014620-gadget-api-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-015132-consumer-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-020042-ladder48-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-020414-narrowing-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-051445-patches-35-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-054539-recon-1-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-054850-gadget-hashlock-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-055242-d135-ghsa-state-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-070435-lens32-s1-patch-s2-notes.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-070435-lens32-s1-patch-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-072759-impl-50-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-073117-ladder50-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-080436-patches-s7-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-080537-lens32-s1-patch-v2-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-085123-codec-53-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-091340-lens32-s1-patch-v3-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-093156-f1-int64-node-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-093610-patch-v3-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-094751-ladder53-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-120456-witness-census-lens32-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-122316-trust32-fixes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-124515-trust32-patch-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-124515-trust32-patch-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s2-v2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s3-v2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-140334-trust32-patch-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-140334-trust32-relens-fixes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-142257-memory-s4b-runs-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s2-v3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s3-v3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-151244-trust32-patch-s4b-v2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-151244-trust32-relens2-fixes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-151524-f1-mini-node-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-152447-witness-census2-lens32-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-152956-lens32-3-s3-patch-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-152956-lens32-3-s4b-patch-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-160241-f1-gobdk-teranode-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-170732-trust32-axiomcheck-unbreak-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s2-v4.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s3-v4.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-174125-trust32-patch-s4b-v3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-174125-trust32-relens3-fixes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-174329-endblock-relaunch-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-181102-lens32-3-s3-patch-s2-v2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-181102-lens32-3-s4b-patch-s2-v2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-212842-cite-nearmiss-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-212842-trust32-patch-s2-v5.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-212842-trust32-patch-s4b-v4.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-212842-trust32-relens4-fixes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-214540-consumer-v020-35-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-220055-endblock-relaunch2-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260929-235431-million-replay-price-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-000628-continue55-endblock-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-001041-continue55-landing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-003303-harness31-seed-results-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-003618-cite-history-before-open-proposal-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-003619-continue56-routing-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-004205-continue56-sub-launches-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-004447-harness31-stranger-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-004625-continue56-endblock-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-005647-cite-preopen-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-005734-s2-sitting10.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-013839-continue57-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-013839-d1-checksig-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20260930-022055-pause-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-212527-instance41-build.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-220818-recon-2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-221333-owner-rulings-32.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-224016-owner-rulings-32-p.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-225025-ecdsa-identity-0.3.30-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-231710-repin51-52-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-231921-harness31-stranger.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-233745-harness31-prereqs-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261005-234745-instance41-seed.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-000348-instance41-build-v0160.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-005415-repin55.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-010651-r1-reading-public.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-010751-r2-txroad.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-011505-export-dry-run-46.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-012414-writeup-33.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-013805-instance41-corpora.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-014513-repin54.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-014603-r1-lean.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-015406-r3-r4-rules.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-015712-export-dry-run-46b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-021213-export-dry-run-34.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-022032-bump-bsv-rs-0.3.32-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-034757-r1-harness-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-035957-retally-32.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-041632-open32-restated.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-050228-fix32-pages.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-050557-fix32-rust.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-050824-cpp-replay-49.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-054540-merge32-49.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-055420-scrub-46.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-101531-fix32-final-lean-b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-101717-fix32-final-lean-a.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-102748-fix32-final-harness.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-104804-security-reports-filed.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-110545-modal-leg-not-run-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-125206-modal-56.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-140418-r1-lengths.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-140712-export-rehearsal-34.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-141025-r1-x86.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-143018-recon-3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-143954-cpp-era-49.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-144350-node-v1.2.3-build.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-151048-repin-123-harness.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-152845-repin-123-lean.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-164707-repin-123-harness.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-173640-repin-123-join.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-175601-cite-123.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-185728-withhold-split.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261006-194850-withhold-reader.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261007-014131-x86-123.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261007-020917-bump-bsv-rs-0.3.33-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-001901-pre-read-reads-cap.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-002025-repin-gosdk-172-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-011846-bump-bsv-rs-0.4.4-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-023741-s6-59-census.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-130536-export-prep-101-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-130619-s6-60-finality.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-131102-export-prep-102-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-151100-s6-61-utxo.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-163524-intake-22-s6.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-164313-s6-76-oracle.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-164656-s6-63-block.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-172834-s6-62-mempool.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261012-190104-s6-64-chain.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-024612-s6-66-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-032121-s6-66b-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-041541-s6-66c-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-045648-s6-66-utx-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-045710-s6-66-fin-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-045714-s6-66-blk-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-045854-s6-66-mem-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-045905-s6-66-chn-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-061601-s6-66-agg-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-061734-s6-66-chn2-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-061948-s6-66-mem2-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-073532-s6-66-leg-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-074933-s6-66-chn3-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-075032-s6-66-mem3-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-082500-fix-66b-verification-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-135430-export-dry-run-l2-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-141426-s6-65-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-141521-s6-65-intake-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-141803-s6-67-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-142247-s6-67-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-144556-s6-pend-66-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-144652-export-dry-run-l2b-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-152446-s6-peer-66-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-155748-s6-peer-66-era-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-160213-s6-peer-66-chain-era-clear-10000-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-160310-s6-peer-66-chain-era-clear-14999-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-160502-s6-peer-66-chain-era-clear-15000-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-161120-s6-peer-66-chain-unrequested-equal-work-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-161732-s6-fix-67-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-162245-s6-fix-pend2-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-162818-s6-peer-66-queue-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-165052-receipt-trim-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-172431-s6-fix-67b-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-180516-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-180630-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-180718-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-180859-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-181110-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-181458-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-184430-s6-66-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-192835-s6-one-peer-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-200620-s6-reclass-66b-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-222151-s6-68b-theorems.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-225755-s6-77-lint-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261013-234938-wallet-build-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-002257-s6-69-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-011818-relay-pass-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-012252-s6-attr-o2-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-013925-s6-73-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-013947-s6-71-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-015319-s6-75-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-024631-s6-72-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-030838-s6-72-views-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-032012-s6-72-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-032207-s6-70-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-033243-s6-72-views-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-045723-s6-wallet-rows-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-060331-chain-leg-wall-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-061017-s6-77-quantification-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-061809-stale-cost-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-064622-s6-det-wallet-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-192805-cross-read-int64-delta-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-212357-speed-117-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-212637-bench-baseline-gate-137.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-213736-jscpd-baseline-138-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-213924-xread-139-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-213950-column-bsv-rs-0.5.0-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-214035-column-go-sdk-v1.7.2-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-214119-column-ts-sdk-3.0.0-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-214149-deny-gate-133.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-214302-consumer-contract-dryrun-112-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-214417-jscpd-tip-138-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-215315-column-dryruns-124-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-215508-s6-74-second-oracle-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-215634-abs-96-verify-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-215715-map-87-verify-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-215738-jscpd-baseline-stacked-138-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-220400-abs-96-verify-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-221006-merkle-89-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-222413-spend-90-lean.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-223441-fix-merkle-89-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261014-225138-clippy-gate-132.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-032847-bench-cold-rule-137-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-033629-jscpd-cut-138-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-033715-cite-anchoring-pass-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-034125-s8-97-trait-witness-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-035305-subtree-mainnet-vectors-89-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-035435-s7-84-events-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-035438-s7-85-rpc-contract-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-040959-s6-66-cut2-instance-exit-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-041807-s6-66-cut2-second-oracle-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-105318-s6-74-status-column-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-110609-s7-86-wire-views-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-110731-s7-83-minerid-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-112003-s7-85-rpc-leg-wiring-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-115907-land-w2d-stack-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-123053-s6-66-cut2-teranode-verify-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-125403-s7-78-p2p-machine-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-130103-s7-81-persist-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-130232-s7-82-prune-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-130610-s6-66-cut2-second-oracle-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-132006-security-reports-filed-102-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-132239-fuzz-campaign-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-133409-s8-93-chain-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-133842-s5-37-cleanroom-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-134833-fuzz-house-read-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-135020-s8-92-lifetimes-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-135055-land-w2f-stack-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-135113-s7-78-p2p-machine-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-140600-s7-81-persist-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-142357-land-w2g-stack-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-144252-s6-66-cut2-second-oracle-recovery-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-144947-s8-94-alert-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-145229-land-w2h-stack-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-145441-s6-66-cut2-second-oracle-adjudication-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-150411-fuzz-cut2-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-151316-s6-66-cut2-second-oracle-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-151403-fix-s8-94-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-155734-s6-66-cut2q4-reruns-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-160706-s6-66-cut2q4-spends-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-160744-s6-66-cut2q4-sentinel-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162254-s6-66-cut2q5-oracle-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162309-s6-66-cut2q5-utxo-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162336-s8-88-refinement-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162356-s6-66-cut2q5-finality-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162459-s6-66-cut2q5-mempool-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162637-s7-79-compact-blocks-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-162833-s6-66-cut2q5-chain-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-163233-s6-66-cut2q5-block-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-163630-s6-66-cut2q5-scenarios-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-165715-s7-80-double-spend-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-170946-s6-66-cut2q5-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-173931-fix-s7-79-compact-lens-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-210200-xread-139-part3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-213309-security-reports-filed-66-t1-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-214744-security-reports-filed-82-f4-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-223120-s8-96-rulings-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-223929-s8-97-contract-check-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-232417-s8-97-contract-check2-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-233121-s8-97-contract-check3-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261015-233751-s8-97-contract-check4-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-001926-s8-97-contract-check5-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-135453-fuzz-cut3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-142654-s1-142-num2bin-early-refusal-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-152614-s1-143-elem-bytearray-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-172953-s8-140-node-client-contract-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-185844-s4b-144-checksig-in-unlock-signers-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-192344-s4b-145-signer-adapter-go-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-192436-s4b-145-signer-adapter-ts-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-192742-s3-146-fixtures-export-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-193439-s3-145a-signer-corpus-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-203024-s3-145d-signer-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-204842-s3-146b-signer-fixtures-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-234806-s4b-147-tssdk-releases-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-234834-s3-147-minimal-example-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261016-234915-s3-147-signer-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-000557-s3-147-signer-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-000607-s4b-147-gobdk-digest-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-013756-s3-148-measure-bsvrs-main-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-014311-s2-149-sighash-theorems-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-015216-s3-152-signer-chain-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-015602-column-bsv-rs-0.7.0-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-020326-s3-147-signer-column-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-020538-recon-5-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-020635-s2-149-fix-thm-149-s2.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-031159-s4b-152-teranode-signer-chain-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-141004-export-107-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-144602-s3-107-export-gate-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-155649-s3-107-export-gate-clean-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-180732-s4b-93-teranode-chain-reorg-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-192745-s4b-92-teranode-lifetimes-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-203139-s4b-94-teranode-store-half-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-215012-s8-88-close-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-231954-s8-95-gate-report-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261017-234627-s8-95-gate-report-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-000137-s3-146-fixtures-bsvrs-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-021011-s8-98-bridge-theorem-s1.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-025753-box-status-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-034524-s3-107-export-gate-rehearsal-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-043204-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-043359-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-043557-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-043856-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-044049-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-044249-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-044448-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-044647-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-044849-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045048-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045251-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045439-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045625-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045810-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-045957-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-050144-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-050329-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-050519-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-050715-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-050909-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-051114-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-051315-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-052807-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-053754-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-054323-column-sv-node-v1.2.3-s3.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-063439-s4b-98-teranode-bridge-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-135344-s8-98-teranode-bridge-horizon-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md: closed to model turns, not opened
+  cite_check: [LIT] docs/records/README.md: closed to model turns, not opened
+  cite_check: [LIT] docs/security/README.md: closed to model turns, not opened
+  cite_check: [LIT] docs/security/SDK-INTERPRETER-DIVERGENCES-2026-09-28-RECORD.md: closed to model turns, not opened
+  cite_check: [LIT] docs/security/SDK-INTERPRETER-DIVERGENCES-2026-09-28.md: closed to model turns, not opened
+  cite_check: excluded files [D] 488; closed to model turns, not opened; excluded anchor rows [D] 0 (retained, not scanned)
+  cite_check: 10257 citations found in lean/ and docs/ (10244 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 5692, MOVED 0; not anchored (reported, never RED): unanchored 3450, beyond-eof 4, unresolved 0, ambiguous 85, unpinned 0, other-version 159, self 533, history 0, absent 220, orphan rows 2; skipped 114 (go-chaincfg SKIPPED BY NAME (clone absent: ~/bsv/go-chaincfg), 89 rows; ts-sdk SKIPPED BY NAME (clone absent: ~/bsv/ts-stack), 25 rows); sources absent here: ts-sdk: clone absent: ~/bsv/ts-stack; go-chaincfg: clone absent: ~/bsv/go-chaincfg; predecessor-harness: clone absent: $PREDECESSOR_HARNESS_CLONE; predecessor-lean: clone absent: $PREDECESSOR_LEAN_CLONE
+  cite_check: GREEN (every checked active anchor holds at the pin; closed history is not checked)
+  cite_check teranode-map: GREEN (166 citations anchored at the pins, 51 Lean names declared, 0 failures; corpus/teranode/map.json, 54 rows)
+  teranode_absences --verify: GREEN [X]: 147 citations anchored, 2 listings and 27 searches equal at the pins; 12 absent map.json rows each have a row; 0 failures
+  jscpd: GREEN [X] 2.963% duplicated lines (2719 of 91759) in 214 files of harness/ and tools/ (bash, go, javascript, python, rust), 282 clones; the threshold 3.81% (tools/jscpd/.jscpd.json); jscpd 5.4.1; 0 s
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+  lean: build OK, sorry-free
+  axiom check --self-test: the parser and the walk's line OK (entries ['A.one', 'A.two', 'A.three', 'A.four', "A.five'", 'A.six', 'A.seven']; flagged ['A.three', 'A.six'])
+  axiom check --self-test: the declaration scan OK (declared ['A.t1', 'A.t2', 'A.t3', 'A.t4', 'A.t5', 'A.t6', 'A.t7', 'A.t8', 'A.t9', 'A.B.C.t10', 'A.D.E.t11', "A.t12'", 'A.t13', 'A.t14', 'A.t15', 'A.t16', 'A.t17', 'A.t18', 'A.«t19 x»', 'A.t21', 'A.t22', 'A.t23', 't20']; unparsed [(52, '#check (theorem)')])
+  axiom check --self-test: six crafted sources, three refused and three read OK ({'an unterminated raw string': ([], [(0, 'the scan cannot read an unterminated raw string')]), 'a scope line with a second command': (['x'], [(1, 'namespace B open Nat')]), 'a theorem after garbage': ([], [(1, 'foo theorem x : True := trivial')]), 'a «…» name holding a quote': (['hidden'], []), 'a char literal after ⟨': (['shown'], []), 'a comment between two tokens': (['hid', '«h 2»'], [])})
+  axiom check --self-test: three more refused OK ({'a string that reads two ways': (['x'], [(0, 'the scan cannot read a string at line 1 whose plain and interpolated readings end apart, after a token the scan cannot place')]), 'a scope word after a command': (['A.B.t2'], [(3, 'theorem t1 : True := trivial end B')]), 'a trace string with a quote in its braces': (['y'], [(0, 'the scan cannot read a string at line 1 whose plain and interpolated readings end apart, after a token the scan cannot place')])})
+  axiom check --self-test: the list comparison, listed(), the pin, the walk's pin, walked() and the head OK (listed ['A.«t19 x»', "A.b'"])
+  axiom check --self-test: the refusals OK (49 of 49 planted caught; comments, strings and look-alike names quiet)
+  axiom check --self-test: the lakefile refusal OK (8 of 8 crafted lakefiles judged as they must: all)
+  axiom check --self-test: the macro allowlist OK
+  axiom check --self-test: OK
+  axiom check: OK (1896 theorem(s), every declared theorem among them; the walk: 115 modules, 8634 theorems, 0 axioms, 0 compiler overrides, 0 outside; allowed = ['Classical.choice', 'Quot.sound', 'propext'])
+  numcheck: 1000 vectors × 7 checks against bsv-rs 0.7.0: 0 mismatch(es)
+  flowcheck: 1094 entries; comparable 1094: agree 1094, mismatch 0, unimplemented 0; recorded (not counted) 0
+  flowcheck: the kernel sample (BsvScript/Properties/KernelSample.lean): 25 vectors; the compiled evaluator agrees with the kernel's verdict on 25, disagrees on 0
+  flowcheck: the large lock (lean #48): the array machine (#50): 550001 B over a stack 1000000 deep, 10000 steps, the block path: valid in 104 ms, the budget 5000 ms
+  flowcheck: the large lock (lean #48): the list machine (#48's copies): 550001 B over a stack 1000000 deep, 10000 steps, the block path: valid in 108 ms, the budget 5000 ms
+  sighash: FIPS 180-4 SHA-256 examples 4 + sha256d: 0 mismatches
+  sighash: bsv-rs 0.7.0 BIP143 vectors: 500 entries, 0 mismatches (preimage and digest)
+  sighash: the reference's sighash.json at the pin: 1000 rows × 2 columns (254 rows take the BIP143 path in column 4), 0 mismatches
+  sighash: 8 mainnet digests printed for harness/sighash_verify (the ECDSA leg)
+  sighash: GREEN (the ECDSA leg follows)
+  sighash_verify: 8 / 8 mainnet signatures verify against the Lean digest (bsv-rs 0.7.0 ECDSA); 0 failures; the negative control (a bit-flipped digest) fails to verify on 8 of 8 entries
+  arithcheck: 10000 operand pairs, 240000 value checks against bsv-rs 0.7.0 (15 binary + 8 unary + WITHIN each): 0 mismatch(es)
+  arithcheck: 692 engine cases; comparable 692: agree 692, mismatch 0, unimplemented 0; recorded (not counted) 0
+  stackcheck: 262 engine cases; comparable 262: agree 262, mismatch 0, unimplemented 0; recorded (not counted) 0
+  crypto: hash vectors (SHA-1 3, RIPEMD-160 5, hash160 1): 0 mismatches
+  crypto: ECDSA vectors from bsv-rs 0.7.0: 1340 cases, 0 mismatches
+  crypto: the curve's facts (2·G, n·G = O, (n−1)·G = −G) and the key-1 signature of RFC 6979's nonce procedure (two keys, a flipped digest bit): 0 mismatches
+  crypto: the lax parser's sequence length (88 01×8, 87 01×7 verify; an overlong form fails): 0 mismatches
+  crypto: 8 mainnet P2PKH inputs verify through the evaluator (and fail with a flipped signature byte): 0 failures
+  crypto: 84 engine cases; comparable 84: agree 84, mismatch 0, unimplemented 0; recorded (not counted) 0
+  seedcheck: 10000 entries: agree 10000, mismatch 0, mutation mismatches explained by bsv-rs's lenient parser, NOP undefined opcodes, push-only unlocks regardless of version or the expansion opcodes as NOPs (recorded, not counted) 0, unimplemented 0 in the deferred family (mutation/, the crypto and expansion opcodes of #11/#18) and 0 elsewhere
+  scripttests: 1483 rows of the reference's script_tests.json at the pin: agree 1483, mismatch 0, skipped (an opcode no family has written) 0, parse failures 0
+  txtests bitcoin-sv-v1.2.3-tx_valid.json: 93 rows: agree 93, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 0
+  txtests bitcoin-sv-v1.2.3-tx_invalid.json: 68 rows: agree 57, mismatch 0, skipped (an unwritten opcode) 0, rejected at the transaction level 11 (invalid as expected)
+  flagscheck flow.jsonl: version-2 (gate OFF) 547: agree 547, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 547: agree 547, mismatch 0, explained 0, recorded 0, unimplemented 0
+  flagscheck seed.jsonl: version-2 (gate OFF) 8500: agree 8500, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented 0; version-1 (gate ON) 1500: agree 1500, mismatch 0, explained 0, recorded 0, unimplemented 0
+  specgen --check: OK (123 files up to date; 1 rules flagged)
+  rpc_contract: prune getblock ["04058bb21426bd8c3e65904b38addef2f2067777d91c46e5d5e8b79d5a: no single JSON reply (Finding R2, known)
+  rpc_contract: GREEN [X]: 51 handlers, 48 types; outputs current; the probe record `docs/records/20261015-035438-s7-85-rpc-contract-s4b.json`: 160 calls of contract handlers, 118 results checked against their types, 41 errors checked against the listed codes; 1 mismatch, 0 outside the findings.
+  rpc_contract verify: GREEN [X]: 699 citations read at the pins, 0 that do not hold
+  bytescheck: 512 entries (every byte × two versions); comparable 512: agree 512, mismatch 0, unimplemented 0, undefined-in-reference 0; recorded (not counted) 0
+  versiongatecheck: 74 rows × 4 cells = 296 cells (MINIMALDATA 148, the gate 8, CLEANSTACK 40, SIGPUSHONLY 44, LOW_S 56); 0 differ; 7 versions of the transaction, 0 differ; the test signer verifies: true
+  erascheck: 74 rows × 2 cells = 148 cells decided under Params.derive (SV-node's mainnet defaults, block and mempool) with the error code (eras 128, p2sh 16, p2sh-txlevel 4); 2 rows decided at the transaction level (CheckRegularTransaction): 0 mismatches
+  witnesscheck: witness-policy-00001 witness-policy/stack-memory (params.policy.maxstackmemoryusagepolicy): bitcoin-sv block valid, mempool invalid SCRIPT_ERR_STACK_SIZE; teranode block valid, mempool valid: script-level: the record reproduced on the spec
+  witnesscheck: witness-policy-00002 witness-policy/dust (params.policy.requirestandard.dust): bitcoin-sv block valid, mempool valid; teranode block valid, mempool valid: transaction-level (DESIGN §5.5): the scripts are valid under all four, the standardness gate decides outside the script semantics
+  witnesscheck: ../corpus/witnesses/policy-defaults-large.jsonl absent (make policywitnesses regenerates it; its sha256 is in corpus/witnesses/policy-defaults-manifest.json): not counted
+  witnesscheck: 2 witness transactions decided under both nodes' derived parameters, 0 mismatches
+  bsvs --self-test
+    fixed vectors: 28 of 28 pass, each run twice
+    two inputs: the transaction verdict is input 1's EVAL_FALSE, input 0 valid (Q5)
+    a coinbase input's script is never evaluated (DESIGN §5.5)
+    a coinbase: the block path's gate passes it, the mempool path's refuses it bad-tx-coinbase
+    flow.jsonl: 1094 entries: agree 1094, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented or undefined-in-reference (reported, not counted) 0, without a bsv-rs verdict (skipped, not in the entries) 0
+    seed.jsonl: 10000 entries: agree 10000, mismatch 0, explained by bsv-rs's known divergences 0, recorded families 0, unimplemented or undefined-in-reference (reported, not counted) 0, without a bsv-rs verdict (skipped, not in the entries) 0
+  bsvs --self-test: GREEN
+  tslint: GREEN [X] (harness/engines/ts: tsc --noEmit strict checkJs, 0 errors; eslint --max-warnings 0, 0 problems; tsc 6.0.3, eslint 10.12.0, typescript-eslint 8.71.2, node v22.23.3)
+  run_bsvrs: corpus seed (10000 entries, sha256 ok) vs bsv-rs 0.7.0 under EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }: agree=10000 disagree=0 no-recorded-verdict=0 undecided: resource=0 not-applicable=0 panic=0 nondeterminism=0, 0.1s
+  run_bsvrs --smoke: GREEN (10000 of 10000 entries compared, every one agreeing with its recorded bsv-rs verdict; no panic, no nondeterminism)
+  harness timing: run_bsvrs --smoke wall [M] 0.314208s
+[withheld at export: a sibling tree's line]
+  run_diff: seed/seed.jsonl (10000 entries) vs bsv-rs 0.7.0 (the recorded configuration EngineConfig { require_push_only: true, memory_limit: None, flags: Some(ScriptFlags(0x3d47ff: P2SH|STRICTENC|DERSIG|LOW_S|NULLDUMMY|SIGPUSHONLY|MINIMALDATA|DISCOURAGE_UPGRADABLE_NOPS|CLEANSTACK|CHECKLOCKTIMEVERIFY|CHECKSEQUENCEVERIFY|NULLFAIL|SIGHASH_FORKID|GENESIS|UTXO_AFTER_GENESIS|CHRONICLE|UTXO_AFTER_CHRONICLE)), per_input_words: false }; the spec column under the entry's own word per input (its explicit flags when it carries them, else engine::word_for with its params.consensus: the block word when consensus), the spec-mempool column under the standard word per input (engine::word_for, never the entry's flags), from the entry's spend height and the coin's height; entries with a pre-Genesis spend or coin, not applicable to bsv-rs (undecided): 0); the spec at spec@28477a62 (sv-mainnet-default); 0.1s
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  harness timing: run_diff wall [M] 0.372575s
+  run_engine: seed/seed.jsonl (10000 entries) vs go-sdk@v1.7.2 (gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)); the spec at spec@28477a62 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 0.6s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  harness timing: run_engine gosdk wall [M] 0.967619s
+  run_engine: seed/seed.jsonl (10000 entries) vs ts-sdk@3.0.0 (tssdk-runner (bsv-script-lean #29) @bsv/sdk 3.0.0 on node v22.23.3 (docs/PROVENANCE.md §1a)); the spec at spec@28477a62 (sv-mainnet-default); the words from eval/bsvs (2 CLI calls, 2 distinct parameter triples); 1.3s
+  run_engine: GREEN (every divergence explained by a rule with its citation)
+  harness timing: run_engine tssdk wall [M] 1.691715s
+  rules_check: go-sdk on arith: 692 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on bytes: 512 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-bn_op: 170 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-lrshiftnum: 36 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 1 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-multisig: 30 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-opcode: 144324 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-script: 67991 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-script_P2SH: 64 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-sigopcount: 6 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-transaction: 167 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t100-g1-c1: 1024 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t100-g1-c102: 2048 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t100-g102-c102: 4097 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t101-g1-c1: 4096 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t101-g1-c103: 8192 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t101-g102-c1: 3 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on cpp-txvalidationcache-t101-g103-c103: 16384 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on crypto: 84 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on eras: 74 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 1 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on flow: 1094 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on gen: 1157 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 125 divergent runs in 5 classes; EQUAL to the manifest
+  rules_check: go-sdk on million: 4 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 1 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: go-sdk on road: 13512 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 10 divergent runs in 5 classes; EQUAL to the manifest
+  rules_check: go-sdk on seed: 10000 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on stack: 262 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on tx: 40 entries replayed from go-sdk@v1.7.2 (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: go-sdk on xsig-144: 16 entries replayed from go-sdk@v1.7.2 (spec spec@f5e7e0a6 recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: ts-sdk on arith: 692 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 8 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: ts-sdk on bytes: 512 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 159 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: ts-sdk on crypto: 84 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 7 divergent runs in 3 classes; EQUAL to the manifest
+  rules_check: ts-sdk on eras: 74 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 78 divergent runs in 7 classes; EQUAL to the manifest
+  rules_check: ts-sdk on flow: 1094 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 305 divergent runs in 4 classes; EQUAL to the manifest
+  rules_check: ts-sdk on gen: 1157 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 202 divergent runs in 18 classes; EQUAL to the manifest
+  rules_check: ts-sdk on seed: 10000 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 160 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: ts-sdk on stack: 262 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 4 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: ts-sdk on tx: 40 entries replayed from ts-sdk@3.0.0 (spec spec@cb7e46e recorded in the corpus); 26 divergent runs in 7 classes; EQUAL to the manifest
+  rules_check: ts-sdk on xsig-144: 16 entries replayed from ts-sdk@3.0.0 (spec spec@f5e7e0a6 recorded in the corpus); 18 divergent runs in 4 classes; EQUAL to the manifest
+  rules_check: gobdk on arith: 692 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on bytes: 512 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on crypto: 84 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on eras: 74 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on flow: 1094 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on gen: 1157 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 116 divergent runs in 2 classes; EQUAL to the manifest
+  rules_check: gobdk on seed: 10000 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on stack: 262 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: gobdk on tx: 40 entries replayed from gobdk@4eab3acd (spec spec@cb7e46e recorded in the corpus); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on arith: 692 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on bytes: 512 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-bn_op: 170 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-lrshiftnum: 36 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-multisig: 30 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-opcode: 144324 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-script: 67991 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-script_P2SH: 64 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-sigopcount: 6 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-transaction: 167 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t100-g1-c1: 1024 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t100-g1-c102: 2048 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t100-g102-c102: 4097 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t101-g1-c1: 4096 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t101-g1-c103: 8192 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t101-g102-c1: 3 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on cpp-txvalidationcache-t101-g103-c103: 16384 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on crypto: 84 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on eras: 74 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on flow: 1094 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on gen: 1157 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on million: 4 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on road: 13512 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on seed: 10000 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on stack: 262 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: sv-node on tx: 40 entries replayed from sv-node@v1.2.3 against spec-sv-node@cb7e46e; 2 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: sv-node on xsig-144: 16 entries replayed from sv-node@v1.2.3 against spec-sv-node@f5e7e0a6; 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on arith: 692 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on bytes: 512 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-bn_op: 170 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 95 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-lrshiftnum: 36 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 23 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-multisig: 30 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 6 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-opcode: 144324 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 77263 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-script: 67991 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 67634 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-script_P2SH: 64 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 8 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-sigopcount: 6 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-transaction: 167 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 59 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t100-g1-c1: 1024 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t100-g1-c102: 2048 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t100-g102-c102: 4097 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 2048 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t101-g1-c1: 4096 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t101-g1-c103: 8192 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t101-g102-c1: 3 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 2 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on cpp-txvalidationcache-t101-g103-c103: 16384 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 6144 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on crypto: 84 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on eras: 74 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on flow: 1094 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on gen: 1157 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on million: 4 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 4 divergent runs in 1 classes; EQUAL to the manifest
+  rules_check: bsv-rs on road: 13512 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on seed: 10000 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on stack: 262 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on tx: 40 entries run live under the two words (bsv-rs@0.7.0; spec spec@cb7e46e); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: bsv-rs on xsig-144: 16 entries run live under the two words (bsv-rs@0.7.0; spec spec@f5e7e0a6); 0 divergent runs in 0 classes; EQUAL to the manifest
+  rules_check: GREEN (the tables reproduce the classes, counts, smallest witnesses and rulings of the go-sdk, ts-sdk, gobdk, sv-node and bsv-rs manifests; policy-defaults has no classifier rows) (100 corpus × engine manifests, 856083 entries replayed, 154509 divergent runs classified; 5 s)
+  harness timing: rules_check wall [M] 6.058450s
+  subtree vectors: GREEN [X] (the file equals a fresh generation)
+  chaincheck prune: GREEN [X] ([M] 54 checks of the Lean pruning function against the node answers of docs/records/20261015-130232-s7-82-prune-s1.md, five instances replayed node-free)
+  chain timing: prune_replay wall [M] 2.444283s
+  finalitycheck: GREEN [X] ([M] 114 rows; agree 114; mismatch 0; spec column [D]; node column independently recorded)
+  chain timing: finalitycheck wall [M] 0.735021s
+  utxocheck: GREEN [X] ([M] 80 rows; agree 80; mismatch 0; spec column [D]; node column independently recorded)
+  chain timing: utxocheck wall [M] 0.726301s
+  mempoolcheck: GREEN [X] ([M] 115 rows; agree 115; mismatch 0; spec column [D]; node column independently recorded)
+  chain timing: mempoolcheck wall [M] 0.906531s
+  chaincheck scenarios: [M] 29 declared steps agree [X] in the spec projection; node column independently recorded; client/status projections owed; body-derived paths checked
+  chain timing: chaincheck scenarios wall [M] 6.025698s
+  status views: GREEN [X] ([M] 8 rows, 7 columns, 20 function cells including 5 partial, 36 no-function cells; predicates checked; failures 0; producer outputs [D])
+  chain timing: chaincheck status views wall [M] 4.506647s
+  chaincheck eras: GREEN [X] ([M] 38 era rows; agree 38; failures 0; node column independently recorded)
+  chain timing: chaincheck eras wall [M] 2.081771s
+  chain timing: chaincheck depth wall [M] 12.377719s
+  chaincheck frozen: GREEN [X] ([M] 20 operator-list rows, every row policy; agree 20; failures 0; node column independently recorded)
+  chain timing: chaincheck frozen wall [M] 0.038789s
+  chaincheck subtree vectors: GREEN [X] ([M] 153 rows; Teranode root = flat root on 149; refused 3; roots differ 1; failures 0)
+  chain timing: chaincheck subtree wall [M] 0.261279s
+  chaincheck minerid: GREEN [X] ([M] 63 of 63 mainnet coinbase documents, 2 miner ids; frame round trips 63; JSON round trips 63; node checks accept 63; refusals 126; failures 0; nothing of Miner ID is consensus)
+  chain timing: chaincheck minerid wall [M] 0.723948s
+  chain timing: chaincheck p2p wall [M] 0.038454s
+  chain timing: chaincheck p2p frames wall [M] 0.037025s
+  compact blocks: GREEN [X] (149 checks, 0 witnesses; 28 frames read back byte for byte; the SipHash vectors of the reference's test)
+  chain timing: chaincheck compact wall [M] 0.040109s
+  chain timing: chaincheck dsnt wall [M] 0.939317s
+  refinement: GREEN [X] ([M] 54 rows of corpus/teranode/map.json, one obligation each, kinds tied to the map's mechanism: 11 theorem (5 also carrying model witnesses), 1 witness, 18 design, 1 chain-split, 10 report, 13 open (S1 9, S3 3, S4b 1, the owner 0); 9 divergences; 6 owed halves (S1 2, S3 0, S4b 4); 19 ledger rows read, 17 on design rows, 1 on chain-split rows, 1 on others, 19 ruled by the owner; 20 rows for #95's re-run; corpus/teranode/obligations.json equal to the emission; failures 0)
+  chain timing: chaincheck refinement wall [M] 0.037287s
+  oraclecheck: inline mappings GREEN (8; uncovered re-checks decline)
+  oraclecheck: GREEN (36 rows; cpp-sigopcount 6; wrapper 30; agree 42; mismatch 0; key isolation 504)
+  chain timing: oraclecheck wall [M] 1.184501s
+  blockcheck: headers GREEN [X] ([M] 4233 rows; pow 4233; difficulty 3921; ancestry unavailable 312; mismatch 0; chain column [M])
+  blockcheck: boundaries GREEN [X] ([M] 95 rows; agree 95; mismatch 0; spec column [D]; node column independently recorded)
+  chain timing: blockcheck wall [M] 1.361044s
+  chain: GREEN [X] (spec projection; replay wall [M] 12.391246s, 3 executables at a time, parts summed [M] 32.021441s; node excluded)
+  bench fuzz: GREEN [X] (seed_gen seed 0x28477a6207009e49, 50000 cases, generated twice byte-identical, panics 0, nondeterminism 0; run_bsvrs --smoke 50000 of 50000 agree; wall [M] 1.660311s)
+  bench: chain finalitycheck [M] 0.0222877 s against 0.156361 s [M] (docs/records/20261014-200321-make-check-box.txt:509): 0.14x: ok [rule rebuilt: second run judged, the chain leg's run 0.735021 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:16Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain utxocheck [M] 0.0323962 s against 0.171806 s [M] (docs/records/20261014-200321-make-check-box.txt:511): 0.19x: ok [rule rebuilt: second run judged, the chain leg's run 0.726301 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:15Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain mempoolcheck [M] 0.0483851 s against 0.18464 s [M] (docs/records/20261014-200321-make-check-box.txt:513): 0.26x: ok [rule cheap: second run judged, the chain leg's run 0.906531 s; built 2026-10-18 06:28:59Z, before docs/records/20261018-133547-make-check-box.txt stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck scenarios [M] 5.26903 s against 6.26197 s [M] (docs/records/20261014-211019-make-check-box.txt:515): 0.84x: ok [rule rebuilt: second run judged, the chain leg's run 6.0257 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck status views [M] 3.87529 s against 4.69446 s [M] (docs/records/20261014-211019-make-check-box.txt:517): 0.83x: ok [rule rebuilt: second run judged, the chain leg's run 4.50665 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck eras [M] 1.86558 s against 2.1704 s [M] (docs/records/20261014-200321-make-check-box.txt:519): 0.86x: ok [rule rebuilt: second run judged, the chain leg's run 2.08177 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck depth [M] 11.458 s against 13.1735 s [M] (docs/records/20261014-200321-make-check-box.txt:520): 0.87x: ok [rule rebuilt: second run judged, the chain leg's run 12.3777 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck refinement [M] 0.0354094 s against 0.035261 s [M] (docs/records/20261017-215012-s8-88-close-s1.md:90): 1.00x: ok [rule rebuilt: second run judged, the chain leg's run 0.037287 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck frozen [M] 0.0330815 s against 0.041232 s [M] (docs/records/20261014-200321-make-check-box.txt:522): 0.80x: ok [rule rebuilt: second run judged, the chain leg's run 0.038789 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain oraclecheck [M] 0.469886 s against 0.654746 s [M] (docs/records/20261014-193207-make-check-box.txt:525): 0.72x: ok [rule rebuilt: second run judged, the chain leg's run 1.1845 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:15Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain blockcheck [M] 0.667389 s against 0.843903 s [M] (docs/records/20261014-211019-make-check-box.txt:528): 0.79x: ok [rule rebuilt: second run judged, the chain leg's run 1.36104 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:15Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck minerid [M] 0.688086 s against 2.85181 s [M] (docs/records/20261015-110731-s7-83-minerid-s1.md:54 (lane minerid-83's own chain leg run at d20c0cfd, on the Studio at a 1-minute load near 20, not the box; added 2026-10-15 by lane fix-minerid-83; re-cut from a box record at the next baseline cut)): 0.24x: ok [rule rebuilt: second run judged, the chain leg's run 0.723948 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck p2p [M] 0.0353092 s against 0.036021 s [M] (docs/records/20261015-135113-s7-78-p2p-machine-s1.md:114 (lane fix-s7-78's chain leg at 79955c61, on the box; added 2026-10-15 at #78's lens, as #83's lens added the minerid row)): 0.98x: ok [rule rebuilt: second run judged, the chain leg's run 0.038454 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck p2p frames [M] 0.0347682 s against 0.033426 s [M] (docs/records/20261015-135113-s7-78-p2p-machine-s1.md:115 (lane fix-s7-78's chain leg at 79955c61, on the box; added 2026-10-15 at #78's lens, as #83's lens added the minerid row)): 1.04x: ok [rule rebuilt: second run judged, the chain leg's run 0.037025 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck compact [M] 0.038618 s against 0.052693 s [M] (docs/records/20261015-162637-s7-79-compact-blocks-s1.md:62 (lane s7-79's chain leg, on the box; added at #79's lens as #78's lens added the p2p rows)): 0.73x: ok [rule rebuilt: second run judged, the chain leg's run 0.040109 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain chaincheck dsnt [M] 0.90753 s against 0.965833 s [M] (docs/records/20261015-165715-s7-80-double-spend-s1.md:140 (lane fix-s7-80's chain leg at 269a9e2f, on the box; added 2026-10-15 at #80's lens, as #78's lens added the p2p rows)): 0.94x: ok [rule rebuilt: second run judged, the chain leg's run 0.939317 s; rebuilt since docs/records/20261018-133547-make-check-box.txt: built 2026-10-18 16:16:21Z, the record stamped 2026-10-18 13:35:47Z]
+  bench: chain replay wall [M] 12.3912 s against 13.1947 s [M] (docs/records/20261014-200321-make-check-box.txt:529): 0.94x: ok [rule logged: the wall as the log carries it]
+  bench: flow large lock, array machine [M] 104 ms against 115 ms [M] (docs/records/20261014-211019-make-check-box.txt:363): 0.90x: ok [rule logged: the wall as the log carries it]
+  bench: harness run_diff (in-process) [M] 0.1 s against 0.1 s [M] (docs/records/20261014-211019-make-check-box.txt:405): 1.00x: ok [rule logged: the wall as the log carries it]
+  bench: harness run_engine gosdk (in-process) [M] 0.6 s against 0.7 s [M] (docs/records/20261014-211019-make-check-box.txt:407): 0.86x: ok [rule logged: the wall as the log carries it]
+  bench: harness run_engine tssdk (in-process) [M] 1.3 s against 1.4 s [M] (docs/records/20261014-211019-make-check-box.txt:409): 0.93x: ok [rule logged: the wall as the log carries it]
+  bench: harness run_bsvrs --smoke [M] 0.314208 s against 0.329223 s [M] (docs/records/20261014-212637-bench-baseline-gate-137.md:7): 0.95x: ok [rule logged: the wall as the log carries it]
+  bench: harness rules_check [M] 6.05845 s against 6.69514 s [M] (docs/records/20261014-212637-bench-baseline-gate-137.md:8): 0.90x: ok [rule logged: the wall as the log carries it]
+  bench: fuzz smoke [M] 1.66031 s against 1.86966 s [M] (docs/records/20261014-212637-bench-baseline-gate-137.md:9): 0.89x: ok [rule logged: the wall as the log carries it]
+  bench: flow large lock, list machine [M] 108 ms against 105 ms [M] (docs/records/20261014-211019-make-check-box.txt:364): 1.03x: ok [rule logged: the wall as the log carries it]
+  bench: chain parts summed [M] 25.7423 s against 28.2721 s [M] (docs/records/20261014-211019-make-check-box.txt:529): 0.91x: ok [rule resummed: the logged sum 32.0214 s with the second runs in place of the logged ones (-6.279152 s)]
+  bench: the whole tripwire [M] 140 s, the baseline's 70 s (docs/records/20261014-211019-make-check-box.txt:3): reported, not judged (it includes the Lean and cargo builds, which a source change moves by minutes (321 s at docs/records/20261013-232005-make-check-box.txt:3))
+  bench: export (docs/records/20261013-144652-export-dry-run-l2b-s3.md) [M] 143 s against 143 s [M] (docs/records/20261013-144652-export-dry-run-l2b-s3.md:31): 1.00x: ok [rule export record: the export gate's newest record]
+  bench: export full gate (docs/records/20261013-144652-export-dry-run-l2b-s3.md) [M] 3132 s against 3132 s [M] (docs/records/20261013-144652-export-dry-run-l2b-s3.md:32): 1.00x: ok [rule export record: the export gate's newest record]
+  bench: GREEN [X] (28 walls judged on host box against tools/bench_baseline.json cut 2026-10-14, bar 1.5x, floor 0.5 s; the rules fired: cheap 1, export record 2, logged 9, rebuilt 15, resummed 1; the tripwire walls from the tripwire's own log)
+  make check: GREEN (stubs are listed above by name; a stub is not a pass)
+[withheld at export: a sibling tree's line]
+  sample 16:15:14 UTC: load1 3.13; over 5% cpu: other programs: 6 processes, 201% cpu; 
+  sample 16:15:24 UTC: load1 3.64; over 5% cpu: rustc 8% 0.1GB; other programs: 5 processes, 174% cpu; 
+  sample 16:15:34 UTC: load1 4.31; over 5% cpu: rustc 45% 0.7GB; rustc 23% 0.2GB; other programs: 3 processes, 136% cpu; 
+  sample 16:15:44 UTC: load1 5.13; over 5% cpu: node 5% 0.4GB; rustc 187% 0.7GB; other programs: 4 processes, 150% cpu; 
+  sample 16:15:54 UTC: load1 5.18; over 5% cpu: node 24% 0.4GB; node 9% 0.2GB; other programs: 6 processes, 269% cpu; 
+  sample 16:16:04 UTC: load1 4.99; over 5% cpu: lake 18% 0.6GB; other programs: 5 processes, 185% cpu; 
+  sample 16:16:14 UTC: load1 4.92; over 5% cpu: lake 6% 0.7GB; lean 94% 1.5GB; lean 87% 1.3GB; lean 77% 1.2GB; other programs: 5 processes, 267% cpu; 
+  sample 16:16:24 UTC: load1 4.70; over 5% cpu: node 6% 0.4GB; node 14% 0.2GB; lake 16% 0.7GB; lean 65% 0.3GB; other programs: 6 processes, 179% cpu; 
+  sample 16:16:34 UTC: load1 4.82; over 5% cpu: other programs: 7 processes, 215% cpu; 
+  sample 16:16:44 UTC: load1 4.98; over 5% cpu: node 80% 0.2GB; other programs: 14 processes, 450% cpu; 
+  sample 16:16:54 UTC: load1 5.14; over 5% cpu: node 22% 0.4GB; other programs: 7 processes, 349% cpu; 
+  sample 16:17:04 UTC: load1 4.88; over 5% cpu: node 6% 0.4GB; node 32% 0.2GB; node 242% 0.2GB; other programs: 6 processes, 207% cpu; 
+  sample 16:17:14 UTC: load1 4.82; over 5% cpu: node 5% 0.4GB; rules_check 89% 1.5GB; other programs: 6 processes, 224% cpu; 
+  sample 16:17:24 UTC: load1 4.83; over 5% cpu: other programs: 8 processes, 1090% cpu; 
+  sample 16:17:34 UTC: load1 5.30; over 5% cpu: other programs: 5 processes, 278% cpu; 
+  sample 16:17:44 UTC: load1 5.32; over 5% cpu: other programs: 4 processes, 274% cpu; 
+  sample 16:17:54 UTC: load1 5.80; over 5% cpu: other programs: 5 processes, 429% cpu; 

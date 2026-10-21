@@ -1,0 +1,36 @@
+S1's landing of the kernel-evaluated sample (S1, Lean A, set 4 sitting 3; the direction audit's item (b), the parent's
+paste of 2026-09-27 17:15 UTC; the landing rule as 20260927-174745-landing-s1.txt applied it)
+
+THE STAMP: docs/records/20260927-175334-make-check-modal.txt, twenty-one legs GREEN in 985 s at 420143b (the sample's
+commit on ea0be95), ON MODAL at Lean v4.34.0 (app ap-I8CS1H7CsZhU7jQOZUTqTr; the Studio has no v4.34 stack, A20), the
+axiom check 526, and the flow leg's line: "flowcheck: the kernel sample (BsvScript/Properties/KernelSample.lean): 25
+vectors; the compiled evaluator agrees with the kernel's verdict on 25, disagrees on 0"; with the 75 spec/ pages
+tools/specgen.py regenerated left uncommitted in the shipped tree (spec is not on S1's OWNERS line: the parent
+regenerates at the fold).
+
+THE LANDED COMMIT 7994526 is 420143b amended to carry docs/STATE-OF-THE-WORLD.md's two new rows (CLAUDE.md rule 12: the
+sample's row, and the row the held stack's commits owed), then rebased onto 6f12037: main moved ea0be95 -> 6f12037 (S3's
+commit of 18:11 UTC, HANDOFF.md and docs/lanes/harness.md) between the stamp and the push.
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit and the landed commit, outside the three paths that differ:
+  git diff --quiet 420143b 7994526 -- ':!docs/STATE-OF-THE-WORLD.md' ':!HANDOFF.md' ':!docs/lanes/harness.md'
+  exit 0 (git diff --stat: HANDOFF.md, no leg reads it; docs/STATE-OF-THE-WORLD.md and docs/lanes/harness.md, which the
+  cite leg scans)
+
+THE CITE LEG (it reads docs/) and the two cheap python legs, LIVE AT THE TIP 24f1d2e (7994526 plus this record commit's
+docs/records files) on the Studio (no Lean build; the clones present), with the regenerated spec/ pages in the tree:
+load before: { 5.67 11.43 28.90 }
+== tools/check.sh pins at 24f1d2e (18:13:30Z)
+check-pins: GREEN (71 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite at 24f1d2e (18:13:31Z)
+cite_check: 2742 citations found in lean/ and docs/ (2682 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1785, MOVED 0; not anchored (reported, never RED): unanchored 151, beyond-eof 1, unresolved 27, ambiguous 7, unpinned 0, other-version 28, self 492, history 251, absent 0, orphan rows 12; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec at 24f1d2e (18:13:34Z)
+specgen --check: OK (117 files up to date; 2 rules flagged)
+exit 0
+load after: { 5.61 11.33 28.76 }
+
+The other eighteen legs read nothing that changed: the stamp stands for them at 7994526. The branch lean-a-ks on origin
+carries 420143b (the orphan rule); the landed commits ride main and lean-a-ks-landed.

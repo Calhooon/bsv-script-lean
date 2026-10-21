@@ -1,0 +1,19 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+set -u -o pipefail
+setopt POSIX_TRAPS
+export BOX_LEG_WAIT=0
+export BOX_LEG_POLL=5
+[withheld at export: a sibling tree's line]
+S2_CHILD=
+trap 'exit 130' INT
+trap 'exit 143' TERM
+trap 'exit 129' HUP
+trap 'if [[ -n "$S2_CHILD" ]]; then kill -TERM -- -$S2_CHILD 2>/dev/null || kill -TERM $S2_CHILD 2>/dev/null || true; wait $S2_CHILD || true; fi; box_leg_release' EXIT
+box_leg_take "S2-s10-million-bounded" "box" "selected witness replay, wall 120s, sampled RSS 8GiB" "S2 sitting 10 bounded replay"
+export CARGO_BUILD_JOBS=4
+python3 "$1/bounded_replay.py" "$1" & S2_CHILD=$!
+S2_RC=0
+wait $S2_CHILD || S2_RC=$?
+S2_CHILD=
+print -r -- "[X] box_runner_exit=$S2_RC"
+exit $S2_RC

@@ -1,0 +1,52 @@
+S1's sitting-7 item (1) landing (S1, Lean A, set 4 sitting 7; 2026-09-29): S2's three patches, the landing lock, the leg of record, the byte-identity
+
+THE COMMITS (by pathspec under the hooks, S1's tag; pushed first at origin/lean-a-s7, never force-pushed):
+  a49e9a7 -> cf09b04  #35: BsvScript.Gadget.HashLock (S2's module, applied under S1's tag), nine axiom lines, 7 spec pages
+  48bb348 -> ed759d7  #32 lens 1's findings in S1's files (S2's patch), four citations #50 copied into Impl/ corrected, 78 spec pages
+  25b4c18 -> 9486d05  S1's ask 7, the hexloop half (S2's patch): S1's copy of the reader's loop out of Bsvs/Corpus.lean, 1 spec page
+  3286f91 -> 4158616  the three patches' record, docs/records/20260929-080436-patches-s7-s1.md, its README row
+  0d6f949             S1's sitting-6 lens filed and its load-bearing corrections (docs/audit, docs/records by appended Corrections,
+                      docs/lanes/lean.md in place)
+  and this record's commit, with the leg's record.
+  The rebase onto 46e9550 (08:05 UTC, under the hold; main had S2's 0de2cdc in S2's lean files and tools/specgen.py): spec/
+  conflicted at three of the four commits (spec/README.md; at the second, five opcode pages too), each resolved by regenerating
+  every page with tools/specgen.py over that commit's sources and continuing; no conflict marker in any rebased commit's pages;
+  lean/AxiomCheck.lean merged clean: 703 `#print axioms` lines, main's 689 at 46e9550 (688 at ba7dfc4 and one of S2's 0de2cdc)
+  and the patches' +9, +8 and -3.
+
+THE LOCAL LEG (D142) at 4158616 on the Studio under the Lean lock: lake build (the default targets) 08:07:02-08:07:43 UTC,
+  load 5.05, "Build completed successfully (1045 jobs)", 40.36 s, 1,909,784,576 B; tools/axiom_check.py 08:07:46 UTC:
+  "axiom check: OK (703 theorem(s); allowed = ['Classical.choice', 'Quot.sound', 'propext'])". The fourteen verdict legs, the
+  cite leg and the pins leg at 25b4c18 before the rebase: docs/records/20260929-080436-patches-s7-s1.md.
+
+THE LANDING LOCK (D151; the plan's tools/lean_lock.sh, the lock a symlink on the box): taken 08:05:25 UTC by S1 after 0 s; the
+  fetch and the rebase, the local leg, the push of the branch and the leg of record (below) inside the hold; then the final
+  fetch, this record's commit, the byte-identity and the push to main; the release after the push, its time on the block.
+
+THE LEG OF RECORD: docs/records/20260929-081448-make-check-box.txt, `make check-box` itself (tools/check_box.sh, D156) from
+  S1's worktree at 4158616, clean and pushed as origin/lean-a-s7-l1: the box, S1's own box worktree ~/bsv/worktrees/spec-box-lean-a,
+  the tag check-box:lean-a on the Lean slot and on the box leg lock (queued from 08:08:52 UTC); twenty-one legs GREEN in 141 s
+  (08:14:48 -> 08:17:09 UTC), the axiom check 703, the flow leg's large-lock row valid in 96 ms, specgen --check OK; its commit
+  line 4158616 with 0 uncommitted paths.
+
+THE BYTE-IDENTITY: the leg's tree 4158616 and the landed tree differ only in docs/audit, docs/records and docs/lanes/lean.md (the
+  lens's corrections, this record and the leg's record); git diff --quiet 4158616 <this commit> -- lean eval harness corpus tools
+  Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md: read before the push, its exit code on the block.
+
+CORRECTION (S1, Lean A, set 4 sitting 7, 2026-09-29 09:43 UTC; S2's note on #35, 5887327432, found it first). THE COMMITS above
+  are the first rebase's (onto 46e9550). Main moved to bf5f687 inside the hold (S2's second-cut records, docs/records alone),
+  and the commits were rebased once more before the push, which pushed bf5f687..f7f1bb9. The commits on main are:
+    d4b0e1d (from cf09b04)  #35: BsvScript.Gadget.HashLock
+    e263a7a (from ed759d7)  #32 lens 1's findings in S1's files, the four Impl citations
+    108d8b9 (from 9486d05)  the hexloop half
+    78d7cee (from 4158616)  the three patches' record
+    103da93 (from 0d6f949)  S1's sitting-6 lens and its corrections
+    f7f1bb9                 this record's commit, with the leg's record
+  Each pair has one patch-id (git patch-id --stable). The pre-rebase commits stand on origin/lean-a-s7-l1, the leg's 4158616
+  among them. The leg's tree 4158616 and the landed f7f1bb9 are byte-identical over the legs' paths: git diff --quiet 4158616
+  f7f1bb9 -- lean eval harness corpus tools Makefile spec docs/PROVENANCE.md docs/PARAMETERS.md, exit 0 (re-read 09:43 UTC).
+
+CORRECTION (S1, Lean A, set 4 sitting 8, 2026-09-29 11:43 UTC; S1's sitting-7 lens, its load-bearing correction 3). The Correction
+  above says the pre-rebase commits stand on origin/lean-a-s7-l1: four do (cf09b04, ed759d7, 9486d05 and 4158616, the branch's tip);
+  0d6f949, the twin of 103da93 (patch-id 57c5a758e2ec), stood on no pushed branch and is pushed as origin/lean-a-s7-0d6f949
+  (11:41:12 UTC).

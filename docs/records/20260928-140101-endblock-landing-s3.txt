@@ -1,0 +1,54 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+The END BLOCK of set 4 sitting 3 lands on a moving main (S3, set 4 sitting 3, continued, on Opus 5.5; 2026-09-28; the landing
+rule on a moving main, as docs/records/20260928-120344-moving-main-s3.txt applied it)
+
+THE STAMP: docs/records/20260928-135003-make-check-modal.txt, the sitting's ONE Modal tripwire of record (D142): twenty-one legs
+GREEN in 550 s at 016fca5 (origin/s3-endblock, the new heading under D150; app ap-mi1hbXfEBuL93YoKXSeXct, 0 uncommitted paths at
+both ends). MAIN MOVED under it: c374c08 -> 0dccb29 (W0b, the disclosure write-up, four commits, 13:52 to 13:54 UTC: its lane page,
+its sealed page and four files under docs/security/). 016fca5 was cherry-picked onto 0dccb29 with its committer date (the pre-push
+stamp hook), without conflict: 016fca5 -> fdcdac6; the landing's edits are cce1286 (the block's final text, T3's fold, the lens's
+corrections, the lens report and the Modal record with their index rows, the T3 paste heading on docs/lanes/harness.md).
+The lens's fourteenth correction is 016fca5's commit message: its "HANDOFF §0 is 15,024 characters" reads 15,158 [M] (the
+count was taken on the draft, 134 characters shorter than the committed block); a pushed commit is never amended (A19).
+
+BYTE-IDENTITY of the legs' tree between the stamp's commit 016fca5 and the landing tip cce1286, outside the paths no leg reads or that
+the live legs below re-check:
+  git diff --quiet 016fca5 cce1286 -- :!HANDOFF.md :!docs/audit :!docs/records :!docs/lanes/harness.md :!docs/lanes/w0b.md :!docs/sealed :!docs/security
+  exit 0
+  the excluded: HANDOFF.md (no leg reads it: grep over tools/check.sh and the legs' tools finds it nowhere); docs/audit, docs/records,
+  docs/security (the cite leg's history paths, HISTORY_PREFIX in tools/cite_check.py) and docs/lanes/harness.md, docs/lanes/w0b.md,
+  docs/sealed (the cite leg reads docs/): the cite leg re-runs live below
+  git diff --stat 016fca5 cce1286:
+     HANDOFF.md                                         |   38 +-
+     .../audit/2026-09-28-lens-S3-sitting3-end-by-S3.md |  220 ++++
+     docs/audit/README.md                               |    1 +
+     docs/lanes/harness.md                              |    2 +-
+     docs/lanes/w0b.md                                  |  122 +++
+     docs/records/20260928-135003-make-check-modal.txt  |  174 ++++
+     docs/records/README.md                             |    3 +-
+     docs/sealed/sdk-divergences-2026-09-28-sealed.html |   17 +
+     docs/security/README.md                            |   12 +
+     ...DK-INTERPRETER-DIVERGENCES-2026-09-28-RECORD.md |  103 ++
+     .../SDK-INTERPRETER-DIVERGENCES-2026-09-28.md      | 1098 ++++++++++++++++++++
+     .../sdk-divergences-2026-09-28-reproducers.jsonl   |   35 +
+     12 files changed, 1805 insertions(+), 20 deletions(-)
+
+THE LEGS, LIVE AT THE TIP cce1286:
+load before: { 59.62 56.17 62.50 } (above rule 17's 20 from other windows' builds: three python legs of seconds, as the landing
+records of 2026-09-27 17:47 and 2026-09-28 13:14 ran them)
+== tools/check.sh pins (14:03:23Z)
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+    OK     the built SV-node's version string                                 v1.2.2.0-g879fc8b42-dev
+  check-pins: GREEN (72 sites agree with docs/PROVENANCE.md §1a; 1 skipped by name: the built gobdk-runner)
+exit 0
+== tools/check.sh cite (14:03:24Z)
+  == cite: tools/cite_check.py: every anchored file:line citation of lean/ and docs/ at the pin (#43) ==
+  cite_check: 3079 citations found in lean/ and docs/ (3019 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 1727, MOVED 0; not anchored (reported, never RED): unanchored 15, beyond-eof 0, unresolved 2, ambiguous 2, unpinned 0, other-version 71, self 150, history 1112, absent 0, orphan rows 0; skipped 0
+  cite_check: GREEN (every anchored citation holds at the pin)
+exit 0
+== tools/check.sh spec (14:03:29Z)
+  == spec: tools/specgen.py --check: the generated specification document is byte-identical to a regeneration from the Lean sources, the corpora and the witnesses (#17) ==
+  specgen --check: OK (117 files up to date; 0 rules flagged)
+exit 0
+load after: { 55.57 55.39 62.18 }

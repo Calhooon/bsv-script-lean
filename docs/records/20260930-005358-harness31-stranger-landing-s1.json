@@ -1,0 +1,194 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+{
+  "receipt_commit": "89e52ff049998781e437064e9c2c076c0a445512",
+  "origin_main_at_read": "89e52ff049998781e437064e9c2c076c0a445512",
+  "stamp": "2026-09-30T00:53:58Z",
+  "source_status": "## HEAD (no branch)",
+  "status": "## lean-a...origin/main",
+  "uptime": "20:53  up 7 days,  3:55, 11 users, load averages: 3.66 3.14 3.28",
+  "swap": "vm.swapusage: total = 4096.00M  used = 2423.25M  free = 1672.75M  (encrypted)",
+  "memory": "The system has 34359738368 (2097152 pages with a page size of 16384).\n\nStats: \nPages free: 95048 \nPages purgeable: 4819 \nPages purged: 20397149 \n\nSwap I/O:\nSwapins: 18980896 \nSwapouts: 23281228 \n\nPage Q counts:\nPages active: 824291 \nPages inactive: 821442 \nPages speculative: 18079 \nPages throttled: 0 \nPages wired down: 161918 \n\nCompressor Stats:\nPages used by compressor: 140258 \nPages decompressed: 445334669 \nPages compressed: 696165970 \n\nFile I/O:\nPageins: 499474923 \nPageouts: 685253 \n\nSystem-wide memory free percentage: 85%",
+  "disk": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1s1   460Gi    12Gi    30Gi    28%    459k  319M    0%   /",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "89e52ff049998781e437064e9c2c076c0a445512\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "89e52ff049998781e437064e9c2c076c0a445512\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "-sb"
+      ],
+      "exit": 0,
+      "stdout": "## lean-a...origin/main\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--quiet",
+        "89e52ff049998781e437064e9c2c076c0a445512^",
+        "89e52ff049998781e437064e9c2c076c0a445512",
+        "--",
+        "lean",
+        "eval",
+        "harness",
+        "corpus",
+        "tools",
+        "Makefile",
+        "spec"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--quiet",
+        "570f338",
+        "89e52ff049998781e437064e9c2c076c0a445512",
+        "--",
+        "docs/records/20260930-004447-harness31-stranger-s1.md",
+        "docs/records/20260930-004447-harness31-stranger-s1-artifacts"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "e39ba468c3c9bef42f6041509914767f81f34a79",
+        "89e52ff049998781e437064e9c2c076c0a445512"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "89e52ff049998781e437064e9c2c076c0a445512",
+        "--",
+        "docs/records/20260930-004447-harness31-stranger-s1-artifacts"
+      ],
+      "exit": 0,
+      "stdout": "docs/records/20260930-004447-harness31-stranger-s1-artifacts/commands.jsonl\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/dry-run.py\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/execution.json\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/machine.json\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/report/bsv-rs/manifest.json\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/report/bsv-rs/seed.jsonl\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/report/seed.log\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/report/spec/seed.jsonl.gz\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/report/summary.txt\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/transfer.json\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/validation.json\ndocs/records/20260930-004447-harness31-stranger-s1-artifacts/verify-receipt.py\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+[withheld at export: a sibling tree's line]
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "exit": 0,
+      "stdout": "## HEAD (no branch)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uptime"
+      ],
+      "exit": 0,
+      "stdout": "20:53  up 7 days,  3:55, 11 users, load averages: 3.66 3.14 3.28\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sysctl",
+        "vm.swapusage"
+      ],
+      "exit": 0,
+      "stdout": "vm.swapusage: total = 4096.00M  used = 2423.25M  free = 1672.75M  (encrypted)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "memory_pressure"
+      ],
+      "exit": 0,
+      "stdout": "The system has 34359738368 (2097152 pages with a page size of 16384).\n\nStats: \nPages free: 95048 \nPages purgeable: 4819 \nPages purged: 20397149 \n\nSwap I/O:\nSwapins: 18980896 \nSwapouts: 23281228 \n\nPage Q counts:\nPages active: 824291 \nPages inactive: 821442 \nPages speculative: 18079 \nPages throttled: 0 \nPages wired down: 161918 \n\nCompressor Stats:\nPages used by compressor: 140258 \nPages decompressed: 445334669 \nPages compressed: 696165970 \n\nFile I/O:\nPageins: 499474923 \nPageouts: 685253 \n\nSystem-wide memory free percentage: 85%\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "df",
+        "-h",
+        "/"
+      ],
+      "exit": 0,
+      "stdout": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1s1   460Gi    12Gi    30Gi    28%    459k  319M    0%   /\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "date",
+        "-u",
+        "+%Y-%m-%dT%H:%M:%SZ"
+      ],
+      "exit": 0,
+      "stdout": "2026-09-30T00:53:58Z\n",
+      "stderr": ""
+    }
+  ],
+  "paid_applications_started": 0,
+  "billing_meter_queried": false,
+  "end_block_stamp": "2026-09-30T00:55:36Z",
+  "end_block_stamp_command": [
+    "date",
+    "-u",
+    "+%Y-%m-%dT%H:%M:%SZ"
+  ],
+  "author_check": {
+    "model": "Codex GPT-6-Astra",
+    "fresh_context": false,
+    "receipt_at_origin_main": "HELD",
+    "retained_report_rederivation": "GREEN",
+    "tracked_artifact_inventory_complete": "HELD",
+    "source_branch_not_in_receipt_commit_ancestry": "HELD",
+    "receipt_runtime_diff_empty": "HELD",
+    "artifact_bytes_unchanged_by_rebase": "HELD",
+    "block_figures_from_records": "HELD",
+    "fresh_lens": "assigned to opener by verified sitting under ROUTING R5; not run here",
+    "corrections_landed_from_fresh_lens": null
+  }
+}

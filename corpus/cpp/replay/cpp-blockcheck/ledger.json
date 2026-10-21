@@ -1,0 +1,16 @@
+{
+  "entries": 3,
+  "ids_form": "every undecided id under its reason and every not-replayable id, consecutive ids folded into `first..last` (tools/cpp_replay.py expand_ids): the counts are the expanded lists' lengths",
+  "not_replayable": 0,
+  "not_replayable_ids": [],
+  "projected": 0,
+  "source": "corpus/cpp/blockcheck_tests.jsonl",
+  "undecided": {
+    "a predicate (CheckCoinbase via CheckBlock, layer consensus): the drivers judge spends, and none has a hook that runs it": 3
+  },
+  "undecided_ids": {
+    "a predicate (CheckCoinbase via CheckBlock, layer consensus): the drivers judge spends, and none has a hook that runs it": [
+      "cpp-blockcheck-00001..00003"
+    ]
+  }
+}

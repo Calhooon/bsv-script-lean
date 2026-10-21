@@ -1,0 +1,365 @@
+{
+  "scope [LIT]": "All steps wait for D186 to be lifted and D185 to admit lane F; none runs at a capacity reset alone. Main shas are the inspected baseline, not a command to overwrite later main.",
+  "issues [LIT]": [
+    {
+      "issue [LIT]": 52,
+      "done_bar [LIT]": "OPEN: source pin and citations, adapter install, both-column replay/classification, and report re-cut. The prepared owner-held cut is excluded from model reads.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Owner supplies an allowed scope for the pin move and citations."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/engines/ts",
+          "action [LIT]": "S4b prepares the permitted adapter move under its own tag."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/CONFORMANCE-2026-09-27.md",
+          "action [LIT]": "Record the authorized replay, classifications and re-cut report; run the required landing leg."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 51,
+      "done_bar [LIT]": "OPEN: source pin and citations, adapter build, both-column replay/classification, and report re-cut. The prepared owner-held cut is excluded from model reads.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Owner supplies an allowed scope for the pin move and citations."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/engines/go",
+          "action [LIT]": "S4b prepares the permitted adapter move under its own tag."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/CONFORMANCE-2026-09-27.md",
+          "action [LIT]": "Record the authorized replay, classifications and re-cut report; run the required landing leg."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 49,
+      "done_bar [LIT]": "OPEN: extract the compiled reference unit tables, replay them, add the report family and add the replay leg. The planned corpus directory is absent [X].",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Inventory only allowed pinned unit-table sources and write the extraction contract."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "corpus/cpp",
+          "action [LIT]": "Implement the source-cited family and reader; this is a planned path."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "tools/check.sh",
+          "action [LIT]": "Run the authorized differential/instance rows and index the family, report and replay leg."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 46,
+      "done_bar [LIT]": "OPEN: the curated public tree scrub and the owner ruling on public history. Its dependency on owner review remains open.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Finish the permitted review and obtain the publication/history scope."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "tools/mechanism_check.sh",
+          "action [LIT]": "Prepare a curated export with neutral wording, preserving the private working history."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "README.md",
+          "action [LIT]": "Check that export and record the owner ruling before any public flip."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 44,
+      "done_bar [LIT]": "OPEN: the reviewed public tag, a consuming verifier run at that tag and the consuming provenance pins.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "README.md",
+          "action [LIT]": "Obtain the publication ruling and its reviewed release tree."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "lean/lakefile.toml",
+          "action [LIT]": "Prepare the public dependency tag and verify the executable interface."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Route the authorized consuming run and provenance read-backs."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 41,
+      "done_bar [LIT]": "OPEN: a named private instance pipeline receipt through the required script, transaction, policy and block paths. Closed historical records remain with the owner.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/DESIGN.md",
+          "action [LIT]": "Owner supplies an allowed source-only instance scope and recipe."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/src/bin/run_teranode.rs",
+          "action [LIT]": "Prepare the named instance adapter only within that scope."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/CONFORMANCE-2026-09-27.md",
+          "action [LIT]": "Attach an owner-authorized fresh private-instance receipt and its report; no closed item is reopened."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 39,
+      "done_bar [LIT]": "MET as previously folded: the standing rule and dated recon entry, with an unchanged-release trace. OPEN: recurring recon upkeep; the issue remains standing.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/recon.md",
+          "action [LIT]": "At pickup, establish the next authorized recon date from the last dated entry."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Read allowed upstream changes at their source and classify their effect."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/recon.md",
+          "action [LIT]": "Append the dated entry and route any pin or rule obligation that it establishes."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 37,
+      "done_bar [LIT]": "OPEN, non-gate: the cross-framework candidate note. The planned note is absent [X].",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Owner defines the candidate comparison and its scope."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/SECOND-FORMALIZATION.md",
+          "action [LIT]": "Prepare the candidate note at this planned path."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/SECOND-FORMALIZATION.md",
+          "action [LIT]": "Review the proposed comparison and decide any later charter."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 36,
+      "done_bar [LIT]": "OPEN, non-gate: a block-level design note if chartered. The planned note is absent [X].",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/DESIGN.md",
+          "action [LIT]": "Owner charters the extension beyond the script boundary."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/BLOCK-CONSENSUS.md",
+          "action [LIT]": "Write the source-cited boundary/design note at this planned path."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/BLOCK-CONSENSUS.md",
+          "action [LIT]": "Review the note and scope any later implementation."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 35,
+      "done_bar [LIT]": "MET within existing records: the dependency tag and executable foreign-fixture interface. OPEN: the consuming verifier receipt and consuming pin required by the active done-bar; the old non-gate wording does not close it.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/DESIGN.md",
+          "action [LIT]": "Route the existing interface/tag to the consuming lanes."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "eval/bsvs",
+          "action [LIT]": "Obtain the authorized consuming verifier receipt with executable identity and resources."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/PROVENANCE.md",
+          "action [LIT]": "Record the consuming pins and the issue evidence."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 34,
+      "done_bar [LIT]": "OPEN: the owner publication ruling, public release tag, license, announcement and history form. The license file is absent [X]; the advisory-record redaction checkbox is still OPEN on the tracker.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Resolve the review/scrub dependencies and the owner history ruling."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "LICENSE",
+          "action [LIT]": "Land the ruled license and the reviewed announcement/export; this license path is planned."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "README.md",
+          "action [LIT]": "Owner approves the public flip and tag, with the required advisory redactions verified."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 33,
+      "done_bar [LIT]": "OPEN: the hypotheses/write-up reviewed by the owner. The page exists [X]; existence is not completed review.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Obtain owner dispositions for closed review items outside model turns."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Finish only the allowed wording and write-up corrections."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/HYPOTHESES.md",
+          "action [LIT]": "Record the owner review and its issue evidence."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 32,
+      "done_bar [LIT]": "OPEN: zero open findings and accepted review reports. Owner-held patches and closed items prevent a model from establishing this done-bar.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/lanes/lean.md",
+          "action [LIT]": "Owner disposes of closed/held findings outside model turns; closed artifacts remain unopened."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/src/differential.rs",
+          "action [LIT]": "Route permitted remaining corrections to their owners with a fresh allowed scope."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/audit/README.md",
+          "action [LIT]": "Verify permitted landings and reports, then establish the zero-open done-bar with the owner."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 31,
+      "done_bar [LIT]": "MET: the independent stranger dry run at [SRC] `e39ba46`, receipt `docs/records/20260930-004447-harness31-stranger-s1.md` and the retained artifacts. Core receipt HELD by the existing Codex GPT-6.1-Sol opener review. Source/docs/CI landed at [SRC] `d675b6f` with its box leg. Tracker remains OPEN with its checkbox unticked; no tracker mutation ran during the pause.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/records/20260930-004447-harness31-stranger-s1.md",
+          "action [LIT]": "After pickup, reconcile the supported done-bar with the tracker and close administratively if still met."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/src/bin/run_diff.rs",
+          "action [LIT]": "Route S2 the allowed shared-reader adoption patch now that its module is on main."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/run",
+          "action [LIT]": "Qualify the wrapper header for bsv-rs, verify the adoption on the landing tree, and retain report/source identities."
+        }
+      ]
+    },
+    {
+      "issue [LIT]": 28,
+      "done_bar [LIT]": "OPEN: the seed run against a named private instance/endpoint, with that identity in the report. Existing shim history does not supply the instance done-bar and stays excluded.",
+      "next_steps [LIT]": [
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/DESIGN.md",
+          "action [LIT]": "Owner supplies an allowed instance recipe and the private-execution scope."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "harness/src/bin/run_teranode.rs",
+          "action [LIT]": "Prepare the permitted adapter and instance identity."
+        },
+        {
+          "branch [LIT]": "origin/main",
+          "sha [SRC]": "c11cb1fa18f8d941cdb984e4c7164a3849f1b2a6",
+          "file [SRC]": "docs/CONFORMANCE-2026-09-27.md",
+          "action [LIT]": "Obtain the authorized private seed receipt and index its named-instance report."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+[export: 85 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+tools/column.py receipt (make column IMPL=bsv-rs PIN=0.7.0); every command with its cwd, UTC start, 1-minute load and exit
+column: bsv-rs at 0.7.0 (pin move 0.5.0 -> 0.7.0); tree 6bd6c32db3b2 on lane/repin-148; host box; start 2026-10-17T01:56:02Z; load1 2.42
+$ cargo update -p bsv-rs --precise 0.7.0    [cwd harness; start 2026-10-17T01:56:02Z; load1 2.42]
+  exit 0; end 2026-10-17T01:56:03Z; 1.2 s
+$ cargo build --release --locked --quiet --bin spec_recorded --bin run_diff --bin run_bsvrs    [cwd harness; start 2026-10-17T01:56:03Z; load1 2.42]
+  exit 0; end 2026-10-17T01:56:11Z; 8.4 s
+$ cargo build --release --locked --quiet --bin num_vectors --bin sighash_vectors --bin arith_vectors --bin ecdsa_vectors    [cwd harness; start 2026-10-17T01:56:11Z; load1 3.21]
+  exit 0; end 2026-10-17T01:56:12Z; 0.5 s
+[withheld at export: a sibling tree's line]
+  exit 0; end 2026-10-17T01:56:12Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  exit 0; end 2026-10-17T01:56:12Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  exit 0; end 2026-10-17T01:56:12Z; 0.2 s
+[withheld at export: a sibling tree's line]
+  exit 0; end 2026-10-17T01:56:12Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/arith/cases.jsonl: 692 of 692 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/arith.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:12Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 692 entries recorded as bsv-rs@0.7.0 into ../corpus/arith/cases.jsonl; new sha256 f841d9ff49965584854d9786e577ea086433a423994dcff754fa6af8b0449d66 in ../corpus/arith/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:13Z; 0.1 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 692 (like-for-like, the standard word), spec 692 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/arith.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:13Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/bytes/cases.jsonl: 512 of 512 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/bytes.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 512 entries recorded as bsv-rs@0.7.0 into ../corpus/bytes/cases.jsonl; new sha256 cd0cf6cf4d1d6675d2c13235c507394dafa03130565e62288c31ded0c267608f in ../corpus/bytes/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 512 (like-for-like, the standard word), spec 512 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/bytes.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-bn_op/cases.jsonl: 170 of 170 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-bn_op.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 170 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-bn_op/cases.jsonl; new sha256 6abc7d1fc9f994f1423d1a603ccbf0064840d12d9e42c5f5dfd56a733f2586bf in ../corpus/cpp/replay/cpp-bn_op/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 170 (like-for-like, the standard word), spec 75 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-bn_op.jsonl (sha256 539103e376d72578ae7eee0c8c6f2ce6785db82a252052680135c30057ac052e); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl: 36 of 36 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-lrshiftnum.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 36 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl; new sha256 0432976b9dca846cc2c88ab4eff80ae3fa50f312a8290ea976ce55e585adcc51 in ../corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 32 (like-for-like, the standard word), spec 13 (the entry's own params: the block word when consensus); bsv-rs undecided 4 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-lrshiftnum.jsonl (sha256 d52ea9000273fd3b5d2181b296f0c3b90a452f6dbb59a313487b6975118b0acb); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-multisig/cases.jsonl: 30 of 30 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-multisig.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 30 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-multisig/cases.jsonl; new sha256 9938598831dc4d57c24f81756f637a64252fcbcbd8a9198145f086b24efb0ffd in ../corpus/cpp/replay/cpp-multisig/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 24 (the entry's own params: the block word when consensus); bsv-rs undecided 30 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-multisig.jsonl (sha256 f55057e9a8750bbf396d488b3d333400a61306cb3b6ba7b85506601d7fa32787); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:13Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-opcode/cases.jsonl: 144324 of 144324 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-opcode.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:14Z; 0.6 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 144324 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-opcode/cases.jsonl; new sha256 fe8a5c065df8ddfff355f4ba7f0f37ae7570c492b4c610aa98fec40f4dd93d48 in ../corpus/cpp/replay/cpp-opcode/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:17Z; 2.9 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 123 (like-for-like, the standard word), spec 67061 (the entry's own params: the block word when consensus); bsv-rs undecided 144201 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-opcode.jsonl (sha256 fdcb6dd257b169c3554a77de5767f8fff7ea1d4331853249e824f9e1bc2be0c1); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:20Z; 3.3 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-script/cases.jsonl: 67991 of 67991 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-script.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:31Z; 0.3 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 67991 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-script/cases.jsonl; new sha256 031ca7a6c05d89361e57e80b23b052d833e1890a960dd567843cae04e8169fd5 in ../corpus/cpp/replay/cpp-script/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:32Z; 1.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 134 (like-for-like, the standard word), spec 357 (the entry's own params: the block word when consensus); bsv-rs undecided 67857 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-script.jsonl (sha256 26063d605c1db16787f0fbf5d75312a177ad76005b26fd83fcc57725345eabf0); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:33Z; 1.2 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl: 64 of 64 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-script_P2SH.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 64 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl; new sha256 232b439fe69c5d86d61a4d9425067f3729702eda800292eca695fdffc9b80175 in ../corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 56 (the entry's own params: the block word when consensus); bsv-rs undecided 64 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-script_P2SH.jsonl (sha256 bd8ee3d5eec7f4375c4b358518c8b03de634f7dd4158603844ded043afd3730c); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-sigopcount/cases.jsonl: 6 of 6 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-sigopcount.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 6 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-sigopcount/cases.jsonl; new sha256 ddbae6cccc7e923ba2777003c5970a8d0f47ca32a2b6c07555064c589cc87e2c in ../corpus/cpp/replay/cpp-sigopcount/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 2 (like-for-like, the standard word), spec 6 (the entry's own params: the block word when consensus); bsv-rs undecided 4 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/cpp-sigopcount.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:37Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-transaction/cases.jsonl: 167 of 167 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-transaction.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:38Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 167 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-transaction/cases.jsonl; new sha256 68e220ab866770004b285a57e026f30bb16b7973ee0a4ff0913f1a60ccb7daa3 in ../corpus/cpp/replay/cpp-transaction/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:38Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 66 (like-for-like, the standard word), spec 108 (the entry's own params: the block word when consensus); bsv-rs undecided 101 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-transaction.jsonl (sha256 22e54f3a772ca6758de53d5d40308731f6bd59e97125f5d6e2a59ef3f256faef); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:38Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl: 1024 of 1024 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t100-g1-c1.jsonl (config sv-regtest(genesis=1,chronicle=1))
+  exit 0; end 2026-10-17T01:56:38Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 1024 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl; new sha256 4e4ce2f1e0c204f0b1e9fe4f5b753deef132839f79489b11bddb35d2f7858ead in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:38Z; 0.1 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 1024 (the entry's own params: the block word when consensus); bsv-rs undecided 1024 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/cpp-txvalidationcache-t100-g1-c1.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:38Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl: 2048 of 2048 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t100-g1-c102.jsonl (config sv-regtest(genesis=1,chronicle=102))
+  exit 0; end 2026-10-17T01:56:38Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 2048 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl; new sha256 b0744e632d11ed231c8a2d1c9b5f659eb64cea1853b2749d13a4979ceeb0b0b6 in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:39Z; 0.3 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 2048 (the entry's own params: the block word when consensus); bsv-rs undecided 2048 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/cpp-txvalidationcache-t100-g1-c102.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:39Z; 0.3 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl: 4097 of 4097 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t100-g102-c102.jsonl (config sv-regtest(genesis=102,chronicle=102))
+  exit 0; end 2026-10-17T01:56:39Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 4097 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl; new sha256 cff22ee02599514d4639b12e6ddf715a4e53d7db0bf3e626722afb1b610a3357 in ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:40Z; 0.5 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 2049 (the entry's own params: the block word when consensus); bsv-rs undecided 4097 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-txvalidationcache-t100-g102-c102.jsonl (sha256 2ab5d4c28b2d2f054d853b809536c6647df8f421ad145cea7002973c626fefff); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:40Z; 0.3 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl: 4096 of 4096 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t101-g1-c1.jsonl (config sv-regtest(genesis=1,chronicle=1))
+  exit 0; end 2026-10-17T01:56:41Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 4096 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl; new sha256 3e977add61a99361a274b7777e865ec90cec809f2f47df4ca1d071d80b04b034 in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:41Z; 0.1 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 4096 (the entry's own params: the block word when consensus); bsv-rs undecided 4096 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/cpp-txvalidationcache-t101-g1-c1.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:41Z; 0.2 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl: 8192 of 8192 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t101-g1-c103.jsonl (config sv-regtest(genesis=1,chronicle=103))
+  exit 0; end 2026-10-17T01:56:41Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 8192 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl; new sha256 7ba7b6955c0f4c696e145c99753955fa778ef76ad6af3fd6a571e4c965c51b9f in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:42Z; 0.2 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 8192 (the entry's own params: the block word when consensus); bsv-rs undecided 8192 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/cpp-txvalidationcache-t101-g1-c103.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:42Z; 0.3 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl: 3 of 3 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t101-g102-c1.jsonl (config sv-regtest(genesis=102,chronicle=1))
+  exit 0; end 2026-10-17T01:56:43Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 3 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl; new sha256 f64b14e73b0b88beac95c4365f94a715175a5a03ede29486ce3702dcdb62f6f3 in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:43Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 1 (the entry's own params: the block word when consensus); bsv-rs undecided 3 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-txvalidationcache-t101-g102-c1.jsonl (sha256 8b1edbb9a7f423b845b4c99f85f7ec6fc3d6ae1b44201e5ec1830dd9c349a80e); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:43Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl: 16384 of 16384 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/cpp-txvalidationcache-t101-g103-c103.jsonl (config sv-regtest(genesis=103,chronicle=103))
+  exit 0; end 2026-10-17T01:56:43Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 16384 entries recorded as bsv-rs@0.7.0 into ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl; new sha256 a04963062209fa92929cd923b8b6d8a210827820dd110be8f73430b40e1383cf in ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:43Z; 0.3 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 0 (like-for-like, the standard word), spec 10240 (the entry's own params: the block word when consensus); bsv-rs undecided 16384 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/cpp-txvalidationcache-t101-g103-c103.jsonl (sha256 49b41a37c03cc926ba95db5a7e38df5c451acc98259783681fb08572044ed23c); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:44Z; 0.4 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/crypto/cases.jsonl: 84 of 84 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/crypto.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:45Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 84 entries recorded as bsv-rs@0.7.0 into ../corpus/crypto/cases.jsonl; new sha256 1159327df5c9b01421e24d7436eb3a39cf2866021cffcf242238caf418729df6 in ../corpus/crypto/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:45Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 84 (like-for-like, the standard word), spec 84 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/crypto.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:45Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/eras/eras.jsonl: 74 of 74 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/eras.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 74 entries recorded as bsv-rs@0.7.0 into ../corpus/eras/eras.jsonl; new sha256 2190075538d0315db3c8a03c497aeecd7048b850abbbc3bfa36663c9c082fb64 in ../corpus/eras/manifest.json; undecided: a resource wall 0, not applicable 42, a panic 0
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 32 (like-for-like, the standard word), spec 32 (the entry's own params: the block word when consensus); bsv-rs undecided 42 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/eras.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/flow/flow.jsonl: 1094 of 1094 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/flow.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 1094 entries recorded as bsv-rs@0.7.0 into ../corpus/flow/flow.jsonl; new sha256 f84bdb9cf46441a3abb7cf82b5eea000438a2e3ca547fa83069cf29701762663 in ../corpus/flow/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 1094 (like-for-like, the standard word), spec 1094 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/flow.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/gen/gen.jsonl: 1157 of 1157 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/gen.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:46Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 1157 entries recorded as bsv-rs@0.7.0 into ../corpus/gen/gen.jsonl; new sha256 2cc46823f40dd6def60cfbc8d39ff2c8612985813fbdd8ca6aa6bf16af59ba4f in ../corpus/gen/manifest.json; undecided: a resource wall 0, not applicable 5, a panic 0
+  exit 0; end 2026-10-17T01:56:46Z; 0.1 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 1152 (like-for-like, the standard word), spec 1152 (the entry's own params: the block word when consensus); bsv-rs undecided 5 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/gen.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:46Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/million/witnesses.jsonl: 4 of 4 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/million.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:47Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 4 entries recorded as bsv-rs@0.7.0 into ../corpus/million/witnesses.jsonl; new sha256 e23c796320bd04bf21788f79713525b4731efbcfd07db42ac0b3d7770778950d in ../corpus/million/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:47Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 4 (like-for-like, the standard word), spec 0 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 4; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 1 written to ../corpus/witnesses/million.jsonl (sha256 2fcf3674b1d65eb4f2481afcab24cb6d0aa5f9d97c13e54bc50716518bc05f28); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:47Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/road/road.jsonl: 13512 of 13512 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/road.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:47Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 13512 entries recorded as bsv-rs@0.7.0 into ../corpus/road/road.jsonl; new sha256 7d06748b5aaca24d9eb38f385e4fda7d73dc67c946312a92c211cec766355d57 in ../corpus/road/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:47Z; 0.3 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 13512 (like-for-like, the standard word), spec 13512 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/road.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:48Z; 0.4 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/seed/seed.jsonl: 10000 of 10000 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/seed.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:49Z; 0.1 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 10000 entries recorded as bsv-rs@0.7.0 into ../corpus/seed/seed.jsonl; new sha256 bc0651d0f7f8193aebbd233b258148d81ca553a8f43a01fc2594b51610f554b0 in ../corpus/seed/manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:49Z; 0.3 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 10000 (like-for-like, the standard word), spec 10000 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/seed.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:49Z; 0.3 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/stack/cases.jsonl: 262 of 262 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/stack.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:50Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 262 entries recorded as bsv-rs@0.7.0 into ../corpus/stack/cases.jsonl; new sha256 f0e9621cabf1a72fa663d414f28df6b383f0165c430c59efa5be42eb6a086434 in ../corpus/stack/cases-manifest.json; undecided: a resource wall 0, not applicable 0, a panic 0
+  exit 0; end 2026-10-17T01:56:50Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 262 (like-for-like, the standard word), spec 262 (the entry's own params: the block word when consensus); bsv-rs undecided 0 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/stack.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:50Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/tx/tx.jsonl: 40 of 40 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/tx.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:51Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 40 entries recorded as bsv-rs@0.7.0 into ../corpus/tx/tx.jsonl; new sha256 9c7746f6b6fff19fd39df47231ec0ee91caefe3843a105ebca96caa6784e5c16 in ../corpus/tx/manifest.json; undecided: a resource wall 0, not applicable 26, a panic 0
+  exit 0; end 2026-10-17T01:56:51Z; 0.2 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 14 (like-for-like, the standard word), spec 14 (the entry's own params: the block word when consensus); bsv-rs undecided 26 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/tx.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:51Z; 0.2 s
+[withheld at export: a sibling tree's line]
+  spec_recorded: ../corpus/xsig-144/xsig-144.jsonl: 16 of 16 entries carry spec@f5e7e0a6 and spec-mempool@f5e7e0a6 (0 carry neither); written to $ROOT/harness/target/column/20261017-015602-bsv-rs/spec/xsig-144.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-17T01:56:52Z; 0.0 s
+[withheld at export: a sibling tree's line]
+  run_bsvrs --record: 16 entries recorded as bsv-rs@0.7.0 into ../corpus/xsig-144/xsig-144.jsonl; new sha256 7db4149afd92f546a1be99142d1df9f739038ef9cda0f0539df4e1fbe491a9cc in ../corpus/xsig-144/manifest.json; undecided: a resource wall 0, not applicable 4, a panic 0
+  exit 0; end 2026-10-17T01:56:52Z; 0.0 s
+[withheld at export: a sibling tree's line]
+    agree: spec-mempool 12 (like-for-like, the standard word), spec 12 (the entry's own params: the block word when consensus); bsv-rs undecided 4 (a pre-Genesis input, or an abort on an entry the spec does not decide); aborts filed as witnesses (D15: `engine.resource-abort`, `engine.exception`) 0; the spec undefined-in-reference (Q7, reported, never counted) 0; without a spec verdict 0; recorded bsv-rs verdicts disagreeing with the live run 0; bsv-rs messages outside the table 0
+    witnesses: 0 written to ../corpus/witnesses/xsig-144.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest ../corpus/witnesses/manifest.json
+  run_diff: GREEN (every divergence explained by a rule with its citation)
+  exit 0; end 2026-10-17T01:56:52Z; 0.0 s

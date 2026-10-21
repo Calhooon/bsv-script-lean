@@ -1,0 +1,5 @@
+tools/column.py receipt (make column IMPL=sv-node PIN=v1.2.3 CORPUS=cpp-txvalidationcache-t101-g102-c1); every command with its cwd, UTC start, 1-minute load and exit
+column: sv-node at v1.2.3 (dry run on the current pin); tree 662bae704415 on lane/hz-95; host box; start 2026-10-18T05:01:44Z; load1 6.59
+$ cargo build --release --locked --quiet --bin spec_recorded --bin run_svnode    [cwd harness; start 2026-10-18T05:01:44Z; load1 6.59]
+  exit 0; end 2026-10-18T05:01:44Z; 0.2 s
+column: cpp-txvalidationcache-t101-g102-c1: SKIPPED BY NAME (its spec column is sv-regtest(genesis=102,chronicle=1): the instances of the test's own chain (tools/cpp_era_run.sh), not the standing pair)

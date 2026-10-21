@@ -1,0 +1,13 @@
+[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+tools/column.py receipt (make column IMPL=sv-node PIN=v1.2.3 CORPUS=crypto); every command with its cwd, UTC start, 1-minute load and exit
+column: sv-node at v1.2.3 (dry run on the current pin); tree 662bae704415 on lane/hz-95; host box; start 2026-10-18T05:05:19Z; load1 5.99
+$ cargo build --release --locked --quiet --bin spec_recorded --bin run_svnode    [cwd harness; start 2026-10-18T05:05:19Z; load1 5.99]
+  exit 0; end 2026-10-18T05:05:19Z; 0.0 s
+$ $ROOT/harness/target/release/spec_recorded --corpus target/column/20261018-050519-sv-node/corpora/crypto/cases.jsonl --out $ROOT/harness/target/column/20261018-050519-sv-node/spec/crypto.jsonl --config sv-mainnet-default    [cwd harness; start 2026-10-18T05:05:19Z; load1 5.99]
+  spec_recorded: target/column/20261018-050519-sv-node/corpora/crypto/cases.jsonl: 84 of 84 entries carry spec@cb7e46e and spec-mempool@cb7e46e (0 carry neither); written to $ROOT/harness/target/column/20261018-050519-sv-node/spec/crypto.jsonl (config sv-mainnet-default)
+  exit 0; end 2026-10-18T05:05:19Z; 0.2 s
+[withheld at export: a sibling tree's line]
+    agree: spec 84, spec-mempool 84; node undecided runs (timeout/skipped) 0; without a spec verdict 0; descriptions outside the table 0; flag-word drifts 0
+    witnesses: 0 written to target/column/20261018-050519-sv-node/witnesses/sv-node/crypto.jsonl (sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855); manifest target/column/20261018-050519-sv-node/witnesses/sv-node/manifest.json
+  run_svnode: GREEN (0 divergent runs filed under cited classes; every other decided entry agrees in both columns)
+  exit 0; end 2026-10-18T05:05:19Z; 0.2 s

@@ -1,0 +1,891 @@
+{
+  "arith": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 692,
+    "agree_mempool": 692,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/arith/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 692,
+    "file": "arith.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "bytes": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 512,
+    "agree_mempool": 512,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/bytes/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 512,
+    "file": "bytes.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-bn_op": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 75,
+    "agree_mempool": 170,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 170,
+    "file": "cpp-bn_op.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 95,
+        "from": "cpp-bn_op-00001",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-bn_op-spec-engine.word-out-of-scope-cpp-bn_op-00001"
+      }
+    ],
+    "sha256": "539103e376d72578ae7eee0c8c6f2ce6785db82a252052680135c30057ac052e",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-lrshiftnum": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 13,
+    "agree_mempool": 32,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 4,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 36,
+    "file": "cpp-lrshiftnum.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 23,
+        "from": "cpp-lrshiftnum-00001",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-lrshiftnum-spec-engine.word-out-of-scope-cpp-lrshiftnum-00001"
+      }
+    ],
+    "sha256": "d52ea9000273fd3b5d2181b296f0c3b90a452f6dbb59a313487b6975118b0acb",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 4,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-multisig": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 24,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 30,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 30,
+    "file": "cpp-multisig.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 6,
+        "from": "cpp-multisig-00011",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-multisig-spec-engine.word-out-of-scope-cpp-multisig-00011"
+      }
+    ],
+    "sha256": "f55057e9a8750bbf396d488b3d333400a61306cb3b6ba7b85506601d7fa32787",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 30,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-opcode": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 67061,
+    "agree_mempool": 123,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 144201,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 144324,
+    "file": "cpp-opcode.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 77263,
+        "from": "cpp-opcode-144216",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-opcode-spec-engine.word-out-of-scope-cpp-opcode-144216"
+      }
+    ],
+    "sha256": "fdcb6dd257b169c3554a77de5767f8fff7ea1d4331853249e824f9e1bc2be0c1",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 144201,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-script": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 357,
+    "agree_mempool": 134,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-script/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 67857,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 67991,
+    "file": "cpp-script.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 67634,
+        "from": "cpp-script-00128",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-script-spec-engine.word-out-of-scope-cpp-script-00128"
+      }
+    ],
+    "sha256": "26063d605c1db16787f0fbf5d75312a177ad76005b26fd83fcc57725345eabf0",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 67857,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-script_P2SH": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 56,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 64,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 64,
+    "file": "cpp-script_P2SH.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 8,
+        "from": "cpp-script_P2SH-00063",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-script_P2SH-spec-engine.word-out-of-scope-cpp-script_P2SH-00063"
+      }
+    ],
+    "sha256": "bd8ee3d5eec7f4375c4b358518c8b03de634f7dd4158603844ded043afd3730c",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 64,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-sigopcount": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 6,
+    "agree_mempool": 2,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 4,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 6,
+    "file": "cpp-sigopcount.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 4,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-transaction": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 108,
+    "agree_mempool": 66,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 101,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 167,
+    "file": "cpp-transaction.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 59,
+        "from": "cpp-transaction-00044",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-transaction-spec-engine.word-out-of-scope-cpp-transaction-00044"
+      }
+    ],
+    "sha256": "22e54f3a772ca6758de53d5d40308731f6bd59e97125f5d6e2a59ef3f256faef",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 101,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-txvalidationcache-t100-g1-c1": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 1024,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 1024,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 1024,
+    "file": "cpp-txvalidationcache-t100-g1-c1.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "undecided": 1024,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-txvalidationcache-t100-g1-c102": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 2048,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 2048,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 2048,
+    "file": "cpp-txvalidationcache-t100-g1-c102.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=102)",
+    "undecided": 2048,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-txvalidationcache-t100-g102-c102": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 2049,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 4097,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 4097,
+    "file": "cpp-txvalidationcache-t100-g102-c102.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 2048,
+        "from": "cpp-txvalidationcache-00005",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-txvalidationcache-t100-g102-c102-spec-engine.word-out-of-scope-cpp-txvalidationcache-00005"
+      }
+    ],
+    "sha256": "2ab5d4c28b2d2f054d853b809536c6647df8f421ad145cea7002973c626fefff",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=102)",
+    "undecided": 4097,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-txvalidationcache-t101-g1-c1": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 4096,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 4096,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 4096,
+    "file": "cpp-txvalidationcache-t101-g1-c1.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=1)",
+    "undecided": 4096,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-txvalidationcache-t101-g1-c103": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 8192,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 8192,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 8192,
+    "file": "cpp-txvalidationcache-t101-g1-c103.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=1,chronicle=103)",
+    "undecided": 8192,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "cpp-txvalidationcache-t101-g102-c1": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 1,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 3,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 3,
+    "file": "cpp-txvalidationcache-t101-g102-c1.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 2,
+        "from": "cpp-txvalidationcache-172037",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-txvalidationcache-t101-g102-c1-spec-engine.word-out-of-scope-cpp-txvalidationcache-172037"
+      }
+    ],
+    "sha256": "8b1edbb9a7f423b845b4c99f85f7ec6fc3d6ae1b44201e5ec1830dd9c349a80e",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=102,chronicle=1)",
+    "undecided": 3,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "cpp-txvalidationcache-t101-g103-c103": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 10240,
+    "agree_mempool": 0,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 16384,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 16384,
+    "file": "cpp-txvalidationcache-t101-g103-c103.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "bsv-rs 0.3.33 flags.rs:500–519 (ScriptFlags::check: a word without SIGHASH_FORKID, GENESIS or UTXO_AFTER_GENESIS, or with CHRONICLE without GENESIS, is ScriptFlagsError::NotApplicable, the crate's own scope: \"pre-Genesis block rules are not implemented by this interpreter\"), reported by Spend::validate as an evaluation error, spend.rs:523–529 (\"Invalid verification flags: ...\", bsvrs_codes.rs's SCRIPT_ERR_INVALID_FLAGS row; 0.3.30's flags.rs:493-512 and spend.rs:499-505 until lane merge32-49 re-recorded the cpp column at 0.3.32); the reference evaluates such a word (valid_flags refuses only UTXO_AFTER_CHRONICLE without UTXO_AFTER_GENESIS, interpreter.cpp:2259–2262, 2312–2313, and CLEANSTACK without P2SH, 2435–2436; a word without FORKID drops the signature from the script code as the original digest does, CleanupScriptCode 255–263; docs/PARAMETERS.md section 2)",
+        "entries": 6144,
+        "from": "cpp-txvalidationcache-114693",
+        "rule": "engine.word-out-of-scope",
+        "ruling": "open",
+        "witness": "witness-cpp-txvalidationcache-t101-g103-c103-spec-engine.word-out-of-scope-cpp-txvalidationcache-114693"
+      }
+    ],
+    "sha256": "49b41a37c03cc926ba95db5a7e38df5c451acc98259783681fb08572044ed23c",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-regtest(genesis=103,chronicle=103)",
+    "undecided": 16384,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "crypto": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 84,
+    "agree_mempool": 84,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/crypto/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 84,
+    "file": "crypto.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "eras": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 32,
+    "agree_mempool": 32,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/eras/eras.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 42,
+      "recorded": {
+        "memory_limit": 32000000,
+        "mode": "the reference's word per input from the entry's spend height and the coin's height (engine::word_for: the block word of the spend's era when params.consensus, the standard word otherwise, the coin's Chronicle marker by the coin's era; a pre-Genesis spend or coin is not applicable = undecided), the transaction's own version",
+        "require_push_only": true,
+        "words": "per-input"
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 74,
+    "file": "eras.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 42,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "flow": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 1094,
+    "agree_mempool": 1094,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/flow/flow.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 1094,
+    "file": "flow.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "gen": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 1152,
+    "agree_mempool": 1152,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/gen/gen.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 5,
+      "recorded": {
+        "memory_limit": 32000000,
+        "mode": "the reference's word per input from the entry's spend height and the coin's height (engine::word_for: the block word of the spend's era when params.consensus, the standard word otherwise, the coin's Chronicle marker by the coin's era; a pre-Genesis spend or coin is not applicable = undecided), the transaction's own version",
+        "require_push_only": true,
+        "words": "per-input"
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 1157,
+    "file": "gen.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 5,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "million": {
+    "aborts_as_witnesses": 4,
+    "agree_block": 0,
+    "agree_mempool": 4,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/million/witnesses.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 4,
+    "file": "million.jsonl",
+    "generated": "2026-10-17",
+    "rules": [
+      {
+        "column": "spec",
+        "decided_by": "the reference decides the input (its verdict recorded in the entry as sv-node@v1.2.2 on both instances, corpus/INDEX.md §4c; the spec's verdict in the witness); bsv-rs 0.3.33 spend.rs:467–473 (the LOCAL budget in force, memory_limit(): with memory_limit None, as engine.rs runs the crate, under a word WORD_MEMORY_LIMIT, 110–118, the node's POLICY default 100,000,000 on the block path as on the mempool path; in the default mode DEFAULT_MEMORY_LIMIT 32,000,000, 108), charged before any growth by check_node_budget 2415–2430 (the policy's verdict first, 2416–2422; then the local budget as a resource_error, 2423–2428, 2451–2463) and at OP_NUM2BIN's element check before the allocation (1190–1191); the reference bounds an element after Genesis by the stack memory budget alone (limitedstack; configscriptpolicy.cpp:139–154; the consensus budget is the operator's MANDATORY -maxstackmemoryusageconsensus, bitcoind.cpp:140–157, 0 meaning INT64_MAX, configscriptpolicy.cpp:280–283 and consensus.h:82, and the spec's oracle sets 0, harness/oracle/bitcoin.conf:40; OP_NUM2BIN's own bound INT32_MAX at interpreter.cpp:1749–1752) and a number by its length at the read (script_num.cpp:62 → interpreter.cpp:1807–1810) or at the shift's result (script_num.cpp:303–317 at v1.2.3); through 0.3.29 the default mode's budget applied in every mode (spend.rs:73 at 0.3.29, spend.rs:72 at 0.3.28): the Finding on #47 (5860579463) is the block path's budget at 0.3.30; the class stays for the seeded run's six (T3's call and the parent's decision, 2026-09-28): under memory_limit Some(usize::MAX), the oracle's budget, each of the four witness lines gives the spec's verdict ([X-local] in T3's window, its sitting-4 END BLOCK, 2026-09-28T13:23:23Z)",
+        "entries": 4,
+        "from": "million-seed-969309",
+        "rule": "engine.resource-abort",
+        "ruling": "impl-wrong",
+        "witness": "witness-million-spec-engine.resource-abort-million-seed-969309"
+      }
+    ],
+    "sha256": "2fcf3674b1d65eb4f2481afcab24cb6d0aa5f9d97c13e54bc50716518bc05f28",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 1
+  },
+  "road": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 13512,
+    "agree_mempool": 13512,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/road/road.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 13512,
+    "file": "road.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "seed": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 10000,
+    "agree_mempool": 10000,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/seed/seed.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 10000,
+    "file": "seed.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "stack": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 262,
+    "agree_mempool": 262,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/stack/cases.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 0,
+      "recorded": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 262,
+    "file": "stack.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 0,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "tx": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 14,
+    "agree_mempool": 14,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/tx/tx.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 26,
+      "recorded": {
+        "memory_limit": 32000000,
+        "mode": "the reference's word per input from the entry's spend height and the coin's height (engine::word_for: the block word of the spend's era when params.consensus, the standard word otherwise, the coin's Chronicle marker by the coin's era; a pre-Genesis spend or coin is not applicable = undecided), the transaction's own version",
+        "require_push_only": true,
+        "words": "per-input"
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 40,
+    "file": "tx.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@cb7e46e",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 26,
+    "unknown_messages": {},
+    "witnesses": 0
+  },
+  "xsig-144": {
+    "aborts_as_witnesses": 0,
+    "agree_block": 12,
+    "agree_mempool": 12,
+    "bsv-rs": "0.7.0",
+    "corpus": "../corpus/xsig-144/xsig-144.jsonl",
+    "engine_config": {
+      "not_applicable_entries": 4,
+      "recorded": {
+        "memory_limit": 32000000,
+        "mode": "the reference's word per input from the entry's spend height and the coin's height (engine::word_for: the block word of the spend's era when params.consensus, the standard word otherwise, the coin's Chronicle marker by the coin's era; a pre-Genesis spend or coin is not applicable = undecided), the transaction's own version",
+        "require_push_only": true,
+        "words": "per-input"
+      },
+      "spec_column": "the entry's own word per input (spec_words): its explicit flags[i] (ScriptFlags::from_bits) when it carries flags, else engine::word_for(spend, coin, params.consensus): ScriptFlags::block(era) with the coin's Chronicle marker when params.consensus (= 0x3D462F for a post-Chronicle spend of a post-Chronicle coin), ScriptFlags::standard(era) otherwise",
+      "spec_mempool_column": "engine::word_for(spend, coin, false): ScriptFlags::standard(era) with the coin's Chronicle marker = 0x3D47FF for a post-Chronicle spend of a post-Chronicle coin"
+    },
+    "entries": 16,
+    "file": "xsig-144.jsonl",
+    "generated": "2026-10-17",
+    "rules": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spec": "spec@f5e7e0a6",
+    "spec_config": "sv-mainnet-default",
+    "undecided": 4,
+    "unknown_messages": {},
+    "witnesses": 0
+  }
+}

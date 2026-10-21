@@ -1,0 +1,11 @@
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+make check record (tools/check.sh; #43)
+commit: a7b7d37 (0 uncommitted paths at the start of the run, 0 at its end)
+started: 20260924-030444 UTC; wall: 6s (0 min 6 s)
+host: modal; load at start: 0.00, 0.00, 0.00; load at end: 0.00, 0.00, 0.00
+[withheld at export: a sibling tree's line]
+status: RED (exit 1)
+legs (the verdict lines, in order):
+  check-pins: RED (6 drift, 9 skipped)
+[withheld at export: a sibling tree's line]
+  sample 03:04:44 UTC: load1 0.00; over 5% cpu: python 50% 0.1GB; bash 14% 0.0GB; bash 17% 0.0GB; python3 100% 0.0GB; bash 33% 0.0GB; other programs: 3 processes, 117% cpu; 

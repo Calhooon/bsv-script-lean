@@ -1,0 +1,951 @@
+{
+  "base_commit": "662bae70441524557130787172ab521ca33e0429",
+  "calls": 532,
+  "counts": {
+    "block": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "chain": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "finality": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 10,
+      "no-verdict": 0,
+      "non-judging": 3,
+      "pending": 0,
+      "rows": 13,
+      "rpc-precheck": 0,
+      "unrealizable": 3
+    },
+    "mempool": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 12,
+      "no-verdict": 0,
+      "non-judging": 5,
+      "pending": 0,
+      "rows": 67,
+      "rpc-precheck": 1,
+      "unrealizable": 54
+    },
+    "oracle": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    },
+    "utxo": {
+      "agree": 0,
+      "diverge": 0,
+      "label": "[M]",
+      "measured": 0,
+      "no-verdict": 0,
+      "non-judging": 0,
+      "pending": 0,
+      "rows": 0,
+      "rpc-precheck": 0,
+      "unrealizable": 0
+    }
+  },
+  "families": {
+    "block": [],
+    "chain": [],
+    "finality": [
+      {
+        "id": "expiry/clock-backward",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row requests expiry 10 seconds; the node launch setting parses integer hours and multiplies by 3600, with no RPC setter for a 10-second purge age ([SRC] src/time_locked_mempool.cpp:403-404; src/init.cpp:463-467 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "expiry/zero-expiry",
+        "label": "[X]",
+        "reference_token": "measured agree: true [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "expiry/backward-zero-expiry",
+        "label": "[X]",
+        "reference_token": "measured agree: false [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's input is the mock clock (the pool's capacity and expiry, adjusted time, a backward clock), a fee-stage value outside what a funded coin can carry, a configured span, or an operand no block carries; Teranode has no mock clock (setmocktime has no handler, services/rpc/Server.go:160-226,277-285), no non-final pool (services/validator/Validator.go:976-983), and its eras are fixed (go-chaincfg v1.6.2 params.go:475-476) [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "block/before-csv-own-time",
+        "label": "[X]",
+        "observed": {
+          "height": 105,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/mtp-below",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "tip/mtp-equal",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "tip/mtp-above",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/successor-height",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"status\":\"final\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "agree"
+      },
+      {
+        "id": "tip/successor-height-equal",
+        "label": "[X]",
+        "observed": {
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"status\":\"heldNonFinal\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "block/csv-mtp-below",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.0007245,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/csv-mtp-equal",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.000606708,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/csv-mtp-above",
+        "label": "[X]",
+        "observed": {
+          "height": 1351,
+          "send": true,
+          "status": "ok",
+          "sweep": {
+            "active": true,
+            "invalid": false,
+            "stored": true
+          }
+        },
+        "reference_token": "measured agree: {\"status\":\"ok\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      },
+      {
+        "id": "block/postgenesis-still-rejected",
+        "label": "[X]",
+        "observed": {
+          "code": 16,
+          "seconds": 0.0006575,
+          "send": false,
+          "status": "rejected",
+          "wire": "reject"
+        },
+        "reference_token": "measured agree: {\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "block",
+        "verdict": "agree"
+      }
+    ],
+    "mempool": [
+      {
+        "id": "nonfinal-disabled-pool",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":259,\"namespace\":\"node\",\"reason\":\"non-final-pool-full\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"maxMempoolNonFinal\":0}; Teranode has no same-named setting for maxMempoolNonFinal ([SRC] no maxmempoolnonfinal key in the tag's Go sources or settings.conf (git grep empty): there is no non-final pool (services/validator/Validator.go:976-983))"
+      },
+      {
+        "id": "nonfinal-pre-genesis",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"bad-txns-nonfinal\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "held-lock-conflict",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"7dd1a875aa494f1dfacecf17bf820e43708d515d28263e4818e665845fdfbb4a\"],\"judgment\":{\"code\":258,\"namespace\":\"node\",\"reason\":\"txn-mempool-conflict\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-finalising-update-queues",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"pending\":[\"dab4abf9a7267678c00260030d0de071e39f09dae092afa37085892259a66c99\"],\"status\":\"deferred\"} [P2P: after one low-priority move at the nonstandard-input guard, the finalising commit queued revalidation (src/time_locked_mempool.cpp:61-81; src/txn_validator.cpp:472-479); the row's RPC request revalidates inline (src/txn_validator.cpp:178-188); queue read between validator cycles] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "coins-cache-equality",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-inputs-too-large\",\"status\":\"rejected\"},\"orphans\":0,\"validatedAt\":\"high\"} [P2P: high priority with limits, maxcoinsviewcachesize=1B (src/validation.cpp:1171-1177)] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"useLimits\":true}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935); beside it the row's setting: maxCoinsViewCacheSize is Teranode's maxcoinsviewcachesize (settings/settings.go:135)"
+      },
+      {
+        "id": "coins-cache-below",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0,\"validatedAt\":\"low\"} [P2P: the pin moved the high request to low priority at the nonstandard-input guard (src/validation.cpp:1225-1233; src/txn_validator.cpp:633-641); the row's low request then validated with limits] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"lowPriority\":true,\"useLimits\":true}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935); beside it the row's setting: maxCoinsViewCacheSize is Teranode's maxcoinsviewcachesize (settings/settings.go:135)"
+      },
+      {
+        "id": "coins-cache-zero-unlimited",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0,\"validatedAt\":\"low\"} [P2P: the pin moved the high request to low priority at the nonstandard-input guard (src/validation.cpp:1225-1233; src/txn_validator.cpp:633-641); the row's low request then validated with limits] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"lowPriority\":true,\"useLimits\":true}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935); beside it the row's setting: maxCoinsViewCacheSize is Teranode's maxcoinsviewcachesize (settings/settings.go:135)"
+      },
+      {
+        "id": "sequence-pre-genesis-edge",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"non-BIP68-final\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"genesisHeight\":10000}; the instance's chain is go-chaincfg v1.6.2's regtest, its eras fixed at Genesis 100 / Chronicle 200 with no settings key (params.go:475-476) and block 1's coinbase mature at 101, so the row's era heights are not the instance's; beside it the row's setting: requireStandard is Teranode's requirestandard (settings/settings.go:123)"
+      },
+      {
+        "id": "inputs-budget-downgrade",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"pending\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"pendingLow\":true,\"status\":\"deferred\"} [P2P: deferred by the nonstandard-input disjunct of the guard the row's inputs budget names (src/validation.cpp:1225-1233), without a clock; the budget cell was not the cause (#71); queue read between validator cycles] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"useLimits\":true} and context {\"budget\":\"inputs\"}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "inputs-budget-observation-ignored-without-limits",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference context {\"budget\":\"inputs\"}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "inputs-low-skips-standardness",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0,\"validatedAt\":\"low\"} [P2P: the pin moved the high request to low priority at the nonstandard-input guard (src/validation.cpp:1225-1233; src/txn_validator.cpp:633-641); the row's low request then validated with limits] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"lowPriority\":true,\"useLimits\":true}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "absurd-fee-above",
+        "label": "[X]",
+        "reference_token": "measured agree (wallet build): {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":256,\"namespace\":\"node\",\"reason\":\"absurdly-high-fee\",\"status\":\"rejected\"},\"orphans\":0} [M] 2026-10-14 [X] docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md",
+        "unrealizable": "the row selects the reference's wallet build or its maxtxfee ceiling; Teranode has no wallet and its own RPC absurd-fee ceiling (services/rpc/handlers.go:913-916) is its default, never the rule"
+      },
+      {
+        "id": "absurd-fee-equality",
+        "label": "[X]",
+        "reference_token": "measured agree (wallet build): {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [M] 2026-10-14 [X] docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md",
+        "unrealizable": "the row selects the reference's wallet build or its maxtxfee ceiling; Teranode has no wallet and its own RPC absurd-fee ceiling (services/rpc/handlers.go:913-916) is its default, never the rule"
+      },
+      {
+        "id": "absurd-fee-default-rpc",
+        "label": "[X]",
+        "reference_token": "measured agree (wallet build): {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":256,\"namespace\":\"node\",\"reason\":\"absurdly-high-fee\",\"status\":\"rejected\"},\"orphans\":0} [M] 2026-10-14 [X] docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md",
+        "unrealizable": "the row selects the reference's wallet build or its maxtxfee ceiling; Teranode has no wallet and its own RPC absurd-fee ceiling (services/rpc/handlers.go:913-916) is its default, never the rule"
+      },
+      {
+        "id": "rolling-fee-equality",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"16a80bea363a1460f1113f3bef7118b7f60b2d773bfa4623d2c1b3942bde3917\"],\"judgment\":{\"status\":\"accepted\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 1000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "rolling-fee-below",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"judgment\":{\"code\":66,\"namespace\":\"node\",\"reason\":\"mempool min fee not met\",\"status\":\"rejected\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 1000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "debug-fee-floor",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":66,\"namespace\":\"node\",\"reason\":\"mempool min fee not met\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"minDebugRejectionFee\":1}; Teranode has no same-named setting for minDebugRejectionFee ([SRC] no mindebugrejectionfee key in the tag's Go sources or settings.conf (git grep empty))"
+      },
+      {
+        "id": "consolidation-fee-delta",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"c23a073a609d16dfaef35689b6c7d11fc8152271ef4a0c2bb73dc56317266050\"],\"judgment\":{\"status\":\"accepted\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 500): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "consolidation-disabled",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"judgment\":{\"code\":66,\"namespace\":\"node\",\"reason\":\"mempool min fee not met\",\"status\":\"rejected\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 500): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "ancestor-at-limit",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"too-long-mempool-chain\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"limitAncestorCount\":1}; Teranode has no same-named setting for limitAncestorCount ([SRC] limitancestorcount is commented out at settings/settings.go:120)"
+      },
+      {
+        "id": "ancestor-below-limit",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494\",\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"limitAncestorCount\":2}; Teranode has no same-named setting for limitAncestorCount ([SRC] limitancestorcount is commented out at settings/settings.go:120)"
+      },
+      {
+        "id": "root-zero-ancestor-limit",
+        "label": "[X]",
+        "reference_token": "unrealizable: the pinned launch setter rejects the row's zero ancestor cap; no running instance can select that configuration through this launch/RPC surface; [SRC] src/config.cpp:411-421 at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"limitAncestorCount\":0,\"limitSecondaryMempoolAncestorCount\":0}; Teranode has no same-named setting for limitAncestorCount and limitSecondaryMempoolAncestorCount ([SRC] limitancestorcount is commented out at settings/settings.go:120; no limitsecondarymempoolancestorcount key in the tag's Go sources or settings.conf (git grep empty))"
+      },
+      {
+        "id": "secondary-ancestor-at-limit",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects secondary ancestor cap 1; the pinned launch setter requires a value greater than 1 (src/config.cpp:429-440), and the exact owned launch is refused [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"limitSecondaryMempoolAncestorCount\":1}; Teranode has no same-named setting for limitSecondaryMempoolAncestorCount ([SRC] no limitsecondarymempoolancestorcount key in the tag's Go sources or settings.conf (git grep empty))"
+      },
+      {
+        "id": "script-frozen-admission-list",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-inputs-frozen\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's selector frozen is the reference's frozen-output admission list, as utxo/frozen/admission's; Teranode's alert-system freeze (stores/utxo/Interface.go:522-532) is not that list"
+      },
+      {
+        "id": "script-budget-low-invalid",
+        "label": "[X]",
+        "reference_token": "measured non-judging: {\"accepted\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"too-long-validation-time\",\"status\":\"rejected\"},\"pending\":[]} [non-judging (#71): the low-priority outcome is a time-budget expiry under the default CPU validation clock ([SRC] src/txn_validation_config.h:36-37; src/init.cpp:2890-2895; src/validation.cpp:990-1006) against maxnonstdtxvalidationduration=10 ms, its floor (src/config.cpp:733-750; src/validation.cpp:1349-1356; src/txn_validator.cpp:633-641); fixture: a hashing lock replaces the row's OP_TRUE coin; expiry observed in this run] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference request mode {\"lowPriority\":true,\"useLimits\":true} and context {\"budget\":\"relay\"}; Teranode's sendrawtransaction has no selector for it: it takes the transaction and the absurd-fee boolean only (services/rpc/handlers.go:830-935)"
+      },
+      {
+        "id": "detector-final-insertion",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"d71afae0370901721de7fb65c897212b4f015bc5250775632ca780673151a32e\"],\"judgment\":{\"code\":18,\"namespace\":\"node\",\"reason\":\"txn-double-spend-detected\",\"status\":\"rejected\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's selector detectorValidating seeds the reference's double-spend detector (DESIGN-S6 section 2.1 row 13); Teranode has no admission-time detector to seed: a spend is decided by the UTXO store's spend-then-create (stores/utxo/Interface.go:432-454). A git grep -n -i -E 'double.?spend.?detect' over the tag's Go sources prints 21 lines: the admission entry's doc comment lists \"Double-spend detection\" (services/validator/Validator.go:619), which is that store's spend; block assembly's DoubleSpendWindow (settings/blockassembly_settings.go:41, double_spend_window_millis, default 0) only holds a queued batch back from assembly for the window (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:1164-1168; queue.go:318-327) and seeds nothing at admission; the other 19 are the block-time fork checks (model/update-tx-mined.go:28; services/blockchain/Client.go:754; services/blockvalidation/BlockValidation.go:1651), comments in the stores and the block-validation settings (stores/utxo/aerospike/get.go:1439), an error test and five sequential tests"
+      },
+      {
+        "id": "detector-newly-committed",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"committed\":[{\"hash\":\"747af08029e5428089901d6ed3a822b2b8e25bee4ed934d1c97e9a370f394e1b\",\"index\":0}],\"judgment\":{\"code\":258,\"namespace\":\"node\",\"reason\":\"txn-mempool-conflict\",\"status\":\"rejected\"},\"stage\":\"detector\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's selector detectorCommitted seeds the reference's double-spend detector (DESIGN-S6 section 2.1 row 13); Teranode has no admission-time detector to seed: a spend is decided by the UTXO store's spend-then-create (stores/utxo/Interface.go:432-454). A git grep -n -i -E 'double.?spend.?detect' over the tag's Go sources prints 21 lines: the admission entry's doc comment lists \"Double-spend detection\" (services/validator/Validator.go:619), which is that store's spend; block assembly's DoubleSpendWindow (settings/blockassembly_settings.go:41, double_spend_window_millis, default 0) only holds a queued batch back from assembly for the window (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:1164-1168; queue.go:318-327) and seeds nothing at admission; the other 19 are the block-time fork checks (model/update-tx-mined.go:28; services/blockchain/Client.go:754; services/blockvalidation/BlockValidation.go:1651), comments in the stores and the block-validation settings (stores/utxo/aerospike/get.go:1439), an error test and five sequential tests"
+      },
+      {
+        "id": "earlier-fee-overrides-detector",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row's distinct condition is a competitor holding the row's outpoint in the double-spend detector while the row is at the absurd-fee check; the detector holds an entry only from that competitor's insertion after its script checks to its removal after its commit, inside one validation task, no RPC reads it, and a row rejected at the fee check never reaches its own detector step (src/validation.cpp:1249-1254,1484-1494,1866-1870; src/txn_double_spend_detector.cpp:11-58). The 99-satoshi ceiling itself is selected on the wallet build with -maxtxfee=0.00000099 and judged by absurd-fee-above, the same transaction and request (src/init.cpp:3190-3192; src/wallet/wallet.cpp:4406-4418; src/rpc/rawtransaction.cpp:1571-1574,2014-2023); the build without the wallet keeps the default ceiling (src/validation.h:79). On neither build is the detector state producible as a witnessed condition, so the ordering is not judged (2026-10-14, at 6504a3aff65ba97c0f6c80962b033e35ecbfed4b) [X] docs/records/20261014-064622-s6-det-wallet-s3.md",
+        "unrealizable": "the row's selector detectorValidating seeds the reference's double-spend detector (DESIGN-S6 section 2.1 row 13); Teranode has no admission-time detector to seed: a spend is decided by the UTXO store's spend-then-create (stores/utxo/Interface.go:432-454). A git grep -n -i -E 'double.?spend.?detect' over the tag's Go sources prints 21 lines: the admission entry's doc comment lists \"Double-spend detection\" (services/validator/Validator.go:619), which is that store's spend; block assembly's DoubleSpendWindow (settings/blockassembly_settings.go:41, double_spend_window_millis, default 0) only holds a queued batch back from assembly for the window (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:1164-1168; queue.go:318-327) and seeds nothing at admission; the other 19 are the block-time fork checks (model/update-tx-mined.go:28; services/blockchain/Client.go:754; services/blockvalidation/BlockValidation.go:1651), comments in the stores and the block-validation settings (stores/utxo/aerospike/get.go:1439), an error test and five sequential tests"
+      },
+      {
+        "id": "commit-size-equality",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects resident maxMempool=61 bytes and zero disk; the pinned launch rejects nonzero resident limits below 300 MB (src/config.cpp:2440-2456; src/init.cpp:2384-2398). Raising the cap or adding disk changes the selected configuration and byte-only accounting boundary [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"maxMempool\":61,\"maxMempoolSizeDisk\":0}; Teranode has no same-named setting for maxMempool and maxMempoolSizeDisk ([SRC] no maxmempool key in the tag's Go sources or settings.conf (git grep empty): block assembly has no size cap of the reference's kind; no maxmempoolsizedisk key in the tag's Go sources or settings.conf (git grep empty))"
+      },
+      {
+        "id": "commit-size-over-cap",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row selects resident maxMempool=60 bytes and zero disk; the pinned launch rejects nonzero resident limits below 300 MB (src/config.cpp:2440-2456; src/init.cpp:2384-2398). Raising the cap or adding disk changes the selected configuration and byte-only accounting boundary [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"maxMempool\":60,\"maxMempoolSizeDisk\":0}; Teranode has no same-named setting for maxMempool and maxMempoolSizeDisk ([SRC] no maxmempool key in the tag's Go sources or settings.conf (git grep empty): block assembly has no size cap of the reference's kind; no maxmempoolsizedisk key in the tag's Go sources or settings.conf (git grep empty))"
+      },
+      {
+        "id": "held-size-equality",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"held\":[\"7dd1a875aa494f1dfacecf17bf820e43708d515d28263e4818e665845fdfbb4a\"],\"judgment\":{\"status\":\"heldNonFinal\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"maxMempoolNonFinal\":61}; Teranode has no same-named setting for maxMempoolNonFinal ([SRC] no maxmempoolnonfinal key in the tag's Go sources or settings.conf (git grep empty): there is no non-final pool (services/validator/Validator.go:976-983))"
+      },
+      {
+        "id": "held-size-over-cap",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"held\":[],\"judgment\":{\"code\":259,\"namespace\":\"node\",\"reason\":\"non-final-pool-full\",\"status\":\"rejected\"}} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects the reference setting {\"maxMempoolNonFinal\":60}; Teranode has no same-named setting for maxMempoolNonFinal ([SRC] no maxmempoolnonfinal key in the tag's Go sources or settings.conf (git grep empty): there is no non-final pool (services/validator/Validator.go:976-983))"
+      },
+      {
+        "id": "held-repeat-not-update",
+        "label": "[X]",
+        "reference_token": "rpc-precheck: -27 Transaction already in the mempool (src/rpc/rawtransaction.cpp:1598-1664) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-valid-update",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"a9453570c44465e3f5285381f91377e4f17d45845fe1a784f1c3302bffe0d3f7\"],\"judgment\":{\"status\":\"heldNonFinal\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-update-rate-over",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"dc807d5ba10abacf074c77d7843477ad63dddf4c4e4e68ac5c47122e1ad8513a\"],\"judgment\":{\"code\":69,\"namespace\":\"node\",\"reason\":\"non-final-txn-replacement-rate\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-update-rate-at",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"a9453570c44465e3f5285381f91377e4f17d45845fe1a784f1c3302bffe0d3f7\"],\"judgment\":{\"status\":\"heldNonFinal\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-unchanged-nonfinal-sequence-queues",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"pending\":[\"3c2a75f9b1f372856eca293ab3689505fac3481cc4445eceecc52614e04d0049\"],\"status\":\"deferred\"} [P2P: after one low-priority move at the nonstandard-input guard, the finalising commit queued revalidation (src/time_locked_mempool.cpp:61-81; src/txn_validator.cpp:472-479); the row's RPC request revalidates inline (src/txn_validator.cpp:178-188); queue read between validator cycles] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "expiry-equality-kept",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "expiry-one-second-older",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "expiry-younger-descendant",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "trim-at-limit",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"4181d7ac7c0424565ec44928bb4e3b5d91793f356ddc907cbc625ff3ce422e88\",\"a5913a21cd35a8bbfa13a7e02a8b5c02987ee02e0b1f18ac64a7cf209d338d58\"],\"rollingRate\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "trim-below-limit-raises-next-rate",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"a5913a21cd35a8bbfa13a7e02a8b5c02987ee02e0b1f18ac64a7cf209d338d58\"],\"rollingRate\":2639} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "trim-empty-retains-rolling-rate",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"rollingRate\":5000,\"transaction_bytes\":0} [open item O-2, record of 2026-10-14: the setup checks the disk counter before the judged attempt; setup retries before the judged attempt in this run: 0] [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 5000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "trim-secondary-mining-cap",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bdd0bec06dfbe41d79eae2d6608e1cd9be6c844ae9de679753e51b50e0b4e4a4\"],\"rollingRate\":500} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "trim-leaf-before-low-fee-parent",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"bea913cae255fdba92eecd36b81cdb99df60c9113ab96555e76704fdce64c01a\"],\"rollingRate\":2639} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "trim-group-demotes-parent",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"768a7318c4b8bcd0564ee837ea5d82f5889b1302c609c13642c6898cd9d84616\"],\"primary_count\":0,\"rollingRate\":500} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "held-expiry-equality",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-expiry-before",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"3558028b69f712fe9348c8550e66da6a24967935492beff09a37eebc51a11a1f\"],\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "held-height-final-queues-before-expiry",
+        "label": "[X]",
+        "reference_token": "unrealizable: the row judges the intermediate pending revalidation queue after periodic finalisation; the scheduler enqueues the request and validation consumes it, while RPC exposes accepted/held membership but no pending request-id snapshot (src/time_locked_mempool.cpp:634-653; src/rpc/blockchain.cpp:440-550). Settled admission cannot establish that exact intermediate queue [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row's setup holds a parent in the non-final pool; Teranode has none: a non-final transaction is rejected at admission (services/validator/Validator.go:976-983; util/lock_time.go:38-40)"
+      },
+      {
+        "id": "orphan-expiry-equality",
+        "label": "[X]",
+        "reference_token": "unrealizable: peer retained the sole 61-byte child at maxorphantxsize=100B, advanced exactly 1200 seconds, observed zero PTV activity and then delivered its parent. This cannot realize the declared orphanSweep: admission already reset untrimmedBytes to zero; no periodic orphan sweep or RPC selects limitTxnsSize with the row's untrimmedBytes state. Waiting for PTV is not orphan maintenance completion. [SRC] src/orphan_txns.cpp:175-224; src/validation.cpp:1904-1915; src/txn_validator.cpp:359-538 at 6504a3af [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference mempool's maintenance machine (expiry, trimming, the rolling minimum fee, the time-locked pool, orphan expiry) on the mock clock; setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty)) and Teranode has no such pool: block assembly holds the validated transactions in its subtrees (services/blockassembly/subtreeprocessor/SubtreeProcessor.go:267-298) and lets one go when a block that holds it moves the processor forward (moveForwardBlock, :5711-5713) or on an explicit removal (RemoveTx, services/blockassembly/BlockAssembler.go:1830) and the UTXO store prunes old unmined records by its own retention (stores/utxo/Interface.go:491-496)"
+      },
+      {
+        "id": "orphan-hysteresis-skips-expiry",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"auxiliary_completed\":true,\"auxiliary_ignored\":true,\"auxiliary_requested\":true,\"expired_orphans\":1,\"orphans_after_trigger\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row selects maxOrphanTxSize 100 and the trim hysteresis and expires the orphan on the mock clock; the bridge caps its orphan map by count (legacy_maxOrphanTxs, settings/legacy_settings.go:14, default 100) and evicts by a duration on the host clock (legacy_orphanEvictionDuration, :13, default 10m; services/legacy/netsync/manager.go:3615,3674-3686): no byte cap, no hysteresis, no mock clock [SRC] at Teranode v0.16.0 (4edb60a4)"
+      },
+      {
+        "id": "rolling-decay-no-block-gate",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"rollingRate\":8000} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 8000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "rolling-decay-interval-equality",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"rollingRate\":8000} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 8000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "rolling-decay-low-usage-half-life",
+        "label": "[X]",
+        "reference_token": "measured agree: {\"rollingRate\":4000} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "unrealizable": "the row judges the reference's rolling minimum fee (pool.rollingRate 8000): its recipe evicts a calibrated history under maxmempool 0 and a disk cap one byte below it, then moves the mock clock 43,200 s (harness/src/scenarios/mempool.rs, ROLLING_RECIPE; [SRC] src/txmempool.cpp:1368-1383,2624-2647 at 6504a3af); Teranode has no mempool size cap and no rolling minimum fee (no maxmempool key and no GetMinFee in the tag's Go sources or settings.conf, git grep empty), and setmocktime is not served ([SRC] no entry in the handler table services/rpc/Server.go:160-226 nor the unimplemented list :277-285 (git grep of the name in Server.go at the tag: empty); its nine git grep hits are the test harness calling an SV node, test/utils/svnode/docker.go:286-306); the consolidation keys (minconsolidationfactor, acceptnonstdconsolidationinput, settings/settings.go:130,134) exist, the history they are judged against does not"
+      },
+      {
+        "id": "missing-input-orphan-retained",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {
+          "missing_parent_request": false,
+          "orphan_retained": 1
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "tx",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "missing-input-rpc-no-handler",
+        "judged_fields": [
+          "accepted"
+        ],
+        "label": "[X]",
+        "observed": {},
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"status\":\"orphan\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "rpc",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "missing-input-known-output",
+        "judged_fields": [],
+        "label": "[X]",
+        "observed": {},
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":257,\"namespace\":\"node\",\"reason\":\"txn-already-known\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "road": "rpc",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "baseline-valid",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "regular-empty-inputs",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-vin-empty\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "regular-empty-outputs",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-vout-empty\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "regular-duplicate-input",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"code\":16,\"namespace\":\"node\",\"reason\":\"bad-txns-inputs-duplicate\",\"status\":\"rejected\"} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "standard-version",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"version\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "nonfinal-held-height-equality",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[\"7dd1a875aa494f1dfacecf17bf820e43708d515d28263e4818e665845fdfbb4a\"],\"judgment\":{\"status\":\"heldNonFinal\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "non-judging"
+      },
+      {
+        "id": "already-accepted",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "rpc-precheck: -27 Transaction already in the mempool (src/rpc/rawtransaction.cpp:1598-1664) [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "rpc-precheck"
+      },
+      {
+        "id": "accepted-spend-conflict",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"code\":258,\"namespace\":\"node\",\"reason\":\"txn-mempool-conflict\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "verdict": "agree"
+      },
+      {
+        "id": "standard-output-disabled",
+        "label": "[X]",
+        "observed": {
+          "code": -25,
+          "status": "rejected"
+        },
+        "reference_token": "measured agree: {\"accepted\":[],\"held\":[],\"judgment\":{\"code\":64,\"namespace\":\"node\",\"reason\":\"scriptpubkey\",\"status\":\"rejected\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "4af2cf151fdff3313163fb8d60fddce72f53dd4d557eb7d36882daf3805dfba9"
+        },
+        "verdict": "agree"
+      },
+      {
+        "id": "standard-output-enabled",
+        "label": "[X]",
+        "observed": {
+          "status": "accepted"
+        },
+        "reference_token": "measured agree: {\"accepted\":[\"bff0a9acc4c6fbe6b1eaa67ac5363f31aa80ad94ea185b0f34d532032077fd26\"],\"held\":[],\"judgment\":{\"status\":\"accepted\"},\"orphans\":0} [X] docs/records/20261014-032012-s6-72-regtest-s3.md",
+        "restart": {
+          "failed_at": null,
+          "overlay_sha256": "66c27070cba3ca2a4df80c12d2905c34c622128fcbf2c345fda2bbc3ce64bd15"
+        },
+        "verdict": "agree"
+      }
+    ],
+    "oracle": [],
+    "utxo": []
+  },
+  "full_receipt": {
+    "bytes": 1946989,
+    "label": "[M]",
+    "path": "~/bsv/targets/spec-oracle-quarantine/teranode-gate95-20261017-234627-002403/receipt.json",
+    "sha256": "825894fbaf71bb73ede3864424a9ae1233d01075deb149f3874b90f05c612b8d"
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "funding_height": 102,
+    "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "tag": "v0.16.0",
+    "tip_end": {
+      "hash": "6c4c048fb9057f1ba362569a47d0ffba634b5dc85eca1bc4dd289300e97c8dce",
+      "height": 1351
+    }
+  },
+  "quarantine": "the full receipt, the peer receipts, the instance's data and every output of the run are closed to model turns (lane cut2-66q, the quarantine rule); this page carries counts, enumerated verdicts and classes, row ids, hashes and paths only",
+  "recipe": {
+    "recipe": "legacy",
+    "services": [
+      "-all=0",
+      "-blockchain=1",
+      "-subtreevalidation=1",
+      "-blockvalidation=1",
+      "-blockassembly=1",
+      "-asset=1",
+      "-propagation=1",
+      "-rpc=1",
+      "-p2p=0",
+      "-alert=0",
+      "-legacy=1"
+    ],
+    "settings_local_sha256": "14efd109a0d06c02b625727fd1ce9206d5a8d3d9549543629dfd6aa5ef982fa7",
+    "sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8"
+  },
+  "record": "docs/records/20261018-002403-s6-66-cut2-second-oracle-s3.md",
+  "road": {
+    "connections": 3,
+    "ends": 3,
+    "events": 1312,
+    "port": 18590,
+    "protocol_version": 70016,
+    "rows": [
+      {
+        "row": "missing-input-orphan-retained",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "missing-input-rpc-no-handler",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "missing-input-known-output",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "block/before-csv-own-time",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/mtp-below",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "tip/mtp-equal",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "tip/mtp-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/successor-height",
+        "verdict": "agree"
+      },
+      {
+        "row": "tip/successor-height-equal",
+        "verdict": "non-judging"
+      },
+      {
+        "row": "block/csv-mtp-below",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/csv-mtp-equal",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/csv-mtp-above",
+        "verdict": "agree"
+      },
+      {
+        "row": "block/postgenesis-still-rejected",
+        "verdict": "agree"
+      }
+    ]
+  },
+  "rows_selected": [
+    "absurd-fee-above",
+    "absurd-fee-default-rpc",
+    "absurd-fee-equality",
+    "accepted-spend-conflict",
+    "already-accepted",
+    "ancestor-at-limit",
+    "ancestor-below-limit",
+    "baseline-valid",
+    "block/before-csv-own-time",
+    "block/csv-mtp-above",
+    "block/csv-mtp-below",
+    "block/csv-mtp-equal",
+    "block/postgenesis-still-rejected",
+    "coins-cache-below",
+    "coins-cache-equality",
+    "coins-cache-zero-unlimited",
+    "commit-size-equality",
+    "commit-size-over-cap",
+    "consolidation-disabled",
+    "consolidation-fee-delta",
+    "debug-fee-floor",
+    "detector-final-insertion",
+    "detector-newly-committed",
+    "earlier-fee-overrides-detector",
+    "expiry-equality-kept",
+    "expiry-one-second-older",
+    "expiry-younger-descendant",
+    "expiry/backward-zero-expiry",
+    "expiry/clock-backward",
+    "expiry/zero-expiry",
+    "held-expiry-before",
+    "held-expiry-equality",
+    "held-finalising-update-queues",
+    "held-height-final-queues-before-expiry",
+    "held-lock-conflict",
+    "held-repeat-not-update",
+    "held-size-equality",
+    "held-size-over-cap",
+    "held-unchanged-nonfinal-sequence-queues",
+    "held-update-rate-at",
+    "held-update-rate-over",
+    "held-valid-update",
+    "inputs-budget-downgrade",
+    "inputs-budget-observation-ignored-without-limits",
+    "inputs-low-skips-standardness",
+    "missing-input-known-output",
+    "missing-input-orphan-retained",
+    "missing-input-rpc-no-handler",
+    "nonfinal-disabled-pool",
+    "nonfinal-held-height-equality",
+    "nonfinal-pre-genesis",
+    "orphan-expiry-equality",
+    "orphan-hysteresis-skips-expiry",
+    "regular-duplicate-input",
+    "regular-empty-inputs",
+    "regular-empty-outputs",
+    "rolling-decay-interval-equality",
+    "rolling-decay-low-usage-half-life",
+    "rolling-decay-no-block-gate",
+    "rolling-fee-below",
+    "rolling-fee-equality",
+    "root-zero-ancestor-limit",
+    "script-budget-low-invalid",
+    "script-frozen-admission-list",
+    "secondary-ancestor-at-limit",
+    "sequence-pre-genesis-edge",
+    "standard-output-disabled",
+    "standard-output-enabled",
+    "standard-version",
+    "tip/mtp-above",
+    "tip/mtp-below",
+    "tip/mtp-equal",
+    "tip/successor-height",
+    "tip/successor-height-equal",
+    "trim-at-limit",
+    "trim-below-limit-raises-next-rate",
+    "trim-empty-retains-rolling-rate",
+    "trim-group-demotes-parent",
+    "trim-leaf-before-low-fee-parent",
+    "trim-secondary-mining-cap"
+  ],
+  "run_id": "gate95-20261017-234627-002403",
+  "scenarios": [],
+  "source": "at Teranode v0.16.0 (4edb60a4)",
+  "started_utc": "2026-10-18T00:24:03Z",
+  "status_witnesses": {
+    "counts": {
+      "agree": 7,
+      "diverge": 0,
+      "label": "[M]",
+      "non-judging": 1,
+      "steps": 8
+    },
+    "steps": [
+      {
+        "expected_value": "unknown",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "unknown"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "rejected"
+      },
+      {
+        "expected_value": "rejected",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "orphan (RPC path)"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "inMempool"
+      },
+      {
+        "expected_value": "heldNonFinal",
+        "observed_equals_expected": false,
+        "verdict": "non-judging",
+        "witness": "heldNonFinal"
+      },
+      {
+        "expected_value": "minedActive",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "minedActive"
+      },
+      {
+        "expected_value": "conflictedByMinedSpend",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "conflictedByMinedSpend"
+      },
+      {
+        "expected_value": "inMempool",
+        "observed_equals_expected": true,
+        "verdict": "agree",
+        "witness": "onStaleBranch (after invalidation)"
+      }
+    ]
+  },
+  "totals": {
+    "agree": 14,
+    "diverge": 0,
+    "diverge-unexplained": 0,
+    "label": "[M]",
+    "measured": 22,
+    "no-verdict": 0,
+    "non-judging": 8,
+    "pending": 0,
+    "rpc-precheck": 1
+  },
+  "wall_seconds": {
+    "label": "[M]",
+    "value": 221.840317083
+  }
+}

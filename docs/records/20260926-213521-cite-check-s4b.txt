@@ -1,0 +1,237 @@
+[export: 4 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+cite_check record (tools/cite_check.py, the citation leg; #43; S4b, set 4, sitting 1)
+commit: c49996d (the leg's own commit, on main since 21:19 UTC); 3 untracked paths in S4b's worktree at the run (three
+  records of this window, none read by the leg); the runs 2026-09-26 21:35:21 UTC; this file written 2026-09-27 from the
+  runs' saved outputs (the window's account limit fell between the runs and the writing; nothing below was re-run)
+[withheld at export: a sibling tree's line]
+command: tools/cite_check.py [--list | --repin <key>=<value> | --propose]; HOME=<an empty directory> for the container case
+
+== 1. the leg at c49996d ==
+cite_check: 1150 citations found in lean/ and docs/ (1144 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 980, MOVED 0; not anchored (reported, never RED): unanchored 0, beyond-eof 0, unresolved 1, ambiguous 1, unpinned 5, other-version 2, self 24, history 137, absent 0, orphan rows 0; skipped 0
+cite_check: GREEN (every anchored citation holds at the pin)
+
+The 1,150 citations are file:line ranges (a `/`-list counted per line) in lean/ (.lean) and docs/ (.md). 980 are
+ANCHORED by the 822 rows of the table kept in the file (315 `sym`: a symbol of the citation's own sentence that occurs
+within the cited lines; 507 `text`: the exact text of the first and last cited lines at the pin); none moved. The 170
+never anchored and never RED: 24 into this repository's own files (`self`), 137 in docs/records/ (`history`: records are
+never edited), and the nine the resolver would not place, verbatim from --list:
+  unpinned   lean/BsvScript/Params.lean:275 params.go:276–277
+  unpinned   docs/PARAMETERS.md:127 params.go:276–277
+  unpinned   docs/PARAMETERS.md:143 params.go:276
+  ambiguous  docs/PARAMETERS.md:144 params.go:277
+  unpinned   docs/PARAMETERS.md:147 params.go:265–274
+  unpinned   docs/PARAMETERS.md:155 ScriptVerifierGoBDK.go:158–165
+  other-version docs/PROVENANCE.md:134 doc/release-notes.md:1–8
+  other-version docs/PROVENANCE.md:137 doc/release-notes.md:24–37
+  unresolved docs/lanes/harness.md:73 HOSTS.md:24
+(`unpinned`: the citation names go-chaincfg, a source docs/PROVENANCE.md §1a does not pin; Teranode v0.15.9's go.mod:15
+requires go-chaincfg v1.5.8 (go.sum:181–182) where these five sites say "go-chaincfg v1.6.2": a doubt for the pages'
+owners, unclassified. `other-version`: the citation is qualified by bitcoin-sv v1.2.0, not the pin v1.2.2. `ambiguous`:
+params.go in two pinned sources and no source named within its clause. `unresolved`: the plan's HOSTS.md.)
+
+What an anchor proves and what it does not: a `text` anchor holds the cited lines as they stood when the row was written,
+so the leg catches a MOVE (a re-pin, a row edited, a file the resolution finds elsewhere), never a citation that was
+already wrong when anchored: S2's ask 4 (four ranges at lean/BsvScript/Ops/Crypto.lean:59–61, each off by one at the pin)
+are such citations, anchored as they stood; when their owner re-cuts them the old rows turn orphan and the new citations
+unanchored (reported, never RED) until `--propose --write` anchors them.
+
+== 2. RED under a re-pin: `tools/cite_check.py --repin reference.commit=6fe29fb2e` (the reference 120 commits before the pin, in memory) ==
+  MOVED lean/BsvScript/Flags.lean:14 standard.cpp:330–337: src/script/standard.cpp:330 at the pin is not the anchored text
+  MOVED lean/BsvScript/Flags.lean:130 standard.cpp:330–337: src/script/standard.cpp:330 at the pin is not the anchored text
+  MOVED lean/BsvScript/Machine.lean:8 interpreter.cpp:388–1833: `EvalScript` is not in src/script/interpreter.cpp:388–1833 at the pin (it is at 385, 1973, 1985, 1999, 2007, 2326)
+  MOVED lean/BsvScript/Machine.lean:22 script.h:163–198: `GetOp2` is not in src/script/script.h:163–198 at the pin (it is at 138, 145, 152, 156, 159)
+  MOVED lean/BsvScript/Machine.lean:63 script.cpp:164–168: `IsP2SH` is not in src/script/script.cpp:164–168 at the pin (it is at 129, 163)
+  MOVED lean/BsvScript/Machine.lean:187 limitedstack.cpp:194–207: src/script/limitedstack.cpp:194 at the pin is not the anchored text
+  MOVED lean/BsvScript/Machine.lean:194 limitedstack.cpp:211–219: src/script/limitedstack.cpp:211 at the pin is not the anchored text
+  MOVED lean/BsvScript/Numbers.lean:144 interpreter.cpp:1780–1789: `OP_BIN2NUM` is not in src/script/interpreter.cpp:1780–1789 at the pin (it is at 1779)
+  … (123 MOVED lines in all)
+cite_check: 1150 citations found in lean/ and docs/ (1144 `file:line` shapes, a `/`-list counted per line); anchored and holding at the pin 857, MOVED 123; not anchored (reported, never RED): unanchored 0, beyond-eof 0, unresolved 1, ambiguous 1, unpinned 5, other-version 2, self 24, history 137, absent 0, orphan rows 0; skipped 0
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+exit status: 1
+
+== 3. the Modal container's case: every clone absent (HOME=<an empty directory>) ==
+[withheld at export: a sibling tree's line]
+cite_check: GREEN (every anchored citation holds at the pin)
+exit status: 0 (every row whose source is absent SKIPPED BY NAME and counted, never a pass)
+with CITE_CHECK_REQUIRE_CLONES=1:
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and bitcoin-sv is absent (clone absent: ~/bsv/bitcoin-sv)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and teranode is absent (clone absent: ~/bsv/teranode)
+  MOVED CITE_CHECK_REQUIRE_CLONES=1 and gobdk is absent (clone absent: ~/bsv/bdk)
+cite_check: RED (an anchored citation's anchor is no longer where the citation says, at the pin)
+exit status: 1
+
+== 4. the ranges #20's Correction re-cut (lean #20, comment 5800999991: two validation.cpp ranges off by two, re-cut at d66ded6): every occurrence, anchored and holding ==
+  ok         lean/BsvScript/Flags.lean:68 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         lean/BsvScript/Flags.lean:165 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         lean/BsvScript/Flags.lean:317 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         lean/BsvScript/Properties/Eras.lean:17 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         lean/BsvScript/Properties/Eras.lean:22 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         lean/BsvScript/Properties/Eras.lean:143 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         lean/BsvScript/Properties/Eras.lean:147 validation.cpp:2671 -> bitcoin-sv:src/validation.cpp:2671–2671 [text: return chainActive.Height() + 1;]
+  ok         lean/BsvScript/Properties/Eras.lean:152 validation.cpp:2674 -> bitcoin-sv:src/validation.cpp:2674–2674 [text: return coinHeight;]
+  ok         lean/BsvScript/Properties/Eras.lean:178 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         lean/BsvScript/Properties/Eras.lean:179 validation.cpp:2978 -> bitcoin-sv:src/validation.cpp:2978–2978 [text: const auto height = pChainTip->GetHeight();]
+  ok         lean/BsvScript/Properties/Eras.lean:179 validation.cpp:2981 -> bitcoin-sv:src/validation.cpp:2981–2981 [text: GetProtocolEra(config.GetConfigScriptPolicy(), height + 1));]
+  ok         lean/BsvScript/Properties/Eras.lean:231 validation.cpp:2981 -> bitcoin-sv:src/validation.cpp:2981–2981 [text: GetProtocolEra(config.GetConfigScriptPolicy(), height + 1));]
+  ok         lean/Test/ErasCheck.lean:18 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         lean/Test/ErasCheck.lean:272 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         lean/Test/ErasCheck.lean:285 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         docs/PARAMETERS.md:135 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         docs/PARAMETERS.md:152 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [sym: GetBlockScriptFlags]
+  ok         docs/PARAMETERS.md:152 validation.cpp:2981 -> bitcoin-sv:src/validation.cpp:2981–2981 [text: GetProtocolEra(config.GetConfigScriptPolicy(), height + 1));]
+  ok         docs/PARAMETERS.md:154 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [text: int32_t GetInputScriptBlockHeight(int32_t coinHeight) {]
+  ok         docs/PARAMETERS.md:183 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [sym: GetBlockScriptFlags]
+  ok         docs/STATE-OF-THE-WORLD.md:51 validation.cpp:2973–2982 -> bitcoin-sv:src/validation.cpp:2973–2982 [text: uint32_t GetBlockScriptFlags(const Config& config, const CBl]
+  ok         docs/STATE-OF-THE-WORLD.md:51 validation.cpp:2668–2675 -> bitcoin-sv:src/validation.cpp:2668–2675 [sym: MEMPOOL_HEIGHT]
+  (22 occurrences)
+
+== 5. the proposal's heuristic leads (`tools/cite_check.py --propose`, the near-miss scan): UNVERIFIED, a lead is not a finding ==
+A lead names a citation whose backticked or identifier-shaped neighbour does not occur in the cited lines but does
+within six lines of them; many are the sentence's other symbol, not the citation's. For the pages' owners to read.
+  near-miss: docs/DESIGN.md:122 cites conditional_tracker.cpp:46–49 beside `op_else`, which is not in src/script/conditional_tracker.cpp:46–49 at the pin but is at line(s) 51
+  near-miss: docs/DESIGN.md:139 cites interpreter.h:52 beside `CheckSig`, which is not in src/script/interpreter.h:52–52 at the pin but is at line(s) 54
+  near-miss: docs/PARAMETERS.md:125 cites txvalidator.cpp:583 beside `GetConsensus`, which is not in core/txvalidator.cpp:583–583 at the pin but is at line(s) 584
+  near-miss: docs/PARAMETERS.md:147 cites ScriptVerifierGoBDK.go:124–137 beside `GoBDK`, which is not in services/validator/ScriptVerifierGoBDK.go:124–137 at the pin but is at line(s) 139
+  near-miss: docs/PARAMETERS.md:148 cites configscriptpolicy.cpp:60 beside `requireStandard`, which is not in src/configscriptpolicy.cpp:60–60 at the pin but is at line(s) 61
+  near-miss: docs/PARAMETERS.md:173 cites bdk/core/txvalidator.cpp:864 beside `blockHeight`, which is not in core/txvalidator.cpp:864–864 at the pin but is at line(s) 858, 865, 869
+  near-miss: docs/PARAMETERS.md:199 cites script_flags.h:13–115 beside `uint32_t`, which is not in src/script/script_flags.h:13–115 at the pin but is at line(s) 117
+  near-miss: docs/PARAMETERS.md:35 cites consensus.h:40 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:40–40 at the pin but is at line(s) 43
+  near-miss: docs/PARAMETERS.md:37 cites consensus.h:58 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:58–58 at the pin but is at line(s) 55, 60
+  near-miss: docs/PARAMETERS.md:38 cites consensus.h:50 beside `UINT32_MAX`, which is not in src/consensus/consensus.h:50–50 at the pin but is at line(s) 55
+  near-miss: docs/PARAMETERS.md:98 cites policy.h:227–230 beside `SCRIPT_VERIFY_SIGPUSHONLY`, which is not in src/policy/policy.h:227–230 at the pin but is at line(s) 232
+  near-miss: docs/STATE-OF-THE-WORLD.md:42 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: docs/lanes/lean.md:43 cites chainparams.cpp:1034–1076 beside `ChainParams`, which is not in src/chainparams.cpp:1034–1076 at the pin but is at line(s) 1033
+  near-miss: lean/BsvScript/Numbers.lean:153 cites interpreter.cpp:1810–1813 beside `SCRIPT_ERR_SCRIPTNUM_OVERFLOW`, which is not in src/script/interpreter.cpp:1810–1813 at the pin but is at line(s) 1809
+  near-miss: lean/BsvScript/Numbers.lean:428 cites script_num.h:57 beside `INT64_SERIALIZED_SIZE`, which is not in src/script/script_num.h:57–57 at the pin but is at line(s) 55
+  near-miss: lean/BsvScript/Ops/Arith.lean:54 cites script_num.h:66–70 beside `int64`, which is not in src/script/script_num.h:66–70 at the pin but is at line(s) 65, 74
+  near-miss: lean/BsvScript/Ops/Arith.lean:75 cites script_num.h:66–70 beside `int64`, which is not in src/script/script_num.h:66–70 at the pin but is at line(s) 65, 74
+  near-miss: lean/BsvScript/Ops/Crypto.lean:13 cites interpreter.cpp:1402–1443 beside `OP_CODESEPARATOR`, which is not in src/script/interpreter.cpp:1402–1443 at the pin but is at line(s) 1445
+  near-miss: lean/BsvScript/Ops/Expansion.lean:17 cites script_num.h:60–63 beside `int64`, which is not in src/script/script_num.h:60–63 at the pin but is at line(s) 58, 65
+  near-miss: lean/BsvScript/Ops/Splice.lean:8 cites interpreter.cpp:1687–1706 beside `OP_SPLIT`, which is not in src/script/interpreter.cpp:1687–1706 at the pin but is at line(s) 1708
+  near-miss: lean/BsvScript/Ops/Stack.lean:7 cites interpreter.cpp:876–1055 beside `OP_SIZE`, which is not in src/script/interpreter.cpp:876–1055 at the pin but is at line(s) 1057
+  near-miss: lean/BsvScript/Params.lean:42 cites interpreter.cpp:285 beside `SCRIPT_VERIFY_LOW_S`, which is not in src/script/interpreter.cpp:285–285 at the pin but is at line(s) 282
+  near-miss: lean/BsvScript/Params.lean:70 cites interpreter.cpp:40–44 beside `SCRIPT_CHRONICLE`, which is not in src/script/interpreter.cpp:40–44 at the pin but is at line(s) 48, 49
+  near-miss: lean/BsvScript/Properties/Eras.lean:233 cites policy.h:217–221 beside `CHRONICLE`, which is not in src/policy/policy.h:217–221 at the pin but is at line(s) 211, 214
+  near-miss: lean/BsvScript/Properties/Eras.lean:233 cites verify_script_flags.cpp:71–75 beside `CHRONICLE`, which is not in src/verify_script_flags.cpp:71–75 at the pin but is at line(s) 78
+  near-miss: lean/BsvScript/Properties/Eras.lean:515 cites conditional_tracker.cpp:57–65 beside `has_op_else`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 51
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:214 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:285 cites script_tests.cpp:282–283 beside `CLEANSTACK`, which is not in src/test/script_tests.cpp:282–283 at the pin but is at line(s) 281
+  near-miss: lean/BsvScript/Properties/VersionGate.lean:386 cites pubkey.cpp:207–213 beside `CPubKey`, which is not in src/pubkey.cpp:207–213 at the pin but is at line(s) 216
+  near-miss: lean/BsvScript/Sighash.lean:281 cites script.h:205–219 beside `FindAndDelete`, which is not in src/script/script.h:205–219 at the pin but is at line(s) 200
+  near-miss: lean/Test/ErasCheck.lean:186 cites configscriptpolicy.cpp:67–70 beside `MaxOpsPerScript`, which is not in src/configscriptpolicy.cpp:67–70 at the pin but is at line(s) 65
+  near-miss: lean/Test/ErasCheck.lean:215 cites conditional_tracker.cpp:57–65 beside `OP_ELSE`, which is not in src/script/conditional_tracker.cpp:57–65 at the pin but is at line(s) 53
+  near-miss: lean/Test/ErasCheck.lean:276 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:319 cites policy.h:230 beside `SIGPUSHONLY`, which is not in src/policy/policy.h:230–230 at the pin but is at line(s) 232
+  near-miss: lean/Test/VersionGateCheck.lean:360 cites verify_script_flags.cpp:43 beside `DERSIG`, which is not in src/verify_script_flags.cpp:43–43 at the pin but is at line(s) 42, 44
+
+== 6. the leg inside the tripwire: S3's wiring hunk applied UNCOMMITTED in S4b's worktree (tools/check.sh, the Makefile) ==
+docs/records/20260926-212112-make-check.txt: RED at the harness leg in 478 s: the ts-sdk adapter's package is not
+  installed in S4b's worktree (`harness/engines/ts/node_modules`, a per-worktree install); every leg before it GREEN,
+  the cite leg (the second) among them.
+docs/records/20260926-212946-make-check.txt: GREEN, TWENTY-ONE legs in 211 s, the ts-sdk install APFS-cloned from S3's
+  worktree (2.8.0, the lock's integrity; no network); 4 uncommitted paths (the hunk's two files, two records).
+S3 landed the wiring at f84a62a (23:15 UTC; the tripwire's record `docs/records/20260926-231630-make-check.txt`,
+  twenty-one legs). The hunk as S4b validated it (sha256 c7ab2ac3eb27cd9f653bdbd998cdcb9c5b80cff3dbeb8944f6619d4dfd1c055d):
+diff --git a/Makefile b/Makefile
+index 675d58d..07a6176 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,8 +3,8 @@
+ # check on the theorems listed in lean/AxiomCheck.lean + the evaluator self-test
+ # (eval/bsvs --self-test, real since #14) + the harness smoke run (real since #4).
+ # A stub, if one ever returns, says so on its own line; a stub is not a pass.
+-.PHONY: check check-local check-modal check-pins gencases gosdk-build tssdk-install enginesdiff lean axioms numcheck flowcheck sighashcheck arithcheck stackcheck cryptocheck seedcheck scripttests txtests flagscheck spec speccheck bytescheck versiongatecheck erascheck witnesscheck eval harness diff seed numvectors flowcases sighashvectors arithvectors arithcases stackcases ecdsavectors cryptocases bytescases eracases policywitnesses opnames mainnetread clean-lean
+-# `make check` routes itself (tools/check_route.sh; D17b, 2026-09-24): the twenty legs run locally under a 1-minute load of 20
++.PHONY: check check-local check-modal check-pins citecheck gencases gosdk-build tssdk-install enginesdiff lean axioms numcheck flowcheck sighashcheck arithcheck stackcheck cryptocheck seedcheck scripttests txtests flagscheck spec speccheck bytescheck versiongatecheck erascheck witnesscheck eval harness diff seed numvectors flowcases sighashvectors arithvectors arithcases stackcases ecdsavectors cryptocases bytescases eracases policywitnesses opnames mainnetread clean-lean
++# `make check` routes itself (tools/check_route.sh; D17b, 2026-09-24): the twenty-one legs run locally under a 1-minute load of 20
+[withheld at export: a sibling tree's line]
+ # source); MAKE_CHECK=local|modal forces a home. Both homes run tools/check.sh all and write its record (docs/records/).
+ check:
+@@ -16,6 +16,9 @@ check-modal:
+ # The pins leg alone (#40): docs/PROVENANCE.md §1a against every site; fails on drift.
+ check-pins:
+ 	@tools/check.sh pins
++# The citation leg alone (#43): every anchored file:line citation of lean/ and docs/ against the pinned sources.
++citecheck:
++	@tools/check.sh cite
+ lean:
+ 	@tools/check.sh lean
+ axioms:
+diff --git a/tools/check.sh b/tools/check.sh
+index 95f1dcb..d951ecb 100755
+--- a/tools/check.sh
++++ b/tools/check.sh
+@@ -1,7 +1,9 @@
+ #!/usr/bin/env bash
+-# The tripwire (CLAUDE.md rule 6): `make check` must stay GREEN. TWENTY legs, in the order `all` runs them
++# The tripwire (CLAUDE.md rule 6): `make check` must stay GREEN. TWENTY-ONE legs, in the order `all` runs them
+ # (the header re-cut 2026-09-26, S3: it named ten; C3's lens 3, fix 10):
+ #   pins         tools/check_pins.py: every pin of docs/PROVENANCE.md §1a agrees with every site (#40)
++#   cite         tools/cite_check.py: every anchored file:line citation of lean/ and docs/ still holds at the pin (#43;
++#                the clones absent in the Modal container are SKIPPED BY NAME, never a pass)
+ #   lean         `lake build` in lean/, sorry-free (the build log may not mention sorry)
+ #   axioms       tools/axiom_check.py on the theorems listed in lean/AxiomCheck.lean
+ #   numbers      the Numbers module's executable against the bsv-rs vectors (#7)
+@@ -54,7 +56,7 @@ record_run() {
+     if [ -n "${CHECK_RECORD_NOTE:-}" ]; then echo "where: $CHECK_RECORD_NOTE"; fi
+     echo "status: $([ "$status" = 0 ] && echo GREEN || echo "RED (exit $status)")"
+     echo "legs (the verdict lines, in order):"
+-    grep -E '^(check-pins|lean:|axiom check|numcheck|flowcheck|sighash|sighash_verify|arithcheck|stackcheck|crypto:|cryptocheck|seedcheck|scripttests|txtests|flagscheck|specgen|bytescheck|versiongatecheck|erascheck|witnesscheck|bsvs|eval/bsvs|run_bsvrs|run_diff|run_engine|harness:|make check)' "$REC_LOG" | sed 's/^/  /'
++    grep -E '^(check-pins|cite_check|lean:|axiom check|numcheck|flowcheck|sighash|sighash_verify|arithcheck|stackcheck|crypto:|cryptocheck|seedcheck|scripttests|txtests|flagscheck|specgen|bytescheck|versiongatecheck|erascheck|witnesscheck|bsvs|eval/bsvs|run_bsvrs|run_diff|run_engine|harness:|make check)' "$REC_LOG" | sed 's/^/  /'
+     if [ -s "$REC_LOG.samples" ]; then
+[withheld at export: a sibling tree's line]
+       cat "$REC_LOG.samples"
+@@ -68,6 +70,10 @@ pins_check() {
+   echo "== pins: tools/check_pins.py: docs/PROVENANCE.md §1a against every site (the toolchains, the engines, the manifests, --locked) =="
+   python3 "$ROOT/tools/check_pins.py"
+ }
++cite_check() {
++  echo "== cite: tools/cite_check.py: every anchored file:line citation of lean/ and docs/ at the pin (#43) =="
++  python3 "$ROOT/tools/cite_check.py"
++}
+ lean_build() {
+   echo "== lean: lake build (lean/) =="
+   local log; log="$(mktemp)"
+@@ -239,6 +245,7 @@ harness_smoke() {
+ }
+ case "$step" in
+   pins) pins_check ;;
++  cite) cite_check ;;
+   lean) lean_build ;;
+   axioms) axioms ;;
+   numbers) numbers_check ;;
+@@ -267,6 +274,6 @@ case "$step" in
+     ( while true; do printf '  sample %s UTC: load1 %s; over 5%% cpu: %s\n' "$(date -u +%H:%M:%S)" "$(load1)" "$(ps -Ao %cpu,rss,comm | awk 'NR>1 && $1>5 {printf "%s %.0f%% %.1fGB; ", $3, $1, $2/1048576} END {if (NR<2) printf "none"}' | sed -E 's|/[^ ]*/||g')"; sleep 10; done ) > "$REC_LOG.samples" 2>/dev/null &
+     REC_SAMPLER=$!
+     trap 'record_run $?' EXIT
+-    pins_check; lean_build; axioms; numbers_check; flow_check; sighash_check; arith_check; stack_check; crypto_check; seed_check; scripttests_check; txtests_check; flags_check; spec_check; bytes_check; versiongate_check; eras_check; witness_check; eval_selftest; harness_smoke; echo "make check: GREEN (stubs are listed above by name; a stub is not a pass)";;
++    pins_check; cite_check; lean_build; axioms; numbers_check; flow_check; sighash_check; arith_check; stack_check; crypto_check; seed_check; scripttests_check; txtests_check; flags_check; spec_check; bytes_check; versiongate_check; eras_check; witness_check; eval_selftest; harness_smoke; echo "make check: GREEN (stubs are listed above by name; a stub is not a pass)";;
+   *) echo "unknown step $step"; exit 2 ;;
+ esac
+
+== 7. every site that said "twenty legs" at c49996d (git grep -n -i, docs/records excluded; several are dated
+records of past runs; the parent's to re-cut or keep) ==
+  CLAUDE.md:30
+  HANDOFF.md:9
+  HANDOFF.md:11
+  HANDOFF.md:18
+  HANDOFF.md:216
+  HANDOFF.md:263
+  HANDOFF.md:276
+  HANDOFF.md:310
+  HANDOFF.md:332
+  HANDOFF.md:346
+  HANDOFF.md:348
+  HANDOFF.md:358
+  HANDOFF.md:378
+  Makefile:7
+  PROMPT.md:27
+  README.md:54
+  docs/STATE-OF-THE-WORLD.md:59
+  docs/STATE-OF-THE-WORLD.md:60
+  docs/lanes/harness.md:5
+  docs/lanes/harness.md:7
+  docs/lanes/harness.md:69
+  tools/check.sh:2
+  tools/check_route.sh:6
+  tools/modal_check.py:43

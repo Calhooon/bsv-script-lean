@@ -1,0 +1,4344 @@
+{
+ "title": "the RPC observation contract of the #66 runner (#85)",
+ "written": "2026-10-15, lane rpc-85 (S4b); every cite read at the pins with git show, never a working tree",
+ "label": "[SRC] at the pins; types and the interface [D]; the [X] notes are the probe record's",
+ "reference": {
+  "tag": "v1.2.3",
+  "commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b"
+ },
+ "second_oracle": {
+  "tag": "v0.16.0",
+  "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5"
+ },
+ "probe_record": "docs/records/20261015-035438-s7-85-rpc-contract-s4b.json",
+ "findings": [
+  {
+   "id": "R1",
+   "method": "getmerkleproof2",
+   "phase": "named",
+   "title": "the registration names getmerkleproof2's arguments txid, blockhash; the handler reads blockhash at position 0 and txid at 1",
+   "source": [
+    "src/rpc/rawtransaction.cpp:2631",
+    "src/rpc/rawtransaction.cpp:2402",
+    "src/rpc/rawtransaction.cpp:2407"
+   ]
+  },
+  {
+   "id": "R2",
+   "method": "getblock",
+   "phase": "prune",
+   "title": "getblock verbosity 0 on a pruned block writes a 200 head and a partial chunk, then a second HTTP response carrying -1",
+   "source": [
+    "src/rpc/blockchain.cpp:1596",
+    "src/rpc/blockchain.cpp:1603",
+    "src/rpc/blockchain.cpp:1620",
+    "src/httprpc.cpp:80"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "id": "E1",
+   "method": "getmerkleproof",
+   "phase": "named",
+   "title": "the only transaction of a one-transaction block has an empty proof, which both proof handlers answer as -5 Transaction(s) not found in provided block",
+   "source": [
+    "src/rpc/rawtransaction.cpp:2303",
+    "src/rpc/rawtransaction.cpp:2447"
+   ]
+  },
+  {
+   "id": "E2",
+   "method": "getsafemodeinfo",
+   "phase": "safemode",
+   "title": "-testsafemode refuses the okSafeMode-false handlers with -2 while getsafemodeinfo answers safemodeenabled false",
+   "source": [
+    "src/warnings.cpp:46",
+    "src/safe_mode.cpp:498"
+   ]
+  },
+  {
+   "id": "E3",
+   "method": "getsafemodeinfo",
+   "phase": "mocktime",
+   "title": "timeutc is the wall clock under a mock clock, while block times and the pool's acceptance times follow the mock clock",
+   "source": [
+    "src/safe_mode.cpp:500",
+    "src/utiltime.cpp:23-29"
+   ]
+  }
+ ],
+ "envelope": {
+  "transport": "one HTTP/1.1 POST per call, cookie auth (src/httprpc.cpp:291-311); the reply {result, error, id}",
+  "http_status": "src/httprpc.cpp:66-81",
+  "error_object": "src/rpc/protocol.cpp:49-54",
+  "dispatch": "src/rpc/server.cpp:558-594",
+  "named_arguments": "src/rpc/server.cpp:448-489",
+  "safe_mode_gate": "src/init.cpp:325-332",
+  "safe_mode_warning": "src/warnings.cpp:46-72",
+  "generic_errors": [
+   {
+    "code": -1,
+    "message": "<the handler's help text>",
+    "when": "a wrong argument count or fHelp: the handler throws std::runtime_error, execute turns it into RPC_MISC_ERROR [X]",
+    "cite": "src/rpc/server.cpp:589"
+   },
+   {
+    "code": -1,
+    "message": "JSON value is not <a type> as expected",
+    "when": "an argument of the wrong JSON type read by get_int, get_str, get_bool [X]",
+    "cite": "src/rpc/server.cpp:589"
+   },
+   {
+    "code": -32601,
+    "message": "Method not found",
+    "when": "no registered handler; HTTP 404 [X]",
+    "cite": "src/rpc/server.cpp:570"
+   },
+   {
+    "code": -28,
+    "message": "<warmup status>",
+    "when": "the node is still starting",
+    "cite": "src/rpc/server.cpp:565"
+   },
+   {
+    "code": -8,
+    "message": "Unknown named parameter <name>",
+    "when": "a named argument the registration does not list",
+    "cite": "src/rpc/server.cpp:488"
+   },
+   {
+    "code": -2,
+    "message": "Safe mode: <warning>",
+    "when": "okSafeMode false while GetWarnings(\"rpc\") is not empty and -disablesafemode is off [X]",
+    "cite": "src/init.cpp:331"
+   },
+   {
+    "code": -32700,
+    "message": "Parse error",
+    "when": "a body that is not JSON",
+    "cite": "src/httprpc.cpp:318"
+   },
+   {
+    "code": -32600,
+    "message": "Invalid Request object / Missing method / Method must be a string / Params must be an array or object",
+    "when": "a malformed request; HTTP 400",
+    "cite": "src/rpc/server.cpp:381"
+   }
+  ]
+ },
+ "codes": [
+  {
+   "name": "RPC_INVALID_REQUEST",
+   "value": "-32600",
+   "cite": "src/rpc/protocol.h:24"
+  },
+  {
+   "name": "RPC_METHOD_NOT_FOUND",
+   "value": "-32601",
+   "cite": "src/rpc/protocol.h:27"
+  },
+  {
+   "name": "RPC_INVALID_PARAMS",
+   "value": "-32602",
+   "cite": "src/rpc/protocol.h:28"
+  },
+  {
+   "name": "RPC_INTERNAL_ERROR",
+   "value": "-32603",
+   "cite": "src/rpc/protocol.h:31"
+  },
+  {
+   "name": "RPC_PARSE_ERROR",
+   "value": "-32700",
+   "cite": "src/rpc/protocol.h:32"
+  },
+  {
+   "name": "RPC_MISC_ERROR",
+   "value": "-1",
+   "cite": "src/rpc/protocol.h:36"
+  },
+  {
+   "name": "RPC_FORBIDDEN_BY_SAFE_MODE",
+   "value": "-2",
+   "cite": "src/rpc/protocol.h:38"
+  },
+  {
+   "name": "RPC_TYPE_ERROR",
+   "value": "-3",
+   "cite": "src/rpc/protocol.h:40"
+  },
+  {
+   "name": "RPC_INVALID_ADDRESS_OR_KEY",
+   "value": "-5",
+   "cite": "src/rpc/protocol.h:42"
+  },
+  {
+   "name": "RPC_OUT_OF_MEMORY",
+   "value": "-7",
+   "cite": "src/rpc/protocol.h:44"
+  },
+  {
+   "name": "RPC_INVALID_PARAMETER",
+   "value": "-8",
+   "cite": "src/rpc/protocol.h:46"
+  },
+  {
+   "name": "RPC_DATABASE_ERROR",
+   "value": "-20",
+   "cite": "src/rpc/protocol.h:48"
+  },
+  {
+   "name": "RPC_DESERIALIZATION_ERROR",
+   "value": "-22",
+   "cite": "src/rpc/protocol.h:50"
+  },
+  {
+   "name": "RPC_VERIFY_ERROR",
+   "value": "-25",
+   "cite": "src/rpc/protocol.h:52"
+  },
+  {
+   "name": "RPC_VERIFY_REJECTED",
+   "value": "-26",
+   "cite": "src/rpc/protocol.h:54"
+  },
+  {
+   "name": "RPC_VERIFY_ALREADY_IN_CHAIN",
+   "value": "-27",
+   "cite": "src/rpc/protocol.h:56"
+  },
+  {
+   "name": "RPC_IN_WARMUP",
+   "value": "-28",
+   "cite": "src/rpc/protocol.h:58"
+  },
+  {
+   "name": "RPC_TRANSACTION_ERROR",
+   "value": "RPC_VERIFY_ERROR",
+   "cite": "src/rpc/protocol.h:61"
+  },
+  {
+   "name": "RPC_TRANSACTION_REJECTED",
+   "value": "RPC_VERIFY_REJECTED",
+   "cite": "src/rpc/protocol.h:62"
+  },
+  {
+   "name": "RPC_TRANSACTION_ALREADY_IN_CHAIN",
+   "value": "RPC_VERIFY_ALREADY_IN_CHAIN",
+   "cite": "src/rpc/protocol.h:63"
+  },
+  {
+   "name": "RPC_CLIENT_NOT_CONNECTED",
+   "value": "-9",
+   "cite": "src/rpc/protocol.h:67"
+  },
+  {
+   "name": "RPC_CLIENT_IN_INITIAL_DOWNLOAD",
+   "value": "-10",
+   "cite": "src/rpc/protocol.h:69"
+  },
+  {
+   "name": "RPC_CLIENT_NODE_ALREADY_ADDED",
+   "value": "-23",
+   "cite": "src/rpc/protocol.h:71"
+  },
+  {
+   "name": "RPC_CLIENT_NODE_NOT_ADDED",
+   "value": "-24",
+   "cite": "src/rpc/protocol.h:73"
+  },
+  {
+   "name": "RPC_CLIENT_NODE_NOT_CONNECTED",
+   "value": "-29",
+   "cite": "src/rpc/protocol.h:75"
+  },
+  {
+   "name": "RPC_CLIENT_INVALID_IP_OR_SUBNET",
+   "value": "-30",
+   "cite": "src/rpc/protocol.h:77"
+  },
+  {
+   "name": "RPC_CLIENT_P2P_DISABLED",
+   "value": "-31",
+   "cite": "src/rpc/protocol.h:79"
+  },
+  {
+   "name": "RPC_WALLET_ERROR",
+   "value": "-4",
+   "cite": "src/rpc/protocol.h:83"
+  },
+  {
+   "name": "RPC_WALLET_INSUFFICIENT_FUNDS",
+   "value": "-6",
+   "cite": "src/rpc/protocol.h:85"
+  },
+  {
+   "name": "RPC_WALLET_INVALID_ACCOUNT_NAME",
+   "value": "-11",
+   "cite": "src/rpc/protocol.h:87"
+  },
+  {
+   "name": "RPC_WALLET_KEYPOOL_RAN_OUT",
+   "value": "-12",
+   "cite": "src/rpc/protocol.h:89"
+  },
+  {
+   "name": "RPC_WALLET_UNLOCK_NEEDED",
+   "value": "-13",
+   "cite": "src/rpc/protocol.h:91"
+  },
+  {
+   "name": "RPC_WALLET_PASSPHRASE_INCORRECT",
+   "value": "-14",
+   "cite": "src/rpc/protocol.h:93"
+  },
+  {
+   "name": "RPC_WALLET_WRONG_ENC_STATE",
+   "value": "-15",
+   "cite": "src/rpc/protocol.h:96"
+  },
+  {
+   "name": "RPC_WALLET_ENCRYPTION_FAILED",
+   "value": "-16",
+   "cite": "src/rpc/protocol.h:98"
+  },
+  {
+   "name": "RPC_WALLET_ALREADY_UNLOCKED",
+   "value": "-17",
+   "cite": "src/rpc/protocol.h:100"
+  },
+  {
+   "name": "RPC_WALLET_NOT_FOUND",
+   "value": "-18",
+   "cite": "src/rpc/protocol.h:102"
+  },
+  {
+   "name": "RPC_WALLET_NOT_SPECIFIED",
+   "value": "-19",
+   "cite": "src/rpc/protocol.h:104"
+  }
+ ],
+ "types": {
+  "BlockStatus": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:140-158",
+   "fields": [
+    {
+     "name": "validity",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:145"
+    },
+    {
+     "name": "data",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:148"
+    },
+    {
+     "name": "undo",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:149"
+    },
+    {
+     "name": "failed",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:150"
+    },
+    {
+     "name": "parent failed",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:151"
+    },
+    {
+     "name": "disk meta",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:152"
+    },
+    {
+     "name": "soft reject",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:153"
+    },
+    {
+     "name": "double spend",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:154"
+    },
+    {
+     "name": "soft consensus frozen",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:155"
+    }
+   ]
+  },
+  "BlockHeader": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:93-138",
+   "fields": [
+    {
+     "name": "hash",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:100"
+    },
+    {
+     "name": "confirmations",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:101"
+    },
+    {
+     "name": "size",
+     "type": {
+      "option": "u64"
+     },
+     "cite": "src/rpc/blockchain.cpp:105",
+     "note": "only while the block's disk metadata is known; gone after pruning [X]"
+    },
+    {
+     "name": "height",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:107"
+    },
+    {
+     "name": "version",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:108"
+    },
+    {
+     "name": "versionHex",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:110"
+    },
+    {
+     "name": "merkleroot",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:111"
+    },
+    {
+     "name": "num_tx",
+     "type": {
+      "option": "u64"
+     },
+     "cite": "src/rpc/blockchain.cpp:113"
+    },
+    {
+     "name": "time",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:115"
+    },
+    {
+     "name": "mediantime",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:116"
+    },
+    {
+     "name": "nonce",
+     "type": "u64",
+     "cite": "src/rpc/blockchain.cpp:117"
+    },
+    {
+     "name": "bits",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:118"
+    },
+    {
+     "name": "difficulty",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:119"
+    },
+    {
+     "name": "chainwork",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:120"
+    },
+    {
+     "name": "previousblockhash",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/blockchain.cpp:126",
+     "note": "absent for genesis"
+    },
+    {
+     "name": "nextblockhash",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/blockchain.cpp:131",
+     "note": "absent at the tip and off the active chain"
+    },
+    {
+     "name": "status",
+     "type": {
+      "ref": "BlockStatus"
+     },
+     "cite": "src/rpc/blockchain.cpp:135"
+    }
+   ]
+  },
+  "ScriptPubKey": {
+   "kind": "struct",
+   "cite": "src/core_write.cpp:334-368",
+   "fields": [
+    {
+     "name": "asm",
+     "type": "string",
+     "cite": "src/core_write.cpp:338"
+    },
+    {
+     "name": "hex",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/core_write.cpp:344"
+    },
+    {
+     "name": "reqSigs",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:359",
+     "note": "absent when no destination is extracted"
+    },
+    {
+     "name": "type",
+     "type": "string",
+     "cite": "src/core_write.cpp:355"
+    },
+    {
+     "name": "addresses",
+     "type": {
+      "option": {
+       "array": "string"
+      }
+     },
+     "cite": "src/core_write.cpp:362"
+    }
+   ]
+  },
+  "ScriptSig": {
+   "kind": "struct",
+   "cite": "src/core_write.cpp:267",
+   "fields": [
+    {
+     "name": "asm",
+     "type": "string",
+     "cite": "src/core_write.cpp:269"
+    },
+    {
+     "name": "hex",
+     "type": "string",
+     "cite": "src/core_write.cpp:274"
+    }
+   ]
+  },
+  "TxIn": {
+   "kind": "struct",
+   "cite": "src/core_write.cpp:252",
+   "fields": [
+    {
+     "name": "coinbase",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/core_write.cpp:258",
+     "note": "a coinbase input only"
+    },
+    {
+     "name": "txid",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/core_write.cpp:265"
+    },
+    {
+     "name": "vout",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:266"
+    },
+    {
+     "name": "scriptSig",
+     "type": {
+      "option": {
+       "ref": "ScriptSig"
+      }
+     },
+     "cite": "src/core_write.cpp:267"
+    },
+    {
+     "name": "sequence",
+     "type": "i64",
+     "cite": "src/core_write.cpp:281"
+    }
+   ]
+  },
+  "TxOut": {
+   "kind": "struct",
+   "cite": "src/core_write.cpp:287",
+   "fields": [
+    {
+     "name": "value",
+     "type": "f64",
+     "cite": "src/core_write.cpp:293"
+    },
+    {
+     "name": "n",
+     "type": "i64",
+     "cite": "src/core_write.cpp:294"
+    },
+    {
+     "name": "scriptPubKey",
+     "type": {
+      "ref": "ScriptPubKey"
+     },
+     "cite": "src/core_write.cpp:296"
+    }
+   ]
+  },
+  "Tx": {
+   "kind": "struct",
+   "cite": "src/core_write.cpp:237-332",
+   "fields": [
+    {
+     "name": "txid",
+     "type": "string",
+     "cite": "src/core_write.cpp:246"
+    },
+    {
+     "name": "hash",
+     "type": "string",
+     "cite": "src/core_write.cpp:247"
+    },
+    {
+     "name": "version",
+     "type": "i64",
+     "cite": "src/core_write.cpp:248"
+    },
+    {
+     "name": "size",
+     "type": "i64",
+     "cite": "src/core_write.cpp:249"
+    },
+    {
+     "name": "locktime",
+     "type": "i64",
+     "cite": "src/core_write.cpp:250"
+    },
+    {
+     "name": "vin",
+     "type": {
+      "array": {
+       "ref": "TxIn"
+      }
+     },
+     "cite": "src/core_write.cpp:252"
+    },
+    {
+     "name": "vout",
+     "type": {
+      "array": {
+       "ref": "TxOut"
+      }
+     },
+     "cite": "src/core_write.cpp:287"
+    },
+    {
+     "name": "blockhash",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/core_write.cpp:307",
+     "note": "getrawtransaction of a mined transaction only"
+    },
+    {
+     "name": "confirmations",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:313"
+    },
+    {
+     "name": "time",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:317"
+    },
+    {
+     "name": "blocktime",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:318"
+    },
+    {
+     "name": "blockheight",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/core_write.cpp:319"
+    },
+    {
+     "name": "hex",
+     "type": "string",
+     "cite": "src/core_write.cpp:326"
+    }
+   ]
+  },
+  "BlockTx": {
+   "kind": "either",
+   "cite": "src/rpc/blockchain.cpp:1701",
+   "variants": [
+    {
+     "name": "Id",
+     "type": "string",
+     "note": "verbosity 1"
+    },
+    {
+     "name": "Decoded",
+     "type": {
+      "ref": "Tx"
+     },
+     "note": "verbosity 2 and 3"
+    }
+   ]
+  },
+  "Block": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:1665-1736",
+   "fields": [
+    {
+     "name": "tx",
+     "type": {
+      "array": {
+       "ref": "BlockTx"
+      }
+     },
+     "cite": "src/rpc/blockchain.cpp:1696"
+    },
+    {
+     "flatten": "BlockHeader",
+     "cite": "src/rpc/blockchain.cpp:1719"
+    }
+   ]
+  },
+  "GetBlock": {
+   "kind": "either",
+   "cite": "src/rpc/blockchain.cpp:1432-1476",
+   "variants": [
+    {
+     "name": "Raw",
+     "type": "string",
+     "note": "verbosity 0: the serialized block, hex"
+    },
+    {
+     "name": "Decoded",
+     "type": {
+      "ref": "Block"
+     }
+    }
+   ]
+  },
+  "HeaderExtended": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:177-203",
+   "fields": [
+    {
+     "name": "tx",
+     "type": {
+      "option": {
+       "array": {
+        "ref": "Tx"
+       }
+      }
+     },
+     "cite": "src/rpc/blockchain.cpp:187",
+     "note": "verbosity 2, the coinbase, only while the block is on disk [X]"
+    },
+    {
+     "flatten": "BlockHeader",
+     "cite": "src/rpc/blockchain.cpp:192"
+    },
+    {
+     "name": "merkleproof",
+     "type": {
+      "option": {
+       "array": "string"
+      }
+     },
+     "cite": "src/rpc/blockchain.cpp:196",
+     "note": "verbosity 2, with the coinbase"
+    }
+   ]
+  },
+  "GetBlockHeader": {
+   "kind": "either",
+   "cite": "src/rpc/blockchain.cpp:999",
+   "variants": [
+    {
+     "name": "Raw",
+     "type": "string",
+     "note": "verbosity 0: the 80-byte header, hex"
+    },
+    {
+     "name": "Decoded",
+     "type": {
+      "ref": "HeaderExtended"
+     }
+    }
+   ]
+  },
+  "Coin": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:1982",
+   "fields": [
+    {
+     "name": "bestblock",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:1990"
+    },
+    {
+     "name": "confirmations",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:1992"
+    },
+    {
+     "name": "value",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:1998"
+    },
+    {
+     "name": "scriptPubKey",
+     "type": {
+      "ref": "ScriptPubKey"
+     },
+     "cite": "src/rpc/blockchain.cpp:2004"
+    },
+    {
+     "name": "coinbase",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:2005"
+    },
+    {
+     "name": "confiscation",
+     "type": "bool",
+     "cite": "src/rpc/blockchain.cpp:2006"
+    }
+   ]
+  },
+  "MempoolEntry": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:378-412",
+   "fields": [
+    {
+     "name": "size",
+     "type": "u64",
+     "cite": "src/rpc/blockchain.cpp:391"
+    },
+    {
+     "name": "fee",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:392"
+    },
+    {
+     "name": "modifiedfee",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:393"
+    },
+    {
+     "name": "time",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:394"
+    },
+    {
+     "name": "height",
+     "type": "u64",
+     "cite": "src/rpc/blockchain.cpp:395"
+    },
+    {
+     "name": "depends",
+     "type": {
+      "array": "string"
+     },
+     "cite": "src/rpc/blockchain.cpp:405"
+    }
+   ]
+  },
+  "RawMempool": {
+   "kind": "either",
+   "cite": "src/rpc/blockchain.cpp:414-438",
+   "variants": [
+    {
+     "name": "Ids",
+     "type": {
+      "array": "string"
+     },
+     "note": "verbose false"
+    },
+    {
+     "name": "Verbose",
+     "type": {
+      "map": {
+       "ref": "MempoolEntry"
+      }
+     },
+     "note": "verbose true, keyed by txid"
+    }
+   ]
+  },
+  "MempoolInfo": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:2617-2642",
+   "fields": [
+    {
+     "name": "size",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2620"
+    },
+    {
+     "name": "journalsize",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2622"
+    },
+    {
+     "name": "nonfinalsize",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2625"
+    },
+    {
+     "name": "bytes",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2626"
+    },
+    {
+     "name": "usage",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2627"
+    },
+    {
+     "name": "usagedisk",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2628"
+    },
+    {
+     "name": "usagecpfp",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2629"
+    },
+    {
+     "name": "nonfinalusage",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2631"
+    },
+    {
+     "name": "maxmempool",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2634"
+    },
+    {
+     "name": "maxmempoolsizedisk",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2635"
+    },
+    {
+     "name": "maxmempoolsizecpfp",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2636"
+    },
+    {
+     "name": "mempoolminfee",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:2638"
+    }
+   ]
+  },
+  "ChainTip": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:2577",
+   "fields": [
+    {
+     "name": "height",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2578"
+    },
+    {
+     "name": "hash",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:2579"
+    },
+    {
+     "name": "branchlen",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2583"
+    },
+    {
+     "name": "status",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:2609",
+     "note": "active, invalid, headers-only, valid-fork, valid-headers or unknown"
+    }
+   ]
+  },
+  "ChainTxStats": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:3142",
+   "fields": [
+    {
+     "name": "time",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:3143"
+    },
+    {
+     "name": "txcount",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:3144"
+    },
+    {
+     "name": "window_block_count",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:3145"
+    },
+    {
+     "name": "window_tx_count",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/rpc/blockchain.cpp:3147"
+    },
+    {
+     "name": "window_interval",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/rpc/blockchain.cpp:3148"
+    },
+    {
+     "name": "txrate",
+     "type": {
+      "option": "f64"
+     },
+     "cite": "src/rpc/blockchain.cpp:3150"
+    }
+   ]
+  },
+  "OrphanInfo": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:2691",
+   "fields": [
+    {
+     "name": "size",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:2691"
+    }
+   ]
+  },
+  "BlockchainActivity": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:3649",
+   "fields": [
+    {
+     "name": "blocks",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:3674"
+    },
+    {
+     "name": "transactions",
+     "type": "u64",
+     "cite": "src/rpc/blockchain.cpp:3678"
+    }
+   ]
+  },
+  "MerkleProof": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:2323",
+   "fields": [
+    {
+     "name": "flags",
+     "type": "i64",
+     "cite": "src/rpc/rawtransaction.cpp:2324"
+    },
+    {
+     "name": "index",
+     "type": "u64",
+     "cite": "src/rpc/rawtransaction.cpp:2325"
+    },
+    {
+     "name": "txOrId",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:2326"
+    },
+    {
+     "name": "target",
+     "type": {
+      "ref": "BlockHeader"
+     },
+     "cite": "src/rpc/rawtransaction.cpp:2336"
+    },
+    {
+     "name": "nodes",
+     "type": {
+      "array": "string"
+     },
+     "cite": "src/rpc/rawtransaction.cpp:2337"
+    }
+   ]
+  },
+  "MerkleProof2": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:2468",
+   "fields": [
+    {
+     "name": "index",
+     "type": "u64",
+     "cite": "src/rpc/rawtransaction.cpp:2468"
+    },
+    {
+     "name": "txOrId",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:2473",
+     "note": "the txid, or the transaction's hex with includeFullTx"
+    },
+    {
+     "name": "targetType",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/rawtransaction.cpp:2504",
+     "note": "absent for the default hash"
+    },
+    {
+     "name": "target",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:2510",
+     "note": "a block hash, a header's hex or a merkle root"
+    },
+    {
+     "name": "nodes",
+     "type": {
+      "array": "string"
+     },
+     "cite": "src/rpc/rawtransaction.cpp:2522"
+    }
+   ]
+  },
+  "Collided": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:1729",
+   "fields": [
+    {
+     "name": "txid",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:1733"
+    },
+    {
+     "name": "size",
+     "type": "i64",
+     "cite": "src/rpc/rawtransaction.cpp:1734"
+    }
+   ]
+  },
+  "InvalidTx": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:1705-1747",
+   "fields": [
+    {
+     "name": "txid",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:1715"
+    },
+    {
+     "name": "reject_code",
+     "type": "u64",
+     "cite": "src/rpc/rawtransaction.cpp:1718"
+    },
+    {
+     "name": "reject_reason",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:1719",
+     "note": "missing inputs read reject_code 16, reason missing-inputs"
+    },
+    {
+     "name": "collidedWith",
+     "type": {
+      "option": {
+       "array": {
+        "ref": "Collided"
+       }
+      }
+     },
+     "cite": "src/rpc/rawtransaction.cpp:1729"
+    }
+   ]
+  },
+  "Unconfirmed": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:1782-1796",
+   "fields": [
+    {
+     "name": "txid",
+     "type": "string",
+     "cite": "src/rpc/rawtransaction.cpp:1790"
+    },
+    {
+     "name": "ancestors",
+     "type": "json",
+     "cite": "src/rpc/rawtransaction.cpp:1791"
+    }
+   ]
+  },
+  "SendRawTransactions": {
+   "kind": "struct",
+   "cite": "src/rpc/rawtransaction.cpp:2220",
+   "fields": [
+    {
+     "name": "known",
+     "type": {
+      "option": {
+       "array": "string"
+      }
+     },
+     "cite": "src/rpc/rawtransaction.cpp:1771",
+     "note": "each array only when not empty; accepted txids are never listed"
+    },
+    {
+     "name": "invalid",
+     "type": {
+      "option": {
+       "array": {
+        "ref": "InvalidTx"
+       }
+      }
+     },
+     "cite": "src/rpc/rawtransaction.cpp:1709"
+    },
+    {
+     "name": "evicted",
+     "type": {
+      "option": {
+       "array": "string"
+      }
+     },
+     "cite": "src/rpc/rawtransaction.cpp:1756"
+    },
+    {
+     "name": "unconfirmed",
+     "type": {
+      "option": {
+       "array": {
+        "ref": "Unconfirmed"
+       }
+      }
+     },
+     "cite": "src/rpc/rawtransaction.cpp:1786"
+    }
+   ]
+  },
+  "ScriptVerdict": {
+   "kind": "struct",
+   "cite": "src/rpc/misc.cpp:903",
+   "fields": [
+    {
+     "name": "result",
+     "type": "string",
+     "cite": "src/rpc/misc.cpp:903",
+     "note": "ok, error, timeout or skipped"
+    },
+    {
+     "name": "description",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:906"
+    },
+    {
+     "name": "flags",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/rpc/misc.cpp:910"
+    }
+   ]
+  },
+  "Network": {
+   "kind": "struct",
+   "cite": "src/rpc/net.cpp:522-541",
+   "fields": [
+    {
+     "name": "name",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:530"
+    },
+    {
+     "name": "limited",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:531"
+    },
+    {
+     "name": "reachable",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:532"
+    },
+    {
+     "name": "proxy",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:533"
+    },
+    {
+     "name": "proxy_randomize_credentials",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:537"
+    }
+   ]
+  },
+  "LocalAddress": {
+   "kind": "struct",
+   "cite": "src/rpc/net.cpp:657",
+   "fields": [
+    {
+     "name": "address",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:658"
+    },
+    {
+     "name": "port",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:659"
+    },
+    {
+     "name": "score",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:660"
+    }
+   ]
+  },
+  "NetworkInfo": {
+   "kind": "struct",
+   "cite": "src/rpc/net.cpp:543-667",
+   "fields": [
+    {
+     "name": "version",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:619"
+    },
+    {
+     "name": "subversion",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:620"
+    },
+    {
+     "name": "protocolversion",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:621"
+    },
+    {
+     "name": "localservices",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:623"
+    },
+    {
+     "name": "localrelay",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:625"
+    },
+    {
+     "name": "timeoffset",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:626"
+    },
+    {
+     "name": "txnpropagationfreq",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:628"
+    },
+    {
+     "name": "txnpropagationqlen",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:629"
+    },
+    {
+     "name": "networkactive",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:630"
+    },
+    {
+     "name": "connections",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:631"
+    },
+    {
+     "name": "addresscount",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:632"
+    },
+    {
+     "name": "streampolicies",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:642"
+    },
+    {
+     "name": "networks",
+     "type": {
+      "array": {
+       "ref": "Network"
+      }
+     },
+     "cite": "src/rpc/net.cpp:645"
+    },
+    {
+     "name": "relayfee",
+     "type": "f64",
+     "cite": "src/rpc/net.cpp:646"
+    },
+    {
+     "name": "minconsolidationfactor",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:648"
+    },
+    {
+     "name": "maxconsolidationinputscriptsize",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:649"
+    },
+    {
+     "name": "minconfconsolidationinput",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:650"
+    },
+    {
+     "name": "minconsolidationinputmaturity",
+     "type": "i64",
+     "cite": "src/rpc/net.cpp:651"
+    },
+    {
+     "name": "acceptnonstdconsolidationinput",
+     "type": "bool",
+     "cite": "src/rpc/net.cpp:652"
+    },
+    {
+     "name": "localaddresses",
+     "type": {
+      "array": {
+       "ref": "LocalAddress"
+      }
+     },
+     "cite": "src/rpc/net.cpp:664"
+    },
+    {
+     "name": "warnings",
+     "type": "string",
+     "cite": "src/rpc/net.cpp:665",
+     "note": "GetWarnings(\"statusbar\"): the binary of record's development-build text, or the safe-mode text [X]"
+    }
+   ]
+  },
+  "SafeModeBlock": {
+   "kind": "struct",
+   "cite": "src/safe_mode.cpp:488",
+   "fields": [
+    {
+     "name": "hash",
+     "type": "string",
+     "cite": "src/safe_mode.cpp:488"
+    },
+    {
+     "name": "height",
+     "type": "i64",
+     "cite": "src/safe_mode.cpp:489"
+    },
+    {
+     "name": "blocktime",
+     "type": "string",
+     "cite": "src/safe_mode.cpp:490"
+    },
+    {
+     "name": "firstseentime",
+     "type": "string",
+     "cite": "src/safe_mode.cpp:491"
+    },
+    {
+     "name": "status",
+     "type": "string",
+     "cite": "src/safe_mode.cpp:492"
+    }
+   ]
+  },
+  "Reorg": {
+   "kind": "struct",
+   "cite": "src/safe_mode.cpp:502",
+   "fields": [
+    {
+     "name": "happened",
+     "type": "bool",
+     "cite": "src/safe_mode.cpp:505"
+    },
+    {
+     "name": "numberofdisconnectedblocks",
+     "type": "i64",
+     "cite": "src/safe_mode.cpp:506"
+    },
+    {
+     "name": "oldtip",
+     "type": {
+      "nullable": {
+       "ref": "SafeModeBlock"
+      }
+     },
+     "cite": "src/safe_mode.cpp:507"
+    }
+   ]
+  },
+  "SafeModeInfo": {
+   "kind": "struct",
+   "cite": "src/safe_mode.cpp:450-552",
+   "fields": [
+    {
+     "name": "safemodeenabled",
+     "type": "bool",
+     "cite": "src/safe_mode.cpp:498",
+     "note": "the fork-driven level only: false under -testsafemode [X]"
+    },
+    {
+     "name": "activetip",
+     "type": {
+      "ref": "SafeModeBlock"
+     },
+     "cite": "src/safe_mode.cpp:499"
+    },
+    {
+     "name": "timeutc",
+     "type": "string",
+     "cite": "src/safe_mode.cpp:500",
+     "note": "std::time(nullptr): the wall clock, never the mock clock [X]"
+    },
+    {
+     "name": "reorg",
+     "type": {
+      "ref": "Reorg"
+     },
+     "cite": "src/safe_mode.cpp:502"
+    },
+    {
+     "name": "forks",
+     "type": {
+      "array": "json"
+     },
+     "cite": "src/safe_mode.cpp:530",
+     "note": "per fork: forkfirstblock, tips, lastcommonblock, activechainfirstblock; untyped, no isolated instance forks"
+    }
+   ]
+  },
+  "UtxoSetInfo": {
+   "kind": "struct",
+   "cite": "src/rpc/blockchain.cpp:1907",
+   "fields": [
+    {
+     "name": "height",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:1908"
+    },
+    {
+     "name": "bestblock",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:1909"
+    },
+    {
+     "name": "transactions",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:1910"
+    },
+    {
+     "name": "txouts",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:1911"
+    },
+    {
+     "name": "bogosize",
+     "type": "i64",
+     "cite": "src/rpc/blockchain.cpp:1912"
+    },
+    {
+     "name": "hash_serialized",
+     "type": "string",
+     "cite": "src/rpc/blockchain.cpp:1913"
+    },
+    {
+     "name": "disk_size",
+     "type": "u64",
+     "cite": "src/rpc/blockchain.cpp:1914"
+    },
+    {
+     "name": "total_amount",
+     "type": "f64",
+     "cite": "src/rpc/blockchain.cpp:1916"
+    }
+   ]
+  },
+  "OutPoint": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:291",
+   "fields": [
+    {
+     "name": "txId",
+     "type": "string",
+     "cite": "src/rpc/frozentxo_rpc.cpp:291"
+    },
+    {
+     "name": "vout",
+     "type": "u64",
+     "cite": "src/rpc/frozentxo_rpc.cpp:292"
+    }
+   ]
+  },
+  "NotProcessedFund": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:281-301",
+   "fields": [
+    {
+     "name": "txOut",
+     "type": {
+      "ref": "OutPoint"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:293"
+    },
+    {
+     "name": "reason",
+     "type": "string",
+     "cite": "src/rpc/frozentxo_rpc.cpp:294"
+    }
+   ]
+  },
+  "FundsResult": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:298",
+   "fields": [
+    {
+     "name": "notProcessed",
+     "type": {
+      "array": {
+       "ref": "NotProcessedFund"
+      }
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:298"
+    }
+   ]
+  },
+  "Interval": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:472",
+   "fields": [
+    {
+     "name": "start",
+     "type": "i64",
+     "cite": "src/rpc/frozentxo_rpc.cpp:472"
+    },
+    {
+     "name": "stop",
+     "type": "i64",
+     "cite": "src/rpc/frozentxo_rpc.cpp:473"
+    }
+   ]
+  },
+  "BlacklistedFund": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:404-499",
+   "fields": [
+    {
+     "name": "txOut",
+     "type": {
+      "ref": "OutPoint"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:465"
+    },
+    {
+     "name": "enforceAtHeight",
+     "type": {
+      "option": {
+       "array": {
+        "ref": "Interval"
+       }
+      }
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:476",
+     "note": "consensus entries only"
+    },
+    {
+     "name": "policyExpiresWithConsensus",
+     "type": {
+      "option": "json"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:477",
+     "note": "written as a number on the node [X]"
+    },
+    {
+     "name": "blacklist",
+     "type": {
+      "array": "string"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:479"
+    }
+   ]
+  },
+  "Blacklist": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:439",
+   "fields": [
+    {
+     "name": "funds",
+     "type": {
+      "array": {
+       "ref": "BlacklistedFund"
+      }
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:439"
+    }
+   ]
+  },
+  "TxIdOnly": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:752",
+   "fields": [
+    {
+     "name": "txId",
+     "type": "string",
+     "cite": "src/rpc/frozentxo_rpc.cpp:752"
+    }
+   ]
+  },
+  "NotProcessedTx": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:753",
+   "fields": [
+    {
+     "name": "confiscationTx",
+     "type": {
+      "ref": "TxIdOnly"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:753"
+    },
+    {
+     "name": "reason",
+     "type": "string",
+     "cite": "src/rpc/frozentxo_rpc.cpp:754"
+    }
+   ]
+  },
+  "WhitelistResult": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:761",
+   "fields": [
+    {
+     "name": "notProcessed",
+     "type": {
+      "array": {
+       "ref": "NotProcessedTx"
+      }
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:761"
+    }
+   ]
+  },
+  "Whitelist": {
+   "kind": "struct",
+   "cite": "src/rpc/frozentxo_rpc.cpp:799-894",
+   "fields": [
+    {
+     "name": "confiscationTxs",
+     "type": {
+      "array": "json"
+     },
+     "cite": "src/rpc/frozentxo_rpc.cpp:843",
+     "note": "per entry confiscationTx: txId, enforceAtHeight, inputs with verbose; untyped, no entry on the isolated instance"
+    }
+   ]
+  },
+  "WalletInfo": {
+   "kind": "struct",
+   "cite": "src/wallet/rpcwallet.cpp:2798-2878",
+   "fields": [
+    {
+     "name": "walletname",
+     "type": "string",
+     "cite": "src/wallet/rpcwallet.cpp:2854"
+    },
+    {
+     "name": "walletversion",
+     "type": "i64",
+     "cite": "src/wallet/rpcwallet.cpp:2855"
+    },
+    {
+     "name": "balance",
+     "type": "f64",
+     "cite": "src/wallet/rpcwallet.cpp:2856"
+    },
+    {
+     "name": "unconfirmed_balance",
+     "type": "f64",
+     "cite": "src/wallet/rpcwallet.cpp:2857"
+    },
+    {
+     "name": "immature_balance",
+     "type": "f64",
+     "cite": "src/wallet/rpcwallet.cpp:2859"
+    },
+    {
+     "name": "txcount",
+     "type": "i64",
+     "cite": "src/wallet/rpcwallet.cpp:2861"
+    },
+    {
+     "name": "keypoololdest",
+     "type": "i64",
+     "cite": "src/wallet/rpcwallet.cpp:2862"
+    },
+    {
+     "name": "keypoolsize",
+     "type": "i64",
+     "cite": "src/wallet/rpcwallet.cpp:2863"
+    },
+    {
+     "name": "keypoolsize_hd_internal",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/wallet/rpcwallet.cpp:2867"
+    },
+    {
+     "name": "unlocked_until",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/wallet/rpcwallet.cpp:2871"
+    },
+    {
+     "name": "paytxfee",
+     "type": "f64",
+     "cite": "src/wallet/rpcwallet.cpp:2873"
+    },
+    {
+     "name": "hdmasterkeyid",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/wallet/rpcwallet.cpp:2875"
+    }
+   ]
+  },
+  "AddressInfo": {
+   "kind": "struct",
+   "cite": "src/rpc/misc.cpp:206-300",
+   "fields": [
+    {
+     "name": "isvalid",
+     "type": "bool",
+     "cite": "src/rpc/misc.cpp:261"
+    },
+    {
+     "name": "address",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:264"
+    },
+    {
+     "name": "scriptPubKey",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:267"
+    },
+    {
+     "name": "ismine",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/rpc/misc.cpp:272"
+    },
+    {
+     "name": "iswatchonly",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/rpc/misc.cpp:274"
+    },
+    {
+     "name": "isscript",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/rpc/misc.cpp:169"
+    },
+    {
+     "name": "pubkey",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:171"
+    },
+    {
+     "name": "iscompressed",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/rpc/misc.cpp:172"
+    },
+    {
+     "name": "script",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:189"
+    },
+    {
+     "name": "hex",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:191"
+    },
+    {
+     "name": "account",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:279"
+    },
+    {
+     "name": "timestamp",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/rpc/misc.cpp:289"
+    },
+    {
+     "name": "hdkeypath",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:291"
+    },
+    {
+     "name": "hdmasterkeyid",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/rpc/misc.cpp:292"
+    }
+   ]
+  },
+  "WalletTransaction": {
+   "kind": "struct",
+   "cite": "src/wallet/rpcwallet.cpp:2176",
+   "fields": [
+    {
+     "name": "amount",
+     "type": "f64",
+     "cite": "src/wallet/rpcwallet.cpp:2171"
+    },
+    {
+     "name": "fee",
+     "type": {
+      "option": "f64"
+     },
+     "cite": "src/wallet/rpcwallet.cpp:2173"
+    },
+    {
+     "name": "confirmations",
+     "type": "i64",
+     "cite": "src/wallet/wallet.cpp:1985"
+    },
+    {
+     "name": "generated",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/wallet/wallet.cpp:1987"
+    },
+    {
+     "name": "blockhash",
+     "type": {
+      "option": "string"
+     },
+     "cite": "src/wallet/wallet.cpp:1991"
+    },
+    {
+     "name": "blockindex",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/wallet/wallet.cpp:1992"
+    },
+    {
+     "name": "blocktime",
+     "type": {
+      "option": "i64"
+     },
+     "cite": "src/wallet/wallet.cpp:1993"
+    },
+    {
+     "name": "trusted",
+     "type": {
+      "option": "bool"
+     },
+     "cite": "src/wallet/wallet.cpp:1997"
+    },
+    {
+     "name": "txid",
+     "type": "string",
+     "cite": "src/wallet/wallet.cpp:2000"
+    },
+    {
+     "name": "walletconflicts",
+     "type": {
+      "array": "string"
+     },
+     "cite": "src/wallet/wallet.cpp:2007"
+    },
+    {
+     "name": "time",
+     "type": "i64",
+     "cite": "src/wallet/wallet.cpp:2008"
+    },
+    {
+     "name": "timereceived",
+     "type": "i64",
+     "cite": "src/wallet/wallet.cpp:2009"
+    },
+    {
+     "name": "details",
+     "type": {
+      "array": "json"
+     },
+     "cite": "src/wallet/rpcwallet.cpp:2180"
+    },
+    {
+     "name": "hex",
+     "type": "string",
+     "cite": "src/wallet/rpcwallet.cpp:2184"
+    }
+   ]
+  },
+  "GetRawTransaction": {
+   "kind": "either",
+   "cite": "src/rpc/rawtransaction.cpp:212",
+   "variants": [
+    {
+     "name": "Raw",
+     "type": "string",
+     "note": "verbose false: the serialized transaction, hex"
+    },
+    {
+     "name": "Decoded",
+     "type": {
+      "ref": "Tx"
+     }
+    }
+   ]
+  }
+ },
+ "handlers": [
+  {
+   "method": "acceptblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2894-2991",
+   "registration": "src/rpc/blockchain.cpp:3825",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash",
+    "numblocks"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "numblocks",
+     "type": "i64",
+     "required": false
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -8,
+     "message": "Parameter numBlocks must not be negative",
+     "when": "numblocks below 0",
+     "cite": "src/rpc/blockchain.cpp:2939"
+    },
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:2951"
+    },
+    {
+     "code": -1,
+     "message": "Error unmarking block as soft rejected",
+     "when": "the block is not soft rejected, or only through its parent",
+     "cite": "src/rpc/blockchain.cpp:2968"
+    },
+    {
+     "code": -20,
+     "message": "<reject reason>",
+     "when": "ActivateBestChain reported an error",
+     "cite": "src/rpc/blockchain.cpp:2987"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "addToConfiscationTxidWhitelist",
+   "build": "record",
+   "source": "src/rpc/frozentxo_rpc.cpp:632-764",
+   "registration": "src/rpc/frozentxo_rpc.cpp:908",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txs"
+   ],
+   "args": [
+    {
+     "name": "txs",
+     "type": "json",
+     "required": true,
+     "note": "{confiscationTxs: [{confiscationTx: {enforceAtHeight, hex}}]}"
+    }
+   ],
+   "result": {
+    "ref": "WhitelistResult"
+   },
+   "errors": [
+    {
+     "code": -8,
+     "message": "Negative enforceAtHeight",
+     "when": "enforceAtHeight below 0",
+     "cite": "src/rpc/frozentxo_rpc.cpp:713"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "note": "a transaction that is not a valid confiscation transaction is a notProcessed row with its reason [X]"
+  },
+  {
+   "method": "addToConsensusBlacklist",
+   "build": "record",
+   "source": "src/rpc/frozentxo_rpc.cpp:346-378",
+   "registration": "src/rpc/frozentxo_rpc.cpp:904",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "funds"
+   ],
+   "args": [
+    {
+     "name": "funds",
+     "type": "json",
+     "required": true,
+     "note": "{funds: [{txOut, enforceAtHeight: [{start, stop}], policyExpiresWithConsensus}]}"
+    }
+   ],
+   "result": {
+    "ref": "FundsResult"
+   },
+   "errors": [
+    {
+     "code": -3,
+     "message": "Missing <key> / Expected type <t> for <key>",
+     "when": "a fund object without txOut, txId or vout, or a key of the wrong type [X]",
+     "cite": "src/rpc/server.cpp:98"
+    },
+    {
+     "code": -8,
+     "message": "Negative vout / Too large vout",
+     "when": "vout out of range",
+     "cite": "src/rpc/frozentxo_rpc.cpp:126"
+    },
+    {
+     "code": -8,
+     "message": "Missing start",
+     "when": "an interval without start",
+     "cite": "src/rpc/frozentxo_rpc.cpp:43"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "helpers": [
+    "src/rpc/frozentxo_rpc.cpp:281-301"
+   ]
+  },
+  {
+   "method": "addToPolicyBlacklist",
+   "build": "record",
+   "source": "src/rpc/frozentxo_rpc.cpp:320-344",
+   "registration": "src/rpc/frozentxo_rpc.cpp:903",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "funds"
+   ],
+   "args": [
+    {
+     "name": "funds",
+     "type": "json",
+     "required": true,
+     "note": "{funds: [{txOut: {txId, vout}}]}"
+    }
+   ],
+   "result": {
+    "ref": "FundsResult"
+   },
+   "errors": [
+    {
+     "code": -3,
+     "message": "Missing <key> / Expected type <t> for <key>",
+     "when": "a fund object without txOut, txId or vout, or a key of the wrong type [X]",
+     "cite": "src/rpc/server.cpp:98"
+    },
+    {
+     "code": -8,
+     "message": "Negative vout / Too large vout",
+     "when": "vout out of range",
+     "cite": "src/rpc/frozentxo_rpc.cpp:126"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "helpers": [
+    "src/rpc/frozentxo_rpc.cpp:281-301"
+   ],
+   "note": "a fund already listed is a result row of notProcessed with its reason, never an error [X]"
+  },
+  {
+   "method": "generatetoaddress",
+   "build": "record",
+   "source": "src/rpc/mining.cpp:227-268",
+   "registration": "src/rpc/mining.cpp:968",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "nblocks",
+    "address",
+    "maxtries"
+   ],
+   "args": [
+    {
+     "name": "nblocks",
+     "type": "i64",
+     "required": true
+    },
+    {
+     "name": "address",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "maxtries",
+     "type": "i64",
+     "required": false,
+     "note": "default 1000000"
+    }
+   ],
+   "result": {
+    "array": "string"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Error: Invalid address",
+     "when": "the address does not decode",
+     "cite": "src/rpc/mining.cpp:259"
+    },
+    {
+     "code": -32603,
+     "message": "Couldn't create new block",
+     "when": "the assembler returned no block",
+     "cite": "src/rpc/mining.cpp:175"
+    },
+    {
+     "code": -32603,
+     "message": "ProcessNewBlock, block not accepted",
+     "when": "the mined block was refused",
+     "cite": "src/rpc/mining.cpp:212"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "the block's time is the assembler's adjusted time (the mock clock when set; at least the median time past + 1): the observed headers carry the mock clock, then the wall clock after setmocktime 0 [X]",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:1031",
+    "map": "services/rpc/Server.go:168",
+    "registered": "services/rpc/bsvjson/btcdextcmds.go:141"
+   },
+   "helpers": [
+    "src/rpc/mining.cpp:143-225"
+   ]
+  },
+  {
+   "method": "getbestblockhash",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:220-235",
+   "registration": "src/rpc/blockchain.cpp:3796",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": "string",
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:507",
+    "map": "services/rpc/Server.go:171",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:875"
+   }
+  },
+  {
+   "method": "getblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:1108-1272",
+   "registration": "src/rpc/blockchain.cpp:3798",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash",
+    "verbosity|verbose"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "verbosity",
+     "type": "json",
+     "required": false,
+     "note": "0, 1, 2, 3, a boolean, or a level's name; default 1"
+    }
+   ],
+   "result": {
+    "ref": "GetBlock"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:1257"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value out of range",
+     "when": "a numeric verbosity outside 0..3",
+     "cite": "src/rpc/blockchain.cpp:1078"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value not recognized",
+     "when": "a string verbosity that names no level",
+     "cite": "src/rpc/blockchain.cpp:1095"
+    },
+    {
+     "code": -8,
+     "message": "Invalid verbosity input type",
+     "when": "a verbosity neither number, string nor boolean",
+     "cite": "src/rpc/blockchain.cpp:1104"
+    },
+    {
+     "code": -1,
+     "message": "Block file <hash> not available.",
+     "when": "verbosity 1 to 3 on a block whose file is pruned",
+     "cite": "src/rpc/blockchain.cpp:1677"
+    },
+    {
+     "code": -1,
+     "message": "<hash> not found on disk",
+     "when": "verbosity 0 on a pruned block: on the same connection as a 200 head, a partial chunk and a second status line, the order not fixed (Finding R2)",
+     "cite": "src/rpc/blockchain.cpp:1620"
+    }
+   ],
+   "pruning": "verbosity 1 to 3: -1 before any byte is written; verbosity 0: the handler writes the 200 head and {\"result\": \" before the stream fails [SRC]; on the socket the 200 head, that chunk, a second status line 500 and the -1 error object, in an order that differed between two runs (Finding R2) [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:101",
+    "map": "services/rpc/Server.go:172",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:876"
+   },
+   "helpers": [
+    "src/rpc/blockchain.cpp:1432-1476",
+    "src/rpc/blockchain.cpp:1478-1663",
+    "src/rpc/blockchain.cpp:1665-1736"
+   ]
+  },
+  {
+   "method": "getblockbyheight",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:1274-1430",
+   "registration": "src/rpc/blockchain.cpp:3799",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash",
+    "verbosity|verbose"
+   ],
+   "args": [
+    {
+     "name": "height",
+     "type": "i64",
+     "required": true,
+     "note": "registered under the name blockhash"
+    },
+    {
+     "name": "verbosity",
+     "type": "json",
+     "required": false,
+     "note": "as getblock"
+    }
+   ],
+   "result": {
+    "ref": "GetBlock"
+   },
+   "errors": [
+    {
+     "code": -8,
+     "message": "Block height out of range",
+     "when": "height below 0 or above the tip",
+     "cite": "src/rpc/blockchain.cpp:1411"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value out of range",
+     "when": "a numeric verbosity outside 0..3",
+     "cite": "src/rpc/blockchain.cpp:1078"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value not recognized",
+     "when": "a string verbosity that names no level",
+     "cite": "src/rpc/blockchain.cpp:1095"
+    },
+    {
+     "code": -8,
+     "message": "Invalid verbosity input type",
+     "when": "a verbosity neither number, string nor boolean",
+     "cite": "src/rpc/blockchain.cpp:1104"
+    },
+    {
+     "code": -1,
+     "message": "Block file <hash> not available.",
+     "when": "verbosity 1 to 3 on a block whose file is pruned",
+     "cite": "src/rpc/blockchain.cpp:1677"
+    },
+    {
+     "code": -1,
+     "message": "<hash> not found on disk",
+     "when": "verbosity 0 on a pruned block: on the same connection as a 200 head, a partial chunk and a second status line, the order not fixed (Finding R2) [SRC], not probed",
+     "cite": "src/rpc/blockchain.cpp:1620"
+    }
+   ],
+   "pruning": "as getblock",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:177",
+    "map": "services/rpc/Server.go:173",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:877"
+   },
+   "helpers": [
+    "src/rpc/blockchain.cpp:1432-1476"
+   ],
+   "note": "the runner calls it on the second oracle only (harness/src/scenarios/teranode.rs); the reference registers its height argument under the name blockhash"
+  },
+  {
+   "method": "getblockchainactivity",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:3649-3683",
+   "registration": "src/rpc/blockchain.cpp:3829",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "BlockchainActivity"
+   },
+   "errors": [
+    {
+     "code": -31,
+     "message": "Error: Peer-to-peer functionality missing or disabled",
+     "when": "no connection manager",
+     "cite": "src/rpc/blockchain.cpp:3669"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "getblockcount",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:205-218",
+   "registration": "src/rpc/blockchain.cpp:3797",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": "i64",
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:175",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:879"
+   }
+  },
+  {
+   "method": "getblockhash",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:801-825",
+   "registration": "src/rpc/blockchain.cpp:3800",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "height"
+   ],
+   "args": [
+    {
+     "name": "height",
+     "type": "i64",
+     "required": true
+    }
+   ],
+   "result": "string",
+   "errors": [
+    {
+     "code": -8,
+     "message": "Block height out of range",
+     "when": "height below 0 or above the tip",
+     "cite": "src/rpc/blockchain.cpp:820"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:218",
+    "map": "services/rpc/Server.go:176",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:880"
+   }
+  },
+  {
+   "method": "getblockheader",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:884-1061",
+   "registration": "src/rpc/blockchain.cpp:3801",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash",
+    "verbosity|verbose"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "verbosity",
+     "type": "json",
+     "required": false,
+     "note": "0, 1, 2, a boolean, or a level's name; default 1"
+    }
+   ],
+   "result": {
+    "ref": "GetBlockHeader"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:980"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value out of range",
+     "when": "a numeric verbosity outside 0..2",
+     "cite": "src/rpc/blockchain.cpp:844"
+    },
+    {
+     "code": -8,
+     "message": "Verbosity value not recognized",
+     "when": "a string verbosity that names no level",
+     "cite": "src/rpc/blockchain.cpp:869"
+    },
+    {
+     "code": -8,
+     "message": "Invalid verbosity input type",
+     "when": "a verbosity neither number, string nor boolean",
+     "cite": "src/rpc/blockchain.cpp:880"
+    }
+   ],
+   "pruning": "answers after pruning: size gone, status.data, status.undo and status.\"disk meta\" false; verbosity 2 drops tx and merkleproof (the coinbase is not read) [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:250",
+    "map": "services/rpc/Server.go:177",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:881"
+   },
+   "helpers": [
+    "src/rpc/blockchain.cpp:93-138",
+    "src/rpc/blockchain.cpp:177-203"
+   ]
+  },
+  {
+   "method": "getchaintips",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2497-2615",
+   "registration": "src/rpc/blockchain.cpp:3804",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "array": {
+     "ref": "ChainTip"
+    }
+   },
+   "errors": [],
+   "pruning": "status headers-only is chain-tx-count zero, not missing files: a pruned chain still reads active [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:2928",
+    "map": "services/rpc/Server.go:181",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:885"
+   }
+  },
+  {
+   "method": "getchaintxstats",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:3054-3155",
+   "registration": "src/rpc/blockchain.cpp:3795",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "nblocks",
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "nblocks",
+     "type": "i64",
+     "required": false,
+     "note": "default one month of blocks, capped at the height - 1"
+    },
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": false,
+     "note": "default the tip"
+    }
+   ],
+   "result": {
+    "ref": "ChainTxStats"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:3107"
+    },
+    {
+     "code": -8,
+     "message": "Block is not in main chain",
+     "when": "the block is off the active chain",
+     "cite": "src/rpc/blockchain.cpp:3114"
+    },
+    {
+     "code": -8,
+     "message": "Invalid block count: should be between 0 and the block's height - 1",
+     "when": "nblocks out of range",
+     "cite": "src/rpc/blockchain.cpp:3129"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "window_interval and txrate are median-time-past differences of the blocks: they follow the block times the mock clock wrote [X]",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "getmempoolinfo",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2644-2673",
+   "registration": "src/rpc/blockchain.cpp:3809",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "MempoolInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:189",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:892"
+   },
+   "helpers": [
+    "src/rpc/blockchain.cpp:2617-2642"
+   ]
+  },
+  {
+   "method": "getmerkleproof",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:2242-2339",
+   "registration": "src/rpc/rawtransaction.cpp:2630",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txid",
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": false
+    }
+   ],
+   "result": {
+    "ref": "MerkleProof"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "a named block hash with no index entry",
+     "cite": "src/rpc/rawtransaction.cpp:278"
+    },
+    {
+     "code": -5,
+     "message": "Transaction not yet in block, -txindex is not enabled, or the block containing the transaction has been pruned",
+     "when": "no block named and the index has no entry",
+     "cite": "src/rpc/rawtransaction.cpp:334"
+    },
+    {
+     "code": -32603,
+     "message": "Block for this transaction not found",
+     "when": "GetBlockIndex found no block",
+     "cite": "src/rpc/rawtransaction.cpp:2290"
+    },
+    {
+     "code": -32603,
+     "message": "Can't read block from disk",
+     "when": "the block's file is pruned [X]",
+     "cite": "src/rpc/rawtransaction.cpp:2299"
+    },
+    {
+     "code": -5,
+     "message": "Transaction(s) not found in provided block",
+     "when": "the transaction is not in the block, or it is the only transaction of its block (an empty proof, Edge E1) [X]",
+     "cite": "src/rpc/rawtransaction.cpp:2306"
+    }
+   ],
+   "pruning": "a pruned block answers -32603 Can't read block from disk [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "helpers": [
+    "src/rpc/rawtransaction.cpp:265-345"
+   ]
+  },
+  {
+   "method": "getmerkleproof2",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:2342-2525",
+   "registration": "src/rpc/rawtransaction.cpp:2631",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txid",
+    "blockhash",
+    "includeFullTx",
+    "targetType",
+    "format"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true,
+     "note": "an empty string for the block found through the index"
+    },
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "includeFullTx",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    },
+    {
+     "name": "targetType",
+     "type": "string",
+     "required": false,
+     "note": "hash, header or merkleroot; default hash"
+    },
+    {
+     "name": "format",
+     "type": "string",
+     "required": false,
+     "note": "json; default json"
+    }
+   ],
+   "result": {
+    "ref": "MerkleProof2"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "a named block hash with no index entry",
+     "cite": "src/rpc/rawtransaction.cpp:278"
+    },
+    {
+     "code": -5,
+     "message": "Transaction not yet in block, -txindex is not enabled, or the block containing the transaction has been pruned",
+     "when": "no block named and the index has no entry",
+     "cite": "src/rpc/rawtransaction.cpp:334"
+    },
+    {
+     "code": -1,
+     "message": "Number of inputs is <n>,  must be between 2 and 5",
+     "when": "fewer than 2 or more than 5 arguments",
+     "cite": "src/rpc/rawtransaction.cpp:2397"
+    },
+    {
+     "code": -32602,
+     "message": "targetType is '<s>',  must be 'hash', 'header' or 'merkleroot'",
+     "when": "an unknown target type [X]",
+     "cite": "src/rpc/rawtransaction.cpp:2423"
+    },
+    {
+     "code": -32602,
+     "message": "format is '<s>',  must be 'json'",
+     "when": "a format other than json",
+     "cite": "src/rpc/rawtransaction.cpp:2431"
+    },
+    {
+     "code": -32603,
+     "message": "Block for this transaction not found",
+     "when": "GetBlockIndex found no block",
+     "cite": "src/rpc/rawtransaction.cpp:2412"
+    },
+    {
+     "code": -32603,
+     "message": "Can't read block from disk",
+     "when": "the block's file is pruned",
+     "cite": "src/rpc/rawtransaction.cpp:2443"
+    },
+    {
+     "code": -5,
+     "message": "Transaction(s) not found in provided block",
+     "when": "as getmerkleproof, the one-transaction block included (Edge E1) [X]",
+     "cite": "src/rpc/rawtransaction.cpp:2450"
+    }
+   ],
+   "pruning": "as getmerkleproof",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "helpers": [
+    "src/rpc/rawtransaction.cpp:265-345"
+   ],
+   "note": "positional only: the handler reads blockhash from params[0] and txid from params[1], the registration names them txid, blockhash (Finding R1) [X]"
+  },
+  {
+   "method": "getnetworkinfo",
+   "build": "record",
+   "source": "src/rpc/net.cpp:543-667",
+   "registration": "src/rpc/net.cpp:896",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "NetworkInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "timeoffset is nTimeOffset, moved only by five peer samples (src/timedata.cpp:74-82): 0 on an isolated instance under any mock clock [X]",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:281",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:895"
+   }
+  },
+  {
+   "method": "getnewaddress",
+   "build": "wallet",
+   "source": "src/wallet/rpcwallet.cpp:119-172",
+   "registration": "src/wallet/rpcwallet.cpp:3524",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "account"
+   ],
+   "args": [
+    {
+     "name": "account",
+     "type": "string",
+     "required": false,
+     "note": "deprecated"
+    }
+   ],
+   "result": "string",
+   "errors": [
+    {
+     "code": -12,
+     "message": "Error: Keypool ran out, please call keypoolrefill first",
+     "when": "no key left",
+     "cite": "src/wallet/rpcwallet.cpp:164"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "wallet",
+    "map": "services/rpc/Server.go:243",
+    "handler": "services/rpc/Server.go:405",
+    "answer": "-1 This implementation does not implement wallet commands",
+    "registered": "services/rpc/bsvjson/walletsvrcmds.go:660"
+   },
+   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+  },
+  {
+   "method": "getorphaninfo",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2675-2693",
+   "registration": "src/rpc/blockchain.cpp:3833",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "OrphanInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "getpeerinfo",
+   "build": "record",
+   "source": "src/rpc/net.cpp:69-280",
+   "registration": "src/rpc/net.cpp:891",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "array": "json"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:1203",
+    "map": "services/rpc/Server.go:193",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:898"
+   },
+   "note": "an empty array on an isolated instance [X]; the per-peer fields are cited, not typed (no isolated reply carries one)"
+  },
+  {
+   "method": "getrawmempool",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:440-500",
+   "registration": "src/rpc/blockchain.cpp:3810",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "verbose"
+   ],
+   "args": [
+    {
+     "name": "verbose",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    }
+   ],
+   "result": {
+    "ref": "RawMempool"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "the entries' time is the acceptance time, GetTime() at submission: the mock clock when set [X]",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:1353",
+    "map": "services/rpc/Server.go:194",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:899"
+   },
+   "helpers": [
+    "src/rpc/blockchain.cpp:414-438",
+    "src/rpc/blockchain.cpp:378-412"
+   ]
+  },
+  {
+   "method": "getrawnonfinalmempool",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:502-557",
+   "registration": "src/rpc/blockchain.cpp:3811",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "array": "string"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "getrawtransaction",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:53-256",
+   "registration": "src/rpc/rawtransaction.cpp:2620",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txid",
+    "verbose"
+   ],
+   "args": [
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "verbose",
+     "type": "json",
+     "required": false,
+     "note": "a boolean or a number; default false"
+    }
+   ],
+   "result": {
+    "ref": "GetRawTransaction"
+   },
+   "errors": [
+    {
+     "code": -8,
+     "message": "txid must be of length 64 (not <n>)",
+     "when": "a txid that is not 64 hex characters",
+     "cite": "src/rpc/server.cpp:155"
+    },
+    {
+     "code": -8,
+     "message": "txid must be hexadecimal string (not '<s>') and length of it must be divisible by 2",
+     "when": "a txid that is not hex",
+     "cite": "src/rpc/server.cpp:151"
+    },
+    {
+     "code": -3,
+     "message": "Invalid type provided. Verbose parameter must be a boolean.",
+     "when": "a verbose neither number nor boolean",
+     "cite": "src/rpc/rawtransaction.cpp:189"
+    },
+    {
+     "code": -5,
+     "message": "No such mempool or blockchain transaction. If using -prune, the transaction may be in a pruned block. Use gettransaction for wallet transactions.",
+     "when": "not in the pool and not readable through the index (a pruned block included) [X]",
+     "cite": "src/rpc/rawtransaction.cpp:200"
+    }
+   ],
+   "pruning": "with -txindex the transaction is read from its block file: a pruned block answers -5 [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:559",
+    "map": "services/rpc/Server.go:195",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:900"
+   },
+   "helpers": [
+    "src/core_write.cpp:237-332"
+   ],
+   "note": "two definitions: the streaming entry and the writer it calls"
+  },
+  {
+   "method": "getreceivedbyaddress",
+   "build": "wallet",
+   "source": "src/wallet/rpcwallet.cpp:680-764",
+   "registration": "src/wallet/rpcwallet.cpp:3527",
+   "ok_safe_mode": false,
+   "registered_names": [
+    "address",
+    "minconf"
+   ],
+   "args": [
+    {
+     "name": "address",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "minconf",
+     "type": "i64",
+     "required": false,
+     "note": "default 1"
+    }
+   ],
+   "result": "f64",
+   "errors": [
+    {
+     "code": -5,
+     "message": "Invalid Bitcoin address",
+     "when": "the address does not decode [X]",
+     "cite": "src/wallet/rpcwallet.cpp:724"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "wallet",
+    "map": "services/rpc/Server.go:246",
+    "handler": "services/rpc/Server.go:405",
+    "answer": "-1 This implementation does not implement wallet commands",
+    "registered": "services/rpc/bsvjson/walletsvrcmds.go:663"
+   },
+   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+  },
+  {
+   "method": "getsafemodeinfo",
+   "build": "record",
+   "source": "src/rpc/safe_mode.cpp:97-196",
+   "registration": "src/rpc/safe_mode.cpp:206",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "SafeModeInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "timeutc is std::time(nullptr), the wall clock: under a mock clock it differs from every block-derived time [X]",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "helpers": [
+    "src/safe_mode.cpp:450-553"
+   ],
+   "note": "safemodeenabled is the fork-driven level; -testsafemode refuses the okSafeMode-false handlers while this answers false (Edge E2) [X]"
+  },
+  {
+   "method": "gettransaction",
+   "build": "wallet",
+   "source": "src/wallet/rpcwallet.cpp:2061-2187",
+   "registration": "src/wallet/rpcwallet.cpp:3528",
+   "ok_safe_mode": false,
+   "registered_names": [
+    "txid",
+    "include_watchonly"
+   ],
+   "args": [
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "include_watchonly",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    }
+   ],
+   "result": {
+    "ref": "WalletTransaction"
+   },
+   "errors": [
+    {
+     "code": -5,
+     "message": "Invalid or non-wallet transaction id",
+     "when": "the wallet holds no such transaction [X]",
+     "cite": "src/wallet/rpcwallet.cpp:2160"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "wallet",
+    "map": "services/rpc/Server.go:247",
+    "handler": "services/rpc/Server.go:405",
+    "answer": "-1 This implementation does not implement wallet commands",
+    "registered": "services/rpc/bsvjson/walletsvrcmds.go:664"
+   },
+   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+  },
+  {
+   "method": "gettxout",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:1923-2028",
+   "registration": "src/rpc/blockchain.cpp:3812",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txid",
+    "n",
+    "include_mempool"
+   ],
+   "args": [
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "n",
+     "type": "i64",
+     "required": true
+    },
+    {
+     "name": "include_mempool",
+     "type": "bool",
+     "required": false,
+     "note": "default true"
+    }
+   ],
+   "result": {
+    "nullable": {
+     "ref": "Coin"
+    }
+   },
+   "errors": [
+    {
+     "code": -20,
+     "message": "Best block not in index",
+     "when": "the coins view's best block has no index entry",
+     "cite": "src/rpc/blockchain.cpp:1987"
+    }
+   ],
+   "pruning": "reads the UTXO set, not block files: a pruned block's unspent coin still answers [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:196",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:901"
+   },
+   "note": "null, never an error, for an absent or spent output; with include_mempool a pool spend makes it null, a pool output answers with confirmations 0"
+  },
+  {
+   "method": "gettxoutsetinfo",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:1877-1921",
+   "registration": "src/rpc/blockchain.cpp:3814",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "UtxoSetInfo"
+   },
+   "errors": [
+    {
+     "code": -32603,
+     "message": "Unable to read UTXO set",
+     "when": "GetUTXOStats failed",
+     "cite": "src/rpc/blockchain.cpp:1918"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "wallet",
+    "map": "services/rpc/Server.go:248",
+    "handler": "services/rpc/Server.go:405",
+    "answer": "-1 This implementation does not implement wallet commands",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:903"
+   }
+  },
+  {
+   "method": "getwalletinfo",
+   "build": "wallet",
+   "source": "src/wallet/rpcwallet.cpp:2798-2878",
+   "registration": "src/wallet/rpcwallet.cpp:3530",
+   "ok_safe_mode": false,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "WalletInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "wallet",
+    "map": "services/rpc/Server.go:250",
+    "handler": "services/rpc/Server.go:405",
+    "answer": "-1 This implementation does not implement wallet commands",
+    "registered": "services/rpc/bsvjson/walletsvrcmds.go:665"
+   },
+   "note": "the wallet build only (~/bsv/targets/sv-v1.2.3-wallet); -32601 Method not found on the node of record [X]"
+  },
+  {
+   "method": "ignoresafemodeforblock",
+   "build": "record",
+   "source": "src/rpc/safe_mode.cpp:12-51",
+   "registration": "src/rpc/safe_mode.cpp:204",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -32602,
+     "message": "Unknown block!\\n",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/safe_mode.cpp:37"
+    },
+    {
+     "code": -32602,
+     "message": "Can not ignore a block on the main chain!\\n",
+     "when": "the block is on the active chain [X]",
+     "cite": "src/rpc/safe_mode.cpp:42"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "invalidateblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2732-2768",
+   "registration": "src/rpc/blockchain.cpp:3822",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:2755"
+    },
+    {
+     "code": -20,
+     "message": "<reject reason>",
+     "when": "InvalidateBlock left the state invalid",
+     "cite": "src/rpc/blockchain.cpp:2764"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:1862",
+    "map": "services/rpc/Server.go:201",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:906"
+   }
+  },
+  {
+   "method": "preciousblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2695-2730",
+   "registration": "src/rpc/blockchain.cpp:3817",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:2719"
+    },
+    {
+     "code": -20,
+     "message": "<reject reason>",
+     "when": "PreciousBlock left the state invalid",
+     "cite": "src/rpc/blockchain.cpp:2726"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:284",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:908"
+   }
+  },
+  {
+   "method": "prioritisetransaction",
+   "build": "record",
+   "source": "src/rpc/mining.cpp:312-344",
+   "registration": "src/rpc/mining.cpp:963",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "txid",
+    "priority_delta",
+    "fee_delta"
+   ],
+   "args": [
+    {
+     "name": "txid",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "priority_delta",
+     "type": "f64",
+     "required": true,
+     "note": "must be 0"
+    },
+    {
+     "name": "fee_delta",
+     "type": "i64",
+     "required": true,
+     "note": "satoshis"
+    }
+   ],
+   "result": "bool",
+   "errors": [
+    {
+     "code": -8,
+     "message": "Dummy parameter must be set to zero.",
+     "when": "priority_delta not 0 [X]",
+     "cite": "src/rpc/mining.cpp:338"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "pruneblockchain",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:1810-1875",
+   "registration": "src/rpc/blockchain.cpp:3815",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "height"
+   ],
+   "args": [
+    {
+     "name": "height",
+     "type": "i64",
+     "required": true,
+     "note": "a height, or a block time above 1000000000"
+    }
+   ],
+   "result": "u64",
+   "errors": [
+    {
+     "code": -1,
+     "message": "Cannot prune blocks because node is not in prune mode.",
+     "when": "the node runs without -prune",
+     "cite": "src/rpc/blockchain.cpp:1829"
+    },
+    {
+     "code": -8,
+     "message": "Negative block height.",
+     "when": "height below 0",
+     "cite": "src/rpc/blockchain.cpp:1834"
+    },
+    {
+     "code": -8,
+     "message": "Could not find block with at least the specified timestamp.",
+     "when": "a timestamp past the chain",
+     "cite": "src/rpc/blockchain.cpp:1851"
+    },
+    {
+     "code": -1,
+     "message": "Blockchain is too short for pruning.",
+     "when": "the tip below the chain's PruneAfterHeight (regtest 1000, src/chainparams.cpp:1509)",
+     "cite": "src/rpc/blockchain.cpp:1862"
+    },
+    {
+     "code": -8,
+     "message": "Blockchain is shorter than the attempted prune height.",
+     "when": "height above the tip",
+     "cite": "src/rpc/blockchain.cpp:1866"
+    }
+   ],
+   "pruning": "the handler itself: -prune=1 (manual) enables it (src/init.cpp:2821-2826); a height inside the last GetMinBlocksToKeep (288) is clamped to tip - 288 and that height is the answer [X]",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "queryBlacklist",
+   "build": "record",
+   "source": "src/rpc/frozentxo_rpc.cpp:404-499",
+   "registration": "src/rpc/frozentxo_rpc.cpp:906",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": {
+    "ref": "Blacklist"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "queryConfiscationTxidWhitelist",
+   "build": "record",
+   "source": "src/rpc/frozentxo_rpc.cpp:799-894",
+   "registration": "src/rpc/frozentxo_rpc.cpp:910",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "verbose"
+   ],
+   "args": [
+    {
+     "name": "verbose",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    }
+   ],
+   "result": {
+    "ref": "Whitelist"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "reconsiderblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2770-2818",
+   "registration": "src/rpc/blockchain.cpp:3823",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:2793"
+    },
+    {
+     "code": -20,
+     "message": "<reject reason>",
+     "when": "ActivateBestChain reported an error",
+     "cite": "src/rpc/blockchain.cpp:2814"
+    }
+   ],
+   "pruning": "re-activation reads block data: a pruned block cannot be reconnected (not run)",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:1919",
+    "map": "services/rpc/Server.go:205",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:909"
+   }
+  },
+  {
+   "method": "reconsidersafemodeforblock",
+   "build": "record",
+   "source": "src/rpc/safe_mode.cpp:53-95",
+   "registration": "src/rpc/safe_mode.cpp:205",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -32602,
+     "message": "Unknown block!\\n",
+     "when": "the hash names no block index entry [X]",
+     "cite": "src/rpc/safe_mode.cpp:77"
+    },
+    {
+     "code": -32602,
+     "message": "Can not reconsider a block on the main chain!\\n",
+     "when": "the block is on the active chain",
+     "cite": "src/rpc/safe_mode.cpp:82"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "sendrawtransaction",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:1530-1700",
+   "registration": "src/rpc/rawtransaction.cpp:2624",
+   "ok_safe_mode": false,
+   "registered_names": [
+    "hexstring",
+    "allowhighfees",
+    "dontcheckfee"
+   ],
+   "args": [
+    {
+     "name": "hexstring",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "allowhighfees",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    },
+    {
+     "name": "dontcheckfee",
+     "type": "bool",
+     "required": false,
+     "note": "default false"
+    }
+   ],
+   "result": "string",
+   "errors": [
+    {
+     "code": -3,
+     "message": "Expected type string, got <type>",
+     "when": "an argument of the wrong JSON type (RPCTypeCheck)",
+     "cite": "src/rpc/server.cpp:85"
+    },
+    {
+     "code": -22,
+     "message": "TX decode failed",
+     "when": "the hex is not a transaction",
+     "cite": "src/rpc/rawtransaction.cpp:1565"
+    },
+    {
+     "code": -31,
+     "message": "Error: Peer-to-peer functionality missing or disabled",
+     "when": "no connection manager",
+     "cite": "src/rpc/rawtransaction.cpp:1583"
+    },
+    {
+     "code": -25,
+     "message": "Missing inputs",
+     "when": "an input is neither in the UTXO set nor in the pool",
+     "cite": "src/rpc/rawtransaction.cpp:1638"
+    },
+    {
+     "code": -26,
+     "message": "<reject code>: <reject reason>",
+     "when": "validation rejected the transaction",
+     "cite": "src/rpc/rawtransaction.cpp:1642"
+    },
+    {
+     "code": -25,
+     "message": "<reject reason>",
+     "when": "any other refusal",
+     "cite": "src/rpc/rawtransaction.cpp:1648"
+    },
+    {
+     "code": -27,
+     "message": "Transaction already in the mempool",
+     "when": "already in the pool or the non-final pool [X]",
+     "cite": "src/rpc/rawtransaction.cpp:1656"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "the acceptance time is GetTime() (src/utiltime.cpp:23-29): the mock clock when set",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:830",
+    "map": "services/rpc/Server.go:207",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:911"
+   }
+  },
+  {
+   "method": "sendrawtransactions",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:1798-2240",
+   "registration": "src/rpc/rawtransaction.cpp:2625",
+   "ok_safe_mode": false,
+   "registered_names": [
+    "inputs"
+   ],
+   "args": [
+    {
+     "name": "inputs",
+     "type": {
+      "array": "json"
+     },
+     "required": true,
+     "note": "objects: hex, allowhighfees, dontcheckfee, listunconfirmedancestors, config"
+    }
+   ],
+   "result": {
+    "ref": "SendRawTransactions"
+   },
+   "errors": [
+    {
+     "code": -8,
+     "message": "Invalid parameter: An empty json array of objects",
+     "when": "an empty array",
+     "cite": "src/rpc/rawtransaction.cpp:1941"
+    },
+    {
+     "code": -8,
+     "message": "Invalid parameter: Missing the hex string of the raw transaction",
+     "when": "an object without hex",
+     "cite": "src/rpc/rawtransaction.cpp:2004"
+    },
+    {
+     "code": -22,
+     "message": "TX decode failed",
+     "when": "an undecodable hex",
+     "cite": "src/rpc/rawtransaction.cpp:2009"
+    },
+    {
+     "code": -8,
+     "message": "listunconfirmedancestors: Invalid value",
+     "when": "a listunconfirmedancestors that is not a boolean",
+     "cite": "src/rpc/rawtransaction.cpp:2073"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "the acceptance time is GetTime(): the mock clock when set",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "note": "answers 200 with the refused transactions listed (missing inputs read reject_code 16 missing-inputs, unlike sendrawtransaction's -25); accepted ones are never listed"
+  },
+  {
+   "method": "setban",
+   "build": "record",
+   "source": "src/rpc/net.cpp:669-757",
+   "registration": "src/rpc/net.cpp:897",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "subnet",
+    "command",
+    "bantime",
+    "absolute"
+   ],
+   "args": [
+    {
+     "name": "subnet",
+     "type": "string",
+     "required": true,
+     "note": "an IP, or a subnet when it holds a '/'"
+    },
+    {
+     "name": "command",
+     "type": "string",
+     "required": true,
+     "note": "add or remove; any other word answers the help text"
+    },
+    {
+     "name": "bantime",
+     "type": "i64",
+     "required": false,
+     "note": "seconds, or a timestamp when absolute; 0 or absent takes -bantime (default 86400, src/net/net.cpp:545-549)"
+    },
+    {
+     "name": "absolute",
+     "type": "bool",
+     "required": false
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -31,
+     "message": "Error: Peer-to-peer functionality missing or disabled",
+     "when": "no connection manager",
+     "cite": "src/rpc/net.cpp:702"
+    },
+    {
+     "code": -30,
+     "message": "Error: Invalid IP/Subnet",
+     "when": "the subnet argument does not parse",
+     "cite": "src/rpc/net.cpp:723"
+    },
+    {
+     "code": -23,
+     "message": "Error: IP/Subnet already banned",
+     "when": "add on an address already banned",
+     "cite": "src/rpc/net.cpp:730"
+    },
+    {
+     "code": -30,
+     "message": "Error: Unban failed. Requested address/subnet was not previously banned.",
+     "when": "remove on an address not banned",
+     "cite": "src/rpc/net.cpp:752"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "the ban's start and end read GetTime() (src/net/net.cpp:543-549), so a mock time moves them",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/handlers.go:2447",
+    "map": "services/rpc/Server.go:208",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:912"
+   },
+   "note": "not called by the #66 runner; the row stands for #88's alert-ban divergence (#154): Teranode serves the operator's ban by RPC beside its alert path"
+  },
+  {
+   "method": "setmocktime",
+   "build": "record",
+   "source": "src/rpc/misc.cpp:980-1008",
+   "registration": "src/rpc/misc.cpp:1339",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "timestamp"
+   ],
+   "args": [
+    {
+     "name": "timestamp",
+     "type": "i64",
+     "required": true,
+     "note": "0 restores the wall clock"
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -1,
+     "message": "setmocktime for regression testing (-regtest mode) only",
+     "when": "a chain that does not mine on demand",
+     "cite": "src/rpc/misc.cpp:994"
+    },
+    {
+     "code": -3,
+     "message": "Expected type number, got <type>",
+     "when": "a timestamp that is not a number [X]",
+     "cite": "src/rpc/server.cpp:85"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "sets nMockTime (src/utiltime.cpp:31-33); GetTime() answers it (src/utiltime.cpp:23-29) while GetTimeMillis, GetTimeMicros and std::time do not move; a relaunch clears it",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "softrejectblock",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2820-2892",
+   "registration": "src/rpc/blockchain.cpp:3824",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "blockhash",
+    "numblocks"
+   ],
+   "args": [
+    {
+     "name": "blockhash",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "numblocks",
+     "type": "i64",
+     "required": true
+    }
+   ],
+   "result": "null",
+   "errors": [
+    {
+     "code": -8,
+     "message": "Parameter numblocks must not be negative",
+     "when": "numblocks below 0",
+     "cite": "src/rpc/blockchain.cpp:2863"
+    },
+    {
+     "code": -5,
+     "message": "Block not found",
+     "when": "the hash names no block index entry",
+     "cite": "src/rpc/blockchain.cpp:2874"
+    },
+    {
+     "code": -1,
+     "message": "Error marking block as soft rejected",
+     "when": "SoftRejectBlockNL refused (the reasons are in the node's log)",
+     "cite": "src/rpc/blockchain.cpp:2882"
+    },
+    {
+     "code": -20,
+     "message": "<reject reason>",
+     "when": "the reorg away from the block failed",
+     "cite": "src/rpc/blockchain.cpp:2888"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "stop",
+   "build": "record",
+   "source": "src/rpc/server.cpp:265-278",
+   "registration": "src/rpc/server.cpp:303",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": "string",
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "implemented",
+    "handler": "services/rpc/Server.go:582",
+    "map": "services/rpc/Server.go:210",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:917"
+   },
+   "note": "answers Bitcoin server stopping, then shuts down"
+  },
+  {
+   "method": "submitblock",
+   "build": "record",
+   "source": "src/rpc/mining.cpp:916-953",
+   "registration": "src/rpc/mining.cpp:966",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "hexdata",
+    "parameters"
+   ],
+   "args": [
+    {
+     "name": "hexdata",
+     "type": "string",
+     "required": true
+    },
+    {
+     "name": "parameters",
+     "type": "json",
+     "required": false,
+     "note": "ignored"
+    }
+   ],
+   "result": {
+    "nullable": "string"
+   },
+   "errors": [
+    {
+     "code": -22,
+     "message": "Block decode failed",
+     "when": "the hex is not a block [X]",
+     "cite": "src/rpc/mining.cpp:944"
+    },
+    {
+     "code": -22,
+     "message": "Block does not start with a coinbase",
+     "when": "no transaction, or transaction 0 is not a coinbase",
+     "cite": "src/rpc/mining.cpp:838"
+    },
+    {
+     "code": -26,
+     "message": "bad-txns-vout-p2sh",
+     "when": "the coinbase pays to P2SH",
+     "cite": "src/rpc/mining.cpp:842"
+    },
+    {
+     "code": -25,
+     "message": "<reject reason>",
+     "when": "validation reported an error state (not an invalid block)",
+     "cite": "src/rpc/mining.cpp:356"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:211",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:918"
+   },
+   "helpers": [
+    "src/rpc/mining.cpp:830-876",
+    "src/rpc/mining.cpp:348-368"
+   ],
+   "note": "an invalid block is a RESULT string, never an error: null when accepted, else the reject reason, rejected, duplicate, duplicate-invalid, duplicate-inconclusive or inconclusive [X]"
+  },
+  {
+   "method": "validateaddress",
+   "build": "record",
+   "source": "src/rpc/misc.cpp:206-300",
+   "registration": "src/rpc/misc.cpp:1330",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "address"
+   ],
+   "args": [
+    {
+     "name": "address",
+     "type": "string",
+     "required": true
+    }
+   ],
+   "result": {
+    "ref": "AddressInfo"
+   },
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:213",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:921"
+   },
+   "note": "an invalid address is the result {isvalid: false}, never an error [X]; the wallet fields only on the wallet build"
+  },
+  {
+   "method": "verifychain",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:2321-2354",
+   "registration": "src/rpc/blockchain.cpp:3816",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "checklevel",
+    "nblocks"
+   ],
+   "args": [
+    {
+     "name": "checklevel",
+     "type": "i64",
+     "required": false,
+     "note": "default -checklevel"
+    },
+    {
+     "name": "nblocks",
+     "type": "i64",
+     "required": false,
+     "note": "default -checkblocks"
+    }
+   ],
+   "result": "bool",
+   "errors": [],
+   "pruning": "reads block files for its depth: pruned blocks inside the depth are not checkable (not run)",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "unimplemented",
+    "map": "services/rpc/Server.go:214",
+    "handler": "services/rpc/Server.go:389",
+    "answer": "-1 Command unimplemented",
+    "registered": "services/rpc/bsvjson/chainsvrcmds.go:922"
+   }
+  },
+  {
+   "method": "verifymerkleproof",
+   "build": "record",
+   "source": "src/rpc/rawtransaction.cpp:2527-2612",
+   "registration": "src/rpc/rawtransaction.cpp:2632",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "proof",
+    "txid"
+   ],
+   "args": [
+    {
+     "name": "proof",
+     "type": "json",
+     "required": true,
+     "note": "getmerkleproof's object"
+    },
+    {
+     "name": "txid",
+     "type": "string",
+     "required": false
+    }
+   ],
+   "result": "bool",
+   "errors": [
+    {
+     "code": -8,
+     "message": "Invalid parameter, argument 1 must be non-null",
+     "when": "a null proof [X]",
+     "cite": "src/rpc/rawtransaction.cpp:2559"
+    },
+    {
+     "code": -8,
+     "message": "\"flags\" must be a numeric value",
+     "when": "flags not a number",
+     "cite": "src/rpc/rawtransaction.cpp:2567"
+    },
+    {
+     "code": -8,
+     "message": "verifymerkleproof only supports \"flags\" with value 2",
+     "when": "flags other than 2",
+     "cite": "src/rpc/rawtransaction.cpp:2571"
+    },
+    {
+     "code": -8,
+     "message": "\"index\" must be a positive value",
+     "when": "a negative index",
+     "cite": "src/rpc/rawtransaction.cpp:2580"
+    },
+    {
+     "code": -8,
+     "message": "\"target\" must be a block header Json object",
+     "when": "target not an object",
+     "cite": "src/rpc/rawtransaction.cpp:2586"
+    },
+    {
+     "code": -8,
+     "message": "\"nodes\" must be a Json array",
+     "when": "nodes not an array",
+     "cite": "src/rpc/rawtransaction.cpp:2592"
+    }
+   ],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "note": "false, never an error, for a proof that does not reach the target's merkle root"
+  },
+  {
+   "method": "verifyscript",
+   "build": "record",
+   "source": "src/rpc/misc.cpp:506-915",
+   "registration": "src/rpc/misc.cpp:1333",
+   "ok_safe_mode": true,
+   "registered_names": [
+    "scripts",
+    "stopOnFirstInvalid",
+    "totalTimeout"
+   ],
+   "args": [
+    {
+     "name": "scripts",
+     "type": {
+      "array": "json"
+     },
+     "required": true,
+     "note": "objects: tx, n, flags, reportflags, prevblockhash, txo"
+    },
+    {
+     "name": "stopOnFirstInvalid",
+     "type": "bool",
+     "required": false,
+     "note": "default true"
+    },
+    {
+     "name": "totalTimeout",
+     "type": "i64",
+     "required": false,
+     "note": "milliseconds, default 100"
+    }
+   ],
+   "result": {
+    "array": {
+     "ref": "ScriptVerdict"
+    }
+   },
+   "errors": [
+    {
+     "code": -8,
+     "message": "Missing required argument (scripts)!",
+     "when": "no argument",
+     "cite": "src/rpc/misc.cpp:598"
+    },
+    {
+     "code": -8,
+     "message": "Too many arguments (>3)!",
+     "when": "more than three",
+     "cite": "src/rpc/misc.cpp:602"
+    },
+    {
+     "code": -8,
+     "message": "Invalid value for totalTimeout argument!",
+     "when": "a negative timeout",
+     "cite": "src/rpc/misc.cpp:623"
+    },
+    {
+     "code": -22,
+     "message": "TX decode failed for scripts[<i>].tx!",
+     "when": "an undecodable tx [X]",
+     "cite": "src/rpc/misc.cpp:683"
+    },
+    {
+     "code": -8,
+     "message": "Unable to find TXO spent by transaction scripts[<i>].tx!",
+     "when": "no txo given and none in the UTXO set or pool",
+     "cite": "src/rpc/misc.cpp:796"
+    }
+   ],
+   "pruning": "finds the spent output through the UTXO set and the pool, not block files",
+   "mock_time": "the budget is std::chrono::steady_clock: the mock clock never moves it",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   }
+  },
+  {
+   "method": "waitforptvcompletion",
+   "build": "record",
+   "source": "src/rpc/blockchain.cpp:3769-3786",
+   "registration": "src/rpc/blockchain.cpp:3834",
+   "ok_safe_mode": true,
+   "registered_names": [],
+   "args": [],
+   "result": "null",
+   "errors": [],
+   "pruning": "no block data read: unchanged by pruning",
+   "mock_time": "no clock read in the handler",
+   "teranode": {
+    "class": "absent",
+    "map": "services/rpc/Server.go:991",
+    "parser": "services/rpc/Server.go:1061-1065",
+    "answer": "-32601 Method not found"
+   },
+   "note": "blocks until the validator's queue is empty; no timeout argument"
+  }
+ ]
+}

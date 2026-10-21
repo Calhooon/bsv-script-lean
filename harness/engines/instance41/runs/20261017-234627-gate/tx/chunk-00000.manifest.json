@@ -1,0 +1,541 @@
+{
+  "artifacts_sha256": {
+    "answers.jsonl": "569e5b197a594837a453dfdebe0db9f039fb8c509ddd9e9b9a355f60d7c0aa1f",
+    "funding.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.jsonl": "965a892da06b878b384d07fa8d91c6a9bd1ecc5a8678636f9225ca4df26ac480",
+    "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corpus": {
+    "manifest_count": 40,
+    "name": "tx",
+    "path": "corpus/tx/tx.jsonl",
+    "run_count": 40,
+    "run_from": 0,
+    "sha256": "9c7746f6b6fff19fd39df47231ec0ee91caefe3843a105ebca96caa6784e5c16"
+  },
+  "counts": {
+    "block": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 40,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 40,
+      "unfundable": 0
+    },
+    "mempool": {
+      "agreeing": 0,
+      "disagreeing": 0,
+      "entries": 40,
+      "judged": 0,
+      "no_reference": 0,
+      "undecided": 40,
+      "unfundable": 0
+    }
+  },
+  "final_tip": {
+    "bestblockhash": "4301f6a374ad9c68524e48aaa7c01b3b5cd55f57775d3e1bc9e6e2d6f594bb62",
+    "blocks": 229,
+    "chain_work": "00000000000000000000000000000000000000000000000000000000000001cc",
+    "header_median_time_past": 0,
+    "mediantime": 1792293205,
+    "time": 1792294000
+  },
+  "funding_wall": null,
+  "initial_tip": {
+    "bestblockhash": "7ccc5a5e477b9f58a33fd71c8b0ced0c398729a9b631908bfb7b22c50227a40d",
+    "blocks": 228,
+    "chain_work": "00000000000000000000000000000000000000000000000000000000000001ca",
+    "header_median_time_past": 0,
+    "mediantime": 1792293204,
+    "time": 1792293651
+  },
+  "instance": {
+    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+    "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+    "host": "box",
+    "listeners": [
+      "127.0.0.1:8000",
+      "127.0.0.1:8081",
+      "127.0.0.1:8082",
+      "127.0.0.1:8084",
+      "127.0.0.1:8085",
+      "127.0.0.1:8086",
+      "127.0.0.1:8087",
+      "127.0.0.1:8088",
+      "127.0.0.1:8090",
+      "127.0.0.1:8833",
+      "127.0.0.1:8834",
+      "127.0.0.1:9091",
+      "127.0.0.1:9292"
+    ],
+    "native_client_sha256": "6bd3536ca88028aa4c2338d558b6c5cf714054d609367ba2f5f7d3fd1ae7c251",
+    "pid": 43864,
+    "rpc": "http://127.0.0.1:9292",
+    "settings": {
+      "environment": {
+        "DATADIR": "~/bsv/targets/spec-teranode/data",
+        "GOMAXPROCS": "4",
+        "GOMEMLIMIT": "6GiB",
+        "HOME": "~",
+        "LC_ALL": "C",
+        "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+        "SETTINGS_CONTEXT": "test",
+        "SETTINGS_ENV_FILE": "/dev/null",
+        "TMPDIR": "~/bsv/targets/spec-teranode/data/runtime/tmp"
+      },
+      "files": {
+        "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
+        "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
+        "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+      },
+      "services": [
+        "-all=0",
+        "-blockchain=1",
+        "-subtreevalidation=1",
+        "-blockvalidation=1",
+        "-blockassembly=1",
+        "-asset=1",
+        "-propagation=1",
+        "-rpc=1",
+        "-p2p=0",
+        "-alert=0",
+        "-legacy=0",
+        "-validator=1"
+      ]
+    },
+    "settings_hash": "133d2473bdbbfe199b39f7e586a80c37eed0936b952749759f616593bed8ce88",
+    "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
+    "tag": "v0.16.0",
+    "validator": "127.0.0.1:8081"
+  },
+  "mapping": {
+    "basis": "tracker comment 5853443740; go-chaincfg v1.6.2 params.go:276-277 (mainnet), 463,475-476 (regtest)",
+    "funding_targets": {
+      "post-chronicle": "200 or a later tip of the same era",
+      "post-genesis": "next available height, 100 through 198",
+      "pre-genesis": "none: no coinbase output matures below height 100; undecided"
+    },
+    "mainnet": {
+      "chronicle": 943816,
+      "genesis": 620538
+    },
+    "outpoints": "rebound, locking scripts and values preserved; signature and absolute-height/time rows excluded",
+    "regtest": {
+      "chronicle": 200,
+      "coinbase_maturity": 100,
+      "genesis": 100
+    },
+    "spend_height": "confirmed funding height + 1; actual chain tip + 1"
+  },
+  "paths": {
+    "block": "node ValidatorAPI.ValidateTransaction, SkipPolicyChecks=true, InBlock=true, parents read from its store; full block-wrapper acceptance is not inferred",
+    "mempool": "node sendrawtransaction under its recorded test settings"
+  },
+  "provenance": "synthetic seed corpus; node at the tagged pin on the local private chain; witnesses are unclassified findings",
+  "rpc_calls": 11,
+  "undecided": [
+    {
+      "id": "tx-00001",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00001",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00002",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00002",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00003",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00003",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00004",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00004",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00005",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00005",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00006",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00006",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00007",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00007",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00008",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00008",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00009",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00009",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00010",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00010",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00011",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00011",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00012",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00012",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00013",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00013",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00014",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00014",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00015",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00015",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00016",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00016",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00017",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00017",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00018",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00018",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00019",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00019",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00020",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00020",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00028",
+      "path": "block",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00028",
+      "path": "mempool",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00029",
+      "path": "block",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00029",
+      "path": "mempool",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00030",
+      "path": "block",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00030",
+      "path": "mempool",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00031",
+      "path": "block",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00031",
+      "path": "mempool",
+      "reason": "a coinbase-shaped entry is judged as a block's coinbase; the instance's block path validates a transaction, and submitblock is unimplemented at the pin (services/rpc/Server.go:211)"
+    },
+    {
+      "id": "tx-00037",
+      "path": "block",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00037",
+      "path": "mempool",
+      "reason": "absolute locktime or sequence cannot be rebased without changing the witness (comment 5853443740)"
+    },
+    {
+      "id": "tx-00032",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00032",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00033",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00033",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00034",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00034",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00035",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00035",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00036",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00036",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00038",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00038",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00039",
+      "path": "block",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00039",
+      "path": "mempool",
+      "reason": "era 0: no coinbase output matures below regtest Genesis height 100 (go-chaincfg v1.6.2 params.go:463,475)"
+    },
+    {
+      "id": "tx-00021",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00021",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00022",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00022",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00023",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00023",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00024",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00024",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00025",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00025",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00026",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00026",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00027",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00027",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00040",
+      "path": "block",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    },
+    {
+      "id": "tx-00040",
+      "path": "mempool",
+      "reason": "current chain cannot place funding and spend in era 1 at or below height 199"
+    }
+  ],
+  "unfundable": [],
+  "wall_seconds": 0.99391375
+}

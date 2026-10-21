@@ -1,0 +1,314 @@
+# tools/export_withheld.txt: the paths the public edition withholds (bsv-script-lean #46;
+# NORTH-STAR constitution 05). Read by tools/export_public.py; one glob per line.
+# A line `## <group>: <ruling>` opens a group; every glob below it belongs to that group.
+# Glob form: a pattern ending in `/` withholds the directory under it; a pattern with a
+# `/` is matched against the whole path (`*` crosses `/`); a pattern without `/` is
+# matched against the file's own name in any directory.
+
+# Closed-set records and audit pages are listed by name in the discretion group below;
+# their contents are not read by this lane or by the export.
+
+## sealed-and-security: the disclosure material, withheld whole until its advisories publish (the owner's word of 2026-10-06 00:43 UTC; #34)
+docs/sealed/
+docs/security/
+
+## d135-records: the two records #34's checkbox names, withheld while the private advisory is unpublished (D135 (2))
+docs/records/20260927-170817-d135-sdk-classes-s4b.md
+docs/records/20260928-114104-d135-filing-s4b.md
+docs/records/20261006-104804-security-reports-filed.md
+docs/records/20261015-132006-security-reports-filed-102-s3.md
+docs/records/20261015-213309-security-reports-filed-66-t1-s3.md
+docs/records/20261015-214744-security-reports-filed-82-f4-s3.md
+
+## d8-node-team-discretion: the gobdk digest-variance hazard record (#147 item 4), disclosure material withheld until the owner routes it
+docs/records/20261017-000607-s4b-147-gobdk-digest-s4b.md
+docs/records/20261017-000607-s4b-147-gobdk-digest-s4b.json
+
+## process-pages: the private process pages (the seats, the plan, the hooks, the session state), kept by the owner's ruling C4 of 2026-10-06
+HANDOFF.md
+# the wound-down lane's pause inventories (2026-09-30), process material; JSON files the C3 transform would leave unreadable (the export lens of 2026-10-06)
+docs/records/20260930-022055-pause-s3-issues.json
+docs/records/20260930-022055-pause-s3-trees.json
+docs/BLOCKS-ARCHIVE.md
+docs/lanes/
+docs/OWNERS*
+docs/PLAN*.md
+PROMPT.md
+.claude/
+.cca/
+tools/hooks/
+tools/progress*
+tools/block.sh
+# the public tracker's filing script (#170), which reads the staged page withheld above (docs/PLAN*.md); process material for the public repository's start
+tools/flip_issues.py
+# records whose names or bodies carry the sibling programs' nicknames, cited by no exported page (the relens of 2026-10-21, N2)
+docs/records/20260927-125717-pool-lock-45-s1.md
+docs/records/20260927-165145-pool-lock-45b-s1.md
+docs/records/20261014-011818-relay-pass-s3.md
+docs/records/20260929-085123-codec-53-s1.md
+docs/records/20260929-013146-rejudge-48-s1.md
+docs/records/20260929-073117-ladder50-s1.md
+docs/records/20260929-035011-landing48-s1.txt
+
+## gate-patterns: the pointer gate's own pattern list and the rewrite list, which name what they search for or replace (ruling C4 keeps the pattern file; C2 adds the rewrite list)
+tools/export_pointers.txt
+tools/export_rewrite.txt
+# Rule policy and hash-pinned history spans name private withholding selections (#102).
+tools/export_withheld_rules.txt
+tools/export_withheld_history.json
+# the wording gate's own private-name pattern list (#33), read by tools/wording_gate.sh
+tools/wording_patterns.txt
+
+## host-private: the owner's host file, which names the mechanism check's vocabulary, the sibling trees' and the predecessor clones' paths and the shared helpers' paths (lane scrub-46, 2026-10-06, under constitution 05 and ruling C4's pattern-file reason; the captain's to confirm)
+tools/host_private.sh
+
+## d8-node-team-discretion: 2026-10-06, earlier reader material withheld from the public edition at the maintainers' request
+docs/audit/2026-10-06-confirming-lens-32-by-sol.md
+docs/audit/2026-09-27-lens-S1-by-S3.md
+docs/audit/2026-09-28-lens-S1-sitting4-by-S1.md
+docs/audit/2026-09-29-lens-S1-sitting7-by-S1.md
+docs/audit/2026-09-29-lens-S2-sitting8-by-S2.md
+docs/audit/2026-09-29-lens-S4b-sitting6-by-S4b.md
+docs/audit/2026-09-29-lens32-harness-partA-by-S2.md
+docs/audit/2026-09-29-lens32-harness-partB-by-S2.md
+docs/audit/2026-09-29-lens32-harness-partC-by-S2.md
+docs/audit/2026-09-29-lens32-harness-partD-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens-partA-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens-partB-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens-partC-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens-partD-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens2-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens3-by-S2.md
+docs/audit/2026-09-29-lens32-harness-relens4-by-S2.md
+docs/audit/2026-09-29-lens32-properties-partA-by-S2.md
+docs/audit/2026-09-29-lens32-properties-partB-by-S2.md
+docs/audit/2026-09-29-lens32-properties-partC-by-S2.md
+docs/audit/2026-09-29-lens32-properties-partD-by-S2.md
+docs/audit/2026-09-29-lens32-properties-relens-partA-by-S2.md
+docs/audit/2026-09-29-lens32-properties-relens-partB-by-S2.md
+docs/audit/2026-09-29-lens32-properties-relens-partC-by-S2.md
+docs/audit/2026-09-29-lens32-properties-relens-partD-by-S2.md
+docs/audit/2026-09-29-lens32-properties-relens2-by-S2.md
+docs/audit/2026-09-29-lens32-trust-partA-by-S1.md
+docs/audit/2026-09-29-lens32-trust-partB-by-S1.md
+docs/audit/2026-09-29-lens32-trust-partC-by-S1.md
+docs/audit/2026-09-29-lens32-trust-partD-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens-partA-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens-partB-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens-partC-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens-partD-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens2-partA-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens2-partB-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens2-partC-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens2-partD-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens3-partA-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens3-partB-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens3-partC-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens3-partD-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens4-partA-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens4-partB-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens4-partC-by-S1.md
+docs/audit/2026-09-29-lens32-trust-relens4-partD-by-S1.md
+docs/audit/2026-10-06-final-lens-32-harness-by-sol.md
+docs/audit/2026-10-06-final-lens-32-lean-a-by-sol.md
+docs/audit/2026-10-06-final-lens-32-lean-b-by-sol.md
+docs/records/20260924-040437-gen-first-cut-s3.md
+docs/records/20260924-114622-d72-rerecord-s3.md
+docs/records/20260926-205650-gobdk-shim-s4b.md
+docs/records/20260926-210253-gobdk-shim-s4b.md
+docs/records/20260926-211729-gobdk-hunk-d83c-s4b.md
+docs/records/20260927-031436-diff-s1.md
+docs/records/20260927-050002-release-bsv-rs-0.3.29-t3.md
+docs/records/20260927-120430-post-landing-s3.md
+docs/records/20260927-171920-official-v122-s3-runner.py.txt
+docs/records/20260927-171920-official-v122-s3.md
+docs/records/20260927-174629-diff-bsv-rs-0.3.30-s3.md
+docs/records/20260929-054539-recon-1-s4b.md
+docs/records/20260929-070435-lens32-s1-patch-s2-hexloop.patch.txt
+docs/records/20260929-070435-lens32-s1-patch-s2-lens32.patch.txt
+docs/records/20260929-070435-lens32-s1-patch-s2-notes.md
+docs/records/20260929-070435-lens32-s1-patch-s2.md
+docs/records/20260929-080537-lens32-s1-patch-v2-s2-groupY.py.txt
+docs/records/20260929-080537-lens32-s1-patch-v2-s2-hexloop.patch.txt
+docs/records/20260929-080537-lens32-s1-patch-v2-s2-lens32.patch.txt
+docs/records/20260929-080537-lens32-s1-patch-v2-s2.md
+docs/records/20260929-091340-lens32-s1-patch-v3-s2-groupZ.py.txt
+docs/records/20260929-091340-lens32-s1-patch-v3-s2-lens32.patch.txt
+docs/records/20260929-091340-lens32-s1-patch-v3-s2.md
+docs/records/20260929-093156-f1-int64-node-s3.md
+docs/records/20261014-192805-cross-read-int64-delta-s4b.md
+docs/records/20260929-093610-patch-v3-s1.md
+docs/records/20260929-120456-witness-census-lens32-s2-census.sh.txt
+docs/records/20260929-120456-witness-census-lens32-s2-logs.txt
+docs/records/20260929-120456-witness-census-lens32-s2.md
+docs/records/20260929-124515-trust32-patch-s2-apply.py.txt
+docs/records/20260929-124515-trust32-patch-s2-probe.lean.txt
+docs/records/20260929-124515-trust32-patch-s2.md
+docs/records/20260929-124515-trust32-patch-s2.patch.txt
+docs/records/20260929-124515-trust32-patch-s3-docs.patch.txt
+docs/records/20260929-124515-trust32-patch-s3-lean-apply.py.txt
+docs/records/20260929-124515-trust32-patch-s3-lean.patch.txt
+docs/records/20260929-124515-trust32-patch-s3-make.patch.txt
+docs/records/20260929-124515-trust32-patch-s3-rust.patch.txt
+docs/records/20260929-124515-trust32-patch-s3-tools.patch.txt
+docs/records/20260929-124515-trust32-patch-s3.md
+docs/records/20260929-140334-trust32-patch-s2-v2.md
+docs/records/20260929-140334-trust32-patch-s2-v2.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-docs.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-lean.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-make.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-rust.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-tests.txt
+docs/records/20260929-140334-trust32-patch-s3-v2-tools.patch.txt
+docs/records/20260929-140334-trust32-patch-s3-v2.md
+docs/records/20260929-140334-trust32-patch-s4b.md
+docs/records/20260929-140334-trust32-patch-s4b.patch.txt
+docs/records/20260929-151244-trust32-patch-s2-v3.md
+docs/records/20260929-151244-trust32-patch-s2-v3.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3-docs.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3-lean.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3-make.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3-rust.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3-tools.patch.txt
+docs/records/20260929-151244-trust32-patch-s3-v3.md
+docs/records/20260929-151244-trust32-patch-s4b-v2.md
+docs/records/20260929-151244-trust32-patch-s4b-v2.patch.txt
+docs/records/20260929-151244-trust32-patch-v3-tests.txt
+docs/records/20260929-151524-f1-mini-node-s3.md
+docs/records/20260929-152447-witness-census2-lens32-s2-census2.sh.txt
+docs/records/20260929-152447-witness-census2-lens32-s2-logs.txt
+docs/records/20260929-152447-witness-census2-lens32-s2.md
+docs/records/20260929-152956-lens32-3-s1-patch-s2.patch.txt
+docs/records/20260929-152956-lens32-3-s3-patch-s2-code.patch.txt
+docs/records/20260929-152956-lens32-3-s3-patch-s2-data.patch.txt
+docs/records/20260929-152956-lens32-3-s3-patch-s2-hashcheck.py.txt
+docs/records/20260929-152956-lens32-3-s3-patch-s2-s1rust.patch.txt
+docs/records/20260929-152956-lens32-3-s3-patch-s2.md
+docs/records/20260929-152956-lens32-3-s4b-patch-s2.md
+docs/records/20260929-152956-lens32-3-s4b-patch-s2.patch.txt
+docs/records/20260929-160241-f1-gobdk-teranode-s4b-arm64.json
+docs/records/20260929-160241-f1-gobdk-teranode-s4b-requests.jsonl
+docs/records/20260929-160241-f1-gobdk-teranode-s4b-x86-64.json
+docs/records/20260929-160241-f1-gobdk-teranode-s4b.md
+docs/records/20260929-163323-f1-landing-s4b.txt
+docs/records/20260929-174125-trust32-patch-s2-v4.md
+docs/records/20260929-174125-trust32-patch-s2-v4.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-docs.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-lean.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-make.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-rust-on-s2.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-rust.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4-tools.patch.txt
+docs/records/20260929-174125-trust32-patch-s3-v4.md
+docs/records/20260929-174125-trust32-patch-s4b-v3-on-s2.patch.txt
+docs/records/20260929-174125-trust32-patch-s4b-v3.md
+docs/records/20260929-174125-trust32-patch-s4b-v3.patch.txt
+docs/records/20260929-174125-trust32-patch-v4-tests.txt
+docs/records/20260929-181102-lens32-3-s3-patch-s2-v2-code.patch.txt
+docs/records/20260929-181102-lens32-3-s3-patch-s2-v2.md
+docs/records/20260929-181102-lens32-3-s4b-patch-s2-v2.md
+docs/records/20260929-181102-lens32-3-s4b-patch-s2-v2.patch.txt
+docs/records/20260929-212842-trust32-patch-s2-v5.md
+docs/records/20260929-212842-trust32-patch-s2-v5.patch.txt
+docs/records/20260929-212842-trust32-patch-s4b-v4.md
+docs/records/20260929-212842-trust32-patch-s4b-v4.patch.txt
+docs/records/20260929-212842-trust32-patch-v5-tests.txt
+docs/records/20260930-005734-d72-d178-design-s3.patch
+docs/records/20260930-005734-s2-sitting10.md
+docs/records/20261005-221333-owner-rulings-32.md
+docs/records/20261005-224016-owner-rulings-32-p.md
+docs/records/20261006-010651-r1-reading-public.md
+docs/records/20261006-011505-export-dry-run-46.md
+docs/records/20261006-012414-writeup-33.md
+docs/records/20261006-014603-r1-lean.md
+docs/records/20261006-022032-bump-bsv-rs-0.3.32-s3.md
+docs/records/20261006-034757-r1-harness-s2.md
+docs/records/20261006-035957-retally-32.md
+docs/records/20261006-054540-merge32-49.md
+docs/records/20261006-055420-scrub-46.md
+docs/records/20261006-101531-fix32-final-lean-b.md
+docs/records/20261006-101717-fix32-final-lean-a.md
+docs/records/20261006-102748-fix32-final-harness.md
+docs/records/20261006-140418-r1-lengths.md
+docs/records/20261006-140703-r1-x86-smoke.json
+docs/records/20261006-140703-r1-x86-smoke.txt
+docs/records/20261006-140828-r1-x86-full.json
+docs/records/20261006-140828-r1-x86-full.txt
+docs/records/20261006-141025-r1-x86.md
+docs/records/20261006-143018-recon-3.md
+docs/records/20261006-151048-repin-123-harness-citation-recuts.json
+docs/records/20261006-151048-repin-123-harness-lean-citations.txt
+docs/records/20261006-151048-repin-123-harness-specgen.patch
+docs/records/20261006-152845-repin-123-lean.md
+docs/records/20261006-164707-repin-123-harness.md
+docs/records/20261006-173640-repin-123-join.md
+docs/records/20261006-175601-cite-123.md
+docs/records/20261006-194850-withhold-reader.md
+docs/records/README.md
+eval/check_repin123.py
+harness/src/bin/gen.rs
+lean/BsvScript/Numbers/History.lean
+lean/Test/HistoryCheck.lean
+tools/modal_x86_node.py
+docs/records/20261006-185728-withhold-split.md
+docs/records/20261006-151048-repin-123-harness.md
+docs/records/20260929-122316-trust32-fixes-s1.md
+harness/engines/gobdk/modal_teranode.py
+
+## o2-attribution: the O-2 attribution (a reading of the reference's mempool disk writer): withheld under the node team's discretion rule
+docs/records/20261014-012252-s6-attr-o2-regtest-s3.md
+docs/records/20261014-012252-s6-attr-o2-regtest-s3.json
+docs/records/20261013-162245-s6-fix-pend2-regtest-s3.md
+
+# [D] 2026-10-14 #71: node-team discretion; Finding paragraphs survive the dated-record transform.
+docs/records/20261014-013947-s6-71-regtest-s3.md
+docs/records/20261014-013947-s6-71-regtest-s3.json
+# 2026-10-14, lane s6-70: the #70 record carries a Finding paragraph on the reference (queryBlacklist's reply encoding against its help text); the record and its receipt are withheld under this discretion.
+docs/records/20261014-032207-s6-70-regtest-s3.md
+docs/records/20261014-032207-s6-70-regtest-s3.json
+
+## maxtxfee-reading: the maxtxfee selector reading on two builds (a Finding about the reference's launch path and help text, #62/#121): withheld under the node team's discretion rule
+docs/records/20261014-045723-s6-wallet-rows-s3.md
+docs/records/20261014-050737-s6-wallet-rows-regtest-s3.md
+docs/records/20261014-050737-s6-wallet-rows-regtest-s3.json
+
+## s7-82-record: the #82 record and its receipt projection, withheld under the node team's discretion rule until routed
+docs/records/20261015-130232-s7-82-prune-s1.md
+docs/records/20261015-130232-s7-82-prune-s1.json
+
+## hz-152-teranode-signer-chain: #152 step 2 (the hazard rung): step 1's signer corpus submitted to a Teranode regtest instance and compared with the reference; disclosure material withheld until the owner routes it
+docs/records/20261017-031159-s4b-152-teranode-signer-chain-s4b.md
+docs/records/20261017-031159-s4b-152-teranode-signer-chain-s4b.json
+docs/records/20261017-031159-s4b-152-teranode-signer-chain-set.jsonl
+
+## hz-94-teranode-alert-path: #94's measured leg (the hazard rung): the alert path driven on a Teranode regtest instance beside the reference's frozen-TXO RPC path; disclosure material withheld until the owner routes it
+docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.md
+docs/records/20261017-170959-s4b-94-teranode-alert-path-s4b.json
+docs/records/20261017-170959-s4b-94-teranode-alert-path-ref.json
+docs/records/20261017-170959-s4b-94-teranode-alert-path-tera.json
+
+## hz-93-teranode-chain-reorg: #93's measured leg (the hazard rung): chain selection and reorg, the same blocks submitted to a fresh regtest reference and a fresh Teranode instance side by side; disclosure material withheld until the owner routes it
+docs/records/20261017-180732-s4b-93-teranode-chain-reorg-s4b.md
+docs/records/20261017-180732-s4b-93-teranode-chain-reorg-s4b.json
+
+## hz-92-teranode-lifetimes: #92's measured leg (the hazard rung): the record lifetimes driven on a Teranode regtest instance beside three reference instances; disclosure material withheld until the owner routes it
+docs/records/20261017-192745-s4b-92-teranode-lifetimes-s4b.md
+docs/records/20261017-192745-s4b-92-teranode-lifetimes-s4b.json
+
+## hz-94-teranode-store-half: #94's store half and #93's alert row (the hazard rung): the store transitions driven on a Teranode regtest instance through the signed-alert path and the reassign RPC beside the reference; disclosure material withheld until the owner routes it
+docs/records/20261017-203139-s4b-94-teranode-store-half-s4b.md
+docs/records/20261017-203139-s4b-94-teranode-store-half-s4b.json
+docs/records/20261017-202608-s4b-94-teranode-store-half-s4b.json
+docs/records/20261017-202845-s4b-94-teranode-store-half-s4b.json
+
+## hz-95-teranode-gate-logs: #95's per-release gate (the hazard rung): every measuring step's raw log, the nodes' own text, named here by the step itself (tools/teranode_gate.sh); the public page is the s8-95-gate-report-s3 pair; disclosure material withheld until the owner routes it
+docs/records/*-s8-95-gate-teranode-log-s4b.txt
+docs/records/20261017-234627-s8-95-gate-teranode-log-s4b.txt
+
+## hz-98-teranode-bridge: #98's measured half and its horizon re-measure (the hazard rung): the Teranode legacy bridge measured live beside the reference over the wire, every message row with the nodes' own log text; disclosure material withheld until the owner routes it
+docs/records/20261018-063439-s4b-98-teranode-bridge-s4b.md
+docs/records/20261018-063439-s4b-98-teranode-bridge-s4b.json
+docs/records/20261018-135344-s8-98-teranode-bridge-horizon-s4b.md
+docs/records/20261018-135344-s8-98-teranode-bridge-horizon-s4b.json
+docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.md
+docs/records/20261018-145427-s8-98-teranode-bridge-horizon2-s4b.json

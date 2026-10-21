@@ -1,0 +1,164 @@
+{
+  "corpus": "cpp-txvalidationcache-t101-g103-c103",
+  "file": "cases.jsonl",
+  "generator": "tools/cpp_replay.py project (#49 item 2; lane cpp-era-49): the CheckInputs calls of corpus/cpp/txvalidationcache_tests.jsonl.gz with their own chain context, the tip at 101, -genesisactivationheight 103 -chronicleactivationheight 103",
+  "seed": "none (a projection of the committed C++ table, byte-deterministic)",
+  "count": 16384,
+  "sha256": "a04963062209fa92929cd923b8b6d8a210827820dd110be8f73430b40e1383cf",
+  "families": {
+    "cpp/txvalidationcache_tests/checkinputs_test": 16384
+  },
+  "rules": {
+    "cpp.txvalidationcache_tests.checkinputs_test": 16384
+  },
+  "verdicts": {
+    "invalid": 12288,
+    "valid": 4096
+  },
+  "implementations": [
+    {
+      "name": "bsv-rs",
+      "version": "0.7.0",
+      "config": {
+        "flags": 4016127,
+        "flags_names": "P2SH,STRICTENC,DERSIG,LOW_S,NULLDUMMY,SIGPUSHONLY,MINIMALDATA,DISCOURAGE_UPGRADABLE_NOPS,CLEANSTACK,CHECKLOCKTIMEVERIFY,CHECKSEQUENCEVERIFY,NULLFAIL,SIGHASH_FORKID,GENESIS,UTXO_AFTER_GENESIS,CHRONICLE,UTXO_AFTER_CHRONICLE",
+        "memory_limit": 32000000,
+        "mode": "under the flag word 0x3D47FF (Spend::set_flags: the word's rules under the reference's version gate at every site), the transaction's own version",
+        "require_push_only": true
+      }
+    },
+    {
+      "name": "spec-history",
+      "version": "b64aca9",
+      "config": {
+        "config": "sv-regtest(genesis=103,chronicle=103)",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-history-mempool",
+      "version": "b64aca9",
+      "config": {
+        "config": "sv-regtest(genesis=103,chronicle=103)",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.2",
+      "config": {
+        "activation_heights": {
+          "chronicle": 103,
+          "genesis": 103
+        },
+        "configuration": "harness/oracle/bitcoin.conf: -genesisactivationheight=103 -chronicleactivationheight=103 on the command line (the test's chain, lane cpp-era-49), every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive; the words from eval/bsvs (--config sv-regtest --genesis-height 103 --chronicle-height 103)); txo omitted: the coin's lock, value and height read by the node from its own chain's UTXO set (misc.cpp:795–803), the coinbase flag the chain's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "rpc": "http://127.0.0.1:18583",
+        "total_timeout_ms": 60000,
+        "txo_from_chain": true
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.2",
+      "config": {
+        "activation_heights": {
+          "chronicle": 103,
+          "genesis": 103
+        },
+        "configuration": "harness/oracle/bitcoin-policy.conf: -genesisactivationheight=103 -chronicleactivationheight=103 on the command line (the test's chain, lane cpp-era-49), the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.2/; version 101020200",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18585",
+        "total_timeout_ms": 60000,
+        "txo_from_chain": true
+      }
+    },
+    {
+      "name": "spec",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-regtest(genesis=103,chronicle=103)",
+        "path": "the entry's params (consensus = the block path)"
+      }
+    },
+    {
+      "name": "spec-mempool",
+      "version": "cb7e46e",
+      "config": {
+        "config": "sv-regtest(genesis=103,chronicle=103)",
+        "path": "the mempool word of the same configuration"
+      }
+    },
+    {
+      "name": "sv-node",
+      "version": "v1.2.3",
+      "config": {
+        "activation_heights": {
+          "chronicle": 103,
+          "genesis": 103
+        },
+        "configuration": "harness/oracle/bitcoin.conf: -genesisactivationheight=103 -chronicleactivationheight=103 on the command line (the test's chain, lane cpp-era-49), every policy setting zeroed (the consensus limits on the policy path, Q6)",
+        "mode": "the verifyscript RPC under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive; the words from eval/bsvs (--config sv-regtest --genesis-height 103 --chronicle-height 103)); txo omitted: the coin's lock, value and height read by the node from its own chain's UTXO set (misc.cpp:795–803), the coinbase flag the chain's; stopOnFirstInvalid true",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "rpc": "http://127.0.0.1:18583",
+        "total_timeout_ms": 60000,
+        "txo_from_chain": true
+      }
+    },
+    {
+      "name": "sv-node-mempool",
+      "version": "v1.2.3",
+      "config": {
+        "activation_heights": {
+          "chronicle": 103,
+          "genesis": 103
+        },
+        "configuration": "harness/oracle/bitcoin-policy.conf: -genesisactivationheight=103 -chronicleactivationheight=103 on the command line (the test's chain, lane cpp-era-49), the policy caps at the node's defaults (docs/PARAMETERS.md §1)",
+        "mode": "the same under the mempool word (Params.derive with consensus = false) on the POLICY instance: the node's default policy, the limits the spec's spec-mempool column models",
+        "node": "subversion /Bitcoin SV:1.2.3/; version 101020300",
+        "policy_settings": {
+          "maxopsperscriptpolicy": 4294967295,
+          "maxpubkeyspermultisigpolicy": 4294967295,
+          "maxscriptnumlengthpolicy": 4,
+          "maxscriptsizepolicy": 500000,
+          "maxstackmemoryusagepolicy": 100000000,
+          "maxtxsigopscountspolicy": 4294967295,
+          "maxtxsizepolicy": 10000000
+        },
+        "rpc": "http://127.0.0.1:18585",
+        "total_timeout_ms": 60000,
+        "txo_from_chain": true
+      }
+    },
+    {
+      "name": "go-sdk",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the reference's flag word of the entry's own params (the block word unless the entry gives one), the word asked of eval/bsvs (Params.derive), one run per input"
+      }
+    },
+    {
+      "name": "go-sdk-mempool",
+      "version": "v1.7.2",
+      "config": {
+        "adapter": "gosdk-runner (bsv-script-lean #29) go-sdk v1.7.2 (docs/PROVENANCE.md §1a)",
+        "mode": "under the mempool word of the same configuration (Params.derive with consensus = false)"
+      }
+    }
+  ],
+  "engine_executions": 131072,
+  "generated": "2026-10-06",
+  "provenance": "bitcoin-sv v1.2.2 (879fc8b42168dd0e608dafd51b39c6dabad37d4d) unit tables, corpus/cpp/manifest.json; the source's sha256 d4e75fdd156735bd43c50da9afac2c48b928afd92f399afea8697e8912c8a02a"
+}

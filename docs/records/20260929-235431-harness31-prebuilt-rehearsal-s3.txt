@@ -1,0 +1,46 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+# Harness usability rehearsal, 2026-09-29T23:54:31.394371+00:00 [LIT]
+Model: Codex GPT-6.1-Sol. Scope: Continue [LIT] 55 item [LIT] (1).
+This is the maintainer in a minimal scratch checkout using existing binaries. It is not an independent stranger review or a build of the changed sources.
+No Lean source or evaluator is copied. No compiler, adapter install or node is invoked.
+Base commit: caeb866cd177eeb2fadd09d7d698420b4e25cf7b
+The working tree has the uncommitted harness changes. Their source hashes:
+harness/run: c9d8459a514e3c1ed5913e54efb6d424e58a705eefbaad2e30cfc2996a869dbc
+harness/Cargo.toml: c228aedce8ba93112bd4b8f0b2de57a181b90cf4839da5737fc4217ee30a4d38
+corpus/seed/manifest.json: 47d9d015b2a29657a32507aaf4476cded46b6e159335e83e8588c935c411fd06
+corpus/seed/seed.jsonl: 34b1dbbc9a3120253dbdddcae6d6e9b5e1555df2ddc09157e5792f6014d51f65
+harness/rules/bsv-rs.json: bff8137e25e3e11014f02e3e4597599495b96d2c5179f802f986bf3d412fd783
+[withheld at export: a sibling tree's line]
+[withheld at export: a sibling tree's line]
+
+Command: ['/usr/bin/env', '-u', 'BASH_ENV', '/bin/bash', '--noprofile', '--norc', '/var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi/harness/run', '--help']
+Exit: 0 [X]; expected 0 [LIT]
+Transcript (unchanged):
+harness/run: THE CONFORMANCE HARNESS IN ONE COMMAND (bsv-script-lean #31; S3, 2026-09-29). It runs one implementation of
+Bitcoin SV's script rules against a corpus, compares every verdict with the specification's, and writes the report.
+harness/README.md ("Run it") is the manual; this header is the summary.
+
+  harness/run --impl <go-sdk|ts-sdk|gobdk|bsv-rs|sv-node> --corpus <dir|file.jsonl|all> [--corpus …]
+              [--spec recorded|live] [--out <dir>] [--limit N] [--no-build]
+              [--rpc <url> --cookie <file> [--rpc-mempool <url> --cookie-mempool <file>]]      (sv-node only)
+
+
+Command: ['/usr/bin/env', '-u', 'BASH_ENV', '/bin/bash', '--noprofile', '--norc', '/var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi/harness/run', '--impl']
+Exit: 2 [X]; expected 2 [LIT]
+Transcript (unchanged):
+harness/run: --impl needs a value (harness/run --help)
+
+
+Command: ['/usr/bin/env', '-u', 'BASH_ENV', '/bin/bash', '--noprofile', '--norc', '/var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi/harness/run', '--impl', 'bsv-rs', '--corpus', 'seed', '--no-build', '--out', '/var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi/report']
+Exit: 0 [X]; expected 0 [LIT]
+Transcript (unchanged):
+[withheld at export: a sibling tree's line]
+GREEN seed: (every divergence explained by a rule with its citation)
+harness/run: 1 GREEN, 0 RED, 0 skipped; the report in /private/var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi/report (summary.txt)
+
+
+Re-derived output: 10000 [X] recorded specification entries, 20000 [D] verdict cells.
+The source refactor and default build path remain NOT CHECKED. The issue remains open.
+Scratch checkout and report: /var/folders/2z/r76v_f0s7yb8_fmg392m0xj80000gn/T/s3-c55-harness31-dibr1txi
+
+Source draft: `origin/s3-c55-harness` at `20ff1d91726bccd690db3ae055bb617aafefe4c4`, pushed; no build verdict for this tree. [LIT]
