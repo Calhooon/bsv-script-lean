@@ -151,6 +151,30 @@ class PointerTests(unittest.TestCase):
             self.assertFalse(self.groups['local-paths'].search(prefix + home))
             self.assertFalse(self.groups['local-paths'].search(prefix + volume))
 
+    def test_json_record_stays_json_with_matched_strings_and_keys_withheld(self):
+        # the hosted gate of 2026-10-26: a one-line JSON record whose line was withheld was not JSON (63 of 186)
+        import json
+        pointers = public.load_pointers(public.POINTERS)
+        home = '~' + 'john' + 'calhoun' + '/bsv/x'
+        one = json.dumps({'commit': 'abc1234', 'path': home, 'source_sha256': {home + '/a': '00', home + '/b': '11'},
+                          'counts': {'go-sdk|gen|spec|splice.substr.' + 'negative-offset': 1, 'plain': 2}}) + '\n'
+        out, n = public.transform_json(one.encode(), pointers)
+        got = json.loads(out)
+        self.assertEqual(n, 4)
+        self.assertEqual(got['commit'], 'abc1234')
+        self.assertEqual(got['path'], public.MARKER)
+        self.assertEqual(sorted(got['source_sha256']), [f'{public.MARKER} (key 1)', f'{public.MARKER} (key 2)'])
+        self.assertEqual(got['counts'], {f'{public.MARKER} (key 1)': 1, 'plain': 2})
+        self.assertEqual(out.count(b'\n'), 1)  # one line in, one line out
+        self.assertNotIn(b'calhoun', out)
+        many = json.dumps({'path': home, 'k': [1, 2]}, indent=2).encode()
+        out, n = public.transform_json(many, pointers)
+        self.assertEqual(n, 1)
+        self.assertEqual(json.loads(out)['path'], public.MARKER)
+        self.assertGreater(out.count(b'\n'), 1)  # the indented shape kept
+        clean = b'{"path": "relative/only", "n": 1}\n'
+        self.assertEqual(public.transform_json(clean, pointers), (clean, 0))
+
     def test_agent_paths_withhold_record_lines_and_stay_out_of_substitution(self):
         account = '-' + 'Users' + '-sample-bsv-'
         scratch = '/' + 'private/tmp/claude-501/' + account + 'x/0000/scratchpad'

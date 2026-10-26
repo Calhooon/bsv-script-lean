@@ -1,7 +1,6 @@
-[export: 164 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+  "root": "[withheld at export: a sibling tree's line]",
+  "scratch": "[withheld at export: a sibling tree's line]",
   "record_base": "docs/records/20261012-013350-bump-044b-s3",
   "main": "34e36b5fa84025bf244a49a556c278634d430a31",
   "incoming": "ad4216120db0363a845fb9d34ae59c27ce9f8e38",
@@ -29,11 +28,11 @@
         "--corpus",
         "../corpus/seed/seed.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:09.902359+00:00",
       "end": "2026-10-12T01:36:10.172011+00:00",
@@ -51,7 +50,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:10.172251+00:00",
       "end": "2026-10-12T01:36:10.619929+00:00",
@@ -66,12 +65,12 @@
         "--corpus",
         "../corpus/seed/seed.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:10.620261+00:00",
       "end": "2026-10-12T01:36:11.101337+00:00",
@@ -87,7 +86,7 @@
         "../corpus/seed",
         "--smoke"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:11.454153+00:00",
       "end": "2026-10-12T01:36:11.615851+00:00",
@@ -102,11 +101,11 @@
         "--corpus",
         "../corpus/arith/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.129895+00:00",
       "end": "2026-10-12T01:36:34.137737+00:00",
@@ -124,7 +123,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.137956+00:00",
       "end": "2026-10-12T01:36:34.157083+00:00",
@@ -139,12 +138,12 @@
         "--corpus",
         "../corpus/arith/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.157392+00:00",
       "end": "2026-10-12T01:36:34.176254+00:00",
@@ -159,11 +158,11 @@
         "--corpus",
         "../corpus/bytes/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.201249+00:00",
       "end": "2026-10-12T01:36:34.208643+00:00",
@@ -181,7 +180,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.208958+00:00",
       "end": "2026-10-12T01:36:34.226241+00:00",
@@ -196,12 +195,12 @@
         "--corpus",
         "../corpus/bytes/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.226644+00:00",
       "end": "2026-10-12T01:36:34.246433+00:00",
@@ -216,11 +215,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.269917+00:00",
       "end": "2026-10-12T01:36:34.275185+00:00",
@@ -238,7 +237,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.275412+00:00",
       "end": "2026-10-12T01:36:34.284268+00:00",
@@ -253,12 +252,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-bn_op/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.284493+00:00",
       "end": "2026-10-12T01:36:34.296500+00:00",
@@ -273,11 +272,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.306963+00:00",
       "end": "2026-10-12T01:36:34.311264+00:00",
@@ -295,7 +294,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.311490+00:00",
       "end": "2026-10-12T01:36:34.316896+00:00",
@@ -310,12 +309,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.317140+00:00",
       "end": "2026-10-12T01:36:34.323884+00:00",
@@ -330,11 +329,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.330382+00:00",
       "end": "2026-10-12T01:36:34.334724+00:00",
@@ -352,7 +351,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.335093+00:00",
       "end": "2026-10-12T01:36:34.340890+00:00",
@@ -367,12 +366,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-multisig/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.341205+00:00",
       "end": "2026-10-12T01:36:34.347607+00:00",
@@ -387,11 +386,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:34.624269+00:00",
       "end": "2026-10-12T01:36:35.341783+00:00",
@@ -409,7 +408,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:35.342086+00:00",
       "end": "2026-10-12T01:36:38.802347+00:00",
@@ -424,12 +423,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-opcode/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:38.802933+00:00",
       "end": "2026-10-12T01:36:42.678163+00:00",
@@ -444,11 +443,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-script/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:50.988324+00:00",
       "end": "2026-10-12T01:36:51.284146+00:00",
@@ -466,7 +465,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:51.284633+00:00",
       "end": "2026-10-12T01:36:52.474024+00:00",
@@ -481,12 +480,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-script/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:52.474387+00:00",
       "end": "2026-10-12T01:36:53.864731+00:00",
@@ -501,11 +500,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.832479+00:00",
       "end": "2026-10-12T01:36:56.836756+00:00",
@@ -523,7 +522,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.837040+00:00",
       "end": "2026-10-12T01:36:56.843376+00:00",
@@ -538,12 +537,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.843665+00:00",
       "end": "2026-10-12T01:36:56.850399+00:00",
@@ -558,11 +557,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.856485+00:00",
       "end": "2026-10-12T01:36:56.860566+00:00",
@@ -580,7 +579,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.860858+00:00",
       "end": "2026-10-12T01:36:56.865333+00:00",
@@ -595,12 +594,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.865607+00:00",
       "end": "2026-10-12T01:36:56.870714+00:00",
@@ -615,11 +614,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.874524+00:00",
       "end": "2026-10-12T01:36:56.879039+00:00",
@@ -637,7 +636,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.879585+00:00",
       "end": "2026-10-12T01:36:56.894754+00:00",
@@ -652,12 +651,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-transaction/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.895079+00:00",
       "end": "2026-10-12T01:36:56.911031+00:00",
@@ -672,11 +671,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.921926+00:00",
       "end": "2026-10-12T01:36:56.930960+00:00",
@@ -694,7 +693,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:56.931283+00:00",
       "end": "2026-10-12T01:36:57.064933+00:00",
@@ -709,12 +708,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.065279+00:00",
       "end": "2026-10-12T01:36:57.197196+00:00",
@@ -729,11 +728,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=102)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.249867+00:00",
       "end": "2026-10-12T01:36:57.266473+00:00",
@@ -751,7 +750,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.266809+00:00",
       "end": "2026-10-12T01:36:57.543337+00:00",
@@ -766,12 +765,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.543654+00:00",
       "end": "2026-10-12T01:36:57.821750+00:00",
@@ -786,11 +785,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=102,chronicle=102)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.945249+00:00",
       "end": "2026-10-12T01:36:57.980242+00:00",
@@ -808,7 +807,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:57.980732+00:00",
       "end": "2026-10-12T01:36:58.555336+00:00",
@@ -823,12 +822,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:58.555949+00:00",
       "end": "2026-10-12T01:36:58.899128+00:00",
@@ -843,11 +842,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.140820+00:00",
       "end": "2026-10-12T01:36:59.166117+00:00",
@@ -865,7 +864,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.166650+00:00",
       "end": "2026-10-12T01:36:59.256332+00:00",
@@ -880,12 +879,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.256755+00:00",
       "end": "2026-10-12T01:36:59.411904+00:00",
@@ -900,11 +899,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=103)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.630065+00:00",
       "end": "2026-10-12T01:36:59.686906+00:00",
@@ -922,7 +921,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.687482+00:00",
       "end": "2026-10-12T01:36:59.872367+00:00",
@@ -937,12 +936,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:36:59.872781+00:00",
       "end": "2026-10-12T01:37:00.189893+00:00",
@@ -957,11 +956,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=102,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:00.590163+00:00",
       "end": "2026-10-12T01:37:00.594537+00:00",
@@ -979,7 +978,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:00.595121+00:00",
       "end": "2026-10-12T01:37:00.599878+00:00",
@@ -994,12 +993,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:00.600405+00:00",
       "end": "2026-10-12T01:37:00.606091+00:00",
@@ -1014,11 +1013,11 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=103,chronicle=103)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:00.643944+00:00",
       "end": "2026-10-12T01:37:00.739835+00:00",
@@ -1036,7 +1035,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:00.740398+00:00",
       "end": "2026-10-12T01:37:01.103193+00:00",
@@ -1051,12 +1050,12 @@
         "--corpus",
         "../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:01.103721+00:00",
       "end": "2026-10-12T01:37:01.536374+00:00",
@@ -1071,11 +1070,11 @@
         "--corpus",
         "../corpus/crypto/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.510585+00:00",
       "end": "2026-10-12T01:37:02.517144+00:00",
@@ -1093,7 +1092,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.517588+00:00",
       "end": "2026-10-12T01:37:02.533345+00:00",
@@ -1108,12 +1107,12 @@
         "--corpus",
         "../corpus/crypto/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.533771+00:00",
       "end": "2026-10-12T01:37:02.552090+00:00",
@@ -1128,11 +1127,11 @@
         "--corpus",
         "../corpus/eras/eras.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.559560+00:00",
       "end": "2026-10-12T01:37:02.564718+00:00",
@@ -1150,7 +1149,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.565160+00:00",
       "end": "2026-10-12T01:37:02.573388+00:00",
@@ -1165,12 +1164,12 @@
         "--corpus",
         "../corpus/eras/eras.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.573784+00:00",
       "end": "2026-10-12T01:37:02.585706+00:00",
@@ -1185,11 +1184,11 @@
         "--corpus",
         "../corpus/flow/flow.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.598208+00:00",
       "end": "2026-10-12T01:37:02.609998+00:00",
@@ -1207,7 +1206,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.610686+00:00",
       "end": "2026-10-12T01:37:02.643355+00:00",
@@ -1222,12 +1221,12 @@
         "--corpus",
         "../corpus/flow/flow.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.643933+00:00",
       "end": "2026-10-12T01:37:02.676964+00:00",
@@ -1242,11 +1241,11 @@
         "--corpus",
         "../corpus/gen/gen.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.722684+00:00",
       "end": "2026-10-12T01:37:02.736282+00:00",
@@ -1264,7 +1263,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.736844+00:00",
       "end": "2026-10-12T01:37:02.845743+00:00",
@@ -1279,12 +1278,12 @@
         "--corpus",
         "../corpus/gen/gen.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:02.846477+00:00",
       "end": "2026-10-12T01:37:02.960421+00:00",
@@ -1299,11 +1298,11 @@
         "--corpus",
         "../corpus/million/witnesses.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.023051+00:00",
       "end": "2026-10-12T01:37:03.028031+00:00",
@@ -1321,7 +1320,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.028622+00:00",
       "end": "2026-10-12T01:37:03.033345+00:00",
@@ -1336,12 +1335,12 @@
         "--corpus",
         "../corpus/million/witnesses.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.033789+00:00",
       "end": "2026-10-12T01:37:03.039800+00:00",
@@ -1356,11 +1355,11 @@
         "--corpus",
         "../corpus/road/road.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.062774+00:00",
       "end": "2026-10-12T01:37:03.128909+00:00",
@@ -1378,7 +1377,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.129512+00:00",
       "end": "2026-10-12T01:37:03.457440+00:00",
@@ -1393,12 +1392,12 @@
         "--corpus",
         "../corpus/road/road.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:03.458019+00:00",
       "end": "2026-10-12T01:37:03.858862+00:00",
@@ -1413,11 +1412,11 @@
         "--corpus",
         "../corpus/stack/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.274851+00:00",
       "end": "2026-10-12T01:37:04.281681+00:00",
@@ -1435,7 +1434,7 @@
         "cases-manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.282224+00:00",
       "end": "2026-10-12T01:37:04.298691+00:00",
@@ -1450,12 +1449,12 @@
         "--corpus",
         "../corpus/stack/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.299187+00:00",
       "end": "2026-10-12T01:37:04.314768+00:00",
@@ -1470,11 +1469,11 @@
         "--corpus",
         "../corpus/tx/tx.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.344900+00:00",
       "end": "2026-10-12T01:37:04.360260+00:00",
@@ -1492,7 +1491,7 @@
         "manifest.json",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.360895+00:00",
       "end": "2026-10-12T01:37:04.535685+00:00",
@@ -1507,12 +1506,12 @@
         "--corpus",
         "../corpus/tx/tx.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "../corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:04.536526+00:00",
       "end": "2026-10-12T01:37:04.720649+00:00",
@@ -1527,14 +1526,14 @@
         "--count",
         "1000"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:10.676367+00:00",
       "end": "2026-10-12T01:37:10.772495+00:00",
       "load1": 9.42919921875,
       "wall_seconds": 0.094827666063793,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "stdout_file": "[withheld at export: a sibling tree's line]"
     },
     {
       "argv": [
@@ -1542,14 +1541,14 @@
         "--count",
         "500"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:10.787521+00:00",
       "end": "2026-10-12T01:37:10.885005+00:00",
       "load1": 9.42919921875,
       "wall_seconds": 0.09627895790617913,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "stdout_file": "[withheld at export: a sibling tree's line]"
     },
     {
       "argv": [
@@ -1557,14 +1556,14 @@
         "--count",
         "10000"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:10.896763+00:00",
       "end": "2026-10-12T01:37:11.102097+00:00",
       "load1": 9.42919921875,
       "wall_seconds": 0.20407700003124774,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "stdout_file": "[withheld at export: a sibling tree's line]"
     },
     {
       "argv": [
@@ -1572,23 +1571,23 @@
         "--count",
         "200"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:11.124904+00:00",
       "end": "2026-10-12T01:37:11.255661+00:00",
       "load1": 9.42919921875,
       "wall_seconds": 0.1295831250026822,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "stdout_file": "[withheld at export: a sibling tree's line]"
     },
     {
       "argv": [
         "python3",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "share",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:11.359440+00:00",
       "end": "2026-10-12T01:37:11.430637+00:00",
@@ -1620,7 +1619,7 @@
         "make",
         "numcheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:36.425915+00:00",
       "end": "2026-10-12T01:37:38.149545+00:00",
@@ -1634,7 +1633,7 @@
         "make",
         "sighashcheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:38.186167+00:00",
       "end": "2026-10-12T01:37:40.175145+00:00",
@@ -1648,7 +1647,7 @@
         "make",
         "arithcheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:40.208915+00:00",
       "end": "2026-10-12T01:37:42.202949+00:00",
@@ -1662,7 +1661,7 @@
         "make",
         "cryptocheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:37:42.239057+00:00",
       "end": "2026-10-12T01:37:47.038184+00:00",
@@ -1675,7 +1674,7 @@
       "argv": [
         "harness/target/release/rules_check"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:38:33.602037+00:00",
       "end": "2026-10-12T01:38:40.938200+00:00",
@@ -1687,9 +1686,9 @@
     {
       "argv": [
         "python3",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:39:37.143996+00:00",
       "end": "2026-10-12T01:39:37.176602+00:00",
@@ -1707,7 +1706,7 @@
         "--date",
         "2026-09-27"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:39:37.206894+00:00",
       "end": "2026-10-12T01:39:37.276926+00:00",
@@ -1721,7 +1720,7 @@
         "python3",
         "tools/specgen.py"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:39:37.306304+00:00",
       "end": "2026-10-12T01:39:38.297465+00:00",
@@ -1735,7 +1734,7 @@
         "make",
         "check-pins"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:41:05.519497+00:00",
       "end": "2026-10-12T01:41:06.129670+00:00",
@@ -1748,11 +1747,11 @@
       "argv": [
         "/usr/bin/sandbox-exec",
         "-f",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "make",
         "citecheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:41:06.174082+00:00",
       "end": "2026-10-12T01:41:06.735941+00:00",
@@ -1766,14 +1765,14 @@
         "python3",
         "docs/records/20261012-013350-bump-044b-audit.py"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:41:30.232561+00:00",
       "end": "2026-10-12T01:41:40.719986+00:00",
       "load1": 6.55078125,
       "wall_seconds": 10.485722042038105,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "stdout_file": "[withheld at export: a sibling tree's line]"
     },
     {
       "argv": [
@@ -1781,7 +1780,7 @@
         "tools/specgen.py",
         "--check"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:41:40.749813+00:00",
       "end": "2026-10-12T01:41:41.766257+00:00",
@@ -1796,7 +1795,7 @@
         "diff",
         "--check"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:41:41.794399+00:00",
       "end": "2026-10-12T01:41:42.177430+00:00",
@@ -1809,11 +1808,11 @@
       "argv": [
         "/usr/bin/sandbox-exec",
         "-f",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "make",
         "citecheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:42:38.670021+00:00",
       "end": "2026-10-12T01:42:39.217290+00:00",
@@ -1828,7 +1827,7 @@
         "diff",
         "--check"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:43:51.374751+00:00",
       "end": "2026-10-12T01:43:51.744248+00:00",
@@ -1846,7 +1845,7 @@
         "--date",
         "2026-09-27"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "environment": {},
       "start": "2026-10-12T01:46:00.620805+00:00",
       "end": "2026-10-12T01:46:00.686032+00:00",

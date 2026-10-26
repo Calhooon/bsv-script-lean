@@ -1,4 +1,3 @@
-[export: 260 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "base": "764dab8b2a7d45c5917214bc4589d5ae2d6f1910",
   "start": "2026-10-12T00:35:47.953431+00:00",
@@ -32,14 +31,14 @@
           "--corpus",
           "corpus/arith/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -128,14 +127,14 @@
           "--corpus",
           "corpus/bytes/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -224,14 +223,14 @@
           "--corpus",
           "corpus/crypto/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -327,14 +326,14 @@
           "--corpus",
           "corpus/eras/eras.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -459,14 +458,14 @@
           "--corpus",
           "corpus/flow/flow.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -562,14 +561,14 @@
           "--corpus",
           "corpus/gen/gen.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -722,8 +721,8 @@
             "column": "spec",
             "rule": "unexplained",
             "entries": 1,
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+            "witness": "[withheld at export: a sibling tree's line]",
+            "from": "[withheld at export: a sibling tree's line]"
           },
           {
             "column": "spec-mempool",
@@ -743,8 +742,8 @@
             "column": "spec-mempool",
             "rule": "unexplained",
             "entries": 1,
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+            "witness": "[withheld at export: a sibling tree's line]",
+            "from": "[withheld at export: a sibling tree's line]"
           }
         ]
       },
@@ -778,14 +777,14 @@
           "--corpus",
           "corpus/seed/seed.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -881,14 +880,14 @@
           "--corpus",
           "corpus/stack/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -977,14 +976,14 @@
           "--corpus",
           "corpus/tx/tx.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1064,14 +1063,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1136,14 +1135,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1216,14 +1215,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-multisig/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1288,14 +1287,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-opcode/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1360,14 +1359,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-script/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1432,14 +1431,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1504,14 +1503,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1576,14 +1575,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-transaction/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1648,14 +1647,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1722,14 +1721,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1796,14 +1795,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1870,14 +1869,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -1944,14 +1943,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -2018,14 +2017,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -2090,14 +2089,14 @@
           "--corpus",
           "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -2164,14 +2163,14 @@
           "--corpus",
           "corpus/million/witnesses.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -2244,14 +2243,14 @@
           "--corpus",
           "corpus/road/road.jsonl",
           "--spec",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--words-from",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--witnesses",
           "corpus/witnesses",
           "--record"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "env": {
           "ENGINE_ADAPTER_TIMEOUT_S": "60",
           "SOURCE_DATE": "2026-10-12"
@@ -2296,8 +2295,8 @@
             "column": "spec",
             "rule": "unexplained",
             "entries": 1,
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+            "witness": "[withheld at export: a sibling tree's line]",
+            "from": "[withheld at export: a sibling tree's line]"
           },
           {
             "column": "spec-mempool",
@@ -2317,8 +2316,8 @@
             "column": "spec-mempool",
             "rule": "unexplained",
             "entries": 1,
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+            "witness": "[withheld at export: a sibling tree's line]",
+            "from": "[withheld at export: a sibling tree's line]"
           }
         ]
       },
@@ -2348,13 +2347,13 @@
         "--corpus",
         "corpus/seed/seed.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -2418,7 +2417,7 @@
   "road_words": {
     "source_commit": "ae1dfa53e944c2296916a365c673ada00235806d",
     "lean_tree": "e4578f4b2e34945f5700783d9095a6558dfa245e",
-[withheld at export: a sibling tree's line]
+    "evaluator": "[withheld at export: a sibling tree's line]",
     "evaluator_sha256": "4c5ade4e26064c702320420f63a3916cd3e4b110fa1ad9b005cdb9cba37db72d",
     "words": [
       {
@@ -2438,12 +2437,12 @@
       {
         "name": "road-word-true",
         "command": [
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "eval",
           "--tx",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--prevouts",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--spend-height",
           "967896",
           "--consensus",
@@ -2451,7 +2450,7 @@
           "--config",
           "sv"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "start": "2026-10-12T00:39:52.341235+00:00",
         "end": "2026-10-12T00:39:52.430855+00:00",
         "load": [
@@ -2466,12 +2465,12 @@
       {
         "name": "road-word-false",
         "command": [
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "eval",
           "--tx",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--prevouts",
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
           "--spend-height",
           "967896",
           "--consensus",
@@ -2479,7 +2478,7 @@
           "--config",
           "sv"
         ],
-[withheld at export: a sibling tree's line]
+        "cwd": "[withheld at export: a sibling tree's line]",
         "start": "2026-10-12T00:39:52.431022+00:00",
         "end": "2026-10-12T00:39:52.510889+00:00",
         "load": [
@@ -2826,7 +2825,7 @@
         "--release",
         "--locked"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "CARGO_BUILD_JOBS": "4"
       },
@@ -2852,7 +2851,7 @@
         "../../target/engines/gosdk-runner",
         "."
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "GOFLAGS": "-mod=mod"
       },
@@ -2874,11 +2873,11 @@
         "--corpus",
         "corpus/seed/seed.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -2903,13 +2902,13 @@
         "--corpus",
         "corpus/seed/seed.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -2932,11 +2931,11 @@
         "--corpus",
         "corpus/arith/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -2961,14 +2960,14 @@
         "--corpus",
         "corpus/arith/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -2991,11 +2990,11 @@
         "--corpus",
         "corpus/bytes/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3020,14 +3019,14 @@
         "--corpus",
         "corpus/bytes/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3050,11 +3049,11 @@
         "--corpus",
         "corpus/crypto/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3079,14 +3078,14 @@
         "--corpus",
         "corpus/crypto/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3109,11 +3108,11 @@
         "--corpus",
         "corpus/eras/eras.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3138,14 +3137,14 @@
         "--corpus",
         "corpus/eras/eras.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3168,11 +3167,11 @@
         "--corpus",
         "corpus/flow/flow.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3197,14 +3196,14 @@
         "--corpus",
         "corpus/flow/flow.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3227,11 +3226,11 @@
         "--corpus",
         "corpus/gen/gen.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3256,14 +3255,14 @@
         "--corpus",
         "corpus/gen/gen.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3286,11 +3285,11 @@
         "--corpus",
         "corpus/seed/seed.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3315,14 +3314,14 @@
         "--corpus",
         "corpus/seed/seed.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3345,11 +3344,11 @@
         "--corpus",
         "corpus/stack/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3374,14 +3373,14 @@
         "--corpus",
         "corpus/stack/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3404,11 +3403,11 @@
         "--corpus",
         "corpus/tx/tx.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3433,14 +3432,14 @@
         "--corpus",
         "corpus/tx/tx.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3463,11 +3462,11 @@
         "--corpus",
         "corpus/tx/tx.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3492,14 +3491,14 @@
         "--corpus",
         "corpus/tx/tx.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3522,11 +3521,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3551,14 +3550,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-bn_op/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3581,11 +3580,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3610,14 +3609,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3640,11 +3639,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-multisig/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3669,14 +3668,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-multisig/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3699,11 +3698,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-opcode/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3728,14 +3727,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-opcode/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3758,11 +3757,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-script/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3787,14 +3786,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-script/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3817,11 +3816,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3846,14 +3845,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-script_P2SH/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3876,11 +3875,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3905,14 +3904,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-sigopcount/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3935,11 +3934,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-transaction/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3964,14 +3963,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-transaction/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -3994,11 +3993,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4023,14 +4022,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4053,11 +4052,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=102)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4082,14 +4081,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4112,11 +4111,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=102,chronicle=102)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4141,14 +4140,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4171,11 +4170,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4200,14 +4199,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4230,11 +4229,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=1,chronicle=103)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4259,14 +4258,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4289,11 +4288,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=102,chronicle=1)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4318,14 +4317,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4348,11 +4347,11 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-regtest(genesis=103,chronicle=103)"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4377,14 +4376,14 @@
         "--corpus",
         "corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4407,11 +4406,11 @@
         "--corpus",
         "corpus/million/witnesses.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4436,14 +4435,14 @@
         "--corpus",
         "corpus/million/witnesses.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4466,11 +4465,11 @@
         "--corpus",
         "corpus/road/road.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4495,14 +4494,14 @@
         "--corpus",
         "corpus/road/road.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4521,12 +4520,12 @@
     {
       "name": "road-word-true",
       "command": [
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "eval",
         "--tx",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--prevouts",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--spend-height",
         "967896",
         "--consensus",
@@ -4534,7 +4533,7 @@
         "--config",
         "sv"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T00:39:52.341235+00:00",
       "end": "2026-10-12T00:39:52.430855+00:00",
       "load": [
@@ -4549,12 +4548,12 @@
     {
       "name": "road-word-false",
       "command": [
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "eval",
         "--tx",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--prevouts",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--spend-height",
         "967896",
         "--consensus",
@@ -4562,7 +4561,7 @@
         "--config",
         "sv"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T00:39:52.431022+00:00",
       "end": "2026-10-12T00:39:52.510889+00:00",
       "load": [
@@ -4581,11 +4580,11 @@
         "--corpus",
         "corpus/road/road.jsonl",
         "--out",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--config",
         "sv-mainnet-default"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4610,14 +4609,14 @@
         "--corpus",
         "corpus/road/road.jsonl",
         "--spec",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--words-from",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "--witnesses",
         "corpus/witnesses",
         "--record"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "ENGINE_ADAPTER_TIMEOUT_S": "60",
         "SOURCE_DATE": "2026-10-12"
@@ -4642,7 +4641,7 @@
         "--locked",
         "--lib"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "CARGO_BUILD_JOBS": "4"
       },
@@ -4667,7 +4666,7 @@
         "--date",
         "2026-09-27"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "CARGO_BUILD_JOBS": "4"
       },
@@ -4688,7 +4687,7 @@
         "make",
         "check-pins"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "CARGO_BUILD_JOBS": "4"
       },
@@ -4709,7 +4708,7 @@
         "make",
         "citecheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "env": {
         "CARGO_BUILD_JOBS": "4"
       },
@@ -4730,7 +4729,7 @@
         "make",
         "citecheck"
       ],
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T00:49:30.941276+00:00",
       "end": "2026-10-12T00:49:31.398173+00:00",
       "load": [

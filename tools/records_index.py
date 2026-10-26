@@ -32,9 +32,20 @@ MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augus
 
 
 def tracked(*prefixes):
-    out = subprocess.run(['git', '-C', ROOT, 'ls-files', '--', *prefixes], check=True, capture_output=True,
-                         text=True).stdout
-    return [p for p in out.split('\n') if p]
+    got = subprocess.run(['git', '-C', ROOT, 'ls-files', '--', *prefixes], capture_output=True, text=True)
+    if got.returncode == 0:
+        return [p for p in got.stdout.split('\n') if p]
+    # not a repository (an export directory under the export gate): the same prefixes walked on disk
+    found = []
+    for prefix in prefixes:
+        full = os.path.join(ROOT, prefix)
+        if os.path.isfile(full):
+            found.append(prefix)
+        elif os.path.isdir(full):
+            for base, dirs, names in os.walk(full):
+                dirs[:] = sorted(d for d in dirs if d != '.git')
+                found += [os.path.relpath(os.path.join(base, n), ROOT) for n in names]
+    return sorted(found)  # git ls-files' order
 
 
 def kind(name):

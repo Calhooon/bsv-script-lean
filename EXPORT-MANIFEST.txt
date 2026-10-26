@@ -1,9 +1,9 @@
 # The public edition of bsv-script-lean: export manifest (tools/export_public.py)
-source-commit 753df92a4798f989fe5cac26a7f5697be0d93270
-exported-at 2026-10-26 18:20:42 UTC
-withheld-list tools/export_withheld.txt @ 753df92a4798
-withheld-entry-list tools/export_withheld_entries.txt @ 753df92a4798
-paths-exported 2089
+source-commit 04c9e47b21731d16e28aff11d19ae4a6b8f5fa9c
+exported-at 2026-10-26 20:35:30 UTC
+withheld-list tools/export_withheld.txt @ 04c9e47b2173
+withheld-entry-list tools/export_withheld_entries.txt @ 04c9e47b2173
+paths-exported 2093
 paths-withheld 281
 withheld-group sealed-and-security 6
 withheld-group d135-records 6
@@ -47,12 +47,13 @@ withheld-rule-reference 2 fields 0 records harness/rules/gobdk.json
 withheld-rule-reference 2 fields 0 records harness/rules/sv-node.json
 withheld-rule-reference 2 fields 0 records harness/rules/ts-sdk.json
 rewritten 16 (tools/export_rewrite.txt)
-transformed 619 lines-replaced 6419 (the records transform)
+transformed 622 lines-replaced 6428 (the records transform)
 cargo-transformed 1 files, 1 target tables dropped (the Cargo transform)
 cargo-source-check 82 .rs files, 68 mod/#[path]/include lines, 3 naming a withheld basename, 0 resolving to a withheld path
 makefile-transformed 1 of 1 Makefiles, 1 targets dropped (the Makefile transform)
 public-pages-moved 1 (PUBLIC_PAGES)
-lists-read-at 753df92a4798 (7 lists; working tree differs: none)
+records-index rendered over the export: records_index: wrote docs/records/INDEX.md, 1008 records
+lists-read-at 04c9e47b2173 (7 lists; working tree differs: none)
 
 ## exported: sha256 path
 ec2137b0b8354442bd7113f07d1fa0e7429bdf2d646e30405c9511f066fe2fd4  .github/ISSUE_TEMPLATE/config.yml
@@ -815,9 +816,9 @@ e43b970803b1823450e7f640b6c5149135982d26c682251e10ed457e6ef460a7  docs/records/2
 fa9ceb1d52161d7079b845ce9109c440f51e4c85d8f90c224bbbd45cd7f22f7c  docs/records/20260930-004205-continue56-sub-launches-s3.md
 354a2b9e34e9eb297d4ec51631414abfb35010be2577af1db5624d435c06d890  docs/records/20260930-004447-harness31-stranger-s1-artifacts/commands.jsonl
 c863e11fa9b5beffcd9db22493dc7628f840b1d4b7263c8ccf839a0e8a09fe38  docs/records/20260930-004447-harness31-stranger-s1-artifacts/dry-run.py
-f0bfa19884a6d01383ff68164952f89a0ef9d7d9ab4bc3e275ee8d2894548f46  docs/records/20260930-004447-harness31-stranger-s1-artifacts/execution.json
+743a7d79dd04e41312d92239b0f04efee53f616b2a870bbb2597dc22d8120065  docs/records/20260930-004447-harness31-stranger-s1-artifacts/execution.json
 2f710f73041852d4072335ad3495a3b88b03847c533f1eb979a1227f1cae1e33  docs/records/20260930-004447-harness31-stranger-s1-artifacts/machine.json
-2375e062cffcb6070b2551bb1c6bb714e6ff969a0fb940fa957a96ec1b8fb2a5  docs/records/20260930-004447-harness31-stranger-s1-artifacts/report/bsv-rs/manifest.json
+46f7d586d99ca900f9623a56fe7ed053c0c189c73a813121db41ef732c1f8ebb  docs/records/20260930-004447-harness31-stranger-s1-artifacts/report/bsv-rs/manifest.json
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/records/20260930-004447-harness31-stranger-s1-artifacts/report/bsv-rs/seed.jsonl
 3590eb81717ad1db0bfde94cdbb2b5be3410162a187f8ef36289651da604e6c4  docs/records/20260930-004447-harness31-stranger-s1-artifacts/report/seed.log
 da4b2951fadab24355e28c7fdfef17c80ac6e9582380b0121675cb640560a791  docs/records/20260930-004447-harness31-stranger-s1-artifacts/report/spec/seed.jsonl.gz
@@ -827,7 +828,7 @@ e18cf2a5ff22c4a25e2057cbcec0f198ab608becb62bbf510f83d417bd355239  docs/records/2
 c8b2768dea028e4cba9bc254b59196b0aeee93ff78969081105f7fabe085dac4  docs/records/20260930-004447-harness31-stranger-s1-artifacts/verify-receipt.py
 dcf36909711d7d4433fb01c17a7202cbd93b08771c2f3862adcf82a2fb8d5cb6  docs/records/20260930-004447-harness31-stranger-s1.md
 3dea8315522c5f6acf455c689e23f0e86eae902a6513064af7a1f2f4c4c1228b  docs/records/20260930-004625-continue56-endblock-s3.md
-80173bbae79dea25308f6464aed5812efaf9d1e4c7f428b31d85af2bcf5f9c49  docs/records/20260930-005358-harness31-stranger-landing-s1.json
+a1c3c38a8e532425060f782ed8417a25b81bf0063b8803f20a086372de425c2b  docs/records/20260930-005358-harness31-stranger-landing-s1.json
 9f5d838c02969862f72782408e4135da4b816c9adf6c1f1123cde2a87c56e8d8  docs/records/20260930-005647-cite-preopen-s3-applied.patch
 9ee721e431e18caf730bb638b10ae876a79ba0f9fcf7ca31bd0b284e1e7b5517  docs/records/20260930-005647-cite-preopen-s3-astra-lens-meta.json
 98a18cdbde48af8d1bac42fa2e011242a737cfa7bac667100a570bab03bee067  docs/records/20260930-005647-cite-preopen-s3-astra-lens.txt
@@ -849,11 +850,11 @@ d0cd6775dccc7a344f627a5f114560ec55acaef19b06a44f8e36e8547eeb9637  docs/records/2
 ee04f100bf0fdcce877233dfa302c9b6e1b8015d00a5248e6f6ef45a63268175  docs/records/20260930-013839-continue57-s3-box-start-gate.txt
 e474cb8076296981c457b22a71b5e87034555a2368638386e9ea6dbd0a43965f  docs/records/20260930-013839-continue57-s3-box-tripwire.txt
 09a03ba0bbc80c67aba88879da386cd0fecf0857662b7e5ac5eff8fe1d0ea2de  docs/records/20260930-013839-continue57-s3-stranger-rederivation.json
-682364984be735f31a413c4376399ab1e23352c377db7927f4a9a9323e90cc6a  docs/records/20260930-013839-continue57-s3-tripwire-summary.json
+2fce5cd2557b5f62365a1bc8a54312ebea518af3410f552f4f3c56c8be6f064d  docs/records/20260930-013839-continue57-s3-tripwire-summary.json
 eaae0d2fde3fa6363e8692b5507f6ec46877adec5ad2a3fb25e0267f3bf46442  docs/records/20260930-013839-continue57-s3.md
 cdde83bfe228e2548673937b1f4cdb01de8bc2b24eb45c6462fd5f19e57fad63  docs/records/20260930-013839-d1-checksig-s3-baseline-failed.py
 8344be2098f7aa3962cf6bf8509d208b2d9293c6bcdc893ceb66f587bc859096  docs/records/20260930-013839-d1-checksig-s3-baseline-failed.txt
-e1857ebe4fdd0a020b4bf2b27df0b13ce1d40e484d67ce53713cd17f2ce51064  docs/records/20260930-013839-d1-checksig-s3-build.json
+4ed5b77d8958961da37987fecfcf674bd2d38c96ae3d62c7522c146b37369bf5  docs/records/20260930-013839-d1-checksig-s3-build.json
 eb41d4551ba1ad44b71c8ed4a8ab36075519c4e39b5d17b228b791dbc1e555bb  docs/records/20260930-013839-d1-checksig-s3-results.json
 7108ce4d4ecc4a39a7b9003b15aeb62c3ffb942bed0cc44cab70d2039c502393  docs/records/20260930-013839-d1-checksig-s3-signer.rs
 245a188a9ba1f2e06265371d18072e8bc7910616ca478453358f749d0da1eafd  docs/records/20260930-013839-d1-checksig-s3-signing.json
@@ -919,7 +920,7 @@ fd93f1b75b0cc94fb8ff9969faba95c97011e1ddbe85279e0ea19f985dcbac3b  docs/records/2
 d071c6e88b2d799596bd63a059d90b40a62239e9b79b5e979be14fe22a44bfec  docs/records/20261006-142140-make-check-box.txt
 b4dc7e8d6199d05e0024d62b2d349fbce2f2e5b5c76e8d3b7776c016c8bbb25d  docs/records/20261006-143617-make-check-box.txt
 bb4ddfad456c693b17e260d4361e275992ff00583faace6b79ab094d5c1ca156  docs/records/20261006-143954-cpp-era-49.md
-88d52be2eb0f251c76fc0395c7f05616a8d01c7b3bfad83fc08848eb26b7da2c  docs/records/20261006-144350-node-v1.2.3-build.json
+04e22c5890ad3b5d0ca55d53c8cba3ef2fef8583a956c7d7907ad71511c0edd4  docs/records/20261006-144350-node-v1.2.3-build.json
 f8b6203b7c94274f923111f1da4146145811ff6929feada5c70ae4c6b18b552f  docs/records/20261006-144350-node-v1.2.3-build.md
 b90405e1224e6eeb29aeadfc1b38005758f7c54d70b56779ffdb168822baf48b  docs/records/20261006-151048-repin-123-harness-foreign-citations.patch
 318e9fdfab5a71d7e4bbf98bab2def9392dc52d5026479aa5a1ba08ff599d283  docs/records/20261006-151048-repin-123-harness-foreign-citations.txt
@@ -936,9 +937,9 @@ e545172bbc1bddd4645811f41642c74c603ecd72ea8bcac04af29006c74b8971  docs/records/2
 bdce7a96b208c697f1872cf88cc813d300e90a6dd9275f71f3debf57cd9d55bb  docs/records/20261006-221252-make-check-box.txt
 1c62b2cf84d40489cb705dee985c18b8ca72150b3ab5225c72241ff9100a5cc1  docs/records/20261007-004507-make-check-box.txt
 7e434aa89d66e8e1acaeb5e273e1b9a65ae7fae7f13a7d66fcf83ed52511b884  docs/records/20261007-013326-make-check-box.txt
-e79cff3bdabe42a930512e358035261b04978ea2530e8c95cc91907aedcf9dde  docs/records/20261007-013737-x86-123-smoke.json
+bdb8b5906094a97f8ebd05838f678e4899afc8c0b137ea0167ee34ccb0c328ae  docs/records/20261007-013737-x86-123-smoke.json
 ea4b850c3df4dd7d15f559a431527984295c4ab3b6c03364281d49feb46f5358  docs/records/20261007-013737-x86-123-smoke.txt
-dcf121ddea803f485943fa9eaac9279b877c697b39eb677ad2c94d23383f7e96  docs/records/20261007-013908-x86-123-full.json
+7ed2b265e2790a3d44ae41c24ed0c6b9f790532ba94d1b98536a5ac33957532c  docs/records/20261007-013908-x86-123-full.json
 3cfe04cb222b666c5712aebb5af339fff108ff5c07a9eece3cd201af4f90256f  docs/records/20261007-013908-x86-123-full.txt
 d532c7f77db7e9722bf3d69b051a5d9aea08049f41b09855b4aacefcd6a4a756  docs/records/20261007-014131-x86-123.md
 0b4017d90f891c72f905707a7eb71914b333e846fd64474f12538373fe609e69  docs/records/20261007-014531-make-check-box.txt
@@ -951,7 +952,7 @@ ffba0c02c44b9a43c48183d746a877c4c8b57136128b3cadd240c28895b268e7  docs/records/2
 142a9b9efe706218ec3650f58508f502c603438739966b5eb1c4b851753619cb  docs/records/20261011-235804-make-check-box.txt
 088fa217d2379bf71acfd79a4a1d252a9fa7b15a6e2206bae1d40e91fd2b9675  docs/records/20261012-001901-pre-read-reads-cap.md
 859f7493c9e600870ff1ff67d56f97ecb48a1e81fbdef5196087b50de6312c81  docs/records/20261012-001942-make-check-box.txt
-ee0e744eccf4dc5d6bd1f72605c9c2b61b8d472ef6e7c7f28e4fdc7399db18c6  docs/records/20261012-002025-repin-gosdk-172-s4b.json
+d91670dea70e081e6ab4b0de0fdae27b0329f9230ba55958b088eba63246348d  docs/records/20261012-002025-repin-gosdk-172-s4b.json
 db34b34d6fe8d98fad2b9bdc4c9315f1b3ef7377e9bcfb507d1c6c747154bfc0  docs/records/20261012-002025-repin-gosdk-172-s4b.md
 5fe96e76954dd6c15a214bb0c5e4ab996f5e57784a6412530b990333045281ab  docs/records/20261012-002025-repin-gosdk-172-s4b.py
 6c483340e9a401d450143488591e5f423f6520b164eeec6494f763fb194dde27  docs/records/20261012-002025-repin-gosdk-172-s4b.txt
@@ -961,13 +962,13 @@ ed9f3058764650a41308c1a339ac5fcc8008638ac0f12f60b8737d473e2411fe  docs/records/2
 b9bb897de16fccc21de7a0690eaa9d4da8d62e82f0b52ebebfed358b24d81cb8  docs/records/20261012-011846-bump-bsv-rs-0.4.4-s3.md
 ddfd67bfa784ff1deffabcfd19905ef4dc2ed7eed56addb160f64bed0c770670  docs/records/20261012-011846-bump-bsv-rs-0.4.4-s3.txt
 b85bdda1865d0c082a9d6c994bc09d3bc61f7e353b04251d5fb86354998ca07c  docs/records/20261012-013350-bump-044b-audit.py
-c1d828865b27309f21c63b0b4f95843290defe00697f28f094f0d5bbb90ac7d1  docs/records/20261012-013350-bump-044b-s3.json
+c054f55db15f033be986e1187c3f760e0b0db0465c18e9c07de36650e94661c1  docs/records/20261012-013350-bump-044b-s3.json
 bd69ef608548d37bcbaef16bf798624127d8bcd422223d5a5c7f31b51088d453  docs/records/20261012-013350-bump-044b-s3.txt
 8d3f490952f19b39c56da3e0602dc84a550ffba3fdc9d442350cba3c3293e267  docs/records/20261012-013634-make-check-box.txt
 00cf0987fe872453a906b9a3e222be1a1ead391c40b3eca8506adacf6a3a3e79  docs/records/20261012-015010-make-check-box.txt
 af607ddc35f6fdef8f10558637ca20f883ee85c918f862942277e6151dd4a581  docs/records/20261012-015848-make-check-box.txt
 25b26875bcf729796011d1706b8643f640006549e01c49b102328d3c395189dd  docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3-audit.py
-b7df83e005e3a8025378bbfda5c8a2a978513b7dd29c4643560c2a50c1187084  docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3.json
+f86b482079a0bcf0ea7fea099de7e87e1bc9acd6e4ccbd3577039cb2ba4d0188  docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3.json
 5cd4b635b98d104e265a186626394c61d8e13f0b8369a14fd106b8379423341f  docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3.md
 665cf4c0bb23b306349d3af9577d0e8990d67dd43f42a4daa9ac788cc39c1efd  docs/records/20261012-021029-bump-bsv-rs-0.4.5-s3.txt
 cb6978cae3126a0753ac7191ba9c11127b26ac807dfb54315195598c6f2156d5  docs/records/20261012-022738-make-check-box.txt
@@ -980,7 +981,7 @@ f98ba630d0812fa74bc2fbbbe7242db90e6b4858ee284fd2f67e2ddc94747b45  docs/records/2
 cbd5ac8c3cd8ff1907f8f6f0e99fc034715c5862eef552d144d55fa8790f3e79  docs/records/20261012-043527-make-check-box.txt
 4c23b59b26a108432b0f44d4a85389f50659df06182f1e33299437b443330916  docs/records/20261012-105336-make-check-box.txt
 e5c574c5b06383a9dcd3d7cda6a05cd76322d190bb3d2f0c171fe9b8a1fa05c9  docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3-audit.py
-2144c17a41ece416858da9226df1e47962fbed2d1ee4b8817a9e27cd146834e1  docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.json
+35fd0ad7be720ccc036d663990c14aec29972010edddd4cc4b58788a048db6ca  docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.json
 f593ac62a30544f21fc97183ccccbfa44f8d164bc8bdf85d53c509e434d1b4f7  docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.md
 46bca1164a1cac6d900ab255c4e6946b0ea033a4620a3d1642e4f9918ce9659b  docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.txt
 dcbedc1296a18e7f1bf10ee0a9d486921c65db6460e82c71971c6bc3498a7f29  docs/records/20261012-130536-export-prep-101-s3.md
@@ -1010,11 +1011,11 @@ f38b7df86a4eb1601abd695e417dc241ad45d7eab2ef51240292a91e68855c5e  docs/records/2
 e172ad143aeca9e9d7ab403e358c93dc17c5914f4a4c66cc7429b0cd215de301  docs/records/20261013-032121-s6-66b-regtest-s3.md
 b31600098010ab746e2b9b91e4d3c70be82a1b44d94fe259fb3c9cbd78534b48  docs/records/20261013-041541-s6-66c-regtest-s3.json
 8b29e4bf8809834477637305e94800bb0d0e5b27ea0d3a30b4efc91a93239927  docs/records/20261013-041541-s6-66c-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-045648-s6-66-utx-regtest-s3.json
+a17d1f0979b561b489f009c6bb540331e12744a690755095da91b01a151ab066  docs/records/20261013-045648-s6-66-utx-regtest-s3.json
 f7ccb7601aed66e7a858acbe9bb63038684bca63240067cf8ee3d610e043805e  docs/records/20261013-045648-s6-66-utx-regtest-s3.md
 d82a08b057cff43fc0ee6fb26b06f251660c255c24ce4458e7e0a0a8b7cb43de  docs/records/20261013-045710-s6-66-fin-regtest-s3.json
 51d13bc7675c09978f1df2ac870618f7786e68db3718262c1471205f0a7da54c  docs/records/20261013-045710-s6-66-fin-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-045714-s6-66-blk-regtest-s3.json
+6f49387ca2e25c6f46d6675a5870142b65863a6ffa8a460da2c32fe389ae3171  docs/records/20261013-045714-s6-66-blk-regtest-s3.json
 0d42ad01323557bb610625f36da60c3d867d468eec3cde08adacf7b446206464  docs/records/20261013-045714-s6-66-blk-regtest-s3.md
 e18219500f65e0220b9a46e6782633aede8fda0a8168d64c9606c40331b6c32d  docs/records/20261013-045854-s6-66-mem-regtest-s3.json
 89e31685996bc3f1c1d32f5bb8967878fd0b12510edbf7a60028b9bf20c10021  docs/records/20261013-045854-s6-66-mem-regtest-s3.md
@@ -1047,55 +1048,55 @@ fed2c9607ace2bd4b1a843b34fd4fafce4c791d5408af3d2f1d4c6a5cb99a973  docs/records/2
 e21900b5cbd5d413fb28fc9fd21e1ba821cb1de37f335df53407ba1b11b5df67  docs/records/20261013-141803-s6-67-regtest-s3.md
 2dd9001f82264f1ef97e3d2221e854b89fcfcaceffefbfe63127d2996fc672a9  docs/records/20261013-142247-s6-67-regtest-s3.json
 8ab4e828cf892a9ba3b91e47f81301b0d4682296b1c2d00de051b8464b1819dc  docs/records/20261013-142247-s6-67-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-144556-s6-pend-66-regtest-s3.json
+fc3fd23ac9c2ecb5570bfbac57414a4bce426a3d9d56bfb76c34c4cae8cad578  docs/records/20261013-144556-s6-pend-66-regtest-s3.json
 20c5ec75a2bf3cfc9d290520cb509e15b85d945ced1186a087fdbfc38a5ab93a  docs/records/20261013-144556-s6-pend-66-regtest-s3.md
 209400661ecb068c75b84dd4a772cebb2b194c11968475333df06c0e2f7f26f0  docs/records/20261013-144652-export-dry-run-l2b-s3.md
 dd1415fcad8d80e1b455d71e3074cb88993e6da1a5d98d473a2259f78e36fcab  docs/records/20261013-145255-make-check-box.txt
-7de452eb79b87b4635d937568eeedc4ea66666bc3cd54e1985d5a28630dd113b  docs/records/20261013-152446-s6-peer-66-regtest-s3.json
+377c65dd339356ba04145ec34b6f88299f229eec20f9eb3b5425abd23472ac63  docs/records/20261013-152446-s6-peer-66-regtest-s3.json
 f764c4e7ec326079a61603cf97df43ec7b74351f385bc750db98c5de0194595b  docs/records/20261013-152446-s6-peer-66-regtest-s3.md
 6dd813a9d39a8e0ddfca36a9290f61d271a366d01c399d0d2dc8ae26dd8a5a96  docs/records/20261013-154627-make-check-box.txt
 ead870bd8ac1ef21de51ad6eb00d787ae0a20af9edf0f33d8e680e1c3648e3e1  docs/records/20261013-155621-make-check-box.txt
-d9b6725e233f589859518db843e0ce00584a38268c2141e950d61dba4099d1b4  docs/records/20261013-155748-s6-peer-66-era-regtest-s3.json
+e71345f8dbb0154c5aab8138801f25503a3bae580f97bf15cbe8610187180477  docs/records/20261013-155748-s6-peer-66-era-regtest-s3.json
 f717c123185f0d3ade60e048f63a6c1cb94ebb106aad8a63c050fb6b4b288c64  docs/records/20261013-155748-s6-peer-66-era-regtest-s3.md
 b9c5d32493198af79607889bbeeabd34d6c0e1ba7d90c794f8c5114739715cb2  docs/records/20261013-155916-make-check-box.txt
-0d4b82a51edc3d885d0c0ed2c384818f6de1952b65254bccea434606af39531a  docs/records/20261013-160213-s6-peer-66-chain-era-clear-10000-regtest-s3.json
+f16b92e90adaa6363722cc1c010aa13c2216a7c925b4651d9e19ba54dbe145ba  docs/records/20261013-160213-s6-peer-66-chain-era-clear-10000-regtest-s3.json
 10b196083f26f781bee31be8867272904712c6462c91af2bc24d61fc3219b326  docs/records/20261013-160213-s6-peer-66-chain-era-clear-10000-regtest-s3.md
-d4a453a3c8e2b5f0d5dcac66802ed1952ca434b62aa83eec69db4f21ef2ba68e  docs/records/20261013-160310-s6-peer-66-chain-era-clear-14999-regtest-s3.json
+9622a9e7487e19b3e7dbb102e1fbaddfba692ffd62a469067f4efc6234e19b7e  docs/records/20261013-160310-s6-peer-66-chain-era-clear-14999-regtest-s3.json
 6f5661d1c0af5122810cbc1b45922ab52ae8a15d8becc215a921a810f2720769  docs/records/20261013-160310-s6-peer-66-chain-era-clear-14999-regtest-s3.md
-20593df0b8f424791689d1fd0a70be2601e27911c80f632c181f05ab53070866  docs/records/20261013-160502-s6-peer-66-chain-era-clear-15000-regtest-s3.json
+3cccb1ea201fc845bfcc00581fe11eeccc5f750d7f7fa6c307c667aa79e47da9  docs/records/20261013-160502-s6-peer-66-chain-era-clear-15000-regtest-s3.json
 53aa82cab1923bec8fb94634632bae3b3aa69a240b06daa45c063441e39de782  docs/records/20261013-160502-s6-peer-66-chain-era-clear-15000-regtest-s3.md
-be1445221e7ffb0dbc97a9dfe07dd0b55e04208236255fe44e7f15cd7a641a31  docs/records/20261013-161120-s6-peer-66-chain-unrequested-equal-work-regtest-s3.json
+7ed2282bf96648940381e579d7e4ee40bdc0c7d760b2aa796056143f59648a0a  docs/records/20261013-161120-s6-peer-66-chain-unrequested-equal-work-regtest-s3.json
 97de8c2cbcdbf3366684f89ead293dc68e48682ae61d68c974464901c6abc06b  docs/records/20261013-161120-s6-peer-66-chain-unrequested-equal-work-regtest-s3.md
 9a5a1fc71a30aad1a7f5bbbadaf73ca6c328288a0c143aa1aa1ef2ecd71691ab  docs/records/20261013-161732-s6-fix-67-regtest-s3.json
 15aa1f8e59c5e7754bed4abe16d29ee0eeb7b4c2c66e5ef5423d8dcb02e4bc33  docs/records/20261013-161732-s6-fix-67-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-162245-s6-fix-pend2-regtest-s3.json
-b463dd22dbaed18dd00adc7a3f45c95c1f4552b8d6b65c63a3866ad0b18bc17a  docs/records/20261013-162818-s6-peer-66-queue-regtest-s3.json
+d30b385ca9b46230f4f6b75f9a021afb1d70f89c6c4735aeef9c507a23ebcf66  docs/records/20261013-162245-s6-fix-pend2-regtest-s3.json
+4b680d221e2cc72b5b0ac7e83f5856852dd77cdab977feb0ca7e02d1f50a2f43  docs/records/20261013-162818-s6-peer-66-queue-regtest-s3.json
 ef5bbe886ff47755ee8335159ec9dfc083cc8a3cdb1a78c7aef591b5c07b38ee  docs/records/20261013-162818-s6-peer-66-queue-regtest-s3.md
 f4dafb1969a136948a1ed1b0b07f87e73f26c2bd518f79a472d929fab9634f9f  docs/records/20261013-165052-receipt-trim-s3.md
 5d8ffb50f6e896bf870d13799cb3472c6bf7af73398fdc681c254d86cb523daa  docs/records/20261013-172431-s6-fix-67b-regtest-s3.json
 cbf7e710445b13d23201c30e3757af08d146507f08629433fe5c764df8e0294d  docs/records/20261013-172431-s6-fix-67b-regtest-s3.md
 f8abbf224c898e9a83a79853ed45d57537a859c9d5de81b29ace9bb4c3ba91af  docs/records/20261013-174852-make-check-box.txt
-d4ea714bbc6be4ea1bf7d0b8705ea9878482e629d7ae9a61583bdda2eb8cf330  docs/records/20261013-180516-s6-fix-peer-regtest-s3.json
+27732725ec0ebac717b51652bb11856c6b38994c4ebb0065b0d1047475c0b8a1  docs/records/20261013-180516-s6-fix-peer-regtest-s3.json
 74ee99622ac4b4ffef9ada8d525ca9c15b9f020c09fd01ec8fd2cea3d997fcc6  docs/records/20261013-180516-s6-fix-peer-regtest-s3.md
-18218404f8288ece5b4fa081461abb1e1349b3c0ac586b402c96286c728916a5  docs/records/20261013-180630-s6-fix-peer-regtest-s3.json
+7eb5d33e4fbae6da0efe47fd249ea59bd75a5c6e27d44485219b82ac9648696c  docs/records/20261013-180630-s6-fix-peer-regtest-s3.json
 7414b292edce69080d0bd083275153accb7d120c0d80e5c3e6f988e861e04860  docs/records/20261013-180630-s6-fix-peer-regtest-s3.md
-e692f23075272e6fe974414c53ad1d532eab226e4beb6de6ab86ac83b56b3562  docs/records/20261013-180718-s6-fix-peer-regtest-s3.json
+09bab184d903a2f77f39e3793bb0b99e70da6eaaa83aa4055cf4ec3f094b63ec  docs/records/20261013-180718-s6-fix-peer-regtest-s3.json
 53f5617e4385a2afd693531dccad284962b77f6b06325a460a3390071c6b84dc  docs/records/20261013-180718-s6-fix-peer-regtest-s3.md
-b42dfeb920efa20e287a2b2da80beac80d1065eaba24fcb3ead76c804a888ffd  docs/records/20261013-180859-s6-fix-peer-regtest-s3.json
+0717e9a54f55a6615480e82175f24ec02c3fb889edb4057e77d6635e08978905  docs/records/20261013-180859-s6-fix-peer-regtest-s3.json
 19786e337cb52fa48d0134dc6cf835dfd70712cfa38ec72a6a0ab294f02b3603  docs/records/20261013-180859-s6-fix-peer-regtest-s3.md
 d00e48f2ff5dc101cbd70d91dfc49da5feabd7423f6ae3d548e960037baf1a55  docs/records/20261013-181057-make-check-box.txt
-ff2096c8a7aff2f9e10cb46addae72272dedac41eff187bb12932f3c06ac7daf  docs/records/20261013-181110-s6-fix-peer-regtest-s3.json
+52d337ba335852cc75e0083776c31d5b596be7de269d0359a43b6ac845c65623  docs/records/20261013-181110-s6-fix-peer-regtest-s3.json
 6c1e030a1cff132804bad75af4c7b8c3a9ab234dfbef6b148df72876520691d0  docs/records/20261013-181110-s6-fix-peer-regtest-s3.md
-fd7127fadf419bc2e2ac38b433ec9e6d31be7a5675bd2a768adddd4aa3dfa838  docs/records/20261013-181458-s6-fix-peer-regtest-s3.json
+4cdc32bc41cf17e79ccb8a8d14f2c1d77ca7cb11ca0683bff88907dbf1b67ff4  docs/records/20261013-181458-s6-fix-peer-regtest-s3.json
 b351703709914d6f4137c58c1685ed81a6a3e951bc53e273f47fac1556c4a488  docs/records/20261013-181458-s6-fix-peer-regtest-s3.md
-a2e61ed438926f4257ac7cddaa64911a38d30703a6ee4c292aa43de53ae70430  docs/records/20261013-181932-s6-fix-peer-regtest-s3.json
+4ca11d2ba5f1fa559bd7f381f2278f74198a92801687ac1b2b0bac8508341cbc  docs/records/20261013-181932-s6-fix-peer-regtest-s3.json
 36ff8c2b5bbc64ac36fe2b6654032481272867d9a91c5b9792a406834108b301  docs/records/20261013-181932-s6-fix-peer-regtest-s3.md
 d05431a1ccf5d6512b9c22e7cfcd74fd4efb0aa1cb07d4b371b3b998c59431ed  docs/records/20261013-184430-s6-66-column-s3.md
 76928d0e871f0ac9908bf7b816c75ae96205dcf8d7b8dfab32f276826add565d  docs/records/20261013-192029-make-check-box.txt
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-192835-s6-one-peer-regtest-s3.json
+4a245c8776beec81fcce4129742111bd68e4c40ea75b4507f3711c011d84c8b4  docs/records/20261013-192835-s6-one-peer-regtest-s3.json
 3ccab7be5c4e0119e79feec0a553213f70a962da2bab52e1ab3b2ea250a0b819  docs/records/20261013-192835-s6-one-peer-regtest-s3.md
 e22190b55a0a87f714dc2063535f4f30b50d44a730a6174e5cb07966e3f57f5a  docs/records/20261013-195525-make-check-box.txt
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261013-200620-s6-reclass-66b-regtest-s3.json
+9047ae2c25439bdc406b8f0da0dda978feae5bc401557581f2983bbe87283ee7  docs/records/20261013-200620-s6-reclass-66b-regtest-s3.json
 ff311b7790e9ce10afea5ecf31af8357283ab5324addc8808ce0e980da82ef11  docs/records/20261013-200620-s6-reclass-66b-regtest-s3.md
 a50299f5e3888cc3686cdfcf3edccffec787343019c38da88c8d683eaf330d10  docs/records/20261013-202836-make-check-box.txt
 deec99f2f7c7408437fb33b48217c849bc7c9aecee9212528c91afa6c01238d3  docs/records/20261013-203107-make-check-box.txt
@@ -1105,21 +1106,21 @@ deec99f2f7c7408437fb33b48217c849bc7c9aecee9212528c91afa6c01238d3  docs/records/2
 d2bd9c30576498dbe893c4a50b6f606bcbd39bfbfde301776abfc447f86d5d9a  docs/records/20261013-230030-make-check-box.txt
 dc41e4d478ccfc30d5d5850891d33fa7ff7ee8ccef6c8a1443b16edc41011775  docs/records/20261013-232005-make-check-box.txt
 e49802a2f45ad2804689b4b317575ef00113f9ebf00a07e4ca92fc4bc9242d20  docs/records/20261013-234938-wallet-build-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261014-002257-s6-69-regtest-s3.json
+20e768d6caf8ac75be861e1d6dc68d2d00b947f9254c8a67efa7de032869c985  docs/records/20261014-002257-s6-69-regtest-s3.json
 b76b8fe98ecbe0ae95d44845aba21b5d4ca669567a5269a2d499b0b5c4a9f316  docs/records/20261014-002257-s6-69-regtest-s3.md
 cf7f653efbd754def90cb0c0659aa54c74eef00108abdd152569debea4d42b3f  docs/records/20261014-004024-make-check-box.txt
 04d05b2df4c2f1de4c85fd97f7913cee1444e160148a6f2459d83b6bbe73c402  docs/records/20261014-012600-make-check-box.txt
 00cf53994ef11e60aaaa370ddf2693ebba7427ff60fa158e28f714fb140a5479  docs/records/20261014-013925-s6-73-regtest-s3.json
 133eadbd9f1b76d2193be81c9ed05df0d1adab38fdd1c5e75c3707417c6e8b12  docs/records/20261014-013925-s6-73-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261014-015319-s6-75-regtest-s3.json
+956e3ae0c97a8d2620958a780dba968044c62ad63a5bc1f73c9be68617d70cc5  docs/records/20261014-015319-s6-75-regtest-s3.json
 7ac8f4264c460ff1dc13dc7583e5448507a456035589505775baea8386f0091b  docs/records/20261014-015319-s6-75-regtest-s3.md
 96671e254e643eefc4f5a1c5cbf17d473ea484f2565d8c4b26e675dd005f9d62  docs/records/20261014-020630-make-check-box.txt
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261014-024631-s6-72-regtest-s3.json
+606fceb631e4fa9f09b30a86311731bc470192af1dc9a7160d146ecc2cc57b54  docs/records/20261014-024631-s6-72-regtest-s3.json
 b4fd4e9fef8ad9b51d358b27f9d30dd60930394d2376a1b4b73dad8fc3cb00a6  docs/records/20261014-024631-s6-72-regtest-s3.md
 9073f7de4f30a6a7fcc77b64e14e89fc8377b2b5c993943bc0bc4e2c015a6d2f  docs/records/20261014-025435-make-check-box.txt
 3e0e9145d36f7ddbb6a1703488030d5515385a30709e9a965df451a35748fa82  docs/records/20261014-030838-s6-72-views-regtest-s3.json
 8b8491d142c1037f102c45635374c71c6ad11e31218253b7c2166266a4578c91  docs/records/20261014-030838-s6-72-views-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261014-032012-s6-72-regtest-s3.json
+2e8fd6990333a4fc49db24d8cc087fd53d24cc5c0d7914b3d1df77285412a370  docs/records/20261014-032012-s6-72-regtest-s3.json
 69e796cfd298844f4e4e8fbba027bf57c01b6a35dd2372a095205248a638b835  docs/records/20261014-032012-s6-72-regtest-s3.md
 921bc41ecba2c4c8aa91fb237a31d93bc5e57d3003d3ae47966c976d815565e7  docs/records/20261014-033243-s6-72-views-regtest-s3.json
 2323b5e2e75b4c7409ea339a1ce9d68d2dbe0ae372710d273952fa07324d8160  docs/records/20261014-033243-s6-72-views-regtest-s3.md
@@ -1151,7 +1152,7 @@ ce09d7091d25ab8e553fbf37f80954e11c10da3f06e0548039c09fa81635291b  docs/records/2
 c3ec9d9f800faae021bdbe2e28217bf9e556d694b41512d862cecb22cf1abb98  docs/records/20261014-214035-column-go-sdk-v1.7.2-s3.json
 63294d76e0ade48dfcb600089aa7bd20318d258cc804919c366e3cacf80143e9  docs/records/20261014-214035-column-go-sdk-v1.7.2-s3.md
 2805c91e3c55444079c09cb8ea04edf4b07b2d7b419cceb89b1b12a579e5cd6c  docs/records/20261014-214035-column-go-sdk-v1.7.2-s3.txt
-290192eb6dae32b1afe2a03426c243304072a420b96ebaf7b316fa90c716ee98  docs/records/20261014-214119-column-ts-sdk-3.0.0-s3.json
+9bd3eb438d0d18322c883d4138378c4c96b14885184b2bbf0207a40316be6317  docs/records/20261014-214119-column-ts-sdk-3.0.0-s3.json
 8ef87ee1a9f552317bf6dfbcf02bf789ef6ae6bd2d5bef46dcf7d4729a5ff212  docs/records/20261014-214119-column-ts-sdk-3.0.0-s3.md
 1c812b067ed2bee64c2d54f7daac00fb59458e6517004bdbdbd03640b9c9276c  docs/records/20261014-214119-column-ts-sdk-3.0.0-s3.txt
 6bc526e9e0ec4eb82949c30ce8e842426cc8ba56b61bcefc0471099c713fec8c  docs/records/20261014-214149-deny-gate-133.md
@@ -1182,7 +1183,7 @@ ab51b42abd3ea134f9d4ce8a55e263ac5e059ab10f906462e2df8795bb67d9fc  docs/records/2
 779b4d75b724cbc1ac425d4a5568fbe02c84130e94d0d4e4929622f4f84af211  docs/records/20261015-032847-bench-cold-rule-137-s3.md
 ccae64b8918f3b6de1ef85e095d0e4a47708756ff9a95784fbcab323e87dd1ee  docs/records/20261015-033629-jscpd-cut-138-s3.md
 8d3da2a782c2db35118219b8b7923d9eb2c53bf7bad476452ee30998c3b3700a  docs/records/20261015-033715-cite-anchoring-pass-s3.md
-8a4bcbe60604881d5a4ba363de0b126f032dcda81b9baf5ba9d2bb76111269c1  docs/records/20261015-034125-s8-97-trait-witness-s4b.json
+2b799ef688db511df935bf3d28fab3068aca4b833d0e00cc1099fa730c1949d6  docs/records/20261015-034125-s8-97-trait-witness-s4b.json
 e768ba4a1150598e562cd353d3f367a21f40b344f8d2ecd4ff793d5f2023b3df  docs/records/20261015-034125-s8-97-trait-witness-s4b.md
 9c4cbf4d9aad510e1a0d699740127fba48224778228bd55fb09ab25b9f71ca90  docs/records/20261015-035305-subtree-mainnet-vectors-89-s3.md
 35eff682b57d80933a9e5bdb690934ae91197dfd7ee8e5e87ade6b50650abbca  docs/records/20261015-035435-s7-84-events-s1.json
@@ -1190,7 +1191,7 @@ f4b95301c3bc2db4b63f48332e4225dad7f37c911bdb52a7819a52a261120379  docs/records/2
 242cd90f48fafd6cb4287785a5131ea082153810396444961a356476e08b8837  docs/records/20261015-035438-s7-85-rpc-contract-s4b.json
 470cff18ea6966b50a4449d48eedc099f516ffaf298683daa7266462db872fc6  docs/records/20261015-035438-s7-85-rpc-contract-s4b.md
 b4e4c5133f3ce5693ff3dd60f0238571dd05cc1e57dc5649a1a37a97e06d839f  docs/records/20261015-040959-s6-66-cut2-instance-exit-s3.md
-422c50233863fff136dbfef5bcbb7af248145cb0b75e455802b95b6480d077f2  docs/records/20261015-041807-s6-66-cut2-second-oracle-s3.json
+014b1c56e9e2bb9f3f83dd2a788e13afb58e1937c97687a983edfd2fc6eb4173  docs/records/20261015-041807-s6-66-cut2-second-oracle-s3.json
 1d1f5875aa0aa975a9a09f6f57a4d0de9e6be585102a6c127150c891d9d67931  docs/records/20261015-041807-s6-66-cut2-second-oracle-s3.md
 bab93dfbdcc009100fbc7e2c470c330342c5f663b78c676514cf59a88f2c274c  docs/records/20261015-105318-s6-74-status-column-s1.md
 ed5f2a797602462b8f9e0796a7cb7ebd8e2424a96869fda71510558bae2e6983  docs/records/20261015-105807-make-check-box.txt
@@ -1251,28 +1252,28 @@ aeffc7bc559492bbe72d8aa9542676b6e84c003ff574f0e7d03696687fbc8ac9  docs/records/2
 e7f1087fe0fdca961c47978920d1fab9b69a98bee71ee398ae25a486a97cfeb9  docs/records/20261015-155734-s6-66-cut2q4-quarantine-sums-s3.json
 45dd3c9b502d38191fe4adaed9914abf8e19e6a7d3806dd31bbe317c3c95932e  docs/records/20261015-155734-s6-66-cut2q4-reruns-s3.md
 2e1e9b6948a58f73b32d6778b6521a3e9169b40af1d06d71eb95b91f901916a4  docs/records/20261015-155906-s6-66-cut2-second-oracle-s3.json
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-160706-s6-66-cut2q4-spends-regtest-s3.json
+287878611c6d80ce8061a1ac014a91a3f172d5f0716e4b3b2fafed68beb728e8  docs/records/20261015-160706-s6-66-cut2q4-spends-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-160706-s6-66-cut2q4-spends-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-160744-s6-66-cut2q4-sentinel-regtest-s3.json
+26774f22d25e6be8be85588d65f86b87cab91dd455356e247a43c0f7d690a61a  docs/records/20261015-160744-s6-66-cut2q4-sentinel-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-160744-s6-66-cut2q4-sentinel-regtest-s3.md
 2a822f96495febee49a667acd608cf45f9f955b8e930e01c61d91a007ece4684  docs/records/20261015-160808-s6-66-cut2-second-oracle-s3.json
 d530906deb0466e2c7f6c1c9c2e69149251eaaf27c531cd6181e14a9742d758b  docs/records/20261015-160907-s6-66-cut2-second-oracle-s3.json
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-162254-s6-66-cut2q5-oracle-regtest-s3.json
+6b0506059009a495a2dd36dc8ab71a81ce6660c638d30b7d0f2f7d11e4dcb257  docs/records/20261015-162254-s6-66-cut2q5-oracle-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-162254-s6-66-cut2q5-oracle-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-162309-s6-66-cut2q5-utxo-regtest-s3.json
+f5351b5401ee98aa90b8227541df432655f9b1f50e5e9b8cd5314c27d3d51695  docs/records/20261015-162309-s6-66-cut2q5-utxo-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-162309-s6-66-cut2q5-utxo-regtest-s3.md
 3dd276ec766d4293bd3b7dcc61dc03687595e97510d0d8c616288675e4bb6208  docs/records/20261015-162336-s8-88-refinement-s1.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-162356-s6-66-cut2q5-finality-regtest-s3.json
+f84968a14906c2865fd8723ebb4d11c6d2e60cf51469157a889209ced4d5e4e6  docs/records/20261015-162356-s6-66-cut2q5-finality-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-162356-s6-66-cut2q5-finality-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-162459-s6-66-cut2q5-mempool-regtest-s3.json
+2978348ef867910d1e7bed8163002a44f91a6d8f178f266adbad275ab2e1e52d  docs/records/20261015-162459-s6-66-cut2q5-mempool-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-162459-s6-66-cut2q5-mempool-regtest-s3.md
 b6e71e862e80ced2247ac1152441c16cfc37e32c9475304a470333bb64ce72f4  docs/records/20261015-162637-s7-79-compact-blocks-s1.json
 39ee20794914b5d816e7c2d39e01933693c6fd78c9e1e8c9d4de4e59faf14a2b  docs/records/20261015-162637-s7-79-compact-blocks-s1.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-162833-s6-66-cut2q5-chain-regtest-s3.json
+501ab75f51e7d0b160581827fa0093510439228b73c3a19f51c240f2b6264368  docs/records/20261015-162833-s6-66-cut2q5-chain-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-162833-s6-66-cut2q5-chain-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-163233-s6-66-cut2q5-block-regtest-s3.json
+27e169d14304397b8ce88eac8874e094be5ade6d0d2ffad1a754e3b70b2b0111  docs/records/20261015-163233-s6-66-cut2q5-block-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-163233-s6-66-cut2q5-block-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261015-163630-s6-66-cut2q5-scenarios-regtest-s3.json
+452d534d11f48b9d15442f4b3766093816870bd8716fbf5a3077950c3384470f  docs/records/20261015-163630-s6-66-cut2q5-scenarios-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261015-163630-s6-66-cut2q5-scenarios-regtest-s3.md
 240aeff2aab4d80d54a11e67f603e4a087a37636d0e7627ff827cf904fb43a13  docs/records/20261015-165715-s7-80-double-spend-s1.json
 4f5440a7d22b89f742ab72ef89b3d21e0eddfd50571b04b0610b6896ef172c38  docs/records/20261015-165715-s7-80-double-spend-s1.md
@@ -1341,32 +1342,32 @@ e825345b36eb33ce3c1f0a784261b57112a1239718f69c72bd5e4d0c89a0ce1d  docs/records/2
 9160b8ceb98910d50b6a8304ad6754d28746b0678f24faa043f375dc6135ca97  docs/records/20261016-234915-s3-147-signer-column-go-sdk-s3.json
 ca9febaa81762adef18ba0b805c721dd909fd6c8b0f90495e89cc551e4805d4e  docs/records/20261016-234915-s3-147-signer-column-s3.md
 1229e8884306e34eaf019c0b6cf975aee17188cea4010f9b3a3618f218cc6e65  docs/records/20261016-234915-s3-147-signer-column-ts-sdk-s3.json
-0cb08612c880387430b2263efc9938e7f3b8afc1102a6712ea5ca1136887af74  docs/records/20261017-000557-s3-147-signer-column-bsv-rs-s3.json
-a12df69f3bdf131e6af3dc2fe0b66578ec00e108a353ee47f4d0085cf3247445  docs/records/20261017-000557-s3-147-signer-column-go-sdk-s3.json
+63f28293795fdc7ef31e8d5c52835507d67f2a626f597c07876beff517a661ad  docs/records/20261017-000557-s3-147-signer-column-bsv-rs-s3.json
+f3766a418e2607eb2e331bc99a84ed11f74334210488f9bd67c376f952fae19b  docs/records/20261017-000557-s3-147-signer-column-go-sdk-s3.json
 ffcc67a783e1b73dd03235a66b38a3ff5f0d902b6f012ae0300a7fd2b0c64a61  docs/records/20261017-000557-s3-147-signer-column-s3.md
-47b4bf03d267305aa68805a13efa03ea2ad980caed5e8b419049e90bf9631cfa  docs/records/20261017-000557-s3-147-signer-column-ts-sdk-s3.json
+91b8b074c57c72ac92cc75058f16f342b5d64cbd17b8ee5e5f6c33b4731d3e3a  docs/records/20261017-000557-s3-147-signer-column-ts-sdk-s3.json
 8ae6c6843585a839a4ef5924563f9b4f536fe064e7f9a2992b0aa257b1344128  docs/records/20261017-002859-make-check-box.txt
 22c65c0024607c0db31a313a9e8a1f169a38b8cc763363e6d3fd7792d1daf54a  docs/records/20261017-012335-make-check-box.txt
 8fb2d7fc953c86d0bdaa66b2633b37defc0d561549aca4a23b1614abf80c3b5f  docs/records/20261017-013656-s3-148-measure-bsvrs-main-adapter.patch
-eb352a7e3c97ff29915c1d4bcec1e02ec8e50581235a6616dafa59668671431f  docs/records/20261017-013756-s3-148-measure-bsvrs-main-bsv-rs-s3.json
-0dfa82782142a0d89f9a7d18c54cd611e4358d43f37ca406b53e7c3e38acda95  docs/records/20261017-013756-s3-148-measure-bsvrs-main-go-sdk-s3.json
+1c649aa0e1151d1f574ec7828c74bd2a6d47d056bac959a0ef80b3567c6f6dd8  docs/records/20261017-013756-s3-148-measure-bsvrs-main-bsv-rs-s3.json
+3708ea9ad738fa2ac573fc92549481feae4d58690cfd1010e071c68dc44984a4  docs/records/20261017-013756-s3-148-measure-bsvrs-main-go-sdk-s3.json
 bb5897545e4db22bb5e46b5ef3e878a115652d4ded5d02098369b1d5b2bba6f1  docs/records/20261017-013756-s3-148-measure-bsvrs-main-s3.md
-e7b38538d31d939d1bb54783bcd92a025fc7414d365451487d5dff50ae292379  docs/records/20261017-013756-s3-148-measure-bsvrs-main-ts-sdk-s3.json
+740f09b6ee67cb551d70f5a1b53ead6038c1816e4f863f2fbe5770734601811b  docs/records/20261017-013756-s3-148-measure-bsvrs-main-ts-sdk-s3.json
 214b289591bef794930d7178c724126a85c597e5cbaa1d58e01803f14ff2f1e9  docs/records/20261017-014311-s2-149-sighash-theorems-s2.md
-2c97259e5b442b29570ae1aa9dceebacb9f81db126a2ad65b01daa2a2c398b7f  docs/records/20261017-015216-s3-152-signer-chain-s3.json
+2b458142247464c77eb55824b39229ed2cf71a851aa940c5ad39fd80cb85c84d  docs/records/20261017-015216-s3-152-signer-chain-s3.json
 ed3ae5993cc4ebc26a9ef26943b17cb1b532b23727fc18a390ad6da9b009a05e  docs/records/20261017-015216-s3-152-signer-chain-s3.md
 f8ff850893db246ddd1387de52563c4c3021ad917b1f614c2b2c083eca0e38be  docs/records/20261017-015216-s3-152-signer-chain-set.jsonl
 b34da08d55b40d42d8b18230106a798350f28dbed9e2fbdfb0286c42420013d4  docs/records/20261017-015602-column-bsv-rs-0.7.0-s3.json
 82a82685ac5b89c5fc43ddcb44d5c8b957eeb5e1d1f8c8d9ddbb7ffb6240088d  docs/records/20261017-015602-column-bsv-rs-0.7.0-s3.md
 6cb081fdc2929da134857af1df54d91e9d0800567573e1b3e3e628e2d3f2875a  docs/records/20261017-015602-column-bsv-rs-0.7.0-s3.txt
-2c044bfc73cfdbbace0c83d451ae0085fdf8c2b49932a1c3cf8b8c54c29c62c0  docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json
-7879d1664405ffb039951ce1eafbfe7f0e7ca8ead98e53fad619a0b07fe1a47e  docs/records/20261017-020326-s3-147-signer-column-go-sdk-s3.json
+13f560d2b51f9d11cd1ed136b755e0736c64922500773b7817adc46de2889863  docs/records/20261017-020326-s3-147-signer-column-bsv-rs-s3.json
+8a148580585d751364d7592cc29abc984435d56bc14aed62b035223fa472fc3b  docs/records/20261017-020326-s3-147-signer-column-go-sdk-s3.json
 58c141cb2a356677e7b217deb9564d73a8b26b0d59410494809abcd24ba43892  docs/records/20261017-020326-s3-147-signer-column-s3.md
-3bd575d18fc3817b1cec0a000c016b08a19ec7aec262b4e643965452e49d586f  docs/records/20261017-020326-s3-147-signer-column-ts-sdk-s3.json
+cb72a4c066f387f4840a54f9af6b1882a93181a0f48146fae8551f3141c85b46  docs/records/20261017-020326-s3-147-signer-column-ts-sdk-s3.json
 8111890ed55495a1316b44eeb9725c5f0dcedade1a124e1851c3dc51d21ac0f8  docs/records/20261017-020538-recon-5-s3.md
 9a42855ced4e1289d86273399df57b231f0798edb9f0c3cc04133e3474aa7fdc  docs/records/20261017-020538-recon-5-wire-bsv-rs-0.7.0-s3.jsonl
 05e9677674dd50851e293b0e5d5c037caf291b00f079fc264799f0a45d3f3735  docs/records/20261017-020635-s2-149-fix-thm-149-s2.md
-c1df5abc56a2d78a4f6ce8be98429832b6ba19cad359ff39ea880984938455d3  docs/records/20261017-021224-s3-152-signer-chain-v1-s3.json
+da87c572eba31405ed3087494344d1586769272eb2e8f364558528e3201c127e  docs/records/20261017-021224-s3-152-signer-chain-v1-s3.json
 463137d5832a789f7d1c571ead9f21e5d4cfa0472debae25856cf89f945d8643  docs/records/20261017-021224-s3-152-signer-chain-v1-set.jsonl
 bb7bdc20af45666a6288772032bef9ec61ed5671677e8237655da0fbdf644042  docs/records/20261017-023102-make-check-box.txt
 7b957d35d4cb9ed289de3021a0b8f7a7f67115bf59ac62c95181ecfafceae503  docs/records/20261017-030019-make-check-box.txt
@@ -1402,17 +1403,17 @@ d6358e0de8195e536cb2765c496ea43f4d4addcdfbd0287e133bf10b2bcbb529  docs/records/2
 8e94545de49ccd4a7ec7322586984f8adf04adae46c27d5b1c18b6c18cc4ea26  docs/records/20261018-003328-s6-66-cut2-second-oracle-s3.json
 3c9b847dfe4ae468c02e8d47e6c0e17cefbf7cc4cf900f284d6a72b5df302158  docs/records/20261018-004255-s6-66-cut2-second-oracle-s3.json
 386b390f3a34b0c1e36445faf86aa8e86c31cfd48887f701824885255a2f9d66  docs/records/20261018-004634-make-check-box.txt
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.json
+74057a708e7c9275b603722004a04c44dd2699c0bce95722f38ef94aae98c948  docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-005228-s6-66-gate95-block-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.json
+8dac6c6db970869ec3e68c215e3cdd7b3e4752c5f2e210a550a9e4a9aa7e58f2  docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-010158-s6-66-gate95-chain-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.json
+def1cfd0d310ae0f5fecfb6898a18e58c0432a2a4e3b15b67b9284a18d37e103  docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-011127-s6-66-gate95-finality-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.json
+de4308dfae19531ad27331ce0cb403fcafcbd12aaa965fec9d9b6548aff12aa5  docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-012055-s6-66-gate95-mempool-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.json
+8a2c41e2f40f8096b3f7f9c59078018c98cabc79e03991fed9e448aa372b8e23  docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-013024-s6-66-gate95-oracle-regtest-s3.md
-ccb00265380ec4eb7259f744d946f4f44d9fc9237a0e567a3c0c8676fffbfcb3  docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.json
+db462c1fc63c864bcbd9d97eece200a350eadce075fd9bcd5510f289efade3e8  docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.json
 d01c0aba37ee0c25ae836c3e364e5c151093f2f02106ace353657db46ed0a84d  docs/records/20261018-013956-s6-66-gate95-utxo-regtest-s3.md
 49bd72cd428be9b2450feabb938f630caae681977469a09a1d5cbb3c88142361  docs/records/20261018-021011-s8-98-bridge-theorem-s1.md
 a68561deecfcceceb90b328e09bcf7a3d8b1ebb6dc5ae3470095de6d1ec40cef  docs/records/20261018-024024-make-check-box.txt
@@ -1546,7 +1547,11 @@ dc86ca282e2717dfd3d311d43b2223a41e2238f79a17e02694d07ae4e8d5979c  docs/records/2
 2f1b45f58d0fe9f8afda6c52b21f374a6cf1bc6f5f3a78a5aa7d75059792183b  docs/records/20261026-165004-make-check-box.txt
 a5fcf9040ac4d65c9d36d34710c6afe2af4c1df0f45df1dc16b36df875bec254  docs/records/20261026-180912-flip-public-cap.md
 ec5a531519e8c3f7735da32b83d88ff854736698dd4f564118e0f2207f6a3603  docs/records/20261026-181200-make-check-box.txt
-d67ad2d7b2f2d8d8069488637a8ff7277640e9221c7b4a1d6c0a1422b0ffa93e  docs/records/INDEX.md
+08247dba23cffabf2971df5a93fc06cedec01873fd75baf42c72dcaa70d17c0d  docs/records/20261026-190244-hosted-gate-red-json-records-cap.md
+3ec1951a5ec8053820f71108b280ce97583d109cb82817877ee7ad154db88132  docs/records/20261026-195049-make-check-box.txt
+92ff1a56594a2e5989051f11d5926128d4bf984f371b14227b6f372d976b9685  docs/records/20261026-200807-make-check-box.txt
+e2ad7fa8205039a5fed80d375e0cb218c7dcd1cc93f065a3d038161314041be9  docs/records/20261026-202745-make-check-box.txt
+a2f9c05bb9480f7f91d5be327c968422311e535b7e8a880e1ec57e984c75dfa1  docs/records/INDEX.md
 6c964296b12b82d7973345175ec4f3faedb6c6a93cf55495be51ca130ee15307  eval/README.md
 090ffa09e1c248559b5cf8421b04f84d752c00e929e48f4c0b3422843d9f897f  eval/bsvs
 deaf00913ba4423dfc1b04848bd70cb7093fe3f663fc9d93f455650616f19640  eval/ladder48.py
@@ -2055,9 +2060,9 @@ fc9e8290361e2002fa038895e55b9576dabe05843d8908285d774150877f3489  tools/cpp_extr
 d66db3334a82e85a33bbdfcd2f3e96da3f37def25cbaa6ec8f704daa992cdcc0  tools/cpp_replay.py
 0c82cebe7a8887de8becdd60bc991548fc3a4a27a9f49803824897482d7c3f5f  tools/cpp_replay_run.sh
 f04544d04addd4984e993a212118a2d5ab3e22d7a53f2940038482bf87facf8b  tools/discretion_overlap.py
-af62d51a03fa2fb0383a56b7b7eeba2a7a80f604622e929d7a9a4deead9440e6  tools/export_gate.py
+457ccab3f8a007548d3a4d41e25ec10638b9c1461d4ad2d948e7c7b8af091d88  tools/export_gate.py
 c5cc0c65d80d99c281aeade85b3f9a876551ca406fbbb3021f3e09edc5319ba4  tools/export_gate.sh
-63f8eddfe5bc619d5a329740ecdef31eb2ed210d45758999f3f273fdeab1844d  tools/export_public.py
+24a4720b0ffbff68693c0979dff7af4bb32efcfb90b474e60a220329696bcd45  tools/export_public.py
 7665bb0cf87824f26afbfd759331881f943cfe95346f52932bf2f4f10f5ba3e7  tools/export_public.sh
 e8e53d3edaf1be3234152a1ce5cf4c4408711e541c6a55495d244e32757f9502  tools/export_withheld.txt
 cb14d844d372596dc7b855e7af0a7b930546dc0f77f77e11bf7efbc6f48118d0  tools/export_withheld_entries.txt
@@ -2095,7 +2100,7 @@ b638aa6dd3c54928eebe6416371056218a6f524a2fb353c59a73294137eb6c3d  tools/node_con
 78f5c4bda565f82a441b02896dd956d4ee715e73ad186b92671ba3e1a8ff78ca  tools/oracle_check.sh
 e541aa2ecc1ad27c9f15ad7b9e59f839d8b909a6b8ddad91a9631c3100bc45f8  tools/prune_replay.py
 d02eaf3f5cfde9f2dc596be912c2eef90121aea61ce1fec6640e3bc6d1931ae3  tools/receipt_trim.py
-022f5afe7f86beb0b3961e7a1632414f4636de64764ebdca507b159ca0affcb7  tools/records_index.py
+c11e9dcd7080ac007e6c1a9f8b72f3d8757fb0bc40b7476a16a0684fa8ef7065  tools/records_index.py
 7b2fb818db42ef94c8e17a74f66957eb16404074b33c7851dc7a591852001197  tools/replay_p2sh.py
 3e8882b9d181cf742f1b513a8e47f105dd690d69062e7d04a37d401f2e54c9e9  tools/ripemd_tables.py
 a5668b3483b7e97d36a78e23ea83745ee2ccc9a67c54760827e4c1c7eed5225f  tools/road_variant.py
@@ -2123,7 +2128,7 @@ a06999afa42051f5e9e1a011acabaf06af6087a7be18364839434685fdbe08e1  tools/test_che
 69bec466af52c0054f6a9582fd6e2da6f5efac79686fa72a845d670ed5ca82f5  tools/test_conformance.py
 a57c38ba51fa20889607b8ae9292e50115a11845228148a10aeac60f6e93fbd7  tools/test_export_cargo.py
 a91771ceab3034606ded35509d03508ac8d845b6d797bd78ccc70090ed5ed73c  tools/test_export_gate.py
-c9b3e0d8a64a668d7279cd4c34b4bd691bd44f4f1587a9635fc4f5304348634d  tools/test_export_pointers.py
+adb99a2343697a40fbb42908415894701e63c65f3e71183636a88ed241a6ad6a  tools/test_export_pointers.py
 af2d4a24cd16b629245dfcec47a4da970d98b923602cc84de211e189326d4a0c  tools/test_export_rules.py
 346fe2b5ebc9c7c075f9b02a4bc41bcfca586650d1ce4bb391d989599779297c  tools/test_fixtures_proof.py
 587bc10c9a85402b5b08136f4f5a56355edf163eff2b6234bf0fb143f37f149d  tools/test_mechanism_hex.py
@@ -3304,6 +3309,9 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/records/20261026-162925-make-check-box.txt
 3  docs/records/20261026-165004-make-check-box.txt
 3  docs/records/20261026-181200-make-check-box.txt
+3  docs/records/20261026-195049-make-check-box.txt
+3  docs/records/20261026-200807-make-check-box.txt
+3  docs/records/20261026-202745-make-check-box.txt
 
 ## cargo-transformed: targets-dropped path (kind name, ...) (the Cargo transform)
 1  harness/Cargo.toml  bin gen
@@ -3314,8 +3322,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 ## public pages moved: public-path -> exported-as sha256
 CLAUDE.public.md -> CLAUDE.md e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc
 
-pointer-transformed 546 files
-pointer-group local-paths 5728 occurrences; records 5577; substitutions 151
+pointer-transformed 550 files
+pointer-group local-paths 5738 occurrences; records 5586; substitutions 152
 pointer-group modal-names 56 occurrences; records 40; substitutions 16
 pointer-group addresses 6 occurrences; records 5; substitutions 1
 
@@ -3830,6 +3838,9 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 3  local-paths  records  docs/records/20261026-162925-make-check-box.txt
 3  local-paths  records  docs/records/20261026-165004-make-check-box.txt
 3  local-paths  records  docs/records/20261026-181200-make-check-box.txt
+3  local-paths  records  docs/records/20261026-195049-make-check-box.txt
+3  local-paths  records  docs/records/20261026-200807-make-check-box.txt
+3  local-paths  records  docs/records/20261026-202745-make-check-box.txt
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00000.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00500.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-03000.manifest.json
@@ -3871,3 +3882,4 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 7  modal-names  substitution  tools/modal_check.py
 3  modal-names  substitution  tools/modal_probe_56.py
 1  addresses  substitution  tools/test_export_cargo.py
+1  local-paths  substitution  tools/test_export_pointers.py

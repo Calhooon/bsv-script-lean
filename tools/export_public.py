@@ -381,6 +381,57 @@ def transform(data, pointers):
     return (head + ''.join(out)).encode('utf-8', 'surrogateescape'), count
 
 
+def transform_json(data, pointers):
+    """The records transform for a JSON record: a withheld LINE would leave no JSON (the hosted gate of
+    2026-10-26 found 63 of 186 exported records unreadable), so every string a pointer matches becomes
+    the marker and the document stays JSON; (new bytes, strings replaced). The shape (one line or
+    indented) is kept; a file that is not JSON takes the line transform."""
+    text = data.decode('utf-8', 'surrogateescape')
+    try:
+        obj = json.loads(text)
+    except ValueError:
+        return transform(data, pointers)
+    count = 0
+
+    def visit(x):
+        nonlocal count
+        if isinstance(x, str):
+            if any(p.search(x) for p in pointers):
+                count += 1
+                return MARKER
+            return x
+        if isinstance(x, list):
+            return [visit(v) for v in x]
+        if isinstance(x, dict):
+            out, keys = {}, 0
+            for k, v in x.items():
+                if any(p.search(k) for p in pointers):
+                    keys += 1; count += 1
+                    k = f'{MARKER} (key {keys})'
+                out[k] = visit(v)
+            return out
+        return x
+    obj = visit(obj)
+    if not count:
+        return data, 0
+    one_line = '\n' not in text.rstrip('\n')
+    out = json.dumps(obj, separators=(',', ':')) if one_line else json.dumps(obj, indent=2)
+    return (out + ('\n' if text.endswith('\n') else '')).encode('utf-8', 'surrogateescape'), count
+
+
+def json_strings(obj):
+    """Every string of a JSON document, keys included."""
+    if isinstance(obj, str):
+        yield obj
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from json_strings(v)
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            yield k
+            yield from json_strings(v)
+
+
 def load_substitutions(path):
     """Only the three substitution groups; longer alternatives take precedence."""
     groups = {g: [] for g in ('local-paths', 'modal-names', 'addresses')}
@@ -749,6 +800,20 @@ def withhold_rule_artifact(path, data, plan):
 
 def withhold_rule_history(path, data, pointers, plan):
     """Hash-pinned spans feed the existing records transform, including wrapped lines."""
+    if path.endswith('.json'):
+        try:
+            obj = json.loads(data.decode('utf-8', 'surrogateescape'))
+        except ValueError:
+            obj = None
+        if obj is not None:
+            per = {}
+            for s in json_strings(obj):
+                for group, patterns in plan['pointers'].items():
+                    if any(p.search(s) for p in patterns):
+                        per[group] = per.get(group, 0) + 1
+            if per:
+                plan['history'][path] = per
+            return transform_json(data, pointers)
     lines = data.decode('utf-8', 'surrogateescape').splitlines(keepends=True)
     span = plan['spans'].get(path)
     marked = {n for a, b in span['lines'] for n in range(a, b + 1)} if span else set()
@@ -1037,6 +1102,23 @@ def make_transform(target, cargo_changes, exported):
     return changes, len(found)
 
 
+def regenerate_records_index(target, exported):
+    """The export's own records index. The transform changes what a record says (a withheld line can be
+    the one that names a commit; a JSON record's matched strings become the marker), so the index the
+    private tree carries is not the index of the exported records (the hosted gate of 2026-10-26, the
+    seed leg). Rendered by the exported tool over the exported tree; the manifest's digest follows."""
+    tool, index = os.path.join(target, 'tools', 'records_index.py'), 'docs/records/INDEX.md'
+    if not os.path.isfile(tool) or not os.path.isfile(os.path.join(target, index)):
+        return 'not rendered (the tool or the index is not exported)'
+    got = subprocess.run([sys.executable, tool], capture_output=True, text=True, cwd=target)
+    if got.returncode != 0:
+        sys.exit(f'export: the records index over the export failed: {(got.stdout + got.stderr).strip()[-300:]}')
+    with open(os.path.join(target, index), 'rb') as f:
+        digest = hashlib.sha256(f.read()).hexdigest()
+    exported[:] = [(p, digest if p == index else d) for p, d in exported]
+    return got.stdout.strip()
+
+
 def move_public_pages(target, exported, pointer_changes):
     """Move each exported page of PUBLIC_PAGES over its private namesake (#169); [(public, private, sha256)]."""
     moves = []
@@ -1125,6 +1207,8 @@ def main():
     moves = move_public_pages(target, exported, pointer_changes)
     cargo_changes, source_counts = cargo_transform(target, rules, [p for p, _ in withheld], exported)
     make_changes, makefiles = make_transform(target, cargo_changes, exported)
+    index_note = regenerate_records_index(target, exported)
+    print(f'export: records index over the export: {index_note}')
 
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     counts = {g: sum(1 for _, wg in withheld if wg == g) for g in groups}
@@ -1156,6 +1240,7 @@ def main():
         m.write(f'makefile-transformed {len(make_changes)} of {makefiles} Makefiles, '
                 f'{sum(len(t) for _, t in make_changes)} targets dropped (the Makefile transform)\n')
         m.write(f'public-pages-moved {len(moves)} (PUBLIC_PAGES)\n')
+        m.write(f'records-index rendered over the export: {index_note}\n')
         m.write(f'lists-read-at {commit[:12]} ({len(LISTS)} lists; working tree differs: {", ".join(drift) or "none"})\n')
         m.write('\n## exported: sha256 path\n')
         for path, digest in exported:

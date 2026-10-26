@@ -1,4 +1,3 @@
-[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "stamp [M]": "2026-09-30T01:25:33.205924+00:00",
   "model [LIT]": "Codex GPT-6.1-Sol",
@@ -13,6 +12,6 @@
   "tripwire_exit [X]": 0,
   "box_free_before [M]": "89%",
   "box_start_gate [X]": "System-wide memory free percentage: 89%\n21:21  up 5 days,  5:56, 3 users, load averages: 4.56 4.65 4.51\ntotal = 2048.00M  used = 1006.88M  free = 1041.12M  (encrypted)\nslot1: free\nslot2: free\nbox start gate [X]: PASS\n",
-[withheld at export: a sibling tree's line]
+  "deps_offline [X]": "[withheld at export: a sibling tree's line]",
   "corpus_diff_from_draft_exit [X]": 0
 }

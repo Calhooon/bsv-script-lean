@@ -1,646 +1,645 @@
-[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
- "commit_of_run": "9b9f8020",
- "host": "box",
- "label": "[M]",
- "lane": "trait-97",
- "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
- "record": "20261015-034125-s8-97-trait-witness-s4b",
- "run_teranode_sha256": "c3443af8cef6b748e4c59cc239304a7bbdd04260cf79bac72fc2a6f03225bff1",
- "seat": "S4b",
- "seed_40": {
-  "artifacts_sha256": {
-   "answers.jsonl": "65de5c0b0ec441f08d330329899d6cd22d847ea894a1af46a0104e640a277c0d",
-   "funding.jsonl": "fe4f07d06bb78b42fa17c8381d3a3d8d2918ac66b43800e286b9f4721fbb87a6",
-   "rpc.jsonl": "e5e24c8fb3cc1053a46602cc5094bb7734ba36d1a51cb33d3d94ff50ae7f0374",
-   "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  "counts": {
-   "block": {
-    "agreeing": 39,
-    "disagreeing": 0,
-    "entries": 40,
-    "judged": 39,
-    "no_reference": 0,
-    "undecided": 1,
-    "unfundable": 0
-   },
-   "mempool": {
-    "agreeing": 39,
-    "disagreeing": 0,
-    "entries": 40,
-    "judged": 39,
-    "no_reference": 0,
-    "undecided": 1,
-    "unfundable": 0
-   }
-  },
-  "final_tip": {
-   "bestblockhash": "0a630f80b5b13e2bfcb91f5e43393220ee5944ed24e35199ce353a4f2dfc0cff",
-   "blocks": 201,
-   "chain_work": "0000000000000000000000000000000000000000000000000000000000000194",
-   "header_median_time_past": 0,
-   "mediantime": 1792035853,
-   "time": 1792035854
-  },
-  "funding_wall": null,
-  "initial_tip": {
-   "bestblockhash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
-   "blocks": 0,
-   "chain_work": "0000000000000000000000000000000000000000000000000000000000000002",
-   "header_median_time_past": 0,
-   "mediantime": 1296688602,
-   "time": 1296688602
-  },
-  "instance": {
-   "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
-   "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
-   "host": "box",
-   "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
-   "settings_hash": "cc2759339de9ffbc04c368eb3234094705c14d24030b1410c1f3d44d721cdcc3",
-   "tag": "v0.16.0"
-  },
-  "manifest_sha256": "4c7848ea5f7dba1a4277fd37b8988ee4b77ee66500fb25e74929b31417e5b593",
-  "rpc_calls": 217,
-  "undecided": [
-   {
-    "id": "seed-000038",
-    "path": "block",
-    "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
-   },
-   {
-    "id": "seed-000038",
-    "path": "mempool",
-    "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
-   }
-  ],
-  "unfundable": [],
-  "wall_seconds": 8.536197
- },
- "witness": {
-  "journal_lines": 62,
-  "journal_sha256": "d285c7587e8b612f570eaaddf265ef5bd6556e747498dadd3cfacab17235a3d0",
-  "receipts": {
-   "F1": {
-    "GetBlockHeadersFromOldest": {
-     "grpc_code": "Unimplemented",
-     "status": "rpc error: code = Unimplemented desc = method GetBlockHeadersFromOldest not implemented"
+  "commit_of_run": "9b9f8020",
+  "host": "box",
+  "label": "[M]",
+  "lane": "trait-97",
+  "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
+  "record": "20261015-034125-s8-97-trait-witness-s4b",
+  "run_teranode_sha256": "c3443af8cef6b748e4c59cc239304a7bbdd04260cf79bac72fc2a6f03225bff1",
+  "seat": "S4b",
+  "seed_40": {
+    "artifacts_sha256": {
+      "answers.jsonl": "65de5c0b0ec441f08d330329899d6cd22d847ea894a1af46a0104e640a277c0d",
+      "funding.jsonl": "fe4f07d06bb78b42fa17c8381d3a3d8d2918ac66b43800e286b9f4721fbb87a6",
+      "rpc.jsonl": "e5e24c8fb3cc1053a46602cc5094bb7734ba36d1a51cb33d3d94ff50ae7f0374",
+      "witnesses.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "GetLatestBlockHeaderFromBlockLocator": {
-     "grpc_code": "Unimplemented",
-     "status": "rpc error: code = Unimplemented desc = method GetLatestBlockHeaderFromBlockLocator not implemented"
-    }
-   },
-   "F3": {
-    "acceptance": {
-     "answer": {
-      "result": {
-       "reason": "",
-       "txid": "6771f74c18b03a1fb5178f6d71936d10ca157e1905cbb2b454fb4609cf0846c4",
-       "valid": true
-      }
-     },
-     "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823010000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
-    },
-    "refusal": {
-     "answer": {
-      "error": {
-       "details": [
-        {
-         "@type": "type.googleapis.com/errors.TError",
-         "code": "PROCESSING",
-         "file": "github.com/bsv-blockchain/teranode/services/validator/Validator.go",
-         "function": "validator.(*Validator).validateInternal",
-         "line": 1012,
-         "message": "[Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction"
-        },
-        {
-         "@type": "type.googleapis.com/errors.TError",
-         "code": "TX_INVALID",
-         "file": "github.com/bsv-blockchain/teranode/services/validator/ScriptVerifierGoBDK.go",
-         "function": "validator.(*scriptVerifierGoBDK).mapBDKValidationError",
-         "line": 433,
-         "message": "GoBDK fail to ValidateTransaction"
-        },
-        {
-         "@type": "type.googleapis.com/errors.TError",
-         "code": "TX_INVALID",
-         "file": "github.com/bsv-blockchain/teranode/services/validator/ScriptVerifierGoBDK.go",
-         "function": "validator.(*scriptVerifierGoBDK).mapBDKValidationError",
-         "line": 433,
-         "message": "Script evaluated without error but finished with a false/empty top stack element"
-        }
-       ],
-       "grpc_code": "Internal",
-       "grpc_error": "rpc error: code = Internal desc = [Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction",
-       "message": "PROCESSING (4): [Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction -> TX_INVALID (31): GoBDK fail to ValidateTransaction -> TX_INVALID (31): Script evaluated without error but finished with a false/empty top stack element"
-      }
-     },
-     "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823000000000152ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
-    }
-   },
-   "F4": [
-    {
-     "answer": {
-      "error": {
-       "code": -25,
-       "message": "TX rejected: PROCESSING (4): [Validate][52a9c4d07fe1481dab6345b37dbe9952ab5e96b52302e8fe3c7cce63aca1e2d0] error validating transaction -> TX_INVALID (31): GoBDK fail to ValidateTransaction -> TX_INVALID (31): Script evaluated without error but finished with a false/empty top stack element"
-      }
-     },
-     "case": "script refusal",
-     "innermost": "TX_INVALID",
-     "rpc_code": -25,
-     "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823020000000152ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
-    },
-    {
-     "answer": {
-      "error": {
-       "code": -25,
-       "message": "TX rejected: PROCESSING (4): failed to decorate previous outputs for tx d8c5cc70d70ba36b26e56eb07486e2a7498869edb9b2241042232fe1366a6051"
-      }
-     },
-     "case": "missing input",
-     "innermost": "PROCESSING",
-     "rpc_code": -25,
-     "tx": "01000000011111111111111111111111111111111111111111111111111111111111111111020000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
-    },
-    {
-     "answer": {
-      "error": {
-       "code": -25,
-       "message": "TX rejected: UTXO_NON_FINAL (71): [Validate][af3f946b8c32e1e99c032e1f4c63c6e3588ef74181dc0e4f6100a89854650502] transaction is not final -> TX_INVALID (31): transactions with no inputs are not valid, and therefore not final"
-      }
-     },
-     "case": "the reference's vin-empty bytes",
-     "innermost": "TX_INVALID",
-     "rpc_code": -25,
-     "tx": "0200000000018403000000000000015100000000"
-    }
-   ],
-   "F5_F11": {
-    "block_a": {
-     "block_time": 0,
-     "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
-     "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-     "header": "0000002075b1cf73cd0928d22e65bd2458539899b095782cabfb52a996f46cabc92ce20b14a73a4a256b40d09af56353667522f0653cb1d58319354ec8aed59e8479036e7c4bd06affff7f2003000000",
-     "height": 103,
-     "id": 103,
-     "invalid": true,
-     "median_time_past": 0,
-     "merkleroot": "6e0379849ed5aec84e351983d5b13c65f02275665363f59ad0406b254a3aa714",
-     "mined_set": true,
-     "peer_id": "",
-     "previousblockhash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
-     "subtrees_set": true,
-     "time": 1792035708,
-     "timestamp": 1792035693,
-     "tx_count": 3
-    },
-    "invalidate": {
-     "result": null
-    },
-    "mine_b": null,
-    "reconsider": {
-     "error": {
-      "code": -25,
-      "message": "Block failed revalidation: SERVICE_ERROR (59): [RevalidateBlock][Block 1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f (height: 103, id: 103, txCount: 3, size: 362)] failed to fetch missing subtree data -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataForBlock] Failed to fetch subtree data for block 1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f -> PROCESSING (4): catchup failure reported at source \" map[catchup_failure_reported:true]\" -> EXTERNAL (8): [catchup:fetchAndStoreSubtreeAndSubtreeData] all 1 peer attempts failed to fetch subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a [primary  ()=PROCESSING (4): [catchup:fetchAndStoreSubtreeData] Failed to fetch subtreeData for ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataFromPeer] invalid peer base URL for subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> INVALID_ARGUMENT (1): peer base URL has invalid scheme \"\" (only http/https allowed)] -> PROCESSING (4): [catchup:fetchAndStoreSubtreeData] Failed to fetch subtreeData for ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataFromPeer] invalid peer base URL for subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> INVALID_ARGUMENT (1): peer base URL has invalid scheme \"\" (only http/https allowed)"
-     }
-    },
-    "steps": [
-     {
-      "at_ms": 3194,
-      "chain_tips": [
-       {
-        "branchlen": 0,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "active"
-       }
-      ],
-      "f7_membership": [
-       {
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "id": 103,
-        "invalid": false,
-        "on_active": true
-       }
-      ],
-      "f7_txmeta": {
-       "blockHashes": [
-        "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f"
-       ],
-       "blockHeights": [
-        103
-       ],
-       "blockIDs": [
-        103
-       ],
-       "mainChainIndex": 0
+    "counts": {
+      "block": {
+        "agreeing": 39,
+        "disagreeing": 0,
+        "entries": 40,
+        "judged": 39,
+        "no_reference": 0,
+        "undecided": 1,
+        "unfundable": 0
       },
-      "step": "A mined",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
-       "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-       "height": 103
+      "mempool": {
+        "agreeing": 39,
+        "disagreeing": 0,
+        "entries": 40,
+        "judged": 39,
+        "no_reference": 0,
+        "undecided": 1,
+        "unfundable": 0
       }
-     },
-     {
-      "at_ms": 3208,
-      "chain_tips": [
-       {
-        "branchlen": 1,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "invalid"
-       }
-      ],
-      "f7_membership": [],
-      "f7_txmeta": {
-       "blockHashes": [],
-       "blockHeights": [],
-       "blockIDs": [],
-       "mainChainIndex": -1
-      },
-      "step": "A invalidated, read at once",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000ce",
-       "hash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
-       "height": 102
-      }
-     },
-     {
-      "at_ms": 5223,
-      "chain_tips": [
-       {
-        "branchlen": 1,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "invalid"
-       }
-      ],
-      "f7_membership": [],
-      "f7_txmeta": {
-       "blockHashes": [],
-       "blockHeights": [],
-       "blockIDs": [],
-       "mainChainIndex": -1
-      },
-      "step": "A invalidated, read after 2 s",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000ce",
-       "hash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
-       "height": 102
-      }
-     },
-     {
-      "at_ms": 5301,
-      "chain_tips": [
-       {
-        "branchlen": 1,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "invalid"
-       },
-       {
-        "branchlen": 0,
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "status": "active"
-       }
-      ],
-      "f7_membership": [
-       {
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "id": 104,
-        "invalid": false,
-        "on_active": true
-       }
-      ],
-      "f7_txmeta": {
-       "blockHashes": [
-        "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
-       ],
-       "blockHeights": [
-        103
-       ],
-       "blockIDs": [
-        104
-       ],
-       "mainChainIndex": 0
-      },
-      "step": "B mined",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
-       "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-       "height": 103
-      }
-     },
-     {
-      "at_ms": 34591,
-      "chain_tips": [
-       {
-        "branchlen": 1,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "invalid"
-       },
-       {
-        "branchlen": 0,
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "status": "active"
-       }
-      ],
-      "f7_membership": [
-       {
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "id": 104,
-        "invalid": false,
-        "on_active": true
-       }
-      ],
-      "f7_txmeta": {
-       "blockHashes": [
-        "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
-       ],
-       "blockHeights": [
-        103
-       ],
-       "blockIDs": [
-        104
-       ],
-       "mainChainIndex": 0
-      },
-      "step": "A reconsidered, read at once",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
-       "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-       "height": 103
-      }
-     },
-     {
-      "at_ms": 36605,
-      "chain_tips": [
-       {
-        "branchlen": 1,
-        "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
-        "height": 103,
-        "status": "invalid"
-       },
-       {
-        "branchlen": 0,
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "status": "active"
-       }
-      ],
-      "f7_membership": [
-       {
-        "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-        "height": 103,
-        "id": 104,
-        "invalid": false,
-        "on_active": true
-       }
-      ],
-      "f7_txmeta": {
-       "blockHashes": [
-        "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
-       ],
-       "blockHeights": [
-        103
-       ],
-       "blockIDs": [
-        104
-       ],
-       "mainChainIndex": 0
-      },
-      "step": "A reconsidered, read after 2 s",
-      "tip": {
-       "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
-       "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
-       "height": 103
-      }
-     }
-    ]
-   },
-   "F6": {
-    "read_timeout_seconds": 30,
-    "transport_error": "asset: asset read: Resource temporarily unavailable (os error 35)",
-    "txmeta_json": {
-     "blockHashes": [
-      "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175"
-     ],
-     "blockHeights": [
-      102
-     ],
-     "blockIDs": [
-      102
-     ],
-     "fee": 100000,
-     "isCoinbase": false,
-     "lockTime": 0,
-     "mainChainIndex": 0,
-     "parentTxHashes": [
-      "8130272eda1d17b8e10a1b5a3af7fcc9e4da1f5199f33c71beb977f60b002a06"
-     ],
-     "sizeInBytes": 257,
-     "subtreeHashes": [
-      "36f1ac705f12bdfcadf890f70ab0d4924c89ea595e421b93d21162f408181fa3"
-     ],
-     "subtreeIdxs": [
-      0
-     ],
-     "tx": {
-      "hex": "0200000001062a000bf677b9be713cf399511fdae4c9fcf73a5a1b0ae1b8171dda2e273081000000006a473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0ffffffff071027000000000000025187102700000000000002518710270000000000000251871027000000000000025187102700000000000002518710270000000000000251870081032a010000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
-      "inputs": [
-       {
-        "previousTxSatoshis": 5000000000,
-        "previousTxScript": "76a91460c81414c147a966597508d2c077d5f108d1f25688ac",
-        "sequence": 4294967295,
-        "txid": "8130272eda1d17b8e10a1b5a3af7fcc9e4da1f5199f33c71beb977f60b002a06",
-        "unlockingScript": "473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0",
-        "vout": 0
-       }
-      ],
-      "lockTime": 0,
-      "outputs": [
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "5187",
-        "satoshis": 10000
-       },
-       {
-        "lockingScript": "76a91460c81414c147a966597508d2c077d5f108d1f25688ac",
-        "satoshis": 4999840000
-       }
-      ],
-      "txid": "23f8d33111ab61162cd4743cd34563b263467fcaaf77455672e47708e9f1bafb",
-      "version": 2
-     },
-     "txAvailable": true
-    }
-   },
-   "F7": {
-    "listed_by_assembly": true,
-    "submit": {
-     "result": "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768"
     },
-    "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823030000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
-    "txid": "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768",
-    "verbose": {
-     "result": {
-      "currentpriority": 0,
-      "depends": [
-       "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-       "c44608cf0946fb54b4b2cb05197e15ca106d93716d8f17b51f3ab0184cf77167",
-       "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768"
-      ],
-      "fee": 5000002000,
-      "height": 103,
-      "size": 3,
-      "startingpriority": 0,
-      "time": 1792035708
-     }
-    }
-   },
-   "F9": {
-    "full_answer": "scratch/runs-97/20261015-034125/witness/receipts.settings.json (the lane's worktree, not committed)",
-    "http": 200,
-    "kafka_settings": {},
-    "kafka_settings_by_key": {
-     "answer_commit": "4edb60a",
-     "answer_version": "v0.16.0",
-     "full_answer_bytes": 771086,
-     "full_answer_sha256": "72f60f114d3092f3e3f546a1be2dbefa071bf94da35cf06899b7441ab1a536f1",
-     "label": "[M]",
-     "read_by": "python3 over the saved full answer (the run binary's extractor matched no row: it walked object keys, the answer lists {key, currentValue} rows; fixed after the run)",
-     "rows": [
+    "final_tip": {
+      "bestblockhash": "0a630f80b5b13e2bfcb91f5e43393220ee5944ed24e35199ce353a4f2dfc0cff",
+      "blocks": 201,
+      "chain_work": "0000000000000000000000000000000000000000000000000000000000000194",
+      "header_median_time_past": 0,
+      "mediantime": 1792035853,
+      "time": 1792035854
+    },
+    "funding_wall": null,
+    "initial_tip": {
+      "bestblockhash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
+      "blocks": 0,
+      "chain_work": "0000000000000000000000000000000000000000000000000000000000000002",
+      "header_median_time_past": 0,
+      "mediantime": 1296688602,
+      "time": 1296688602
+    },
+    "instance": {
+      "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+      "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+      "host": "box",
+      "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
+      "settings_hash": "cc2759339de9ffbc04c368eb3234094705c14d24030b1410c1f3d44d721cdcc3",
+      "tag": "v0.16.0"
+    },
+    "manifest_sha256": "4c7848ea5f7dba1a4277fd37b8988ee4b77ee66500fb25e74929b31417e5b593",
+    "rpc_calls": 217,
+    "undecided": [
       {
-       "category": "Kafka",
-       "currentValue": "rejectedtx",
-       "defaultValue": "rejectedtx",
-       "key": "KAFKA_REJECTEDTX"
+        "id": "seed-000038",
+        "path": "block",
+        "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
       },
       {
-       "category": "Kafka",
-       "currentValue": "memory://127.0.0.1:9092/rejectedtx?partitions=1&replication=1&retention=600000&flush_bytes=1024&flush_messages=10000&flush_frequency=1s&replay=0",
-       "defaultValue": "",
-       "key": "kafka_rejectedTxConfig"
-      },
-      {
-       "category": "Kafka",
-       "currentValue": "tx-policy-rejected",
-       "defaultValue": "tx-policy-rejected",
-       "key": "KAFKA_TX_POLICY_REJECTED"
-      },
-      {
-       "category": "Kafka",
-       "currentValue": "",
-       "defaultValue": "",
-       "key": "kafka_txPolicyRejectedConfig"
+        "id": "seed-000038",
+        "path": "mempool",
+        "reason": "outpoint rebinding can change a signature digest; this adapter does not re-sign, because no entry carries its keys"
       }
-     ],
-     "rows_total": 660
-    }
-   },
-   "attestation": {
-    "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
-    "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
-    "host": "box",
-    "listeners": [
-     "127.0.0.1:8000",
-     "127.0.0.1:8081",
-     "127.0.0.1:8082",
-     "127.0.0.1:8084",
-     "127.0.0.1:8085",
-     "127.0.0.1:8086",
-     "127.0.0.1:8087",
-     "127.0.0.1:8088",
-     "127.0.0.1:8090",
-     "127.0.0.1:8833",
-     "127.0.0.1:8834",
-     "127.0.0.1:9091",
-     "127.0.0.1:9292"
     ],
-    "pid": 59160,
-    "rpc": "http://127.0.0.1:9292",
-    "settings": {
-     "environment": {
-[withheld at export: a sibling tree's line]
-      "GOMAXPROCS": "4",
-      "GOMEMLIMIT": "6GiB",
-[withheld at export: a sibling tree's line]
-      "LC_ALL": "C",
-      "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
-      "SETTINGS_CONTEXT": "test",
-      "SETTINGS_ENV_FILE": "/dev/null",
-[withheld at export: a sibling tree's line]
-     },
-     "files": {
-      "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
-      "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
-      "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
-     },
-     "services": [
-      "-all=0",
-      "-blockchain=1",
-      "-subtreevalidation=1",
-      "-blockvalidation=1",
-      "-blockassembly=1",
-      "-asset=1",
-      "-propagation=1",
-      "-rpc=1",
-      "-p2p=0",
-      "-alert=0",
-      "-legacy=0",
-      "-validator=1"
-     ]
-    },
-    "settings_hash": "d09eca848babd52810b996edb16c387fd32906778925c429348982d14155da8f",
-    "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
-    "tag": "v0.16.0",
-    "validator": "127.0.0.1:8081"
-   },
-   "chain": "regtest",
-   "fsm": "RUNNING",
-   "funding": {
-    "tx": "0200000001062a000bf677b9be713cf399511fdae4c9fcf73a5a1b0ae1b8171dda2e273081000000006a473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0ffffffff071027000000000000025187102700000000000002518710270000000000000251871027000000000000025187102700000000000002518710270000000000000251870081032a010000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
-    "txid": "23f8d33111ab61162cd4743cd34563b263467fcaaf77455672e47708e9f1bafb"
-   },
-   "label": "[M]",
-   "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
-   "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
-   "rpc_calls": 62,
-   "start_tip": {
-    "hash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
-    "height": 0
-   },
-   "tag": "v0.16.0",
-   "wall_seconds": 66.771701042
+    "unfundable": [],
+    "wall_seconds": 8.536197
   },
-  "receipts_sha256": "0b553a7a44639b72b08b25c3f8e5bdfe35701f2e32cac849a2076a9f232a1032"
- }
+  "witness": {
+    "journal_lines": 62,
+    "journal_sha256": "d285c7587e8b612f570eaaddf265ef5bd6556e747498dadd3cfacab17235a3d0",
+    "receipts": {
+      "F1": {
+        "GetBlockHeadersFromOldest": {
+          "grpc_code": "Unimplemented",
+          "status": "rpc error: code = Unimplemented desc = method GetBlockHeadersFromOldest not implemented"
+        },
+        "GetLatestBlockHeaderFromBlockLocator": {
+          "grpc_code": "Unimplemented",
+          "status": "rpc error: code = Unimplemented desc = method GetLatestBlockHeaderFromBlockLocator not implemented"
+        }
+      },
+      "F3": {
+        "acceptance": {
+          "answer": {
+            "result": {
+              "reason": "",
+              "txid": "6771f74c18b03a1fb5178f6d71936d10ca157e1905cbb2b454fb4609cf0846c4",
+              "valid": true
+            }
+          },
+          "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823010000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
+        },
+        "refusal": {
+          "answer": {
+            "error": {
+              "details": [
+                {
+                  "@type": "type.googleapis.com/errors.TError",
+                  "code": "PROCESSING",
+                  "file": "github.com/bsv-blockchain/teranode/services/validator/Validator.go",
+                  "function": "validator.(*Validator).validateInternal",
+                  "line": 1012,
+                  "message": "[Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction"
+                },
+                {
+                  "@type": "type.googleapis.com/errors.TError",
+                  "code": "TX_INVALID",
+                  "file": "github.com/bsv-blockchain/teranode/services/validator/ScriptVerifierGoBDK.go",
+                  "function": "validator.(*scriptVerifierGoBDK).mapBDKValidationError",
+                  "line": 433,
+                  "message": "GoBDK fail to ValidateTransaction"
+                },
+                {
+                  "@type": "type.googleapis.com/errors.TError",
+                  "code": "TX_INVALID",
+                  "file": "github.com/bsv-blockchain/teranode/services/validator/ScriptVerifierGoBDK.go",
+                  "function": "validator.(*scriptVerifierGoBDK).mapBDKValidationError",
+                  "line": 433,
+                  "message": "Script evaluated without error but finished with a false/empty top stack element"
+                }
+              ],
+              "grpc_code": "Internal",
+              "grpc_error": "rpc error: code = Internal desc = [Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction",
+              "message": "PROCESSING (4): [Validate][25a9a4c5cdcf759972618788854628cb03dbdb867ab1ff9929701c2e76d059c0] error validating transaction -> TX_INVALID (31): GoBDK fail to ValidateTransaction -> TX_INVALID (31): Script evaluated without error but finished with a false/empty top stack element"
+            }
+          },
+          "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823000000000152ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
+        }
+      },
+      "F4": [
+        {
+          "answer": {
+            "error": {
+              "code": -25,
+              "message": "TX rejected: PROCESSING (4): [Validate][52a9c4d07fe1481dab6345b37dbe9952ab5e96b52302e8fe3c7cce63aca1e2d0] error validating transaction -> TX_INVALID (31): GoBDK fail to ValidateTransaction -> TX_INVALID (31): Script evaluated without error but finished with a false/empty top stack element"
+            }
+          },
+          "case": "script refusal",
+          "innermost": "TX_INVALID",
+          "rpc_code": -25,
+          "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823020000000152ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
+        },
+        {
+          "answer": {
+            "error": {
+              "code": -25,
+              "message": "TX rejected: PROCESSING (4): failed to decorate previous outputs for tx d8c5cc70d70ba36b26e56eb07486e2a7498869edb9b2241042232fe1366a6051"
+            }
+          },
+          "case": "missing input",
+          "innermost": "PROCESSING",
+          "rpc_code": -25,
+          "tx": "01000000011111111111111111111111111111111111111111111111111111111111111111020000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000"
+        },
+        {
+          "answer": {
+            "error": {
+              "code": -25,
+              "message": "TX rejected: UTXO_NON_FINAL (71): [Validate][af3f946b8c32e1e99c032e1f4c63c6e3588ef74181dc0e4f6100a89854650502] transaction is not final -> TX_INVALID (31): transactions with no inputs are not valid, and therefore not final"
+            }
+          },
+          "case": "the reference's vin-empty bytes",
+          "innermost": "TX_INVALID",
+          "rpc_code": -25,
+          "tx": "0200000000018403000000000000015100000000"
+        }
+      ],
+      "F5_F11": {
+        "block_a": {
+          "block_time": 0,
+          "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
+          "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+          "header": "0000002075b1cf73cd0928d22e65bd2458539899b095782cabfb52a996f46cabc92ce20b14a73a4a256b40d09af56353667522f0653cb1d58319354ec8aed59e8479036e7c4bd06affff7f2003000000",
+          "height": 103,
+          "id": 103,
+          "invalid": true,
+          "median_time_past": 0,
+          "merkleroot": "6e0379849ed5aec84e351983d5b13c65f02275665363f59ad0406b254a3aa714",
+          "mined_set": true,
+          "peer_id": "",
+          "previousblockhash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
+          "subtrees_set": true,
+          "time": 1792035708,
+          "timestamp": 1792035693,
+          "tx_count": 3
+        },
+        "invalidate": {
+          "result": null
+        },
+        "mine_b": null,
+        "reconsider": {
+          "error": {
+            "code": -25,
+            "message": "Block failed revalidation: SERVICE_ERROR (59): [RevalidateBlock][Block 1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f (height: 103, id: 103, txCount: 3, size: 362)] failed to fetch missing subtree data -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataForBlock] Failed to fetch subtree data for block 1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f -> PROCESSING (4): catchup failure reported at source \" map[catchup_failure_reported:true]\" -> EXTERNAL (8): [catchup:fetchAndStoreSubtreeAndSubtreeData] all 1 peer attempts failed to fetch subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a [primary  ()=PROCESSING (4): [catchup:fetchAndStoreSubtreeData] Failed to fetch subtreeData for ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataFromPeer] invalid peer base URL for subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> INVALID_ARGUMENT (1): peer base URL has invalid scheme \"\" (only http/https allowed)] -> PROCESSING (4): [catchup:fetchAndStoreSubtreeData] Failed to fetch subtreeData for ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> SERVICE_ERROR (59): [catchup:fetchSubtreeDataFromPeer] invalid peer base URL for subtree ee9dbe90dc0bf6fdde6359748644e937e74edf63ea15eb01774af9103ad9888a -> INVALID_ARGUMENT (1): peer base URL has invalid scheme \"\" (only http/https allowed)"
+          }
+        },
+        "steps": [
+          {
+            "at_ms": 3194,
+            "chain_tips": [
+              {
+                "branchlen": 0,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "active"
+              }
+            ],
+            "f7_membership": [
+              {
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "id": 103,
+                "invalid": false,
+                "on_active": true
+              }
+            ],
+            "f7_txmeta": {
+              "blockHashes": [
+                "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f"
+              ],
+              "blockHeights": [
+                103
+              ],
+              "blockIDs": [
+                103
+              ],
+              "mainChainIndex": 0
+            },
+            "step": "A mined",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
+              "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+              "height": 103
+            }
+          },
+          {
+            "at_ms": 3208,
+            "chain_tips": [
+              {
+                "branchlen": 1,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "invalid"
+              }
+            ],
+            "f7_membership": [],
+            "f7_txmeta": {
+              "blockHashes": [],
+              "blockHeights": [],
+              "blockIDs": [],
+              "mainChainIndex": -1
+            },
+            "step": "A invalidated, read at once",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000ce",
+              "hash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
+              "height": 102
+            }
+          },
+          {
+            "at_ms": 5223,
+            "chain_tips": [
+              {
+                "branchlen": 1,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "invalid"
+              }
+            ],
+            "f7_membership": [],
+            "f7_txmeta": {
+              "blockHashes": [],
+              "blockHeights": [],
+              "blockIDs": [],
+              "mainChainIndex": -1
+            },
+            "step": "A invalidated, read after 2 s",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000ce",
+              "hash": "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175",
+              "height": 102
+            }
+          },
+          {
+            "at_ms": 5301,
+            "chain_tips": [
+              {
+                "branchlen": 1,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "invalid"
+              },
+              {
+                "branchlen": 0,
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "status": "active"
+              }
+            ],
+            "f7_membership": [
+              {
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "id": 104,
+                "invalid": false,
+                "on_active": true
+              }
+            ],
+            "f7_txmeta": {
+              "blockHashes": [
+                "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
+              ],
+              "blockHeights": [
+                103
+              ],
+              "blockIDs": [
+                104
+              ],
+              "mainChainIndex": 0
+            },
+            "step": "B mined",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
+              "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+              "height": 103
+            }
+          },
+          {
+            "at_ms": 34591,
+            "chain_tips": [
+              {
+                "branchlen": 1,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "invalid"
+              },
+              {
+                "branchlen": 0,
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "status": "active"
+              }
+            ],
+            "f7_membership": [
+              {
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "id": 104,
+                "invalid": false,
+                "on_active": true
+              }
+            ],
+            "f7_txmeta": {
+              "blockHashes": [
+                "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
+              ],
+              "blockHeights": [
+                103
+              ],
+              "blockIDs": [
+                104
+              ],
+              "mainChainIndex": 0
+            },
+            "step": "A reconsidered, read at once",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
+              "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+              "height": 103
+            }
+          },
+          {
+            "at_ms": 36605,
+            "chain_tips": [
+              {
+                "branchlen": 1,
+                "hash": "1fdb8949f91de8ef518575d814cee18581863e5f18f81416ba50b74cf5e48f6f",
+                "height": 103,
+                "status": "invalid"
+              },
+              {
+                "branchlen": 0,
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "status": "active"
+              }
+            ],
+            "f7_membership": [
+              {
+                "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+                "height": 103,
+                "id": 104,
+                "invalid": false,
+                "on_active": true
+              }
+            ],
+            "f7_txmeta": {
+              "blockHashes": [
+                "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94"
+              ],
+              "blockHeights": [
+                103
+              ],
+              "blockIDs": [
+                104
+              ],
+              "mainChainIndex": 0
+            },
+            "step": "A reconsidered, read after 2 s",
+            "tip": {
+              "chain_work": "00000000000000000000000000000000000000000000000000000000000000d0",
+              "hash": "07a965582a183332d05a42262cbe56f7908bba57281a41ca1e7db4d840d96e94",
+              "height": 103
+            }
+          }
+        ]
+      },
+      "F6": {
+        "read_timeout_seconds": 30,
+        "transport_error": "asset: asset read: Resource temporarily unavailable (os error 35)",
+        "txmeta_json": {
+          "blockHashes": [
+            "0be22cc9ab6cf496a952fbab2c7895b09998535824bd652ed22809cd73cfb175"
+          ],
+          "blockHeights": [
+            102
+          ],
+          "blockIDs": [
+            102
+          ],
+          "fee": 100000,
+          "isCoinbase": false,
+          "lockTime": 0,
+          "mainChainIndex": 0,
+          "parentTxHashes": [
+            "8130272eda1d17b8e10a1b5a3af7fcc9e4da1f5199f33c71beb977f60b002a06"
+          ],
+          "sizeInBytes": 257,
+          "subtreeHashes": [
+            "36f1ac705f12bdfcadf890f70ab0d4924c89ea595e421b93d21162f408181fa3"
+          ],
+          "subtreeIdxs": [
+            0
+          ],
+          "tx": {
+            "hex": "0200000001062a000bf677b9be713cf399511fdae4c9fcf73a5a1b0ae1b8171dda2e273081000000006a473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0ffffffff071027000000000000025187102700000000000002518710270000000000000251871027000000000000025187102700000000000002518710270000000000000251870081032a010000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
+            "inputs": [
+              {
+                "previousTxSatoshis": 5000000000,
+                "previousTxScript": "76a91460c81414c147a966597508d2c077d5f108d1f25688ac",
+                "sequence": 4294967295,
+                "txid": "8130272eda1d17b8e10a1b5a3af7fcc9e4da1f5199f33c71beb977f60b002a06",
+                "unlockingScript": "473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0",
+                "vout": 0
+              }
+            ],
+            "lockTime": 0,
+            "outputs": [
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "5187",
+                "satoshis": 10000
+              },
+              {
+                "lockingScript": "76a91460c81414c147a966597508d2c077d5f108d1f25688ac",
+                "satoshis": 4999840000
+              }
+            ],
+            "txid": "23f8d33111ab61162cd4743cd34563b263467fcaaf77455672e47708e9f1bafb",
+            "version": 2
+          },
+          "txAvailable": true
+        }
+      },
+      "F7": {
+        "listed_by_assembly": true,
+        "submit": {
+          "result": "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768"
+        },
+        "tx": "0100000001fbbaf1e90877e472564577afca7f4663b26345d33c74d42c1661ab1131d3f823030000000151ffffffff0128230000000000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
+        "txid": "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768",
+        "verbose": {
+          "result": {
+            "currentpriority": 0,
+            "depends": [
+              "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "c44608cf0946fb54b4b2cb05197e15ca106d93716d8f17b51f3ab0184cf77167",
+              "286a79da3d76f7a367c3b47643493b10eb52dbee879bf18d3d9a5e9ee3445768"
+            ],
+            "fee": 5000002000,
+            "height": 103,
+            "size": 3,
+            "startingpriority": 0,
+            "time": 1792035708
+          }
+        }
+      },
+      "F9": {
+        "full_answer": "scratch/runs-97/20261015-034125/witness/receipts.settings.json (the lane's worktree, not committed)",
+        "http": 200,
+        "kafka_settings": {},
+        "kafka_settings_by_key": {
+          "answer_commit": "4edb60a",
+          "answer_version": "v0.16.0",
+          "full_answer_bytes": 771086,
+          "full_answer_sha256": "72f60f114d3092f3e3f546a1be2dbefa071bf94da35cf06899b7441ab1a536f1",
+          "label": "[M]",
+          "read_by": "python3 over the saved full answer (the run binary's extractor matched no row: it walked object keys, the answer lists {key, currentValue} rows; fixed after the run)",
+          "rows": [
+            {
+              "category": "Kafka",
+              "currentValue": "rejectedtx",
+              "defaultValue": "rejectedtx",
+              "key": "KAFKA_REJECTEDTX"
+            },
+            {
+              "category": "Kafka",
+              "currentValue": "memory://127.0.0.1:9092/rejectedtx?partitions=1&replication=1&retention=600000&flush_bytes=1024&flush_messages=10000&flush_frequency=1s&replay=0",
+              "defaultValue": "",
+              "key": "kafka_rejectedTxConfig"
+            },
+            {
+              "category": "Kafka",
+              "currentValue": "tx-policy-rejected",
+              "defaultValue": "tx-policy-rejected",
+              "key": "KAFKA_TX_POLICY_REJECTED"
+            },
+            {
+              "category": "Kafka",
+              "currentValue": "",
+              "defaultValue": "",
+              "key": "kafka_txPolicyRejectedConfig"
+            }
+          ],
+          "rows_total": 660
+        }
+      },
+      "attestation": {
+        "binary_sha256": "dedd0003386ac5ee7969ab1beaab9db91b0291baf70e066717a3c8e85b3f9ee8",
+        "commit": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+        "host": "box",
+        "listeners": [
+          "127.0.0.1:8000",
+          "127.0.0.1:8081",
+          "127.0.0.1:8082",
+          "127.0.0.1:8084",
+          "127.0.0.1:8085",
+          "127.0.0.1:8086",
+          "127.0.0.1:8087",
+          "127.0.0.1:8088",
+          "127.0.0.1:8090",
+          "127.0.0.1:8833",
+          "127.0.0.1:8834",
+          "127.0.0.1:9091",
+          "127.0.0.1:9292"
+        ],
+        "pid": 59160,
+        "rpc": "http://127.0.0.1:9292",
+        "settings": {
+          "environment": {
+            "DATADIR": "[withheld at export: a sibling tree's line]",
+            "GOMAXPROCS": "4",
+            "GOMEMLIMIT": "6GiB",
+            "HOME": "[withheld at export: a sibling tree's line]",
+            "LC_ALL": "C",
+            "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+            "SETTINGS_CONTEXT": "test",
+            "SETTINGS_ENV_FILE": "/dev/null",
+            "TMPDIR": "[withheld at export: a sibling tree's line]"
+          },
+          "files": {
+            "settings.conf": "33f48eff4115a54e5177039b801360db3bed52c00acf5a3575d213b61af5d79f",
+            "settings_local.conf": "2152d441a967c7f32a885af0691b0ebf14846c7752d7a617393cd3626d130c7f",
+            "settings_test.conf": "606a5d77cbafc76fdb9f283df5b7140860c32c0b322add9652f2bdbde7e5fb50"
+          },
+          "services": [
+            "-all=0",
+            "-blockchain=1",
+            "-subtreevalidation=1",
+            "-blockvalidation=1",
+            "-blockassembly=1",
+            "-asset=1",
+            "-propagation=1",
+            "-rpc=1",
+            "-p2p=0",
+            "-alert=0",
+            "-legacy=0",
+            "-validator=1"
+          ]
+        },
+        "settings_hash": "d09eca848babd52810b996edb16c387fd32906778925c429348982d14155da8f",
+        "settings_hash_definition": "sha256 of UTF-8 compact sorted-key JSON of settings",
+        "tag": "v0.16.0",
+        "validator": "127.0.0.1:8081"
+      },
+      "chain": "regtest",
+      "fsm": "RUNNING",
+      "funding": {
+        "tx": "0200000001062a000bf677b9be713cf399511fdae4c9fcf73a5a1b0ae1b8171dda2e273081000000006a473044022046d5227c7df9dd9481560f69da54e402db7882f0b3022e7e80dd4384f07aaf5002202745db6762abaa3c8126a761474c1865135a6ae231b6f33ae80582182ba35134412102b63ca1ac6dd0dd80b7fdf654414ad662f24d5fdb350a6fa638383a9a09739af0ffffffff071027000000000000025187102700000000000002518710270000000000000251871027000000000000025187102700000000000002518710270000000000000251870081032a010000001976a91460c81414c147a966597508d2c077d5f108d1f25688ac00000000",
+        "txid": "23f8d33111ab61162cd4743cd34563b263467fcaaf77455672e47708e9f1bafb"
+      },
+      "label": "[M]",
+      "native_client_sha256": "ff2fd9fcfa523d598475796bcdb10f04682d8a9aa3cd529c3dadaedaa03439fe",
+      "pin": "4edb60a40c6628ff0ef60231c2628efd7103fde5",
+      "rpc_calls": 62,
+      "start_tip": {
+        "hash": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206",
+        "height": 0
+      },
+      "tag": "v0.16.0",
+      "wall_seconds": 66.771701042
+    },
+    "receipts_sha256": "0b553a7a44639b72b08b25c3f8e5bdfe35701f2e32cac849a2076a9f232a1032"
+  }
 }

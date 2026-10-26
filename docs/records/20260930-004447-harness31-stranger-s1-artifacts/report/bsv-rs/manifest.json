@@ -1,11 +1,10 @@
-[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "seed": {
     "aborts_as_witnesses": 0,
     "agree_block": 10000,
     "agree_mempool": 10000,
     "bsv-rs": "0.3.30",
-[withheld at export: a sibling tree's line]
+    "corpus": "[withheld at export: a sibling tree's line]",
     "engine_config": {
       "not_applicable_entries": 0,
       "recorded": {

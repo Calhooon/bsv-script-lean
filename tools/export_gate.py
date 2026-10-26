@@ -438,6 +438,29 @@ def run_gate():
                     a, b = max(0, m.start() - 40), min(len(line), m.end() + 40)
                     rows.append(('wording', cat, rel, n, redact(line[a:b].strip(), pointers)))
 
+    # (e) json: every exported .json parses (the hosted gate of 2026-10-26: a one-line record whose line
+    # was withheld is not JSON), and (f) the records index of the export is current (tools/check.sh's
+    # seed leg reads it on the hosted gate).
+    for base, dirs, names in os.walk(target):
+        dirs[:] = [d for d in dirs if d != '.git']
+        for name in names:
+            if name.endswith('.json'):
+                full = os.path.join(base, name)
+                rel = os.path.relpath(full, target)
+                try:
+                    with open(full, 'rb') as f:
+                        json.load(f)
+                except (ValueError, UnicodeDecodeError) as e:
+                    rows.append(('json', 'invalid', rel, 0, str(e)[:80]))
+    index_tool = os.path.join(target, 'tools', 'records_index.py')
+    if os.path.isfile(index_tool):
+        index_check = subprocess.run([sys.executable, index_tool, '--check'], capture_output=True, text=True, cwd=target)
+        if index_check.returncode != 0:
+            rows.append(('records-index', 'stale', 'docs/records/INDEX.md', 0,
+                         (index_check.stdout + index_check.stderr).strip().splitlines()[-1][:120]))
+    else:
+        print('(records-index) tools/records_index.py absent from the export: leg SKIPPED BY NAME')
+
     legs = {}
     for leg, group, *_ in rows:
         legs.setdefault(leg, {}).setdefault(group, 0)
@@ -456,7 +479,7 @@ def run_gate():
     print(f'(a) mechanism leg 2: {hex_note}')
     for s in absent:
         print(f'(a) ABSENT sibling tree: {s} (the gate cannot pass here; run it where the tree is)')
-    for leg in ('mechanism', 'pointer', 'wording'):
+    for leg in ('mechanism', 'pointer', 'wording', 'json', 'records-index'):
         per = legs.get(leg, {})
         print(pointer_summary(per, pointers) if leg == 'pointer' else
               f'({leg}) {sum(per.values())} hit(s)' + ''.join(f'; {g} {c}' for g, c in sorted(per.items())))

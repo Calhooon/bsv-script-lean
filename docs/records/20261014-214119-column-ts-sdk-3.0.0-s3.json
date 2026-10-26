@@ -1,447 +1,446 @@
-[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
-[withheld at export: a sibling tree's line]
- "branch": "lane/column-124",
- "command": "make column IMPL=ts-sdk PIN=3.0.0",
- "corpora": [
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "arith",
-   "equal": true,
-   "file": "corpus/arith/cases.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 684,
-     "default/spec-mempool": 692,
-     "spec": 692,
-     "spec-mempool": 692
+  "adapter": "[withheld at export: a sibling tree's line]",
+  "branch": "lane/column-124",
+  "command": "make column IMPL=ts-sdk PIN=3.0.0",
+  "corpora": [
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "arith",
+      "equal": true,
+      "file": "corpus/arith/cases.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 684,
+          "default/spec-mempool": 692,
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "217dc80a3388d15fd80ad92239da4784488ae1d17a24e513533040b528d43831",
+        "classified_runs": {
+          "default/spec": 8
+        },
+        "entries": 692,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 684,
+          "default/spec-mempool": 692,
+          "spec": 692,
+          "spec-mempool": 692
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "217dc80a3388d15fd80ad92239da4784488ae1d17a24e513533040b528d43831",
+        "classified_runs": {
+          "default/spec": 8
+        },
+        "entries": 692,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
     },
-    "class_rows": 1,
-    "class_rows_sha256": "217dc80a3388d15fd80ad92239da4784488ae1d17a24e513533040b528d43831",
-    "classified_runs": {
-     "default/spec": 8
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "bytes",
+      "equal": true,
+      "file": "corpus/bytes/cases.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 358,
+          "default/spec-mempool": 507,
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "class_rows": 2,
+        "class_rows_sha256": "015b1a9ec90ecc9c3f5501e9a928bd68b5499b6796140d63dfb1b92a6924df64",
+        "classified_runs": {
+          "default/spec": 154,
+          "default/spec-mempool": 5
+        },
+        "entries": 512,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 2
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 358,
+          "default/spec-mempool": 507,
+          "spec": 512,
+          "spec-mempool": 512
+        },
+        "class_rows": 2,
+        "class_rows_sha256": "015b1a9ec90ecc9c3f5501e9a928bd68b5499b6796140d63dfb1b92a6924df64",
+        "classified_runs": {
+          "default/spec": 154,
+          "default/spec-mempool": 5
+        },
+        "entries": 512,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 2
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
     },
-    "entries": 692,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 684,
-     "default/spec-mempool": 692,
-     "spec": 692,
-     "spec-mempool": 692
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "crypto",
+      "equal": true,
+      "file": "corpus/crypto/cases.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 79,
+          "default/spec-mempool": 82,
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "class_rows": 3,
+        "class_rows_sha256": "50275975ae3b52f0a08e0d6e16d20acbcf7d69061c13520c23a41f434ac6ec84",
+        "classified_runs": {
+          "default/spec": 5,
+          "default/spec-mempool": 2
+        },
+        "entries": 84,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 3
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 79,
+          "default/spec-mempool": 82,
+          "spec": 84,
+          "spec-mempool": 84
+        },
+        "class_rows": 3,
+        "class_rows_sha256": "50275975ae3b52f0a08e0d6e16d20acbcf7d69061c13520c23a41f434ac6ec84",
+        "classified_runs": {
+          "default/spec": 5,
+          "default/spec-mempool": 2
+        },
+        "entries": 84,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 3
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
     },
-    "class_rows": 1,
-    "class_rows_sha256": "217dc80a3388d15fd80ad92239da4784488ae1d17a24e513533040b528d43831",
-    "classified_runs": {
-     "default/spec": 8
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "eras",
+      "equal": true,
+      "file": "corpus/eras/eras.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 39,
+          "default/spec-mempool": 32,
+          "spec": 74,
+          "spec-mempool": 73
+        },
+        "class_rows": 7,
+        "class_rows_sha256": "f46f930171bd4dfd4ac1dda0ff3d10b58cbfeb3782214e7f83b8870eee367095",
+        "classified_runs": {
+          "default/spec": 35,
+          "default/spec-mempool": 42,
+          "spec-mempool": 1
+        },
+        "entries": 74,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 7
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 39,
+          "default/spec-mempool": 32,
+          "spec": 74,
+          "spec-mempool": 73
+        },
+        "class_rows": 7,
+        "class_rows_sha256": "f46f930171bd4dfd4ac1dda0ff3d10b58cbfeb3782214e7f83b8870eee367095",
+        "classified_runs": {
+          "default/spec": 35,
+          "default/spec-mempool": 42,
+          "spec-mempool": 1
+        },
+        "entries": 74,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 7
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
     },
-    "entries": 692,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "flow",
+      "equal": true,
+      "file": "corpus/flow/flow.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 796,
+          "default/spec-mempool": 1087,
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "class_rows": 4,
+        "class_rows_sha256": "1f95b80c8cbd6796535f00f2f907732e5355d088e900a53b0e89a132a325c34b",
+        "classified_runs": {
+          "default/spec": 298,
+          "default/spec-mempool": 7
+        },
+        "entries": 1094,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 4
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 796,
+          "default/spec-mempool": 1087,
+          "spec": 1094,
+          "spec-mempool": 1094
+        },
+        "class_rows": 4,
+        "class_rows_sha256": "1f95b80c8cbd6796535f00f2f907732e5355d088e900a53b0e89a132a325c34b",
+        "classified_runs": {
+          "default/spec": 298,
+          "default/spec-mempool": 7
+        },
+        "entries": 1094,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 4
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    },
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "gen",
+      "equal": true,
+      "file": "corpus/gen/gen.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 2,
+        "agree": {
+          "default/spec": 1078,
+          "default/spec-mempool": 1079,
+          "spec": 1139,
+          "spec-mempool": 1130
+        },
+        "class_rows": 18,
+        "class_rows_sha256": "e29cb062318414daaa454cd6c15893a0a2c162f28e990129d365a006c9b1f18b",
+        "classified_runs": {
+          "default/spec": 79,
+          "default/spec-mempool": 78,
+          "spec": 18,
+          "spec-mempool": 27
+        },
+        "entries": 1157,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 18
+      },
+      "run": {
+        "aborts_as_witnesses": 2,
+        "agree": {
+          "default/spec": 1078,
+          "default/spec-mempool": 1079,
+          "spec": 1139,
+          "spec-mempool": 1130
+        },
+        "class_rows": 18,
+        "class_rows_sha256": "e29cb062318414daaa454cd6c15893a0a2c162f28e990129d365a006c9b1f18b",
+        "classified_runs": {
+          "default/spec": 79,
+          "default/spec-mempool": 78,
+          "spec": 18,
+          "spec-mempool": 27
+        },
+        "entries": 1157,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 18
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    },
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "seed",
+      "equal": true,
+      "file": "corpus/seed/seed.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 9840,
+          "default/spec-mempool": 10000,
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "5ff0b4fe82d4764bd9265638393bdff50fa80b95d7e4c6c15b2cbc8d80ced5dd",
+        "classified_runs": {
+          "default/spec": 160
+        },
+        "entries": 10000,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 9840,
+          "default/spec-mempool": 10000,
+          "spec": 10000,
+          "spec-mempool": 10000
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "5ff0b4fe82d4764bd9265638393bdff50fa80b95d7e4c6c15b2cbc8d80ced5dd",
+        "classified_runs": {
+          "default/spec": 160
+        },
+        "entries": 10000,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    },
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "stack",
+      "equal": true,
+      "file": "corpus/stack/cases.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 258,
+          "default/spec-mempool": 262,
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "d05557b2a53a3fdaf04c4cd1726dac4933d2d019210b1f889a4341cdcd9581e5",
+        "classified_runs": {
+          "default/spec": 4
+        },
+        "entries": 262,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "run": {
+        "aborts_as_witnesses": 0,
+        "agree": {
+          "default/spec": 258,
+          "default/spec-mempool": 262,
+          "spec": 262,
+          "spec-mempool": 262
+        },
+        "class_rows": 1,
+        "class_rows_sha256": "d05557b2a53a3fdaf04c4cd1726dac4933d2d019210b1f889a4341cdcd9581e5",
+        "classified_runs": {
+          "default/spec": 4
+        },
+        "entries": 262,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 1
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    },
+    {
+      "config": "sv-mainnet-default",
+      "corpus": "tx",
+      "equal": true,
+      "file": "corpus/tx/tx.jsonl",
+      "moved": 0,
+      "recorded": {
+        "aborts_as_witnesses": 3,
+        "agree": {
+          "default/spec": 29,
+          "default/spec-mempool": 27,
+          "spec": 39,
+          "spec-mempool": 39
+        },
+        "class_rows": 7,
+        "class_rows_sha256": "dd657b36987a34e11e6a18e08a72ecd9d6a349e1a2a6c578b0e358c560297ca2",
+        "classified_runs": {
+          "default/spec": 11,
+          "default/spec-mempool": 13,
+          "spec": 1,
+          "spec-mempool": 1
+        },
+        "entries": 40,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 7
+      },
+      "run": {
+        "aborts_as_witnesses": 3,
+        "agree": {
+          "default/spec": 29,
+          "default/spec-mempool": 27,
+          "spec": 39,
+          "spec-mempool": 39
+        },
+        "class_rows": 7,
+        "class_rows_sha256": "dd657b36987a34e11e6a18e08a72ecd9d6a349e1a2a6c578b0e358c560297ca2",
+        "classified_runs": {
+          "default/spec": 11,
+          "default/spec-mempool": 13,
+          "spec": 1,
+          "spec-mempool": 1
+        },
+        "entries": 40,
+        "undecided": 0,
+        "unexplained_runs": {},
+        "witnesses": 7
+      },
+      "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
+    }
+  ],
+  "differing": [],
+  "ended": "2026-10-14T21:41:50Z",
+  "host": "box",
+  "load1_end": 9.43,
+  "load1_start": 7.1,
+  "mode": "dry run on the current pin",
+  "moved_rows": [],
+  "pin": {
+    "ts-sdk.commit": "4d0ea63c85a836e3509291babb0d8e0c784b70a0",
+    "ts-sdk.integrity": "sha512-smQn/gxUy10/RrudCch/aPozqTngXIAATv7atuGjOI7G1XxWO+5Kug6g8mCIFozBITNJJQK7ivkMUG5UwOGv+w==",
+    "ts-sdk.version": "3.0.0"
   },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "bytes",
-   "equal": true,
-   "file": "corpus/bytes/cases.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 358,
-     "default/spec-mempool": 507,
-     "spec": 512,
-     "spec-mempool": 512
-    },
-    "class_rows": 2,
-    "class_rows_sha256": "015b1a9ec90ecc9c3f5501e9a928bd68b5499b6796140d63dfb1b92a6924df64",
-    "classified_runs": {
-     "default/spec": 154,
-     "default/spec-mempool": 5
-    },
-    "entries": 512,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 2
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 358,
-     "default/spec-mempool": 507,
-     "spec": 512,
-     "spec-mempool": 512
-    },
-    "class_rows": 2,
-    "class_rows_sha256": "015b1a9ec90ecc9c3f5501e9a928bd68b5499b6796140d63dfb1b92a6924df64",
-    "classified_runs": {
-     "default/spec": 154,
-     "default/spec-mempool": 5
-    },
-    "entries": 512,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 2
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "crypto",
-   "equal": true,
-   "file": "corpus/crypto/cases.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 79,
-     "default/spec-mempool": 82,
-     "spec": 84,
-     "spec-mempool": 84
-    },
-    "class_rows": 3,
-    "class_rows_sha256": "50275975ae3b52f0a08e0d6e16d20acbcf7d69061c13520c23a41f434ac6ec84",
-    "classified_runs": {
-     "default/spec": 5,
-     "default/spec-mempool": 2
-    },
-    "entries": 84,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 3
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 79,
-     "default/spec-mempool": 82,
-     "spec": 84,
-     "spec-mempool": 84
-    },
-    "class_rows": 3,
-    "class_rows_sha256": "50275975ae3b52f0a08e0d6e16d20acbcf7d69061c13520c23a41f434ac6ec84",
-    "classified_runs": {
-     "default/spec": 5,
-     "default/spec-mempool": 2
-    },
-    "entries": 84,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 3
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "eras",
-   "equal": true,
-   "file": "corpus/eras/eras.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 39,
-     "default/spec-mempool": 32,
-     "spec": 74,
-     "spec-mempool": 73
-    },
-    "class_rows": 7,
-    "class_rows_sha256": "f46f930171bd4dfd4ac1dda0ff3d10b58cbfeb3782214e7f83b8870eee367095",
-    "classified_runs": {
-     "default/spec": 35,
-     "default/spec-mempool": 42,
-     "spec-mempool": 1
-    },
-    "entries": 74,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 7
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 39,
-     "default/spec-mempool": 32,
-     "spec": 74,
-     "spec-mempool": 73
-    },
-    "class_rows": 7,
-    "class_rows_sha256": "f46f930171bd4dfd4ac1dda0ff3d10b58cbfeb3782214e7f83b8870eee367095",
-    "classified_runs": {
-     "default/spec": 35,
-     "default/spec-mempool": 42,
-     "spec-mempool": 1
-    },
-    "entries": 74,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 7
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "flow",
-   "equal": true,
-   "file": "corpus/flow/flow.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 796,
-     "default/spec-mempool": 1087,
-     "spec": 1094,
-     "spec-mempool": 1094
-    },
-    "class_rows": 4,
-    "class_rows_sha256": "1f95b80c8cbd6796535f00f2f907732e5355d088e900a53b0e89a132a325c34b",
-    "classified_runs": {
-     "default/spec": 298,
-     "default/spec-mempool": 7
-    },
-    "entries": 1094,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 4
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 796,
-     "default/spec-mempool": 1087,
-     "spec": 1094,
-     "spec-mempool": 1094
-    },
-    "class_rows": 4,
-    "class_rows_sha256": "1f95b80c8cbd6796535f00f2f907732e5355d088e900a53b0e89a132a325c34b",
-    "classified_runs": {
-     "default/spec": 298,
-     "default/spec-mempool": 7
-    },
-    "entries": 1094,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 4
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "gen",
-   "equal": true,
-   "file": "corpus/gen/gen.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 2,
-    "agree": {
-     "default/spec": 1078,
-     "default/spec-mempool": 1079,
-     "spec": 1139,
-     "spec-mempool": 1130
-    },
-    "class_rows": 18,
-    "class_rows_sha256": "e29cb062318414daaa454cd6c15893a0a2c162f28e990129d365a006c9b1f18b",
-    "classified_runs": {
-     "default/spec": 79,
-     "default/spec-mempool": 78,
-     "spec": 18,
-     "spec-mempool": 27
-    },
-    "entries": 1157,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 18
-   },
-   "run": {
-    "aborts_as_witnesses": 2,
-    "agree": {
-     "default/spec": 1078,
-     "default/spec-mempool": 1079,
-     "spec": 1139,
-     "spec-mempool": 1130
-    },
-    "class_rows": 18,
-    "class_rows_sha256": "e29cb062318414daaa454cd6c15893a0a2c162f28e990129d365a006c9b1f18b",
-    "classified_runs": {
-     "default/spec": 79,
-     "default/spec-mempool": 78,
-     "spec": 18,
-     "spec-mempool": 27
-    },
-    "entries": 1157,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 18
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "seed",
-   "equal": true,
-   "file": "corpus/seed/seed.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 9840,
-     "default/spec-mempool": 10000,
-     "spec": 10000,
-     "spec-mempool": 10000
-    },
-    "class_rows": 1,
-    "class_rows_sha256": "5ff0b4fe82d4764bd9265638393bdff50fa80b95d7e4c6c15b2cbc8d80ced5dd",
-    "classified_runs": {
-     "default/spec": 160
-    },
-    "entries": 10000,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 9840,
-     "default/spec-mempool": 10000,
-     "spec": 10000,
-     "spec-mempool": 10000
-    },
-    "class_rows": 1,
-    "class_rows_sha256": "5ff0b4fe82d4764bd9265638393bdff50fa80b95d7e4c6c15b2cbc8d80ced5dd",
-    "classified_runs": {
-     "default/spec": 160
-    },
-    "entries": 10000,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "stack",
-   "equal": true,
-   "file": "corpus/stack/cases.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 258,
-     "default/spec-mempool": 262,
-     "spec": 262,
-     "spec-mempool": 262
-    },
-    "class_rows": 1,
-    "class_rows_sha256": "d05557b2a53a3fdaf04c4cd1726dac4933d2d019210b1f889a4341cdcd9581e5",
-    "classified_runs": {
-     "default/spec": 4
-    },
-    "entries": 262,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "run": {
-    "aborts_as_witnesses": 0,
-    "agree": {
-     "default/spec": 258,
-     "default/spec-mempool": 262,
-     "spec": 262,
-     "spec-mempool": 262
-    },
-    "class_rows": 1,
-    "class_rows_sha256": "d05557b2a53a3fdaf04c4cd1726dac4933d2d019210b1f889a4341cdcd9581e5",
-    "classified_runs": {
-     "default/spec": 4
-    },
-    "entries": 262,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 1
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  },
-  {
-   "config": "sv-mainnet-default",
-   "corpus": "tx",
-   "equal": true,
-   "file": "corpus/tx/tx.jsonl",
-   "moved": 0,
-   "recorded": {
-    "aborts_as_witnesses": 3,
-    "agree": {
-     "default/spec": 29,
-     "default/spec-mempool": 27,
-     "spec": 39,
-     "spec-mempool": 39
-    },
-    "class_rows": 7,
-    "class_rows_sha256": "dd657b36987a34e11e6a18e08a72ecd9d6a349e1a2a6c578b0e358c560297ca2",
-    "classified_runs": {
-     "default/spec": 11,
-     "default/spec-mempool": 13,
-     "spec": 1,
-     "spec-mempool": 1
-    },
-    "entries": 40,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 7
-   },
-   "run": {
-    "aborts_as_witnesses": 3,
-    "agree": {
-     "default/spec": 29,
-     "default/spec-mempool": 27,
-     "spec": 39,
-     "spec-mempool": 39
-    },
-    "class_rows": 7,
-    "class_rows_sha256": "dd657b36987a34e11e6a18e08a72ecd9d6a349e1a2a6c578b0e358c560297ca2",
-    "classified_runs": {
-     "default/spec": 11,
-     "default/spec-mempool": 13,
-     "spec": 1,
-     "spec-mempool": 1
-    },
-    "entries": 40,
-    "undecided": 0,
-    "unexplained_runs": {},
-    "witnesses": 7
-   },
-   "verdict": "run_engine: GREEN (every divergence explained by a rule with its citation)"
-  }
- ],
- "differing": [],
- "ended": "2026-10-14T21:41:50Z",
- "host": "box",
- "load1_end": 9.43,
- "load1_start": 7.1,
- "mode": "dry run on the current pin",
- "moved_rows": [],
- "pin": {
-  "ts-sdk.commit": "4d0ea63c85a836e3509291babb0d8e0c784b70a0",
-  "ts-sdk.integrity": "sha512-smQn/gxUy10/RrudCch/aPozqTngXIAATv7atuGjOI7G1XxWO+5Kug6g8mCIFozBITNJJQK7ivkMUG5UwOGv+w==",
-  "ts-sdk.version": "3.0.0"
- },
- "red": [],
- "scratch": "harness/target/column/20261014-214119-ts-sdk",
- "sites_moved": [],
- "skipped": [],
- "started": "2026-10-14T21:41:19Z",
- "tree": "750c52431928939b04d7b478700cdbd950e30ca3",
- "uncommitted_paths_at_start": 6,
- "verdict": "column: ts-sdk 3.0.0 (dry run on the current pin): 9 corpora, 13,915 entries; agree default/spec 13,161 (recorded 13,161); default/spec-mempool 13,768 (recorded 13,768); spec 13,896 (recorded 13,896); spec-mempool 13,886 (recorded 13,886); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 31 s: REPRODUCED",
- "wall_s": 31
+  "red": [],
+  "scratch": "harness/target/column/20261014-214119-ts-sdk",
+  "sites_moved": [],
+  "skipped": [],
+  "started": "2026-10-14T21:41:19Z",
+  "tree": "750c52431928939b04d7b478700cdbd950e30ca3",
+  "uncommitted_paths_at_start": 6,
+  "verdict": "column: ts-sdk 3.0.0 (dry run on the current pin): 9 corpora, 13,915 entries; agree default/spec 13,161 (recorded 13,161); default/spec-mempool 13,768 (recorded 13,768); spec 13,896 (recorded 13,896); spec-mempool 13,886 (recorded 13,886); corpora differing 0; moved rows 0; RED 0; unexplained 0; wall 31 s: REPRODUCED",
+  "wall_s": 31
 }

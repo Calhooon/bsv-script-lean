@@ -10,6 +10,10 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 
 | stamp (UTC) | record | kind | commit | verdict | cited by |
 |---|---|---|---|---|---|
+| 2026-10-26 20:27:45 | [20261026-202745-make-check-box.txt](20261026-202745-make-check-box.txt) | make-check-box | 4a828283 | GREEN |  |
+| 2026-10-26 20:08:07 | [20261026-200807-make-check-box.txt](20261026-200807-make-check-box.txt) | make-check-box | 38d85265 | GREEN |  |
+| 2026-10-26 19:50:49 | [20261026-195049-make-check-box.txt](20261026-195049-make-check-box.txt) | make-check-box | d495c63b | GREEN |  |
+| 2026-10-26 19:02:44 | [20261026-190244-hosted-gate-red-json-records-cap.md](20261026-190244-hosted-gate-red-json-records-cap.md) | other |  |  |  |
 | 2026-10-26 18:12:00 | [20261026-181200-make-check-box.txt](20261026-181200-make-check-box.txt) | make-check-box | 3639a369 | GREEN |  |
 | 2026-10-26 18:09:12 | [20261026-180912-flip-public-cap.md](20261026-180912-flip-public-cap.md) | other |  |  |  |
 | 2026-10-26 16:50:04 | [20261026-165004-make-check-box.txt](20261026-165004-make-check-box.txt) | make-check-box | 3cb28be1 | GREEN |  |
@@ -320,7 +324,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-15 14:54:41 | [20261015-145441-s6-66-cut2-second-oracle-adjudication-s3.md](20261015-145441-s6-66-cut2-second-oracle-adjudication-s3.md) | other | 6504a3af |  |  |
 | 2026-10-15 14:52:29 | [20261015-145229-land-w2h-stack-s3.md](20261015-145229-land-w2h-stack-s3.md) | other | a308d2c7 |  |  |
 | 2026-10-15 14:49:47 | [20261015-144947-s8-94-alert-s1.md](20261015-144947-s8-94-alert-s1.md) | other | 9aa5d390 |  |  |
-| 2026-10-15 14:42:52 | [20261015-144252-s6-66-cut2-second-oracle-recovery-s3.md](20261015-144252-s6-66-cut2-second-oracle-recovery-s3.md) | other | 881d884c |  |  |
+| 2026-10-15 14:42:52 | [20261015-144252-s6-66-cut2-second-oracle-recovery-s3.md](20261015-144252-s6-66-cut2-second-oracle-recovery-s3.md) | other | 6504a3af |  |  |
 | 2026-10-15 14:26:03 | [20261015-142603-make-check-box.txt](20261015-142603-make-check-box.txt) | make-check-box | 29665fbb | GREEN |  |
 | 2026-10-15 14:23:57 | [20261015-142357-land-w2g-stack-s3.md](20261015-142357-land-w2g-stack-s3.md) | other | 7c0777e6 |  |  |
 | 2026-10-15 14:16:05 | [20261015-141605-make-check-box.txt](20261015-141605-make-check-box.txt) | make-check-box | f2f5ea13 | GREEN |  |
@@ -392,7 +396,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-14 22:04:00 | [20261014-220400-abs-96-verify-s3.md](20261014-220400-abs-96-verify-s3.md) | verify |  |  |  |
 | 2026-10-14 22:03:06 | [20261014-220306-make-check-box.txt](20261014-220306-make-check-box.txt) | make-check-box | 3e132d21 | GREEN |  |
 | 2026-10-14 21:57:38 | [20261014-215738-jscpd-baseline-stacked-138-s3.md](20261014-215738-jscpd-baseline-stacked-138-s3.md) | other | f49c9d75 |  | `docs/LINT.md` |
-| 2026-10-14 21:57:15 | [20261014-215715-map-87-verify-s3.md](20261014-215715-map-87-verify-s3.md) | verify | b9e6998021ee01dc25ac33b0a581e97f337d514c |  |  |
+| 2026-10-14 21:57:15 | [20261014-215715-map-87-verify-s3.md](20261014-215715-map-87-verify-s3.md) | verify |  |  |  |
 | 2026-10-14 21:56:34 | [20261014-215634-abs-96-verify-s3.md](20261014-215634-abs-96-verify-s3.md) | verify |  |  |  |
 | 2026-10-14 21:55:08 | [20261014-215508-s6-74-second-oracle-s4b.md](20261014-215508-s6-74-second-oracle-s4b.md) | other | c3d362e8c0692dd712f113036fb93df217aef9a9 |  | `docs/CONFORMANCE-TERANODE-MACHINE.md`, `docs/PROVENANCE.md`, `spec/modules.md`, `spec/status-views.md` |
 | 2026-10-14 21:55:08 | [20261014-215508-s6-74-second-oracle-s4b.json](20261014-215508-s6-74-second-oracle-s4b.json) | other |  |  | `docs/CONFORMANCE-TERANODE-MACHINE.md` |
@@ -400,8 +404,8 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-14 21:52:09 | [20261014-215209-make-check-box.txt](20261014-215209-make-check-box.txt) | make-check-box | 02c815ae | GREEN |  |
 | 2026-10-14 21:52:04 | [20261014-215204-secrets-leg-gate-135.txt](20261014-215204-secrets-leg-gate-135.txt) | other | b264c477 |  | `docs/LINT.md` |
 | 2026-10-14 21:44:17 | [20261014-214417-jscpd-tip-138-s3.md](20261014-214417-jscpd-tip-138-s3.md) | other | abc19545 |  | `docs/LINT.md` |
-| 2026-10-14 21:43:02 | [20261014-214302-consumer-contract-dryrun-112-s3.md](20261014-214302-consumer-contract-dryrun-112-s3.md) | other | 4ee84d18 |  |  |
-| 2026-10-14 21:41:49 | [20261014-214149-deny-gate-133.md](20261014-214149-deny-gate-133.md) | other | f432c216 |  | `docs/LINT.md` |
+| 2026-10-14 21:43:02 | [20261014-214302-consumer-contract-dryrun-112-s3.md](20261014-214302-consumer-contract-dryrun-112-s3.md) | other | 2dfe3354fb2d4885e28160e07fef6400e8b95c8f |  |  |
+| 2026-10-14 21:41:49 | [20261014-214149-deny-gate-133.md](20261014-214149-deny-gate-133.md) | other |  |  | `docs/LINT.md` |
 | 2026-10-14 21:41:19 | [20261014-214119-column-ts-sdk-3.0.0-s3.txt](20261014-214119-column-ts-sdk-3.0.0-s3.txt) | measurement |  |  |  |
 | 2026-10-14 21:41:19 | [20261014-214119-column-ts-sdk-3.0.0-s3.md](20261014-214119-column-ts-sdk-3.0.0-s3.md) | measurement |  |  |  |
 | 2026-10-14 21:41:19 | [20261014-214119-column-ts-sdk-3.0.0-s3.json](20261014-214119-column-ts-sdk-3.0.0-s3.json) | measurement |  |  |  |
@@ -425,7 +429,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-14 07:12:46 | [20261014-071246-make-check-box.txt](20261014-071246-make-check-box.txt) | make-check-box | fe7509e2 | GREEN |  |
 | 2026-10-14 07:00:05 | [20261014-070005-make-check-box.txt](20261014-070005-make-check-box.txt) | make-check-box | ae59cb09 | GREEN |  |
 | 2026-10-14 06:56:42 | [20261014-065642-make-check-box.txt](20261014-065642-make-check-box.txt) | make-check-box | 4765de6f | GREEN |  |
-| 2026-10-14 06:46:22 | [20261014-064622-s6-det-wallet-s3.md](20261014-064622-s6-det-wallet-s3.md) | measurement | 6e75e302 |  |  |
+| 2026-10-14 06:46:22 | [20261014-064622-s6-det-wallet-s3.md](20261014-064622-s6-det-wallet-s3.md) | measurement |  |  |  |
 | 2026-10-14 06:26:53 | [20261014-062653-make-check-box.txt](20261014-062653-make-check-box.txt) | make-check-box | 48d3546b | GREEN |  |
 | 2026-10-14 06:18:09 | [20261014-061809-stale-cost-s1.md](20261014-061809-stale-cost-s1.md) | other | 3c0feea5 |  | `README.md`, `docs/DESIGN-S6.md`, `docs/LINT.md` |
 | 2026-10-14 06:10:17 | [20261014-061017-s6-77-quantification-s1.md](20261014-061017-s6-77-quantification-s1.md) | other | 3c0feea5 |  | `docs/DESIGN-S6.md` |
@@ -544,7 +548,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-13 04:57:14 | [20261013-045714-s6-66-blk-regtest-s3.json](20261013-045714-s6-66-blk-regtest-s3.json) | measurement |  |  |  |
 | 2026-10-13 04:57:10 | [20261013-045710-s6-66-fin-regtest-s3.md](20261013-045710-s6-66-fin-regtest-s3.md) | measurement |  |  |  |
 | 2026-10-13 04:57:10 | [20261013-045710-s6-66-fin-regtest-s3.json](20261013-045710-s6-66-fin-regtest-s3.json) | measurement |  |  |  |
-| 2026-10-13 04:56:48 | [20261013-045648-s6-66-utx-regtest-s3.md](20261013-045648-s6-66-utx-regtest-s3.md) | measurement | f052275 |  | `docs/PROVENANCE.md` |
+| 2026-10-13 04:56:48 | [20261013-045648-s6-66-utx-regtest-s3.md](20261013-045648-s6-66-utx-regtest-s3.md) | measurement |  |  | `docs/PROVENANCE.md` |
 | 2026-10-13 04:56:48 | [20261013-045648-s6-66-utx-regtest-s3.json](20261013-045648-s6-66-utx-regtest-s3.json) | measurement | 6504a3aff65ba97c0f6c80962b033e35ecbfed4b |  | `docs/PROVENANCE.md` |
 | 2026-10-13 04:15:41 | [20261013-041541-s6-66c-regtest-s3.md](20261013-041541-s6-66c-regtest-s3.md) | measurement |  |  | `harness/README.md` |
 | 2026-10-13 04:15:41 | [20261013-041541-s6-66c-regtest-s3.json](20261013-041541-s6-66c-regtest-s3.json) | measurement |  |  |  |
@@ -644,7 +648,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-10-06 12:57:04 | [20261006-125704-make-check-box.txt](20261006-125704-make-check-box.txt) | make-check-box | 1a89dea | GREEN | `CHANGELOG.md` |
 | 2026-10-06 12:52:06 | [20261006-125206-modal-56.md](20261006-125206-modal-56.md) | other | 974ba38 | GREEN |  |
 | 2026-10-06 12:47:27 | [20261006-124727-make-check-modal.txt](20261006-124727-make-check-modal.txt) | make-check-modal | 55785b6 | GREEN |  |
-| 2026-10-06 11:05:45 | [20261006-110545-modal-leg-not-run-s3.md](20261006-110545-modal-leg-not-run-s3.md) | other | cc9959a |  |  |
+| 2026-10-06 11:05:45 | [20261006-110545-modal-leg-not-run-s3.md](20261006-110545-modal-leg-not-run-s3.md) | other |  |  |  |
 | 2026-10-06 10:51:12 | [20261006-105112-make-check-box.txt](20261006-105112-make-check-box.txt) | make-check-box | 0470f0a | GREEN |  |
 | 2026-10-06 10:30:19 | [20261006-103019-make-check-box.txt](20261006-103019-make-check-box.txt) | make-check-box | ca54d4f | GREEN |  |
 | 2026-10-06 10:06:01 | [20261006-100601-make-check-box.txt](20261006-100601-make-check-box.txt) | make-check-box | 2cde675 | GREEN |  |
@@ -713,7 +717,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3.md](20260930-013839-continue57-s3.md) | other |  |  |  |
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-tripwire-summary.json](20260930-013839-continue57-s3-tripwire-summary.json) | other | d675b6f |  |  |
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-stranger-rederivation.json](20260930-013839-continue57-s3-stranger-rederivation.json) | other |  |  |  |
-| 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-box-tripwire.txt](20260930-013839-continue57-s3-box-tripwire.txt) | other | d675b6f |  |  |
+| 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-box-tripwire.txt](20260930-013839-continue57-s3-box-tripwire.txt) | other |  |  |  |
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-box-start-gate.txt](20260930-013839-continue57-s3-box-start-gate.txt) | other |  |  |  |
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-box-preflight.txt](20260930-013839-continue57-s3-box-preflight.txt) | other |  |  |  |
 | 2026-09-30 01:38:39 | [20260930-013839-continue57-s3-box-dependencies.txt](20260930-013839-continue57-s3-box-dependencies.txt) | other |  |  |  |
@@ -872,7 +876,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-28 16:50:04 | [20260928-165004-d155-gate-s3.txt](20260928-165004-d155-gate-s3.txt) | other |  |  |  |
 | 2026-09-28 16:39:55 | [20260928-163955-a4-landing-lock-s3.txt](20260928-163955-a4-landing-lock-s3.txt) | other |  |  |  |
 | 2026-09-28 16:22:56 | [20260928-162256-make-check.txt](20260928-162256-make-check.txt) | make-check | 613304c | GREEN |  |
-| 2026-09-28 16:15:46 | [20260928-161546-landing-lens-s1.txt](20260928-161546-landing-lens-s1.txt) | lens | 013f578 |  |  |
+| 2026-09-28 16:15:46 | [20260928-161546-landing-lens-s1.txt](20260928-161546-landing-lens-s1.txt) | lens |  |  |  |
 | 2026-09-28 15:59:54 | [20260928-155954-make-check.txt](20260928-155954-make-check.txt) | make-check | 60f5cb2 | GREEN |  |
 | 2026-09-28 15:57:52 | [20260928-155752-road-a4-s3.md](20260928-155752-road-a4-s3.md) | other | eb4cddf |  | `docs/WRITE-UP.md` |
 | 2026-09-28 15:28:11 | [20260928-152811-make-check.txt](20260928-152811-make-check.txt) | make-check | adbdfa6 | GREEN |  |
@@ -931,7 +935,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-27 13:09:04 | [20260927-130904-make-check.txt](20260927-130904-make-check.txt) | make-check | d9dac35 | GREEN |  |
 | 2026-09-27 13:08:59 | [20260927-130859-make-check.txt](20260927-130859-make-check.txt) | make-check | f3f2d4c | GREEN |  |
 | 2026-09-27 13:07:52 | [20260927-130752-cite-check-s4b.txt](20260927-130752-cite-check-s4b.txt) | other | e65da5b |  |  |
-| 2026-09-27 13:03:11 | [20260927-130311-repin-35-s2.md](20260927-130311-repin-35-s2.md) | other | d5e1be0 |  |  |
+| 2026-09-27 13:03:11 | [20260927-130311-repin-35-s2.md](20260927-130311-repin-35-s2.md) | other |  |  |  |
 | 2026-09-27 13:03:11 | [20260927-130311-repin-35-s2.json](20260927-130311-repin-35-s2.json) | other | 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b |  |  |
 | 2026-09-27 13:03:11 | [20260927-130311-repin-35-s2-runner.py.txt](20260927-130311-repin-35-s2-runner.py.txt) | other |  |  |  |
 | 2026-09-27 13:03:11 | [20260927-130311-repin-35-s2-run4.json](20260927-130311-repin-35-s2-run4.json) | other | 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b |  |  |
@@ -969,7 +973,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-27 04:15:39 | [20260927-041539-make-check.txt](20260927-041539-make-check.txt) | make-check | cbeb2c1 | GREEN |  |
 | 2026-09-27 04:09:10 | [20260927-040910-make-check.txt](20260927-040910-make-check.txt) | make-check | 461c070 | GREEN |  |
 | 2026-09-27 03:40:13 | [20260927-034013-make-check.txt](20260927-034013-make-check.txt) | make-check | dbe941a | GREEN |  |
-| 2026-09-27 03:09:04 | [20260927-030904-toolchain-dryrun-35-s2.md](20260927-030904-toolchain-dryrun-35-s2.md) | other | 5ed2965 |  |  |
+| 2026-09-27 03:09:04 | [20260927-030904-toolchain-dryrun-35-s2.md](20260927-030904-toolchain-dryrun-35-s2.md) | other |  |  |  |
 | 2026-09-27 03:09:04 | [20260927-030904-toolchain-dryrun-35-s2.json](20260927-030904-toolchain-dryrun-35-s2.json) | other | 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b |  |  |
 | 2026-09-27 03:09:04 | [20260927-030904-toolchain-dryrun-35-s2-runner.py.txt](20260927-030904-toolchain-dryrun-35-s2-runner.py.txt) | other |  |  |  |
 | 2026-09-27 03:09:04 | [20260927-030904-toolchain-dryrun-35-s2-build.txt](20260927-030904-toolchain-dryrun-35-s2-build.txt) | other |  |  |  |
@@ -985,7 +989,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-26 23:10:04 | [20260926-231004-txroad-s3.md](20260926-231004-txroad-s3.md) | other |  |  | `spec/modules.md` |
 | 2026-09-26 22:15:49 | [20260926-221549-make-check.txt](20260926-221549-make-check.txt) | make-check | 6c949a6 | GREEN |  |
 | 2026-09-26 22:05:49 | [20260926-220549-make-check.txt](20260926-220549-make-check.txt) | make-check | 58f05a3 | GREEN |  |
-| 2026-09-26 22:05:22 | [20260926-220522-axioms-s2-families-s2.txt](20260926-220522-axioms-s2-families-s2.txt) | other | 1c9e72c |  |  |
+| 2026-09-26 22:05:22 | [20260926-220522-axioms-s2-families-s2.txt](20260926-220522-axioms-s2-families-s2.txt) | other |  |  |  |
 | 2026-09-26 21:55:43 | [20260926-215543-make-check.txt](20260926-215543-make-check.txt) | make-check | 334ee23 | GREEN |  |
 | 2026-09-26 21:51:35 | [20260926-215135-tx-families-s3.md](20260926-215135-tx-families-s3.md) | other |  |  |  |
 | 2026-09-26 21:39:15 | [20260926-213915-run-diff-d83c-s2.md](20260926-213915-run-diff-d83c-s2.md) | measurement |  |  |  |
@@ -1012,7 +1016,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 | 2026-09-24 03:08:28 | [20260924-030828-svnode-record-s3.md](20260924-030828-svnode-record-s3.md) | other | 879fc8b42 |  | `docs/PARAMETERS.md`, `docs/WRITE-UP.md` |
 | 2026-09-24 03:04:44 | [20260924-030444-make-check-modal.txt](20260924-030444-make-check-modal.txt) | make-check-modal | a7b7d37 | RED |  |
 | 2026-09-24 02:57:40 | [20260924-025740-eras-engines-s3.md](20260924-025740-eras-engines-s3.md) | other |  |  |  |
-| 2026-09-24 02:50:43 | [20260924-025043-check-pins-s3.txt](20260924-025043-check-pins-s3.txt) | other | e78a043 |  |  |
+| 2026-09-24 02:50:43 | [20260924-025043-check-pins-s3.txt](20260924-025043-check-pins-s3.txt) | other |  |  |  |
 | 2026-09-24 02:43:54 | [20260924-024354-make-check-modal.txt](20260924-024354-make-check-modal.txt) | make-check-modal | 908276e | RED |  |
 | 2026-09-23 19:34:41 | [20260923-193441-make-check.txt](20260923-193441-make-check.txt) | make-check | d66ded6 | GREEN |  |
 | 2026-09-23 19:12:22 | [20260923-191222-make-check.txt](20260923-191222-make-check.txt) | make-check | f70cea6 | GREEN |  |

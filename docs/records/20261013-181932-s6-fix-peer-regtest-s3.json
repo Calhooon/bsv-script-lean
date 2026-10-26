@@ -1,4 +1,3 @@
-[export: 408 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "aggregate": {
     "agree": 298,
@@ -32,7 +31,7 @@
       "date": "2026-10-13",
       "label": "[M]",
       "measured_commit": "56245513259b4a273b95cc183268b496b9b4d2c1",
-[withheld at export: a sibling tree's line]
+      "path": "[withheld at export: a sibling tree's line]",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
       "sha256": "37903c83aef4b141baa237b9abe56b3d9b40f540e815f54193762c8e3725b1ad"
     },
@@ -322,7 +321,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -16821,7 +16820,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -38182,7 +38181,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -64030,7 +64029,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -79327,7 +79326,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -80379,7 +80378,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -81126,7 +81125,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"P\"],\"orphans\":0,\"rpc_ceiling_reject\":true} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -81244,7 +81243,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -81675,37 +81674,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -82351,7 +82350,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -82491,7 +82490,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -83159,38 +83158,38 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2026-10-13 17:51:21 [main] maxorphantxsize=134B",
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker2-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker2-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -83907,7 +83906,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"orphanBytes\":61,\"orphanCount\":1,\"orphans_final\":0,\"parent_requests\":true,\"retainedSetSize\":1} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -84048,7 +84047,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -84716,38 +84715,38 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2026-10-13 17:51:24 [main] maxorphantxsize=135B",
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -85491,7 +85490,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"orphanBytes\":122,\"orphanCount\":2,\"orphans_final\":0,\"parent_requests\":true,\"retainedSetSize\":2} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -85601,7 +85600,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -86032,38 +86031,38 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2026-10-13 17:50:47 [main] maxorphantxsize=100B",
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -86778,7 +86777,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "unrealizable: peer retained the sole 61-byte child at maxorphantxsize=100B, advanced exactly 1200 seconds, observed zero PTV activity and then delivered its parent. This cannot realize the declared orphanSweep: admission already reset untrimmedBytes to zero; no periodic orphan sweep or RPC selects limitTxnsSize with the row's untrimmedBytes state. Waiting for PTV is not orphan maintenance completion. [SRC] src/orphan_txns.cpp:175-224; src/validation.cpp:1904-1915; src/txn_validator.cpp:359-538 at 6504a3af [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "unrealizable": "peer retained the sole 61-byte child at maxorphantxsize=100B, advanced exactly 1200 seconds, observed zero PTV activity and then delivered its parent. This cannot realize the declared orphanSweep: admission already reset untrimmedBytes to zero; no periodic orphan sweep or RPC selects limitTxnsSize with the row's untrimmedBytes state. Waiting for PTV is not orphan maintenance completion. [SRC] src/orphan_txns.cpp:175-224; src/validation.cpp:1904-1915; src/txn_validator.cpp:359-538 at 6504a3af"
     },
@@ -86932,7 +86931,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -87514,38 +87513,38 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2026-10-13 17:50:48 [main] maxorphantxsize=100B",
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker5-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker5-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -88279,7 +88278,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"auxiliary_completed\":true,\"auxiliary_ignored\":true,\"auxiliary_requested\":true,\"expired_orphans\":1,\"orphans_after_trigger\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -88398,7 +88397,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -88829,37 +88828,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -89516,7 +89515,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "unrealizable: peer attempted the literal 60-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "unrealizable": "peer attempted the literal 60-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af"
     },
@@ -89637,7 +89636,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -90068,37 +90067,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -90744,7 +90743,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "unrealizable: peer attempted the literal 61-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "unrealizable": "peer attempted the literal 61-byte maxtxsizepolicy launch, which was refused, then witnessed retention and retry of the 61-byte child at the allowed default. The launch getter refuses values below MAX_TX_SIZE_POLICY_BEFORE_GENESIS, so the named orphan cap cannot be selected. [SRC] src/configscriptpolicy.cpp:415-440; src/orphan_txns.cpp:51-58 at 6504a3af"
     },
@@ -90884,7 +90883,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -91315,37 +91314,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker0-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -96410,7 +96409,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"fence_rejected\":true,\"orphans_final\":0,\"queued\":{\"accepted\":[\"P\"],\"orphans\":1,\"pending\":1},\"retried_without_resubmission\":true} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -96520,7 +96519,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -96951,37 +96950,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -97638,7 +97637,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -97752,7 +97751,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -98242,37 +98241,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= a0f3cc2257b5e7ec5f908dcf0e111a0a5974faf80cf75ae171c576c1176ba71c detected orphan",
           "2023-11-14 22:13:20 [worker5-H-TxnValidatorPool] stored orphan txn= a0f3cc2257b5e7ec5f908dcf0e111a0a5974faf80cf75ae171c576c1176ba71c (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker5-H-TxnValidatorPool] p2p: nonstandard txn= a0f3cc2257b5e7ec5f908dcf0e111a0a5974faf80cf75ae171c576c1176ba71c detected orphan",
@@ -98918,7 +98917,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"P\"],\"child_reject\":{\"code\":16,\"reason\":\"bad-txns-in-belowout\"},\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -99029,7 +99028,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -99460,37 +99459,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [rawtransactionvalidator] rpc: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] stored orphan txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 (mapsz 1 outsz 1)",
           "2023-11-14 22:13:20 [worker1-H-TxnValidatorPool] p2p: nonstandard txn= 1114b646ea18da1fb03e3536e776a583229bcff36f271e27e994206dcf1c8494 detected orphan",
@@ -100136,7 +100135,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"accepted\":[\"C\",\"P\"],\"child_reject\":null,\"missing_parent_request\":true,\"orphan_retained\":1,\"orphans_final\":0} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -100222,7 +100221,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -101605,7 +101604,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"cached_silence\":true,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"silence_after_conflict_expiry\":true,\"tip_changed\":true} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -101716,7 +101715,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -103189,7 +103188,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"cached_silence\":true,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"rpc_retry_admitted\":true,\"silence_after_conflict_expiry\":true,\"tip_changed\":true} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     },
@@ -103261,7 +103260,7 @@
           {
             "date": "2026-10-13",
             "direction": "instrument",
-[withheld at export: a sibling tree's line]
+            "framework": "[withheld at export: a sibling tree's line]",
             "index": 0,
             "label": "[X]",
             "protocol_version": 70016,
@@ -104034,37 +104033,37 @@
           }
         ],
         "node_log": [
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
+          "[withheld at export: a sibling tree's line]",
           "2023-11-14 22:13:20 [worker3-H-TxnValidatorPool] p2p: not keeping orphan with rejected parents txn= d08b11373ff76603cf715d8af94f150a2b6c3342d7eea26eb6c874d519ca88f3 txnsrc peer=0 ",
           "2023-11-14 22:13:20 [worker3-H-TxnValidatorPool] p2p: nonstandard txn= d08b11373ff76603cf715d8af94f150a2b6c3342d7eea26eb6c874d519ca88f3 detected orphan"
         ],
@@ -104647,7 +104646,7 @@
       ],
       "run_id": "s6-fix-peer-20261013-174657",
       "runner_sha256": "a52775a6254de0d1b2dff26e73fd3ad4bbb0fae6b8b8317a26261ead69700cee",
-[withheld at export: a sibling tree's line]
+      "source_receipt": "[withheld at export: a sibling tree's line]",
       "token": "measured agree: {\"cached_silence\":true,\"orphans\":0,\"requested_after_reset\":true,\"requested_before_rejection\":true,\"tip_changed\":true,\"wire_rejected_parent\":true} [M] 2026-10-13 [X] docs/records/20261013-181932-s6-fix-peer-regtest-s3.md",
       "verdict": "agree"
     }

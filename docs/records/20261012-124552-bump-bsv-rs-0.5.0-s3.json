@@ -1,8 +1,7 @@
-[export: 209 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "base": "83fa0648eb8ee7717eeee9b928db82716fa8c0e2",
   "branch": "lane/bump-050",
-[withheld at export: a sibling tree's line]
+  "root": "[withheld at export: a sibling tree's line]",
   "record": "docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3",
   "opened_at": "2026-10-12T12:45:52.318339+00:00",
   "initial_load1": 4.28271484375,
@@ -1557,16 +1556,16 @@
     "go-sdk|cpp-lrshiftnum|spec-mempool|limits.maxscriptnumlength.policy": 1,
     "go-sdk|eras|spec-mempool|limits.maxscriptnumlength.policy": 1,
     "go-sdk|gen|spec|limits.maxscriptnumlength": 57,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 1)": 1,
     "go-sdk|gen|spec-mempool|limits.maxscriptnumlength": 57,
     "go-sdk|gen|spec-mempool|limits.maxscriptnumlength.policy": 9,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 2)": 1,
     "go-sdk|million|spec|limits.stackmemory.policy-default": 1,
     "go-sdk|road|spec|limits.maxscriptnumlength": 1,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 3)": 1,
     "go-sdk|road|spec-mempool|limits.maxscriptnumlength": 1,
     "go-sdk|road|spec-mempool|limits.maxscriptnumlength.policy": 6,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 4)": 1,
     "ts-sdk|arith|default/spec|flags.policy-as-consensus": 8,
     "ts-sdk|bytes|default/spec|flags.policy-as-consensus": 154,
     "ts-sdk|bytes|default/spec-mempool|flags.discourage-upgradable-nops": 5,
@@ -1630,16 +1629,16 @@
     "go-sdk|cpp-lrshiftnum|spec-mempool|limits.maxscriptnumlength.policy": 1,
     "go-sdk|eras|spec-mempool|limits.maxscriptnumlength.policy": 1,
     "go-sdk|gen|spec|limits.maxscriptnumlength": 57,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 1)": 1,
     "go-sdk|gen|spec-mempool|limits.maxscriptnumlength": 57,
     "go-sdk|gen|spec-mempool|limits.maxscriptnumlength.policy": 9,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 2)": 1,
     "go-sdk|million|spec|limits.stackmemory.policy-default": 1,
     "go-sdk|road|spec|limits.maxscriptnumlength": 1,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 3)": 1,
     "go-sdk|road|spec-mempool|limits.maxscriptnumlength": 1,
     "go-sdk|road|spec-mempool|limits.maxscriptnumlength.policy": 6,
-[withheld at export: a sibling tree's line]
+    "[withheld at export: a sibling tree's line] (key 4)": 1,
     "ts-sdk|arith|default/spec|flags.policy-as-consensus": 8,
     "ts-sdk|bytes|default/spec|flags.policy-as-consensus": 154,
     "ts-sdk|bytes|default/spec-mempool|flags.discourage-upgradable-nops": 5,
@@ -2310,40 +2309,40 @@
   "commands": [
     {
       "command": "/bin/bash -o pipefail -c 'gh api \"repos/Calhooon/bsv-rs/contents/CHANGELOG.md?ref=v0.5.0\" --jq .content | base64 -d'",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:46:20.709216+00:00",
       "end": "2026-10-12T12:46:21.157485+00:00",
       "load1": 3.67626953125,
       "seconds": 0.448,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "5680026ecc80b89e8d5983021aa0f186cb6b1b8addbf292ae19d441ae15917d5"
     },
     {
       "command": "python3 -c 'import urllib.request,sys; r=urllib.request.Request(\"https://crates.io/api/v1/crates/bsv-rs/0.5.0\",headers={\"User-Agent\":\"bsv-script-lean-pin-audit/0.5.0\"}); sys.stdout.buffer.write(urllib.request.urlopen(r,timeout=30).read())'",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:46:21.158116+00:00",
       "end": "2026-10-12T12:46:21.431866+00:00",
       "load1": 3.67626953125,
       "seconds": 0.274,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "d25c7b3fb8df3d2482468b0786b737de25584dd31f9b5fa0362e245cf818e848"
     },
     {
       "command": "gh api repos/Calhooon/bsv-rs/git/ref/tags/v0.5.0",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:46:21.432312+00:00",
       "end": "2026-10-12T12:46:21.782501+00:00",
       "load1": 3.67626953125,
       "seconds": 0.35,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "ff9449f7e9fb172a5ce086697c42d473f9658bb329889b6d22510e6c1f50a2ed"
     },
     {
       "command": "cargo update -p bsv-rs --precise 0.5.0",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:47:11.417218+00:00",
       "end": "2026-10-12T12:47:12.209445+00:00",
       "load1": 2.904296875,
@@ -2352,7 +2351,7 @@
     },
     {
       "command": "cargo fetch --locked",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:47:12.209674+00:00",
       "end": "2026-10-12T12:47:12.680343+00:00",
       "load1": 2.75146484375,
@@ -2361,18 +2360,18 @@
     },
     {
       "command": "gh api repos/Calhooon/bsv-rs/compare/v0.4.5...v0.5.0",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:47:12.680541+00:00",
       "end": "2026-10-12T12:47:13.410398+00:00",
       "load1": 2.75146484375,
       "seconds": 0.73,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "837f924c9c93e1e39f1d0277f7c37efdad8ac939050afada9f6d98fc34446dd2"
     },
     {
       "command": "cargo build --release --locked",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:47:13.411661+00:00",
       "end": "2026-10-12T12:47:34.430622+00:00",
       "load1": 2.75146484375,
@@ -2380,8 +2379,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:49.365224+00:00",
       "end": "2026-10-12T12:48:49.591508+00:00",
       "load1": 2.8017578125,
@@ -2390,7 +2389,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/seed --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:49.591810+00:00",
       "end": "2026-10-12T12:48:49.954310+00:00",
       "load1": 2.8017578125,
@@ -2398,8 +2397,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:49.954571+00:00",
       "end": "2026-10-12T12:48:50.381153+00:00",
       "load1": 2.8017578125,
@@ -2408,7 +2407,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/seed --smoke",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.647321+00:00",
       "end": "2026-10-12T12:48:50.801887+00:00",
       "load1": 2.8017578125,
@@ -2416,8 +2415,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.818045+00:00",
       "end": "2026-10-12T12:48:50.825638+00:00",
       "load1": 2.8017578125,
@@ -2426,7 +2425,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/arith --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.825950+00:00",
       "end": "2026-10-12T12:48:50.842055+00:00",
       "load1": 2.8017578125,
@@ -2434,8 +2433,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.842268+00:00",
       "end": "2026-10-12T12:48:50.864797+00:00",
       "load1": 2.8017578125,
@@ -2443,8 +2442,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.910059+00:00",
       "end": "2026-10-12T12:48:50.918712+00:00",
       "load1": 2.8017578125,
@@ -2453,7 +2452,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/bytes --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.919037+00:00",
       "end": "2026-10-12T12:48:50.936671+00:00",
       "load1": 2.8017578125,
@@ -2461,8 +2460,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.936961+00:00",
       "end": "2026-10-12T12:48:50.956896+00:00",
       "load1": 2.8017578125,
@@ -2470,8 +2469,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:50.996426+00:00",
       "end": "2026-10-12T12:48:51.001969+00:00",
       "load1": 2.8017578125,
@@ -2480,7 +2479,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-bn_op --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.002254+00:00",
       "end": "2026-10-12T12:48:51.011199+00:00",
       "load1": 2.8017578125,
@@ -2488,8 +2487,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.011414+00:00",
       "end": "2026-10-12T12:48:51.022236+00:00",
       "load1": 2.8017578125,
@@ -2497,8 +2496,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.047382+00:00",
       "end": "2026-10-12T12:48:51.051855+00:00",
       "load1": 2.8017578125,
@@ -2507,7 +2506,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-lrshiftnum --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.052111+00:00",
       "end": "2026-10-12T12:48:51.057561+00:00",
       "load1": 2.8017578125,
@@ -2515,8 +2514,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.057942+00:00",
       "end": "2026-10-12T12:48:51.064915+00:00",
       "load1": 2.8017578125,
@@ -2524,8 +2523,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.083768+00:00",
       "end": "2026-10-12T12:48:51.087954+00:00",
       "load1": 2.8017578125,
@@ -2534,7 +2533,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-multisig --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.088254+00:00",
       "end": "2026-10-12T12:48:51.092955+00:00",
       "load1": 2.8017578125,
@@ -2542,8 +2541,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.093142+00:00",
       "end": "2026-10-12T12:48:51.099718+00:00",
       "load1": 2.8017578125,
@@ -2551,8 +2550,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.363451+00:00",
       "end": "2026-10-12T12:48:51.970870+00:00",
       "load1": 2.8017578125,
@@ -2561,7 +2560,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-opcode --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:51.971182+00:00",
       "end": "2026-10-12T12:48:55.001667+00:00",
       "load1": 2.8017578125,
@@ -2569,8 +2568,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:48:55.002027+00:00",
       "end": "2026-10-12T12:48:58.551224+00:00",
       "load1": 2.8173828125,
@@ -2578,8 +2577,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:03.848440+00:00",
       "end": "2026-10-12T12:49:04.104920+00:00",
       "load1": 3.0849609375,
@@ -2588,7 +2587,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-script --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:04.105189+00:00",
       "end": "2026-10-12T12:49:05.163644+00:00",
       "load1": 3.0849609375,
@@ -2596,8 +2595,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:05.163941+00:00",
       "end": "2026-10-12T12:49:06.369620+00:00",
       "load1": 3.0849609375,
@@ -2605,8 +2604,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.268314+00:00",
       "end": "2026-10-12T12:49:08.272140+00:00",
       "load1": 2.998046875,
@@ -2615,7 +2614,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-script_P2SH --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.272406+00:00",
       "end": "2026-10-12T12:49:08.277774+00:00",
       "load1": 2.998046875,
@@ -2623,8 +2622,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.277976+00:00",
       "end": "2026-10-12T12:49:08.284257+00:00",
       "load1": 2.998046875,
@@ -2632,8 +2631,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.302514+00:00",
       "end": "2026-10-12T12:49:08.306043+00:00",
       "load1": 2.998046875,
@@ -2642,7 +2641,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-sigopcount --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.306325+00:00",
       "end": "2026-10-12T12:49:08.310333+00:00",
       "load1": 2.998046875,
@@ -2650,8 +2649,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.310539+00:00",
       "end": "2026-10-12T12:49:08.315769+00:00",
       "load1": 2.998046875,
@@ -2659,8 +2658,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.331984+00:00",
       "end": "2026-10-12T12:49:08.336220+00:00",
       "load1": 2.998046875,
@@ -2669,7 +2668,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-transaction --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.336459+00:00",
       "end": "2026-10-12T12:49:08.351658+00:00",
       "load1": 2.998046875,
@@ -2677,8 +2676,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.351863+00:00",
       "end": "2026-10-12T12:49:08.366622+00:00",
       "load1": 2.998046875,
@@ -2686,8 +2685,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.388177+00:00",
       "end": "2026-10-12T12:49:08.395966+00:00",
       "load1": 2.998046875,
@@ -2696,7 +2695,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.396282+00:00",
       "end": "2026-10-12T12:49:08.519671+00:00",
       "load1": 2.998046875,
@@ -2704,8 +2703,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.519899+00:00",
       "end": "2026-10-12T12:49:08.646859+00:00",
       "load1": 2.998046875,
@@ -2713,8 +2712,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.694576+00:00",
       "end": "2026-10-12T12:49:08.707511+00:00",
       "load1": 2.998046875,
@@ -2723,7 +2722,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.707739+00:00",
       "end": "2026-10-12T12:49:08.951409+00:00",
       "load1": 2.998046875,
@@ -2731,8 +2730,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:08.951660+00:00",
       "end": "2026-10-12T12:49:09.200387+00:00",
       "load1": 2.998046875,
@@ -2740,8 +2739,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:09.287659+00:00",
       "end": "2026-10-12T12:49:09.308624+00:00",
       "load1": 2.998046875,
@@ -2750,7 +2749,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:09.308886+00:00",
       "end": "2026-10-12T12:49:09.791249+00:00",
       "load1": 2.998046875,
@@ -2758,8 +2757,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:09.791496+00:00",
       "end": "2026-10-12T12:49:10.093175+00:00",
       "load1": 2.998046875,
@@ -2767,8 +2766,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.247263+00:00",
       "end": "2026-10-12T12:49:10.267557+00:00",
       "load1": 2.998046875,
@@ -2777,7 +2776,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.267838+00:00",
       "end": "2026-10-12T12:49:10.351866+00:00",
       "load1": 2.998046875,
@@ -2785,8 +2784,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.352093+00:00",
       "end": "2026-10-12T12:49:10.494201+00:00",
       "load1": 2.998046875,
@@ -2794,8 +2793,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.642787+00:00",
       "end": "2026-10-12T12:49:10.679316+00:00",
       "load1": 2.998046875,
@@ -2804,7 +2803,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.679592+00:00",
       "end": "2026-10-12T12:49:10.842062+00:00",
       "load1": 2.998046875,
@@ -2812,8 +2811,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:10.842279+00:00",
       "end": "2026-10-12T12:49:11.119897+00:00",
       "load1": 2.998046875,
@@ -2821,8 +2820,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.387429+00:00",
       "end": "2026-10-12T12:49:11.391111+00:00",
       "load1": 2.998046875,
@@ -2831,7 +2830,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.391342+00:00",
       "end": "2026-10-12T12:49:11.394832+00:00",
       "load1": 2.998046875,
@@ -2839,8 +2838,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.395029+00:00",
       "end": "2026-10-12T12:49:11.399518+00:00",
       "load1": 2.998046875,
@@ -2848,8 +2847,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.433053+00:00",
       "end": "2026-10-12T12:49:11.507286+00:00",
       "load1": 2.998046875,
@@ -2858,7 +2857,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103 --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.507572+00:00",
       "end": "2026-10-12T12:49:11.835500+00:00",
       "load1": 2.998046875,
@@ -2866,8 +2865,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:11.835741+00:00",
       "end": "2026-10-12T12:49:12.202967+00:00",
       "load1": 2.998046875,
@@ -2875,8 +2874,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.747631+00:00",
       "end": "2026-10-12T12:49:12.751690+00:00",
       "load1": 3.078125,
@@ -2885,7 +2884,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/crypto --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.751927+00:00",
       "end": "2026-10-12T12:49:12.764064+00:00",
       "load1": 3.078125,
@@ -2893,8 +2892,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.764305+00:00",
       "end": "2026-10-12T12:49:12.780639+00:00",
       "load1": 3.078125,
@@ -2902,8 +2901,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.799151+00:00",
       "end": "2026-10-12T12:49:12.802930+00:00",
       "load1": 3.078125,
@@ -2912,7 +2911,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/eras --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.803145+00:00",
       "end": "2026-10-12T12:49:12.809855+00:00",
       "load1": 3.078125,
@@ -2920,8 +2919,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.810056+00:00",
       "end": "2026-10-12T12:49:12.818118+00:00",
       "load1": 3.078125,
@@ -2929,8 +2928,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.838421+00:00",
       "end": "2026-10-12T12:49:12.847050+00:00",
       "load1": 3.078125,
@@ -2939,7 +2938,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/flow --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.847262+00:00",
       "end": "2026-10-12T12:49:12.869818+00:00",
       "load1": 3.078125,
@@ -2947,8 +2946,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.870086+00:00",
       "end": "2026-10-12T12:49:12.896625+00:00",
       "load1": 3.078125,
@@ -2956,8 +2955,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.939508+00:00",
       "end": "2026-10-12T12:49:12.949249+00:00",
       "load1": 3.078125,
@@ -2966,7 +2965,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/gen --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:12.949470+00:00",
       "end": "2026-10-12T12:49:13.045122+00:00",
       "load1": 3.078125,
@@ -2974,8 +2973,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.045340+00:00",
       "end": "2026-10-12T12:49:13.146964+00:00",
       "load1": 3.078125,
@@ -2983,8 +2982,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.204254+00:00",
       "end": "2026-10-12T12:49:13.207978+00:00",
       "load1": 3.078125,
@@ -2993,7 +2992,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/million --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.208206+00:00",
       "end": "2026-10-12T12:49:13.211784+00:00",
       "load1": 3.078125,
@@ -3001,8 +3000,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.211984+00:00",
       "end": "2026-10-12T12:49:13.216880+00:00",
       "load1": 3.078125,
@@ -3010,8 +3009,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.250857+00:00",
       "end": "2026-10-12T12:49:13.307296+00:00",
       "load1": 3.078125,
@@ -3020,7 +3019,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/road --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.307558+00:00",
       "end": "2026-10-12T12:49:13.580813+00:00",
       "load1": 3.078125,
@@ -3028,8 +3027,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:13.581033+00:00",
       "end": "2026-10-12T12:49:13.924425+00:00",
       "load1": 3.078125,
@@ -3037,8 +3036,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.224498+00:00",
       "end": "2026-10-12T12:49:14.229306+00:00",
       "load1": 3.078125,
@@ -3047,7 +3046,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/stack --manifest cases-manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.229569+00:00",
       "end": "2026-10-12T12:49:14.240777+00:00",
       "load1": 3.078125,
@@ -3055,8 +3054,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.240974+00:00",
       "end": "2026-10-12T12:49:14.254565+00:00",
       "load1": 3.078125,
@@ -3064,8 +3063,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.285187+00:00",
       "end": "2026-10-12T12:49:14.296438+00:00",
       "load1": 3.078125,
@@ -3074,7 +3073,7 @@
     },
     {
       "command": "target/release/run_bsvrs --corpus ../corpus/tx --manifest manifest.json --record",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.296668+00:00",
       "end": "2026-10-12T12:49:14.450830+00:00",
       "load1": 3.078125,
@@ -3082,8 +3081,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:14.451043+00:00",
       "end": "2026-10-12T12:49:14.610809+00:00",
       "load1": 3.078125,
@@ -3092,18 +3091,18 @@
     },
     {
       "command": "target/release/num_vectors --count 1000",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.326395+00:00",
       "end": "2026-10-12T12:49:53.504080+00:00",
       "load1": 2.619140625,
       "seconds": 0.178,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "a722f755ca708a8f1129d7f201a1c601d1374b9bea58c7ed2c99d59880d83515"
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.504474+00:00",
       "end": "2026-10-12T12:49:53.513474+00:00",
       "load1": 2.619140625,
@@ -3112,18 +3111,18 @@
     },
     {
       "command": "target/release/sighash_vectors --count 500",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.514383+00:00",
       "end": "2026-10-12T12:49:53.623238+00:00",
       "load1": 2.619140625,
       "seconds": 0.109,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "0f8d7b138b76e3fede9dd6d95fa3b37714e6f0dbae6abc4dca51f67c7ed67f2a"
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.624054+00:00",
       "end": "2026-10-12T12:49:53.630550+00:00",
       "load1": 2.619140625,
@@ -3132,18 +3131,18 @@
     },
     {
       "command": "target/release/arith_vectors --count 10000",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.632280+00:00",
       "end": "2026-10-12T12:49:53.819607+00:00",
       "load1": 2.619140625,
       "seconds": 0.187,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "f22f8ad3ecd467e8028b8a692add503f481edeb5266cd0365dc337cf552e38ba"
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.822033+00:00",
       "end": "2026-10-12T12:49:53.832825+00:00",
       "load1": 2.619140625,
@@ -3152,18 +3151,18 @@
     },
     {
       "command": "target/release/ecdsa_vectors --count 200",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.839687+00:00",
       "end": "2026-10-12T12:49:53.958377+00:00",
       "load1": 2.619140625,
       "seconds": 0.119,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "494f9b1370d747a25412ca8029fcae6acee518f637b0d9019ba8066c37c64bdb"
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:49:53.958758+00:00",
       "end": "2026-10-12T12:49:53.962684+00:00",
       "load1": 2.619140625,
@@ -3171,8 +3170,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:04.523819+00:00",
       "end": "2026-10-12T12:50:04.565635+00:00",
       "load1": 2.36962890625,
@@ -3181,7 +3180,7 @@
     },
     {
       "command": "lake build numcheck sighashcheck arithcheck cryptocheck",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:04.604908+00:00",
       "end": "2026-10-12T12:50:29.742613+00:00",
       "load1": 2.36962890625,
@@ -3190,7 +3189,7 @@
     },
     {
       "command": "make numcheck",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:29.784963+00:00",
       "end": "2026-10-12T12:50:31.361219+00:00",
       "load1": 3.81005859375,
@@ -3199,7 +3198,7 @@
     },
     {
       "command": "make sighashcheck",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:31.401832+00:00",
       "end": "2026-10-12T12:50:33.112206+00:00",
       "load1": 3.81005859375,
@@ -3208,7 +3207,7 @@
     },
     {
       "command": "make arithcheck",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:33.154926+00:00",
       "end": "2026-10-12T12:50:34.988242+00:00",
       "load1": 3.7451171875,
@@ -3217,7 +3216,7 @@
     },
     {
       "command": "make cryptocheck",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:35.031711+00:00",
       "end": "2026-10-12T12:50:39.426970+00:00",
       "load1": 3.7451171875,
@@ -3226,7 +3225,7 @@
     },
     {
       "command": "/usr/bin/env -u BASH_ENV /bin/bash --noprofile --norc harness/target/bump-050/lean-legs.sh",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:50:04.458454+00:00",
       "end": "2026-10-12T12:50:39.443314+00:00",
       "load1": 2.36962890625,
@@ -3235,7 +3234,7 @@
     },
     {
       "command": "cargo test --release --locked",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:39.481857+00:00",
       "end": "2026-10-12T12:51:45.395221+00:00",
       "load1": 3.099609375,
@@ -3244,7 +3243,7 @@
     },
     {
       "command": "harness/target/release/rules_check",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:45.395489+00:00",
       "end": "2026-10-12T12:51:51.403343+00:00",
       "load1": 3.17138671875,
@@ -3253,7 +3252,7 @@
     },
     {
       "command": "python3 tools/conformance.py --out docs/CONFORMANCE-2026-09-27.md --date 2026-09-27",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:51.411869+00:00",
       "end": "2026-10-12T12:51:51.465625+00:00",
       "load1": 3.1572265625,
@@ -3262,7 +3261,7 @@
     },
     {
       "command": "python3 tools/specgen.py",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:51.465835+00:00",
       "end": "2026-10-12T12:51:52.424103+00:00",
       "load1": 3.1572265625,
@@ -3271,18 +3270,18 @@
     },
     {
       "command": "python3 docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3-audit.py",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:52.424335+00:00",
       "end": "2026-10-12T12:51:59.616693+00:00",
       "load1": 3.1572265625,
       "seconds": 7.192,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "53aa3c76451b670cb4d59074bc6e11e950012f5d34710e863ce2411084d76d8c"
     },
     {
       "command": "make check-pins",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:51:59.616957+00:00",
       "end": "2026-10-12T12:52:00.163808+00:00",
       "load1": 3.1328125,
@@ -3290,8 +3289,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:52:00.164055+00:00",
       "end": "2026-10-12T12:52:00.793242+00:00",
       "load1": 3.1328125,
@@ -3300,7 +3299,7 @@
     },
     {
       "command": "python3 tools/specgen.py --check",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:52:00.793472+00:00",
       "end": "2026-10-12T12:52:01.758736+00:00",
       "load1": 3.1328125,
@@ -3309,7 +3308,7 @@
     },
     {
       "command": "git diff --check",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:52:01.758979+00:00",
       "end": "2026-10-12T12:52:02.320511+00:00",
       "load1": 3.1328125,
@@ -3318,18 +3317,18 @@
     },
     {
       "command": "rg -n -o bsv-rs-0.4.5 -g '*.md' -g '*.sh' -g Makefile -g '*.lean' -g '*.py' -g '!docs/security/**' -g '!docs/sealed/**' -g '!docs/records/**' -g '!docs/audit/**' -g '!docs/history/**' -g '!.cca/**' -g '!.claude/**' -g '!harness/target/**' -g '!lean/.lake/**' .",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:52:49.499239+00:00",
       "end": "2026-10-12T12:52:49.512809+00:00",
       "load1": 2.5234375,
       "seconds": 0.013,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "f3f56a3e59ca54e91f352779bcf3d62a4c7cfb145ba0f1ab0d5cd5f16ff366ab"
     },
     {
       "command": "rg -n 'bsv-rs-0\\.4\\.5\\.jsonl' Makefile tools/check.sh docs/PROVENANCE.md docs/STATE-OF-THE-WORLD.md corpus/INDEX.md lean/Test",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:52:49.513155+00:00",
       "end": "2026-10-12T12:52:49.522928+00:00",
       "load1": 2.5234375,
@@ -3338,18 +3337,18 @@
     },
     {
       "command": "rg -n '^use bsv_rs' harness/src/engine.rs harness/src/bin/run_bsvrs.rs harness/src/bin/num_vectors.rs harness/src/bin/sighash_vectors.rs harness/src/bin/arith_vectors.rs harness/src/bin/ecdsa_vectors.rs",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:53:38.533090+00:00",
       "end": "2026-10-12T12:53:38.541331+00:00",
       "load1": 2.1181640625,
       "seconds": 0.008,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "15cedd1c037cd97ebbc63c0eb56c0b661327d3c1feed79a58c811b2fe2de3220"
     },
     {
       "command": "rg -n 'bsv_rs::.*(beef|stream|transaction)|OutputRef|StreamVerifier|AsyncStreamVerifier|SpendRefusal|MiningCheck|mining_tip' harness/src harness/tests",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:53:38.541607+00:00",
       "end": "2026-10-12T12:53:38.552132+00:00",
       "load1": 2.1181640625,
@@ -3358,29 +3357,29 @@
     },
     {
       "command": "rg -l 'RawTx\\s*\\{|RawOutput\\s*\\{|(Sig)?TxOutput\\s*\\{' harness/src harness/tests",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:53:38.552434+00:00",
       "end": "2026-10-12T12:53:38.560490+00:00",
       "load1": 2.4287109375,
       "seconds": 0.008,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "210f3e2d1e979e9c1d88a695eb1fd098f95980c70093c09fd9c5b5b1704b51fc"
     },
     {
       "command": "python3 docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3-audit.py",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:57:21.672815+00:00",
       "end": "2026-10-12T12:57:28.935058+00:00",
       "load1": 2.26904296875,
       "seconds": 7.262,
       "exit": 0,
-[withheld at export: a sibling tree's line]
+      "output": "[withheld at export: a sibling tree's line]",
       "output_sha256": "3c2ad73ca2fa7388ae6908c4b2f7989bc0318d4434ad334611b65ec4e4fb168d"
     },
     {
       "command": "make check-pins",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:57:28.935294+00:00",
       "end": "2026-10-12T12:57:29.492910+00:00",
       "load1": 2.4873046875,
@@ -3388,8 +3387,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:57:29.493139+00:00",
       "end": "2026-10-12T12:57:30.145038+00:00",
       "load1": 2.4873046875,
@@ -3398,7 +3397,7 @@
     },
     {
       "command": "git diff --check",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:57:30.145257+00:00",
       "end": "2026-10-12T12:57:30.549449+00:00",
       "load1": 2.4873046875,
@@ -3407,7 +3406,7 @@
     },
     {
       "command": "git status --short --branch",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:58:54.062614+00:00",
       "end": "2026-10-12T12:58:54.234335+00:00",
       "load1": 4.0341796875,
@@ -3416,7 +3415,7 @@
     },
     {
       "command": "git add -- Makefile corpus/INDEX.md corpus/arith/bsv-rs-0.4.5.jsonl corpus/arith/bsv-rs-0.5.0.jsonl corpus/arith/cases-manifest.json corpus/arith/cases.jsonl corpus/bytes/cases-manifest.json corpus/bytes/cases.jsonl corpus/cpp/replay/cpp-bn_op/cases-manifest.json corpus/cpp/replay/cpp-bn_op/cases.jsonl corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl corpus/cpp/replay/cpp-multisig/cases-manifest.json corpus/cpp/replay/cpp-multisig/cases.jsonl corpus/cpp/replay/cpp-opcode/cases-manifest.json corpus/cpp/replay/cpp-opcode/cases.jsonl.gz corpus/cpp/replay/cpp-script/cases-manifest.json corpus/cpp/replay/cpp-script/cases.jsonl.gz corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json corpus/cpp/replay/cpp-script_P2SH/cases.jsonl corpus/cpp/replay/cpp-sigopcount/cases-manifest.json corpus/cpp/replay/cpp-sigopcount/cases.jsonl corpus/cpp/replay/cpp-transaction/cases-manifest.json corpus/cpp/replay/cpp-transaction/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz corpus/crypto/cases-manifest.json corpus/crypto/cases.jsonl corpus/crypto/ecdsa-bsv-rs-0.4.5.jsonl corpus/crypto/ecdsa-bsv-rs-0.5.0.jsonl corpus/eras/eras.jsonl corpus/eras/manifest.json corpus/flow/flow.jsonl corpus/flow/manifest.json corpus/gen/gen.jsonl corpus/gen/manifest.json corpus/million/manifest.json corpus/million/witnesses.jsonl corpus/numbers/bsv-rs-0.4.5.jsonl corpus/numbers/bsv-rs-0.5.0.jsonl corpus/road/manifest.json corpus/road/road.jsonl corpus/seed/manifest.json corpus/seed/seed.jsonl corpus/sighash/bsv-rs-0.4.5.jsonl corpus/sighash/bsv-rs-0.5.0.jsonl corpus/stack/cases-manifest.json corpus/stack/cases.jsonl corpus/tx/manifest.json corpus/tx/tx.jsonl corpus/witnesses/cpp-bn_op.jsonl corpus/witnesses/cpp-lrshiftnum.jsonl corpus/witnesses/cpp-multisig.jsonl corpus/witnesses/cpp-opcode.jsonl corpus/witnesses/cpp-script.jsonl corpus/witnesses/cpp-script_P2SH.jsonl corpus/witnesses/cpp-transaction.jsonl corpus/witnesses/cpp-txvalidationcache-t100-g102-c102.jsonl corpus/witnesses/cpp-txvalidationcache-t101-g102-c1.jsonl corpus/witnesses/cpp-txvalidationcache-t101-g103-c103.jsonl corpus/witnesses/manifest.json corpus/witnesses/million.jsonl docs/CONFORMANCE-2026-09-27.md docs/PROVENANCE.md docs/STATE-OF-THE-WORLD.md docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3-audit.py docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.json docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.md docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.txt harness/Cargo.lock harness/Cargo.toml harness/src/lib.rs tools/check.sh",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:58:54.234581+00:00",
       "end": "2026-10-12T12:58:55.057801+00:00",
       "load1": 4.0341796875,
@@ -3425,7 +3424,7 @@
     },
     {
       "command": "git commit -m 'Measure bsv-rs 0.5.0 engine column (S3, lane bump-050, Codex GPT-6, [M] 20261012-125855Z)' -- Makefile corpus/INDEX.md corpus/arith/bsv-rs-0.4.5.jsonl corpus/arith/bsv-rs-0.5.0.jsonl corpus/arith/cases-manifest.json corpus/arith/cases.jsonl corpus/bytes/cases-manifest.json corpus/bytes/cases.jsonl corpus/cpp/replay/cpp-bn_op/cases-manifest.json corpus/cpp/replay/cpp-bn_op/cases.jsonl corpus/cpp/replay/cpp-lrshiftnum/cases-manifest.json corpus/cpp/replay/cpp-lrshiftnum/cases.jsonl corpus/cpp/replay/cpp-multisig/cases-manifest.json corpus/cpp/replay/cpp-multisig/cases.jsonl corpus/cpp/replay/cpp-opcode/cases-manifest.json corpus/cpp/replay/cpp-opcode/cases.jsonl.gz corpus/cpp/replay/cpp-script/cases-manifest.json corpus/cpp/replay/cpp-script/cases.jsonl.gz corpus/cpp/replay/cpp-script_P2SH/cases-manifest.json corpus/cpp/replay/cpp-script_P2SH/cases.jsonl corpus/cpp/replay/cpp-sigopcount/cases-manifest.json corpus/cpp/replay/cpp-sigopcount/cases.jsonl corpus/cpp/replay/cpp-transaction/cases-manifest.json corpus/cpp/replay/cpp-transaction/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c1/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g1-c102/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t100-g102-c102/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c1/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g1-c103/cases.jsonl.gz corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g102-c1/cases.jsonl corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases-manifest.json corpus/cpp/replay/cpp-txvalidationcache-t101-g103-c103/cases.jsonl.gz corpus/crypto/cases-manifest.json corpus/crypto/cases.jsonl corpus/crypto/ecdsa-bsv-rs-0.4.5.jsonl corpus/crypto/ecdsa-bsv-rs-0.5.0.jsonl corpus/eras/eras.jsonl corpus/eras/manifest.json corpus/flow/flow.jsonl corpus/flow/manifest.json corpus/gen/gen.jsonl corpus/gen/manifest.json corpus/million/manifest.json corpus/million/witnesses.jsonl corpus/numbers/bsv-rs-0.4.5.jsonl corpus/numbers/bsv-rs-0.5.0.jsonl corpus/road/manifest.json corpus/road/road.jsonl corpus/seed/manifest.json corpus/seed/seed.jsonl corpus/sighash/bsv-rs-0.4.5.jsonl corpus/sighash/bsv-rs-0.5.0.jsonl corpus/stack/cases-manifest.json corpus/stack/cases.jsonl corpus/tx/manifest.json corpus/tx/tx.jsonl corpus/witnesses/cpp-bn_op.jsonl corpus/witnesses/cpp-lrshiftnum.jsonl corpus/witnesses/cpp-multisig.jsonl corpus/witnesses/cpp-opcode.jsonl corpus/witnesses/cpp-script.jsonl corpus/witnesses/cpp-script_P2SH.jsonl corpus/witnesses/cpp-transaction.jsonl corpus/witnesses/cpp-txvalidationcache-t100-g102-c102.jsonl corpus/witnesses/cpp-txvalidationcache-t101-g102-c1.jsonl corpus/witnesses/cpp-txvalidationcache-t101-g103-c103.jsonl corpus/witnesses/manifest.json corpus/witnesses/million.jsonl docs/CONFORMANCE-2026-09-27.md docs/PROVENANCE.md docs/STATE-OF-THE-WORLD.md docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3-audit.py docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.json docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.md docs/records/20261012-124552-bump-bsv-rs-0.5.0-s3.txt harness/Cargo.lock harness/Cargo.toml harness/src/lib.rs tools/check.sh",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:58:55.058259+00:00",
       "end": "2026-10-12T12:58:55.960712+00:00",
       "load1": 4.0341796875,
@@ -3434,7 +3433,7 @@
     },
     {
       "command": "git push origin HEAD:refs/heads/lane/bump-050",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T12:58:55.961371+00:00",
       "end": "2026-10-12T12:58:57.166620+00:00",
       "load1": 3.951171875,
@@ -3443,7 +3442,7 @@
     },
     {
       "command": "python3 tools/conformance.py --out docs/CONFORMANCE-2026-09-27.md --date 2026-09-27",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T13:00:30.213004+00:00",
       "end": "2026-10-12T13:00:30.272779+00:00",
       "load1": 2.32421875,
@@ -3452,7 +3451,7 @@
     },
     {
       "command": "make check-pins",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T13:00:30.274030+00:00",
       "end": "2026-10-12T13:00:30.612108+00:00",
       "load1": 2.32421875,
@@ -3460,8 +3459,8 @@
       "exit": 0
     },
     {
-[withheld at export: a sibling tree's line]
-[withheld at export: a sibling tree's line]
+      "command": "[withheld at export: a sibling tree's line]",
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T13:00:30.612375+00:00",
       "end": "2026-10-12T13:00:31.223149+00:00",
       "load1": 2.32421875,
@@ -3470,7 +3469,7 @@
     },
     {
       "command": "git diff --check",
-[withheld at export: a sibling tree's line]
+      "cwd": "[withheld at export: a sibling tree's line]",
       "start": "2026-10-12T13:00:31.223394+00:00",
       "end": "2026-10-12T13:00:31.234351+00:00",
       "load1": 2.32421875,

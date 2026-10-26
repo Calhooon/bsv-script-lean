@@ -1,4 +1,3 @@
-[export: 6 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 {
   "source_commit": "6504a3aff65ba97c0f6c80962b033e35ecbfed4b",
   "started": "2026-10-06T14:43:50.518858+00:00",
@@ -141,11 +140,11 @@
       "cmd": [
         "cmake",
         "-S",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "-B",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "-DCMAKE_BUILD_TYPE=Release",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
         "-DCMAKE_CXX_FLAGS=-Wno-error=cast-align -Wno-unknown-warning-option",
         "-DUSE_HARDENING=OFF",
@@ -164,7 +163,7 @@
       "cmd": [
         "make",
         "-C",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "-j4"
       ],
       "wall_s": 15.01,
@@ -175,7 +174,7 @@
       "cmd": [
         "make",
         "-C",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]",
         "-j4"
       ],
       "wall_s": 115.1,
@@ -186,7 +185,7 @@
       "cmd": [
         "cmake",
         "--install",
-[withheld at export: a sibling tree's line]
+        "[withheld at export: a sibling tree's line]"
       ],
       "wall_s": 5.01,
       "rc": 0,
