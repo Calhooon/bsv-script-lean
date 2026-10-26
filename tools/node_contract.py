@@ -504,6 +504,16 @@ def theorem_loc(name, text):
     raise SystemExit(f"node_contract: theorem {name} has no entry in spec/theorems.md under {prefix}")
 
 
+def withheld_at_export(path):
+    """True when tools/export_withheld.txt names the path (the public edition lacks it by the owner's word)."""
+    import export_public  # the sibling tool; its lists are the export's
+    try:
+        rules = export_public.load_withheld(export_public.WITHHELD)
+    except (OSError, SystemExit):
+        return False
+    return export_public.group_of(rules, path) is not None
+
+
 def short(name):
     return name.split(".")[-1]
 
@@ -526,6 +536,12 @@ def refinement(data, theorems_text):
                 raise SystemExit(f"node_contract: obligation {row['row']}: ledger row {e['id']} is not keyed to it with {e['word']!r}")
         for lg in row["legs"]:
             if lg["landed"] and not os.path.exists(os.path.join(ROOT, lg["record"])):
+                if withheld_at_export(lg["record"]):
+                    # the public edition: the record is on the withheld list (tools/export_withheld.txt), so its absence
+                    # is the export's, said by name (the hosted gate of 2026-10-26); never a pass, never a stop
+                    print(f"node_contract: obligation {row['row']}: the leg's record {lg['record']} is withheld at export: "
+                          "SKIPPED BY NAME (the private history holds it)")
+                    continue
                 raise SystemExit(f"node_contract: obligation {row['row']}: the leg's record {lg['record']} is absent")
         if row["kind"] == "theorem":
             for n in row["names"]:

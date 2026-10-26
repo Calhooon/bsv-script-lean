@@ -19,7 +19,7 @@
 //! (gobdk, the GoBDK shim's column, since 2026-09-27: replayed like the SDKs from its recorded verdicts once
 //! `corpus/witnesses/gobdk/manifest.json` exists; skipped by name before that)
 
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 use std::io::BufRead;
 use std::path::{Path, PathBuf};
 
@@ -100,18 +100,32 @@ fn corpus_bytes(path: &Path) -> Vec<u8> {
     clippy::unwrap_used,
     reason = "a tripwire checker that writes nothing: a failure is its leg RED with the message"
 )]
-fn read_entries(path: &Path) -> Vec<Entry> {
+/// The entries of a corpus file and the count the public edition withholds (`Entry::withheld`, skipped BY NAME).
+fn read_entries(path: &Path) -> (Vec<Entry>, u64) {
     let bytes = corpus_bytes(path);
     let mut out = Vec::new();
+    let mut withheld = 0u64;
     for line in std::io::BufReader::new(&bytes[..]).lines() {
         let line = line.unwrap();
         if line.trim().is_empty() {
             continue;
         }
         let e: Entry = serde_json::from_str(&line).expect("entry");
+        // the public edition's withheld entries (the export's marker in `tx`): no replay can run them; the
+        // exported manifests count the public rows, so they are skipped BY NAME and said (never a silent pass)
+        if e.withheld() {
+            withheld += 1;
+            continue;
+        }
         out.push(e);
     }
-    out
+    if withheld > 0 {
+        println!(
+            "rules_check: {}: {withheld} entries withheld at export SKIPPED BY NAME (the export's marker; the manifest's withheld_entries)",
+            path.display()
+        );
+    }
+    (out, withheld)
 }
 
 /// The spec's two verdicts per entry: the recorded keys when the corpus carries them (`run_diff --record` writes
@@ -420,15 +434,27 @@ fn replay_bsvrs(
     }
 }
 
+/// The public edition's verdict on a corpus with withheld entries: the counts are bounded, never reproduced.
+const BOUNDED: &str =
+    "BOUNDED (entries withheld at export: every public count within the manifest's by at most the \
+                       withheld count, the rulings EQUAL, the entry total exact; not EQUAL)";
+
 /// Compare a replay with the manifest's `rules` rows (column, rule, entries, from, ruling) and its agree counts.
+/// With `withheld` entries (the public edition; `Entry::withheld`) the manifest's counts are the private corpus's:
+/// each public count may fall short of its row by at most `withheld`, a row's smallest witness may be a withheld id
+/// (`public_ids` lacks it), and a row the public replay never reaches must hold at most `withheld` entries. The
+/// rulings are compared as ever.
 fn compare(
     label: &str,
     rs: &RuleSet,
     r: &Replay,
     man_rules: &[serde_json::Value],
     man_agree: &BTreeMap<String, u64>,
+    withheld: u64,
+    public_ids: &BTreeSet<String>,
 ) -> u64 {
     let mut red = 0u64;
+    let within = |manifest: u64, replay: u64| replay <= manifest && manifest - replay <= withheld;
     for row in man_rules {
         let rule = row["rule"].as_str().unwrap_or("");
         if rule == UNEXPLAINED {
@@ -462,7 +488,14 @@ fn compare(
     for (k, t) in &r.counts {
         match expected.get(k) {
             Some((n, from)) => {
-                if *n != t.n || t.smallest.as_ref().map(|s| s.1.as_str()) != Some(from.as_str()) {
+                let smallest = t.smallest.as_ref().map(|s| s.1.as_str());
+                let holds = if withheld == 0 {
+                    *n == t.n && smallest == Some(from.as_str())
+                } else {
+                    within(*n, t.n)
+                        && (smallest == Some(from.as_str()) || !public_ids.contains(from.as_str()))
+                };
+                if !holds {
                     red += 1;
                     println!("  RED {label}: {} × `{}`: the tables give {} (smallest {}), the manifest {} (smallest {from})", k.0, k.1, t.n, t.smallest.as_ref().map(|s| s.1.as_str()).unwrap_or("-"), n);
                 }
@@ -483,7 +516,7 @@ fn compare(
         }
     }
     for (k, (n, _)) in &expected {
-        if !r.counts.contains_key(k) {
+        if !r.counts.contains_key(k) && *n > withheld {
             red += 1;
             println!(
                 "  RED {label}: {} × `{}`: the manifest has {n}, the tables give none",
@@ -493,7 +526,11 @@ fn compare(
     }
     for (col, n) in man_agree {
         let got = r.agree.get(col).copied().unwrap_or(0);
-        if got != *n {
+        if if withheld == 0 {
+            got != *n
+        } else {
+            !within(*n, got)
+        } {
             red += 1;
             println!(
                 "  RED {label}: agree in the {col} column: the replay {got}, the manifest {n}"
@@ -545,6 +582,7 @@ fn main() {
     let t0 = std::time::Instant::now();
     let mut red = 0u64;
     let mut corpora = 0u64;
+    let mut bounded = 0u64;
     let mut entries_total = 0u64;
     let mut witnesses_total = 0u64;
     // the SDK engines, and the GoBDK shim (#28, D14; its driver is run_engine's too, 2026-09-27): an engine whose
@@ -580,7 +618,7 @@ fn main() {
             let spec_key = m["spec"].as_str().expect("spec key").to_string();
             let mempool_key = spec_key.replacen("spec@", "spec-mempool@", 1);
             let engine_key = m["engine"].as_str().expect("engine key").to_string();
-            let entries = read_entries(&corpus_path);
+            let (entries, withheld) = read_entries(&corpus_path);
             let spec = spec_map(&root, &corpus_path, &entries, &spec_key, &mempool_key);
             let r = replay_sdk(&rs, &entries, &spec, &engine_key, has_default);
             let man_agree: BTreeMap<String, u64> = m["agree"]
@@ -597,11 +635,20 @@ fn main() {
                 .map(|x| x["entries"].as_u64().unwrap_or(0))
                 .sum();
             let label = format!("{engine} on {corpus}");
-            let bad = compare(&label, &rs, &r, &rows, &man_agree);
+            let bad = compare(
+                &label,
+                &rs,
+                &r,
+                &rows,
+                &man_agree,
+                withheld,
+                &entries.iter().map(|e| e.id.clone()).collect(),
+            );
             let recorded = entries.iter().any(|e| e.expect.contains_key(&spec_key));
-            println!("rules_check: {label}: {} entries replayed from {} (spec {spec_key}{}); {} divergent runs in {} classes; {}", r.entries, engine_key, if recorded { " recorded in the corpus" } else { " from eval/bsvs corpus, the corpus carrying no spec key" }, n_classes, rows.len(), if bad == 0 { "EQUAL to the manifest" } else { "RED" });
+            println!("rules_check: {label}: {} entries replayed from {} (spec {spec_key}{}); {} divergent runs in {} classes; {}", r.entries, engine_key, if recorded { " recorded in the corpus" } else { " from eval/bsvs corpus, the corpus carrying no spec key" }, n_classes, rows.len(), if bad == 0 && withheld > 0 { BOUNDED } else if bad == 0 { "EQUAL to the manifest" } else { "RED" });
             red += bad;
             corpora += 1;
+            bounded += u64::from(withheld > 0 && bad == 0);
             entries_total += r.entries;
             witnesses_total += n_classes;
         }
@@ -622,7 +669,7 @@ fn main() {
             let corpus_path = root
                 .join("harness")
                 .join(m["corpus"].as_str().expect("corpus path"));
-            let mut entries = read_entries(&corpus_path);
+            let (mut entries, withheld) = read_entries(&corpus_path);
             // the block road runs its entries by spend-height group, ascending, file order inside a group (txroad.rs `groups`),
             // and keeps the earliest of equal size as a class's smallest witness: the replay walks them in the same order
             if m["mode"]
@@ -703,14 +750,23 @@ fn main() {
                 .iter()
                 .map(|x| x["entries"].as_u64().unwrap_or(0))
                 .sum();
-            bad += compare(&label, &rs, &r, &rows, &man_agree);
-            if r.entries != m["entries"].as_u64().unwrap_or(0) {
+            bad += compare(
+                &label,
+                &rs,
+                &r,
+                &rows,
+                &man_agree,
+                withheld,
+                &entries.iter().map(|e| e.id.clone()).collect(),
+            );
+            if r.entries + withheld != m["entries"].as_u64().unwrap_or(0) {
                 bad += 1;
-                println!("  RED {label}: entry count differs from the manifest");
+                println!("  RED {label}: entry count differs from the manifest (public {} + withheld {withheld})", r.entries);
             }
-            println!("rules_check: {label}: {} entries replayed from {engine_key} against {spec_key}; {n_classes} divergent runs in {} classes; {}", r.entries, rows.len(), if bad == 0 { "EQUAL to the manifest" } else { "RED" });
+            println!("rules_check: {label}: {} entries replayed from {engine_key} against {spec_key}; {n_classes} divergent runs in {} classes; {}", r.entries, rows.len(), if bad == 0 && withheld > 0 { BOUNDED } else if bad == 0 { "EQUAL to the manifest" } else { "RED" });
             red += bad;
             corpora += 1;
+            bounded += u64::from(withheld > 0 && bad == 0);
             entries_total += r.entries;
             witnesses_total += n_classes;
         }
@@ -755,7 +811,7 @@ fn main() {
                 .find(|i| i.name == "bsv-rs")
                 .map(|i| EngineConfig::from_json(&i.config))
                 .unwrap_or_default();
-            let entries = read_entries(&corpus_path);
+            let (entries, withheld) = read_entries(&corpus_path);
             let r = replay_bsvrs(&rs, &entries, &spec_key, &mempool_key, &cfg);
             let mut man_agree: BTreeMap<String, u64> = BTreeMap::new();
             man_agree.insert("spec".into(), m["agree_block"].as_u64().unwrap_or(0));
@@ -769,17 +825,27 @@ fn main() {
                 .map(|x| x["entries"].as_u64().unwrap_or(0))
                 .sum();
             let label = format!("bsv-rs on {corpus}");
-            let bad = compare(&label, &rs, &r, &rows, &man_agree);
-            println!("rules_check: {label}: {} entries run live under the two words ({BSV_RS_KEY}; spec {spec_key}); {} divergent runs in {} classes; {}", r.entries, n_classes, rows.len(), if bad == 0 { "EQUAL to the manifest" } else { "RED" });
+            let bad = compare(
+                &label,
+                &rs,
+                &r,
+                &rows,
+                &man_agree,
+                withheld,
+                &entries.iter().map(|e| e.id.clone()).collect(),
+            );
+            println!("rules_check: {label}: {} entries run live under the two words ({BSV_RS_KEY}; spec {spec_key}); {} divergent runs in {} classes; {}", r.entries, n_classes, rows.len(), if bad == 0 && withheld > 0 { BOUNDED } else if bad == 0 { "EQUAL to the manifest" } else { "RED" });
             red += bad;
             corpora += 1;
+            bounded += u64::from(withheld > 0 && bad == 0);
             entries_total += r.entries;
             witnesses_total += n_classes;
         }
     }
     println!(
-        "rules_check: {} ({corpora} corpus × engine manifests, {entries_total} entries replayed, {witnesses_total} divergent runs classified; {} s)",
+        "rules_check: {} ({corpora} corpus × engine manifests, {entries_total} entries replayed, {witnesses_total} divergent runs classified{}; {} s)",
         if red == 0 { "GREEN (the tables reproduce the classes, counts, smallest witnesses and rulings of the go-sdk, ts-sdk, gobdk, sv-node and bsv-rs manifests; policy-defaults has no classifier rows)" } else { "RED" },
+        if bounded > 0 { format!("; {bounded} BOUNDED by withheld entries (the public edition), not reproduced") } else { String::new() },
         t0.elapsed().as_secs()
     );
     if red > 0 {

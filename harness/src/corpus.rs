@@ -137,8 +137,12 @@ pub struct Entry {
     pub family: String,
     /// The rule id the entry exercises (`corpus/INDEX.md`).
     pub rule: String,
-    /// The spending transaction, hex.
+    /// The spending transaction, hex (or, in the public edition, the export's `WITHHELD: <group>` marker for an
+    /// entry the owner withheld: `Entry::withheld`).
     pub tx: String,
+    /// One prevout per input; in the public edition a withheld entry carries the marker string here, read as an
+    /// empty list so the file stays readable (the hosted gate of 2026-10-26).
+    #[serde(deserialize_with = "prevouts_or_withheld")]
     pub prevouts: Vec<PrevoutJson>,
     pub params: ParamsJson,
     /// The explicit flag word per input (`script_flags.h`); absent = derived from
@@ -156,7 +160,34 @@ pub struct Entry {
     pub divergence: Option<Divergence>,
 }
 
+/// The export's marker on a withheld field (`tools/export_public.py`, `entry_marker`).
+pub const WITHHELD_MARKER: &str = "WITHHELD: ";
+
+fn prevouts_or_withheld<'de, D: serde::Deserializer<'de>>(
+    d: D,
+) -> Result<Vec<PrevoutJson>, D::Error> {
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum ListOrMarker {
+        List(Vec<PrevoutJson>),
+        Marker(String),
+    }
+    match ListOrMarker::deserialize(d)? {
+        ListOrMarker::List(v) => Ok(v),
+        ListOrMarker::Marker(m) if m.starts_with(WITHHELD_MARKER) => Ok(Vec::new()),
+        ListOrMarker::Marker(m) => Err(serde::de::Error::custom(format!(
+            "prevouts: a string that is not the export's withheld marker: {m:?}"
+        ))),
+    }
+}
+
 impl Entry {
+    /// An entry the public edition withholds (its `tx` is the export's marker): no replay can run it, a reader
+    /// skips it BY NAME and counts it (the manifest's `withheld_entries` names the count).
+    pub fn withheld(&self) -> bool {
+        self.tx.starts_with(WITHHELD_MARKER)
+    }
+
     /// The well-formedness every entry must satisfy (`docs/DESIGN.md` §6): at
     /// least one input and one output (BDK throws on zero inputs and uses a
     /// constant-false checker on zero outputs), one prevout per input, a flag
