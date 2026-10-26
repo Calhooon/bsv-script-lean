@@ -1,9 +1,9 @@
 # The public edition of bsv-script-lean: export manifest (tools/export_public.py)
-source-commit 894c1af0cb1e519669163497c27babc688beb605
-exported-at 2026-10-26 16:38:47 UTC
-withheld-list tools/export_withheld.txt @ 894c1af0cb1e
-withheld-entry-list tools/export_withheld_entries.txt @ 894c1af0cb1e
-paths-exported 2085
+source-commit 753df92a4798f989fe5cac26a7f5697be0d93270
+exported-at 2026-10-26 18:20:42 UTC
+withheld-list tools/export_withheld.txt @ 753df92a4798
+withheld-entry-list tools/export_withheld_entries.txt @ 753df92a4798
+paths-exported 2089
 paths-withheld 281
 withheld-group sealed-and-security 6
 withheld-group d135-records 6
@@ -47,17 +47,17 @@ withheld-rule-reference 2 fields 0 records harness/rules/gobdk.json
 withheld-rule-reference 2 fields 0 records harness/rules/sv-node.json
 withheld-rule-reference 2 fields 0 records harness/rules/ts-sdk.json
 rewritten 16 (tools/export_rewrite.txt)
-transformed 617 lines-replaced 6413 (the records transform)
+transformed 619 lines-replaced 6419 (the records transform)
 cargo-transformed 1 files, 1 target tables dropped (the Cargo transform)
 cargo-source-check 82 .rs files, 68 mod/#[path]/include lines, 3 naming a withheld basename, 0 resolving to a withheld path
 makefile-transformed 1 of 1 Makefiles, 1 targets dropped (the Makefile transform)
 public-pages-moved 1 (PUBLIC_PAGES)
-lists-read-at 894c1af0cb1e (7 lists; working tree differs: none)
+lists-read-at 753df92a4798 (7 lists; working tree differs: none)
 
 ## exported: sha256 path
 ec2137b0b8354442bd7113f07d1fa0e7429bdf2d646e30405c9511f066fe2fd4  .github/ISSUE_TEMPLATE/config.yml
 e1838b5cad2f1921ea0a4b7af43071da7c3b567994a3c0732871a01395233165  .github/ISSUE_TEMPLATE/divergence.md
-f6e6b34f2a9bcdebdbc2ba9be1a323b233311f0a46567664d054330839531bba  .github/workflows/gate.yml
+637b18f1d3cd7467ef9ffd3d9b96a30f803c836bb9003f2e2afb4b2a48cb8e89  .github/workflows/gate.yml
 3adb0002f42be7aeaf999d1c43d24c0d5317d71c43fe2318c2d63669ee072b01  .gitignore
 635d4300c0be5f9ef0d688c36346fd437b8f7ec48a3b22042144ed538bed39f8  CHANGELOG.md
 e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc  CLAUDE.md
@@ -1542,7 +1542,11 @@ dc86ca282e2717dfd3d311d43b2223a41e2238f79a17e02694d07ae4e8d5979c  docs/records/2
 27d3a60988299f696a357c0cd8456c54d9cbc40ddce5231ac3258a8f368be5bf  docs/records/20261026-162507-export-flip-third-edition-cap.md
 70aa6356a196bdcf0b5108898ff7851882a2acc2f853940ef1b8008c2e46d463  docs/records/20261026-162516-make-check-box.txt
 5ef13b0c412b226f33f99248df4bcab887cc654b8d70c9480fe425015bcf9395  docs/records/20261026-162925-make-check-box.txt
-e4957b990fa85ac54e140e9bf1bf3537ffd2c5054c697fd96f05f4f566a203df  docs/records/INDEX.md
+4e0c391691af15e890d2a1887c97d567c301b8c7b379d454c29fcd9b1bbab7da  docs/records/20261026-164952-export-flip-fourth-edition-cap.md
+2f1b45f58d0fe9f8afda6c52b21f374a6cf1bc6f5f3a78a5aa7d75059792183b  docs/records/20261026-165004-make-check-box.txt
+a5fcf9040ac4d65c9d36d34710c6afe2af4c1df0f45df1dc16b36df875bec254  docs/records/20261026-180912-flip-public-cap.md
+ec5a531519e8c3f7735da32b83d88ff854736698dd4f564118e0f2207f6a3603  docs/records/20261026-181200-make-check-box.txt
+d67ad2d7b2f2d8d8069488637a8ff7277640e9221c7b4a1d6c0a1422b0ffa93e  docs/records/INDEX.md
 6c964296b12b82d7973345175ec4f3faedb6c6a93cf55495be51ca130ee15307  eval/README.md
 090ffa09e1c248559b5cf8421b04f84d752c00e929e48f4c0b3422843d9f897f  eval/bsvs
 deaf00913ba4423dfc1b04848bd70cb7093fe3f663fc9d93f455650616f19640  eval/ladder48.py
@@ -3298,6 +3302,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/records/20261026-155633-make-check-box.txt
 3  docs/records/20261026-162516-make-check-box.txt
 3  docs/records/20261026-162925-make-check-box.txt
+3  docs/records/20261026-165004-make-check-box.txt
+3  docs/records/20261026-181200-make-check-box.txt
 
 ## cargo-transformed: targets-dropped path (kind name, ...) (the Cargo transform)
 1  harness/Cargo.toml  bin gen
@@ -3308,8 +3314,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 ## public pages moved: public-path -> exported-as sha256
 CLAUDE.public.md -> CLAUDE.md e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc
 
-pointer-transformed 544 files
-pointer-group local-paths 5722 occurrences; records 5571; substitutions 151
+pointer-transformed 546 files
+pointer-group local-paths 5728 occurrences; records 5577; substitutions 151
 pointer-group modal-names 56 occurrences; records 40; substitutions 16
 pointer-group addresses 6 occurrences; records 5; substitutions 1
 
@@ -3822,6 +3828,8 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 3  local-paths  records  docs/records/20261026-155633-make-check-box.txt
 3  local-paths  records  docs/records/20261026-162516-make-check-box.txt
 3  local-paths  records  docs/records/20261026-162925-make-check-box.txt
+3  local-paths  records  docs/records/20261026-165004-make-check-box.txt
+3  local-paths  records  docs/records/20261026-181200-make-check-box.txt
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00000.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00500.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-03000.manifest.json

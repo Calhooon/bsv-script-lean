@@ -10,6 +10,10 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 
 | stamp (UTC) | record | kind | commit | verdict | cited by |
 |---|---|---|---|---|---|
+| 2026-10-26 18:12:00 | [20261026-181200-make-check-box.txt](20261026-181200-make-check-box.txt) | make-check-box | 3639a369 | GREEN |  |
+| 2026-10-26 18:09:12 | [20261026-180912-flip-public-cap.md](20261026-180912-flip-public-cap.md) | other |  |  |  |
+| 2026-10-26 16:50:04 | [20261026-165004-make-check-box.txt](20261026-165004-make-check-box.txt) | make-check-box | 3cb28be1 | GREEN |  |
+| 2026-10-26 16:49:52 | [20261026-164952-export-flip-fourth-edition-cap.md](20261026-164952-export-flip-fourth-edition-cap.md) | other | 894c1af0 |  |  |
 | 2026-10-26 16:29:25 | [20261026-162925-make-check-box.txt](20261026-162925-make-check-box.txt) | make-check-box | 6caf0a4d | GREEN |  |
 | 2026-10-26 16:25:16 | [20261026-162516-make-check-box.txt](20261026-162516-make-check-box.txt) | make-check-box | 50aec30f | GREEN |  |
 | 2026-10-26 16:25:07 | [20261026-162507-export-flip-third-edition-cap.md](20261026-162507-export-flip-third-edition-cap.md) | other | 642f3ea0 |  |  |
