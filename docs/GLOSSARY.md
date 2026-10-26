@@ -4,7 +4,7 @@ These pages use a small set of words in a fixed sense.
 This page defines each one in a paragraph and names the page where it matters most.
 The terms run in alphabetical order; the evidence labels close the page.
 
-**archived #n.** An issue number of the issue tracker before 2026-10-23, written "archived #58", for example.
+**archived #n.** An issue number of the issue tracker before 2026-10-26, written "archived #58", for example.
 That tracker is archived with the private repository; its numbers are kept in the records and the history pages.
 At the public birth its links on the pages were replaced by this text, since they do not resolve outside the archive.
 The public tracker numbers its issues from 1, and a bare `#n` on GitHub links there, not to the archive.

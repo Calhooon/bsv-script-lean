@@ -9,10 +9,10 @@ The public repository starts with a fresh history: the editions before v1.2.0 we
 commit named below is "commit <sha> of the private history", a name to match against a record, not a link. From v1.2.0
 on, a tag's commit adds only its tripwire record, so the record named by an entry checked the tree the tag points to.
 
-## [Unreleased]
+## [1.2.0] - 2026-10-26
 
-The public edition, cut at its birth on 2026-10-23 as the tag `v1.2.0` with a fresh history; a GitHub release carries
-this entry when it is cut. Pinned to bitcoin-sv v1.2.3 (`6504a3aff65ba97c0f6c80962b033e35ecbfed4b`).
+The public edition, born 2026-10-21 with a fresh history and public since 2026-10-26 as the tag `v1.2.0`; the GitHub release
+carries this entry. Pinned to bitcoin-sv v1.2.3 (`6504a3aff65ba97c0f6c80962b033e35ecbfed4b`).
 
 ### Added
 

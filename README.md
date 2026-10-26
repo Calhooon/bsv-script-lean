@@ -138,7 +138,7 @@ One committed witness, read from `corpus/witnesses/ts-sdk/flow.jsonl` and its ro
 ## Evidence and claims
 
 Records, claim tables and the provenance pages carry an evidence label on every number; a prose sentence names its record instead.
-An issue written "archived #n", and a link to the issue tracker of the repository before 2026-10-23, names the private history and does not resolve for a reader of the public edition; `docs/GLOSSARY.md` defines the form.
+An issue written "archived #n", and a link to the issue tracker of the repository before 2026-10-26, names the private history and does not resolve for a reader of the public edition; `docs/GLOSSARY.md` defines the form.
 
 | label | meaning |
 |---|---|
@@ -219,7 +219,7 @@ The board reads this specification's records by path at a pin.
 
 This is the public edition, cut by `make export-public` and judged by `make export-gate` (archived #46): the withheld list, then the private-vocabulary check, the pointer check and the wording check over the export; it is not a tripwire leg (`docs/PROVENANCE.md` §4).
 The announcement, a sentence and a five-line forum post, is `docs/ANNOUNCEMENT.md` (archived #34).
-An issue number written "archived #n" is the issue tracker's before 2026-10-23, archived with the private repository (`docs/GLOSSARY.md`).
+An issue number written "archived #n" is the issue tracker's before 2026-10-26, archived with the private repository (`docs/GLOSSARY.md`).
 
 ## What stands
 

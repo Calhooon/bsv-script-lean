@@ -1355,7 +1355,7 @@ No dependency cache was copied from a sibling tree.
 
 | UTC completion marker [M] | public git URL | fetched revision [M] |
 |---|---|---|
-| 2026-10-13T14:36:07Z | [origin fetch](https://github.com/Calhooon/bsv-script-lean.git) (the private repository's origin until 2026-10-23) | `origin/main eb05cf2a7082205a0b43d0cbdda5e6764d20e3ef; a review branch 981cc5fc94effebaa4a05a625ece21d213adfd47` |
+| 2026-10-13T14:36:07Z | [origin fetch](https://github.com/Calhooon/bsv-script-lean.git) (the private repository's origin until 2026-10-26) | `origin/main eb05cf2a7082205a0b43d0cbdda5e6764d20e3ef; a review branch 981cc5fc94effebaa4a05a625ece21d213adfd47` |
 | 2026-10-13T14:43:17Z | [Cli](https://github.com/leanprover/lean4-cli) | `e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204` |
 | 2026-10-13T14:43:12Z | [LeanSearchClient](https://github.com/leanprover-community/LeanSearchClient) | `ddf04cf3949fa556442341e87d47f9f6e6074707` |
 | 2026-10-13T14:43:14Z | [Qq](https://github.com/leanprover-community/quote4) | `6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259` |

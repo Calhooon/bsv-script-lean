@@ -1,9 +1,9 @@
 # The public edition of bsv-script-lean: export manifest (tools/export_public.py)
-source-commit 642f3ea031bbef395e03f8683b7c72796c31556f
-exported-at 2026-10-26 16:09:04 UTC
-withheld-list tools/export_withheld.txt @ 642f3ea031bb
-withheld-entry-list tools/export_withheld_entries.txt @ 642f3ea031bb
-paths-exported 2082
+source-commit 894c1af0cb1e519669163497c27babc688beb605
+exported-at 2026-10-26 16:38:47 UTC
+withheld-list tools/export_withheld.txt @ 894c1af0cb1e
+withheld-entry-list tools/export_withheld_entries.txt @ 894c1af0cb1e
+paths-exported 2085
 paths-withheld 281
 withheld-group sealed-and-security 6
 withheld-group d135-records 6
@@ -47,27 +47,27 @@ withheld-rule-reference 2 fields 0 records harness/rules/gobdk.json
 withheld-rule-reference 2 fields 0 records harness/rules/sv-node.json
 withheld-rule-reference 2 fields 0 records harness/rules/ts-sdk.json
 rewritten 16 (tools/export_rewrite.txt)
-transformed 615 lines-replaced 6407 (the records transform)
+transformed 617 lines-replaced 6413 (the records transform)
 cargo-transformed 1 files, 1 target tables dropped (the Cargo transform)
 cargo-source-check 82 .rs files, 68 mod/#[path]/include lines, 3 naming a withheld basename, 0 resolving to a withheld path
 makefile-transformed 1 of 1 Makefiles, 1 targets dropped (the Makefile transform)
 public-pages-moved 1 (PUBLIC_PAGES)
-lists-read-at 642f3ea031bb (7 lists; working tree differs: none)
+lists-read-at 894c1af0cb1e (7 lists; working tree differs: none)
 
 ## exported: sha256 path
 ec2137b0b8354442bd7113f07d1fa0e7429bdf2d646e30405c9511f066fe2fd4  .github/ISSUE_TEMPLATE/config.yml
 e1838b5cad2f1921ea0a4b7af43071da7c3b567994a3c0732871a01395233165  .github/ISSUE_TEMPLATE/divergence.md
 f6e6b34f2a9bcdebdbc2ba9be1a323b233311f0a46567664d054330839531bba  .github/workflows/gate.yml
 3adb0002f42be7aeaf999d1c43d24c0d5317d71c43fe2318c2d63669ee072b01  .gitignore
-c13ca5e73165a3b888e8784fcfc5fc636ea95a0e7db1c8500ce6c4993eaa93c1  CHANGELOG.md
+635d4300c0be5f9ef0d688c36346fd437b8f7ec48a3b22042144ed538bed39f8  CHANGELOG.md
 e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc  CLAUDE.md
 aedd8cd03de86ef345b1f7700684a375dea496fe14db8fbbd371efa0daf56730  CONTRIBUTING.md
 d869a62568556cc7f61304b768074b40d7511ddb414f4e546101f860ee0ea853  LICENSE
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  LICENSE-APACHE
 07f50430b95d861bf1b87064a397354322fe2f386284ba690b7c695adfa2ff28  Makefile
-c58cc0e3b1b2309d7b736c62f67e9751d8b7341a39bf34be9e3f360e021229ba  NORTH-STAR.md
+04a0dbd81c9cb128a1c3976085466a2c64ac00bdc797f2f85174e57852265054  NORTH-STAR.md
 1cc55b54cd9bc76bee46facfd12c742173523cc570ac24f3d9204ec4454861dd  NOTICE
-2fb6922a70d7599f085618721f7d4c45a8eba72200b8cb4de131743bd2d10fb6  README.md
+75081932461b566b41831e24ddd2c45e4b3a5f77fc14bd41f622e3191c551aa4  README.md
 6c35844ae4ebc235def272fb14e1ca9b56f1e6051915b9335d98291fb21c2df5  SECURITY.md
 74b32cae123042a6eb7ee20144246a2eb4c2a189d8da8451d6b16814364be205  corpus/INDEX.md
 54064cb421f358db10d84943b71b85a586bf268513b5b1eadfccd562dd4eb8c0  corpus/README.md
@@ -483,14 +483,14 @@ e29a1d0f29c2693db44ff0fa53655dc177acddc8729b82e6a3a62c6893325a1f  docs/CONFORMAN
 2ff7daa40b6a09d86f1716a5b23fbd819e3b32987387279106a3a31f9539831e  docs/CONFORMANCE-TERANODE-OBSERVATION.md
 4c29d3276da94431ec8171999ff235bb91ea96ece4d1e66a5ee96fd78098253a  docs/DESIGN-S6.md
 68a116e74b5ba11537c6e8290fd53e9f8e25d9be92db79b02c06d14dc2f3289e  docs/DESIGN.md
-4e047da3183316242bf48c4788ce7036a08d8c3e4ae8b7db85994a6af2364e6f  docs/GLOSSARY.md
+49e320f1e8dffd7ba4a87629e719fa36ca59c498dbcefbdb7e64a7886701a95b  docs/GLOSSARY.md
 7becd2a307635c35190f6589301cde427fed1a399f615039be34ab36199558b5  docs/HYPOTHESES.md
 ce396ac6415ee22abfde0e20f37ddc2e38d72239f162fb2921634c3b24398626  docs/LINT.md
 2726469cc0e1a070ed0bb34d2602634f9628b125510f786a666464c556e058d4  docs/PARAMETERS.md
-e641bac1030fa53b9808317fc804cfaa86d2101817de109561de2ffcf9b3e6dd  docs/PROVENANCE.md
+6275d6de23f9f6a222ba2c2e1d946666e09e05ea75353fb1ad7c28206b486464  docs/PROVENANCE.md
 bd77512212b882e68a44f75c44c3d55dfc4a263e65f1e8c7840eafe2319859e9  docs/README.md
 06c7ec96f2b08ae6755392f2d139c0e5e633d33938c398988646db9831b7e443  docs/SECOND-FORMALIZATION.md
-f90909cc35aba32b5694c879ea2220a45f6231ceef1fbb4856fafd0c51981da9  docs/STATE-OF-THE-WORLD.md
+85f3c5aa91c8d8039142b1db9c946bad30685ae650ed1a2cc31fff917a43850b  docs/STATE-OF-THE-WORLD.md
 b163c1df5c4de6405f4a9cd91707924557872aee603aff7f1c1bffba1b3755cb  docs/WRITE-UP.md
 21d04440c910211744e9adb5d7ad145e1a6751eb006b87d86031d98ea60fdd1e  docs/audit/2026-09-26-lens-S3r1-by-S3.md
 9c9bded181f66eb628bb8cd7b5b788899ef2050be5de5bfecbc3745d2f7764cd  docs/audit/2026-09-26-lens-S4b-commits-by-S3.md
@@ -1539,7 +1539,10 @@ af5fb6b8904545a74a671de2f3ac00ff004506f4db6817dfac132f46e81da65d  docs/records/2
 dc86ca282e2717dfd3d311d43b2223a41e2238f79a17e02694d07ae4e8d5979c  docs/records/20261026-145126-public-tracker-filed.md
 1043d580f5ccf6f4becea6c75d9c5948c0aec39343a559dc1cbbcfd5d1ac0a5d  docs/records/20261026-151123-readme-flip-s3.md
 142623b91a5955f08c5580efb76dccc650ef4a8010fa7eda4e95cbd2881d0d98  docs/records/20261026-155633-make-check-box.txt
-795fd9c40c156729c78b83af9afeceb24b55b8de624f42efec59149f83b025a3  docs/records/INDEX.md
+27d3a60988299f696a357c0cd8456c54d9cbc40ddce5231ac3258a8f368be5bf  docs/records/20261026-162507-export-flip-third-edition-cap.md
+70aa6356a196bdcf0b5108898ff7851882a2acc2f853940ef1b8008c2e46d463  docs/records/20261026-162516-make-check-box.txt
+5ef13b0c412b226f33f99248df4bcab887cc654b8d70c9480fe425015bcf9395  docs/records/20261026-162925-make-check-box.txt
+e4957b990fa85ac54e140e9bf1bf3537ffd2c5054c697fd96f05f4f566a203df  docs/records/INDEX.md
 6c964296b12b82d7973345175ec4f3faedb6c6a93cf55495be51ca130ee15307  eval/README.md
 090ffa09e1c248559b5cf8421b04f84d752c00e929e48f4c0b3422843d9f897f  eval/bsvs
 deaf00913ba4423dfc1b04848bd70cb7093fe3f663fc9d93f455650616f19640  eval/ladder48.py
@@ -2088,7 +2091,7 @@ b638aa6dd3c54928eebe6416371056218a6f524a2fb353c59a73294137eb6c3d  tools/node_con
 78f5c4bda565f82a441b02896dd956d4ee715e73ad186b92671ba3e1a8ff78ca  tools/oracle_check.sh
 e541aa2ecc1ad27c9f15ad7b9e59f839d8b909a6b8ddad91a9631c3100bc45f8  tools/prune_replay.py
 d02eaf3f5cfde9f2dc596be912c2eef90121aea61ce1fec6640e3bc6d1931ae3  tools/receipt_trim.py
-82ccdfbc590a3c7eb60c7c8a5611da249565320e0f03b69e03884f78a49d1569  tools/records_index.py
+022f5afe7f86beb0b3961e7a1632414f4636de64764ebdca507b159ca0affcb7  tools/records_index.py
 7b2fb818db42ef94c8e17a74f66957eb16404074b33c7851dc7a591852001197  tools/replay_p2sh.py
 3e8882b9d181cf742f1b513a8e47f105dd690d69062e7d04a37d401f2e54c9e9  tools/ripemd_tables.py
 a5668b3483b7e97d36a78e23ea83745ee2ccc9a67c54760827e4c1c7eed5225f  tools/road_variant.py
@@ -3293,6 +3296,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/records/20261026-144745-make-check-box.txt
 1  docs/records/20261026-151123-readme-flip-s3.md
 3  docs/records/20261026-155633-make-check-box.txt
+3  docs/records/20261026-162516-make-check-box.txt
+3  docs/records/20261026-162925-make-check-box.txt
 
 ## cargo-transformed: targets-dropped path (kind name, ...) (the Cargo transform)
 1  harness/Cargo.toml  bin gen
@@ -3303,8 +3308,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 ## public pages moved: public-path -> exported-as sha256
 CLAUDE.public.md -> CLAUDE.md e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc
 
-pointer-transformed 542 files
-pointer-group local-paths 5716 occurrences; records 5565; substitutions 151
+pointer-transformed 544 files
+pointer-group local-paths 5722 occurrences; records 5571; substitutions 151
 pointer-group modal-names 56 occurrences; records 40; substitutions 16
 pointer-group addresses 6 occurrences; records 5; substitutions 1
 
@@ -3815,6 +3820,8 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 3  local-paths  records  docs/records/20261026-140530-make-check-box.txt
 3  local-paths  records  docs/records/20261026-144745-make-check-box.txt
 3  local-paths  records  docs/records/20261026-155633-make-check-box.txt
+3  local-paths  records  docs/records/20261026-162516-make-check-box.txt
+3  local-paths  records  docs/records/20261026-162925-make-check-box.txt
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00000.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00500.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-03000.manifest.json

@@ -1,6 +1,6 @@
 # NORTH STAR: bsv-script-lean
 
-**Born 2026-09-21; the public edition since 2026-10-23 (re-stamped 2026-10-12, archived #58: constitution 01 extended to the transaction state machine).** The permanent WHY and the standard every decision
+**Born 2026-09-21; the public edition since 2026-10-26 (re-stamped 2026-10-12, archived #58: constitution 01 extended to the transaction state machine).** The permanent WHY and the standard every decision
 here is measured against. Numbers live on the state page; this file carries
 pointers and rulings.
 
@@ -82,7 +82,7 @@ authority is earned by conformance runs, not declared.
 
 2026-09-21 (birth): private at birth · the calendar re-dated on measured
 velocity, never on a claim · public on the maintainers' ruling (the public
-edition since 2026-10-23).
+edition since 2026-10-26).
 
 2026-10-07 (archived #58): the maintainers chartered S6, the transaction state machine (the UTXO
 set, the mempool, the header tree), as the bar after v1.0: `docs/DESIGN-S6.md`,

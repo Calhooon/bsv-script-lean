@@ -18,7 +18,7 @@ Each run writes its record under `docs/records/`.
 
 ## 2. The milestones
 
-Each milestone below carries its tracker title and what stands in it; an issue number of the tracker before 2026-10-23 is written "archived #n" ([glossary](GLOSSARY.md)).
+Each milestone below carries its tracker title and what stands in it; an issue number of the tracker before 2026-10-26 is written "archived #n" ([glossary](GLOSSARY.md)).
 Four milestones are open: review and release, Teranode as a refinement, the year held, and the public reader.
 The last three carry their open issues to the public tracker, which opens with 3 milestones and 24 issues ([`docs/records/20261021-150853-public-tracker-dryrun-pub-tracker.md`](records/20261021-150853-public-tracker-dryrun-pub-tracker.md)); every other milestone is closed on the archived tracker.
 

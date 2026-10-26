@@ -132,7 +132,7 @@ def render(rs):
         'seed leg of `make check`) refuses a stale copy. A record names the commit of the private history it was '
         'written at; the public history is fresh, so a commit named here is a name, not a link.',
         '',
-        'An issue written "archived #n" in a record, and a link to the issue tracker of the repository before 2026-10-23, '
+        'An issue written "archived #n" in a record, and a link to the issue tracker of the repository before 2026-10-26, '
         'names the private history and does not resolve for a reader of the public edition; `docs/GLOSSARY.md` defines the form.\n\n'
         'Kinds: make-check, make-check-box and make-check-modal are the tripwire\'s records (`tools/check.sh`), by where '
         'it ran; replay, verify, lens, recon, filing and measurement as the file name says; other for the rest.',
