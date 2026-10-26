@@ -1,4 +1,4 @@
-[export: 9 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[export: 10 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 [withheld at export: a sibling tree's line]
 
 Lens on LANE F's END BLOCK at e25780a, run on Opus 5.5 (Fable out, D118)
@@ -113,7 +113,7 @@ Lens on LANE F's END BLOCK at e25780a, run on Opus 5.5 (Fable out, D118)
 1. **Header, the contexts sentence.**
    - Wrong: "the second context ended mid-step at 04:31 UTC; a third picked sitting 2 up from its transcript at 04:32 UTC on Opus 5.5 and ran on it until the pane's model switch back to Fable at 05:45 UTC, which killed its two background lenses; a fourth, on Fable from 06:2x UTC, was PARKED AT THE FABLE WALL at 08:58 UTC with the post-landing pipeline and the landing's first Modal tripwire in flight, both of which died with it; **this sitting continues on Opus 5.5 from the restart of 11:52 UTC** (D118, the owner's word: the lanes on Opus 5.5 until Fable returns), a fifth context rebuilt from the record"
    - Right: "the second context (on Opus 5.5 from 23:00 UTC) ended mid-step at 04:31 UTC; a third, a fresh session on Fable 5.1 from 04:31 UTC that picked sitting 2 up from the second's transcript, hit its account's session limit at 05:06 UTC, where its two background lenses failed on the same limit (05:06:13 and 05:06:18 UTC) and its tripwire of the wiring was killed (05:07 UTC); a fourth, relaunched fresh at 05:40 UTC on the fleet's default (Opus 5.5 for one reply) and switched to Fable 5.1 at 05:45 UTC, worked from 06:20 UTC until 07:22 UTC; a fifth, on Fable from 07:50 UTC, was PARKED AT THE FABLE WALL at 08:58 UTC with the post-landing pipeline and the landing's first Modal tripwire in flight, both of which died with it; **this sitting continues on Opus 5.5 from the restart of 11:52 UTC** (D118, …), a sixth context rebuilt from the record"
-   - Evidence, from the transcripts under `~/.claude-profiles/<an owner account>/projects/-Users-johncalhoun-bsv-worktrees-spec-harness/`:
+[withheld at export: a sibling tree's line]
      - `294ec5e5…jsonl`: every turn is claude-fable-5-1, 04:31:28 to 05:03:04; "You've hit your session limit" at 05:06:13. Both lens task notifications read `failed`, "HTTP 429 … model sent to the API: claude-fable-5-1"; the tripwire was `killed` at 05:07:07.
      - `8594523a…jsonl`: its first prompt is the old session id; Opus 05:40:11 to 05:40:21; `/model claude-fable-5-1` at 05:45:21; Fable 06:20:26 to 07:21:58.
      - `01e98b16…jsonl`: Fable 07:50:16 to 08:58:19.

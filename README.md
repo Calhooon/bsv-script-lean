@@ -8,6 +8,36 @@ This is not a node, a wallet or an application, and it does not prove the node c
 
 ![The bitcoin-sv source at v1.2.3, cited at its pin, is written as the Lean definition (lean/BsvScript, lean/BsvChain); the definition compiles to the evaluator eval/bsvs and carries the theorems; the harness runs the corpus through the evaluator and through SV-node, Teranode, bsv-rs, go-sdk, @bsv/sdk and GoBDK, and reports GREEN, or RED with a witness transaction.](docs/img/overview.svg)
 
+## Try it
+
+```sh
+git clone https://github.com/Calhooon/bsv-script-lean && cd bsv-script-lean
+VERIFY_LIGHT=1 make verify
+```
+
+The light run builds the libraries and the evaluator, runs the self-test and the smoke run, and prints the kernel witness and the axiom check as SKIPPED BY NAME; the full `make verify` is in "Verify the base" below.
+A cold build fetches Mathlib's cache and compiles the project, so it takes longer than the warm wall that section quotes; the light build took 497 s on the maintainers' machine with Mathlib's cache already present (`docs/records/20261026-151123-readme-flip-s3.md` §3).
+Its last line reads `verify: LIGHT, not GREEN`: that is the light run's own closing line, not a failure.
+Then decide one spend from `corpus/flow` (entry `flow-01077`, a second `OP_ELSE` for one `OP_IF`) with the evaluator you built:
+
+```sh
+eval/bsvs eval --pretty \
+  --tx 0200000001286516dd743c5f4f1c51f5c4e77346aee511095918f3564dc64c8ba07a5fa408000000000151ffffffff010100000000000000015100000000 \
+  --prevouts '[{"txid":"08a45f7aa08b4cc64d56f318590911e5ae4673e7c4f5511c4f5f3c74dd166528","vout":0,"script":"63516751675168","satoshis":1000,"height":967896}]'
+```
+
+```text
+{"verdict": "invalid",
+ "spec": "spec@34139ebe",
+ "reference": "bitcoin-sv v1.2.3 6504a3af (docs/PROVENANCE.md)",
+ "message": "Invalid OP_IF construction",
+ "gate": {"verdict": "valid"},
+ "config": "sv-mainnet-default",
+ "code": "SCRIPT_ERR_UNBALANCED_CONDITIONAL"}
+```
+
+Output trimmed to its verdict lines, quoted from the run in `docs/records/20261026-151123-readme-flip-s3.md` §3; your own output stamps `spec@<the commit of your clone>` in place of `spec@34139ebe` (the evaluator's header). `inputs[]` echoes the flag word and the limits the input ran under (`eval/README.md`, "eval: one spend"). The same spend is the finding shown in "A finding, shown" below.
+
 ## Start here
 
 - **You build an implementation:** run the harness against it. Open [`harness/README.md`](harness/README.md).
@@ -69,6 +99,17 @@ The default run uses the specification's recorded verdicts.
 A GREEN report means every divergence is explained.
 An unexplained divergence makes the run RED.
 
+## What you can build with it
+
+- **Conformance CI for a node, an SDK or a wallet.** Give your implementation an adapter that speaks the line protocol of `harness/README.md` ("Bringing another implementation"), then run `harness/run --impl <yours> --corpus seed` in a pull request. A divergence arrives as a witness transaction, not as a bug report. `--impl` names the five implementations wired in today; a new one is a code change, not a list entry: an `EngineKind` variant in `harness/src/engines.rs`, its code table and `harness/rules/<name>.json` (`harness/README.md`, "Bringing another implementation").
+- **Transactions tested under any policy configuration.** Every policy limit is a named parameter of the definition (`docs/PARAMETERS.md`); the evaluator judges a spend under a named configuration (`--config sv|teranode|sv-regtest`) and, with `--consensus true`, under the consensus word alone (`eval/README.md`), which is what a miner that relaxes its policy accepts; another set of limits is a change to the parameters, not a flag. The parameters say what the chain accepts and what a default node relays, never what a given miner will mine.
+- **Script compilers and contract languages with a defined target.** Compile, then run the output through `eval/bsvs` and the node together before anything reaches mainnet.
+- **Contract designs explored by a program.** A program proposes a script, `eval/bsvs` decides it with no node, the harness's mutators (`harness/src/gen.rs`) vary it, and every refusal comes back with the reference's `SCRIPT_ERR_*` code and message; `spec/errors.md` maps each code to the rule and its citation.
+- **A contract's property proven as a theorem.** The semantics is a Lean definition, so "this output unlocks only under condition X" can be stated and proven over `verifyScript`, the same definition the harness checks against the node. The proof is about the specification, which earns its authority by agreeing with the node on the corpus; it does not prove the node.
+- **Teranode and SV-node divergence tracking per release.** `spec/teranode-map.md` says per transaction-state-machine and node rule `same`, `different` or `absent`, with the citation at both pins; the column is a reading of the source, not a measurement.
+- **Fuzzers and test generators derived from the definition.** The corpus generators (`harness/src/bin/*_cases.rs`) and the mutators (`harness/src/gen.rs`) are the starting point.
+- **A parameters page for risk teams.** `docs/PARAMETERS.md` lists every value the interpreter reads, consensus or policy, with its default in the node, in Teranode and in bsv-rs, each cell cited at the version it was read at.
+
 ## Read a divergence
 
 A divergence is read as a **finding** with a witness, never as a sentence.
@@ -81,9 +122,23 @@ An SV-node transaction witness needs `tools/witness.sh <witness-id> --restore-bl
 A disagreement with SV-node is a spec bug until a human proves otherwise from source.
 When the reference disagrees with itself, the spec records both readings with citations, and the maintainer rules which reading is consensus.
 
+## A finding, shown
+
+One committed witness, read from `corpus/witnesses/ts-sdk/flow.jsonl` and its row in `docs/CONFORMANCE-2026-09-27.md` §2:
+
+| field | value |
+|---|---|
+| witness | `witness-ts-sdk-flow-default-spec-flow.else-flow-01077` (`tools/witness.sh <id>` replays it) |
+| implementation | `ts-sdk-default@3.0.0`: @bsv/sdk 3.0.0 in its default mode (no `verifyFlags`) |
+| rule | `flow.else`: "a second ELSE for one IF (post-Genesis: unbalanced)"; the locking script `63516751675168` is `OP_IF 1 OP_ELSE 1 OP_ELSE 1 OP_ENDIF` |
+| verdicts | `spec@cb7e46e` and `sv-node@v1.2.3`: `invalid`, `SCRIPT_ERR_UNBALANCED_CONDITIONAL`; `ts-sdk-default@3.0.0`: `valid` |
+| class | IMPLEMENTATION-WRONG, ruling `impl-wrong` |
+| decided by | [SRC] bitcoin-sv v1.2.2 interpreter.cpp:829–831; conditional_tracker.cpp:51–55; @bsv/sdk 3.0.0 Spend.ts:1191–1202 (the single-ELSE test requires explicit flags and a post-Genesis coin; the default mode toggles again). The citation is the witness line's own, read at v1.2.2; those lines are unchanged at v1.2.3. |
+
 ## Evidence and claims
 
 Records, claim tables and the provenance pages carry an evidence label on every number; a prose sentence names its record instead.
+An issue written "archived #n", and a link to the issue tracker of the repository before 2026-10-23, names the private history and does not resolve for a reader of the public edition; `docs/GLOSSARY.md` defines the form.
 
 | label | meaning |
 |---|---|

@@ -1,4 +1,4 @@
-[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[export: 25 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 === before: the summary
 ladder before at 4974440 (0 uncommitted), bsvs 2026-09-27T08:49:13 sha256 15a34de21db3c6f3
 rung 1000: rc 0, real 1.57 s, max RSS 66535424 B, load1 before 13.31, started 12:50:18 UTC; {"commit":"4974440","config":"sv-mainnet-default","id":"ladder-tx-1000","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
@@ -10,7 +10,7 @@ rung 30000: rc 0, real 50.75 s, max RSS 263979008 B, load1 before 19.19, started
 corpus/tx: rc 0, real 62.80 s, max RSS 250085376 B, load1 before 17.30, started 12:51:31 UTC; 37 lines
 done 12:52:34 UTC
 --- before rung-1000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
         1.57 real         0.09 user         0.04 sys
             66535424  maximum resident set size
                    0  average shared memory size
@@ -30,7 +30,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            436951900  cycles elapsed
             16597592  peak memory footprint
 --- before rung-16000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
        15.10 real        13.48 user         0.09 sys
            175325184  maximum resident set size
                    0  average shared memory size
@@ -50,7 +50,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
          40499746835  cycles elapsed
            125452984  peak memory footprint
 --- before rung-2000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
         0.35 real         0.26 user         0.01 sys
             73940992  maximum resident set size
                    0  average shared memory size
@@ -70,7 +70,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            840813301  cycles elapsed
             24019568  peak memory footprint
 --- before rung-30000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
        50.75 real        46.84 user         0.24 sys
            263979008  maximum resident set size
                    0  average shared memory size
@@ -90,7 +90,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
         142490325707  cycles elapsed
            214139624  peak memory footprint
 --- before rung-4000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
         0.92 real         0.85 user         0.01 sys
             88670208  maximum resident set size
                    0  average shared memory size
@@ -110,7 +110,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
           2655083053  cycles elapsed
             38732376  peak memory footprint
 --- before rung-8000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@4974440
+[withheld at export: a sibling tree's line]
         4.46 real         3.54 user         0.03 sys
            117833728  maximum resident set size
                    0  average shared memory size
@@ -162,7 +162,7 @@ rung 300000: rc 0, real 2.70 s, max RSS 2339667968 B, load1 before 18.55, starte
 corpus/tx: rc 0, real 0.30 s, max RSS 265142272 B, load1 before 18.55, started 12:56:22 UTC; 37 lines
 done 12:56:22 UTC
 --- after rung-1000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         1.52 real         0.04 user         0.04 sys
             66633728  maximum resident set size
                    0  average shared memory size
@@ -182,7 +182,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            277484817  cycles elapsed
             16695944  peak memory footprint
 --- after rung-100000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-100000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.79 real         0.69 user         0.06 sys
            750518272  maximum resident set size
                    0  average shared memory size
@@ -202,7 +202,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
           2337287984  cycles elapsed
            700892240  peak memory footprint
 --- after rung-16000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.23 real         0.18 user         0.01 sys
            175161344  maximum resident set size
                    0  average shared memory size
@@ -222,7 +222,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            616550640  cycles elapsed
            125239968  peak memory footprint
 --- after rung-2000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.10 real         0.05 user         0.01 sys
             74055680  maximum resident set size
                    0  average shared memory size
@@ -242,7 +242,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            202698086  cycles elapsed
             24085080  peak memory footprint
 --- after rung-30000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.28 real         0.22 user         0.02 sys
            263864320  maximum resident set size
                    0  average shared memory size
@@ -262,7 +262,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            770543637  cycles elapsed
            214008576  peak memory footprint
 --- after rung-300000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-300000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         2.70 real         2.14 user         0.38 sys
           2339667968  maximum resident set size
                    0  average shared memory size
@@ -282,7 +282,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
           7585646694  cycles elapsed
           2290927968  peak memory footprint
 --- after rung-4000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.11 real         0.07 user         0.01 sys
             88850432  maximum resident set size
                    0  average shared memory size
@@ -302,7 +302,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            257567722  cycles elapsed
             38879832  peak memory footprint
 --- after rung-8000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@77e452d
+[withheld at export: a sibling tree's line]
         0.17 real         0.11 user         0.01 sys
            117424128  maximum resident set size
                    0  average shared memory size
@@ -354,7 +354,7 @@ rung 300000: rc 0, real 2.36 s, max RSS 2339848192 B, load1 before 39.06, starte
 corpus/tx: rc 0, real 0.28 s, max RSS 265125888 B, load1 before 39.06, started 13:18:56 UTC; 37 lines
 done 13:18:57 UTC
 --- landed rung-1000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-1000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.08 real         0.04 user         0.01 sys
             66420736  maximum resident set size
                    0  average shared memory size
@@ -374,7 +374,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            167942922  cycles elapsed
             16433728  peak memory footprint
 --- landed rung-100000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-100000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.81 real         0.71 user         0.06 sys
            750551040  maximum resident set size
                    0  average shared memory size
@@ -394,7 +394,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
           2376693549  cycles elapsed
            700925008  peak memory footprint
 --- landed rung-16000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-16000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.24 real         0.18 user         0.01 sys
            175767552  maximum resident set size
                    0  average shared memory size
@@ -414,7 +414,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            618403562  cycles elapsed
            125862584  peak memory footprint
 --- landed rung-2000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-2000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.11 real         0.05 user         0.01 sys
             73793536  maximum resident set size
                    0  average shared memory size
@@ -434,7 +434,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            197873575  cycles elapsed
             23839344  peak memory footprint
 --- landed rung-30000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-30000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.28 real         0.23 user         0.02 sys
            266797056  maximum resident set size
                    0  average shared memory size
@@ -454,7 +454,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            788378528  cycles elapsed
            216924904  peak memory footprint
 --- landed rung-300000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-300000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         2.36 real         2.11 user         0.21 sys
           2339848192  maximum resident set size
                    0  average shared memory size
@@ -474,7 +474,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
           7105942719  cycles elapsed
           2291091784  peak memory footprint
 --- landed rung-4000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-4000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.10 real         0.06 user         0.01 sys
             88227840  maximum resident set size
                    0  average shared memory size
@@ -494,7 +494,7 @@ bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktre
            248660402  cycles elapsed
             38257240  peak memory footprint
 --- landed rung-8000.time.txt: /usr/bin/time -l
-bsvs corpus: 1 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ladder/rung-8000.jsonl under sv-mainnet-default, keyed spec@d9dac35
+[withheld at export: a sibling tree's line]
         0.14 real         0.10 user         0.01 sys
            117276672  maximum resident set size
                    0  average shared memory size

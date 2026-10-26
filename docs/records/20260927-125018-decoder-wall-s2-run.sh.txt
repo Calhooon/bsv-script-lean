@@ -1,9 +1,9 @@
-[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 #!/usr/bin/env bash
 # S2's ladder runner (scratch): each rung ALONE through `eval/bsvs corpus` under /usr/bin/time -l, the 1-minute load read before
 # each; then corpus/tx whole. Usage: run_ladder.sh <tag> <rungs comma list> ; writes $SP/ladder/<tag>/…
 set -uo pipefail
-SP=/private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad
+[withheld at export: a sibling tree's line]
 [withheld at export: a sibling tree's line]
 tag=$1; rungs=$2
 out=$SP/ladder/$tag; mkdir -p $out

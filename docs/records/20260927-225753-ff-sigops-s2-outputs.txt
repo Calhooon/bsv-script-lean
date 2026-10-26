@@ -1,3 +1,4 @@
+[export: 3 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 === before: the summary
 at 799751b (0 uncommitted) bsvs 2928b4b039cfeedf load { 14.75 13.46 11.98 }
 {"commit":"799751b","config":"sv-mainnet-default","id":"ff-witness","spec":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"code":"bad-txn-sigops","verdict":"invalid"},"input":null,"verdict":"valid"}}
@@ -67,7 +68,7 @@ bsvs corpus: 37 entries of corpus/tx/tx.jsonl under sv-mainnet-default, keyed sp
            792107100  cycles elapsed
            215892784  peak memory footprint
 --- before ff.time.txt
-bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@799751b
+[withheld at export: a sibling tree's line]
         1.80 real         0.03 user         0.04 sys
             65044480  maximum resident set size
                    0  average shared memory size
@@ -153,7 +154,7 @@ bsvs corpus: 37 entries of corpus/tx/tx.jsonl under sv-mainnet-default, keyed sp
            816496138  cycles elapsed
            216711960  peak memory footprint
 --- after ff.time.txt
-bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@c15a735
+[withheld at export: a sibling tree's line]
         1.51 real         0.03 user         0.04 sys
             66125824  maximum resident set size
                    0  average shared memory size
@@ -219,7 +220,7 @@ corpus/tx lines 37
 {"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00036","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
 {"commit":"c15a735","config":"sv-mainnet-default","id":"tx-00037","spec":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"},"spec-mempool":{"code":null,"gate":{"verdict":"valid"},"input":null,"verdict":"valid"}}
 --- after2 ff.time.txt
-bsvs corpus: 2 entries of /private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-lean-b/17d39f23-bfbe-4be0-ae40-b7b6f16a68fd/scratchpad/ffw/ff-witness.jsonl under sv-mainnet-default, keyed spec@c15a735
+[withheld at export: a sibling tree's line]
         0.10 real         0.03 user         0.04 sys
             66355200  maximum resident set size
                    0  average shared memory size

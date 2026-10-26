@@ -7,6 +7,7 @@
 #   tree   pins, cite, jscpd, secrets, spec, tslint
 #   lean   lean, axioms, numbers, flow, sighash, arith, stack, crypto, seed, scripttests, txtests, flags, bytes,
 #          versiongate, eras, witnesses, eval, harness, chain, bench
+#          (axioms under VERIFY_LIGHT=1: SKIPPED BY NAME on the 16 GB runner; the box's record carries it, withheld leg axiom-check)
 # A runner holds this tree and nothing else: the pinned upstream clones, the built reference and the box's baseline are
 # absent, and the legs that read them say SKIPPED BY NAME (never a pass), as in the Modal container. Those reads, the
 # node oracle and the Teranode instance are the withheld legs (tools/withheld_legs.txt). They never run on a public
@@ -144,10 +145,17 @@ jobs:
     # The axioms leg builds the kernel-checked stale run (StaleRunCheck, #120), whose build peaks near 29 GB
     # (docs/records/20261014-061809-stale-cost-s1.md). A standard Linux runner of a public repository has 16 GB [LIT]
     # (GitHub's documentation, 'About GitHub-hosted runners', the standard runners' table; read on the flip day), so the
-    # step below adds swap up to 40 GB; the repository variable GATE_LEAN_RUNNER names a larger runner when the owner provides one.
+    # job runs under VERIFY_LIGHT=1 (the switch of `make verify`): the axioms leg says SKIPPED BY NAME and checks nothing
+    # here, and the box's tripwire record carries the axiom check as the withheld leg axiom-check (tools/withheld_legs.txt),
+    # under the status box/withheld-legs like the node and Teranode legs. No swap file: a kernel check paging through
+    # 13 GB of swap on four cores is a job that dies, never a check (the maintainers' word of 2026-10-26). The
+    # repository variable GATE_LEAN_RUNNER names a larger runner when one is provided; VERIFY_LIGHT stays until the
+    # witness's cost comes down (a public issue of the Lean seat).
     if: ${{ !github.event.repository.private }}
     runs-on: ${{ vars.GATE_LEAN_RUNNER || 'ubuntu-latest' }}
-    timeout-minutes: 330
+    timeout-minutes: 240
+    env:
+      VERIFY_LIGHT: "1"
     defaults:
       run:
         shell: bash
@@ -162,15 +170,6 @@ jobs:
           echo "GATE_JOB_START=$(cat "$RUNNER_TEMP/gate/lean.start")" >> "$GITHUB_ENV"
           sed -n '/^```pins$/,/^```$/p' docs/PROVENANCE.md | sed -nE 's/^(go|node)\.major *= *([0-9.]+).*/\1=\2/p' >> "$GITHUB_OUTPUT"
           cat "$GITHUB_OUTPUT"
-      - name: memory for the stale run (40 GB of memory and swap)
-        run: |
-          free -g
-          mem=$(awk '/^MemTotal/ {print int($2/1048576)}' /proc/meminfo); swap=$(awk '/^SwapTotal/ {print int($2/1048576)}' /proc/meminfo)
-          if [ $((mem + swap)) -lt 40 ]; then
-            sudo fallocate -l "$((40 - mem - swap + 1))G" /mnt/gate.swap && sudo chmod 600 /mnt/gate.swap \
-              && sudo mkswap /mnt/gate.swap > /dev/null && sudo swapon /mnt/gate.swap
-          fi
-          free -g
       - name: the Rust toolchain of harness/rust-toolchain.toml
         run: |
           ch="$(sed -n 's/^channel = "\(.*\)"$/\1/p' harness/rust-toolchain.toml)"
@@ -185,8 +184,8 @@ jobs:
       - name: the node the legs read (tools/node_bin.sh reads NODE_BIN before PATH)
         run: echo "NODE_BIN=$(command -v node)" >> "$GITHUB_ENV"
       # restore and save apart: actions/cache@v4 saves only when the whole job succeeds; the save here follows the lean
-      # and axioms legs (axioms builds StaleRunCheck, tools/check.sh:59) and runs only when both passed, so a red later
-      # leg still saves lean/.lake and a .lake without StaleRunCheck is never saved under a key no later run overwrites
+      # and axioms legs and runs only when both passed, so a red later leg still saves lean/.lake (without StaleRunCheck,
+      # which the light axioms leg never builds here)
       - uses: actions/cache/restore@v4
         id: lean-cache
         with:

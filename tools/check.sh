@@ -32,6 +32,8 @@
 #                sorry-free (the build log may not mention sorry)
 #   axioms       tools/axiom_check.py on the theorems listed in lean/AxiomCheck.lean, after `lake build StaleRunCheck`
 #                (#120: the kernel-checked stale run is outside `lake build BsvChain`; this leg builds it, sorry-free)
+#                (VERIFY_LIGHT=1, the hosted gate's 16 GB runner: both SKIPPED BY NAME, never a pass; the box's record
+#                carries the check as the withheld leg axiom-check)
 #   numbers      the Numbers module's executable against the bsv-rs vectors (#7)
 #   flow         the machine against the hand-written flow corpus with bsv-rs's verdicts (#8), then the kernel sample
 #                through the compiled evaluator (lean/BsvScript/Properties/KernelSample.lean, docs/HYPOTHESES.md §3)
@@ -146,7 +148,7 @@ jscpd|^ *jscpd: (GREEN \[X\]|SKIPPED BY NAME)
 deny|^ *cargo-deny: (GREEN \[X\]|SKIPPED BY NAME) \(
 secrets|^ *secrets: GREEN \[X\] \(engine [a-z]
 lean|^ *lean: build OK
-axioms|^ *axiom check: OK \(
+axioms|^ *(axiom check: OK \(|axioms: the axiom check SKIPPED BY NAME)
 numbers|^ *numcheck: .*: 0 mismatch
 flow|^ *flowcheck: [0-9]+ entries; .*mismatch 0
 flow (the kernel sample)|^ *flowcheck: the kernel sample
@@ -282,6 +284,14 @@ lean_build() {
 }
 axioms() {
   echo "== axioms: tools/axiom_check.py (its parser's self-test first: a wrapped axiom list must be judged, 2026-09-27) =="
+  # VERIFY_LIGHT=1 (the hosted gate, a 16 GB runner; the same switch as `make verify`): the kernel-checked stale run peaks
+  # near 29 GB (docs/records/20261014-061809-stale-cost-s1.md) and lean/AxiomCheck.lean imports it, so the leg runs
+  # nothing and says so by name; the box's tripwire record carries the check (tools/withheld_legs.txt, axiom-check).
+  if [ "${VERIFY_LIGHT:-}" = 1 ]; then
+    echo "axioms: kernel witness SKIPPED BY NAME (VERIFY_LIGHT=1: lean/BsvChain/Properties/StaleRun.lean, the StaleRunCheck library, about 29 GB on the build host)"
+    echo "axioms: the axiom check SKIPPED BY NAME (VERIFY_LIGHT=1; lean/AxiomCheck.lean imports the kernel witness), not a pass; the box's record carries it (withheld leg axiom-check)"
+    return 0
+  fi
   # #120 (2026-10-14): the stale run (lean/BsvChain/Properties/StaleRun.lean) is the Lake library StaleRunCheck, which
   # `lake build BsvChain` and the lean leg do not build; AxiomCheck.lean imports it, so it is built here before the check.
   local log; log="$(mktemp)"

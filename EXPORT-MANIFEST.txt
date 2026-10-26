@@ -1,9 +1,9 @@
 # The public edition of bsv-script-lean: export manifest (tools/export_public.py)
-source-commit c881a90fed991af39ce2dc7b527977c078c8d2c6
-exported-at 2026-10-21 22:51:38 UTC
-withheld-list tools/export_withheld.txt @ c881a90fed99
-withheld-entry-list tools/export_withheld_entries.txt @ c881a90fed99
-paths-exported 2073
+source-commit 642f3ea031bbef395e03f8683b7c72796c31556f
+exported-at 2026-10-26 16:09:04 UTC
+withheld-list tools/export_withheld.txt @ 642f3ea031bb
+withheld-entry-list tools/export_withheld_entries.txt @ 642f3ea031bb
+paths-exported 2082
 paths-withheld 281
 withheld-group sealed-and-security 6
 withheld-group d135-records 6
@@ -27,7 +27,7 @@ withheld-entry-group d9-gosdk-172-splice 2 entries in 2 files (4 rows including 
 withheld-metadata 16 fields in 6 files
 withheld-rule-list tools/export_withheld_rules.txt
 withheld-rule-group d9-gosdk-172-splice 1 classes 1 rows (harness/rules/go-sdk.json)
-withheld-history-group d9-gosdk-172-splice 69 lines in 10 files
+withheld-history-group d9-gosdk-172-splice 70 lines in 11 files
 withheld-report-rows 4 docs/CONFORMANCE-2026-09-27.md
 withheld-rule-references 63 fields 4 records in 16 files
 withheld-rule-reference 1 fields 0 records corpus/INDEX.md
@@ -47,17 +47,17 @@ withheld-rule-reference 2 fields 0 records harness/rules/gobdk.json
 withheld-rule-reference 2 fields 0 records harness/rules/sv-node.json
 withheld-rule-reference 2 fields 0 records harness/rules/ts-sdk.json
 rewritten 16 (tools/export_rewrite.txt)
-transformed 605 lines-replaced 6345 (the records transform)
+transformed 615 lines-replaced 6407 (the records transform)
 cargo-transformed 1 files, 1 target tables dropped (the Cargo transform)
 cargo-source-check 82 .rs files, 68 mod/#[path]/include lines, 3 naming a withheld basename, 0 resolving to a withheld path
 makefile-transformed 1 of 1 Makefiles, 1 targets dropped (the Makefile transform)
 public-pages-moved 1 (PUBLIC_PAGES)
-lists-read-at c881a90fed99 (7 lists; working tree differs: none)
+lists-read-at 642f3ea031bb (7 lists; working tree differs: none)
 
 ## exported: sha256 path
 ec2137b0b8354442bd7113f07d1fa0e7429bdf2d646e30405c9511f066fe2fd4  .github/ISSUE_TEMPLATE/config.yml
 e1838b5cad2f1921ea0a4b7af43071da7c3b567994a3c0732871a01395233165  .github/ISSUE_TEMPLATE/divergence.md
-a76cb5346c138f83c844f88945defd13e611635f8de8f640dc46aaaeed7612cf  .github/workflows/gate.yml
+f6e6b34f2a9bcdebdbc2ba9be1a323b233311f0a46567664d054330839531bba  .github/workflows/gate.yml
 3adb0002f42be7aeaf999d1c43d24c0d5317d71c43fe2318c2d63669ee072b01  .gitignore
 c13ca5e73165a3b888e8784fcfc5fc636ea95a0e7db1c8500ce6c4993eaa93c1  CHANGELOG.md
 e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc  CLAUDE.md
@@ -67,7 +67,7 @@ cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  LICENSE-APACHE
 07f50430b95d861bf1b87064a397354322fe2f386284ba690b7c695adfa2ff28  Makefile
 c58cc0e3b1b2309d7b736c62f67e9751d8b7341a39bf34be9e3f360e021229ba  NORTH-STAR.md
 1cc55b54cd9bc76bee46facfd12c742173523cc570ac24f3d9204ec4454861dd  NOTICE
-1fc22b9b817188a513c7ab5ca2f691c958f31a63e5cbe6d710245d1360493617  README.md
+2fb6922a70d7599f085618721f7d4c45a8eba72200b8cb4de131743bd2d10fb6  README.md
 6c35844ae4ebc235def272fb14e1ca9b56f1e6051915b9335d98291fb21c2df5  SECURITY.md
 74b32cae123042a6eb7ee20144246a2eb4c2a189d8da8451d6b16814364be205  corpus/INDEX.md
 54064cb421f358db10d84943b71b85a586bf268513b5b1eadfccd562dd4eb8c0  corpus/README.md
@@ -485,7 +485,7 @@ e29a1d0f29c2693db44ff0fa53655dc177acddc8729b82e6a3a62c6893325a1f  docs/CONFORMAN
 68a116e74b5ba11537c6e8290fd53e9f8e25d9be92db79b02c06d14dc2f3289e  docs/DESIGN.md
 4e047da3183316242bf48c4788ce7036a08d8c3e4ae8b7db85994a6af2364e6f  docs/GLOSSARY.md
 7becd2a307635c35190f6589301cde427fed1a399f615039be34ab36199558b5  docs/HYPOTHESES.md
-4e261a26f0480b3033bd4c6c589caa4933738efe24bce746891d7de2699b3375  docs/LINT.md
+ce396ac6415ee22abfde0e20f37ddc2e38d72239f162fb2921634c3b24398626  docs/LINT.md
 2726469cc0e1a070ed0bb34d2602634f9628b125510f786a666464c556e058d4  docs/PARAMETERS.md
 e641bac1030fa53b9808317fc804cfaa86d2101817de109561de2ffcf9b3e6dd  docs/PROVENANCE.md
 bd77512212b882e68a44f75c44c3d55dfc4a263e65f1e8c7840eafe2319859e9  docs/README.md
@@ -500,16 +500,16 @@ dd3e21d407511c88cfe2f848b27c4e7f0ca5cffad7f8e96ba66dc804e4a2cebf  docs/audit/202
 722760f7471cf0b595b817e7a09cb4a3905997239d6747249ebca08755e3381d  docs/audit/2026-09-27-lens-S2-block-by-S2.md
 fbc3d4da791e0e9d522404709b5a08f0b0cd1d2053e36178aeec0a19bbc547f5  docs/audit/2026-09-27-lens-S2-by-S3.md
 b0f2d93a5a458be22f843dcf41ee7975c3232d02cc63521605a3b54ef78861d9  docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md
-8838815995ea00e40f734547dbfdf6136eb3618d120e5f08efcf20ab3223e75f  docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md
-36e9c2bb8d9488d5306987a5efd4b53686691bff83d2e277ede2495030008836  docs/audit/2026-09-27-lens-S2-sitting4-by-S2.md
-665bb40fc01df825988854ce748e6a67af989526d8864d52654e981cdba98833  docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md
+d4a4d0a6f49302a660982ae296ac08d392bff3c440b18e43fab73ab91a87287c  docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md
+8503c71ea89470be66883c67638278acab7acbb39411729a49e19c9546d12440  docs/audit/2026-09-27-lens-S2-sitting4-by-S2.md
+b23ecfa130b39f0c40e79a7fd61540240b38ea9e0832cb38f2fd1d8fe9d58530  docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md
 d5987238037b5190422e844be9b539afe64dc318b4b09f197b5cdd1c7a179d51  docs/audit/2026-09-27-lens-S3-fold-sitting3-by-S3.md
 09b4e0ecb194f66c834c885c88f1f5d03ac5a3ae646929109d2b665870515bef  docs/audit/2026-09-27-lens-S3r2-by-S3.md
 d34ff4831cd01e36c35a8b797eb3c66adc799bb3726ce1d330e0443ee69b7a38  docs/audit/2026-09-27-lens-S4b-block-by-S4b.md
 a006c5777d8dd602bd406ca2958d5ba99da62f650c7300b4325c8dfa35f5bf7c  docs/audit/2026-09-27-lens-S4b-by-S3.md
 6be2c77321a12919e8c15d4b13138a97d24ddce3bc8955116f5aa8d4bb350dc5  docs/audit/2026-09-27-lens-S4b-sitting3-block-by-S4b.md
-401a77ac8bd1b8bdd637c6fa1fd6174e19d8bb280095a920e3d0d9a79b9e5072  docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md
-908d95f0d319d4828458a1103360c939d6d235a1fc332b38f9511d1791f18283  docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md
+c374f73fc2ef0ffc09c0f733279a987319552db2a22e9a2b7ccab3ee1155fc73  docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md
+bce175748e846936ff78490563af9421c7ead34dc7c25bf8ab5894ba28c33bc9  docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md
 a8ecf826112b94e1d04789d774b5051d662f5207c8dd95a1d965cd60cb8c2bd9  docs/audit/2026-09-28-lens-S3-sitting3-end-by-S3.md
 0c307c2388538025195cb93dd8fb30ec635447b7436c9f5c309f98fe34cba2ff  docs/audit/2026-09-29-lens-S1-sitting5-by-S1.md
 4c12a47743b50e6a9fa4957e45d8bf18108c498546a8c9cf5f021829d04757cf  docs/audit/2026-09-29-lens-S1-sitting6-by-S1.md
@@ -533,7 +533,7 @@ e83e4d59bd75c0f1885dd6c397bf6eb8e01b734e5f0eee103beafa08ab7a56ed  docs/history/l
 cfdf8dfe1adb90b80032ef9ee330d0eba56ea5de17241561d462b1bff17559c9  docs/recon.md
 b0953c43a6b6ceb52aed409dba7e6e578586c4ffcde08534835b34eeef6f1ead  docs/records/20260923-1141-make-check-s3.txt
 5adcdbc710337a1f40b1afb547df2fe6fe3b08512c25bcc44fa7234fdafbb27b  docs/records/20260923-1143-mini-install-s3.txt
-b1c5d2fd59d844d721b0bb51e79c1dadc90f7af6b70a3b0c5a041ea581e963fe  docs/records/20260923-1143-svnode-smoke-s3.md
+589e593a60fd30a50a47d0d791cd926c2e715c73120d01799c130000537462a0  docs/records/20260923-1143-svnode-smoke-s3.md
 a8ab9104844c898656f9bc1292c8eff8caa5caa39590a2d8fcd4bf9bd8fae099  docs/records/20260923-191222-make-check.txt
 336b839c3b997d2b6b4e84a1b4f2075cbfe0cbd9c9c8cb0d59911218119d05a7  docs/records/20260923-193441-make-check.txt
 81efd60f9755165c1d21880bc00b0c12c1ae7107e148bdb25f15b3a98c55bc97  docs/records/20260924-024354-make-check-modal.txt
@@ -561,7 +561,7 @@ ccbd3c3f364c844fb0aba48b030c91698ea85afa5e97dad030c75c9026f18d92  docs/records/2
 808db65fe5efdc8560cbd12ee905a37520527ab411053b31d8980e4ed8530b3a  docs/records/20260926-213521-cite-check-s4b.txt
 c4fff1036fa7cfc96f1bc8fe4fddccc88abab13e0cb9cd2b6fcd3bcf00b3a5d4  docs/records/20260926-213535-diff45-s1.md
 de8b57aecc48d23a64a71ca439505b49b8e383c8536a39f9a36b52755adb7720  docs/records/20260926-213545-make-check.txt
-ea25f8ee27af1f954d9ebad0f56465affed176d9ecc0281effd3597bd5c5f27c  docs/records/20260926-213915-run-diff-d83c-s2.md
+ec292b355badf09ddc3271041e54624ddda1b2431c76d4f5e70176f173c30c2d  docs/records/20260926-213915-run-diff-d83c-s2.md
 38fc443e36a3cd5490781c2f715dcab81fb467be8e046464caccf5a8e07eb975  docs/records/20260926-215135-tx-families-s3.md
 16d8ad0e1b34b2730e213a1681343c3acf6b79ff6c1bbdafc9fb0dd1de4da853  docs/records/20260926-215543-make-check.txt
 8ea0519e4826662bb658c2ab98f66a829feae70f7dac19720c31ef9ff2c92bc3  docs/records/20260926-220522-axioms-s2-families-s2.txt
@@ -599,8 +599,8 @@ a279ce1098d3b0826505cad91266cbd11b4fa726a4b1b070c579d8f04dbd51d8  docs/records/2
 be8c3c9170b558b45c608deb9210a32f2682845eefc7c650f10a9e09fda9f127  docs/records/20260927-124645-make-check.txt
 3480812051717cce27d836328fac7b720ef8e8a4c5a5b935940e210f12638137  docs/records/20260927-125018-decoder-wall-s2-gen.py.txt
 a5ade8445b542300240c35b7febcc1fe83bc4a1353a930433d693eee38503799  docs/records/20260927-125018-decoder-wall-s2-outputs.txt
-621d5f00525a3f7071c67edce62869b0ea8b2eb57ed9058331271c960b6694a2  docs/records/20260927-125018-decoder-wall-s2-run.sh.txt
-494a54892fe1e8788dc6add748786518eaca4a31ffc6ab70482bcb883680afbb  docs/records/20260927-125018-decoder-wall-s2-timings.txt
+45cc4e7a6d80e1f6972516051d6541f87e8d29d4640a16bb975799d60e7e51e4  docs/records/20260927-125018-decoder-wall-s2-run.sh.txt
+27724ad89ef208c68477c232db56bd5a74cbcf98272ef979287cf150feda4ba6  docs/records/20260927-125018-decoder-wall-s2-timings.txt
 d7f55b1a4d8ebc058a97acc31970a9c09822b30ed8e972037461307ee1e0e0ce  docs/records/20260927-125018-decoder-wall-s2.md
 aa60592baae74720d64d584b16e69d19bcaa94aa716af8b8415fcc820a400364  docs/records/20260927-125104-make-check.txt
 d43de09f2bc895d5fbdcb101ed3993b3fd947511742939b81ff5ac735d35edfe  docs/records/20260927-125819-make-check.txt
@@ -646,7 +646,7 @@ efee364f2f796c9c821e129933675a5d01192e84c03d36d89b7ca3a962575d3d  docs/records/2
 1bc098f1e84a94b1fc0881fb6d1521b2a342ca8bcb08230c1fd4714b5606cf98  docs/records/20260927-183819-seed1m-s3.md
 3c68522d3f8cebecc709f417c48072af5e5ffe5f4617fd051529a324a8bd5692  docs/records/20260927-185804-make-check-modal.txt
 e5ee311a3845bcd378f35eadeaabeb8ec8889a57221159612ae5e94eeff8ce75  docs/records/20260927-225753-ff-sigops-s2-gen.py.txt
-72627edf36c8bbfdc55d7d8607880e06b8d435c93b6b9354bfdc91fc7469c79e  docs/records/20260927-225753-ff-sigops-s2-outputs.txt
+33608c0b2e37ddc089cf063e380f02d73a6f59840b236f89fcce48280d8bb993  docs/records/20260927-225753-ff-sigops-s2-outputs.txt
 87027316c9fc50c4f630567133645d8c447ae119cb9f9d4157f2096dfeaed830  docs/records/20260927-225753-ff-sigops-s2-witness.jsonl
 6b1d05dd8b0c18c73627947eae271367de566d35e2ae092a9969805ff33b3ccc  docs/records/20260927-225753-ff-sigops-s2.md
 a8fad8854d91e3b25dc8b5150e954f22761fbdb91b6f32c13099ad4fa6c0fc22  docs/records/20260927-231510-make-check.txt
@@ -753,7 +753,7 @@ c61271ffbc6c9634442b1553307f1abd4dcd86b996d767feebf9d78c9e944468  docs/records/2
 5cee4b507978bf030539cb34c140c7fc36a1371212797b83fa49d6bbb989d008  docs/records/20260929-140334-trust32-relens-fixes-s1.md
 b0c015f5ad46b18673ef3551643c2be4973a979fc9d285c819bfccbae7966cd0  docs/records/20260929-141538-make-check-box.txt
 a16cb152ca245a81ba857d9861b567f25cfa80e64994e2fa896659fe03058486  docs/records/20260929-141907-landing-trust32-relens-s1.txt
-b5e3eff55e4eaa6defaadd15922950c39593d814e1b39ce1eec442c56558a532  docs/records/20260929-142257-memory-s4b-runs-s3.md
+70674e6dab8920a37626f9bce71728ec4e1c044c63da03cbfe845306e478d05e  docs/records/20260929-142257-memory-s4b-runs-s3.md
 db672c1c263b3a2192c24b7bef0f6cd3ef01eab616084afed73eec5e2161b32b  docs/records/20260929-151244-trust32-relens2-fixes-s1.md
 5dd41773e707922771739b6bc6b9d6350e5338756a855b3804cf3b9dd7c7bc0a  docs/records/20260929-153056-make-check.txt
 a387af61bf25686a6ad0b9d55cdcf565b20c913894dae11d7b6d481e1e2dc640  docs/records/20260929-155509-make-check-box.txt
@@ -1331,7 +1331,7 @@ e86216afc4a856f1f2b09eb94ea9fe9bdb6ac977bb1ee023a1e32aeb5a58b939  docs/records/2
 0047fde34bad983688869601b660fd9cc6a8344cce7969b582aeaa9654f6913a  docs/records/20261016-203024-s3-145d-signer-column-s3.md
 2242c57b81cf887a9d104dc15055886b80b925a84f24a8b81afb6264d1fc0edb  docs/records/20261016-203024-s3-145d-signer-column-ts-sdk-s3.json
 44deb0569017166836cd4af92ad1919efadc65cfa2667367f14c85529dd0d29f  docs/records/20261016-203514-make-check-box.txt
-1699975d284ff842eb3e8b6655de037c535ca61ddca50ea233a950d72addabcb  docs/records/20261016-204842-s3-146b-signer-fixtures-s3.md
+ebe09492e52ea3e92d3ee788481b65ab332df7e958a49f39a0a0774d2e3b98ca  docs/records/20261016-204842-s3-146b-signer-fixtures-s3.md
 d922dd1f010969fc43ec636e875720664750f09bf54fcd6ceb6436ecc4f12da9  docs/records/20261016-205014-make-check-box.txt
 185d31c260eeb88e9b21d7a6cc9b4e814c3e9c11f573d34dc0980d3675ed7151  docs/records/20261016-210110-make-check-box.txt
 45f15c09e2f31a9f33166f1afd3bb958c9895e99e2b2e8e74f25a47c96066f4b  docs/records/20261016-234806-s4b-147-tssdk-releases-s4b.md
@@ -1530,7 +1530,16 @@ c2caaa315b5e187f637badb4f31436ff3f683f8f720ab072b0288589291f2ce0  docs/records/2
 1fe2663bb759999744672e71d3ac3f35f3332359948eb1dca255a9318862ff5f  docs/records/20261021-222041-s3-177b2-missed-readers-fix-177b2.md
 251103a522ef7edeaaddae27bd08bf861e80e3cf1acdb39c2f68cd59ee82b761  docs/records/20261021-223933-s1-177a3-owner-values-fix-177a3.md
 d2a72498c99f6d5c1e93cd77c64a41d66d5ba9b3e4dddc4228df5d1d2e34d2ba  docs/records/20261021-224101-make-check-box.txt
-56ce6bee0b8b60755d921d29647254c7fcfc1c4523a2b9ed4c9882088b69fddd  docs/records/INDEX.md
+6cabe763c019da2b45add6fbb3a0453027be60d9c07d5b910315b563ed86ef11  docs/records/20261021-225915-export-flip-second-edition-cap.md
+1fdb7daac79cbd58d263016c30a251db68d9c1f645eb610111758159a16f5981  docs/records/20261021-230022-make-check-box.txt
+ef17661a4149407efea7bc0d3d4634c695f668ef9c1a08baf1ac6b84bd492a88  docs/records/20261026-135901-agent-paths-pointer-cap.md
+aab5f0acdaa4dce1d7fb0d4d519a480eb961f37fe636e407deaf2141ec59a53b  docs/records/20261026-135945-make-check-box.txt
+549ed0dde217fd349fe2559f59a9ce1c85d7d1fd33433ab45d77e578cefdfbc3  docs/records/20261026-140530-make-check-box.txt
+af5fb6b8904545a74a671de2f3ac00ff004506f4db6817dfac132f46e81da65d  docs/records/20261026-144745-make-check-box.txt
+dc86ca282e2717dfd3d311d43b2223a41e2238f79a17e02694d07ae4e8d5979c  docs/records/20261026-145126-public-tracker-filed.md
+1043d580f5ccf6f4becea6c75d9c5948c0aec39343a559dc1cbbcfd5d1ac0a5d  docs/records/20261026-151123-readme-flip-s3.md
+142623b91a5955f08c5580efb76dccc650ef4a8010fa7eda4e95cbd2881d0d98  docs/records/20261026-155633-make-check-box.txt
+795fd9c40c156729c78b83af9afeceb24b55b8de624f42efec59149f83b025a3  docs/records/INDEX.md
 6c964296b12b82d7973345175ec4f3faedb6c6a93cf55495be51ca130ee15307  eval/README.md
 090ffa09e1c248559b5cf8421b04f84d752c00e929e48f4c0b3422843d9f897f  eval/bsvs
 deaf00913ba4423dfc1b04848bd70cb7093fe3f663fc9d93f455650616f19640  eval/ladder48.py
@@ -1558,7 +1567,7 @@ e3854112b6877624ed81001949f1b60376dda732201f450e2cc45b3114951040  harness/cleanr
 3a9808c6c49b4f7473defd3eb11c65b9e452289c6c1e7391abfe3e0c7817935a  harness/cleanroom/out/tx_valid.json
 94dd8956b23b9670a4be07ce88167d986bfdd415716f2900c02521e2c34df6c8  harness/cleanroom/run.py
 740ed086c523d94f6ce8c63bec1dca88289940cfd106194b0241b873477366b6  harness/clippy.toml
-47a802866e87d0bedc7abc3b442e720c0cf476656f96a646ba3ca4cbdb7cdecb  harness/deny.toml
+6c1b51cbb1f369ca28e597333c07e3d01668dd836ff99b3f26d6a470ac89ca95  harness/deny.toml
 321ce7a662932f20a82c71238b3dab9bd6c8beeacf6f055fd5aa8e6865a154dd  harness/engines/go/fixtures/main.go
 a87eb070ef1f469b0fa9029314a4e83526ebc3a37598e32215a536c3059020ea  harness/engines/go/fixtures/main_test.go
 6acf3a9a0caf240651bf5c8e40a9aa6820ff628e8dd7d3f21aad320506760c44  harness/engines/go/go.mod
@@ -2023,7 +2032,7 @@ c60655db691b39dcc8c737fddfa3f10f956ea2442b404d13dfad5db52df622fe  tools/block_he
 02347b1e74b47f156b6af76b1c18d6e8d741591e09c6fad8f8df8c4e386fe5b2  tools/chain_check.sh
 3dd2ee32059768abe3e9620cbf8be4d4b5fde79f629f0940a57b409cec7dc973  tools/chain_leg.sh
 9d70aa5a5f0deb9e007570442de97d757c64720fd20bca6cbb0ebd3d8a93b334  tools/chain_lint.py
-cf5201affa4b32ea49a529af96bad4774c4349e2d05c56e8b598159991ca7d26  tools/check.sh
+1c6615e084ca012068fafb3e088a64edde1e19b2b9e8bc4e2bba54f00f01029c  tools/check.sh
 df72f9d1c8a4f0fc7eb47165c0118888ce3798c7d38126aed24c9c0f1ea9bb4c  tools/check_box.sh
 4a96260182b2b012fab660180c48b3dc208969930beb40f35e3f48552f0f47af  tools/check_parameters.py
 8316d08020175496a2bd2cb2113e92fda5157bb48f3cbee51465b324cea9baa4  tools/check_pins.py
@@ -2079,7 +2088,7 @@ b638aa6dd3c54928eebe6416371056218a6f524a2fb353c59a73294137eb6c3d  tools/node_con
 78f5c4bda565f82a441b02896dd956d4ee715e73ad186b92671ba3e1a8ff78ca  tools/oracle_check.sh
 e541aa2ecc1ad27c9f15ad7b9e59f839d8b909a6b8ddad91a9631c3100bc45f8  tools/prune_replay.py
 d02eaf3f5cfde9f2dc596be912c2eef90121aea61ce1fec6640e3bc6d1931ae3  tools/receipt_trim.py
-55b5b692c14bd2f5434beb9fda8ac7a3a308bf35cac2cb0d67d6c3e6495bdc8a  tools/records_index.py
+82ccdfbc590a3c7eb60c7c8a5611da249565320e0f03b69e03884f78a49d1569  tools/records_index.py
 7b2fb818db42ef94c8e17a74f66957eb16404074b33c7851dc7a591852001197  tools/replay_p2sh.py
 3e8882b9d181cf742f1b513a8e47f105dd690d69062e7d04a37d401f2e54c9e9  tools/ripemd_tables.py
 a5668b3483b7e97d36a78e23ea83745ee2ccc9a67c54760827e4c1c7eed5225f  tools/road_variant.py
@@ -2107,7 +2116,7 @@ a06999afa42051f5e9e1a011acabaf06af6087a7be18364839434685fdbe08e1  tools/test_che
 69bec466af52c0054f6a9582fd6e2da6f5efac79686fa72a845d670ed5ca82f5  tools/test_conformance.py
 a57c38ba51fa20889607b8ae9292e50115a11845228148a10aeac60f6e93fbd7  tools/test_export_cargo.py
 a91771ceab3034606ded35509d03508ac8d845b6d797bd78ccc70090ed5ed73c  tools/test_export_gate.py
-812993457524d66fedbbf3a6b00001528db0195d1b327942f64e01415f651c33  tools/test_export_pointers.py
+c9b3e0d8a64a668d7279cd4c34b4bd691bd44f4f1587a9635fc4f5304348634d  tools/test_export_pointers.py
 af2d4a24cd16b629245dfcec47a4da970d98b923602cc84de211e189326d4a0c  tools/test_export_rules.py
 346fe2b5ebc9c7c075f9b02a4bc41bcfca586650d1ce4bb391d989599779297c  tools/test_fixtures_proof.py
 587bc10c9a85402b5b08136f4f5a56355edf163eff2b6234bf0fb143f37f149d  tools/test_mechanism_hex.py
@@ -2119,7 +2128,7 @@ b891acd8c63ef38ee98c50aed9522341fd16ed5115b7fa9bfe253242aba15090  tools/utxo_cas
 5494d5a381f4207e6515d4aeb88900f199faddeec67da61ebf020d71be8fe3cf  tools/wire_compare.py
 4a8610b7ac5bdc7ebb3b611eb2854b6566a5dab3a36fc8b82fefba0a928b51b0  tools/wire_corpus.py
 485df27368a3843de91b5ccfbbaf8d6d71160c1d4f806d1f3511d324fe7497ef  tools/withheld_legs.py
-4461b27be9f25f819e2efef30530bad1d5e8a03a98f619d0cd7ebffd31674702  tools/withheld_legs.txt
+9285c3e7dc0ee1b30f4030db541dc3df4ba0fb78e6b240e63d46b4a6dedc92f7  tools/withheld_legs.txt
 7903ddbc810dd222797180fdc86c1c192a8514f4625d3951155ddf5d0d0c6007  tools/witness.sh
 6eefe3774a4a96921450c30da3a075374f5ce0ef92fa73eba7e320cc36625a2d  tools/wording_allow.txt
 d8b0306f28d51836611818ee5aa93fd5b910dfd4653d0918f2eb3357ee93970a  tools/wording_gate.sh
@@ -2676,15 +2685,16 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/audit/2026-09-27-lens-S1-sitting3-by-S1.md
 2  docs/audit/2026-09-27-lens-S2-by-S3.md
 5  docs/audit/2026-09-27-lens-S2-sitting2-by-S3.md
-2  docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md
-9  docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md
+3  docs/audit/2026-09-27-lens-S2-sitting3-by-S2.md
+1  docs/audit/2026-09-27-lens-S2-sitting4-by-S2.md
+10  docs/audit/2026-09-27-lens-S3-fold-sitting2-by-S3.md
 4  docs/audit/2026-09-27-lens-S3-fold-sitting3-by-S3.md
 1  docs/audit/2026-09-27-lens-S3r2-by-S3.md
 3  docs/audit/2026-09-27-lens-S4b-block-by-S4b.md
 4  docs/audit/2026-09-27-lens-S4b-by-S3.md
 6  docs/audit/2026-09-27-lens-S4b-sitting3-block-by-S4b.md
-5  docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md
-1  docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md
+8  docs/audit/2026-09-27-lens-S4b-sitting3-by-S3.md
+2  docs/audit/2026-09-28-lens-S2-sitting5-by-S2.md
 4  docs/audit/2026-09-28-lens-S3-sitting3-end-by-S3.md
 5  docs/audit/2026-09-29-lens-S1-sitting5-by-S1.md
 8  docs/audit/2026-09-29-lens-S1-sitting6-by-S1.md
@@ -2698,6 +2708,7 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 4  docs/audit/2026-09-30-s3-opener-lens-s1-sitting10.md
 10  docs/audit/2026-09-30-s3-opener-lens-s2-sitting10.md
 2  docs/audit/README.md
+5  docs/records/20260923-1143-svnode-smoke-s3.md
 1  docs/records/20260923-191222-make-check.txt
 2  docs/records/20260923-193441-make-check.txt
 3  docs/records/20260924-024354-make-check-modal.txt
@@ -2721,7 +2732,7 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 4  docs/records/20260926-212946-make-check.txt
 4  docs/records/20260926-213521-cite-check-s4b.txt
 4  docs/records/20260926-213545-make-check.txt
-3  docs/records/20260926-213915-run-diff-d83c-s2.md
+7  docs/records/20260926-213915-run-diff-d83c-s2.md
 4  docs/records/20260926-215543-make-check.txt
 1  docs/records/20260926-220522-axioms-s2-families-s2.txt
 4  docs/records/20260926-220549-make-check.txt
@@ -2750,8 +2761,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 6  docs/records/20260927-122126-witness-replay-s3.md
 4  docs/records/20260927-122511-make-check-modal.txt
 12  docs/records/20260927-124645-make-check.txt
-1  docs/records/20260927-125018-decoder-wall-s2-run.sh.txt
-3  docs/records/20260927-125018-decoder-wall-s2-timings.txt
+2  docs/records/20260927-125018-decoder-wall-s2-run.sh.txt
+25  docs/records/20260927-125018-decoder-wall-s2-timings.txt
 1  docs/records/20260927-125018-decoder-wall-s2.md
 12  docs/records/20260927-125104-make-check.txt
 12  docs/records/20260927-125819-make-check.txt
@@ -2786,6 +2797,7 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 2  docs/records/20260927-181348-coverage-v122-s3.md
 2  docs/records/20260927-183819-seed1m-s3.md
 4  docs/records/20260927-185804-make-check-modal.txt
+3  docs/records/20260927-225753-ff-sigops-s2-outputs.txt
 12  docs/records/20260927-231510-make-check.txt
 1  docs/records/20260927-231608-d123-road-s3.md
 29  docs/records/20260928-110105-make-check.txt
@@ -2844,7 +2856,7 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 27  docs/records/20260929-135019-make-check-box.txt
 1  docs/records/20260929-140334-trust32-relens-fixes-s1.md
 27  docs/records/20260929-141538-make-check-box.txt
-7  docs/records/20260929-142257-memory-s4b-runs-s3.md
+8  docs/records/20260929-142257-memory-s4b-runs-s3.md
 27  docs/records/20260929-153056-make-check.txt
 27  docs/records/20260929-155509-make-check-box.txt
 27  docs/records/20260929-161901-make-check.txt
@@ -3169,7 +3181,7 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 4  docs/records/20261016-201812-make-check-box.txt
 4  docs/records/20261016-203024-s3-145d-signer-column-s3.md
 4  docs/records/20261016-203514-make-check-box.txt
-4  docs/records/20261016-204842-s3-146b-signer-fixtures-s3.md
+5  docs/records/20261016-204842-s3-146b-signer-fixtures-s3.md
 4  docs/records/20261016-205014-make-check-box.txt
 4  docs/records/20261016-210110-make-check-box.txt
 2  docs/records/20261016-234806-s4b-147-tssdk-releases-s4b.md
@@ -3274,6 +3286,13 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/records/20261021-210035-make-check-box.txt
 3  docs/records/20261021-212916-make-check-box.txt
 3  docs/records/20261021-224101-make-check-box.txt
+3  docs/records/20261021-230022-make-check-box.txt
+4  docs/records/20261026-135901-agent-paths-pointer-cap.md
+1  docs/records/20261026-135945-make-check-box.txt
+3  docs/records/20261026-140530-make-check-box.txt
+3  docs/records/20261026-144745-make-check-box.txt
+1  docs/records/20261026-151123-readme-flip-s3.md
+3  docs/records/20261026-155633-make-check-box.txt
 
 ## cargo-transformed: targets-dropped path (kind name, ...) (the Cargo transform)
 1  harness/Cargo.toml  bin gen
@@ -3284,8 +3303,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 ## public pages moved: public-path -> exported-as sha256
 CLAUDE.public.md -> CLAUDE.md e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc
 
-pointer-transformed 536 files
-pointer-group local-paths 5702 occurrences; records 5551; substitutions 151
+pointer-transformed 542 files
+pointer-group local-paths 5716 occurrences; records 5565; substitutions 151
 pointer-group modal-names 56 occurrences; records 40; substitutions 16
 pointer-group addresses 6 occurrences; records 5; substitutions 1
 
@@ -3790,6 +3809,12 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 3  local-paths  records  docs/records/20261021-210035-make-check-box.txt
 3  local-paths  records  docs/records/20261021-212916-make-check-box.txt
 3  local-paths  records  docs/records/20261021-224101-make-check-box.txt
+3  local-paths  records  docs/records/20261021-230022-make-check-box.txt
+1  local-paths  records  docs/records/20261026-135901-agent-paths-pointer-cap.md
+1  local-paths  records  docs/records/20261026-135945-make-check-box.txt
+3  local-paths  records  docs/records/20261026-140530-make-check-box.txt
+3  local-paths  records  docs/records/20261026-144745-make-check-box.txt
+3  local-paths  records  docs/records/20261026-155633-make-check-box.txt
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00000.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00500.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-03000.manifest.json

@@ -1,4 +1,4 @@
-[export: 1 line withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[export: 2 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 <!-- S2'S OWN LENS ON ITS SITTING-5 END BLOCK (LANE F, set 4 sitting 5; S2 the Lean B sub-agent; 2026-09-28). A fresh-context, READ-ONLY lens: a Claude Code subagent of S2's session on Opus 5.5 (the Agent tool, general-purpose, model opus: the paste's rule (6) names fable, and D118 runs the lanes on Opus 5.5 until Fable returns), launched 12:20 UTC, its wall 1,565 s [M] (the tool's usage line: 1,565,409 ms, 105 tool uses). Its brief: the paste's rule (6) with the read-only rules, the sites and eight named checks, read against origin/main 7ee7102. The report below is verbatim as the lens returned it (the one character-level change: its "<paths>", "< 18" and "a914<20>87" arrived HTML-escaped). Its corrections are all S2's: 1, 2, 3 and 6 landed on the block in the commit that files this report, with the Next line's precision on the pair's one mempool disagreement; 4 and 5 as a **Correction.** comment on #25. Its load-bearing correction, "a fresh window" (the relay continued the live session, so D126's relaunch did not happen), is also in the one line to the parent. -->
 
 HELD IN SUBSTANCE: every number re-derives and every spec-facing claim holds at origin/main `7ee7102`, at the pin `879fc8b42` and on the tracker. One sentence ("a fresh window") is contradicted by the window's own session log, and five items are cosmetic.
@@ -117,7 +117,7 @@ HELD IN SUBSTANCE: every number re-derives and every spec-facing claim holds at 
 - **The relaunch didn't happen.** D126's relaunch (for context above 80 %) did not occur; the relay continued the live pane.
 - **What I did:**
   - Git reads.
-  - `specgen --check` and cite_check on an archive copy in `/private/tmp/claude-501/lens-s2-sitting5/main`.
+[withheld at export: a sibling tree's line]
   - Six public read-only GETs to blockstream.info for block 173,805.
   - Read-only reads of the window's session transcript and `open.jsonl`.
   - The Studio's load was 52.88 at 12:35 UTC from other windows; I started nothing heavy.

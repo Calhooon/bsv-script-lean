@@ -1,4 +1,4 @@
-[export: 5 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
+[export: 8 lines withheld by tools/export_public.py, the sibling trees' lines; the original is in the private history]
 <!-- THE PARENT'S LENS ON S4b's SITTING 3 (LANE F, set 4; the owner's relay "your lane's run S4b (ed145b0e) ended: done; read its result …, lens it before it counts, and fold it"). A fresh-context, read-only sub-agent of S3's, on Claude Opus 5.5 because Fable is out (D118): agent a8f4f6eff537b58b9, launched 2026-09-27 13:54:41 UTC, ended 14:27:39 UTC; 1,977,665 ms, 433,676 tokens, 138 tool uses [M]. It read commits dbfb798 to 32a905a against origin/main and the tracker by REST, re-running tools/cite_check.py from git archive exports outside every tree. Filed as it returned but for the sibling programs' process names it quoted from a record's load sampler, elided at filing under CLAUDE.md rule 5 (each elision is marked). Its seven corrections are S4b's; the parent landed them in place in the commit that files this report, S4b's run having ended. -->
 
 # The parent's lens on S4b's sitting 3 (commits `dbfb798` to `32a905a`), on Opus 5.5 (Fable out, D118)
@@ -7,7 +7,7 @@
 
 Every count in S4b's END BLOCK, its seven commit messages and its three records comes out the same when re-derived.
 
-- **How I re-ran it.** I ran `tools/cite_check.py` from `git archive` exports under `/private/tmp/claude-501/lens-s4b-s3/`, with `own_files()` fed from `git ls-tree`, at these commits:
+[withheld at export: a sibling tree's line]
   - `62c30da`: an independent rerun of steps (0) to (2) of the cite record.
   - `e65da5b`: the leg, both in-memory re-pins, and the case with every clone absent.
   - Every S4b commit on `main`.
@@ -116,7 +116,7 @@ Every count in S4b's END BLOCK, its seven commit messages and its three records 
 - **Record 125104's figures: HELD** (record lines :2 to :11, :33, :96):
   - `0310ec4`, 0 uncommitted paths at both ends, 826 s, load 19.14.
   - 21 legs GREEN: check-pins 73; cite 1,891 anchored, MOVED 0; axiom check 387; specgen 2 flagged; 35 manifests; 54,552 entries replayed.
-- **The route's and the Lean lock's lines are stdout, not record: HELD.** The task log `/private/tmp/claude-501/-Users-johncalhoun-bsv-worktrees-spec-harness-b/ed145b0e-…/tasks/bx8e8dql3.output` has:
+[withheld at export: a sibling tree's line]
   - line 1: `lean_lock: S4b took slot2 (12:51:03Z)`
   - line 3: `check: LOCAL (1-minute load 19.14, under 20; …)`
   - line 820: `released slot2 (13:04:50Z)`
@@ -264,4 +264,4 @@ The three commit messages cannot be corrected (they are history). For the landed
 [withheld at export: a sibling tree's line]
 [withheld at export: a sibling tree's line]
 
-Writes and reads: I wrote only under `/private/tmp/claude-501/lens-s4b-s3/`. Beyond the `git fetch` the brief allows, I did one read-only `git ls-remote origin`, and I read S4b's session and sub-agent transcripts in `~/.claude-profiles` and the task log.
+[withheld at export: a sibling tree's line]

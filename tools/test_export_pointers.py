@@ -151,6 +151,27 @@ class PointerTests(unittest.TestCase):
             self.assertFalse(self.groups['local-paths'].search(prefix + home))
             self.assertFalse(self.groups['local-paths'].search(prefix + volume))
 
+    def test_agent_paths_withhold_record_lines_and_stay_out_of_substitution(self):
+        account = '-' + 'Users' + '-sample-bsv-'
+        scratch = '/' + 'private/tmp/claude-501/' + account + 'x/0000/scratchpad'
+        for line in (f'SP={scratch}\n', f'memory (`~/.claude/projects/{account}x/memory/`) held\n'):
+            original = line.encode()
+            output, count = public.transform(original, self.pointers)
+            self.assertEqual(count, 1, line)
+            self.assertTrue(output.endswith((public.MARKER + '\n').encode()))
+            result, counts = public.substitute_pointers('docs/example.md', original, original, self.groups)
+            self.assertTrue(result == original, 'agent path substituted')
+            self.assertFalse(any(counts.values()))
+            self.assertTrue(any(p.search(line) for g, p in self.grouped if g == 'agent-paths'))
+        bare = 'john' + 'calhoun'
+        output, count = public.transform(f'local account `{bare}`, host x\n'.encode(), self.pointers)
+        self.assertEqual(count, 1)
+        output, count = public.transform(b'John and the harness\n', self.pointers)
+        self.assertEqual(count, 0)
+        for line in ('the Users table\n', 'Users-of-the-harness\n', '/private/tmp/other\n'):
+            output, count = public.transform(line.encode(), self.pointers)
+            self.assertEqual(count, 0, line)
+
     def test_other_pointer_groups_remain_gated(self):
         original = ('null' + 'ifier').encode()
         output, counts = public.substitute_pointers('docs/example.md', original, original, self.groups)

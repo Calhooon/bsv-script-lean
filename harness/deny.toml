@@ -11,9 +11,16 @@ no-default-features = false
 [advisories]
 version = 2
 # every advisory is an error (version 2: vulnerability, unmaintained, unsound and yanked all deny); an exception is a
-# dated `ignore` entry with its reason, none on 2026-10-14
+# dated `ignore` entry with its reason (none on 2026-10-14; one since 2026-10-26)
 yanked = "deny"
-ignore = []
+ignore = [
+  # 2026-10-26, #178: RUSTSEC-2026-0387 (issued 2026-10-23) on crypto-bigint 0.5.5, reached only through bsv-rs 0.7.0's
+  # k256 0.13.4 and p256 0.13.2 (elliptic-curve 0.13.8, ecdsa 0.16.9); the fix (>= 0.7.6) exists only under the 0.14 line,
+  # which bsv-rs does not take yet (Calhooon/bsv-rs#265), so no lockfile move reaches it. The harness is a conformance
+  # harness: it signs with deterministic test keys and holds no secret worth a timing channel. The entry leaves in the
+  # landing that re-pins a bsv-rs release on k256 0.14 and p256 0.14.
+  { id = "RUSTSEC-2026-0387", reason = "crypto-bigint 0.5.5 under bsv-rs 0.7.0's k256/p256 0.13; test keys only; #178, Calhooon/bsv-rs#265" },
+]
 
 [licenses]
 version = 2
