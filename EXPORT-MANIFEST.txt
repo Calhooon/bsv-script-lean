@@ -1,9 +1,9 @@
 # The public edition of bsv-script-lean: export manifest (tools/export_public.py)
-source-commit a869d592c745f60003c3e0cff76457ff0623459a
-exported-at 2026-10-26 21:46:31 UTC
-withheld-list tools/export_withheld.txt @ a869d592c745
-withheld-entry-list tools/export_withheld_entries.txt @ a869d592c745
-paths-exported 2097
+source-commit da6842790b34b74b0b73e29dcd709b95074dd4f8
+exported-at 2026-10-26 22:55:23 UTC
+withheld-list tools/export_withheld.txt @ da6842790b34
+withheld-entry-list tools/export_withheld_entries.txt @ da6842790b34
+paths-exported 2101
 paths-withheld 281
 withheld-group sealed-and-security 6
 withheld-group d135-records 6
@@ -47,13 +47,13 @@ withheld-rule-reference 2 fields 0 records harness/rules/gobdk.json
 withheld-rule-reference 2 fields 0 records harness/rules/sv-node.json
 withheld-rule-reference 2 fields 0 records harness/rules/ts-sdk.json
 rewritten 16 (tools/export_rewrite.txt)
-transformed 625 lines-replaced 6437 (the records transform)
+transformed 628 lines-replaced 6445 (the records transform)
 cargo-transformed 1 files, 1 target tables dropped (the Cargo transform)
 cargo-source-check 82 .rs files, 68 mod/#[path]/include lines, 3 naming a withheld basename, 0 resolving to a withheld path
 makefile-transformed 1 of 1 Makefiles, 1 targets dropped (the Makefile transform)
 public-pages-moved 1 (PUBLIC_PAGES)
-records-index rendered over the export: records_index: wrote docs/records/INDEX.md, 1012 records
-lists-read-at a869d592c745 (7 lists; working tree differs: none)
+records-index rendered over the export: records_index: wrote docs/records/INDEX.md, 1016 records
+lists-read-at da6842790b34 (7 lists; working tree differs: none)
 
 ## exported: sha256 path
 ec2137b0b8354442bd7113f07d1fa0e7429bdf2d646e30405c9511f066fe2fd4  .github/ISSUE_TEMPLATE/config.yml
@@ -1555,7 +1555,11 @@ b1ac189756a01fc68052efa030ee5149cd93f0f0e0d9b01058dfcec7bfb890a7  docs/records/2
 cfc36bcd70e818d94a38af5ee576619ce5b568e8ee71dcea34e70d1a8ca728c0  docs/records/20261026-210157-make-check-box.txt
 ee7561698defe18849e3573515822a1e5a0f0b737ef13fdf2226803623bd3a1f  docs/records/20261026-212233-make-check-box.txt
 0dd504aecc4fb4953b70fc89dbfd69362e9f9291ddabb17d21b0ac808978f922  docs/records/20261026-213754-make-check-box.txt
-7e26a4558796f04494a1b57d2404c40256f72baef5a346912894f2a35b630f61  docs/records/INDEX.md
+18ff1613e1ad9143b2445cafc20ed1065561b9fb49d8e9c2a117c793e0871695  docs/records/20261026-220600-hosted-gate-red-refinement-withheld-cap.md
+e373dc41ca842b8f94cc35b849fb8e8666cd2888df790f86f17d4cb2cad6b011  docs/records/20261026-220927-make-check-box.txt
+b69dd9b23328306bc0d0f812f2ea452c5d58415ad53806491767abdca649997b  docs/records/20261026-221405-make-check-box.txt
+88e26608c08f74df83b6e51aebda019ed39c22664848c3fcc75160d7ab062529  docs/records/20261026-224818-make-check-box.txt
+3388310deb1ef27698d6d7ab75f1905b74f711174fc14f1262aa34f275d417c4  docs/records/INDEX.md
 6c964296b12b82d7973345175ec4f3faedb6c6a93cf55495be51ca130ee15307  eval/README.md
 090ffa09e1c248559b5cf8421b04f84d752c00e929e48f4c0b3422843d9f897f  eval/bsvs
 deaf00913ba4423dfc1b04848bd70cb7093fe3f663fc9d93f455650616f19640  eval/ladder48.py
@@ -1881,7 +1885,7 @@ e8a0c1a878a8b69396a94ca3597587e5cf1735e1bb3a2f2a99364d85d82912f4  lean/README.md
 5095e94d97f74382792f59557145e0d7eb21716988b1c7b748834353f6c9c7e8  lean/Test/ArithCheck.lean
 f011558e47d3d1397547b9c8cff49c1f669eeed81606019e551773496faf0733  lean/Test/BlockCheck.lean
 f3bf585bd7efe4760c7c1724d5ccabc9aa9634c9db9124e8bedb3f0df93a96ff  lean/Test/BytesCheck.lean
-afe1852498933153e8bc04446bb861fd5eb1e3eda6ae6cc7fe0531e6817fdab6  lean/Test/ChainCheck.lean
+b7dfb32ef1d16c700b07975c095355954e4f6b00ae271fc46f5e9c0e883d6794  lean/Test/ChainCheck.lean
 79d2816f5ef37b5e72fcecb87d553fe18efc9a54e0c52beb67d4c33e8accd781  lean/Test/Common.lean
 fb8d8c678717bb7559a505c78adce12d3e5729c77b47a5ae208ed71ba79e5820  lean/Test/CompactCheck.lean
 24f4cc171c82c78ad0f1ff76b7fa5f27a351c25008707af88336d4beb6cb08bf  lean/Test/CryptoCheck.lean
@@ -3319,6 +3323,9 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 3  docs/records/20261026-210157-make-check-box.txt
 3  docs/records/20261026-212233-make-check-box.txt
 3  docs/records/20261026-213754-make-check-box.txt
+2  docs/records/20261026-220927-make-check-box.txt
+3  docs/records/20261026-221405-make-check-box.txt
+3  docs/records/20261026-224818-make-check-box.txt
 
 ## cargo-transformed: targets-dropped path (kind name, ...) (the Cargo transform)
 1  harness/Cargo.toml  bin gen
@@ -3329,8 +3336,8 @@ corpus/witnesses/go-sdk/road.jsonl	withheld-11f21c407faf007e6792-withheld-67da1c
 ## public pages moved: public-path -> exported-as sha256
 CLAUDE.public.md -> CLAUDE.md e97a302c3681c74d11c5e5317187e1147e0a8deb114a40ffb248ffaaf380dbfc
 
-pointer-transformed 553 files
-pointer-group local-paths 5747 occurrences; records 5595; substitutions 152
+pointer-transformed 556 files
+pointer-group local-paths 5755 occurrences; records 5603; substitutions 152
 pointer-group modal-names 56 occurrences; records 40; substitutions 16
 pointer-group addresses 6 occurrences; records 5; substitutions 1
 
@@ -3851,6 +3858,9 @@ pointer-group addresses 6 occurrences; records 5; substitutions 1
 3  local-paths  records  docs/records/20261026-210157-make-check-box.txt
 3  local-paths  records  docs/records/20261026-212233-make-check-box.txt
 3  local-paths  records  docs/records/20261026-213754-make-check-box.txt
+2  local-paths  records  docs/records/20261026-220927-make-check-box.txt
+3  local-paths  records  docs/records/20261026-221405-make-check-box.txt
+3  local-paths  records  docs/records/20261026-224818-make-check-box.txt
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00000.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-00500.manifest.json
 3  local-paths  substitution  harness/engines/instance41/runs/20261005-231500-seed/chunk-03000.manifest.json

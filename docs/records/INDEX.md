@@ -10,6 +10,10 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 
 | stamp (UTC) | record | kind | commit | verdict | cited by |
 |---|---|---|---|---|---|
+| 2026-10-26 22:48:18 | [20261026-224818-make-check-box.txt](20261026-224818-make-check-box.txt) | make-check-box | 3c8207ee | GREEN |  |
+| 2026-10-26 22:14:05 | [20261026-221405-make-check-box.txt](20261026-221405-make-check-box.txt) | make-check-box | 300f3f91 | GREEN |  |
+| 2026-10-26 22:09:27 | [20261026-220927-make-check-box.txt](20261026-220927-make-check-box.txt) | make-check-box | 6506590c | RED |  |
+| 2026-10-26 22:06:00 | [20261026-220600-hosted-gate-red-refinement-withheld-cap.md](20261026-220600-hosted-gate-red-refinement-withheld-cap.md) | other |  |  |  |
 | 2026-10-26 21:37:54 | [20261026-213754-make-check-box.txt](20261026-213754-make-check-box.txt) | make-check-box | c2baa1c4 | GREEN |  |
 | 2026-10-26 21:22:33 | [20261026-212233-make-check-box.txt](20261026-212233-make-check-box.txt) | make-check-box | 94bbf52c | GREEN |  |
 | 2026-10-26 21:01:57 | [20261026-210157-make-check-box.txt](20261026-210157-make-check-box.txt) | make-check-box | f0cfd155 | GREEN |  |

@@ -1924,6 +1924,15 @@ def obligationsJson : Json :=
     ("families", toJson (accounts.map fam)),
     ("rows", toJson (obligations.map row))]
 
+/-- The public edition lacks the paths `tools/export_withheld.txt` names (the owner's word, `tools/export_public.py`):
+a landed leg's record on that list is absent there by design, said BY NAME, never a failure (the hosted gate of
+2026-10-26, run 40408981548). An exact line of the list only: its globs name directories, never a record. -/
+def withheldAtExport (path : String) : IO Bool := do
+  let list : System.FilePath := "tools/export_withheld.txt"
+  unless ← list.pathExists do return false
+  let text ← IO.FS.readFile list
+  return (text.splitOn "\n").any (fun line => line.replace "\r" "" == path)
+
 open BsvChain.Teranode.Refinement in
 def refinementReport (mapPath ledgerPath listPath : String) : IO UInt32 := do
   let parse (path : String) : IO Json := do
@@ -1934,6 +1943,7 @@ def refinementReport (mapPath ledgerPath listPath : String) : IO UInt32 := do
   let mapJ ← parse mapPath
   let ledgerJ ← parse ledgerPath
   let mut failures : Array String := #[]
+  let mut skipped : Array String := #[]
   let mapRowsJ ← match rowsOf mapJ with | .ok a => pure a | .error e => throw (IO.userError e)
   let ledgerRowsJ ← match rowsOf ledgerJ with | .ok a => pure a | .error e => throw (IO.userError e)
   let read (j : Json) (key : String) : String := (j.getObjValAs? String key).toOption.getD ""
@@ -1980,7 +1990,11 @@ def refinementReport (mapPath ledgerPath listPath : String) : IO UInt32 := do
           failures := failures.push s!"{o.row}: ledger row {id} {whose} {eff}, the list carries {proposed}"
     for (l, _) in o.discharge.legs do
       if l.landed then
-        unless ← System.FilePath.pathExists l.record do failures := failures.push s!"{o.row}: leg {l.lane}'s record {l.record} absent"
+        unless ← System.FilePath.pathExists l.record do
+          if ← withheldAtExport l.record then
+            skipped := skipped.push s!"{o.row}: leg {l.lane}'s record {l.record} withheld at export (the private history holds it)"
+          else
+            failures := failures.push s!"{o.row}: leg {l.lane}'s record {l.record} absent"
     if o.discharge.kind == "chain-split" && o.label != "consensus" then
       failures := failures.push s!"{o.row}: a chain-split row labeled {o.label}"
     for d in o.discharge.divergences do
@@ -2004,6 +2018,7 @@ def refinementReport (mapPath ledgerPath listPath : String) : IO UInt32 := do
   let halves := owedHalves
   let halvesBy (s : String) : Nat := (halves.filter (·.owner == s)).length
   let reruns := (obligations.filter (·.discharge.rerun)).length
+  for f in skipped do IO.println s!"refinement: SKIPPED BY NAME {f}"
   for f in failures do IO.eprintln s!"refinement: RED {f}"
   let ok := failures.isEmpty && obligations.length == 54
   IO.println s!"refinement: {if ok then "GREEN" else "RED"} [X] ([M] {obligations.length} rows of {mapPath}, one obligation each, kinds tied to the map's mechanism: {countKind "theorem"} theorem ({countWithWitnesses} also carrying model witnesses), {countKind "witness"} witness, {countKind "design"} design, {countKind "chain-split"} chain-split, {countKind "report"} report, {countKind "open"} open (S1 {countOwedBy "S1"}, S3 {countOwedBy "S3"}, S4b {countOwedBy "S4b"}, the owner {countOwedBy "the owner"}); {Divergence.all.length} divergences; {halves.length} owed halves (S1 {halvesBy "S1"}, S3 {halvesBy "S3"}, S4b {halvesBy "S4b"}); {ledgerRowsJ.size} ledger rows read, {ledgerOf "design"} on design rows, {ledgerOf "chain-split"} on chain-split rows, {ledgerRowsJ.size - ledgerOf "design" - ledgerOf "chain-split"} on others, {ruled.length} ruled by the owner; {reruns} rows for #95's re-run; {listPath} {if failures.any (·.startsWith listPath) then "STALE" else "equal to the emission"}; failures {failures.size})"
