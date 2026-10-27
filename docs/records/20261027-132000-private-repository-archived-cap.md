@@ -1,0 +1,8 @@
+# The private repository archived; this tree is the home, 2026-10-27 13:20 UTC
+
+**Seat:** S3 (CAP the captain, Claude Fable 5.1), on the owner's word of 2026-10-27. **Labels:** [X] on every line naming a run's output.
+
+- The repository that held this project's history before the public birth (its issues appear on these pages as "archived #n", `docs/GLOSSARY.md`) is archived, read-only, as of 2026-10-27 13:1x UTC [X]. Its last commit carries the records of 2026-10-26 and 2026-10-27 (the flip, the four hosted-gate rounds, the overlay's birth).
+- From this day the public tree is the only tree work lands on. A landing is a commit on `main` behind the hosted gate (`.github/workflows/gate.yml`); the withheld legs (`tools/withheld_legs.txt`) are run by hand on the maintainers' build machine for a landing and their record is brought home under `docs/records/`. No machine of the maintainers is a runner of this repository's checks: the required checks on `main` are the hosted jobs only (`rust`, `tree`, `lean`, `withheld-legs`, `record`) [X].
+- The material the export withheld lives in a private overlay the maintainers mount over a checkout of this tree (`tools/export_overlay.py` writes it, `tools/overlay_mount.sh` mounts and verifies it; both landed here in the commit before this record). The overlay of the eighth edition verifies as the private tree it came from, 2,383 paths byte for byte [X] (the private history's record of 2026-10-27 12:49 UTC).
+- The export tool (`tools/export_public.py` and its lists) stays on the tree as the record of how the public edition was made and as the denylist the hooks read; it is not run again.

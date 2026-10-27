@@ -10,6 +10,7 @@ Kinds: make-check, make-check-box and make-check-modal are the tripwire's record
 
 | stamp (UTC) | record | kind | commit | verdict | cited by |
 |---|---|---|---|---|---|
+| 2026-10-27 13:20:00 | [20261027-132000-private-repository-archived-cap.md](20261027-132000-private-repository-archived-cap.md) | other |  |  |  |
 | 2026-10-26 22:48:18 | [20261026-224818-make-check-box.txt](20261026-224818-make-check-box.txt) | make-check-box | 3c8207ee | GREEN |  |
 | 2026-10-26 22:14:05 | [20261026-221405-make-check-box.txt](20261026-221405-make-check-box.txt) | make-check-box | 300f3f91 | GREEN |  |
 | 2026-10-26 22:09:27 | [20261026-220927-make-check-box.txt](20261026-220927-make-check-box.txt) | make-check-box | 6506590c | RED |  |
