@@ -38,6 +38,7 @@ Classes: gate (a check that can fail a run), generator (writes a committed file)
 | `tools/discretion_overlap.py` | Tests which citation rows overlap the lines a held disclosure covers (#43) | by hand | gate |
 | `tools/export_gate.py` | Checks an export: the mechanism, pointer and wording legs, and with --build the cold offline build (#46, #107) | tools/export_gate.sh; tools/test_export_gate.py | gate |
 | `tools/export_gate.sh` | Runs the export gate on an export target (#46) | Makefile: export-gate | gate |
+| `tools/export_overlay.py` | Writes the private overlay of a public edition: every tracked path of the commit the export withheld or transformed, with a manifest of the whole tree (the flip rule) | by hand | generator |
 | `tools/export_public.py` | Writes the public edition of a commit into an empty directory with its manifest (#46) | tools/export_public.sh; tools/test_export_cargo.py | generator |
 | `tools/export_public.sh` | Runs the export of a named commit under the export directory (#46) | Makefile: export-public | generator |
 | `tools/export_withheld.txt` | Lists the paths the public edition withholds, by group and ruling (#46) | tools/export_public.py; tools/fixtures_export.py; tools/teranode_gate.py; ... | generator |
@@ -74,6 +75,7 @@ Classes: gate (a check that can fail a run), generator (writes a committed file)
 | `tools/opnames.py` | Regenerates lean/Test/OpNames.lean from the pinned reference | Makefile: opnames | generator |
 | `tools/oracle_cases.py` | Writes the script oracle's inputs from the public script fixtures (#76) | corpus/INDEX.md | generator |
 | `tools/oracle_check.sh` | Checks the recorded script oracle agreement (#76) | Makefile: oraclecheck | gate |
+| `tools/overlay_mount.sh` | Mounts the private overlay over a checkout of the public edition and verifies the mounted tree against the overlay's manifest (the flip rule) | tools/test_export_overlay.py | maintainers' route |
 | `tools/prune_replay.py` | Replays the Lean pruning function against the node's recorded answers (#82) | tools/chain_leg.sh | gate |
 | `tools/receipt_trim.py` | Projects committed scenario receipts to their reference fields | tools/test_receipt_trim.py | generator |
 | `tools/records_index.py` | Writes docs/records/INDEX.md from the exported records; --check refuses a stale index (#175) | check.sh: seed | generator |
@@ -104,6 +106,7 @@ Classes: gate (a check that can fail a run), generator (writes a committed file)
 | `tools/test_conformance.py` | Tests that a replacement run keeps receipts and cannot hide missing spends | by hand | test |
 | `tools/test_export_cargo.py` | Tests the export's Cargo and Makefile transforms on synthetic fixtures (#107) | by hand | test |
 | `tools/test_export_gate.py` | Tests that a failed subprocess or a missing export cannot pass the export gate | by hand | test |
+| `tools/test_export_overlay.py` | Tests the overlay generator and the mount on a synthetic repository, export and manifest | by hand | test |
 | `tools/test_export_pointers.py` | Tests the export's pointer substitution and its accounting (#101) | by hand | test |
 | `tools/test_export_rules.py` | Tests the export's rule withholding on synthetic identifiers (#102) | by hand | test |
 | `tools/test_fixtures_proof.py` | Tests the fixture proof's verdict and receipt contract with negative controls (#146) | by hand | test |
